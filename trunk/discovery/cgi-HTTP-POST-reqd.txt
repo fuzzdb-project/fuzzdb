@@ -1,0 +1,13 @@
+post-query
+Config1.htm
+My_eGallery/public/displayCategory.php
+servlet/custMsg?guestName=<script>alert(document.cookie)(\
+servlet/CookieExample?cookiename=<script>alert(document.cookie)(\
+lastlines.cgi?process
+Mem/dynaform/Login.htm?WINDWEB_URL=%2FMem%2Fdynaform%2FLogin.htm&ListIndexUser=0&sWebParam1=admin000
+_vti_bin/shtml.dll/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611
+_vti_bin/shtml.exe/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611
+_vti_bin/_vti_aut/author.dll?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=fals
+_vti_bin/_vti_aut/author.exe?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=fals
+admin/db.php
+_vti_bin/shtml.dll/_vti_rpc
