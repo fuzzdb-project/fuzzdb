@@ -3,7 +3,7 @@
 = Introduction =
 A comprehensive, up to date set of fuzzing patterns for discovery and attack. 
 
-Why? 
+*Why?*
 
 Lots of new software is vulnerable to the attack sequences of yesteryear. Lists of attack pattern sequences that have been known to exploit security flaws in web applications in the past can be leveraged for use in targeted fuzzing of application parameters. 
 
@@ -13,15 +13,15 @@ It's also useful for targeted use of brute force for discovery - lists of known 
 
 Primary sources used for attack pattern research:
 
-* research of old web exploits for repeatable attack strings
-* scraping scanner patterns from my own http logs
-* various books
-* metasploit wmap
-* dirb
-* jbrofuzz
-* existing cheatsheats such as for xss, rfi, etc
-* analysis of default app installs
-* lists already submitted to OWASP Fuzzing Code DB by Wagner Elias, Eduardo Neves, Ulisses Castro, Adam Muntner
+  * research of old web exploits for repeatable attack strings
+  * scraping scanner patterns from my own http logs
+  * various books
+  * metasploit wmap
+  * dirb
+  * jbrofuzz
+  * existing cheatsheats such as for xss, rfi, etc
+  * analysis of default app installs
+  * lists already submitted to OWASP Fuzzing Code DB by Wagner Elias, Eduardo Neves, Ulisses Castro, Adam Muntner
 
 Some files are derived primarily from other fuzzers, and are credited in the files with comments formatted like:
 
@@ -38,12 +38,10 @@ or pick from a plethora of available svn clients: http://en.wikipedia.org/wiki/C
 tarballs are available for download, but may not be as fresh as what's in the svn repo.
 
 = Licensing =
+BSD and Creative Commons - totally free (as in beer and cost) for any use. My intent is for open source and commercial scanning products to improve, for web application penetration testers to have access to high-quality fuzzing pattern files, and, as a result, for the security of applications that people use every day to improve.
 
 = Who =
 This SVN repository and the files were assembled by Adam Muntner (unix23 @ gmail.com)
-Please send more patterns!
+He is the Managing Partner of QuietMove, Inc. http://www.quietmove.com
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*Please send more patterns!*
