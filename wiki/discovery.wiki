@@ -2,10 +2,10 @@
 
 = Files =
 
-  * ["file upload"]
-  * [format strings]
-  * [http protocol]
-  * integer overflow
+  * [FileUpload file upload]
+  * [FormatStrings format strings]
+  * [HttpProtocol http protocol]
+  * [IntegerOverflow] integer overflow]
   * ldap
   * misc - payloads
   * misc - wordlists
