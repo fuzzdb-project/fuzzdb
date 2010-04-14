@@ -14,6 +14,9 @@
 *JBroFuzz*
   * Available from [http://sourceforge.net/projects/jbrofuzz/]
 
+*WSFuzzer*
+  * Web Service fuzzere http://sourceforge.net/projects/wsfuzzer/]
+
 = fuzzdb categories = 
 
 Documentation for each of the fuzzdb attack pattern categories
