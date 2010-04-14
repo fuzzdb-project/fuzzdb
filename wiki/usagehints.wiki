@@ -15,7 +15,7 @@
   * Available from [http://sourceforge.net/projects/jbrofuzz/]
 
 *WSFuzzer*
-  * Web Service fuzzere http://sourceforge.net/projects/wsfuzzer/]
+  * Web Service fuzzer http://sourceforge.net/projects/wsfuzzer/]
 
 = fuzzdb categories = 
 
