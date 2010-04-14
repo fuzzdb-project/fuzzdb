@@ -2,13 +2,13 @@
 
 = Tools/Tool Docs =
 
-*WebScarab*
-Script that writes the page to the filesystem [http://pentesterconfessions.blogspot.com/2007/12/webscarab-scripting-and-fuzzing.html]
+*Web Scarab*
+  * Script that writes the page to the filesystem [http://pentesterconfessions.blogspot.com/2007/12/webscarab-scripting-and-fuzzing.html]
 
-Webscarab Fuzzer docs [http://dawes.za.net/rogan/webscarab/docs/fuzzer.html]
+  * Webscarab Fuzzer docs [http://dawes.za.net/rogan/webscarab/docs/fuzzer.html]
 
 *Burp Intruder*
-Burp Intruder docs [http://portswigger.net/intruder/help.html]
+  * Burp Intruder docs [http://portswigger.net/intruder/help.html]
 
 *JBroFuzz*
-Available from [http://sourceforge.net/projects/jbrofuzz/]
+  * Available from [http://sourceforge.net/projects/jbrofuzz/]
