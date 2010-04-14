@@ -32,7 +32,7 @@ Others have additional instructions for payload use in a similar comment format 
 = Download =
 
 via svn:
-svn checkout http://fuzzdb.googlecode.com/svn/trunk/ fuzzdb-read-only
+{{{svn checkout http://fuzzdb.googlecode.com/svn/trunk/ fuzzdb-read-only}}}
 
 or pick from a plethora of available svn clients: http://en.wikipedia.org/wiki/Comparison_of_Subversion_clients
 tarballs are available for download, but may not be as fresh as what's in the svn repo.
