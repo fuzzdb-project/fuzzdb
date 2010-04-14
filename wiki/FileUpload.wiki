@@ -2,7 +2,7 @@
 
 = Files =
 
-  * [file-ul-filter-bypass-commonly-writable-directories file-ul-filter-bypass-commonly-writable-directories.txt]	
+  * [CommonlyWritableDirs file-ul-filter-bypass-commonly-writable-directories.txt]	
   * [file-ul-filter-bypass-ms-php file-ul-filter-bypass-ms-php.txt]			
   * [file-ul-filter-bypass-x-platform-php.txt]
   * [file-ul-filter-bypass-microsoft-asp.txt]			
