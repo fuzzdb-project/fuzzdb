@@ -1,0 +1,6 @@
+C:/inetpub/wwwroot/global.asa
+C:\inetpub\wwwroot\global.asa
+C:/boot.ini
+C:\boot.ini
+D:\inetpub\wwwroot\global.asa
+D:/inetpub/wwwroot/global.asa
