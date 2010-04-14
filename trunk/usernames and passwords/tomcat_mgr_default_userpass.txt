@@ -1,4 +1,0 @@
-j2deployer j2deployer
-ovwebusr OvW*busr1
-cxsdk kdsxc
-root owaspbwa
