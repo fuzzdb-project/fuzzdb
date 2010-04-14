@@ -1,4 +1,4 @@
-#Links to pages with tools and methodologies that will work well with fuzzdb
+#Links to pages with tools and methodologies that work well with fuzzdb
 
 = Tools/Tool Docs =
 
