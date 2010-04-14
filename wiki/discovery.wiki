@@ -2,7 +2,7 @@
 
 = Files =
 
-  * [file upload]
+  * ["file upload"]
   * [format strings]
   * [http protocol]
   * integer overflow
@@ -20,4 +20,3 @@
   * os command execution
   * sql injection
   * usernames and passwords
-
