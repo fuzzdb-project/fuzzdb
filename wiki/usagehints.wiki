@@ -17,23 +17,23 @@
 
 Documentation for each of the fuzzdb attack pattern categories
 
-[discovery]
-[docs]
-[file upload]
-[format strings]
-[http protocol]
-[integer overflow]
-[ldap]
-misc - payloads
-misc - wordlists
-os command execution
-os directory indexing
-path traversal
-rfi
-server side includes
-source disclosure
-sql injection
-usernames and passwords
-xml
-xpath
-xss
+  * [discovery]
+  * [docs]
+  * [file upload]
+  * [format strings]
+  * [http protocol]
+  * [integer overflow]
+  * [ldap]
+  * [misc - payloads]
+  * [misc - wordlists]
+  * [os command execution]
+  * [os directory indexing]
+  * [path traversal]
+  * [rfi]
+  * [server side includes]
+  * [source disclosure]
+  * [sql injection]
+  * [usernames and passwords]
+  * [xml]
+  * [xpath]
+  * [xss]
