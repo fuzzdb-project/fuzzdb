@@ -1,0 +1,11 @@
+# Another test: use exiftool http://www.sno.phy.queensu.ca/~phil/exiftool/  to create a .jpg image with the meta comment field set to:
+# -----
+#<?php phpinfo(); ?> 
+#-----
+{PHPSCRIPT}
+{PHPSCRIPT}.phtml
+{PHPSCRIPT}.php.html
+{PHPSCRIPT}.php::$DATA
+{PHPSCRIPT}.php.php.rar 
+{PHPSCRIPT}.php.rar 
+{PHPSCRIPT}::$DATA
