@@ -1,0 +1,33 @@
+#labels Featured
+#Project To-Do List
+
+=To Do's=
+
+I am liking this WASC criteria x-ref as a guide for patterns to explore and develop
+http://projects.webappsec.org/Threat-Classification-Taxonomy-Cross-Reference-View
+
+*Format String Attack* - Would like another set of eyes that know format string attacks better than I do to review and validate these patterns, even though they are derived from other attack tools
+
+*LDAP Injection* - more patterns
+
+*OS Command Injection* - more patterns, especially for windows
+
+*SQL Injection* - more platform specific stuff
+
+*SSI Injection* - i suspect there are more patterns out there
+ 
+*XPath Injection* - pretty sure there are more encodings and patterns out there
+
+*HTTP Header Injection / Response Splitting* - pretty sure there are more encodings and patterns out there
+
+*Local File Includes* - need patterns
+
+*lists of backdoors*  - needs more backdoor names
+
+*Potential Malicious File Uploads* - pretty sure there are more encodings and patterns out there, esp. more platform specific stuff 
+
+*usernames and passwords* - some files need to be split and cleaned up
+
+*discovery* - need more pattern files for popular apps
+
+*backdoors* - more needed
