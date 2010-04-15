@@ -1,0 +1,467 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>HTTP/1.1 and HTTP/1.0 Method and Field Definitions</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	color:#354278;
+	font-weight:bold;}
+h5
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:#354278;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.doctext, li.doctext, div.doctext
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	color:black;}
+span.docemphasis1
+	{font-style:italic;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 3.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DA link=blue vlink=purple>
+
+<div class=Section1>
+
+
+<p class=doctext>These tables contain a nearly complete list of all the
+methods, requests, and header fields of typical HTTP/1.0 and HTTP/1.1 requests
+and responses.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td colspan=3 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+  <h5 align=center style='text-align:center'><a name=app02table01></a><span
+  style='font-size:10.5pt;font-family:Arial'> HTTP/1.1 Methods and
+  Field Definitions</span></h5>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Method</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Request</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Definition</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>GET <span class=docemphasis1>&lt;Request-URI&gt;?query_string</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>The GET method is used to retrieve whatever is stored or produced
+  by the resource located at the specified Request-URI. The GET method can be
+  used to request files, to invoke server-side scripts, to interact with
+  server-side CGI programs, and more. When HTML form variables are submitted
+  with the form action set to GET, the form parameters are encoded in a query
+  string and submitted to the HTTP server as part of the Request-URI using the
+  GET request method.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>POST </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>POST <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n</p>
+  <p class=doctext>Content-Length: <span class=docemphasis1>&lt;length in
+  bytes&gt;</span>\r\n</p>
+  <p class=doctext>Content-Type: <span class=docemphasis1>&lt;content type&gt;</span>\r\n\r\n</p>
+  <p class=doctext><span class=docemphasis1>&lt;query_string or other data to
+  post to Request-URI&gt;</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The POST method is used to submit data to the resource located
+  at the specified Request-URI. Typically, the resource located at the
+  specified Request-URI is a server-side script or CGI program designed to
+  processes form data. When HTML form variables are submitted with the form
+  action set to POST, the form parameters are encoded and submitted to the HTTP
+  server as the body of the POST request message. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>HEAD </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>HEAD <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\n</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The HEAD method is identical to the GET method except that
+  an HTTP 1.1 server should not return a message-body in the response. The
+  meta-information contained in the HTTP headers in response to a HEAD request
+  should be identical to the information sent in response to a GET request.
+  This method can be used for obtaining meta-information about the entity
+  implied by the request without transferring the entity-body itself. This
+  method is often used for testing hypertext links for validity, accessibility,
+  and recent modification.&quot;—Section 9.4, RFC 2616. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>PUT </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>PUT <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n</p>
+  <p class=doctext>Content-Length: <span class=docemphasis1>&lt;length in
+  bytes&gt;</span>\r\n</p>
+  <p class=doctext>Content-Type: <span class=docemphasis1>&lt;content type&gt;</span>\r\n\r\n</p>
+  <p class=doctext><span class=docemphasis1>&lt;data to put to file&gt;</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The PUT method allows for data to be transferred to an HTTP
+  server and stored at the location identified by the Request-URI. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>OPTIONS </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>OPTIONS <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\n</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The OPTIONS method represents a request for information
+  about the communication options available on the request/response chain
+  identified by the Request-URI.&quot; —Section 9.2, RFC 2616. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>DELETE </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>DELETE <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\n</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The DELETE method requests that the origin server delete
+  the resource identified by the Request-URI.&quot;—Section 9.7, RFC 2616. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>TRACE </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>TRACE <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\n</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The TRACE method is used to invoke a remote,
+  application-layer loop-back of the request message…. TRACE allows the client
+  to see what is being received at the other end of the request chain and use
+  that data for testing and diagnostic information.&quot;—Section 9.8, RFC
+  2616. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>CONNECT </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>CONNECT <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or IP address of
+  host&gt;</span>\r\n\r\n</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The CONNECT message type is used to specify a proxy connection
+  to the resource identified by the Request-URI. </span></p>
+  </td>
+ </tr>
+ </COLGROUP>
+</table>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><a name=app02table02></a><span
+style='color:black;display:none'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td colspan=3 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+  <h5 align=center style='text-align:center'><span style='font-size:10.5pt;
+  font-family:Arial'>Table B-2. HTTP/1.0 Methods and Field Definitions</span></h5>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Method</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Request</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Definition</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET <span class=docemphasis1>&lt;Request-URI&gt;?query_string</span>
+  HTTP/1.1\r\n\r\n </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The GET method is used to retrieve whatever is stored or
+  produced by the resource located at the specified Request-URI. The GET method
+  can be used to request files, to invoke server-side scripts, to interact with
+  server-side CGI programs, and more. When HTML form variables are submitted with
+  the form action set to GET, the form parameters are encoded in a query string
+  and submitted to the HTTP server as part of the Request-URI using the GET
+  request method. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>POST </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext><span lang=EN-GB>POST <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n\</span></p>
+  <p class=doctext><span lang=EN-GB>Content-Length: <span class=docemphasis1>&lt;length
+  in bytes&gt;</span>\r\n</span></p>
+  <p class=doctext><span lang=EN-GB>Content-Type: <span class=docemphasis1>&lt;content
+  type&gt;</span>\r\n\r\n</span></p>
+  <p class=doctext><span class=docemphasis1><span lang=EN-GB>&lt;query_string
+  or other data to post to Request-URI&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-GB style='font-size:10.5pt;font-family:Arial;
+  color:black'>The POST method is used to submit data to the resource located
+  at the specified Request-URI. Typically, the resource located at the
+  specified Request-URI is a server-side script or CGI program designed to
+  processes form data. When HTML form variables are submitted with the form
+  action set to POST, the form parameters are encoded and submitted to the HTTP
+  server as the body of the POST request message. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>HEAD </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-GB style='font-size:10.5pt;font-family:Arial;
+  color:black'>HEAD <span class=docemphasis1>&lt;Request-URI&gt;</span>
+  HTTP/1.1\r\n\r\n </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-GB style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The HEAD method is identical to the GET method except that
+  an HTTP 1.1 server should not return a message-body in the response. The
+  meta-information contained in the HTTP headers in response to a HEAD request
+  should be identical to the information sent in response to a GET request. This
+  method can be used for obtaining meta-information about the entity implied by
+  the request without transferring the entity-body itself. This method is often
+  used for testing hypertext links for validity, accessibility, and recent
+  modification.&quot;—Section 9.4, RFC 2616. </span></p>
+  </td>
+ </tr>
+ </COLGROUP>
+</table>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><a name=app02table03></a><span
+style='color:black;display:none'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td colspan=3 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+  <h5 align=center style='text-align:center'><span lang=EN-GB style='font-size:
+  10.5pt;font-family:Arial'>Table B-3. HTTP/1.0 Undefined Method Description as
+  Found in </span><span style='font-size:10.5pt;font-family:Arial'><a
+  href="http:// /?xmlid=0-201-76176-9/app04#app04"><span
+  lang=EN-GB style='color:#003399'>Appendix D</span></a></span><span
+  lang=EN-GB style='font-size:10.5pt;font-family:Arial'> of RFC 1945.</span></h5>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Method</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Request</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Definition</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>PUT </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The PUT message format is not defined in RFC 1945. In practice,
+  the PUT message format is the same as for HTTP 1.1. </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The PUT method allows for data to be transferred to an HTTP
+  server and stored at the location identified by the Request-URI. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>DELETE </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The DELETE message format is not defined in RFC 1945. In
+  practice, the DELETE message format is the same as for HTTP 1.1. </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The DELETE method requests that the origin server delete
+  the resource identified by the Request-URI.&quot;— Appendix D.1, Section
+  D.1.2, RFC 1945. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>LINK </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The LINK message format is not defined in RFC 1945 and is not
+  implemented by most/all HTTP 1.0 implementations. </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The LINK method establishes one or more Link relationships
+  between the existing resource identified by the Request-URI and other
+  existing resources.&quot;— Appendix D.1, Section D.1.3, RFC 1945. </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>UNLINK </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>The UNLINK message format is not defined in RFC 1945 and is not
+  implemented by most/all HTTP 1.0 implementations. </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&quot;The UNLINK method removes one or more Link relationships
+  from the existing resource identified by the Request-URI.&quot;— Appendix
+  D.1, Section D.1.4, RFC 1945. </span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+<!--504690132--><br></body>
+
+</html>
+

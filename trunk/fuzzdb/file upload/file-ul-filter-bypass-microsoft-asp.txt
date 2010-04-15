@@ -1,0 +1,14 @@
+{ASPSCRIPT}
+{ASPSCRIPT};
+{ASPSCRIPT};.jpg
+{ASPSCRIPT};.pdf
+{ASPSCRIPT};.html
+{ASPSCRIPT};.htm
+{ASPSCRIPT};.txt
+{ASPSCRIPT};.xyz
+{ASPSCRIPT};.zip
+{ASPSCRIPT};.tgz
+{ASPSCRIPT};.doc
+{ASPSCRIPT};.docx
+{ASPSCRIPT};.xls
+{ASPSCRIPT};.xlsx
