@@ -1,0 +1,3 @@
+# microsoft-specific appends - try the generic list, too
++.htr
+::DATA$

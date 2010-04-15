@@ -1,0 +1,7 @@
+uname -n -s
+whoami
+pwd
+last
+cat /etc/passwd
+ls -la /tmp
+ls -la /home
