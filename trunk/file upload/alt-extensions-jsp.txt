@@ -1,5 +1,0 @@
-jsp
-jspx
-jsw
-jsv
-jspf

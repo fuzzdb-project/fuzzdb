@@ -1,3 +1,0 @@
-ver
-chdir
-echo %USERNAME%
