@@ -1,0 +1,32 @@
+# File Upload Fuzzfile 1.0 - File Name Filter Bypass
+# creative commons license http://creativecommons.org/licenses/by/3.0/
+# see:
+# http://cwe.mitre.org/data/definitions/434.html
+
+# projurl
+
+# For MIME filter bypass, your shellscript should look like
+# -------
+# GIF89aP;
+# [shell]
+# -------
+#
+# Check to see if there are no extension checks at all
+#
+# Check to see if the file upload protection is client side only.
+#
+# For mod_cgi Server Side Include upload attacks:
+#<!--#exec cmd="ls" -->
+#
+#or, on Windows
+#
+#<!--#exec cmd="dir" -->
+#
+# Sometimes you can overwrite .htaccess in an upload folder on Apache httpd, if so, 
+# try setting .jpg to executable. If you can set the target directory, try fuzz the 
+# list of all dirs you've enumerated on the servers, and try the commonly writable directory fuzzfile.
+#
+# example .htaccess that sets mime type .jpg to be executable:
+# -----
+# AddType application/x-httpd-php .jpg
+# -----

