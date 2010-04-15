@@ -1,0 +1,5 @@
+# .pm .lib cannot be called directly, must be called as modules
+pl
+pm
+cgi
+lib
