@@ -1,0 +1,12 @@
+# known cross platform source Code, file disclosure attack patterns - append after file or dir path
+%70
+.%E2%73%70
+%2e0
+%2e
+.
+\
+?*
+%20
+%00
+%2f
+%5c
