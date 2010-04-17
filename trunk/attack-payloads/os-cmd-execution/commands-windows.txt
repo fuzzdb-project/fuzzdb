@@ -1,0 +1,4 @@
+# list of potentially useful dos commands to fuzz inside an os command execution bug
+ver
+chdir
+echo %USERNAME%

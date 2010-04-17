@@ -1,0 +1,9 @@
+templates_compiled
+templates_c
+templates
+temporary
+images
+cache
+temp
+files
+tmp
