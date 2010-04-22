@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Common Tag Attributes: Data Attributes</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle"><b class="alert">%</b>Data<b class="alert">%</b>
+Attributes</span><br><font size=2>= <span class="sitetitle">Index DOT Html</span> 
+by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+ <td><font size=2><a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font></td></tr>
+</table>
+</center>
+
+
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">What are the Data Attributes?</b></big>
+    <dd>This category concerns the common Data Binding attributes found in
+        Internet Explorer 4.0+ - they allow a data source (commonly a field in
+        a database) to be tied to an element.
+        <br><br>
+
+        In HTML 4.x a <a href="../shorthands.htm#param">Parameter Entity</a>
+        called "%reserved" is also defined that contains these same attributes.
+        These attributes are not actually explained or defined in the standard other 
+        than a cryptic "reserved for possible future use" notation in the DTD. These 
+        attributes do not appear in any XHTML DTDs.
+        <br><br>
+         
+        <b class="alert">NOTE:</b><br>
+        The IE data points in these support charts are taken directly from Microsoft's 
+        own documentation on this subject.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Language Attributes</b></big>
+
+<dt><b class="subheading"><a href="datafld.htm">Datafld</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>|<span class="ns">S</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The column name from the data source object that supplies the bound data.
+    <dd><b class="l3heading">Values:</b> Alphanumeric characters.
+
+
+<dt><b class="subheading"><a href="dataformatas.htm">Dataformatas</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>|<span class="ns">S</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates whether bound data is plain text or HTML. HTML 4 (plaintext)
+        and Internet Explorer 4 (text) values seem to be different values for
+        achieving the same result.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">html</b> | <b class="alert">plaintext</b> | <b class="alert">text</b>
+
+<dt><b class="subheading"><a href="datasrc.htm">Datasrc</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>|<span class="ns">S</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates the URL or ID of the data source object supplying the data that
+        is bound to this element. HTML 4 and Internet Explorer 4 diverge here on
+        intent of this attribute - HTML 4 indicates it should be a URL while IE4
+        says it should be a data source ID.
+    <dd><b class="l3heading">Values:</b> Data source ID or relative/absolute URL.
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

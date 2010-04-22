@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>CAPTION: Browser Peculiarities: Caption not the first element in a table</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The Tables specification says the CAPTION element should always 
+come at the beginning of a table structure (this is to ensure proper rendering in 
+progressive table display.) I have yet to see a browser misbehave if the CAPTION 
+is placed say, just before the end of a table structure. It seems that as long as 
+CAPTION is used at the same level as a table row hierarchy element, things will render fine.</div>
+<br>
+
+<b>CAPTION element is first element in the TABLE structure:</b>
+<hr>
+filler text 
+<table border="1">
+<caption>This is a caption</caption>
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>CAPTION element is last element in the TABLE structure:</b>
+<hr>
+filler text 
+<table border="1">
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+<caption>This is a caption</caption>
+</table>
+filler text
+<hr>
+<br>
+
+<b>CAPTION element is in the middle of the TABLE structure:</b>
+<hr>
+filler text 
+<table border="1">
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<caption>This is a caption</caption>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

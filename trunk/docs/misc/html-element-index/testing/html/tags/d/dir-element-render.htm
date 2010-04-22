@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Dir element rendering test</title>
+<!-- 
+    Element Definition:
+    Dir: Directory List - element indicates content is a list of short items. 
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>Test section will have 3 list items labelled "dir item N", prepended with 
+solid circle markers. Element may be rendered exactly like the UL list and 
+some of the list's margins and paddings may be non-zero.<br>
+Wrapped list items should also stay at the same indentation level relative to the marker</i></b>.
+<br><br>
+
+<span class="text">Test is between the next two ruled lines</span>
+
+<hr>
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<dir>
+<li>dir item 1
+<li>dir item 2<br>dir item 2
+<li>dir item 3
+</dir>
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text
+<hr>
+
+</body>
+</html>

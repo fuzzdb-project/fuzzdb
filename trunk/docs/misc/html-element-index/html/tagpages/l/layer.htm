@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Layer</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Layer</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><span class="property"><a href="../../../css/properties/classify/position.htm">position:</a></span> absolute</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Absolutely positioned content block</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://developer.netscape.com/docs/manuals/communicator/dynhtml/layers31.htm#1026297">Netscape's 
+        "DHTML in Netscape Communicator" documents</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is an element created by Netscape that allows an author to define
+        precisely positioned 2-dimensional layout consisting of overlapping
+        layers of transparent or solid content on a web page. All the content
+        between the opening and closing LAYER tags can be treated as a single
+        item of content that can be moved and altered in various ways.
+        <br><br>
+
+        Layers can have a stacking order that allows a virtual third
+        z-dimension to be defined. Using this, layers can appear on top of
+        other layers. Layers can also be transparent or solid; if
+        transparent, the content of underlying layers shows through it.
+        As if that wasn't enough, background colors or tiled images can also be
+        specified for a layer (setting these attributes for a layer will
+        negate its transparency property and layers below it will be obscured.)
+        <br><br>
+
+        Layers can be nested and moved in a dynamic fashion via scripting.
+        This type of layer defining explicit positioning is also known as
+        an 'out-of-flow' or 'positioned' layer. An alternate method of defining
+        a layer is through the use of the <a href="../i/ilayer.htm">ILAYER</a>
+        element, which allows the definition of layers whose position follows the
+        flow of the page [like an image] - this is known as an 'inflow layer'.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B2-4.x</u></i></b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Above</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the name of the layer that will occur directly
+        above the current layer in the layer stacking order (z-order.) It
+        overrides the default behavior of placing new layers on top of all
+        existing layers. Only one of the Z-INDEX, ABOVE, or BELOW attributes
+        can be used for a given layer. References to layers not yet defined
+        result in default layer creation behavior - i.e. the new layer will
+        be placed on top of all existing layers.
+    <dd><b class="l3heading">Values:</b> An existing valid alphanumeric layer NAME value.
+
+<dt><b class="subheading">Background</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a background image to be tiled on a layer. Default
+        behavior for a layer is to be transparent.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Below</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the name of the layer that will occur directly
+        below the current layer in the layer stacking order (z-order.) It
+        overrides the default behavior of placing new layers on top of all
+        existing layers. Only one of the Z-INDEX, ABOVE, or BELOW attributes
+        can be used for a given layer. References to layers not yet defined
+        result in default layer creation behavior - i.e. the new layer will
+        be placed on top of all existing layers.
+    <dd><b class="l3heading">Values:</b> An existing valid alphanumeric layer NAME value.
+
+<dt><b class="subheading">Bgcolor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the background color of the layer. Default behavior
+        for a layer is to be transparent.
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color
+        specification</a> methods.
+
+<dt><b class="subheading">Clip</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This parameter specifies the clipping rectangle (viewable area) of
+        the layer, which can be less than the width and height of the content
+        of the layer. If the CLIP attribute is omitted, the clipping rectangle
+        of a layer is the same size as the HTML content of the layer. A layer
+        will expand to contain all of its content by default.
+    <dd><b class="l3heading">Values:</b><br>
+        A comma separated list of integer values representing the absolute pixel
+        coordinates of the rectangle. Origin values are at the top, left corner
+        and grow as one moves down or to the right.<br>
+        &#160;&#160;&#160;<b class="alert">Format 1:</b>
+        <span class="tagattrib">CLIP</span>=&quot;left,top,right,bottom&quot;<br>
+        &#160;&#160;&#160;<b class="alert">Format 2:</b>
+        <span class="tagattrib">CLIP</span>=&quot;right,bottom&quot; ['left' and
+        'top' values default to zero.]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B3-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This parameters specifies the height of the layer's content and
+        serves as a reference dimension for child layers.
+    <dd><b class="l3heading">Values:</b> Positive integers representing
+        a pixel width or a percentage relative to the containing layer/window.
+
+<dt><b class="subheading">Left</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the coordinate position of the left side boundary
+        position of the current layer in relation to a parent layer if present.
+        if no parent layer exists, the value is relative to the main document window.
+    <dd><b class="l3heading">Values:</b><br>
+        Integer values specifying screen position or an HTML scripting
+        expression to position one layer relative to another.
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the name of the layer in order to
+        identify or reference it from other layers or scripting languages.
+        Layers are unnamed by default.
+    <dd><b class="l3heading">Values:</b>
+        An alphanumeric string. Must begin with an alphabetic character.
+
+<dt><b class="subheading">Overflow</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies what should happen when the layer's content
+        exceeds its rendering box and clipping area. A value of 'none' does
+        not clip the content, while 'clip' clips the content to its dimensions
+        or defined clipping area.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">None</b> [DEFAULT], <b class="alert">Clip</b>
+
+<dt><b class="subheading">PageX</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B3-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the absolute horizontal (X) coordinate position of the left
+        boundary position of the current layer in relation to the document window
+        (this differs slightly in definition from the LEFT attribute.)
+    <dd><b class="l3heading">Values:</b>
+        Integer values specifying screen position or an HTML scripting expression.
+
+<dt><b class="subheading">PageY</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B3-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the absolute vertical (Y) coordinate position of the top
+        boundary position of the current layer in relation to the document window
+        (this differs slightly in definition from the TOP attribute.)
+    <dd><b class="l3heading">Values:</b>
+        Integer values specifying screen position or an HTML scripting expression.
+
+<dt><b class="subheading">Src</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B3-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of an HTML 'sub-document' to be inserted
+        in to the layer. The effect is similar to the
+        <a href="../i/iframe.htm">IFRAME</a> tag implemented by Internet Explorer.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Top</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the coordinate position of the top boundary
+        position of the current layer in relation to a parent layer if present.
+        if no parent layer exists, the value is relative to the main document window.
+    <dd><b class="l3heading">Values:</b><br>
+        Integer values specifying screen position or an HTML scripting
+        expression to position one layer relative to another.
+
+<dt><b class="subheading">Visibility</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B2-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies whether the layer is visible or not. A layer
+        will have the same visibility as its parent layer by default. Even if
+        the visibility of a layer is set to SHOW, a layer can only be seen if
+        there are no other visible, solid layers stacked on top of it. For top
+        level layers that are not nested inside other layers, a value of
+        INHERIT has the same effect as SHOW since the body document is always
+        visible.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;&#160;<b class="alert">show</b>
+        [Shows the layer]<br>
+        &#160;&#160;&#160;&#160;<b class="alert">hide</b>
+        [Hides the layer]<br>
+        &#160;&#160;&#160;&#160;<b class="alert">inherit</b>
+        [The layer will have the same visibility as its parent layer]
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This parameters specifies the width of the layer's content. Specifically,
+        it controls the right margin of the layer for wrapping purposes.
+        Some elements may not be 'wrappable' (like images) and extend beyond
+        the width specified. Layer contents wrap at the right boundary of the
+        enclosing block by default.
+    <dd><b class="l3heading">Values:</b> Positive integers representing a pixel width.
+
+<dt><b class="subheading">Z-index</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B1-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute allows a layer's stacking order (z-order) to be
+        specified in terms of an integer. Layers with higher numbered Z-INDEX
+        values are stacked above those with lower ones. Positive Z-INDEX
+        values cause the layer to be stacked above its parent while negative
+        values will cause the layer to be stacked below its parent. This
+        attribute overrides the default behavior of placing new layers on top
+        of all existing layers. Only one of the Z-INDEX, ABOVE, or BELOW attributes
+        can be used for any given layer.
+    <dd><b class="l3heading">Values:</b> Integers (zero inclusive.)
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">layer</b>
+        <span class="tagattrib">name</span>=&quot;two&quot;
+        <span class="tagattrib">left</span>=&quot;40&quot; <span class="tagattrib">top</span>=&quot;40&quot;
+        <span class="tagattrib">z-index</span>=&quot;2&quot;&gt;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">size</span>=&quot;7&quot;
+        <span class="tagattrib">color</span>=&quot;#0000ff&quot;&gt;Two&lt;/<b class="tagname">font</b>&gt;
+        &lt;/<b class="tagname">layer</b>&gt;<br>
+        &lt;<b class="tagname">layer</b>
+        <span class="tagattrib">name</span>=&quot;one&quot;
+        <span class="tagattrib">left</span>=&quot;25&quot; <span class="tagattrib">top</span>=&quot;25&quot;
+        <span class="tagattrib">z-index</span>=&quot;1&quot;&gt;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">size</span>=&quot;7&quot;
+        <span class="tagattrib">color</span>=&quot;#ffff00&quot;&gt;One&lt;/<b class="tagname">font</b>&gt;
+        &lt;/<b class="tagname">layer</b>&gt;<br>
+        &lt;<b class="tagname">layer</b>
+        <span class="tagattrib">name</span>=&quot;three&quot;
+        <span class="tagattrib">left</span>=&quot;55&quot; <span class="tagattrib">top</span>=&quot;55&quot;
+        <span class="tagattrib">z-index</span>=&quot;3&quot;&gt;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">size</span>=&quot;7&quot;
+        <span class="tagattrib">color</span>=&quot;#ff0000&quot;&gt;Three&lt;/<b class="tagname">font</b>&gt;
+        &lt;/<b class="tagname">layer</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> This is a nestable block element,
+        most clearly like the DIV element. Until I experiment with this element some or some
+        official behavioral interaction documentation appears, it will be treated in
+        the same method as the DIV element is.
+    <li><b class="alert">DTD Note:</b> Since the DTD behavior is preliminary,
+        I have held off including the element in the BLOCK tag groupings. Consider the %Block
+        Format Parent% and %Block Format Content% groups to contain the LAYER element if
+        a full behavioral model is desired.
+    <li><b class="alert">Note:</b> It appears that content pointed to by the SRC attribute should be
+        a complete HTML document.
+    <li>Only Netscape currently supports this element in its 4.x versions. Netscape has
+        stated that its 5.0 version and above would not support the syntax. So, its use
+        is not recommended; the same capabilities are available with wider browser
+        support via the <a href="http://www.blooberry.com/indexdot/css/propindex/position.htm">Style
+        Sheet Positioning</a> <span class="external">[--&gt;Index DOT Css]</span> properties.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Using Javascript scripting to control LAYER behavior was not supported in
+        Netscape 4.0 Beta 1, but later versions support this.
+    <li><a href="../../../testing/html/tags/l/layer-bp1.htm">[Test]</a>
+        There is some odd behavior with forms and the LAYER/ILAYER elements.
+        If a LAYER/ILAYER element is nested <em>inside</em> a FORM element,
+        and any widgets for the form (buttons, text fields, etc) are contained
+        within the layer, they will not appear/be rendered. If a widget/field is
+        to show up, the containing FORM element must lie <em>within</em> the
+        same LAYER/ILAYER element as its widgets/fields.
+    <li><a href="../../../testing/html/tags/l/layer-bp2.htm">[Test]</a>
+        Netscape 4.x can not correctly hyperlink to a bookmark (A NAME) that is
+        nested inside a LAYER element from another document. It succeeds in
+        jumping to the document, and it <em>does</em> attempt to jump within the
+        document, but I didn't see a particular pattern to where it was jumping
+        to...but it isn't the correct location. Hyperlinking to a bookmark
+        nested in a LAYER from within the same document appears to work correctly.
+    <li>The OVERFLOW attribute is curious - if the attribute is not present, the
+        behavior defaults to 'none', but if any value that is not 'none' is used,
+        it behaves like 'clip'.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

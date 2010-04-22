@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Writing-mode - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">writing-mode</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE5.5B1</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other International Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="unibidi.htm">unicode-bidi</a><br>
+    <a href="direction.htm">direction</a><br>
+    <a href="ralign.htm">ruby-align</a><br>
+    <a href="roverhang.htm">ruby-overhang</a><br>
+    <a href="rposition.htm">ruby-position</a><br>
+    <a href="linebreak.htm">line-break</a><br>
+    <a href="wordbreak.htm">word-break</a><br>
+    <a href="imemode.htm">ime-mode</a><br></td>
+    <td valign=top><a href="textjustify.htm">text-justify</a><br>
+    <a href="textaspace.htm">text-autospace</a><br>
+    <a href="textkspace.htm">text-kashida-space</a><br>
+    <a href="lflow.htm">layout-flow</a><br>
+    <a href="lgrid.htm">layout-grid</a><br>
+    <a href="lgmode.htm">layout-grid-mode</a><br>
+    <a href="lgtype.htm">layout-grid-type</a><br>
+    <a href="lgline.htm">layout-grid-line</a><br>
+    <a href="lgchar.htm">layout-grid-char</a><br>
+    <a href="lgcharspace.htm">layout-grid-char-spacing</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">lr-tb</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA<br></td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/writingMode.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property controls the intrinsic writing direction rendering for a 
+        block of content. The default is left-to-right, top-to-bottom common in 
+        western languages, but the alternate rendering mode is top-to-bottom,
+        right-to-left which is a common rendering mode used in Asian writing systems. 
+        The half-width character rotation effect is not cumulative - it is always 
+        rotated with respect to the canvas.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">lr-tb</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Character glyphs flow one after another from the source
+        content from left to right, starting from the top of the
+        element's rendering box. When a new line is started, it
+        starts below the previous line at the left-hand side of the
+        element's rendering box.</dd>
+
+<dt><b class="subheading">tb-rl</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Character glyphs flow one after another from the source
+        content from top to bottom, starting from the right side of
+        the element's rendering box. When a new line is started, it
+        starts to the left of the previous line at the top side of
+        the element's rendering box. Full-width characters are
+        rendered with their top on the same side as top of the
+        rendering box, and half-width characters (select kana
+        glyphs and western characters) are rendered rotated 90
+        degrees clockwise to the original rendering box's orientation.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">div</b>
+        { <span class="property">writing-mode:</span> tb-rl; }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">div</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">writing-mode:</span>
+        tb-rl&quot;&gt;Content rendered vertically&lt;/<b class="tagname">div</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+     <li>Nothing to report yet.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

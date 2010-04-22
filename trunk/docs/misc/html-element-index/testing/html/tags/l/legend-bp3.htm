@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LEGEND: Browser Peculiarities: Legend not the first element in a fieldset</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">In Internet Explorer 4.0 if a LEGEND exists and is NOT the 
+first element after the opening FIELDSET tag, rendering problems occur. 
+Such a construct is illegal according to the spec anyway, so don't do it.</div>
+<br>
+
+<b>LEGEND element is the first element in the fieldset:</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<legend>This is a legend</legend>
+<b>Field 1:</b> <input type="text" name="f1"><br>
+<b>Field 2:</b> <input type="text" name="f2"><br>
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+<b>LEGEND element is the last element in the fieldset:</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<b>Field 1:</b> <input type="text" name="f1"><br>
+<b>Field 2:</b> <input type="text" name="f2"><br>
+<legend>This is a legend</legend>
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+<b>LEGEND element is in the middle of the fieldset:</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<b>Field 1:</b> <input type="text" name="f1"><br>
+<legend>This is a legend</legend>
+<b>Field 2:</b> <input type="text" name="f2"><br>
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

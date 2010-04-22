@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>HR: Browser peculiarity - NOSHADE width in netscape</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">In Netscape, the NOSHADE attribute has an unexpected odd effect 
+on HR elements. It usually creates a gray rule, with roughly rounded ends which 
+are added to the HR WIDTH value on each side. This can effectively add the SIZE 
+attribute to the specified WIDTH of the HR, as the radius of each of the rounded 
+ends is about half of the SIZE attribute. (eg: &lt;hr  SIZE=40 WIDTH=100 NOSHADE&gt; 
+should create a rule in Netscape with rounded ends, with a height of 40px and an 
+apparent total length of around 140px.)</div>
+<br>
+
+<b>Plain HR in the middle, with WIDTH=100</b>
+<hr noshade size="10">
+<br>
+<hr width="100">
+<div align="center"><img src="../../../objects/images/centeringgrid.png"></div>
+<br>
+<hr noshade size="10">
+<br>
+
+<b>Plain HR in the middle, with WIDTH=100, SIZE=40</b>
+<hr noshade size="10">
+<br>
+<hr width="100" size="40">
+<div align="center"><img src="../../../objects/images/centeringgrid.png"></div>
+<br>
+<hr noshade size="10">
+<br>
+
+<b>Plain HR in the middle, with WIDTH=100, SIZE=40, NOSHADE</b>
+<hr noshade size="10">
+<br>
+<hr width="100" size="40" noshade>
+<div align="center"><img src="../../../objects/images/centeringgrid.png"></div>
+<br>
+<hr noshade size="10">
+<br>
+
+</body>
+</html>

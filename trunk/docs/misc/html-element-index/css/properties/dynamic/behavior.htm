@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Behavior - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">behavior</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE5</i></b>]<br></td>
+    <td align=center><b class="alert">Other Dynamic<br>Content Properties</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="accelerator.htm">accelerator</a><br>
+    <a href="cursor.htm">cursor</a><br>
+    <a href="filter.htm">filter</a><br>
+    <a href="zoom.htm">zoom</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual, Interactive</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/behavior_1.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The Behavior property specifies one or more space separated URLs indicating
+        script(s) to attach to a CSS selector. Behaviors allow the default
+        functionality of a given element to be extended. Using simple CSS syntax
+        that allows script to be separated from style and content, CSS behaviors
+        offer a fairly elegant and efficient way to re-use script code.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">[Script URL]</b></dt>
+<dt>[<b><i class="fs">IE5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Syntax:</b> <b class="alert">url</b>([URL])</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Provides an absolute or relative URL reference to the Behavior.</dd>
+
+<dt><b class="subheading">[#Object ID]</b></dt>
+<dt>[<b><i class="fs">IE5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Syntax:</b> <b class="alert">url</b>(#[Object ID])</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The Behavior is a binary implementation. This syntax consists of a pound
+        sign ("#") followed by an OBJECT element ID within the document that
+        instantiates the binary implementation.</dd>
+
+<dt><b class="subheading">[Default Behavior]</b></dt>
+<dt>[<b><i class="fs">IE5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Syntax:</b> <b class="alert">url</b>(#default#[Behavior Name])</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Quite a few default behaviors ship with Internet Explorer 5.0. This syntax
+        allows each default behavior to be easily referenced.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd><b class="selector">Selector</b> { <span class="property">behavior:</span>
+        ([<b class="alert2">Script URL</b>] | [<b class="alert2">#Object ID</b>] |
+        [<b class="alert2">Default Behavior</b>]) ([<b class="alert2">Script URL</b>] |
+        [<b class="alert2">#Object ID</b>] | [<b class="alert2">Default Behavior</b>])* }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">blockquote</b> {
+        <span class="property">behavior:</span> url(hilight.htc)
+        url(#behaveBinObject) }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">blockquote</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">behavior:</span>
+        url(hilight.htc) url(#behaveBinObject)&quot;&gt;To<br>be or not to be, that is the
+        question&lt;/<b class="tagname">blockquote</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer 5.0 ships with a number of default behaviors. Consult
+        the Microsoft reference pages for more information on these
+        <a href="http://msdn.microsoft.com/workshop/author/behaviors/reference/reference.asp">default
+        behaviors in IE</a>.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+
+</BODY>
+</HTML>

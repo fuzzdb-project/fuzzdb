@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Border-Style - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">border-style</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Border-Style Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="btstyle.htm">border-top-style</a><br>
+    <a href="brstyle.htm">border-right-style</a><br></td>
+    <td><a href="bbstyle.htm">border-bottom-style</a><br>
+    <a href="blstyle.htm">border-left-style</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">none</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>ALL</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">img</b>
+        <span class="tagattrib">BORDER</span>&gt; | &lt;<b class="tagname">table</b>
+        <span class="tagattrib">BORDER</span>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#border-style">CSS1: Sect. 5.5.17</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/box.html#border-style-properties">CSS2: Sect. 8.5.3</a>,
+        <a href="http://www.w3.org/TR/CSS21/box.html#border-style-properties">CSS2.1: Sect 8.5.3</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a shorthand property which allows an author to specify
+        'border-top-style', 'border-right-style', 'border-bottom-style', and
+        'border-left-style' properties using a single property and value
+        notation (the values are given in this order separated by spaces.)
+        If one or more of the values are not present, the value for a missing
+        side is taken from the opposite side that is present. If only one
+        value is listed, it applies to all sides.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">NS6</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        No border is rendered. This overrides any value of 'border-width', if present.</dd>
+
+<dt><b class="subheading">hidden</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Creates the same effect as 'none'. Only difference is for border conflict
+        resolution for table elements.</dd>
+
+<dt><b class="subheading">dotted</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE5.5B1</b>|<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The border is rendered as a series of dots.</dd>
+
+<dt><b class="subheading">dashed</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE5.5B1</b>|<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The border is rendered as a series of short lines.</dd>
+
+<dt><b class="subheading">solid</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Renders a solid line.</dd>
+
+<dt><b class="subheading">groove</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Creates the effect of the border being grooved or carved in the
+        rendering surface (A 3-D groove - the opposite of 'ridge'.) The
+        groove bevel color is rendered based upon the value of the 'color' property.</dd>
+
+<dt><b class="subheading">ridge</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Creates the effect of the border being raised from the rendering surface
+        (A 3-D ridge - the opposite of 'groove'.) The ridge bevel color is
+        rendered based upon the value of the 'color' property.</dd>
+
+<dt><b class="subheading">inset</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Creates the effect of the border being embedded in the rendering surface
+        (A 3-D inset.) The inset bevel color is rendered based upon the value
+        of the 'color' property. A distinction exists between this value and 'groove'.</dd>
+
+<dt><b class="subheading">outset</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Creates the effect of the border coming out of the rendering surface
+        (A 3-D outset - the opposite of 'inset'.) The outset bevel color is
+        rendered based upon the value of the 'color' property. A distinction
+        exists between this value and 'ridge'.</dd>
+
+<dt><b class="subheading">double</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        A double line drawn on top of the background of the element. The two lines with
+        the space between adds up to the value of the 'border-width' property.</dd>
+
+<dt><b class="subheading">-moz-bg-inset</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Mozilla proprietary value - authors should not use this value.
+        The same as the "inset" value, but the element's background color is used
+        to create the inset rendering instead of any border-color specified.</dd>
+
+<dt><b class="subheading">-moz-bg-outset</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Mozilla proprietary value - authors should not use this value.
+        The same as the "outset" value, but the element's background color is used
+        to create the outset rendering instead of any border-color specified.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd><b class="selector">Selector</b> { <span class="property">border-style:</span>
+        [<b class="alert2">style</b>] <b class="alert">{1,4}</b> }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">strong</b> {
+        <span class="property">border-style:</span> groove inset solid none }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">strong</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">border-style:</span>
+        dotted&quot;&gt;this is a beautiful test&lt;/<b class="tagname">strong</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> Browsers are allowed to treat
+        values of <b class="alert">dotted</b>, <b class="alert">dashed</b>,
+        <b class="alert">groove</b>, <b class="alert">ridge</b>,
+        <b class="alert">inset</b>, <b class="alert">outset</b> and
+        <b class="alert">double</b> as the value <b class="alert">solid</b>.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- This property does not apply to input TYPE=checkbox/radio fields
+            <dd>- Applying border properties to list items skews the normal placement
+                of the marker
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- Default border width for form fields and tables/table cells is not "none."
+            <dd>- Using a 'border-style' of "double" with 'border-width' set to "thin"
+                produces a solid, thin border, not a double border.
+            <dd>- Applying a border-style of "double", "dotted" or "dashed" on the 
+                BODY element produces a "solid" border style
+            <dd>- Applying borders to the BODY element puts the border <em>outside</em>
+                the canvas' scrollbars.
+            <dd><b class="alert2">4.0-5.0:</b>
+            <dd>- This property does not apply to inline elements.
+            <dd><b class="alert2">5.5+:</b>
+            <dd>- Beginning in 5.5 Beta 1, this property now applies
+                to inline elements.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- Inline elements are turned into block elements when Border properties are applied.
+            <dd>- Border properties have no effect on tables and table cells
+            <dd>- Border properties applied to form fields and images: creates a linefeed
+                after the element followed by a small box carrying the border property/value.
+            <dd>- Border properties applied to list items (LI) and DT/DD:
+                creates a small box carrying the border property/value, followed by
+                a linefeed, followed by the list item content.
+            <dd>- Border properties applied to list structures (OL/UL): causes the list
+                markers to be shown as small bullets, regardless of the 'list-style-type' applied.
+            <dd>- The default value for 'border-style' is "solid", not "none". The
+                default value for 'border-width' is "0", not "medium."
+            <dd>- Border properties applied to hyperlinks make the hyperlink unusable!
+            <dd>- Border styles applied to unclosed P element, nested inside a floating
+                element: all content after opening P element disappears.
+            <dd>- Reported elsewhere: Crash when border applied to unclosed P element
+                in table cell, while another table is nested in the cell (verified in
+                4.0x, NT but appears ok in 4.5x, 98)
+            <dd>- Styles can not be independently set for each side using this property;
+                As reported elsewhere, the border-style from the previous paragraph is
+                used. In my testing in 4.5x though, listing more than one border-style value
+                of any type (even invalid values) renders as if the style were set to "outset."
+            <dd>- Even if the 'border-style' is set to "none", an element is rendered
+                with space allowance for any indicated 'border-width' value.
+            <dd>- The borders created for hyperlinked images can not be controlled
+                by the 'border-style' "none" value.
+            <dd>- Reported elsewhere: Assigning border properties to elements with
+                'width' set to "100%" can cause unnecessary linefeeds when printing.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- Borders have no effect on images, tables, table cells and form fields.
+            <dd>- Using a 'border-style' of "double" with 'border-width' set to "thin"
+                produces a solid, thin border, not a double border.
+     </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

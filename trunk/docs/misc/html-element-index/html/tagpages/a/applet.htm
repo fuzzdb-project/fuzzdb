@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Applet</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Applet</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+         [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Applet</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (replaced)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced with java applet of specified dimensions</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.4">HTML 4.x</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The APPLET element is the mechanism to embed and invoke a Java
+        application within an HTML document. A browser that understands this
+        element will ignore everything in the content of the APPLET element except
+        for embedded <a href="../p/param.htm">PARAM</a> elements [which are used
+        to pass parameters to the Applet.] Browsers that do not understand this
+        element should ignore it and the embedded PARAM elements and process the content
+        between the begin and end APPLET tags instead (this should also happen when
+        the Applet fails to load for whatever reason.)
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b><u class="sr">O3.5-3.6x</u></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the alignment of text following the APPLET
+        reference relative to the applet on screen. LEFT and RIGHT specify
+        floating horizontal alignment of the applet in the browser window, and 
+        subsequent text will wrap around the applet. The other options specify 
+        vertical alignment of text relative to the applet on the same line.
+    <dd><b class="l3heading">Values:</b> 
+        <b class="alert">Left</b> | <b class="alert">Right</b> |
+        <b class="alert">Top</b> | <b class="alert">Texttop</b> |
+        <b class="alert">Middle</b> | <b class="alert">Textmiddle</b> |
+        <b class="alert">Baseline</b> | <b class="alert">Bottom</b> |
+        <b class="alert">Textbottom</b>
+
+<dt><b class="subheading">Alt</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates text to be displayed for text only browsers or
+        browsers that do not understand the Applet element [I am not sure why this
+        attribute exists if the same holds true for all APPLET element content.]
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Archive</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i><u class="sr">N3B7-??</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies an archive file containing the classes
+        necessary for the applet. The archive file URL is relative to the CODEBASE
+        URL path. Classes not in the zip file will still be searched for via
+        the other attribute methods available, if required.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [An absolute or relative URL to a GNU-ZIP .ZIP format file. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Border</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This SHOULD control the pixel thickness of a border around the applet
+        if it was to behave the way other elements carrying a BORDER attribute
+        behave. Instead, it just appears to render a padding around the APPLET
+        with the designated value being the amount of pixel padding around the
+        APPLET.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">0</b>, for no border, or a positive integer pixel value.
+
+<dt><b class="subheading">Code</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates a URL pointing to the Applet's code/class.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">CodeBase</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the base URL of the applet if the CODE attribute
+        is relative. If the CODEBASE URL is relative, it is in relation to the
+        current document URL or the BASE HREF element, if present.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of the applet in pixels.
+        It can be used to speed up display of the document being downloaded so it
+        can pre-render the document with an applet placeholder while the applet downloads.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integers or positive integers followed by a "%" representing a percentage length]
+
+<dt><b class="subheading">HSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the horizontal spacing (left and right padding)
+        around the applet in pixels.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">0</b>, for no horizontal padding, or a positive integer pixel value.
+
+<dt><b class="subheading">Mayscript</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N3-??</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which permits the applet to access Javascript 
+        functionality and data on a page. Attempts to access Javascript when this 
+        attribute is not present results in a Java exception.
+    <dd><b class="l3heading">Values:</b> NA
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This provides a way for the applet to identify itself to other
+        applets in the current HTML page.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Object</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N??</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;This attribute gives the name of the resource that contains a
+        'serialized' representation of an applet. The applet will be
+        deserialized by the browser. The init() method will not be
+        invoked; but its start() method will. Attributes valid when
+        the original object was serialized are not restored. Any
+        attributes passed to this applet instance will be available
+        to the Applet.&quot;
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Src</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N??</span>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates an external URL reference to an applet. (this ability is also
+        covered with the CODE and CODEBASE attributes)
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">VSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the vertical spacing (top and bottom padding)
+        around the applet in pixels.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">0</b>, for no vertical padding, or a positive integer pixel value.
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of OBJECT element.
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the applet in pixels.
+        It can be used to speed up display of the document being downloaded so it
+        can pre-render the document with an applet placeholder while the applet
+        downloads.
+    <dd><b class="l3heading">Values:</b>  <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integers or positive integers followed by a "%" representing a percentage length]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">applet</b>
+        <span class="tagattrib">codebase</span>=&quot;http://www.foo.com/java/&quot;
+        <span class="tagattrib">code</span>=&quot;javaexample.class&quot;
+        <span class="tagattrib">width</span>=&quot;200&quot; <span class="tagattrib">height</span>=&quot;300&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b> <span class="tagattrib">name</span>=&quot;text1&quot;
+        <span class="tagattrib">value</span>=&quot;Example Text 1&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b>
+        <span class="tagattrib">name</span>=&quot;imagecaption&quot;
+        <span class="tagattrib">value</span>=&quot;Image
+        Caption&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b>
+        <span class="tagattrib">name</span>=&quot;bounceimage&quot;
+        <span class="tagattrib">value</span>=&quot;bounce1.gif&quot /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">img</b>
+        <span class="tagattrib">src</span>=&quot;non_java_image.gif&quot;
+        <span class="tagattrib">width</span>=&quot;200&quot; <span class="tagattrib">height</span>=&quot;300&quot;
+        <span class="tagattrib">border</span>=&quot;0&quot; <span class="tagattrib">alt</span>=&quot;You
+        are missing the full Java Experience.&quot;&gt;<br>
+        &lt;/<b class="tagname">applet</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b> |
+        &lt;<a href="../p/param.htm">param</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>This element replaces the older APP element that was also used in
+        several browsers to include JAVA Applets.
+    <li>The <a href="../o/object.htm">OBJECT</a> element absorbs all of the functionality 
+        of the APPLET element. Historic support for APPLET is greater, but it is 
+        no longer in XHTML DTDs. Choose the element as it is appropriate to your audience.
+    <li>HTML 4.x+ recommends that authors use the ID attribute instead of the NAME
+        attribute wherever possible. ID is the accepted method moving forward and NAME will
+        eventually be removed.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The Internet Explorer online tag reference in the IE 3.0 timeframe
+        listed support for the TITLE attribute for this element. IE3 never
+        showed any signs that it actually supported this.
+    <li>Internet Explorer supports a compressed code technology for Java
+        similar to the intent of the ARCHIVE attribute. This scheme uses
+        Microsoft's Cabinet archiving format. CABBASE is used as an applet
+        parameter to indicate the location of the compressed file.
+        <b class="alert">Problem:</b> Internet Explorer does not appear to
+        use the CODE or CODEBASE attributes as fallback data sources for the
+        applet code if the CABBASE URL is invalid or unavailable.
+    <li>Netscape 3.0 uses the GNU-ZIP format for the ARCHIVE attribute, but
+        they must be archived with compression turned off, or else this
+        attribute will fail. IE4+ and Netscape 4+ do allow zip file
+        compression for this attribute.
+    <li><a href="../../../testing/html/tags/a/applet-bp2.htm">[Test]</a>
+        Linefeed and Carriage Return handling (&amp;#10; and &amp;#13;
+        respectively) for the ALT attribute:<br>
+        - <b class="alert">Internet Explorer:</b> All literal/unencoded or
+        encoded CR/LFs are maintained and displayed as intended.<br>
+        - <b class="alert">Netscape:</b> All unencoded or encoded CR/LFs are
+        collapsed to nothing in ALT display (not the normal method for
+        spacing-character collapsing - usually it would collapse to a
+        single space.)
+    <li><a href="../../../testing/html/tags/a/applet-bp1.htm">[Test]</a>
+        A bad bug exists in the Netscape 6 betas where selecting text that
+        included an applet would crash the browser if a mouse event handler
+        was attached to the applet. This was fixed by 6.0 final.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

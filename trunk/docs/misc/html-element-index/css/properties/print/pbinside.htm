@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Page-Break-Inside - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">page-break-inside</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O3.5</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Printing Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="pbbefore.htm">page-break-before</a><br>
+    <a href="pbafter.htm">page-break-after</a><br>
+    <a href="page.htm">page</a><br>
+    <a href="marks.htm">marks</a><br></td>
+    <td valign=top><a href="size.htm">size</a><br>
+    <a href="widows.htm">widows</a><br>
+    <a href="orphans.htm">orphans</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual, Paged</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/page.html#page-break-props">CSS2: Sect. 13.3.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/page.html#page-break-props">CSS2.1: Sect 13.3.1</a><br></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property specifies the page-breaking behavior that should occur
+        inside an element's rendering box. Page breaks are not allowed in
+        absolutely positioned elements.
+        <br><br>
+
+        CSS2 "suggests" when page-breaking should occur:<br>
+        <ul type="disc">
+        <li>Page-breaking should occur as few times as possible.
+        <li>Page-breaking should be avoided inside these elements:
+            tables, floated elements and block elements with borders.
+        <li>Pages that are not forced to break should have approximately the same height.
+        </ul>
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O3.5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Insert page breaks inside the element box as necessary.</dd>
+
+<dt><b class="subheading">avoid</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O3.5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Avoid inserting page breaks inside the current element box if possible.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b> {
+        <span class="property">page-break-inside:</span> auto }</div>
+    <dd><div class="example">In-Line: &lt;<b class="tagname">p</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">page-break-inside:</span>
+        auto&quot;&gt;test text in the paragraph&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

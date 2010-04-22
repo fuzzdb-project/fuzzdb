@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Textarea</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Textarea</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M2A2</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Basic Forms</b>, <b class=alert>Forms</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (replaced element)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Editable text box of the specified row/column measurement</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.7">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_extformsmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The TEXTAREA element indicates a multi-line text entry field. The contents 
+        between the beginning and end TEXTAREA tags represent the initial contents 
+        of the field in the browser.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]         
+        [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B3</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accesskey</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B2</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the active field.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A single, case-insensitive character from a browser's character set.]
+
+<dt><b class="subheading">Cols</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A2</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the visible number of columns in the Textarea field.
+    <dd><b class="l3heading">Values:</b> Positive integers
+
+<dt><b class="subheading">Disabled</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates the element is
+        initially non-functional. Disabled form elements should not be submitted
+        to the form processing script.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">disabled</b> (XHTML)
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-5.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of the textarea widget in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">Name</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A2</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This is a required attribute that associates a symbolic name to the
+        field for submittal to the form processing script.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">Readonly</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which tells the browser that content in 
+        the field may not be modified by the reader.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">readonly</b> (XHTML)
+
+<dt><b class="subheading">Rows</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A2</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the visible number of rows in the Textarea field.
+    <dd><b class="l3heading">Values:</b> Positive integers
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies the name of the element
+        to convert this element to in the SDA element group (in this case the
+        'Para' element - "paragraph".)
+    <dd><b class="l3heading">Value:</b> 
+        <b class="alert">Para</b> (Denotes a 'paragraph' in SDA.)
+
+<dt><b class="subheading">SDAPref</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>BEFORE</em> the original element content (in this case the string
+        "Input Text -- #AttVal(Name): ") when the SDA document is rendered (SDA
+        also allows attributes and values from the original element to be used
+        in the new SDA element where necessary.) "#AttVal(Name)" refers to the
+        TEXTAREA NAME attribute if present.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">Input Text -- <code class="alert2">#AttVal(Name)</code>: </b>"
+
+<dt><b class="subheading">Tabindex</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B3</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+        <li>Active elements using the TABINDEX attribute with positive integers are
+            navigated first. Low values are navigated first.
+        <li>Active elements not specifying any TABINDEX attribute
+        </ol>
+        Those elements carrying a DISABLED attribute or using negative TABINDEX
+        values do not participate in the tabbing cycle.
+    <dd><b class="l3heading">Values:</b> Positive or negative integers.
+
+<dt><b class="subheading">Width</b>
+<dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-5.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the textarea widget in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">Wrap</b>
+<dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i><u class="sr">N2-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates word-wrapping behavior for display and submitted
+        data from the Textarea field.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">Off</b> - No word wrapping to the
+        textarea window occurs - if lines extend beyond the width of the textarea
+        they will not wrap. Lines are sent exactly as typed.
+        <b class="magicword">DEFAULT in Netscape</b><br>
+        &#160;&#160;&#160;<b class="alert">Soft</b> - Text is displayed with
+        wordwrapping to the textarea enabled, but these wrap points are not
+        transmitted upon submittal as returns/linefeeds.
+        <b class="magicword">DEFAULT in Internet Explorer</b><br>
+        &#160;&#160;&#160;<b class="alert">Hard</b> - Text is displayed with
+        wordwrapping to the textarea enabled, and these wrap points are preserved
+        upon submittal.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">form</b>&gt;<br>
+        &lt;<b class="tagname">textarea</b> <span class="tagattrib">name</span>=&quot;foo&quot;
+        <span class="tagattrib">rows</span>=&quot;3&quot; 
+        <span class="tagattrib">cols</span>=&quot;40&quot;&gt;<br>
+        Default TEXTAREA value goes here<br>
+        &lt;/<b class="tagname">textarea</b>&gt;<br>
+        &lt;/<b class="tagname">form</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#text">Text</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+     <li>Nothing to report.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The TEXTAREA element appears to have been supported in Mosaic 2.0
+        Alpha 1, but in testing it directly, the feature seemed to be mostly
+        broken. The Alpha 2 release brought behavior closer to what is considered
+        'normal' for current browsers, so I chose that release as the first
+        &quot;supported&quot; version.
+    <li>The Internet Explorer online HTML reference listed support for an additional method
+        of specifying a TEXTAREA in the 3.0 version timeframe using the
+        &lt;INPUT TYPE=TEXTAREA&gt; element. It used all the same attributes as the
+        TEXTAREA element, but was not a container element. A VALUE attribute was used
+        to take the place of the container behavior of TEXTAREA. Even though the
+        reference stated that IE supported this, no version I have ever found actually
+        <em>DOES</em> support it.
+    <li>The documentation for Netscape 2.0 lists two interesting values for the WRAP
+        attribute: PHYSICAL and VIRTUAL. It <em>does</em> appear to support these
+        values after a strange fashion - they are both treated exactly the same way as
+        SOFT (which is not Netscape's default value for this attribute.) Interesting to
+        note also that <em>BOTH</em> Microsoft and Netscape have each listed PHYSICAL and VIRTUAL
+        in one of their references, even though these values have never really worked.
+        Values of SOFT and HARD <em>HAVE</em> worked for this attribute since Netscape
+        version 2.0 and Internet Explorer 4.0.
+        See <a href="http://wp.netscape.com/assist/net_sites/new_html3_prop.html">http://wp.netscape.com/assist/net_sites/new_html3_prop.html</a>
+        for the Netscape reference that lists VIRTUAL and PHYSICAL (Microsoft's reference
+        listing VIRTUAL/PHYSICAL has since been taken down.)
+    <li>Internet Explorer 5.0 briefly supported an element in its beta 2 release
+        called HTMLAREA. This element was very much like TEXTAREA, but it allowed
+        rich HTML markup to be included and manipulated in the editing control area. This
+        content, along with its rich markup, would be passed to the form's processing
+        script. Support for this element was retracted in the final version of Internet
+        Explorer 5.0.
+    <li><a href="../../../testing/html/tags/t/textarea-bp1.htm">[Test]</a>
+        Netscape 4+ allows some Character-level formatting to be applied to the
+        contents of this form field. These physical formatting elements (along with
+        virtual formatting elements that are rendered identically, such as
+        EM and I) apply to this form field: I, S, STRIKE, SUB, SUP, BIG, SMALL,
+        FONT SIZE and FONT FACE.
+    <li>The DIR="RTL" attribute right aligns the content of TEXTAREA elements
+        <em>WITHIN</em> the form field, not the element itself relative to the
+        viewport as it does for other elements.
+    <li><a href="../../../testing/html/tags/t/textarea-bp2.htm">[Test]</a>
+        Opera 4: If you use the HEIGHT and WIDTH attributes, the ROWS and COLS
+        attributes are ignored.
+    <li><a href="../../../testing/html/tags/t/textarea-bp3.htm">[Test]</a>
+        Opera 5/6: Using the DISABLED attribute still sends the name/value pair
+        for the element to the form processing script. It should not do this.
+    <li><a href="../../../testing/html/tags/t/textarea-bp4.htm">[Test]</a>
+        Mozilla/Netscape 6+ does not calculate the rows and cols attributes correctly. 
+        If you specify a TEXTAREA with rows=10 and cols=20, you will get a control
+        that is about 22 cols/characters wide by 11 rows/characters. It appears 
+        that the difference is pretty constant - generally about 3 extra cols wide 
+        and one extra row tall. The reader that pointed this out to me also noted it 
+        appears that Mozilla is allowing space for the scroll bars in addition to 
+        the rows/cols you specify, even though they are not present by default.
+        (bugzilla #33654.)
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>AREA: Browser Peculiarities: DEFAULT attribute order</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape DOES seem to allow the DEFAULT value for the SHAPE 
+attribute, but appears to require that it be placed at the END  of the list of 
+AREA elements. If it is not, the HREF for the DEFAULT area shape will be used for 
+the entire image. Opera appears to allow DEFAULT as a SHAPE attribute value 
+anywhere in the list of AREA elements.</div>
+<br>
+
+<b>Image map (#imgmap1), with no DEFAULT area:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" usemap="#imgmap1">
+filler text
+<hr>
+<br>
+
+<b>Image map (#imgmap2), with DEFAULT area first in image map definition:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" usemap="#imgmap2">
+filler text
+<hr>
+<br>
+
+<b>Image map (#imgmap3), with DEFAULT area last in image map definition:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" usemap="#imgmap3">
+filler text
+<hr>
+<br>
+
+<b>Shape destinations on image, no default destination:</b>
+<table cellpadding="3" cellspacing="0" border=2>
+<tr><th align="left"><big>Shape</big></th><th align="left"><big>URL</big></th></tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-greenlink.gif" height="20" width="20"></td>
+    <td>http://www.yahoo.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-orangelink.gif" height="20" width="20"></td>
+    <td>http://www.google.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-yellowlink.gif" height="20" width="20"></td>
+    <td>http://www.blooberry.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-bluelink.gif" height="20" width="20"></td>
+    <td>http://slashdot.org/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-defaultlink.gif" height="20" width="20"></td>
+    <td>arealocaltest.htm</td>
+</tr>
+</table>
+
+<map name="imgmap1">
+    <area shape="rect" coords="0,0,100,100" href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+    <area shape="circle" coords="50,150,50" href="http://www.blooberry.com/">
+    <area shape="poly" coords="100,200,150,100,200,200" href="http://slashdot.org/">
+</map>
+
+<map name="imgmap2">
+    <area shape="default" coords="0,0,200,200" href="arealocaltest.htm">
+    <area shape="rect" coords="0,0,100,100" href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+    <area shape="circle" coords="50,150,50" href="http://www.blooberry.com/">
+    <area shape="poly" coords="100,200,150,100,200,200" href="http://slashdot.org/">
+</map>
+
+<map name="imgmap3">
+    <area shape="rect" coords="0,0,100,100" href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+    <area shape="circle" coords="50,150,50" href="http://www.blooberry.com/">
+    <area shape="poly" coords="100,200,150,100,200,200" href="http://slashdot.org/">
+    <area shape="default" coords="0,0,200,200" href="arealocaltest.htm">
+</map>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BASEFONT: Browser peculiarity - application on heading levels</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Neither Internet Explorer or Netscape 1.0-4.x apply the BASEFONT 
+SIZE attribute value to heading levels. Internet Explorer does  apply the FACE and 
+COLOR values to headings though.</div>
+<br>
+
+<b>Plain H3 element:</b><br>
+<hr>
+filler text 
+<h3>H3 element H3 element</h3> 
+filler text
+<hr>
+<br>
+
+<b>H3 element enclosed in BASEFONT color=green:</b><br>
+<hr>
+filler text 
+<basefont color="green">
+basefont color=green
+<h3>H3 element H3 element</h3> 
+basefont color=green
+</basefont>
+filler text
+<hr>
+<br>
+
+<b>H3 element enclosed in BASEFONT face=verdana:</b><br>
+<hr>
+filler text 
+<basefont face="verdana">
+basefont face=verdana
+<h3>H3 element H3 element</h3> 
+basefont face=verdana
+</basefont>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

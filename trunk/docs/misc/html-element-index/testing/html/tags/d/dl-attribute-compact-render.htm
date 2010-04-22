@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Dl: Compact rendering test</title>
+<!-- 
+    Element Definition:
+    Dl: Definition List - element indicates content is a definition term and explanation 
+    COMPACT attribute:  This is a stand alone attribute flag that indicates a compact 
+          rendering be used if possible, possibly because the list items are small 
+          or the entire list is large.
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>Passes if a more "compact" rendering is used when the COMPACT attribute is 
+used on a DL list. If a compact rendering is used, the first and second tests 
+should look different. In a compact rendering, some shorter DT items may be 
+rendered on the same line as the following DD.</i></b>
+<br><br>
+
+<b class="text">Test 1: No compact attribute present</b>
+<hr>
+filler text 
+<dl>
+<dt>DT1</dt>
+<dd>DD item 2</dd>
+<dt>DT3</dt>
+<dd>DD item 4<br>DD item 4</dd>
+<dt>Longer DT item 5</dt>
+<dd>DD item 6<br>DD item 6</dd>
+</dl>
+filler text 
+<hr>
+<br>
+
+<b class="text">Test 1: compact attribute present</b>
+<hr>
+filler text 
+<dl compact>
+<dt>DT1</dt>
+<dd>DD item 2</dd>
+<dt>DT3</dt>
+<dd>DD item 4<br>DD item 4</dd>
+<dt>Longer DT item 5</dt>
+<dd>DD item 6<br>DD item 6</dd>
+</dl>
+filler text 
+<hr>
+<br>
+
+</body>
+</html>

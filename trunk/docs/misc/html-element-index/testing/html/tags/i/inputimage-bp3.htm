@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>INPUT type=image: Browser Peculiarities: Submission values</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">All of the surveyed browsers ignore any VALUE attribute, if it 
+is present. When the image is activated, the form data is submitted along with two 
+extra name/value data items: the X- and Y-coordinates of the point of activation 
+on the image. Coordinates are sent in this format -
+<dl>
+<dt><b><u>Item 1</u></b>
+    <dd>Name: [name].x
+    <dd>Value: [x-position]
+<dt><b><u>Item 2</u></b>
+    <dd>Name: [name].y
+    <dd>Value: [y-position]
+</dl>
+</div>
+<br>
+
+
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>Click on the submit button to submit the form. Submit button has value attribute="submit button value".</b>
+<hr>
+filler text<br>
+<input type="text" name="f1" value="value1"><br>
+<input type="text" name="f2" value="value2"><br>
+<input type="submit" name="f3" value="submit button value"> <br>
+filler text
+<hr>
+</form>
+<br>
+
+
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>Click on the image to submit the form. Image has value attribute="input image value".
+Coordinates of the click will be sent to the processing script</b>
+<hr>
+filler text<br>
+<input type="text" name="f1" value="value1"><br>
+<input type="text" name="f2" value="value2"><br>
+<input type="image" name="f3" src="../../../objects/images/overlap.gif" value="input image value"> <br>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Forms in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Forms in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#types">Form Field Types</a> |
+     <a href="#cgi">CGI-Bin</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for HTML Forms</b></big>
+    <dd>Forms are the primary method (and also the oldest) for making a web
+        document interactive. Forms allow the input of information by a web page 
+        user. Various input methods exist to enter this information from the user 
+        such as buttons, pull-down menus and text boxes. When a user is finished
+        entering information in an HTML form, they can &quot;submit&quot; this
+        information. Submitting form information can result in the creation of
+        dynamic web pages, the sending of e-mail, or other actions - it is all
+        determined by the the intent of the program that is activated to analyze
+        the form information.
+</dl>
+
+<a name="types"></a>
+<dl>
+<dt><big><b class="mainheading">Form Field Types</b></big>
+    <dd>There are many different types of form input mechanisms. These field
+        types represent many of the common input methods that can also be found
+        in paper-based forms. 
+        <br><br>
+
+    <dd><b class="subheading">Form Delimiter</b>
+    <dd>[&lt;<a href="f/form.htm">form</a>&gt;]
+    <dd>Forms in an HTML document are created by using the FORM container
+        delimiter tags. These tags serve to encapsulate the fields of the form
+        and contain information on how and where to process the form contents.
+        These delimiters create a form of virtual Block Formatting in a
+        document structure (a line break is usually added both before and after FORM
+        delimiters.) This formatting does not add any semantic meaning to the
+        structure (like most Block Formatting does) but is rather a side-effect of
+        its nature (like with the TABLE structure.) Because this delimiter is a 
+        simple HTML element, it also allows multiple forms to exist in a document, 
+        each of which can serve different purposes.
+    <br><br>
+
+    <dd><b class="subheading">Form Fields</b>
+    <dd>[&lt;<a href="b/button.htm">button</a>&gt;, 
+        &lt;<a href="s/select.htm">selection list</a>&gt;,
+        &lt;<a href="t/textarea.htm">textarea</a>&gt;,
+        &lt;<a href="i/inputbutton.htm">input type=button</a>&gt;,
+        &lt;<a href="i/inputcheck.htm">input type=checkbox</a>&gt;,
+        &lt;<a href="i/inputfile.htm">input type=file</a>&gt;,
+        &lt;<a href="i/inputhidden.htm">input type=hidden</a>&gt;,
+        &lt;<a href="i/inputimage.htm">input type=image</a>&gt;,
+        &lt;<a href="i/inputpassword.htm">input type=password</a>&gt;,
+        &lt;<a href="i/inputradio.htm">input type=radio</a>&gt;,
+        &lt;<a href="i/inputreset.htm">input type=reset</a>&gt;,
+        &lt;<a href="i/inputsubmit.htm">input type=submit</a>&gt;,
+        &lt;<a href="i/inputtext.htm">input type=text</a>&gt;]
+    <dd>It is up to the author to determine which of the various field types best
+        suits their needs in terms of appropriateness to the task, ease of usability
+        for the reader, and suitability for processing by the destination program.
+</dl>
+
+<a name="cgi"></a>
+<dl>
+<dt><big><b class="mainheading">CGI Binaries</b></big>
+    <dd>When a form is submitted for evaluation, the information that has
+        been entered is encoded and sent to a program invoked by the submission
+        process. This program evaluates and processes the information entered in
+        the form, and takes actions based on the input. This information transfer
+        method is called the &quot;Common Gateway Interface&quot; (CGI) - a
+        standard for external programs to interface with HTTP servers.
+        <br><br>
+
+        The program used to analyze the form data is called a &quot;Common Gateway
+        Interface Binary&quot; (CGI-Bin for short.) A CGI-bin program can be
+        written in any language that is allowed to be executed on a server system,
+        such as C/C++, Fortran, Perl, Python, shell scripts, TCL, AppleScript, etc.
+        Many types of information can be entered via an HTML forms interface, but
+        it is always up to this CGI-Bin program to make sense out of what is
+        received from the form and react accordingly.
+        <br><br>
+
+        While it is within the scope of these documents to discuss the HTML side of
+        forms creation, any explanation of how to write a CGI-Bin program would
+        definitely be a separate matter. Please look to the Related Sites section
+        below for sites that cover this topic.
+</dl>
+
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 form elements in common use]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus several additional features for forms]</span>
+<dt><a href="http://home.netscape.com/assist/net_sites/html_extensions_3.html" class="relevant">http://home.netscape.com/assist/net_sites/html_extensions_3.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 3.0<br>
+        [mentions the use of File Upload (INPUT TYPE=file)]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details form field usage supported in 2.0 and 3.2]</span>
+<br><br>
+
+<dt><b class="subheading">Tutorials</b>
+<dt><a href="http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/fill-out-forms/overview.html" class="relevant">http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/fill-out-forms/overview.html</a>
+    <dd><span class="relevant">Mosaic for X version 2.0 Fill-Out Form Support</span>
+<dt><a href="http://hoohoo.ncsa.uiuc.edu/cgi/forms.html" class="relevant">http://hoohoo.ncsa.uiuc.edu/cgi/forms.html</a>
+    <dd><span class="relevant">NCSA's &quot;Decoding FORMs with CGI&quot; tutorial</span>
+<dt><a href="http://www.webcom.com/~webcom/html/tutor/forms/" class="relevant">http://www.webcom.com/~webcom/html/tutor/forms/</a>
+    <dd><span class="relevant">WWW Fill-out Forms Tutorial</span>
+<dt><a href="http://www.utoronto.ca/webdocs/HTMLdocs/NewHTML/forms.html" class="relevant">http://www.utoronto.ca/webdocs/HTMLdocs/NewHTML/forms.html</a>
+    <dd><span class="relevant">The Information Commons Introduction to HTML: Forms</span>
+<br><br>
+
+<dt><b class="subheading">Other Related Links</b>
+<dt><a href="http://dir.yahoo.com/Computers_and_Internet/internet/world_wide_web/programming/forms/" class="relevant">http://dir.yahoo.com/...../Forms/</a>
+    <dd><span class="relevant">Yahoo's HTML Forms section</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

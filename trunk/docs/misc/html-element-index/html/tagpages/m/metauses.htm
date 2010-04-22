@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Uses for the Meta Element</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Uses for the META Element</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../tree/htmltree.htm">Element Tree</a> |
+    <a href="../../tagindex/a.htm">Element Index</a> |
+    <a href="../../supportkey/a.htm">HTML Support History</a></font></td>
+</tr></table>
+</center>
+
+
+<br>
+
+<a name="clientpull"></a>
+<dl>
+<dt><big><b class="mainheading">Client Pull</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> 
+    [<b class="s">IE2</b>|<b class="s">M2</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O3.2</b>]
+    <dd><b class="alert">Description</b><br>
+        This use of the META element causes a document to be automatically loaded
+        after a specified number of seconds. This form uses the HTTP-EQUIV
+        attribute as the identifier in the META statement with a value of "Refresh".
+        The CONTENT attribute can be either an integer value [N] representing the number of
+        seconds to wait before refreshing the current page, or a combination value
+        separated by a semi-colon representing a time value [N] and a URL page
+        destination [URL].
+    <dd><b class="alert">Syntax 1:</b>
+        &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Refresh&quot;
+        <span class="tagattrib">content</span>=&quot;[<b class="alert2">N</b>]&quot; /&gt;
+    <dd><b class="alert">Syntax 2:</b>
+        &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Refresh&quot;
+        <span class="tagattrib">content</span>=&quot;[<b class="alert2">N</b>];
+        URL=[<b class="alert2">URL</b>]&quot; /&gt;
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Refresh&quot;
+        <span class="tagattrib">content</span>=&quot;5;
+        URL=http://www.foo.com/foo.html&quot; /&gt;</div>
+</dl>
+
+<a name="editor"></a>
+<dl>
+<dt><big><b class="mainheading">Editor Identification</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> NA
+    <dd><b class="alert">Description</b><br>
+        The "Generator" value for the NAME attribute is very commonly inserted
+        into documents by HTML editor programs. It specifies as a value the
+        name of the editor that generated the code. Web browsers ignore this
+        META element usage.
+    <dd><b class="alert">Syntax:</b>
+        &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">name</span>=&quot;Generator&quot;
+        <span class="tagattrib">content</span>=&quot;[<b class="alert2">Editor Name</b>]&quot; /&gt;
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">name</span>=&quot;Generator&quot;
+        <span class="tagattrib">content</span>=&quot;Editor Brand X&quot; /&gt;</div>
+</dl>
+
+<a name="searchid"></a>
+<dl>
+<dt><big><b class="mainheading">Search Engine Identification</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> NA
+    <dd><b class="alert">Description</b><br>
+        There are two commonly used META element syntaxes for helping in the
+        indexing of web documents in popular search engines. The "Keywords"
+        value for the NAME attribute is a comma separated list of keywords
+        relating to the current document, while the "Description" value for
+        the NAME attribute represents the current document description
+        summary. Web browsers ignore this META element usage but some search
+        engine robots use it to help index files.
+     <dd><b class="alert">Syntax 1:</b> &lt;<b class="tagname">meta</b>
+         <span class="tagattrib">name</span>=&quot;Keywords&quot;
+         <span class="tagattrib">content</span>=&quot;[<b class="alert2">Search
+         Engine Keywords</b>]&quot; /&gt;<br>
+     <dd><b class="alert">Syntax 2:</b> &lt;<b class="tagname">meta</b>
+         <span class="tagattrib">name</span>=&quot;Description&quot;
+         <span class="tagattrib">content</span>=&quot;[<b class="alert2">Search
+         Engine Description</b>]&quot; /&gt;
+     <dd><b class="alert">Example 1:</b>
+         <div class="example">&lt;<b class="tagname">meta</b>
+         <span class="tagattrib">name</span>=&quot;Description&quot;
+         <span class="tagattrib">content</span>=
+         &quot;Index DOT Html is a complete reference to HTML&quot; /&gt;</div>
+     <dd><b class="alert">Example 2:</b>
+         <div class="example">&lt;<b class="tagname">meta</b>
+         <span class="tagattrib">name</span>=&quot;Keywords&quot;
+         <span class="tagattrib">content</span>=&quot;HTML,history,hypertext,tags,reference&quot; /&gt;</div>
+</dl>
+
+<a name="charset"></a>
+<dl>
+<dt><big><b class="mainheading">Document Character Set Identification</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> 
+    [<span class="ns">IE?</span>|<span class="ns">M?</span>|<span class="ns">N?</span>|<span class="ns">O?</span>]
+    <dd><b class="alert">Description</b><br>
+        HTTP allows the MIME type and character set/encoding to be specified as an
+        HTTP-header. Using a "Content-Type" value for the HTTP-EQUIV attribute
+        allows the same capability in HTML. Of greatest interest to authors will
+        be the ability to define the document's character set. HTTP 1.1 requires the
+        "charset" value to be honored, but also states that some older HTTP 1.0
+        clients will not understand it. See
+        <a href="http://www.rfc-editor.org/rfc/rfc1700.txt">"RFC 1700:
+        Assigned Numbers" - Sec: Character Sets</a> and <a
+        href="http://www.rfc-editor.org/rfc/rfc2045.txt">RFC 2045: Multipurpose
+        Internet Mail Extensions - Sec: 2.2</a> for more information.
+    <dd><b class="alert">Syntax:</b>
+        &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Content-Type&quot;
+        <span class="tagattrib">content</span>=&quot;[<b class="alert2">MIME
+        Type</b>]; charset=[<b class="alert2">Charset String</b>]&quot; /&gt;
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Content-Type&quot;
+        <span class="tagattrib">content</span>=&quot;text/html; charset=Shift-JIS&quot; /&gt;</div>
+</dl>
+
+<a name="pragma"></a>
+<dl>
+<dt><big><b class="mainheading">"Pragma" Browser Cache Override</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> 
+    [<span class="ns">IE?</span>|<span class="ns">M?</span>|<span class="ns">N?</span>|<span class="ns">O?</span>]
+    <dd><b class="alert">Description</b><br>
+        The "Pragma" value for the HTTP-EQUIV attribute specifies caching
+        behavior. Several values are possible for this HTTP-header, but the
+        value of most use to authors will be "no-cache." When this is used
+        as the value for the CONTENT attribute, the document may not be
+        cached (well, <em>SHOULD</em> not be...) by a caching system anywhere
+        along the connection chain between the browser and the source
+        document. A browser emits the same Pragma HTTP header to a
+        document's source location when a user requests the document to be
+        reloaded. HTTP 1.1 replaces "Pragma: no-cache" with
+        "Cache-Control: no-cache", but understands "Pragma" as well. For more
+        information on caching, take a look at
+        <a href="http://www.mnot.net/cache_docs/">http://www.mnot.net/cache_docs/</a>.
+    <dd><b class="alert">Syntax:</b> &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Pragma&quot;
+        <span class="tagattrib">content</span>=&quot;no-cache&quot; /&gt;
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Pragma&quot;
+        <span class="tagattrib">content</span>=&quot;no-cache&quot; /&gt;</div>
+</dl>
+
+<a name="expires"></a>
+<dl>
+<dt><big><b class="mainheading">"Expires" Browser Cache Override</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a>
+    [<span class="ns">IE?</span>|<span class="ns">M?</span>|<span class="ns">N?</span>|<span class="ns">O?</span>]
+    <dd><b class="alert">Description</b><br>
+        The "Expires" value for the HTTP-EQUIV attribute gives as its CONTENT
+        value a date [Date Value]. The Expiration value is used to indicate
+        to a browser when time-sensitive information becomes old. Browsers
+        must not cache the requested page beyond the date given. The presence
+        of an EXPIRES field does not imply that the original resource <em>WILL</em>
+        change or cease to exist at, before, or after the time indicated, but
+        does speak to the expected timeliness of the material. Setting the
+        CONTENT attribute to a date in the past, or even to an illegal value
+        of "0" tells the browser to always look for a new version of the page.
+        For more information on caching, take a look at
+        <a href="http://www.mnot.net/cache_docs/">http://www.mnot.net/cache_docs/</a>.
+    <dd><b class="alert">Syntax:</b> &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Expires&quot;
+        <span class="tagattrib">content</span>=&quot;[<b class="alert2">Date
+        Value</b>]&quot; /&gt;
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Expires&quot;
+        <span class="tagattrib">content</span>=&quot;Mon, 01 Jan 1996 23:59:59 GMT&quot; /&gt;</div>
+</dl>
+
+<a name="pics"></a>
+<dl>
+<dt><big><b class="mainheading">PICS Identification</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> 
+    [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="alert">Description</b><br>
+        The <a href="http://www.w3.org/PICS/">Platform for Internet Content
+        Selection</a> (PICS) is a system designed to associate categorizing
+        labels with document content. The system originated as a method to
+        help control access to questionable content, but can also be used
+        to label and classify other types of document content as well, such
+        as code signing, privacy, and intellectual property rights management.
+    <dd><b class="alert">Syntax</b><br>
+        Can vary quite a bit. Usually created by going to a site and
+        filling out a form. See
+        <a href="http://www.w3.org/PICS/Overview.html">http://www.w3.org/PICS/Overview.html</a>
+        and <a href="http://vancouver-webpages.com/PICS/HOWTO.html">http://vancouver-webpages.com/PICS/HOWTO.html</a>
+        for more details.
+</dl>
+
+<a name="filter"></a>
+<dl>
+<dt><big><b class="mainheading">Inter-page Transition Filter Effects</b></big>
+<dt><a href="../../../misc/suppkey.htm">Support Key:</a> 
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="alert">Description</b><br>
+        This is a special syntax only allowed by Internet Explorer 4.0 and above 
+        to allow special effects to occur while the page is loading or unloading. 
+        This syntax uses the same 'filter' CSS property syntax that IE also supports.
+    <dd><b class="alert">Syntax:</b> &lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;[<b class="alert2">Event</b>]&quot;
+        <span class="tagattrib">content</span>=&quot;Duration=[<b
+        class="alert2">Duration</b>],Transition=[<b
+        class="alert2">Transition Type</b>]&quot; /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[<b class="alert2">Event</b>] is one of:
+        <b class="alert">Page-Enter</b>, <b class="alert">Page-Exit</b>,
+        <b class="alert">Site-Enter</b>, or <b class="alert">Site-Exit</b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[<b class="alert2">Duration</b>] is a floating point value
+        specifying the transition time in seconds.milliseconds<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[<b class="alert2">Transition Type</b>] is an
+        integer from 0 to 23 representing a transition effect (consult links below.)
+    <dd><b class="alert">Example:</b>
+        <div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Page-Exit&quot;
+        <span class="tagattrib">content</span>=&quot;RevealTrans(Duration=2.500,Transition=6)&quot; /&gt;</div>
+    <dd>[<b class="alert">Note:</b> For more information on Transition Filter
+        types, consult the references at
+        <a href="http://www.blooberry.com/indexdot/css/properties/dynamic/revealtranssyntax.htm">Index DOT Css</a> and
+        <a href="http://msdn.microsoft.com/workshop/author/filter/filters.asp#Interpage_Transition">Microsoft</a>]
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

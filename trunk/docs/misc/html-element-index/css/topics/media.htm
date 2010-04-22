@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Style Sheet Media Types</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">CSS Media Types</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<br><br>
+<big><b class="mainheading">Introduction</b></big>
+<hr width="30%" size=1 align=left>
+In CSS1, all of the CSS properties were targeted to the then-dominant
+paged/visual rendering paradigm. Already, alternative web navigation
+devices are on the market, offering much more variety and capabilities
+than was common in the past. This crucial fact was recognized in the
+creation of CSS2, and the expectation is that the variety of rendering
+platforms for CSS will only grow as time goes by.
+<br><br>
+
+CSS2 now allows for the targeting of style rules to specific media types.
+This means you can explicitly request that one or more style rules will
+only apply when rendering to certain device types, such as a printer, an
+aural browser or a handheld device. Several methods exist to target one or
+more style rules to one or more media rendering device-types:
+<ul>
+    <li>Some CSS properties only apply to specific media types.
+    <li>Some property values have different meanings in different Media contexts.
+    <li>The <a href="../syntax/atrules/media.htm">@Media</a> At-Rule
+        specifies a target rendering media for a group of style rules.
+    <li>The Media component of the <a href="../syntax/atrules/import.htm">@Import</a>
+        At-Rule syntax specifies the target media for an imported style sheet.
+    <li>The MEDIA attribute for the HTML
+        <a href="../../html/tagpages/l/link.htm">LINK</a> and
+        <a href="../../html/tagpages/s/style.htm">STYLE</a> elements
+        specify target media for an entire style sheet.
+</ul>
+<br><br>
+
+<big><b class="mainheading">CSS2 Media Types and Descriptions</b></big>
+<hr width="30%" size=1 align=left>
+The following list of Media type keywords is given in the CSS2 spec, and
+that same spec also does not consider this list to be definitive. If a
+browser claims to support a specific media type, it should implement all
+of the CSS properties that the CSS spec should apply to the indicated media.<br>
+<b class="alert">Note:</b> All media keywords are considered to be
+case-insensitive.
+<br><br>
+
+<dl><dd>
+<table border=2 cellspacing=0 cellpadding="5">
+<tr>
+    <th><big class="largetest"><b class="subheading">Media<br>Keyword</b></big></th>
+    <th align=left valign="bottom"><big class="largetest"><b class="subheading">Description</b></big></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">All</b></th>
+    <td>May be rendered using any media-type device.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Aural</b></th>
+    <td>Rendering targeted for speech and sound synthesizers.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Braille</b></th>
+    <td>Rendering targeted for Braille touch-feedback devices.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Embossed</b></th>
+    <td>Rendering targeted for Braille paged printing devices.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Handheld</b></th>
+    <td>Rendering targeted for small or handheld devices  (eg: devices with
+        small screens, limited bandwidth or display capabilities - perhaps
+        monochrome screens.)</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Print</b></th>
+    <td>Rendering targeted for page-by-page use, typically printed on paper.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Projection</b></th>
+    <td>Rendering targeted for projection (eg: screen projections) using
+        transparent media (eg: slides.)</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Screen</b></th>
+    <td>Rendering targeted for continuous (non-paged) color computer screens.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">Speech</b></th>
+    <td>Rendering targeted for speech and sound synthesizers. Added in CSS2.1. "Aural" is now deprecated.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">TTY</b></th>
+    <td>Rendering targeted for media that uses a fixed-pitch character grid
+        (eg: terminals and teletypes.)</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading">TV</b></th>
+    <td>Rendering targeted for television-like devices (eg: color, basic
+        sound capabilities, limited resolution and scrollability.)</td>
+</tr>
+</table>
+</dl>
+<br>
+
+<big><b class="mainheading">CSS2 Media Groupings</b></big>
+<hr width="30%" size=1 align=left>
+The CSS2 specification specification defines which media groups
+that each CSS property applies to. It does so by aggregating the various
+media types by function and form
+
+<dl>
+<dt><b class="subheading">Interface</b>
+    <dd><b class="l3heading">Description:</b> This category describes the way
+        a user experiences the entirety of a document with a given Media type.
+    <dd><b class="l3heading">Options:</b><br>
+        <b class="alert">Continuous</b> - The document is experienced using
+        a movable window/portal on the content with the Media type.<br>
+        <b class="alert">Paged</b> - The document is experienced a page at
+        a time with the Media type.<br>
+        <b class="alert">Both</b> - CSS properties are applied using either
+        continuous or paged media with the Media type.
+<dt><b class="subheading">Sensory</b>
+    <dd><b class="l3heading">Description:</b> This category describes the human
+        senses used to experience a document with a given Media type.
+    <dd><b class="l3heading">Options:</b><br>
+        <b class="alert">Visual</b> - A document's content is experienced
+        primarily using the eyes with the Media type.<br>
+        <b class="alert">Aural</b> - A document's content is experienced
+        primarily using the ears with the Media type.<br>
+        <b class="alert">Tactile</b> - A document's content is experienced
+        primarily using the sense of touch with the Media type.
+<dt><b class="subheading">Layout</b>
+    <dd><b class="l3heading">Description:</b> This describes the method used by
+        a Media type to render character content.
+    <dd><b class="l3heading">Options:</b><br>
+        <b class="alert">Grid</b> - Content is laid out using a character grid
+        with the Media type.<br>
+        <b class="alert">Bitmap</b> - Content is rendered as a bitmap with the
+        Media type.<br>
+        <b class="alert">Both</b> - Content can be rendered with a character grid
+        or bitmap device.
+<dt><b class="subheading">Interactivity</b>
+    <dd><b class="l3heading">Description:</b> This category describes the
+        level of interaction possible using a specific media type
+    <dd><b class="l3heading">Options:</b><br>
+        <b class="alert">Interactive</b> - Media types which allow interactivity
+        with the user<br>
+        <b class="alert">Static</b> - Media types which do not allow interactivity
+        with the user<br>
+        <b class="alert">Both</b> - Applies to both Static and Interactive Media types.
+<dt><b class="subheading">"All"</b>
+    <dd><b class="l3heading">Description:</b> Applies to all Media types.
+    <dd><b class="l3heading">Options:</b> <b class="alert">All</b>
+</dl>
+
+<big><b class="mainheading">Media Types versus Media Groupings</b></big>
+<hr width="30%" size=1 align=left>
+<dl>
+<dt>Each CSS property indicates the Media grouping that it applies to. The
+    grid below, taken from the CSS2 specification, is a guide to which Media
+    types belong to which Media Groups.
+    <br><br>
+
+    <dd><table border=0 cellspacing=0 cellpadding=0>
+        <tr><th>&nbsp;</th><th rowspan=3>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>&nbsp;</th><th><big><b class="subheading">Media
+            Groups</b></big></th></tr>
+        <tr><th>&nbsp;</th><th colspan=2 bgcolor="#000000">&nbsp;</th></tr>
+        <tr><th><big><b class="subheading">Media<br>Types</b></big></th>
+            <th bgcolor="#000000">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>
+            <table border=1 cellspacing=0 cellpadding=3 width="100%">
+            <tr>
+                <td>&nbsp;</td><th><b class="l3heading">Interface</th>
+                <th><b class="l3heading">Sensory</b></th>
+                <th><b class="l3heading">Layout</b></th>
+                <th><b class="l3heading">Interactivity</b></th>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Aural</b></th>
+                <td>Continuous</td><td>Aural</td><td>N/A</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Braille</b></th>
+                <td>Continuous</td><td>Tactile</td><td>Grid</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Embossed</b></th>
+                <td>Paged</td><td>Tactile</td><td>Grid</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Handheld</b></th>
+                <td>Both</td><td>Visual</td><td>Both</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Print</b></th>
+                <td>Paged</td><td>Visual</td><td>Bitmap</td><td>Static</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Projection</b></th>
+                <td>Paged</td><td>Visual</td><td>Bitmap</td><td>Static</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">Screen</b></th>
+                <td>Continuous</td><td>Visual</td><td>Bitmap</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left><b class="l3heading">TTY</b></th>
+                <td>Continuous</td><td>Visual</td><td>Grid</td><td>Both</td>
+            </tr>
+            <tr>
+                <th align=left valign=top><b class="l3heading">TV</b></th>
+                <td valign=top>Both</td><td valign=top>Visual,<br>Aural</td>
+                <td valign=top>Bitmap</td><td valign=top>Both</td>
+            </tr>
+            </table>
+            </th></tr>
+        </table>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</body>
+</html>

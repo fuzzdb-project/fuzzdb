@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Button: Browser Peculiarities: Space preservation</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer 4.0 honors all whitespace and carriage returns 
+in the value attribute for this element. The button will preserve and display them 'as-is'. 
+Other browsers and earlier versions of Internet Explorer do not do this.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Button field, short value ("button1 button2"), no extra spaces:</b>
+<hr>
+filler text
+<input type="button" value="button1 button2">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Button field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;button1&nbsp;&nbsp;&nbsp;&nbsp;button2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 normal spaces before, in between and after words:</b>
+<hr>
+filler text
+<input type="button" value="    button1    button2    ">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Button field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;button1&nbsp;&nbsp;&nbsp;&nbsp;button2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 non-breaking space character entities before, in between and after words:</b>
+<hr>
+filler text
+<input type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;button1&nbsp;&nbsp;&nbsp;&nbsp;button2&nbsp;&nbsp;&nbsp;&nbsp;">
+filler text
+<hr>
+<br>
+
+<b>Input Type=button field, short value with linefeed in between
+("button1 \n button2"):</b>
+<hr>
+filler text
+<input type="button" value="button1
+button2">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FONT: Browser peculiarity - CSS generic family names as FACE values</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Beginning in Netscape 4.0 beta 5 a consistent set of generic, 
+cross-platform font family names are available for use in Netscape browsers for 
+the FONT FACE element. These are the same generic names allowed by the 'font-family' 
+CSS property: serif | sans-serif | cursive | fantasy | monospace</div>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, no attributes</b>
+<hr>
+filler text <font>FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="courier" (specific font name)</b>
+<hr>
+filler text <font face="courier">FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="serif" (generic font name)</b>
+<hr>
+filler text <font face="serif">FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="sans-serif" (generic font name)</b>
+<hr>
+filler text <font face="sans-serif">FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="cursive" (generic font name)</b>
+<hr>
+filler text <font face="cursive">FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="fantasy" (generic font name)</b>
+<hr>
+filler text <font face="fantasy">FONT element test</font> filler text
+<hr>
+<br>
+
+<b>Default text ("FONT element test") in FONT element, FACE="monospace" (generic font name)</b>
+<hr>
+filler text <font face="monospace">FONT element test</font> filler text
+<hr>
+<br>
+
+</body>
+</html>

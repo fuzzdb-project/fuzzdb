@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Common Tag Attributes: Core Attributes</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle"><b class="alert">%</b>Core<b class="alert">%</b>
+Attributes</span><br><font size=2>= <span class="sitetitle">Index DOT Html</span> 
+by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../tree/htmltree.htm">Element Tree</a> |
+    <a href="../../tagindex/a.htm">Element Index</a> |
+    <a href="../../supportkey/a.htm">HTML Support History</a></font></td></tr>
+</table>
+</center>
+
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What are the Core Attributes?</b></big>
+    <dd>These attributes primarily allow the attachment of rendering information 
+        to HTML documents. They facilitate the binding or identification of an 
+        HTML structure, so that an element (or group of elements) may be controlled 
+        by a non-HTML mechanism (such as the DOM through Javascript or with CSS.)
+        <br><br>
+
+        This attribute category directly draws its inspiration from a 
+        <a href="../shorthands.htm#param">Parameter Entity</a> category defined 
+        in HTML 4.x called "%coreattrs". This category includes the CLASS, ID,
+        and STYLE attributes, but it also includes the TITLE attribute as well. 
+        I moved global TITLE attribute to its own category called %accessibility% 
+        along with ACCESSKEY, DISABLED and TABINDEX, where they all seem to more 
+        appropriately belong as a group.
+</dl>
+
+
+<dl>
+<dt><big><b class="mainheading">Style Sheet Attributes</b></big>
+
+<dt><b class="subheading"><a href="class.htm">Class</a></b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute serves to classify the current element by assigning it one or
+        more category labels to which the element belongs. Such grouping mechanisms 
+        ease in the assignment of rendering characteristics for groups of elements.
+    <dd><b class="l3heading">Values:</b><br>
+        Given as a space separated list of class names consisting of alphanumeric characters.
+
+<dt><b class="subheading"><a href="id.htm">ID</a></b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This assigns a unique alpha-numeric identifier for referencing the current
+        element. No other ID attribute in the current document may share
+        the same identifier. IDs are used in many contexts in HTML, such as: Hyperlinks 
+        may use this identifier to serve as a destination of a link, scripts may use 
+        them to uniquely identify an element for some programmatic purpose, or 
+        style sheets may use this attribute to reference the current element instance.
+    <dd><b class="l3heading">Values:</b><br>
+        A string of characters - the initial character must be in the [a-zA-Z] 
+        set, while subsequent characters can be in the [a-zA-Z0-9.-:_] set.
+
+<dt><b class="subheading"><a href="style.htm">Style</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B3</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is a text string providing rendering information for the
+        current element.
+    <dd><b class="l3heading">Values:</b><br>
+        Please see the description of
+        <a href="http://www.blooberry.com/indexdot/css/syntax/inclusion/inline.htm">inline
+        styles</a> <span class="external">[--&gt;Index DOT Css]</span> for more
+        information on how to use this attribute and its
+        <a href="http://www.blooberry.com/indexdot/css/propindex/font.htm">possible
+        values</a> <span class="external">[--&gt;Index DOT Css]</span>.
+</dl>
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> HTML 4.01 states that a NAME and ID may 
+        exist for the same element, as long as they share the same value (this 
+        is mainly for backwards compatibility.)
+    <li>For the ID attribute, it can be used to assign CSS to elements, but it 
+        is also key to accessing DOM activities on a per-element basis. Some
+        of the supported elements listed (like HEAD, META, SCRIPT, etc...)
+        can not have CSS applied to them, but they are DOM-accessible using 
+        their ID attributes, so they are listed.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape 4.x has a bug: A location in a document can be defined using the 
+        ID attribute as well as the A NAME element. In Netscape 4.x this can be 
+        accessed using hyperlinks from external documents, but if the hyperlink
+        is within the same document, the link does nothing.
+    <li>Netscape 4.x and Opera 3.5+ do not allow CLASS or ID attributes to contain 
+        underscore characters ("_".) Underscores are legal in HTML attributes 
+        according to the HTML standards but not according to the CSS standard.
+    <li>Netscape 6 Beta 1 allowed core (style sheet) attributes to be used for 
+        ANY element, even nonsense, made-up elements. This behavior was changed 
+        (fixed?) in 6.0 Beta 2 and above.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

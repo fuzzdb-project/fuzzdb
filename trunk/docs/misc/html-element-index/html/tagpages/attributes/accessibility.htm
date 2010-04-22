@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Common Tag Attributes: Accessibility Attributes</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle"><b class="alert">%</b>Accessibility<b class="alert">%</b>
+Attributes</span><br><font size=2>= <span class="sitetitle">Index DOT Html</span> 
+by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../tree/htmltree.htm">Element Tree</a> |
+    <a href="../../tagindex/a.htm">Element Index</a> |
+    <a href="../../supportkey/a.htm">HTML Support History</a></font></td></tr>
+</table>
+</center>
+
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What are the Accessibility Attributes?</b></big>
+    <dd>These attributes allow attachment of rendering and accessibility
+        information to most of the elements used in document rendering. The
+        TITLE attribute allows descriptive narrative information to be
+        attached to elements (which are not necessarily rendered) while
+        Style Sheet attributes facilitate attachment of rendering rules
+        to displayed elements.
+        <br><br>
+
+        This attribute category draws its inspiration from a
+        <a href="../shorthands.htm#param">Parameter Entity</a> category
+        defined in HTML 4.x called "%coreattrs". This category only includes
+        the CLASS, ID, STYLE, and TITLE attributes. The ACCESSKEY and TABINDEX
+        elements that I included in this %Core% category are also present in
+        HTML 4.x, but not used as widely as these other "%coreattrs".
+        Beginning in IE 4.0 however, the use of ACCESSKEY and TABINDEX was
+        expanded to cover most HTML elements, so it seemed natural to combine
+        them with the other "%coreattrs".
+</dl>
+
+
+<dl>
+<dt><br><big><b class="mainheading">Accessibility Attributes</b></big>
+
+<dt><b class="subheading"><a href="accesskey.htm">Accesskey</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6B2</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the element.
+        <br><br>
+
+        In Internet Explorer 5.0, "non-active" elements (all elements listed except
+        A, AREA, OBJECT and form field elements) can use an ACCESSKEY to
+        give focus to an element if it also specifies a TABINDEX attribute/value.
+    <dd><b class="l3heading">Values:</b><br>
+        A single, case-insensitive alphanumeric character from a browser's character set.
+
+<dt><b class="subheading"><a href="disabled.htm">Disabled</a></b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6B1</b>|<b class="s">O5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates the element is
+        initially non-functional or can not receive focus. It is usually
+        indicated visually by greying out the content of the element.
+    <dd><b class="l3heading">Values:</b> NA
+
+<dt><b class="subheading"><a href="tabindex.htm">Tabindex</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6B3</b>|<b class="s">O7</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+            <li>Active elements using the TABINDEX attribute with positive integers are
+                navigated first. Low values are navigated first.
+            <li>Active elements not specifying any TABINDEX attribute
+        </ol><br>
+        Other constraints also apply:
+        <ul type="disc">
+            <li>Those elements carrying a DISABLED attribute or using negative TABINDEX
+                values do not participate in the tabbing cycle.
+            <li>IE 5.0 active elements which can receive tabbing focus: A, BODY, BUTTON,
+                EMBED, FRAME, IFRAME, IMG, INPUT, ISINDEX, OBJECT, SELECT, TEXTAREA
+            <li>IE 5.0 TABINDEX documentation is too complicated to describe: APPLET,
+                DIV, FRAMESET, SPAN, TABLE, TD, TH, THEAD, TFOOT
+            <li>If an element is "non-active" (see previous point above), then it can
+                not use an ACCESSKEY attribute unless a TABINDEX attribute is also set.
+        </ul>
+     <dd><b class="l3heading">Values:</b> Positive or negative integers. IE 5.0
+         documentation lists a valid value range of -32767 to 32767.
+
+<dt><b class="subheading"><a href="title.htm">Title</a></b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6B1</b>|<b class="s">O3</b>|<b class="s">S1.2</b>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is used to give further information regarding the
+        contents of an element. Interactive elements such as hyperlinks,
+        images, or form fields may use this attribute to inform the user
+        about the nature of the resource, or to specify help information
+        if requested by the user.
+        <br><br>
+
+        The methods used to render the content of this attribute for this
+        should follow the standard guidelines for the system, but may vary
+        between browsers and platforms. For instance, visual browsers
+        will frequently display the title as a "tool tip" (a short message
+        that appears when the pointing device pauses over an object). Audio
+        user agents may speak the title information in a similar context.
+    <dd><b class="l3heading">Values:</b> An alphanumeric string.
+</dl>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape 6: when the document area has the focus, accesskey values
+        that conflict with application accesskeys (such as "f" typically for the File
+        menu) will give focus to the HTML element every time. Only when the
+        document area does not have focus will the accesskey be used for the
+        application's intended purpose.
+    <li>Using an ACCESSKEY for buttons and links in Netscape 6 activates the
+        button/link. IE merely gives the element active focus in such cases.
+    <li>IE4+: IE grays out hyperlinks (A elements) if the DISABLED attribute is 
+        set, but they are still activate-able. 
+    <li>IE4+: For some reason, the CODE and NOBR elements are excluded from receiving 
+        focus via the TABINDEX attribute - no, that doesn't really make any sense.
+    <li>O5: The TITLE attribute is very hard to "access" (eg: create a visual 
+        tooltip as expected) on most form widgets (INPUT/SELECT/TEXTAREA - 
+        only at the exteme corners) and with list structures (DIR/DL/MENU/OL/UL 
+        only in the non-LI/DT/DD areas.) This problem is fixed in Opera 6.
+    <li>IE and Netscape/Mozilla use the ALT key in combination with any ACCESSKEY 
+        specified to trigger it. In Opera, the accelerator key combination is SHIFT-ESCAPE 
+        +ACCESSKEY.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

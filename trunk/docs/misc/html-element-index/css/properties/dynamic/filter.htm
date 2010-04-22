@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Filter - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">filter</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE4</i></b>]<br></td>
+    <td align=center><b class="alert">Other Dynamic<br>Content Properties</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="accelerator.htm">accelerator</a><br>
+    <a href="cursor.htm">cursor</a><br>
+    <a href="behavior.htm">behavior</a><br>
+    <a href="zoom.htm">zoom</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Applicable Elements: </b><br></th>
+    <td><b class="tagname">BODY</b>, <b class="tagname">BUTTON</b>,
+        <b class="tagname">IMG</b>, <b class="tagname">INPUT</b>,
+        <b class="tagname">MARQUEE</b>, <b class="tagname">TABLE</b>,<br>
+        <b class="tagname">TD</b>, <b class="tagname">TEXTAREA</b>,
+        <b class="tagname">TFOOT</b>, <b class="tagname">TH</b>,
+        <b class="tagname">THEAD</b> and <b class="tagname">TR</b>.<br>
+        [<a href="#notes">See additional Notes below.</a>]</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Currently Visual only</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/filter.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property creates an extensible mechanism allowing special visual
+        effects to be applied to content. There are currently three categories
+        of filters - Visual filters and Reveal/Blend Transition filters.
+        Multiple filters can be applied to a selector to produce interesting results, 
+        with the order of application often playing an important role in the final 
+        visual result. Current filters only apply in a visual context, but the 
+        extensibility of the property could allow for other capabilities.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Visual Filters</b></big>
+    <dd><b class="alert">Description:</b><br>
+        Visual filters allow one or more of 14 visual effects to be applied
+        to an element's content.
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;<b class="selector">Selector</b>
+        { <span class="property">filter:</span>
+        [Visual filter name]([filter parameter1], [filter parameter2],...) }
+    <dd>[<b class="alert2">Visual filter name</b>] - See the <a href="visualsyntax.htm">Visual
+        filter syntax details page</a> for more information on allowed visual effects.
+</dl>
+
+
+<dl>
+<dt><big><b class="mainheading">Reveal Transition Filters</b></big>
+    <dd><b class="alert">Description:</b><br>
+        Reveal transition filters are time-varying visual filters allowing
+        content to be transformed in a prescribed manner. Their role is
+        to visually transition a control from one state to another.
+        Scripting languages must be used to change between the beginning and
+        ending states for the 23 possible Reveal transition types. Transition
+        filters can also be specified using syntax in the HTML META element
+        to create blend transitions between page loads.
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;<b class="selector">Selector</b>
+        { <span class="property">filter:</span> revealtrans([duration], [transition-type]) }
+    <dd>[<b class="alert2">duration</b>] - Floating point value representing
+        the length of time used for the transition. Value is given in seconds
+        and milliseconds (eg: 1.234 = 1,234 milliseconds.)
+    <dd>[<b class="alert2">transition-type</b>] - Integer code value (0-23)
+        indicating the shape of the Reveal transition. See the
+        <a href="revealtranssyntax.htm">Reveal transition syntax details page</a>
+        for more information on allowed transition shapes.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Blend Transition Filters</b></big>
+    <dd><b class="alert">Description:</b><br>
+        A Blend transition filter allows the content of an element to fade in
+        or out. The Blend transition filter can also be specified using syntax
+        in the HTML META element to create inter-page blend transitions.
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;<b class="selector">Selector</b>
+        { <span class="property">filter:</span> blendTrans(Duration=[duration]) }
+    <dd>[<b class="alert2">duration</b>] - Floating point value representing
+        the length of time used for the transition. Value is given in seconds
+        and milliseconds (eg: 1.234 = 1,234 milliseconds.)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">General Syntax</b></big>
+    <dd><b class="selector">Selector</b> { <span class="property">filter:</span>
+        filtertype1(parameter1, parameter2,...) [filtertype2(parameter1, parameter2,...)]... }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">img</b> {
+        <span class="property">filter:</span> blur(strength=50) flipv() }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">img</b>
+        <span class="tagattrib">SRC</span>=&quot;image.gif&quot;
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">filter:</span>
+        blur(strength=50) flipv()&quot;&gt;</div>
+</dl>
+
+<a name="notes"></a>
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Filters can also be applied to the DIV and SPAN elements
+        as well, but they must have an explicit height and width or have a
+        'position' property set to absolute.
+    <li>Filter effects can take time to calculate; this can degrade perceived
+        page loading performance or interfere with content appearance when
+        selecting content (especially when applying multiple filter effects.)
+    <li>Filter effects do not change or alter the content of an element, just
+        the visual appearance.
+    <li>The visual effects of some filters (such as DropShadow or Glow) may extend
+        beyond the normal rendering region of an element box. If this is not
+        compensated for by appropriate margin property values, the element box
+        content may be clipped.
+    <li>Filters are ignored for positioned elements nested inside nonpositioned
+        elements (eg: a positioned SPAN inside a nonpositioned DIV.) To ensure that
+        a filter is applied to an element, position or set the width of the outermost
+        element in the document tree.
+    <li>The shadow filter can not be applied to the IMG element directly; it
+        needs to be applied to the parent element of the IMG element.
+    <li> Some of the Visual filters (DropShadow, Glow, Mask and Shadow properties)
+         apply their effects only to transparent regions of an element box. Open
+         space inside, between and around text characters is automatically considered
+         transparent. With images, only some formats support transparency capability
+         (eg: Jpeg does not support transaparency, but Gif <em>DOES</em> only in the
+         Gif89a format with a transparent channel set.)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

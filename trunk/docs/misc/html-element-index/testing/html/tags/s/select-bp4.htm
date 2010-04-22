@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>SELECT: Browser Peculiarities: Applying CSS</title>
+<style>
+.assert { color: green }
+.test
+        { 
+         color: green; background-color: #9999ff; text-decoration: underline; text-transform: uppercase; 
+         font-size: 20px; cursor: ne-resize; border: medium solid orange; letter-spacing: 5px; font-style: italic;  
+         margin-top: 50px; padding-top: 50px; 
+        }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 4+: Only a few CSS properties (like 'margin', which apply 
+to the region AROUND the SELECT list) are used. Most others are ignored.
+<br><br>
+
+Where CSS is applied below, the following rule sets apply:<br>
+         color: green; background-color: #9999ff; text-decoration: underline; text-transform: uppercase; 
+         font-size: 20px; cursor: ne-resize; border: medium solid orange; letter-spacing: 5px; font-style: italic;  
+         margin-top: 50px; padding-top: 50px; 
+</div>
+<br><br>
+
+<form>
+<b>Plain SELECT list with OPTION elements. No CSS applied:</b>
+<hr>
+filler text<br>
+<select>
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Plain SELECT list with CSS applied:</b>
+<hr>
+filler text<br>
+<select class="test">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>SELECT MULTIPLE list (size=5) with CSS applied:</b>
+<hr>
+filler text<br>
+<select multiple size="3" class="test">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Map</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Map</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b><i class="fs">IE1</i></b>|<b class="s">M2.1</b>|<b class="s">N2</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x and XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Client Side Image Map</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>NA/"<b class="alert">inline</b>" (Depending on content model)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_imapmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The MAP element was first introduced in the Client Side Image Map
+        proposal (an HTML Working Draft from Spry.) It was very quickly adopted
+        in browsers and then in the HTML 3.2 recommendation. MAP is the
+        containing element of a grouping of shape-link identification pairs (the
+        <a href="../a/area.htm">AREA</a> element) used to identify image map
+        linking destinations with geometric regions on an image. This is accomplished
+        via an HTML encoding system, rather than the older, more time consuming ISMAP
+        method which requires an extra HTTP request and server-side processing map file.
+        <br><br>
+
+        The Client-side image map model can be made backward compatible with the old ISMAP 
+        model by specifying the USEMAP attribute in the <a href="../i/image.htm">IMG</a> 
+        element where an ISMAP attribute is also present. The USEMAP attribute takes 
+        as its value the URL of a Client Side Map specification. The URL specified can 
+        either be in the current or an external file.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+         
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE1</i></b>|<b class="s">M2.1</b>|<b class="s">N2</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards
+        Details:</a></b> In all HTML 4.x/XHTML 1.0 DTDs. Dropped from XHTML 1.1
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute behaves the same as the A NAME attribute in defining
+        a destination within a document. It specifies the map location
+        within a file for reference by the IMG USEMAP attribute. They are
+        referenced in the IMG USEMAP attribute as either
+        <b class="alert">&quot;#mapname&quot;</b> [map is in the
+        current file] or <b class="alert">&quot;file/name#mapname&quot;</b>
+        [map location is in an external file] as appropriate.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">map</b>
+        <span class="tagattrib">name</span>=&quot;clientsidemap&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">area</b>
+        <span class="tagattrib">shape</span>=&quot;rect&quot;
+        <span class="tagattrib">coords</span>=&quot;0,0,100,100&quot;
+        <span class="tagattrib">href</span>=&quot;http://www.foo.com/test.htm&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">area</b>
+        <span class="tagattrib">shape</span>=&quot;circle&quot;
+        <span class="tagattrib">coords</span>=&quot;95,105,5&quot;
+        <span class="tagattrib">href</span>=&quot;http://www.foo.com/test2.htm&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">area</b>
+        <span class="tagattrib">shape</span>=&quot;poly&quot;
+        <span class="tagattrib">coords</span>=&quot;5,100,10,110,0,110&quot;
+        <span class="tagattrib">nohref</span> /&gt;<br>
+        &lt;/<b class="tagname">map</b>&gt;<br>
+        <br>
+        &lt;<b class="tagname">a</b>
+        <span class="tagattrib">href</span>=&quot;cgi-bin/serverside.map&quot;&gt;
+        &lt;<b class="tagname">img</b>
+        <span class="tagattrib">src</span>=&quot;image.gif&quot;
+        <span class="tagattrib">ismap usemap</span>=&quot;#clientsidemap&quot; /&gt;
+        &lt;/<b class="tagname">a</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd>&lt;<a href="../a/area.htm">area</a>&gt; |
+        <b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> The content model listed above is valid
+        as of HTML 4.01; in HTML 4.0 and previous standards, the only content allowed
+        in a MAP element was an AREA element. Luckily, most browsers already
+        support this new DTD content model.
+    <li>It is usually a good idea to include an ISMAP as an alternative to
+        Client Side Image maps, but authors sometimes may not have access to
+        set up map files on their host machines. In this case especially, and in
+        general, a <em>THIRD</em> alternative should be authored to allow navigation
+        via text links for users that do not have image capability.
+    <li>HTML 4.x+ recommends that authors use the ID attribute instead of the NAME
+        attribute wherever possible. ID is the accepted method moving forward and NAME is
+        actually removed as of XHTML 1.1.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/m/map-bp2.htm">[Test]</a>
+        Netscape has never supported external IDs/URLs in the USEMAP attribute
+        to the IMG element as per the specification (only internal anchors can
+        be used.) Internet Explorer supports external IDs/URLs from version 1.0
+        to 3.0, now it does not support them. Opera has supported external
+        IDs/URLs since version 3.0.
+    <li><a href="../../../testing/html/tags/m/map-bp1.htm">[Test]</a>
+        Netscape 6 betas 1 and 2 did not allow any displayable content inside
+        the MAP element. All other browsers have allowed this, and Netscape
+        6 beta 3+ does as well.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

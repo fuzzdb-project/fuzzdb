@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>OPTION: Browser Peculiarities: Explicit vs. implied values for option elements</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">If no VALUE attribute is supplied for an OPTION element, the 
+displayed content of the OPTION is submitted to the form processing script. 
+Otherwise, the VALUE attribute is sent.</div>
+
+<br>
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>SELECT list with option elements. Option elements only having text content, not VALUE attribute. 
+Second option selected:</b>
+<hr>
+filler text<br>
+<select name="optionlist1">
+<option>optiontext1</option>
+<option selected>optiontext2</option>
+<option>optiontext3</option>
+</select>
+<input type="submit"><br>
+filler text
+<hr>
+</form>
+
+<br>
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>SELECT list with option elements. Option elements only having VALUE attribute, text content is empty.
+Second option selected:</b>
+<hr>
+filler text <br>
+<select name="optionlist1">
+<option value="optionvalue1"></option>
+<option value="optionvalue2" selected></option>
+<option value="optionvalue3"></option>
+</select>
+<input type="submit"><br>
+filler text
+<hr>
+</form>
+
+<br>
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>SELECT list with option elements. Option elements having both VALUE attribute and text content.
+Second option selected:</b>
+<hr>
+filler text <br>
+<select name="optionlist1">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+<input type="submit"><br>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

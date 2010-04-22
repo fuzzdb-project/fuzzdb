@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheet Frequently Asked Questions</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Cascading Style Sheets FAQ</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+        <a href="../propindex/font.htm">Property Index</a> |
+        <a href="../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</center>
+
+<br><br>
+<h2 class="subheading">FAQ Index</h2>
+<hr size=1 width="75%" align=left>
+<ol>
+     <li><a href="#one">What are Cascading Style Sheets?</a>
+     <li><a href="#two">Why do style sheets exist?</a>
+     <li><a href="#three">Why use style sheets?</a>
+     <li><a href="#four">Who defines the CSS standard? Is it one person? A company?</a>
+     <li><a href="#five">What can be done with style sheets that can not be
+         accomplished with regular HTML?</a>
+     <li><a href="#six">Is there anything that <em>CAN'T</em> be replaced by style sheets?</a>
+     <li><a href="#seven">How do I design for backward compatibility using style sheets?</a>
+     <li><a href="#eight">What browsers support style sheets? To what extent?</a>
+     <li><a href="#nine">Do any WYSIWYG editors support creation of CSS? Any text editors?</a>
+     <li><a href="#ten">Can you use someone's style sheet without permission?</a>
+     <li><a href="#eleven">What does the &quot;Cascading&quot; in &quot;Cascading Style Sheets&quot; mean?</a>
+     <li><a href="#twelve">Which style specification method should be used? Why?</a>
+     <li><a href="#thirteen">What are the advantages and disadvantages of the various style specification methods?</a>
+  <li><a href="#fourteen">As a reader, how can I make my browser recognize my own style sheet?</a>
+     <li><a href="#fifteen">How do you override the underlining of hyperlinks?</a>
+</ol>
+<hr size=1 width="75%" align=left>
+
+<a name="one"></a>
+<dl>
+<dt><big><b class="mainheading">1. What are Cascading Style Sheets?</b></big>
+    <dd>A Cascading Style Sheet (CSS) is a list of statements (also known as
+        rules) that can assign various rendering properties to HTML elements.
+        Style rules can be specified for a single element occurrence, multiple
+        elements, an entire document, or even multiple documents at once. It is
+        possible to specify many different rules for an element in different
+        locations using different methods. All these rules are collected and
+        merged (known as a &quot;cascading&quot; of styles) when the document
+        is rendered to form a single style rule for each element.
+
+<a name="two"></a>
+<dt><br><big><b class="mainheading">2. Why do style sheets exist?</b></big>
+    <dd>SGML (of which HTML is a derivative) was meant to be a device-independent
+        method for conveying a document's structural and semantic content (its meaning.)
+        It was never meant to convey physical formatting information. HTML has crossed
+        this line and now contains many elements and attributes which specify visual
+        style and formatting information. One of the main reasons for style sheets is
+        to stop the creation of new HTML physical formatting constructs and once again
+        separate style information from document content.
+
+<a name="three"></a>
+<dt><br><big><b class="mainheading">3. Why use Style Sheets?</b></big>
+    <dd>Style sheets allow a much greater degree of layout and display control
+        than has ever been possible thus far in HTML. The amount of format coding
+        necessary to control display characteristics can be greatly reduced through
+        the use of external style sheets which can be used by a group of documents.
+        Also, multiple style sheets can be integrated from different sources to form
+        a cohesive tapestry of styles for a document. Style sheets are also backward
+        compatible - They can be mixed with HTML styling elements and attributes so
+        that older browsers can view content as intended.
+
+<a name="four"></a>
+<dt><br><big><b class="mainheading">4. Who defines the CSS standard? Is it one person? A company?</b></big>
+    <dd>The <a href="http://www.w3.org/">W3C</a> (the organization in charge
+        of defining the HTML standards) creates and develops the CSS specifications
+        with public input from the W3C
+        <a href="http://www.w3.org/Mail/Lists.html#www-style">www-style</a>
+        mailing list discussion forum and feedback from the member companies that
+        comprise the <a href="http://www.w3.org/Consortium/Member/List.php3">W3C
+        Consortium</a> (which include companies such as Apple, Microsoft, and Netscape
+        along with over 150 others.)
+        <br><br>
+
+        The &quot;<a href="http://www.w3.org/TR/REC-CSS1.html">Cascading
+        Style Sheets Level 1</a>&quot; recommendation is edited and maintained by
+        <a href="mailto:howcome@w3.org">H&aring;kon Lie</a> and
+        <a href="mailto:bert@w3.org">Bert Bos</a> of the W3C. The
+        <a href="http://www.w3.org/TR/REC-CSS2/">CSS2</a> recommendation
+        is is edited and maintained by H&aring;kon Lie, Bert Bos,
+        <a href="mailto:chris@w3.org">Chris Lilley</a> and
+        <a href="mailto:ij@w3.org">Ian Jacobs</a>.
+
+<a name="five"></a>
+<dt><br><big><b class="mainheading">5. What can be done with style sheets that
+    can not be accomplished with regular HTML?</b></big>
+    <dd>Many of the recent extensions to HTML have been tentative and somewhat
+        crude attempts to control document layout. Style sheets go several steps
+        beyond, and introduces complex border, margin and spacing control to most
+        HTML elements. It also extends the capabilities introduced by most of the
+        existing HTML browser extensions. Background colors or images can now be
+        assigned to <em>ANY</em> HTML element instead of just the BODY element and
+        borders can now be applied to any element instead of just to tables. For
+        more information on the possible properties in CSS, see the Index DOT Css
+        <a href="../propindex/font.htm">Property Index</a>.
+
+<a name="six"></a>
+<dt><br><big><b class="mainheading">6. Is there anything that <em>CAN'T</em> be
+    replaced by Style Sheets?</b></big>
+    <dd>Quite a bit actually. Style sheets only specify information that
+        controls display and rendering information. Virtual style elements that
+        convey the NATURE of the content can not be replaced by style sheets,
+        and hyperlinking and multimedia object insertion is not a part of style
+        sheet functionality at all (although controlling how those objects appear
+        <em>IS</em> part of style sheets functionality.) The CSS1 specification
+        has gone out of its way to absorb <em>ALL</em> of the HTML functionality
+        used in controlling display and layout characteristics. For more
+        information on the possible properties in CSS, see the Index DOT Css
+        <a href="../propindex/font.htm">Property Index</a>.
+        <br><b class="alert">Rule of Thumb:</b> if an HTML element or attribute
+        gives cues as to how its contents should be displayed, then some or all
+        of its functionality has been absorbed by style sheets.
+
+<a name="seven"></a>
+<dt><br><big><b class="mainheading">7. How do I design for backward compatibility
+    using Style Sheets?</b></big>
+    <dd>Existing HTML style methods (such as &lt;<b class="tagname">font</b>
+        <span class="tagattrib">SIZE</span>&gt; and &lt;<b class="tagname">b</b>&gt;)
+        may be easily combined with style sheet specification methods. Browsers
+        that do not understand style sheets will use the older HTML formatting
+        methods, and style sheets specifications can control the appearance of
+        these elements in browsers that support CSS1.
+
+<a name="eight"></a>
+<dt><br><big><b class="mainheading">8. What browsers support style sheets? To what extent?</b></big>
+    <dd>Microsoft's Internet Explorer version 3.0 Beta 2 and above supports
+        CSS, as does Netscape Communicator 4.0 Beta 2 and above and Opera 3.5 and
+        above. Take note that the early implementations in these browsers did not
+        support <em>ALL</em> of the properties and syntax described in the full CSS1
+        specification and beyond. Later versions have been getting much closer to full CSS1
+        compliance, but then comes the next hurdle - CSS2...it was such a big leap
+        over CSS1 that it has taken the browsers years to come close to supporting a
+        majority of CSS2's features. Mozilla and Opera's current versions both offer
+        excellent CSS standards compliance. The Macintosh version of Internet Explorer
+        is said to be very impressive in its CSS capabilities as well, but PC IE
+        lags behind these implementations. Quite a few other implementations of CSS
+        now exist in browsers that are not as widely-used (such as Amaya, Arena and
+        Emacs-W3), but coverage of features in these documents currently only covers
+        Internet Explorer, NCSA Mosaic, Netscape and Opera browsers.
+
+<a name="nine"></a>
+<dt><br><big><b class="mainheading">9. Do any WYSIWYG editors support the creation
+    of Style Sheets? Any text-based HTML editors?</b></big>
+    <dd>As support for CSS in browsers has matured in the last year, both WYSIWYG
+        and Text-based HTML editors have appeared that allow the creation or
+        the assistance of creating Cascading Style Sheet syntax. There are now
+        at least two dozen editors supporting CSS syntax in some form. The W3C
+        maintains an up-to-date <a href="http://www.w3.org/Style/CSS/#editors">list</a> 
+        of these WYSIWYG and text-based editors.
+
+<a name="ten"></a>
+<dt><br><big><b class="mainheading">10. Can you use someone else's Style Sheet
+    without permission?</b></big>
+    <dd>This is a somewhat fuzzy issue. As with HTML tags, style sheet
+        information is given using a special language syntax. Use of the language
+        is not copyrighted, and the syntax itself does not convey any content -
+        only rendering information.
+        <br><br>
+
+        It is not a great idea to reference an external style sheet on someone else's
+        server. Doing this is like referencing an in-line image from someone else's
+        server in your HTML document. This can end up overloading a server if too many
+        pages all over the net reference the same item. It can't hurt
+        to contact the author of a style sheet, if known, to discuss using the
+        style sheet, but this may not be possible. In any case, a local copy should
+        be created and used instead of referencing a remote copy.
+
+<a name="eleven"></a>
+<dt><br><big><b class="mainheading">11. What does the &quot;Cascading&quot; in
+    &quot;Cascading Style Sheets&quot; mean?</b></big>
+    <dd>Style Sheets allow style information to be specified from many
+        locations. Multiple (partial) external style sheets can be referenced to
+        reduce redundancy, and both authors as well as readers can specify style
+        preferences. In addition, three main methods can be employed by an author
+        to add style information to HTML documents, and multiple approaches for
+        style control are available in each of these methods. In the end, style
+        can be specified for a single element using any, or all, of these methods.
+        What style is to be used when there is a direct conflict between style
+        specifications for an element?
+        <br><br>
+
+        Cascading comes to the rescue. A document can have styles specified using
+        all of these methods, but all the information will be reduced to a single,
+        cohesive &quot;virtual&quot; Style Sheet. Conflict resolution is based on
+        each style rule having an assigned weight according to its importance in
+        the scheme of things. A rule with a higher overall importance will carry
+        a higher weight. This will be used in place of a competing style rule with
+        a lower weight/importance. A hierarchy of competing styles is thus formed
+        creating a &quot;cascade&quot; of styles according to their assigned
+        weights. The algorithm used to determine this cascading weight scale is
+        fairly complex.
+        <br>
+        For more information, see the section on cascading in the
+        <a href="http://www.w3.org/TR/REC-CSS1#the-cascade">CSS1
+        Specification</a> or the <a href="../index.html">Index DOT Css</a> section
+        on the Style Sheet <a href="cascade.htm">Cascade</a> process.
+
+<a name="twelve"></a>
+<dt><br><big><b class="mainheading">12. Which style specification method should be used? Why?</b></big>
+    <dd>The answer to this one is tricky. The short answer is:
+        &quot;it depends.&quot; The long answer is, however, another story.
+        <br><br>
+
+        If you are planning on using more than one style specification method in
+        your document, you must also worry about Cascading Order of Style methods
+        (see <a href="#eleven">question 11</a>.) If you are going to use only one
+        method, then some guidelines about the nature of each method need to be
+        kept in mind. The answer to this question is also very much related to the
+        advantages and disadvantages to using each of them (<a href="#thirteen">next
+        question</a>.)
+
+<dt><br><b class="alert">Method 1:</b> <a href="../syntax/inclusion/external.htm">External
+    Style Sheets</a> (The <a href="http://www.blooberry.com/indexdot/html/tagpages/l/link.htm">LINK</a>
+    <span class="external">[--&gt;Index DOT Html]</span> element)
+    <dd>This method should be used if you want to apply the same style to
+        multiple documents. Each document can reference the stand-alone
+        style sheet and use the styles contained within. Using this method, the
+        appearance of many documents can be controlled using a single or small
+        number of style sheets. This can save a LOT of time for an author.
+
+<dt><b class="alert">Method 2:</b> <a href="../syntax/inclusion/embedded.htm">Embedded</a>
+    Style Sheets (The <a href="http://www.blooberry.com/indexdot/html/tagpages/s/style.htm">Style</a>
+    <span class="external">[--&gt;Index DOT Html]</span> element)
+    <dd>The syntax used with Method 2 is the same as that for Method 1. This
+        method is a happy medium between External Style Sheets and Inline
+        Styles (see below.). It should be used in place of Method 1 if you
+        only want to specify styles for a single document. This method should
+        also be used when you want to specify a style for multiple tag types
+        at once or the list of style definitions is of larger size.
+
+<dt><b class="alert">Method 3:</b> <a href="../syntax/inclusion/inline.htm">Inline</a>
+    Styles (STYLE attribute to HTML elements)
+    <dd>If you only have to apply style to one or a few elements in a single document, 
+        your best bet will often be an Inline Style. This method attaches a style 
+        definition within the HTML element it is modifying.
+
+<a name="thirteen"></a>
+<dt><br><big><b class="mainheading">13. What are the advantages/disadvantages
+    of the various style methods?</b></big>
+<dt>Each method of specifying style information has something going for it
+    (else it would not exist), but each method also has drawbacks as well.
+    This question is very closely related to the <a href="#twelve">previous
+    question</a>. These factors should be considered when planning your use
+    of Style Sheets.
+
+<dt><br><b class="alert">External Style Sheets</b>
+    <dd><b class="magicword">Advantages</b>
+        <ul type=disc>
+        <li>Can control styles for multiple documents at once
+        <li>Classes can be created for use on multiple HTML element types in many documents
+        <li>Selector and grouping methods can be used to apply styles under complex contexts
+        </ul>
+    <dd><b class="magicword">Disadvantages</b>
+        <ul type=disc>
+        <li>An extra download is required to import style information for each document
+        <li>The rendering of the document may be delayed until the external style sheet is loaded
+        <li>Becomes slightly unwieldy for small quantities of style definitions
+        </ul>
+
+<dt><b class="alert">Embedded Style Sheets</b>
+    <dd><b class="magicword">Advantages</b>
+        <ul type=disc>
+        <li>Classes can be created for use on multiple tag types in the document
+        <li>Selector and grouping methods can be used to apply styles under complex contexts
+        <li>No additional downloads necessary to receive style information
+        </ul>
+    <dd><b class="magicword">Disadvantages</b>
+        <ul type=disc>
+        <li>This method can not control styles for multiple documents at once
+        </ul>
+
+<dt><b class="alert">Inline Styles</b>
+    <dd><b class="magicword">Advantages</b>
+        <ul type=disc>
+        <li>Useful for small quantities of style definitions
+        <li>Can override other style specification methods at the local level so 
+            only exceptions need to be listed in conjunction with other style methods
+        </ul>
+    <dd><b class="magicword">Disadvantages</b>
+        <ul type=disc>
+        <li>Does not distance style information from content (a main goal of SGML/HTML)
+        <li>Can not control styles for multiple documents at once
+        <li>Author can not create or control classes of elements to control multiple 
+            element types within the document
+        <li>Selector grouping methods can not be used to create complex element addressing scenarios
+        </ul>
+
+<a name="fourteen"></a>
+<dt><br><big><b class="mainheading">14. As a reader, how can I make my browser
+    recognize my own style sheet?</b></big>
+<dt><b class="alert">Netscape</b>
+    <dd>It is not possible to do this in Netscape yet (as of version 4.0.)
+<dt><b class="alert">Internet Explorer 3.0 (Win95/NT)</b>
+    <dd>[It is possible to do this at least in Windows95/NT, but no user interface 
+        is provided. Unknown how this might be accomplished on other operating systems.]
+        <ol>
+        <li>Open the Registry editor (Start..Run..regedit..ENTER)
+        <li>Under the 'HKEY_LOCAL_MACHINE\Software\Microsoft\InternetExplorer\Styles'
+            key, Edit..New..String Value
+        <li>The new value should be called 'StyleSheet Pathname'
+        <li>For the value, type in the full directory path of your .css style sheet.
+        </ol>
+<dt><b class="alert">Internet Explorer 4.0 (Win95/NT)</b>
+    <dd><ol>
+        <li>Under the View menu, select 'Internet Options'.
+        <li>Under the 'General' tab, choose the 'Accessibility' button.
+        <li>Choose the 'Format documents using my style sheet'
+            check box and 'Browse...' to the location of your .css style sheet.
+   </ol>
+
+<a name="fifteen"></a>
+<dt><br><big><b class="mainheading">15. How do you override the underlining
+    of hyperlinks?</b></big>
+    <dd>CSS has the ability to explicitly control the status of underlining
+        for an element - even for hyperlinks. The correct way to do this in
+        an external or document-level style sheet is:<br>
+        &#160;&#160;&#160;<b class="selector">A</b>
+        { <span class="property">text-decoration:</span> none }<br>
+        and within an anchor element as:<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">a</b>
+        <span class="tagattrib">HREF</span>=&quot;example.htm&quot;
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">text-decoration:</span>
+        none&quot;&gt;link text&lt;/<b class="tagname">a</b>&gt;
+        <br><br>
+
+        <b class="alert">Note:</b> The underlining of hyperlinks is a
+        long-standing visual convention that assists in the visual identification
+        of active hyperlink areas. Many users <em>expect</em> to see
+        hyperlinks underlined and may be confused and/or irritated if they
+        are not used. User-defined style sheets address this user need by
+        allowing the user to have final control over this feature. Unfortunately,
+        wide support for this ability does not yet exist.
+</dl>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

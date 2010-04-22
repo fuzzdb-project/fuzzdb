@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>External Example</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">External CSS Example</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+        <a href="../propindex/font.htm">Property Index</a> |
+        <a href="../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+
+<a href="#example">Example</a> | <a href="#analysis">Analysis</a>
+</div>
+
+<br><br>
+
+<a name="example"></a>
+<big><b class="mainheading">Example</b></big>
+<b class="subheading">External File:</b> 'example.css'<br>
+<ol>
+<li><a name="e1" href="#a3"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">body</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">background:</span> black;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color:</span> #80c0c0 }
+
+<li><a name="e2" href="#a4"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">a:link</b>
+    { <span class="property">color:</span> #ff8080 }
+
+<li><a name="e3" href="#a4"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">a:visited</b>
+    { <span class="property">color:</span> #ff0000 }
+
+<li><a name="e4" href="#a4"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">a:active</b>
+    { <span class="property">color:</span> #a05050 }
+
+<li><a name="e5" href="#a5"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">a.case1:link</b>
+    { <span class="property">background:</span> green }
+
+<li><a name="e6" href="#a6"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">p:first-line</b>
+    { <span class="property">margin-left:</span> 25px }
+
+<li><a name="e7" href="#a7"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">div.foo:first-line</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-weight:</span> bold;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">margin-left:</span> 30px }
+
+<li><a name="e8" href="#a7"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">div:first-letter</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-size:</span> x-large; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color:</span> #ffffff }
+
+<li><a name="e9" href="#a8"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">ul ul li</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-size:</span> x-large; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-decoration:</span> italic }
+
+<li><a name="e10" href="#a8"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">h2 em</b>
+    { <span class="property">font-weight:</span> 900 }
+
+<li><a name="e11" href="#a9"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">h2.ex1</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color: green;</span>
+    &#160;&#160;&#160;&#160;&#160;&#160;/* This type of heading MUST be Green and Large! */<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">line-height:</span> 50px; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-size:</span> 40px }
+
+<li><a name="e12" href="#a10"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">.funkyclass</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font:</span> 36pt/40pt courier;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-variant:</span> small-caps;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">border:</span> thick dashed blue }
+
+<li><a name="e13" href="#a11"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">#tagid1</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">padding:</span> 20px; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">border:</span> 20px groove #ffffff }
+
+<li><a name="e14" href="#a12"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">.class1, #tagid2</b>
+    { <span class="property">font-family:</span> 'comic sans ms', fantasy;
+      <span class="property">color:</span> rgb(100%,100%,0%) }
+
+<li><a name="e15" href="#a13"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">h1, h2, div.class5, blockquote</b>
+    { <span class="property">background:</span> #000080 }
+
+<li><a name="e16" href="#a14"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">p.special</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font:</span> 12pt/14pt sans-serif;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">margin:</span> 5px 0px 2px 25px;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">border:</span> medium dashed #ff0000;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">background:</span> white url(http://www.foo.com/image.gif)
+    repeat-x fixed top right }
+
+<li><a name="e17" href="#a15"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">blockquote</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">margin-left:</span> 2cm; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color:</span> #00ff00 }
+
+<li><a name="e18" href="#a16"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">.part1</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-size:</span> xx-large; <br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color:</span> #808000 }
+
+<li><a name="e19" href="#a17"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;<b class="selector">h6</b> {<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">font-size:</span> xx-small ! important;<br>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    <span class="property">color:</span> red ! important }
+</ol>
+
+<hr width="75%" align="left" size=1>
+<b class="subheading">Main Document:</b> 'example.htm'<br>
+<ol start=20>
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">html</b>&gt;
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">head</b>&gt;
+<li>&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">title</b>&gt;Document
+    Title&lt;/<b class="tagname">title</b>&gt;
+
+<li><a name="e23" href="#a1"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">link</b>
+    <span class="tagattrib">REL</span>=&quot;StyleSheet&quot;
+    <span class="tagattrib">TYPE</span>=&quot;text/css&quot;
+    <span class="tagattrib">HREF</span>=&quot;example.css&quot;&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/<b class="tagname">head</b>&gt;<br><br>
+
+<li><a name="e25" href="#a3"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">body</b>&gt;
+
+<li><a name="e26" href="#a10"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">h1</b>
+    <span class="tagattrib">CLASS</span>=&quot;funkyclass&quot;
+    <span class="tagattrib">ALIGN</span>=&quot;center&quot;&gt;Welcome
+    to my home page!&lt;/<b class="tagname">h1</b>&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">br</b>&gt;&lt;<b
+    class="tagname">br</b>&gt;
+
+<li><a name="e28" href="#a4"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">p</b>&gt;Hi there! If you are reading this
+    then you have found my home page! Congratulations! I know it can be
+    hard to find my pages, but I bet that you feel lucky now. Now that
+    you are here, please take a look at my page of links to
+    &lt;<b class="tagname">a</b>
+    <span class="tagattrib">HREF</span>=&quot;http://www.mysite.com/coolsites.html&quot;&gt;cool
+    sites&lt;/<b class="tagname">a</b>&gt; or sign my
+    &lt;<b class="tagname">a</b>
+    <span class="tagattrib">HREF</span>=&quot;http://www.mysite.com/guestbook.html&quot;&gt;guest
+    book&lt;/<b class="tagname">a</b>&gt;&lt;/<b class="tagname">p</b>&gt;
+
+<li><a name="e29" href="#a6"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">div</b>
+    <span class="tagattrib">CLASS</span>=&quot;foo&quot;&gt; My wonderful
+    poetry &lt;<b class="tagname">br</b>&gt; is available
+    if you are REALLY bored. Why not give it a spin?&lt;/<b class="tagname">div</b>&gt;
+<br><br>
+
+<li><a name="e30" href="#a8"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">h2</b> <span class="tagattrib">CLASS</span>=&quot;ex1&quot;&gt;
+    The Best Poetry I &lt;<b class="tagname">em</b>&gt;NEVER&lt;/<b
+    class="tagname">em</b>&gt; Wrote&lt;/<b class="tagname">h2</b>&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">ul</b>&gt;
+
+<li><a name="e32" href="#a12"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;'There Once Was A
+    Man From Nantucket' - &lt;<b class="tagname">span</b>
+    <span class="tagattrib">CLASS</span>=&quot;class1&quot;&gt;Anonymous&lt;/<b
+    class="tagname">span</b>&gt;&lt;/<b class="tagname">li</b>&gt;
+
+<li><a name="e33" href="#a12"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;'Cool In Fur' -
+    &lt;<b class="tagname">span</b>
+    <span class="tagattrib">CLASS</span>=&quot;class1&quot;&gt;Harry B.
+    Foot&lt;/<b class="tagname">span</b>&gt;&lt;/<b class="tagname">li</b>&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b
+    class="tagname">li</b>&gt;And My All Time Fave:
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">ul</b>&gt;
+
+<li><a name="e36" href="#a12"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;
+    'A Toast To My Toaster' -     &lt;<b class="tagname">span</b>
+    <span class="tagattrib">CLASS</span>=&quot;class1&quot;&gt;Me!&lt;/<b
+    class="tagname">span</b>&gt;&lt;/<b class="tagname">li</b>&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    &#160;&#160;&#160;&#160;&#160;&lt;/<b class="tagname">ul</b>&gt;
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/<b class="tagname">li</b>&gt;&lt;/<b class="tagname">ul</b>&gt;
+<br><br>
+
+<li><a name="e39" href="#a12"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">blockquote</b>&gt;Brought to you by the
+    letter &lt;<b class="tagname">span</b>
+    <span class="tagattrib">ID</span>=&quot;tagid2&quot;&gt;&amp;quot;H&amp;quot;&lt;/<b
+    class="tagname">span</b>&gt; and &lt;<b class="tagname">span</b>
+    <span class="tagattrib">ID</span>=&quot;tagid1&quot;&gt;Joe
+    Shmoe&lt;/<b class="tagname">span</b>&gt;
+    &lt;/<b class="tagname">blockquote</b>&gt;
+<br><br>
+
+<li><a name="e40" href="#a13"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">div</b> <span class="tagattrib">CLASS</span>=&quot;class5&quot;&gt;
+    When you are done looking through these masterpieces, I encourage you to visit my proud sponsor!!
+    &lt;/<b class="tagname">div</b>&gt;
+<br><br>
+
+<li><a name="e41" href="#a14"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">p</b> <span class="tagattrib">CLASS</span>=&quot;special&quot;&gt;&lt;<b
+    class="tagname">span</b>
+    <span class="tagattrib">CLASS</span>=&quot;funkyclass&quot;&gt;ADVERTISEMENT:&lt;/<b
+    class="tagname">span</b>&gt; Buy Navel Lint Contemplator! Its a browser and
+    its a sandwich spread! Go to our &lt;<b class="tagname">a</b>
+    <span class="tagattrib">HREF</span>=&quot;http://www.navellint.com&quot;&gt;home
+    page&lt;/<b class="tagname">a</b>&gt; without delay! Why? Because shelf
+    life is only 8 hours unless refrigerated. We know that makes it hard to browse,
+    but it promotes frequent upgrading to the latest and greatest version.
+    &lt;/<b class="tagname">p</b>&gt;
+<br><br>
+
+<li><a name="e42" href="#a17"><img src="../../images/analysis.gif" alt="[Go To Analysis]" align="middle" border=0></a>
+    &lt;<b class="tagname">h6</b>&gt;All standard disclaimers apply.
+    Your life depends on NOT copying this document in any way. This tape will
+    &lt;<b class="tagname">a</b>
+    <span class="tagattrib">HREF</span>=&quot;http://www.mysite.com/selfdestruct.html&quot;
+    <span class="tagattrib">CLASS</span>=&quot;case1&quot;&gt;self
+    destruct&lt;/<b class="tagname">a</b>&gt; in 10
+    seconds...&lt;/<b class="tagname">h6</b>&gt;
+    <br><br>
+
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/<b class="tagname">body</b>&gt;
+<li>&#160;&#160;&#160;&#160;&#160;&#160;&lt;/<b class="tagname">html</b>&gt;
+</ol>
+
+<br><br>
+<a name="analysis"></a>
+<big><b class="mainheading">Analysis</b></big>
+<ul>
+    <li><b class="alert">Line:</b> General<br>
+        <b class="alert2">CSS Issues:</b> <a href="../syntax/inclusion/external.htm">External Style Sheets</a><br>
+        <b class="alert2">Description:</b> This example contains exactly the
+        same STYLE rule information as the <a href="cssembedded.htm">Embedded
+        example</a> does - just in a slightly different format. The big
+        advantage here is that multiple documents can share the 'example.css' style
+        sheet, thus reducing duplication of effort by both the author and the browser
+        (after downloading once, the external style sheet should be cached for possible
+        later use.)
+
+    <li><a name="a1"></a><b class="alert">Line:</b> <a href="#e23">23</a><br>
+        <b class="alert2">CSS Issues:</b> <a href="../syntax/inclusion/external.htm">External Style Sheets</a><br>
+        <b class="alert2">Description:</b> The use of the LINK element here
+        serves to identify the stylesheet named 'example.css' for use by the
+        current document (example.htm.) The REL attribute describes the relationship
+        of the indicated file to the current document (showing that 'example.css'
+        is a stylesheet for the current document.)
+
+    <li><a name="a2"></a><b class="alert">Lines:</b> <a href="#e1">1</a>-<a href="#e19">19</a><br>
+        <b class="alert2">Description:</b> Notice that no HTML formatting
+        is used in the external CSS file. Only CSS rules are used. The TYPE attribute
+        used in the LINK element on line <a href="#e23">23</a> is sufficient to tell
+        the browser the MIME type of the information in the file.
+
+    <li><a name="a3"></a><b class="alert">Lines:</b> <a href="#e1">1</a> /
+        <a href="#e25">25</a><br>
+        <b class="alert2">CSS Issues:</b> <a href="../topics/inherit.htm">Inheritance</a><br>
+        <b class="alert2">Description:</b> This is the normal background and
+        character color set for this site. Assigning these properties to the BODY element
+        means that all BODY content (child elements) will inherit the text color and
+        background color property values unless otherwise specified.
+
+    <li><a name="a4"></a><b class="alert">Lines:</b> <a href="#e2">2</a> /
+        <a href="#e3">3</a> / <a href="#e4">4</a> / <a href="#e28">28</a> /
+        <a href="#e41">41</a> / <a href="#e42">42</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/pseudo/pseudoclass.htm">Pseudo-Classes</a><br>
+        <b class="alert2">Description:</b> This defines the general behavior
+        for all anchor elements in the document.
+
+    <li><a name="a5"></a><b class="alert">Lines:</b> <a href="#e5">5</a> /
+        <a href="#e42">42</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/pseudo/pseudoclass.htm">Pseudo-Classes</a><br>
+        <b class="alert2">Description:</b> The special anchor case - This defines
+        a special behavior for all anchor elements in the 'case1' class (Note: This rule
+        only controls the LINK Pseudo-class - The other two link pseudo-class properties
+        will be inherited from the rules specified on lines <a href="#e3">3</a> /
+        <a href="#e4">4</a>)
+
+    <li><a name="a6"></a><b class="alert">Lines:</b> <a href="#e6">6</a> /
+        <a href="#e28">28</a> / <a href="#e41">41</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/pseudo/pseudoelement.htm">Pseudo-Elements</a><br>
+        <b class="alert2">Description:</b> Only the first line of paragraphs
+        will be indented (25 pixels)
+
+    <li><a name="a7"></a><b class="alert">Lines:</b> <a href="#e7">7</a> /
+        <a href="#e8">8</a> / <a href="#e30">30</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/pseudo/pseudoelement.htm">Pseudo-Elements</a><br>
+        <b class="alert2">Description:</b> The DIV element: DIV is an element w/o
+        much real semantic meaning of its own. We are assigning a special appearance
+        here to the first letter and line of the element.
+
+    <li><a name="a8"></a><b class="alert">Lines:</b> <a href="#e9">9</a> /
+        <a href="#e10">10</a> / <a href="#e30">30</a> / <a href="#e36">36</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/element.htm#descendent">Contextual Selectors</a><br>
+        <b class="alert2">Description:</b> The specified rules only apply to
+        list items within doubly nested unordered lists and emphasized elements
+        within level 2 headings.
+
+    <li><a name="a9"></a><b class="alert">Lines:</b> <a href="#e11">11</a> /
+        <a href="#e30">30</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/spechtml.htm">Classes</a>,
+        <a href="../topics/inherit.htm">Inheritance</a> and
+        <a href="../syntax/misc.htm#comment">Comments</a><br>
+        <b class="alert2">Description:</b> Only heading level 2 elements with the
+        class name of 'ex1' are given these style rules. Note that the 'green' text
+        color overrides the '#80c0c0' color set on the BODY element in Line <a href="#e1">1</a>.
+        Notice also the CSS comment syntax used - it will be ignored by the browser.<br>
+
+    <li><a name="a10"></a><b class="alert">Lines:</b> <a href="#e12">12</a> /
+        <a href="#e26">26</a> / <a href="#e41">41</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/selectors.htm">Selector syntax</a>,
+        <a href="../syntax/selectors/spechtml.htm">Classes</a><br>
+        <b class="alert2">Description:</b> Use of a class name only as a 
+        selector - All elements having the 'funkyclass' class name will be displayed as
+        indicated. Notice this document has two diverse elements (H1 and SPAN) using
+        this class name. Any number of elements can share a class name, but be sure
+        to keep in mind that some properties only apply to certain HTML element types.
+
+    <li><a name="a11"></a><b class="alert">Lines:</b> <a href="#e13">13</a> /
+        <a href="#e39">39</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/spechtml.htm">ID Selector syntax</a><br>
+        <b class="alert2">Description:</b> Usage of an ID selector - Only one
+        element in the document may use this style rule. This usage is much more limiting
+        than other regular Class or element selectors, but allows extremely granular
+        control of elements in a document (which could be helpful if a document is
+        being generated dynamically.)
+
+    <li><a name="a12"></a><b class="alert">Lines:</b> <a href="#e14">14</a> /
+        <a href="#e32">32</a> / <a href="#e33">33</a> / <a href="#e36">36</a> /
+        <a href="#e39">39</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/selectors.htm#selectgroup">Shorthand Selector Syntax</a><br>
+        <b class="alert2">Description:</b> Styles being assigned to both ID and Class
+        selectors. Note that the yellow font color overrides the bluish (#80c0c0) color
+        set on the BODY element in Line <a href="#e6">6</a>.
+
+    <li><a name="a13"></a><b class="alert">Lines:</b> <a href="#e15">15</a> /
+        <a href="#e26">26</a> / <a href="#e30">30</a> / <a href="#e39">39</a> /
+        <a href="#e40">40</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/selectors/selectors.htm#selectgroup">Shorthand Selector Syntax</a>,
+        <a href="../topics/inherit.htm">Inheritance</a><br>
+        <b class="alert2">Description:</b> This rule is the motherload - It specifies
+        rules for multiple elements using selector shorthand syntax. Several of these elements also
+        have other style information attached as well, but this does not conflict with those
+        other rules. If you know you will be using a single property/value assignment for
+        more than one element, it makes sense to use a shorthand syntax like this rather than
+        repeating yourself repeating yourself. (In the off case that a property assignment
+        made here is also made for the same selector elsewhere using a different style rule,
+        the style assignment that was made last will be applied.)
+
+    <li><a name="a14"></a><b class="alert">Lines:</b> <a href="#e16">16</a> /
+        <a href="#e41">41</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../syntax/declaration.htm#decgroup">Shorthand property syntax</a>,
+        <a href="../syntax/declaration.htm#decshorthand">Abbreviated property types</a>,
+        <a href="../topics/inherit.htm">Inheritance</a>,
+        <a href="../topics/cascade.htm">Cascading Rules</a><br>
+        <b class="alert2">Description:</b> Multiple styles are assigned in this
+        rule using both Style grouping and Shorthand property rules. Each of the
+        properties used can set multiple display behaviors with an abbreviated syntax.
+        These properties could all be set separately, but the extra space it would
+        occupy would be wasteful. The nested SPAN and A elements in this block inherit
+        any unspecified properties from this parent element. Note also that margin rules
+        are specified for the 'first-line' pseudo-class, as well as the 'special'
+        class for the P element in line <a href="#e41">41</a>. The problem lies in the
+        'margin-left' property which conflicts with the same component property in
+        the 'margin' property rule. Because the the 'margin' rule was specified
+        later, it will be used.
+
+    <li><a name="a15"></a><b class="alert">Lines:</b> <a href="#e17">17</a> /
+        <a href="#e39">39</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../topics/inherit.htm">Inheritance</a>,
+        <a href="../topics/cascade.htm">Cascading Rules</a><br>
+        <b class="alert2">Description:</b> As mentioned before, the rules
+        specified here do not include the 'background' property indicated on Line
+        <a href="#e15">15</a> because it is more useful to specify that separately
+        in order to take up less space.
+
+    <li><a name="a16"></a><b class="alert">Line:</b> <a href="#e18">18</a><br>
+        <b class="alert2">CSS Issues:</b> NA<br>
+        <b class="alert2">Description:</b> This is a normal rule applied to a
+        class. The problem is that it is not used. This is not a fatal mistake, but having
+        rules around that are never used takes up space - and extra space means more download
+        time. In the context of an external style sheet such an occurrence will be more
+        common (since a style sheet referenced by many documents will need to cover display
+        rules for ALL documents, and many documents may not contain ALL the selectors
+        indicated. In this particular case it might be better to eliminate this rule 
+        if no other documents are using this rule, but it does not hurt much to leave it 
+        where it is just in case.
+
+    <li><a name="a17"></a><b class="alert">Lines:</b> <a href="#e19">19</a> /
+        <a href="#e42">42</a><br>
+        <b class="alert2">CSS Issues:</b>
+        <a href="../topics/inherit.htm">Inheritance</a>,
+        <a href="../topics/cascade.htm">Cascading Rules</a><br>
+        <b class="alert2">Description:</b> The use of '!important' is unique
+        here in this document. It will indicate to the browser that the rule must be
+        used in preference to a normal rule set for this element situation specified using
+        another method (using a reader's own style sheet for example.) This is a good
+        way to guarantee that a crucial style element in your page survives the
+        uncertainty of a Cascading Order calculation. This control should not be abused
+        however, as it reduces the control the reader has over their browsing
+        environment (a reader may have, for instance, valid <em>physical</em> reasons for
+        their viewing environment settings.)
+</ul>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</body>
+</html>

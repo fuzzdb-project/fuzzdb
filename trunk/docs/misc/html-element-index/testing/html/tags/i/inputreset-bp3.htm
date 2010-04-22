@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Reset: Browser Peculiarities: Effects of DIR="rtl"</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The DIR="RTL" attribute right aligns the content of INPUT elements 
+WITHIN the form field, not the element itself relative to the viewport as it does for other elements.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Reset field, no value:</b>
+<hr>
+filler text
+<input type="reset">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Reset field, no value, Dir=rtl:</b>
+<hr>
+filler text
+<input type="reset" dir="rtl">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value="This is a longer reset value example":</b>
+<hr>
+filler text
+<input type="reset" value="This is a longer reset value example">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value="This is a longer reset value example", Dir=rtl:</b>
+<hr>
+filler text
+<input type="reset" dir="rtl" value="This is a longer reset value example">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

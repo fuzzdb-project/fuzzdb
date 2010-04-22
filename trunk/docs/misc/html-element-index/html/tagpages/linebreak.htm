@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Line Breaking in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Line Breaking in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center><a href="#justify">Justification</a> |
+     <a href="#control">Controlling Line Breaking</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification</b></big>
+    <dd>A rule of thumb in HTML is that, for display of content in a visual
+        browser, line breaking is determined by <em>THE BROWSER</em>. This power
+        is given to the browser due to the intrinsic uncertainty of the size
+        and nature of the display area for an HTML document. Of course, there are 
+        cases when an author will occasionally wish to force a line break in a 
+        document. Thankfully, HTML provides this facility. It also provides a means 
+        of explicitly controlling general line breaking behavior as well. It is 
+        generally safer to leave this behavior in the hands of the browser, but 
+        several extensions to HTML in other areas have made the normal line breaking 
+        behavior inadequate to handle many design situations.
+</dl>
+
+<a name="control"></a>
+<dl>
+<dt><big><b class="mainheading">Controlling Line Breaking</b></big>
+<dt>[&lt;<a href="b/break.htm">br</a>&gt;, &lt;<a href="n/nobr.htm">nobr</a>&gt;,
+    &lt;<a href="w/wbr.htm">wbr</a>&gt;]
+    <dd>The simplest of the line breaking control mechanisms is the BR element 
+        which forces a line break within document content. Several extensions to
+        this element control line breaking under the special situations arising from
+        using floating objects (such as images and tables.) The two remaining line
+        break elements, NOBR and WBR, are used in situations where the author wants to
+        disable the basic HTML behavior. NOBR turns off the normal line breaking
+        behavior in a document, and the WBR element is used to explicitly break up
+        content within a NOBR section.
+        <br><br>
+
+        In addition to these explicit line breaking mechanisms, there are several
+        other HTML elements whose intent is not specifically to control line breaking,
+        but is an added benefit. The <a href="l/listing.htm">Listing</a>,
+        <a href="p/plaintext.htm">Plaintext</a>, <a href="p/pre.htm">Pre</a>, and
+        <a href="x/xmp.htm">Xmp</a> elements all disable the normal HTML line breaking
+        behavior to some degree. Use your best judgment as to which element best
+        suits your needs.
+</dl>
+
+<br>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 line breaking elements]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus many new features]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 2.0<br>
+        [Explains the NOBR and WBR elements as well as the CLEAR attributes to the BR element.]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Includes usage of all line breaking elements]</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

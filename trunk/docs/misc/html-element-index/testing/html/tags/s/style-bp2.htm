@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>STYLE: Browser Peculiarities: Nesting contents in comments</title>
+<style>
+<!--
+.assert { color: green }
+.test   { background-color: green; color: yellow; }
+-->
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">While the author CAN legally omit using the HTML comment to 
+encapsulate the Style information, most older browsers will display the style 
+information in these cases as document content. Authors are strongly encouraged 
+to use the HTML Comment for the Style element to prevent this from happening.</div>
+<br>
+
+<b>Simple DIV element with class="test". 
+Style element IS nested in a comment, and contains: ".test { background-color: green; color: yellow }":</b>
+<hr>
+filler text 
+<div class="test">This is a div</div>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

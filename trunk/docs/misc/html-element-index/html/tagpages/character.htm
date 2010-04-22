@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Character Formatting in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Character Formatting in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#physvirt">Physical Vs. Virtual Styles</a> |
+     <a href="#special">A Special Generic Style</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for Character Formatting</b></big>
+    <dd>Character Formatting (which should be rendered distinctly from non-formatted
+        text) allows the author in-line control over changes to content, whereas
+        the other basic formatting mode, <a href="block.htm">Block Formatting</a>,
+        defines content into vertically distinct sections from surrounding text.
+        A visual browser will usually render Character Formatting changes in place
+        while Block Formatting will render any applicable formatting plus an
+        additional line break before and after the content block.
+        <br><br>
+
+        The main intent of SGML (and the derivative HTML language) is to be
+        a device independent language for describing the content of documents. To
+        accomplish this, it tries to divorce presentation rules from textual
+        content. Most HTML elements are not intended to give direct control to
+        the author over how the final layout will look, but many Character
+        Formatting elements (especially many of the newer ones) now give an
+        author this control.
+</dl>
+
+
+<a name="physvirt"></a>
+<dl>
+<dt><big><b class="mainheading">Physical Vs. Virtual Character Formatting Elements</b></big>
+    <dd>There are two classes of character formatting styles - Physical
+        styles (referred to currently as "inline presentational elements" in the
+        XHTML specs and in the past as &quot;typographical elements&quot;) and Virtual
+        styles (referred to currently as "inline phrasal elements" in the XHTML specs
+        and in the past as &quot;logical&quot; or &quot;idiomatic&quot; elements.)
+        Each Physical style should be rendered distinctly from other
+        Physical styles, while each Virtual style should be rendered distinctly
+        from other Virtual styles. Many of the Physical styles are the common
+        visual rendering analog for Virtual styles (i.e.:
+        strong emphasis &lt;<b class="tagname">strong</b>&gt; is usually rendered as
+        boldface: &lt;<b class="tagname">b</b>&gt;)
+        <br><br>
+
+    <dd><b class="subheading">Physical Styles</b>
+    <dd>[&lt;<a href="b/big.htm">big</a>&gt;, &lt;<a href="b/blink.htm">blink</a>&gt;,
+         &lt;<a href="b/bold.htm">b</a>&gt;, &lt;<a href="f/font.htm">font</a>&gt;,
+         &lt;<a href="i/i.htm">i</a>&gt;, &lt;<a href="s/small.htm">small</a>&gt;,
+         &lt;<a href="s/strike.htm">s, strike</a>&gt;,
+         &lt;<a href="s/sub.htm">sub</a>&gt;, &lt;<a href="s/sup.htm">sup</a>&gt;,
+         &lt;<a href="t/tt.htm">tt</a>&gt;, &lt;<a href="u/u.htm">u</a>&gt;]
+    <dd>Physical styles explicitly describe what the final appearance of
+        the contained text should look like. If the rendering device does not
+        have the capability to produce the indicated Physical style (such as a
+        browser for the visually impaired), this formatting may be lost.
+        <br><br>
+
+    <dd><b class="subheading">Virtual Styles</b>
+    <dd>[&lt;<a href="a/abbr.htm">abbr</a>&gt;, &lt;<a href="a/acronym.htm">acronym</a>&gt;,
+         &lt;<a href="c/cite.htm">cite</a>&gt;, &lt;<a href="c/code.htm">code</a>&gt;,
+         &lt;<a href="d/dfn.htm">dfn</a>&gt;, &lt;<a href="e/em.htm">em</a>&gt;,
+         &lt;<a href="k/kbd.htm">kbd</a>&gt;, &lt;<a href="q/q.htm">q</a>&gt;,
+         &lt;<a href="s/samp.htm">samp</a>&gt;, &lt;<a href="s/strong.htm">strong</a>&gt;,
+         &lt;<a href="v/var.htm">var</a>&gt;]
+     <dd>Virtual styles purposefully do not include any final rendering
+         hints in their definitions. These styles describe instead how the
+         contained text is used in the context of the document. The main benefit
+         of such elements is when a document is experienced using a method
+         <em>OTHER</em> than a standard screen-based visual environment; the
+         <em>INTENT</em> of the content can be preserved.
+         <br><br>
+
+    <dd><b class="subheading">Which Styles to Use?</b>
+    <dd>The original HTML 2.0 specification contained all the Virtual
+        styles listed above, while including only a few of the listed Physical
+        styles. The many Physical styles now available are more recent and reflect
+        a demand from authors for more explicit rendering control. To improve
+        portability though, it is usually recommended to use Virtual styles
+        rather than Physical in your documents.<br>
+        <b class="l3heading">Example:</b> Use of the
+        &lt;<b class="tagname">i</b>&gt; element to render text in italics will
+        only be effective on those browsers which are capable of displaying
+        italics. Not all browsers are guaranteed to have this ability. It is
+        often better to use logical styles such as &lt;<b class="tagname">em</b>&gt;
+        which specify that the contents need emphasis of <em>SOME</em> sort,
+        regardless of the presentation mode.
+        <br><br>
+
+<a name="special"></a>
+<dt><big><b class="mainheading">A Special Generic Character Style</b></big>
+<dd><b>[&lt;<a href="s/span.htm">span</a>&gt;]</b>
+    <dd>The introduction of Style Sheets has added two new HTML elements to
+        allow for generic situations where no specific HTML markup would
+        be appropriate. The <a href="s/span.htm">SPAN</a> element (and its companion
+        Block Formatting element <a href="d/div.htm">DIV</a>) has no real inherent
+        semantic purpose assigned to its structure - the author can assign Style
+        Sheet presentation properties as needed.
+</dl>
+
+<br>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 character elements and newer formatting elements in common use]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus several new character styles]</span>
+<dt><a href="http://www.w3.org/TR/REC-CSS1.html" class="relevant">http://www.w3.org/TR/REC-CSS1.html</a>
+    <dd><span class="relevant">Cascading Style Sheets, Level 1<br>
+        [Includes usage of SPAN and DIV]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 2.0<br>
+        [Details FONT SIZE element usage (this document also used to describe Blink as well)]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions_3.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions_3.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 3.0<br>
+        [Includes Big, Small, Sub and Sup]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details Font Color and Face usage as well as 2.0, 3.2 and common extensions]</span>
+<br><br>
+
+<dt><b class="subheading">Tutorials</b>
+<dt><a href="http://archive.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimerP2.html#PV" class="relevant">http://archive.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimerP2.html#PV</a>
+    <dd><span class="relevant">&quot;A Beginner's Guide to HTML&quot; from NCSA - Logical versus Physical styles</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

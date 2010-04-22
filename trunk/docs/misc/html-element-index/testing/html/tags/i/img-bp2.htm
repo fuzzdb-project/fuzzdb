@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IMG: Browser Peculiarities: Alternate form - Behavior when setting dimensions to zero</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Setting either of the WIDTH or HEIGHT attributes to zero does 
+strange things. In Netscape 4, this causes the image to be displayed at its natural 
+dimensions. In Internet Explorer 4 the image disappears. The odd thing is, in 
+previous versions of these browsers the behavior is reversed.</div>
+<br>
+
+<b>Simple IMG reference (left.gif):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions enlarged (height=50, width=50):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="50" width="100"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions set to height=0, width=0:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="0" width="0"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions set to height=0, width=50:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="0" width="50"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions set to height=50, width=0:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="50" width="0"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions set to height=0, no width attribute specified:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="0"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with dimensions set to width=0, no height attribute specified:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" width="0"> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

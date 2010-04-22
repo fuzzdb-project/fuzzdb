@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Embed</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Embed</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (replaced element)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced with plug-in content of specified dimensions</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.netscape.com/assist/net_sites/new_html3_prop.html#Embed">Netscape's "New HTML 3.0 Proposals"</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The EMBED element is the method used to integrate Netscape Plug-In
+        technology into a web page. The element has three mandatory attributes
+        [HEIGHT, SRC, and WIDTH] but it is extensible in that it also allows
+        any number of additional custom attributes that are dependent on the
+        Plug-In used. Any attributes present that the browser does not
+        understand are passed on to the plug-in for interpretation.
+        <br><br>
+
+        The browser should first try to determine which Plug-In to use based on
+        the file extension of the file in the SRC attribute (Netscape browsers
+        may also use the TYPE attribute to determine this.) If the browser can
+        not determine what Plug-In to use, it will then query the user to
+        determine what to do next.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the alignment of text following the embedded
+        object relative to the object on the screen. Values of LEFT and RIGHT
+        specify floating horizontal alignment of the embedded object in the
+        browser window, and subsequent text will wrap around the object. The
+        other values specify vertical alignment of text relative to the object
+        on the same line.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Left</b> | <b class="alert">Right</b> |
+        <b class="alert">Top</b> | <b class="alert">Texttop</b> |
+        <b class="alert">Middle</b> | <b class="alert">Absmiddle</b> |
+        <b class="alert">Baseline</b> | <b class="alert">Bottom</b> |
+        <b class="alert">Absbottom</b>
+
+<dt><b class="subheading">Disabled</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies whether or not the embedded object responds to user
+        interaction. Usually also signified by a visual "dimming" of the object.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">True</b> | <b class="alert">False</b>
+        [<b class="magicword">DEFAULT</b>]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the height of the embedded object on the screen.
+    <dd><b class="l3heading">Values:</b><br>
+        Positive integers or a percentage of the screen/window to use. If
+        the UNITS attribute is not specified, the default measurement system
+        used for positive integers is pixels (px.)
+
+<dt><b class="subheading">Hidden</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.51</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies whether the embedded object will be visible/rendered on the
+        page. A value of TRUE will override any HEIGHT/WIDTH attributes also
+        set and the rest of the page will be rendered as if the embedded object
+        does not exist in the document flow.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">True</b> | <b class="alert">False</b>
+        [<b class="magicword">DEFAULT</b>]
+
+<dt><b class="subheading">Hspace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the horizontal spacing (left and right padding)
+        around the embedded object using the unit system specified in the UNITS
+        attribute. Values are specified using positive integers.
+    <dd><b class="l3heading">Values:</b> 
+        Positive integer values. If the UNITS attribute is not specified, the
+        default measurement system is pixels (px.)
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is used to give a unique label to this embedded object
+        so that it can be referenced and manipulated with scripting code.
+    <dd><b class="l3heading">Values:</b> Alphanumeric characters.
+
+<dt><b class="subheading">Palette</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N3-??</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is windows-platform specific; it controls whether the
+        foreground or background palette is used by the plug-in to render the
+        embedded object.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">Background</b> [<b class="magicword">DEFAULT</b>] The
+        plug-in uses the background color palette to render the embedded object.<br>
+        <b class="alert">Foreground</b> The plug-in uses the foreground color
+        palette to render the embedded object.
+
+<dt><b class="subheading">PluginsPage</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.51</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies a URL that contains instructions for downloading the necessary 
+        plug-in for the embedded object if the plug-in is not already installed.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">PluginURL</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute takes precedence over PluginsPage and consists of the
+        URL of a Java Archive file for use in directly installing a plug-in
+        if it is not already installed.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Src</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates the source URL of the embedded object.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3.51</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the MIME type of the embedded object.
+    <dd><b class="l3heading">Values:</b> Alphanumeric MIME type.
+
+<dt><b class="subheading">Units</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N3.0-??</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Defines the measurement system used for absolute integer values of the
+        HEIGHT/WIDTH and HSPACE/VSPACE attributes.
+    <dd><b class="l3heading">Values:</b><br>
+        '<b class="alert">pixels</b>' [<b class="magicword">Netscape only.
+        Default value</b>]<br>
+        '<b class="alert">px</b>' [<b class="magicword">Internet Explorer only.
+        Default value</b>]<br>
+        '<b class="alert">en</b>' [<b class="magicword">Netscape only.</b>]
+        Half the point-size of the current font.<br>
+        '<b class="alert">em</b>' - [<b class="magicword">Internet Explorer
+        only.</b>] A scaling factor relative to the size of the current font.
+
+<dt><b class="subheading">Vspace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the vertical spacing (top and bottom padding)
+        around the embedded object using the unit system specified in the UNITS
+        attribute. Values are specified using positive integers.
+    <dd><b class="l3heading">Values:</b>
+        Positive integer values. If the UNITS attribute is not specified, the
+        default measurement system is pixels (px.)
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the width of the embedded object on the screen.
+    <dd><b class="l3heading">Values:</b><br>
+        Positive integers or a percentage of the screen/window to use. If
+        the UNITS attribute is not specified, the default measurement system
+        used for positive integers is pixels (px.)
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">embed</b>
+        <span class="tagattrib">src</span>=&quot;audio/realaudioclip.rpm&quot;
+        <span class="tagattrib">align</span>=&quot;Bottom&quot;<br>
+        <span class="tagattrib">width</span>=&quot;40&quot;
+        <span class="tagattrib">height</span>=&quot;20&quot;
+        <span class="tagattrib">controls</span>=StopButton
+        <span class="tagattrib">console</span>=&quot;SoundClip&quot;&gt;<br>
+        &lt;/<b class="tagname">embed</b>&gt;<br>
+        &lt;<b class="tagname">noembed</b>&gt;<br>
+        Your browser doesn't support plug-ins! Please &lt;<b class="tagname">a</b>
+        <span class="tagattrib">href</span>=&quot;audio/realaudioclip.ram&quot;&gt;play <br>
+        this sound clip&lt;/<b class="tagname">a</b>&gt; using a helper application instead.<br>
+        &lt;/<b class="tagname">noembed</b>&gt;<br></div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b> |
+        &lt;<a href="../p/param.htm">param</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/e/embed-bp1.htm">[Test]</a>
+        Although the EMBED element's primary usage now is to include Netscape
+        plug-ins (support for which began in its 2.0 version), it also has
+        another use that dates back to version 1.1. It can be used to embed
+        other documents in an HTML document, like text files, word processor
+        documents or sound files (sort of like IE's IFRAME element, but without
+        the dynamic interaction capabilities that IFRAME allows.)
+    <li>Internet Explorer now supports this element for backward compatibility,
+        but suggests using the new <a href="../o/object.htm">OBJECT</a> element
+        (the specification developed by the W3C) instead. Support for OBJECT is
+        lower right now than for EMBED, but OBJECT will soon be the new
+        standard for embedding media in HTML documents. Please keep this in
+        mind when authoring documents.
+    <li>This element allows a way to expand the capabilities of the browser,
+        and the attributes given to a plug-in can vary widely. It would be
+        pointless to list every custom attribute for every Plug-In in
+        existence. If you need this information, contact the plug-in creators
+        or go to their web sites.
+    <li>The embedded object is scaled to fit the area defined by the HEIGHT and
+        WIDTH attributes.
+    <li><b class="alert">DTD Note:</b> The Internet Explorer online authoring
+        guide says that the end tag is not required for EMBED, but other
+        references list it as being required. I use the stricter model for
+        the element to be safe.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Reports exist of early implementations in Netscape that would crash
+        the program if the URL in the SRC attribute was invalid.
+    <li>One author reported an example of an embedded element on their web site
+        expanding to the size of the entire browser window. The problematic
+        embedded object was given small dimension (1-2 pixels height/width)
+        and would be accessed using Netscape's own native audio plug-in
+        that ships with the browser. I verified the behavior on the author's
+        site in Netscape 3.0 and 4.0, but I have not been able reproduce it with
+        an example of my own. The strange behavior may possibly be an odd artifact in
+        a special case, but presumably the plug-in dimensional rendering is done
+        by the browser and not the plug-in - so, this may <em>NOT</em> be an
+        isolated case.
+    <li><b class="alert">Reminder:</b> Netscape uses 'pixels' as a default for
+        its UNITS attribute while IE uses 'px'.
+    <li>An extra attribute called BORDER is listed in the Netscape
+        documentation as being currently supported. In direct testing, this
+        attribute behaves like the BORDER attribute for the IMG element, and
+        <em>WAS ONLY SUPPORTED IN NETSCAPE 2.0.</em> Support was dropped in
+        later versions.
+    <li>An extra attribute called FRAMEBORDER is listed in the Netscape
+        documentation as being currently supported (it would supposedly be
+        used to turn the border surrounding an EMBEDed object on or off.) In
+        direct testing, it does not appear that this attribute has ever been
+        supported.
+    <li>The support histories for the PALETTE, TYPE and UNITS attributes in
+        Netscape are only semi-educated guesses. Netscape's documentation
+        does not actually indicate <em>WHEN</em> support began for these
+        attributes, but it does appear to have been before 4.0.
+    <li>Plugin support was not added to Mozilla (NS 6.x) until beta 2.
+    <li>The PLUGINSPAGE was not supported in Netscape 6 betas 1 and 2. Beta
+        3 resumes support for this attribute.
+    <li>The source code available on the Mozilla web site seems to indicate
+        that the EMBED element may support the MAYSCRIPT attribute, but I
+        haven't been able to verify that yet.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

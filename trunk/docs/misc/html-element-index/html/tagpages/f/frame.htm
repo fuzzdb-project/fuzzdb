@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Frame</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Frame</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+         [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+         [<b class="s">IE3A1</b>|<b class="s">M3B2</b><a href="#peculiar">*</a>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>Transitional/Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Frames</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>" (according to CSS2, but that doesn't make complete sense)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced by document pointed to by SRC value</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/present/frames.html#h-16.2.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_framesmodule">XHTML 1.0</a></td></tr>
+</table>
+</td></tr></table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This element is part of the Frame syntax. Each FRAME element within the
+        FRAMESET structure defines the URL contents of a particular frame window
+        as well as attributes the frame window will carry. A particular frame can
+        be <a href="../target.htm">TARGETed</a> as a destination for hyperlinks and
+        other active linking elements when given a NAME attribute to identify it.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Allowtransparency</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute controls the background transparency of the FRAME
+        element. If this attribute is false, the background color of the FRAME
+        may only be that of the window. If the attribute is true, the background
+        color of the FRAME may be set to any value, including transparent.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">False</b> (<b class="magicword">DEFAULT</b>)- FRAME
+        is opaque and can not be made transparent.<br>
+        <b class="alert">True</b> - FRAME may be any color, including transparent.
+
+<dt><b class="subheading">Application</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates whether or not the FRAME content is an HTML
+        Application (HTA, a feature introduced in IE5), and is thus exempt from the
+        IE browser security model.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">No</b> (<b class="magicword">DEFAULT</b>)- Normal browser
+        security rules applied<br>
+        <b class="alert">Yes</b> - All FRAME content is treated as an HTA, content is trusted
+
+<dt><b class="subheading">Border</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute sets the border thickness of the current frame adjacent
+         to other frames around it.
+     <dd><b class="l3heading">Values:</b>
+         Positive integers representing the pixel space between frames.
+         If BORDER=<b class="alert">0</b> is used, it implicitly sets
+         FRAMEBORDER to <b class="alert">No</b>.
+
+<dt><b class="subheading">BorderColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4B2</b>|<span class="ns">M</span>|<b><i class="fs">N3B5</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         Controls the color to be used for frame borders. The color value
+         specified in the FRAME element overrides any previously defined FRAMESET colors
+         for that frame.
+     <dd><b class="l3heading">Values:</b>
+         The standard <a href="../../../color/colors.htm">HTML color specification</a> methods.
+
+<dt><b class="subheading">FrameBorder</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N3B5</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         Controls the display of the border around the frame. This value overrides any
+         global FRAMEBORDER attributes already set in a FRAMESET element. Because borders
+         are shared between frames, a border will only be turned off if all the frames
+         sharing it have their FRAMEBORDER attribute set to &quot;no&quot; (or 0.)
+     <dd><b class="l3heading">Values:</b> <br>
+         Netscape lists values for this attribute as <b class="alert">Yes</b>
+         [<b class="magicword">DEFAULT</b>] and <b class="alert">No</b>. <br>
+         HTML 4.x and IE list values of <b class="alert">1</b>
+         [<b class="magicword">DEFAULT</b>] and <b class="alert">0</b>
+         [display no border.]
+
+<dt><b class="subheading">Longdesc</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of a longer description of the contents
+        of the FRAME specified in the SRC attribute. This would allow long
+        passages of descriptive narrative with markup for the content of the FRAME.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">MarginHeight</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute gives the author control over the top and bottom margins
+         of the current frame. Default behavior is to allow the browser to decide
+         on the margin values.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [Integers representing the pixel height for the top and bottom margin. 
+         Must be values that do not yield a margin value of 0 or less, or a value 
+         that would not allow any text to be displayed.]
+
+<dt><b class="subheading">MarginWidth</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute gives the author control over the left and right margins of
+         the current frame. Default behavior is to allow the browser to decide on
+         the margin values.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [Integers representing the pixel width for the left and right margin. 
+         Must be values that do not yield a margin value of 0 or less, or a value 
+         that would not allow any text to be displayed.]
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         Indicates the symbolic name assigned to the current frame for reference
+         by the browser when other links or actions target the frame as a
+         destination. Named frames in a FRAMESET structure can serve as a
+         destination of links via the <a href="../target.htm">TARGET</a>
+         attribute within the <a href="../a/a-hyperlink.htm">A</a>,
+         <a href="../a/area.htm">AREA</a>, <a href="../b/base.htm">BASE</a>,
+         and <a href="../f/form.htm">FORM</a> elements.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [Default value for this attribute (and hence for all framed documents) is to be unnamed.]
+
+<dt><b class="subheading">NoResize</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<b class="s">M3B2</b>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This is a stand-alone flag which tells the browser that the current frame
+         is not resizable by the user. Assigning this attribute to one frame can
+         effect the resizability of other adjacent frames. Default behavior
+         for all frames is to be resizable.
+     <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">noresize</b> (XHTML)
+
+<dt><b class="subheading">Scrolling</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<b class="s">M3B2</b>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This provides guidelines for displaying a scrollbar in the frame for the user.
+     <dd><b class="l3heading">Values:</b><br>
+         &#160;&#160;&#160;&#160;<b class="alert">Auto</b>
+         [Let the browser decide if a scrollbar is necessary -
+         <b class="magicword">DEFAULT</b>.]<br>
+         &#160;&#160;&#160;&#160;<b class="alert">Yes</b> [always provide a scrollbar]<br>
+         &#160;&#160;&#160;&#160;<b class="alert">No</b> [never provide scrollbar]
+
+<dt><b class="subheading">Src</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<b class="s">M3B2</b>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+     <dd><b class="l3heading">Required?</b> Yes
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute represents the URL of the current frame document. A FRAME
+         element with no SRC attribute will display a blank space where the frame would be.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">html</b>&gt;<br>
+        &lt;<b class="tagname">head</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">title</b>&gt;Frames
+        Example&lt;/<b class="tagname">title</b>&gt;<br> 
+        &lt;/<b class="tagname">head</b>&gt;<br>
+        &lt;<b class="tagname">frameset</b>
+        <span class="tagattrib">rows</span>=&quot;20,25%,*&quot;&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">frame</b>
+        <span class="tagattrib">src</span>=&quot;frame1.html&quot;
+        <span class="tagattrib">name</span>=&quot;frame1&quot; /&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">frame</b>
+        <span class="tagattrib">src</span>=&quot;frame2.html&quot;
+        <span class="tagattrib">name</span>=&quot;frame2&quot; /&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">frameset</b>
+        <span class="tagattrib">cols</span>=&quot;30%,*&quot;&gt;<br>
+        &#160;&#160;&#160;&#160;
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">frame</b>
+        <span class="tagattrib">src</span>=&quot;frame3.html&quot;
+        <span class="tagattrib">name</span>=&quot;frame3&quot; /&gt;<br>
+        &#160;&#160;&#160;&#160;
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">frame</b>
+        <span class="tagattrib">src</span>=&quot;frame4.html&quot;
+        <span class="tagattrib">name</span>=&quot;frame4&quot; /&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;/<b class="tagname">frameset</b>&gt;<br>
+        &lt;<b class="tagname">noframes</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">body</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;This text
+        will appear only if the browser does not support frames.<br>
+        &#160;&#160;&#160;&#160;&lt;/<b class="tagname">body</b>&gt;<br>
+        &lt;/<b class="tagname">noframes</b>&gt;<br>
+        &lt;/<b class="tagname">frameset</b>&gt;<br>
+        &lt;/<b class="tagname">html</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="frameset.htm">frameset</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">This element does not accept any content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>There are many readers out there who do not like frames. Keep this in mind when
+        authoring your pages.
+    <li><b class="magicword"><em>Good situations to use frames:</em></b><br>
+        <b class="alert">Elements that the User Should Always See.</b><br>
+        Things such as control bars, copyright notices, and title graphics can be
+        placed in a static, individual frame.<br>
+        <b class="alert">Table of Contents.</b><br>
+        One frame can contain an index that, when clicked, displays results in an
+        adjoining frame. <br>
+        <b class="alert">Question and Answer.</b><br>
+        Frames design allows queries to be posed and answered on the same page, with
+        one frame holding the query form, and the other presenting the results.
+    <li>It is <em>STRONGLY</em> recommended to include alternate body content
+        in the NOFRAMES section of a frames definition document. Even if the content
+        is a link to a non-framed version of the page, this provides users of frames
+        incapable browsers the chance to view the content of your site.
+    <li>HTML 4.x+ recommends that authors use the ID attribute instead of the NAME
+        attribute wherever possible. ID is the accepted method moving forward and NAME will
+        eventually be removed.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Support Note:</b> An attempt was made in the beta versions
+        of Mosaic V. 3.0 to support frames capability, but it was retracted
+        for the PC final release version.
+    <li>Internet Explorer briefly flirted with a syntax for floating frames
+        (implemented like an IMG element) using extensions to the FRAME element.
+        This was changed to the <a href="../i/iframe.htm">IFRAME</a> element in
+        3.0 Beta 2 to allow for backward compatibility for non-supporting browsers.
+        When the old syntax is encountered in versions 3.0 Beta 2 and greater,
+        Internet Explorer gives a warning message that the syntax has changed.
+    <li>The Mac Mosaic 3.0 betas (which allowed framed documents) do not support
+        TARGETing of frames.
+    <li>None of the Internet Explorer or Netscape versions allow recursive references
+        to parent documents.
+    <li>Anecdote: A security hole was found in early Netscape implementations
+        where an author could specify a fairly invisible 1 pixel frame that could
+        keep track of all sites the user visited.
+    <li><a href="../../../testing/html/tags/f/frame-bp1.htm">[Test]</a>
+        I have seen behavior in some Internet Explorer versions where the BODY
+        BACKGROUND attribute in the NOFRAMES section is applied to the frame borders.
+        This behavior is an odd artifact and probably a bug.
+    <li><a href="../../../testing/html/tags/f/frame-bp2.htm">[Test]</a>
+        In all versions of Netscape, if no SRC attribute is initially specified,
+        the frame area is no longer addressable as a target (even if a NAME is
+        specified) for document links, etc. Internet Explorer and Opera handle
+        the case of an initial blank SRC just fine.
+    <li><a href="../../../testing/html/tags/f/frame-bp3.htm">[Test]</a>
+        Authors can also choose to specify ROWS and COLS in the same FRAMESET
+        element. If this is done, the nested FRAME references will be assigned
+        sequentially to the ROWS and COLS layout specifications as follows:
+        left to right, top to bottom (eg: COLS, <em>then</em> ROWS.)
+    <li><b class="alert">IE/Netscape Compatibility:</b> If you are trying to
+        create content that flows seamlessly across frames in IE and Netscape,
+        check out <a href="../../topics/frameborders.htm">this document</a>
+        for some tips.
+    <li>Internet Explorer versions before 5.5 Beta 1 implemented frames by creating new
+        instances of IE. The greater the number of frames, the greater the number
+        of active IE "browser copies" there were. This was not the most efficient
+        of methods. Beginning in IE v5.5 Beta 1 frames are now implemented using
+        a single browser control, which Microsoft states will improve overall
+        frame performance.
+    <li>CSS: Before IE v5.5 Beta 1, FRAMEs and IFRAMEs could not use the 'z-index'
+        property (they would always be on the "top" of the rendering surface and
+        nothing could be placed "above" them) and could not be transparent (such
+        that content from positioned content beneath would "shine through".)
+        Beginning in IE v5.5 Beta 1, these capabilities now exist.
+    <li><a href="../../../testing/html/tags/f/frame-bp4.htm">[Test]</a>
+        Netscape 4.5x, Macintosh only:<br>
+        <b class="alert">Scenario:</b> A frameset consists
+        of two identical rows, referencing the same document, that contains
+        only a single image horizontally centered on the page.<br>
+        <b class="alert">Result:</b> The two
+        images do not line up over each other.<br>
+        <b class="alert">Probable cause:</b> Netscape is
+        treating the SCROLLING attribute in the top frame as if it were set to
+        YES, even though it does not render scrollbars...hence the top frame
+        shifts the page content over to the left to <em>ALLOW</em> for a
+        scrollbar, even though one is not rendered. The bottom frame is rendered
+        normally (with no scrollbar and the page content in the normal location.)<br>
+        This prolem was only noticed on the Macintosh versions, and I have only
+        been able to briefly test this on NS 4.5, so it may be a more complex
+        problem than this.
+    <li>The BORDER attribute in Netscape has many limits to its use, but it
+        DOES have a slight effect.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

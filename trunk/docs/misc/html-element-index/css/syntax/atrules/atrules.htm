@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>At-Rules - Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">At-Rules</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">At-Rules</b></big>
+<dt><a href="charset.htm">@charset</a> 
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5.5</i></b>|<b class="s">N6</b>|<b class="s">O??</b>]
+    <dd>Specifies the character encoding used in the external style sheet.
+<dt><a href="import.htm">@import</a> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd>Imports a style sheet fragment file to the current style sheet.
+<dt><a href="media.htm">@media</a> 
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd>Specifies style rules to be rendered only with specified media.
+<dt><a href="namespace.htm">@namespace</a> 
+    [<b><i class="fs">CSS3</i></b>] [<b><i class="fs">N6</i></b>]
+    <dd>Declares namespace prefixes for use in CSS selectors.
+<dt><a href="page.htm">@page</a> 
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] [<b class="s">IE5.5</b>|<b><i class="fs">O4</i></b>]
+    <dd>Defines a page box.
+<dt><a href="fontdef.htm">@fontdef</a> 
+    [<b><i><u class="sr">N4-4.x</u></i></b>]
+    <dd>Netscape's method for specifying an external font definition file.
+<dt><a href="fontface.htm">@font-face</a> 
+    [<b><i class="fs">CSS2</i></b>] [<b><i class="fs">IE4</i></b>]
+    <dd>Describes the characteristics of a particular font.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">What Are At-Rules?</b></big>
+     <dd>At-Rules extend CSS Rule Set syntax beyond simple Selector/Declaration
+         blocks. Any functionality in CSS that does not fall under the umbrella of
+         selector/style declaration pair bindings uses a special At-Rule syntax.
+         <br><br>
+
+         <b class="alert">Syntax:</b> An At-Rule begins with the "@" character
+         followed immediately by a keyword. Following the keyword separated by
+         a space is an At-rule statement appropriate to the At-keyword used.
+         If the At-Rule is a simple declarative statement (charset, import, fontdef),
+         it is terminated by a semi-colon (";".) If the At-Rule is a conditional
+         or informative statement (media, page, font-face), it is followed
+         by optional arguments and then a style declaration block inside
+         matching curly braces ("{", "}".) At-Rules are sometimes nestable,
+         depending on the context. If any part of an At-Rule is not understood,
+         it should be ignored.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax/Examples</b></big>
+<dt><b class="subheading">Simple, declarative At-Rule</b>
+    <dd><b class="l3heading">Syntax:</b>
+        @[<b class="selector">Keyword</b>] [<span class="alert2">arguments</span>];
+    <dd><b class="l3heading">Example:</b>
+        <div class="example">@<b class="selector">import</b>
+        url(<span class="alert2">foo.css</span>)
+        <span class="alert2">screen</span>;</div>
+
+<dt><b class="subheading">Conditional/Informative At-Rule</b>
+    <dd><b class="l3heading">Syntax:</b>
+        @[<b class="selector">Keyword</b>] [<span class="alert2">arguments</span>]
+        { [<span class="alert2">style declaration block</span>] }
+    <dd><b class="l3heading">Example:</b>
+        <div class="example">@<b class="selector">media</b>
+        <span class="alert2">screen</span>
+        { <span class="property">color:</span> green;
+        <span class="property">background-color:</span> yellow }</div>
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

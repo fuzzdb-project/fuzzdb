@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>SCRIPT: Browser Peculiarities: Nesting contents in comments</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">NOTE: Because this element has content between the start and end tags, 
+older browsers may end up displaying the style content it contains. 
+In order to prevent this, it is STRONGLY recommended to embed this information 
+within the SGML/HTML Comment structure (&lt;!-- --&gt;).</div>
+<br>
+
+<b>Simple script, declaring a variable. SCRIPT body NOT nested in a comment. 
+You should not see the script body ("var a=3"). Browsers not supporting scripting may show 
+the script body:</b>
+<hr>
+filler text 
+<script type="text/javascript">
+var a=3;
+</script>
+filler text
+<hr>
+<br>
+
+<b>Simple script, declaring a variable. SCRIPT body IS nested in a comment. 
+You should not see the script body ("var b=5") :</b>
+<hr>
+filler text 
+<script type="text/javascript">
+<!-- 
+var b=5;
+// -->
+</script>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

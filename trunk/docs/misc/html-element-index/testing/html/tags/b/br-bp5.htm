@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BR: Browser Peculiarities: CSS properties</title>
+<style>
+.assert { color: green; }
+#br1    { display: none; } 
+#br2    { display: inline; }
+#br3    { line-height: 100px; padding-top: 40px; margin-top: 40px; }
+#br4    { background-color: yellow; color: green }
+#br5:after    { content: "after content" }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Note: There is only one CSS property that I think can have any 
+effect on this element: the 'display' property. Setting the value to 'none' will 
+make the line break disappear. Otherwise, this is a 'Replaced Element' that is 
+replaced in the document with a line break and thus has no intrinsic display properties.</div>
+<br>
+
+<b>Simple DIV, with BR element nested, no CSS applied:</b>
+<hr>
+filler text
+<div>Div Div<br>Div Div</div>
+filler text
+<hr>
+
+<b>Simple DIV, with BR element nested, CSS="display: none":</b>
+<hr>
+filler text
+<div>Div Div<br id="br1">Div Div</div>
+filler text
+<hr>
+
+<b>Simple DIV, with BR element nested, CSS="display: inline":</b>
+<hr>
+filler text
+<div>Div Div<br id="br2">Div Div</div>
+filler text
+<hr>
+
+<b>Simple DIV, with BR element nested, CSS="line-height: 100px; padding-top: 40px; margin-top: 40px;":</b>
+<hr>
+filler text
+<div>Div Div<br id="br3">Div Div</div>
+filler text
+<hr>
+
+<b>Simple DIV, with BR element nested, CSS="background-color: yellow; color: green":</b>
+<hr>
+filler text
+<div>Div Div<br id="br4">Div Div</div>
+filler text
+<hr>
+
+<b>Simple DIV, with BR element nested, CSS= #br5:after { content: "after content" }:</b>
+<hr>
+filler text
+<div>Div Div<br id="br5">Div Div</div>
+filler text
+<hr>
+
+</body>
+</html>

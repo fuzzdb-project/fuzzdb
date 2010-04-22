@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Special HTML Selectors - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Special HTML Selectors</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+    <dd>These Selector syntax forms existed in CSS1 and were specifically
+        meant to target HTML, although at least the ID syntax can be generalized
+        for use with other languages as well.
+</dl>
+
+<a name="class"></a>
+<dl>
+<dt><big><b class="mainheading">Class Selectors</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This selector matches the value of the HTML 'CLASS' attribute. It is
+         referenced by preceding the value with a period character (".") The effect
+         of this selector can also be achieved using an Attribute Value Selector,
+         and both have the same cascading precedence.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">.[Class Name]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">.redtags</b>
+         { <span class="property">color:</span> red }
+         [All tags in CLASS 'redtags']<br> <b class="selector">H1.redtags</b>
+         { <span class="property">color:</span> red }
+         [All Heading Level 1 tags in CLASS 'redtags']</div>
+</dl>
+
+<a name="id"></a>
+<dl>
+<dt><big><b class="mainheading">ID Selectors</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This selector was designed to match the value of the HTML 'ID' attribute,
+         but SGML/XML both allow the ID attribute value type. With this type of
+         attribute, each element in a document can have a uniquely referenceable
+         label. This Selector syntax precedes the attribute value with a pound
+         symbol ("#".) An element name or Universal Selector may be used in front
+         of the ID Selector, but it is not necessary. The effect of this selector
+         can also be achieved using an Attribute Value Selector, but this form of
+         Selector has a higher cascading precedence.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">#[ID Label]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">#foobar</b>
+         { <span class="property">color:</span> red }
+         [Applies a red text color to the tag instance with the "foobar" ID value]</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>The CLASS attribute allows multiple classes to be bound to an element,
+       so a special form of Class Selector can specify whether multiple classes
+        are assigned. Class names are concatenated in the selector to specify that
+        ALL the listed class names are present for an element (eg: 'p.first.second'
+        would match &lt;<b class="tagname">p</b>
+        <span class="tagattrib">CLASS</span>="first second"&gt;)
+    <li>The CSS specs warn against the over-use of the CLASS attribute to assign
+        semantic meaning to a document's contents.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">3.0+:</b>
+            <dd>- IDs should only start with an [a-zA-Z] character. If this rule
+                is broken, the ID should be ignored. IE allows IDs to start with numbers.
+            <dd>- IDs should be unique for a document. If a document contains
+                multiple, non-unique IDs, applying a style to that ID will apply to
+                all instances of the ID.
+        </dl>
+        <dl>
+            <dd><b class="alert2">3.0/4.0:</b>
+            <dd>- Multiple class names for an element are not supported.
+        </dl>
+ <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- Pairing an element selector with an ID selector ('a#foo')
+                does not work. Use either 'a' or '#foo'.
+            <dd>- Multiple class names for an element are not supported.
+            <dd>- IDs should be unique for a document. If a document contains
+                multiple, non-unique IDs, applying a style to that ID will apply to
+                all instances of the ID.
+            <dd>- Netscape 4.x does not allow CLASS or ID attributes to contain
+                underscore characters ("_".) Underscores are legal in HTML atributes
+                according to the HTML standards but not according to the CSS
+                standard.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5+:</b>
+            <dd>- IDs should be unique for a document. If a document contains
+                multiple, non-unique IDs, applying a style to that ID will apply to
+                all instances of the ID
+            <dd>- Opera does not allow CLASS or ID attributes to contain
+                underscore characters ("_".) Underscores are legal in HTML atributes
+                according to the HTML standards but not according to the CSS
+                standard.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

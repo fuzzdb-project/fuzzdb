@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax - Inline Style Sheets</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Inline Style Sheets</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is the other HTML-specific style inclusion method, in which style
+        information is directly attached to the HTML elements they affect. A
+        universal element attribute, called
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/attributes/core.htm">STYLE</a>
+        <span class="external">[--&gt;Index DOT Html]</span>, may be specified
+        for an HTML element, taking as a value one or more style
+        <a href="../declaration.htm">Declarations</a>.
+        <br><br>
+
+        Because of the specificity of this method, many of the powerful CSS
+        syntax mechanisms (like <a href="../selectors/selectors.htm">Selectors</a>)
+        are not applicable here. This style specification method is most useful
+        when serving as an override on a case-by-case basis for style rules
+        specified in an <a href="external.htm">External</a> or
+        <a href="embedded.htm">Embedded</a> style sheet. In-line styles have
+        higher cascade precedence than the other specification methods.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">HTML Inclusion Method</b></big>
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&lt;[<b class="tagname">element name</b>]
+        <span class="tagattrib">STYLE</span>="[<span
+        class="property">CSS property</span>]:[<span class="alert2">property
+        value</span>]"&gt;
+    <dd>[<a href="../../examples/cssinline.htm">See complex HTML example using
+        Inline Style Sheets</a>]
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

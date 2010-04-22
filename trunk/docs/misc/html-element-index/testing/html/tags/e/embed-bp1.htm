@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>EMBED: Browser Peculiarities: Inclusion of other HTML documents</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Although the EMBED element's primary usage now is to include 
+Netscape plug-ins (support for which began in its 2.0 version), it also has another 
+use that dates back to version 1.1. It can be used to embed other documents in an 
+HTML document, like text files, word processor documents or sound files (sort of 
+like IE's IFRAME element, but without the dynamic interaction capabilities that IFRAME allows.)</div>
+<br>
+
+<b>Simple EMBED of an HTML document:</b>
+<hr>
+filler text 
+<embed src="embedtest.htm" type="text/html" height="200" width="200"></embed>
+filler text
+<hr>
+<br>
+
+<b>EMBED of an HTML document, CSS border: thin solid black; overflow: scroll:</b>
+<hr>
+filler text 
+<embed src="embedtest.htm" height="200" width="200" type="text/html"
+style="border: thin solid black; overflow: scroll"></embed>
+filler text
+<hr>
+<br>
+
+<b>Simple EMBED of a text document:</b>
+<hr>
+filler text 
+<embed src="embedtest.txt" type="text/plain" height="200" width="200"></embed>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

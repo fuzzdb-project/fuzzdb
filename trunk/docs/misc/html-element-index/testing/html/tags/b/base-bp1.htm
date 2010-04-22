@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BASE: Browser Peculiarities: Handling improperly terminated URLs</title>
+<base href="http://www.blooberry.com/indexdot/">
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape and Opera both ignore improperly terminated URLs used 
+as the BASE HREF value. eg: relative URLs in a document that used "http://www.blooberry.com" 
+as the HREF would resolve to "http://[relative URL]", and "http://www.blooberry.com/indexdot" 
+would resolve to "http://www.blooberry.com/[relative URL]". To prevent this problem, use 
+a trailing "/" character to properly terminate the URL. Internet Explorer, by the way, accepts both URL forms.</div>
+<br>
+
+<b>BASE element refers to "http://www.blooberry.com/indexdot/", hyperlink refers to "index.html" <br>
+(Should successfully link to the Indexdot main page):</b>
+<hr>
+filler text 
+<a href="index.html">Link to "index.html"</a>
+filler text
+<hr>
+<br>
+
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Font - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">font</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Font Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="fontsizeadjust.htm">font-size-adjust</a><br>
+    <a href="fontstretch.htm">font-stretch</a><br>
+    <a href="fontstyle.htm">font-style</a><br>
+    <a href="fontvariant.htm">font-variant</a><br></td>
+    <td valign=top><a href="fontweight.htm">font-weight</a><br>
+    <a href="fontsize.htm">font-size</a><br>
+    <a href="fontfamily.htm">font-family</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td>[See sub-properties]</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">i</b>&gt;, &lt;<b class="tagname">b</b>&gt;,
+        &lt;<b class="tagname">font</b>
+        <span class="tagattrib">SIZE</span>=&quot;(+/-)N&quot;&gt;,<br>
+        &lt;<b class="tagname">font</b>
+        <span class="tagattrib">FACE</span>=&quot;font1, font2, ...fontN&quot;&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#font">CSS1: Sect 5.2.7</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/fonts.html#font-shorthand">CSS2: Sect 15.2.5</a>,
+        <a href="http://www.w3.org/TR/CSS21/fonts.html#font-shorthand">CSS2.1: Sect 15.8</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a shorthand property notation based on a traditional typography
+        shorthand method of specifying values for multiple properties related
+        to fonts ('font-style', 'font-variant', 'font-weight', 'font-size',
+        'line-height', and 'font-family'.) Defaults for this shorthand method
+        match those used for each property listed individually. If properties
+        are omitted from this shorthand notation, they are assumed to carry
+        their individual default values.
+        <br><br>
+
+        CSS2 introduces the capability of setting a font to a system font via
+        this property. This capability is only possible with the 'font'
+        shorthand (they can't be set with 'font-family') - altering the
+        capability of this property to be more than the sum of the other
+        individual properties it can set. After setting a system font,
+        individual font properties can be applied to the result to customize
+        the font behavior. If an indicated system font type is not available
+        a browser default font should be used.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">[font-style]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="fontstyle.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[font-variant]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="fontvariant.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[font-weight]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="fontweight.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[font-size]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="fontsize.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[line-height]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="../dimension/lineheight.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[font-family]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="fontfamily.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">caption|icon|menu</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O6</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values refer to fonts that are already in use for a specific purpose by the
+        browser or system.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">caption</b>: Captioned controls (buttons,
+        drop-downs, etc.)<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">icon</b>: Icon labels.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">menu</b>: Dropdown menus.<br></dd>
+
+<dt><b class="subheading">message-box|small-caption|status-bar</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5.5</i></b>|<b class="s">N6</b>|<b class="s">O6</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values refer to fonts that are already in use for a specific purpose by the
+        browser or system.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">message-box</b>: Dialog box text.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">small-caption</b>: Fonts used for 'small
+        controls'. <br>&nbsp;&nbsp;&nbsp;[no explanation or example for this is given in CSS2;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this could possibly be a font used for something like a 'tooltip' - ed]<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">status-bar</b>: Fonts used for window status bars.<br></dd>
+
+<dt><b class="subheading">messagebox|smallcaption|statusbar</b></dt>
+<dt>[<b><i class="fs">IE4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values refer to fonts that are already in use for a specific purpose by the
+        browser or system.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">messagebox</b>: Dialog box text.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">smallcaption</b>: Fonts used for 'small
+        controls'. <br>&nbsp;&nbsp;&nbsp;[no explanation or example for this is given in CSS2;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this could possibly be a font used for something like a 'tooltip' - ed]<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">statusbar</b>: Fonts used for window status bars.<br></dd>
+
+<dt><b class="subheading">button|desktop|dialog|document|field<br>info|list|pull-down-menu|workspace</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values refer to fonts that are already in use for a specific purpose by the
+        browser or system. Their system-purpose <em>should</em> be self-explanatory from their
+        name, but neither CSS3 nor Netscape explain what system components these keywords must
+        map to.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd><b class="selector">Selector</b> { <span class="property">font:</span>
+        [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family] }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">body</b> { <span class="property">font:</span>
+        bold small-caps 12pt/14pt sans-serif }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">body</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">font:</span>
+        bold small-caps 12pt/14pt sans-serif&quot;&gt;test
+        text in the body&lt;/<b class="tagname">body</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">All</b>
+        <dl>
+            <dd>- All peculiarities listed for the sub-properties for this
+                shorthand property (<a href="fontstyle.htm">font-style</a>,
+     <a href="fontvariant.htm">font-variant</a>,
+     <a href="fontweight.htm">font-weight</a>,
+     <a href="fontsize.htm">font-size</a>,
+     <a href="../dimension/lineheight.htm">line-height</a> and
+     <a href="fontfamily.htm">font-family</a>) should apply to this
+                 property as well.
+            <dd>- The "inherit" value is listed in the standards for this property, although 
+                the property is itself inherited. This means it is impossible to check
+                to see if this value is actually supported in any browser. Mozilla began 
+                generally supporting "inherit" where appropriate in version 6.x, and 
+                Opera beginning mostly in 7.x. IE does not yet support "inherit" anywhere 
+                yet. So, for all inherited properties, support information for the 
+                "inherit" value will be listed as beginning in these respective versions.
+        </dl>
+
+     <li><b class="alert">Internet Explorer</b>
+         <dl>
+         <dd><b class="alert2">3.0:</b>
+             <dd>- This version does not allow the specification of the
+     [font-style], [font-variant], and [font-weight] sub-properties
+     via this property. The CSS1 specification was not complete when
+     the browser was released and these sub-properties were added to
+     the syntax later.
+         <dd><b class="alert2">4.0-5.0:</b>
+             <dd>- The special UI font names 'messagebox',
+                    'smallcaption' and 'statusbar' that IE supports
+                    are not the same as those stated in CSS2
+                    ('message-box', 'small-caption' and 'statusbar'.) IE4-5 does
+                    <em>NOT</em> support these CSS2 names at all. IE does start 
+                    supporting the correct names beginning in IE5.5.
+  </dl>
+     <li><b class="alert">Netscape</b>
+         <dl>
+            <dd><b class="alert2">4.x:</b>
+             <dd>- Reported elsewhere: This property has no effect if specified
+     in an inline style along with margin properties.
+            <dd>- If you use the 'font' property, you <em>MUST</em> specify
+                <em>BOTH</em> the 'font-size' and 'font-family' sub-components
+                of this property or else the style declaration will be ignored -
+                even if you have also set the 'font-size' and 'font-family'
+                properties individually for the same selector! Specifying both
+                of these sub-properties for 'font' is actually required under
+                the specifications, but Netscape is the only browser that
+                requires it. IE and Opera are fine if you only use one of these.
+   </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

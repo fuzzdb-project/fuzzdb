@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Multicol</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Multi Column</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N3B5-4.x</u></i></b>|<span class="ns">O</span>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td><b class="alert">block</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Content split into the indicated number of columns</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://wp.netscape.com/eng/mozilla/3.0/relnotes/windows-3.0.html#Layout">Netscape 3.0 Release Notes</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>MULTICOL specifies that all contained text will be displayed in multi-column 
+        format. All columns will have the same width and data should be spread evenly 
+        across each of the columns to achieve roughly equal column heights.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B2-4.x</u></i></b>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Cols</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N3B5-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the number of columns the
+        contained data will be split into. The browser should try to evenly
+        distribute the content evenly across each of the columns in order to
+        achieve roughly the same column height.
+    <dd><b class="l3heading">Values:</b> Positive integers - default is 1.
+
+<dt><b class="subheading">Gutter</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N3B5-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute controls the amount of pixel space between columns.
+    <dd><b class="l3heading">Values:</b> Specified as positive
+        integers with the default being <b class="alert">10</b>
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N3B5-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This optional attribute is <em>supposed</em> to control the width of
+        an individual column. All columns are always the same width, so the
+        overall width of a multi-column layout should be (as specified by Netscape):<br>
+        &#160;&#160;&#160;&#160;(cols * width) + ((cols - 1) * gutter) <br>
+        However.<br>
+        Through direct experimentation, this attribute seems to control the
+        <em>TOTAL</em> width of the column apparatus, not the width of each individual
+        column. The multi-column apparatus will remain left-justified if a
+        width results in an amount less than the overall browser window size.
+        If no WIDTH is specified, the default width is 100% [full screen width]
+    <dd><b class="l3heading">Values:</b> Positive integer pixel values
+        or a percentage of the overall screen width.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">multicol</b>
+        <span class="tagattrib">cols</span>=&quot;3&quot;
+        <span class="tagattrib">width</span>="80%"
+        <span class="tagattrib">gutter</span>=&quot;20&quot;&gt;<br>
+        This is multi-column layout text that should be distributed evenly
+        across 3 columns<br>
+        &lt;/<b class="tagname">multicol</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>This element is not a part of any HTML standard or draft and it never
+        will be. It is only supported by 4.x series Netscape browser versions.
+        Its use is not recommended.
+    <li>Using the WIDTH attribute the way Netscape specifies is incorrect.
+        Use the WIDTH attribute to specify the overall width of the
+        multi-column structure.
+    <li>Robustness in layout never seemed to be this element's strong point.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Centering a MULTICOL structure does <em>NOT</em> work reliably. Using the
+        Center, Div, Heading, P or table cell elements in conjunction with MULTICOL
+        can have adverse effects on layout.
+    <li><a href="../../../testing/html/tags/m/multicol-bp1.htm">[Test]</a>
+        Using WIDTH attributes that are too small will result in a multi
+        column layout where text runs into each other, thus making it unreadable.
+    <li><a href="../../../testing/html/tags/m/multicol-bp2.htm">[Test]</a>
+        Applying some CSS (specifically tested: borders) flattens MULTICOL display
+        to a single column.
+    <li>MULTICOL structures are nestable, but this quickly becomes unreadable.
+    <li>Character level formatting can serve as the parent of MULTICOL in Netscape,
+        but I chose to model this element with other block-level elements. Block
+        elements generally do not serve as content of character level elements.
+    <li>Netscape 6+ does not support the original use of this element, but its
+        default stylesheet for browser rendering treats it like a block-level
+        element ("display: block") instead of just an inline element as it would by default.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

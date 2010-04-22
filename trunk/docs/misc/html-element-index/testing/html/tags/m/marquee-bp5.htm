@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MARQUEE: Browser Peculiarities: BEHAVIOR=ALTERNATE attribute behavior</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 7.0+: For the BEHAVIOR attribute, the ALTERNATE value 
+is rendered differently than IE - In IE, the marquee starts at one side of the 
+marquee box, already onscreen. It then proceeds to the opposite side of the marquee 
+box, until its leading content edge reaches the marquee box edge, and then returns 
+back the way it came. In Mozilla, the marquee content starts offscreen, comes 
+onscreen at one side, travels to the opposite side, then goes offscreen before travelling 
+back the way it came.</div>
+<br>
+
+<b>Basic MARQUEE element, no width.:</b>
+<hr>
+filler text 
+<marquee>Marquee</marquee>
+filler text
+<hr>
+<br>
+
+<b>Basic MARQUEE element, no width, behavior=alternate.:</b>
+<hr>
+filler text 
+<marquee behavior="alternate">Marquee</marquee>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

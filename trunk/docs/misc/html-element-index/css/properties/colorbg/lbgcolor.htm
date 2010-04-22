@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Layer-Background-Color - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">layer-background-color</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i><u class="sr">4.0-4.x</u></i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Color/Background Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="color.htm">color</a><br>
+        <a href="lbgimage.htm">layer-background-image</a><br>
+        <a href="bg.htm">background</a><br>
+        <a href="bgcolor.htm">background-color</a><br>
+        <a href="bgimage.htm">background-image</a><br></td>
+    <td><a href="bgrepeat.htm">background-repeat</a><br>
+        <a href="bgattach.htm">background-attachment</a><br>
+        <a href="bgposit.htm">background-position</a><br>
+        <a href="bgpositx.htm">background-position-x</a><br>
+        <a href="bgposity.htm">background-position-y</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">transparent</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">body|table|thead|tbody|tfoot|th|td</b>
+        <span class="tagattrib">BGCOLOR</span>=&quot;#RRGGBB&quot;&gt;</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td>None</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This value sets the background-color for the entire region of the
+        current element. This proprietary property behaves in Netscape the
+        way the '<a href="bgcolor.htm">background-color</a>' property
+        <em>SHOULD</em> behave, while the actual 'background-color' behavior
+        is buggy in this regard. This property was invented to create the
+        correct behavior.
+        <br><br>
+
+        The 'background-color' property only covers the content area of an
+        element's rendering box, and if a border is also used, there is a
+        slight gap (2-3 pixels) between the 'background-color' and the
+        border area, where the background-color of the parent element
+        shines through.
+        <br><br>
+
+        The 'layer-background-color' covers the whole region specified by
+        the element, including the gap area occurring for the 'background-color'
+        property, and the entire dimension of the element specified by the
+        '<a href="../dimension/width.htm">width</a>' and
+        '<a href="../dimension/height.htm">height</a>' properties. Since this
+        property is only understood by Netscape, and it fixes other buggy
+        behavior, specifying both this and the 'background-color' property
+        with the same value seems like a good idea.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">[color]</b></dt>
+<dt>[<b><i><u class="sr">4.0-4.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This is a representation of the values for Red/Green/Blue used to
+        determine a final display color. Please see the section on
+        <a href="../../syntax/units/color.htm">Color Units</a> for details on the
+        various color specification schemes.</dd>
+
+<dt><b class="subheading">transparent</b></dt>
+<dt>[<b><i><u class="sr">4.0-4.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies that the parent element background/image will shine
+        through if one exists, else the system default background/image value
+        is used.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc:<br><b class="selector">div</b> {<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">position:</span> absolute;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">top:</span> 100px;
+        <span class="property">left:</span> 300px;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">width:</span> 200px;
+        <span class="property">border:</span> thin solid black;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">background-color:</span> blue;
+        <span class="property">layer-background-color:</span> blue;
+        <br>&#160;&#160;&#160;&#160;&#160;}</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">div</b> <span
+        class="tagattrib">STYLE</span>=&quot;<span class="property">position:</span> absolute;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">top:</span> 100px;
+        <span class="property">left:</span> 300px;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">width:</span> 200px;
+        <span class="property">border:</span> thin solid black;<br>
+        &#160;&#160;&#160;&#160;&#160;<span class="property">background-color:</span> blue;
+        <span class="property">layer-background-color:</span> blue;&quot;&gt;text
+        block&lt;/<b class="tagname">div</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>If different values are specified for the 'background-color' and
+        'layer-background-color' properties, the value for 'background-color'
+        always takes visual precedence in the region in common - regardless
+        of position in the style sheet.
+    <li>This property has almost <em>NO</em> documentation on Netscape's site -
+        the "Quick Statistics" on this page are borrowed from the
+        'background-color' property.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

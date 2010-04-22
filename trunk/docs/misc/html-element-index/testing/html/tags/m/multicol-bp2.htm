@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MULTICOL: Browser Peculiarities: Applying CSS to multicol</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Applying some CSS properties to MULTICOL flattens display to a single column</div>
+<br>
+
+<b>MULTICOL content, cols=3, gutter=20, width=500:</b>
+<hr>
+filler text 
+<multicol cols="3" width="500" gutter="20">
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+</multicol>
+filler text
+<hr>
+<br>
+
+<b>MULTICOL content, cols=3, gutter=20, width=500, (css - border: thin solid black):</b>
+<hr>
+filler text 
+<multicol cols="3" width="500" gutter="20" style="border: thin solid black">
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+</multicol>
+filler text
+<hr>
+<br>
+
+<b>MULTICOL content, cols=3, gutter=20, width=500:</b>
+<hr>
+filler text 
+<multicol cols="3" width="500" gutter="20" style="background-color: green; color: white">
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
+</multicol>
+filler text
+<hr>
+<br>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Button: Browser Peculiarities: Effects of DIR="rtl"</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The DIR="RTL" attribute right aligns the content of INPUT elements 
+WITHIN the form field, not the element itself relative to the viewport as it does for other elements.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Button field, value="button":</b>
+<hr>
+filler text
+<input type="Button" value="button">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Button field, value="button", Dir=rtl:</b>
+<hr>
+filler text
+<input type="button" value="button" dir="rtl">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Button field, value="This is a longer Button value example":</b>
+<hr>
+filler text
+<input type="button" value="This is a longer Button value example">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Button field, value="This is a longer Button value example", Dir=rtl:</b>
+<hr>
+filler text
+<input type="button" dir="rtl" value="This is a longer Button value example">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

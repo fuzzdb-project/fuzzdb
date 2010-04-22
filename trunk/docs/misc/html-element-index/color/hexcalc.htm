@@ -1,0 +1,139 @@
+<html>
+<head>
+ <title>Index DOT Html/Css Hex Calculator</title>
+<script type="text/javascript">
+var hexVals = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+              "A", "B", "C", "D", "E", "F");
+
+function putNum(val)
+{
+if (document.calc.dechex[0].checked) // decimal mode
+   {
+     if (val.charCodeAt(0) >= 48 && val.charCodeAt(0) <= 57)  // good decimal
+        {
+          if (document.calc.entry.value != "0")  // look for 0 as only value. Replace if found
+             { document.calc.entry.value = document.calc.entry.value + val; }
+          else
+             { document.calc.entry.value = val; }
+        }
+   }
+else // in hex mode
+   { if (document.calc.entry.value != "0")    // look for 0 as only value. Replace if found
+        { document.calc.entry.value = document.calc.entry.value + val; }
+     else
+        { document.calc.entry.value = val; }
+   }
+}
+
+function decToHex(num, radix)
+{
+var hexString = "";
+while (num >= radix)
+      {
+        temp = num % radix;
+        num = Math.floor(num / radix);
+        hexString += hexVals[temp];
+      }
+hexString += hexVals[num];
+return reversal(hexString);
+}
+
+function reversal(s)
+{
+var len = s.length;
+var trans = "";
+for (i=0; i<len; i++)
+    { trans = trans + s.substring(len-i-1, len-i); }
+s = trans;
+return s;
+}
+
+function changeBase()
+{
+var val         = document.calc.entry.value;
+var len         = document.calc.entry.value.length;
+var goodDecVals = "0123456789";
+var goodHexVals = "0123456789abcdefABCDEF";
+var newVal      = "";
+
+if (document.calc.dechex[0].checked) // We just changed to decimal mode
+   {
+    for (i=0;i<len;i++)    // strip out all non hex digits
+        { if (goodHexVals.indexOf(val.substring(i,i+1)) != -1)
+             { newVal = newVal + val.substring(i,i+1); }
+        }
+    if (newVal == "")   // Entry was null. Make it a zero instead
+       { document.calc.entry.value = "0"; }
+    else
+       { document.calc.entry.value = parseInt(newVal,16); }
+     }
+else // We just changed to hex mode
+   {
+    for (i=0;i<len;i++)    // strip out all non digits
+        { if (goodDecVals.indexOf(val.substring(i,i+1)) != -1)
+             { newVal = newVal + val.substring(i,i+1); }
+        }
+    if (newVal == "")  { M = 0; }
+    else               { M = parseInt(newVal, 10); }
+    document.calc.entry.value = decToHex(M, 16);
+   }
+}
+</script>
+</head>
+
+<body>
+<map name="zero"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('0')"></map>
+<map name="one"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('1')"></map>
+<map name="two"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('2')"></map>
+<map name="three"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('3')"></map>
+<map name="four"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('4')"></map>
+<map name="five"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('5')"></map>
+<map name="six"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('6')"></map>
+<map name="seven"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('7')"></map>
+<map name="eight"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('8')"></map>
+<map name="nine"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('9')"></map>
+<map name="a"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('a')"></map>
+<map name="b"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('b')"></map>
+<map name="c"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('c')"></map>
+<map name="d"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('d')"></map>
+<map name="e"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('e')"></map>
+<map name="f"><area shape="rect" coords="0,0,16,16" href="javascript:;" onclick="putNum('f')"></map>
+<map name="clear"><area shape="rect" coords="0,0,80,16" href="javascript:;" onclick="document.calc.entry.value='0'"></map>
+
+<form name="calc" action="">
+<table bgcolor="" border=2 cellpadding=3 cellspacing=0>
+<tr><th bgcolor="#009999"><font size="3" face="tahoma">&nbsp;Hex&nbsp;Calculator&nbsp;</font></th></tr>
+<tr><th bgcolor="#ffffff"><table cellspacing=0 cellpadding=2 bgcolor="#ffffff">
+<tr><th colspan=4><input type="text" name="entry" value="0" size=10 style="text-align: right"></th></tr>
+<tr><th colspan=4 align="left"><font size="2" face="tahoma"><input type="radio"
+        name="dechex" value="Dec" onclick="changeBase();" checked> Dec <input type="radio"
+        name="dechex" value="Hex" onclick="changeBase();"> Hex</font></th>
+</tr>
+<tr><th><img src="../images/0.gif" border=0 usemap="#zero"></th>
+    <th><img src="../images/1.gif" border=0 usemap="#one"></th>
+    <th><img src="../images/2.gif" border=0 usemap="#two"></th>
+    <th><img src="../images/3.gif" border=0 usemap="#three"></th>
+</tr>
+<tr><th><img src="../images/4.gif" border=0 usemap="#four"></th>
+    <th><img src="../images/5.gif" border=0 usemap="#five"></th>
+    <th><img src="../images/6.gif" border=0 usemap="#six"></th>
+    <th><img src="../images/7.gif" border=0 usemap="#seven"></th>
+</tr>
+<tr><th><img src="../images/8.gif" border=0 usemap="#eight"></th>
+    <th><img src="../images/9.gif" border=0 usemap="#nine"></th>
+    <th><img src="../images/a.gif" border=0 usemap="#a"></th>
+    <th><img src="../images/b.gif" border=0 usemap="#b"></th>
+</tr>
+<tr><th><img src="../images/c.gif" border=0 usemap="#c"></th>
+    <th><img src="../images/d.gif" border=0 usemap="#d"></th>
+    <th><img src="../images/e.gif" border=0 usemap="#e"></th>
+    <th><img src="../images/f.gif" border=0 usemap="#f"></th>
+</tr>
+
+<tr><th colspan=4><img src="../images/clear.gif" border=0 usemap="#clear"></th></tr>
+</table></th></tr>
+</table>
+</form>
+
+</body>
+</html>

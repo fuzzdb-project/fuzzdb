@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>How do BODY element attributes map to CSS properties?</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">BODY attributes/CSS mappings</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#whycss">Why CSS over HTML?</a> |
+    <a href="#map">Mapping BODY to CSS</a> | <a href="#example">Example</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+<a name="whycss"></a>
+<dl>
+<dt><big><b class="mainheading">Why should CSS be used instead of HTML
+         &lt;BODY&gt; attributes?</b></big>
+    <dd>There were quite a few attempts to create visual effects via proprietary
+        attributes in the early history of HTML. Some of these attributes were
+        even adopted in the HTML standards to reflect wide adoption by browser
+        makers. The most popular of these attributes were the common additions
+        to the BODY element from Netscape. Nowadays, there are other ways to
+        achieve these effects. All of these attributes were absorbed in CSS's
+        functionality and their power is also greatly expanded for use on any
+        element.
+     </dl>
+     <br>
+
+<a name="map"></a>
+     <dl>
+  <dt><big><b class="mainheading">Which HTML &lt;BODY&gt; attributes map
+     to which CSS properties?</b></big>
+     <dd>
+     <table border=3 cellspacing=0 cellpadding=3>
+     <tr><th>
+     <table cellpadding=2>
+     <tr><th><b class="subheading"><a href="../tagpages/b/body.htm">BODY</a>
+                attribute</b></th>
+         <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+         <th><b class="subheading">Corresponding CSS</b></th></tr>
+     <tr><th colspan=3><hr width="95%"></th></tr>
+     <tr><th align=left><b class="l3heading">LINK</b></th>
+         <td rowspan=6>&nbsp;</td>
+         <td><b class="selector">a:link</b> { <span class="property">color:</span>
+             [color_value] }</td></tr>
+     <tr><th align=left><b class="l3heading">VLINK</b></th>
+         <td><b class="selector">a:visited</b> { <span class="property">color:</span>
+             [color_value] }</td></tr>
+     <tr><th align=left><b class="l3heading">ALINK</b></th>
+         <td><b class="selector">a:active</b> { <span class="property">color:</span>
+             [color_value] }</td></tr>
+     <tr><th align=left><b class="l3heading">TEXT</b></th>
+         <td><b class="selector">body</b> { <span class="property">color:</span>
+             [color_value] }</td></tr>
+     <tr><th align=left><b class="l3heading">BGCOLOR</b></th>
+         <td><b class="selector">body</b> { <span class="property">background-color:</span>
+             [color_value] }</td></tr>
+     <tr><th align=left><b class="l3heading">BACKGROUND</b></th>
+         <td><b class="selector">body</b> { <span class="property">background-image:</span>
+             url([URL]) }</td></tr>
+     </table>
+     </th></tr>
+     </table>
+     </dl>
+  <br>
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<dt><b class="subheading">HTML version:</b>
+    <dd><div class="example">&lt;<b class="tagname">body</b>
+        <span class="tagattrib">text</span>="white"
+        <span class="tagattrib">bgcolor</span>="black"
+        <span class="tagattrib">background</span>="darkbg.gif"<br>
+        <span class="tagattrib">link</span>="red"
+        <span class="tagattrib">vlink</span>="maroon"
+        <span class="tagattrib">alink</span>="yellow"&gt;</div>
+<dt><b class="subheading">CSS version:</b>
+    <dd><div class="example">
+        <table cellspacing=0 cellpadding=0>
+        <tr><th align=left colspan=3>&lt;<b class="tagname">style</b>
+        <span class="tagattrib">type</span>="text/css"&gt;</th></tr>
+        <tr><td><b class="selector">a:link</b></td>
+            <th>&nbsp;&nbsp;{&nbsp;</th>
+            <th align=left><span class="property">color:</span> red }</th></tr>
+        <tr><td><b class="selector">a:visited</b></td>
+            <th>&nbsp;&nbsp;{&nbsp;</th>
+            <th align=left><span class="property">color:</span> maroon }</th></tr>
+        <tr><td><b class="selector">a:active</b></td>
+            <th>&nbsp;&nbsp;{&nbsp;</th>
+            <th align=left><span class="property">color:</span> yellow }</th></tr>
+        <tr><td valign=top><b class="selector">body</b></td>
+            <th valign=top>&nbsp;&nbsp;{&nbsp;</th>
+            <th valign=top align=left><span class="property">color:</span> white;<br>
+                <span class="property">background-color:</span> black;<br>
+                <span class="property">background-image:</span> url(darkbg.gif) }</th></tr>
+        <tr><th align=left colspan=3>&lt;/<b class="tagname">style</b>&gt;</th></tr>
+        </table>
+        </div>
+</dl>
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>ISINDEX: Browser Peculiarities: Event handling</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 4.x: Assigning event handlers to this element will only 
+trigger on the isindex surrounding area, NOT the ISINDEX text input field - 
+this seems like incorrect behavior to me.</div>
+<br>
+
+<b>Simple ISINDEX element, no event attributes:</b>
+<hr size=5>
+filler text <isindex> filler text
+<hr size=5>
+<br>
+
+<b>Simple ISINDEX element, event attributes attached (onclick, onkeyup):</b>
+<hr size=5>
+filler text <isindex onclick="alert('click event detected');" onkeyup="alert('keyup event detected');"> filler text
+<hr size=5>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>AREA: Browser peculiarity - Linefeed and CR handling in ALT/title text</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<div class="assert">Linefeed and Carriage Return handling (&#10; and &#13; respectively) 
+for the ALT attribute:
+<ul>
+    <li>Internet Explorer: All literal/unencoded or encoded CR/LFs are maintained and displayed as intended.</li>
+    <li>Netscape: All unencoded or encoded CR/LFs are collapsed to nothing in ALT display (not the normal method for spacing-character collapsing - usually it would collapse to a single space.)</li>
+</ul></div>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text is null string:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map1">
+<map name="map1">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="" title="">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text is simple string ("title test"):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map2">
+<map name="map2">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="alt test" title="title test">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text contains multiple character entities 
+("&amp;ntilde;&amp;iuml;&amp;ccedil;&amp;ecirc; title test"):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map3">
+<map name="map3">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="&ntilde;&iuml;&ccedil;&ecirc; alt test" 
+title="&ntilde;&iuml;&ccedil;&ecirc; title test">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text contains multiple consecutive unencoded spaces. "this is a title test"
+has 5 leading and trailing spaces, as well as 5 spaces between "is" and "a":</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map4">
+<map name="map4">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="     this is     a alt test     " 
+title="     this is     a title test     ">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text contains multiple consecutive encoded spaces (&amp;nbsp;). 
+"this is a title test" has 5 leading and trailing nbsp spaces, as well as 5 nbsp 
+spaces between "is" and "a":</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map5">
+<map name="map5">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/"alt="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a alt test&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 
+title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a title test&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text ("this is a title test") contains unencoded CR/LF 
+between "this" and "is", as well as between "title" and "test":</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map6">
+<map name="map6">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/"alt="this
+is a alt
+test" 
+title="this
+is a title
+test">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) TITLE text ("this is a title test") contains encoded CR/LF (&amp;#10;/&amp;#13;)
+between "this" and "is", as well as between "title" and "test":</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map7">
+<map name="map7">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" 
+alt="this&#10;&#13;is a alt&#10;&#13;test" 
+title="this&#10;&#13;is a title&#10;&#13;test">
+</map>
+filler text
+<hr>
+<br>
+
+
+</body>
+</html>

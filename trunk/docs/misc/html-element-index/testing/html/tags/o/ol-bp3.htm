@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>OL: Browser Peculiarities: Treatment of "0" and negative values for START attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">START attribute behavior for "0" and negative values:
+<ul>
+<li><b>IE:</b> (all) Both value types honored
+<li><b>Netscape/Mozilla:</b> (all) Ignored
+<li><b>Opera 2.1-6.x:</b> Ignored
+<li><b>Opera 7.x+:</b> "0" honored; negative values cause list markers to go away
+</ul>
+</div>
+
+<b>OL list with START="5":</b>
+<hr>
+filler text <ol start="5"><li>LI item 1<li>LI item 2<li>LI item 3</ol> filler text
+<hr>
+
+<br>
+<b>OL list with START="0":</b>
+<hr>
+filler text <ol start="0"><li>LI item 1<li>LI item 2<li>LI item 3</ol> filler text
+<hr>
+
+<br>
+<b>OL list with START="-5":</b>
+<hr>
+filler text <ol start="-5"><li>LI item 1<li>LI item 2<li>LI item 3</ol> filler text
+<hr>
+<br>
+
+</body>
+</html>

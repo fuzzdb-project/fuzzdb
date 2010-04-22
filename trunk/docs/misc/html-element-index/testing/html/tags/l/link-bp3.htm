@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>LINK: Browser Peculiarities: LINK elements with ID ignored in Netscape 4.x</title>
+<style>
+.assert { color: green }
+</style>
+<link rel="stylesheet" href="../../../objects/css/mediaall.css">
+<link rel="stylesheet" href="../../../objects/css/mediascreen.css" id="linktest">
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4.x ignores a LINKed stylesheet if the LINK element has an ID attribute.</div>
+<br>
+
+<b>Simple DIV element with id="test1". First external CSS specifies 
+"background-color: green; text-transform: uppercase;" for this element. <br>
+LINK element does not have ID attribute</b>
+<hr>
+filler text 
+<div id="test1">This is a div</div>
+filler text
+<hr>
+<br>
+
+<b>Simple DIV element with id="test2". Second external CSS specifies 
+"background-color: green; text-transform: uppercase;" for this element.<br>
+LINK element has an ID attribute</b>
+<hr>
+filler text 
+<div id="test2">This is a div</div>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

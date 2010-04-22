@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BR: Browser Peculiarities: absorbed linefeeds</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">If you use a BR at the end of a block structuring element (ex: BLOCKQUOTE) 
+or block structuring sub element (ex: LI), you may need to use two consecutive line 
+breaks to produce a visual space in a document. This is because there is already 
+an implied line break at the end of block structures.</div>
+<br>
+
+<b>Simple table:</b>
+<hr>
+filler text
+<table border="2" cellspacing=0><tr><td>TD Cell 1</td><th>TH Cell 2</th></tr></table>
+filler text
+<hr>
+
+<b>Simple table with one BR at the end of each cell:</b>
+<hr>
+filler text
+<table border="2" cellspacing=0><tr><td>TD Cell 1<br></td><th>TH Cell 2<br></th></tr></table>
+filler text
+<hr>
+
+<b>Simple table with two BRs at the end of each cell:</b>
+<hr>
+filler text
+<table border="2" cellspacing=0><tr><td>TD Cell 1<br><br></td><th>TH Cell 2<br><br></th></tr></table>
+filler text
+<hr>
+
+</body>
+</html>

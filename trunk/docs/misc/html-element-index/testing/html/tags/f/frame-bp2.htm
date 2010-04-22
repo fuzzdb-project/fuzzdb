@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FRAME: In all versions of Netscape, if no SRC attribute is initially specified, 
+           the frame area is no longer addressable as a target (even if a NAME is specified) 
+           for document links, etc. Internet Explorer and Opera handle the case of an 
+           initial blank SRC just fine.</title>
+</head>
+
+<frameset cols="*,*">
+   <frame src="frametest2.htm" name="frame1" />
+   <frameset rows="*,*">
+      <frame src="frametest3.htm" name="frame2" />
+      <frame name="frame3" />
+   </frameset>
+</frameset>
+</html>

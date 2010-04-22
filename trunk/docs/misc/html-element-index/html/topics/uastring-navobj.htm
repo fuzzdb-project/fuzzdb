@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Detecting Browser Capabilities Via Script</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+
+<script language="javascript" type="text/javascript">
+function populatenavobj()
+{
+   document.forms[0].acnresult.value = navigator.appCodeName;
+   document.forms[0].anresult.value  = navigator.appName;
+   document.forms[0].avresult.value  = navigator.appVersion;
+   document.forms[0].uaresult.value  = navigator.userAgent;
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+function changeinfo()
+{
+// This displays info and test results for misc Navigator object properties
+// -------------------------------------------------------
+var browser  = navigator.appName;
+var version  = navigator.appVersion;
+var uaString = navigator.userAgent;
+
+if (browser.indexOf("Internet Explorer") != -1)
+    {
+ var ieBrowse = version.indexOf("MSIE ")+5;
+ var ver = parseInt(version.substring(ieBrowse, ieBrowse + 1));
+ if (ver <= 3)
+    { return; }
+ }
+else if (browser.indexOf("Netscape") != -1 && uaString.indexOf("compatible;") == -1)
+    {
+    var navBrowse = uaString.indexOf("Mozilla/") + 8;
+    var ver = parseInt(uaString.substring(navBrowse, navBrowse + 1));
+    if (ver <= 2)
+       { return; }
+  }
+
+  var hiddenfield = document.forms[1].otherprops.selectedIndex;
+  if (hiddenfield == 0) { return; }
+  var hiddenvalue = eval("document.forms[1].elements[" + hiddenfield + "].value");
+  var otherList   = hiddenvalue.split("|");
+
+  document.forms[1].othersupp.value = "IE" + otherList[0] + " | N" + otherList[1] + " | O" + otherList[2];
+  document.forms[1].otherdesc.value = otherList[3];
+
+  var hiddenname = eval("document.forms[1].elements[" + hiddenfield + "].name");
+  hiddenname     = hiddenname.substring(4,hiddenname.length);
+
+  var actual = eval("navigator." + hiddenname);
+  if  (actual == null)
+      { document.forms[1].othertest.value = "[Not supported]"; }
+  else
+      {
+       if (actual == true)
+      { document.forms[1].othertest.value = "true"; }
+    else if (actual == false)
+      { document.forms[1].othertest.value = "false"; }
+    else
+      { document.forms[1].othertest.value = actual;  }
+   }
+
+}
+
+function dispUAstr()
+{
+// This displays the UA strings for the browser specified
+// -------------------------------------------------------
+// Internet Explorer UA Strings
+var browser  = navigator.appName;
+var version  = navigator.appVersion;
+var uaString = navigator.userAgent;
+
+if (browser.indexOf("Netscape") != -1 && uaString.indexOf("compatible;") == -1)
+    {
+    var navBrowse = uaString.indexOf("Mozilla/") + 8;
+    var ver = parseInt(uaString.substring(navBrowse, navBrowse + 1));
+    if (ver <= 2)
+       { return; }
+  }
+
+var ie1 = new Array ("Mozilla/2.0 (compatible; MSIE 3.02; Windows 95)",
+                     "Mozilla/3.0 (compatible; MSIE 3.0.1; Mac_PowerPC; Mac OS8)",
+                     "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT)",
+                     "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98; compat)",
+                     "Mozilla/4.0 (compatible; MSIE 4.01; SunOS 5.6 sun4u; X11)",
+                     "Mozilla/4.0 (compatible; MSIE 5.0; Windows 98)");
+var ie2 = new Array ("3.0: ", "3.0 Mac: ", "4.0: ", "4.0 Compatibility Mode: ",
+                     "4.0 Solaris: ", "5.0: ");
+
+// Netscape UA Strings
+var ns1 = new Array ("Mozilla/2.02 (Win95; I)", "Mozilla/3.04 (Win95; I)",
+                     "Mozilla/3.0 (X11; I; SunOS 5.5.1 sun4u)", "Mozilla/3.0(OS/2;I)",
+                     "Mozilla/4.04 [en] (Win95; I; Nav)", "Mozilla/4.04 [en] (OS/2; I)",
+                     "Mozilla/4.05[en](Win16;I)", "Mozilla/4.07; [en] (X11;I;Linux 2.0.36i586)",
+                     "Mozilla/4.5 [en] (Win98; I)", "Mozilla/4.5 (Macintosh; I; PPC)");
+var ns2 = new Array ("2.0: ", "3.0: ", "3.0 SunOS: ", "3.0 OS/2: ", "4.0: ",
+                     "4.0 OS/2: ", "4.0 Win 3.x: ", "4.0 Linux: ", "4.5: ", "4.5 Mac PPC: ");
+
+// Opera UA Strings
+var op1 = new Array ("Mozilla/3.0 (compatible; Opera/3.0;Windows 3.1) 3.0",
+                     "Mozilla/3.0 (compatible; Opera/3.0;Windows 95) 3.1",
+                     "Mozilla/3.0 (compatible; Opera/3.0;Windows 95/ Windows NT4) 3.0",
+                     "Mozilla/3.0 (compatible; Opera/3.0;Windows 3.1) 3.21",
+                     "Mozilla/4.0 (compatible; Opera/3.0; Windows 95) 3.50",
+                     "Mozilla/4.0 (Windows 4.10;US) Opera 3.60  [en]");
+var op2 = new Array ("3.0:  ", "3.1:  ", "3.2:  ", "3.21: ", "3.5:  ", "3.6:  ");
+
+// Other UA Strings
+var other1 = new Array ("Lynx/2.8.1rel.2 libwww-FM/2.14", "Mozilla/3.0 WebTV/1.2 (compatible; MSIE 2.0)");
+var other2 = new Array ("Lynx: ", "WebTV: ");
+
+var browserType = document.forms[2].uastrings.selectedIndex;
+var resultStr   = "";
+
+if (browserType == 1)
+   {
+     for (i=0;i<ie2.length;i++)
+         { resultStr = resultStr + ie2[i] + ie1[i] + "\n"; }
+     document.forms[2].uaresult.value = resultStr;
+   }
+else if (browserType == 2)
+   {
+     for (i=0;i<ns2.length;i++)
+         { resultStr = resultStr + ns2[i] + ns1[i] + "\n"; }
+     document.forms[2].uaresult.value = resultStr;
+   }
+else if (browserType == 3)
+   {
+     for (i=0;i<op2.length;i++)
+         { resultStr = resultStr + op2[i] + op1[i] + "\n"; }
+     document.forms[2].uaresult.value = resultStr;
+   }
+else if (browserType == 4)
+   {
+     for (i=0;i<other2.length;i++)
+         { resultStr = resultStr + other2[i] + other1[i] + "\n"; }
+     document.forms[2].uaresult.value = resultStr;
+   }
+}
+</script>
+</HEAD>
+
+<BODY onload="readSS();populatenavobj()">
+
+<h1 align="center"><span class="pagetitle">Detecting Browser Capabilities Via Script</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#problem">The Issue</a> |
+    <a href="#navprops">Navigator Properties</a> | <a href="#othernavprops">Other
+    Navigator Properties</a><br><a href="#uastrings">User Agent Strings</a> |
+    <a href="#browsedetect">Browser Detection</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td><hr size=1></td></tr>
+<tr><td align=left>
+<a name="problem"></a>
+<big><b class="mainheading">The Issue</b></big>
+<hr width="30%" align=left size=1>
+The capabilities of Javascript and the browsers that use it have advanced rapidly
+since their creation. Because these are moving targets, it is sometimes essential
+to know exactly what your browser is and what it supports.
+<br><br>
+
+Luckily, Javascript provides several ways to detect characteristics of the
+browser invoking it.
+<ol>
+    <li>Javascript engine version string (&lt;<b class="tagname">script</b>&gt;
+        "LANGUAGE" attribute)
+    <li>Scripting object detection
+    <li>UA string &amp; other browser properties (Navigator object properties/methods)
+</ol>
+
+<dl>
+<dt><b class="subheading">&lt;Script Language="value"&gt;</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading">Description:</b><br>
+        The LANGUAGE attribute for the SCRIPT element allows a specific version of a
+        scripting engine to be targeted. In addition to the scripting language keyword
+        (eg: Javascript, JScript, VBScript), the version number of the scripting engine
+        may be appended (eg: 'Javascript 1.3', 'JScript 2.0') <em>ONLY</em> script
+        engines of that version and above should read the contained script. Script
+        engines below the specified version should ignore it.
+    <dd><b class="l3heading">Values:</b><br>
+     <table border=2 cellspacing=0 cellpadding=5>
+     <tr>
+     <th colspan=3><b><big class="subheading">JavaScript</big></b></th>
+     <th rowspan=7 bgcolor="#808080">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+     <th colspan=3><b><big class="subheading">JScript/VBScript</big></b></th>
+     </tr>
+     <tr>
+     <th valign=bottom><b class="l3heading">Version</b></th>
+     <th rowspan=6 bgcolor="#808080">&nbsp;</th>
+     <th valign=bottom><b class="l3heading">Shipping<br>Vehicle</b></th>
+     <th valign=bottom><b class="l3heading">Version</b></th>
+     <th rowspan=6 bgcolor="#808080">&nbsp;</th>
+     <th valign=bottom><b class="l3heading">Shipping<br>Vehicle</b></th>
+     </tr>
+     <tr>
+     <td align=center>1.0</td><td align=center>Nav 2.0x</td>
+     <td align=center>1.0</td><td align=center>IE 3.0x</td>
+     </tr>
+     <tr>
+     <td align=center>1.1</td><td align=center>Nav 3.0x</td>
+     <td align=center>2.0</td><td align=center>IIS 3.0</td>
+     </tr>
+     <tr>
+     <td align=center>1.2</td><td align=center>Nav 4.0-4.05</td>
+     <td align=center>3.0</td><td align=center>IE 4.0x/IIS 4.0</td>
+     </tr>
+     <tr>
+     <td align=center>1.3</td><td align=center>Nav &gt;= 4.06</td>
+     <td align=center>5.0</td><td align=center>IE 5.0</td>
+     </tr>
+     <tr>
+     <td align=center>1.5</td><td align=center>Nav &gt;= 6.0</td>
+     <td align=center>5.6</td><td align=center>IE 6.0</td>
+     </tr>
+     <tr><th colspan=7><b class="alert">ECMAScript Compliant:</b><br>
+     JavaScript 1.3 &amp; above; JScript 3.0 &amp; above</th></tr>
+     </table>
+
+<dt><b class="subheading">Scripting Object "Sniffing"</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br>
+        Javascript exposes methods and properties for components of a document
+        called "objects." Different browsers have added support for different
+        objects. You can search for relevant substrings in the UserAgent string,
+        or you can also "sniff" for the existence of the objects you need before
+        you try to access them. Object "sniffing" tends to be easier and more
+        useful in practice for detecting browser capabilities than UserAgent
+        "sniffing", but does not reveal as much specific information about the
+        browser itself. Be sure to not make any assumptions of the browser in
+        use based only upon the existence of some supposedly "unique" object
+        that that browser supports.<br>
+    <dd><b class="l3heading">Useful objects to detect:</b><br>
+        <b class="alert">document.images</b> 
+        [<b class="s">IE4</b>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]<br>
+        <b class="alert">document.layers:</b> 
+        [<b><i><u class="sr">N4-4.x</u></i></b>]<br>
+        <b class="alert">document.all:</b> [<b><i class="fs">IE4</i></b>|<b class="s">O6</b>]<br>
+        <b class="alert">document.getElementById:</b>
+        [<b><i class="fs">IE5</i></b>|<b class="s">N6</b>|<b class="s">O5</b>]<br>        
+    <dd><b class="l3heading">Example:</b>
+        <div class="example">&nbsp;&nbsp;&nbsp;&nbsp;if (document.all)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ alert ("This is browser-specific code"); }</div>
+
+<dt><b class="subheading">Navigator Object</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br>
+        This is a basic Javascript object containing several properties (see below)
+        describing the characteristics of the browser. The most useful of these is
+        the "userAgent" property. The "userAgent" property typically contains such
+        information as the browser type and version, the operating system and the
+        language - all lumped together into a single string. The trouble with this
+        method is, there is no common format that browsers use to identify themselves
+        in the userAgent string, and some browsers even let the user change the
+        UserAgent string to whatever they wish. But, if you know what to look for,
+        some skillful manipulation of the Javascript String.substring(<em>from</em>,
+        <em>to</em>) and String.indexOf(<em>substring</em>) methods can extract
+        some useful information from the string.
+    <dd><b class="l3heading">Values:</b> [See below]
+</dl>
+
+<a name="navprops"></a>
+<form>
+<dl>
+<dt><big><b class="mainheading">Common Navigator Object Properties</b></big>
+<dt><b class="subheading">appCodeName</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br> The "code" name for the browser.
+    <dd><b class="l3heading">Values:</b> "Mozilla" for IE, Netscape and Opera.
+    <dd><b class="l3heading">Your Browser Reports:</b>&nbsp;<input
+           type="text" name="acnresult" value="[Browser did not report]" size=45>
+
+<dt><b class="subheading">appName</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br> The name of the current browser.
+    <dd><b class="l3heading">Values:</b> "Netscape" for Netscape and Opera,
+        "Microsoft Internet Explorer" for IE.
+     <dd><b class="l3heading">Your Browser Reports:</b>&nbsp;<input
+            type="text" name="anresult" value="[Browser did not report]" size=45>
+
+<dt><b class="subheading">appVersion</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br>
+        The version of the browser.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">Internet Explorer:</b> [<b class="alert2">Netscape Compatible Version</b>]
+        (compatible; MSIE [<b class="alert2">version</b>]; [<b class="alert2">Operating_System</b>])<br>
+        <b class="alert">Netscape:</b> [<b class="alert2">version</b>]
+        ([<b class="alert2">Operating_System</b>]; I)<br>
+        <b class="alert">Opera:</b> [<b class="alert2">version</b>]
+        ([<b class="alert2">Operating system</b>]; I)
+    <dd><b class="l3heading">Examples:</b><br>
+        <div class="example">Internet Explorer 3.0 example: 2.0
+        (compatible; MSIE 3.02; Windows 95)  <br>
+        Netscape 3.0 example: 3.0 (Win95; I)<br>
+        Opera 3.6 example: 3.0 (Win95; I)</div>
+    <dd><b class="l3heading">Your Browser Reports:</b>&nbsp;<input
+           type="text" name="avresult" value="[Browser did not report]" size=45>
+
+<dt><b class="subheading">userAgent</b>
+<dt>[<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading">Description:</b><br>
+        A combination of the appCodeName and appVersion properties for the browser.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">IE/Netscape:</b>
+        [<b class="alert2">appCodeName</b>]/[<b class="alert2">appVersion</b>]<br>
+        <b class="alert">Opera:</b> [<b class="alert2">appCodeName</b>]/[<b class="alert2">Netscape
+        Compatible Version</b>] (compatible; Opera/[<b class="alert2">Generic version family</b>];
+        [<b class="alert2">Operating system</b>]) [<b class="alert2">Specific version</b>]
+    <dd><b class="l3heading">Your Browser Reports:</b>&nbsp;<input
+           type="text" name="uaresult" value="[Browser did not report]" size=45>
+</dl>
+</form>
+
+<br>
+<a name="othernavprops"></a>
+<form>
+<input type="hidden" name="bogus" value="">
+<input type="hidden" name="hideappMinorVersion"  value="4|-|-|The browser's minor version value.">
+<input type="hidden" name="hidebrowserLanguage"  value="4|-|6|The current browser language.">
+<input type="hidden" name="hidecookieEnabled"    value="4|6|6|Boolean for whether client-side cookies are enabled or not.">
+<input type="hidden" name="hidecpuClass"         value="4|-|-|The CPU class type.">
+<input type="hidden" name="hidejavaEnabled()"    value="4|3|3.5|Boolean for whether Java is enabled or not.">
+<input type="hidden" name="hidelanguage"         value="-|4|4|The language version of the browser.">
+<input type="hidden" name="hideonLine"           value="4|-|-|Boolean for whether the system is offline or not.">
+<input type="hidden" name="hideplatform"         value="4|4|4|Retrieves the name of the user's operating system.">
+<input type="hidden" name="hidesystemLanguage"   value="4|-|-|Retrieves the default language used by the system.">
+<input type="hidden" name="hidetaintEnabled()"   value="4|3|3.5|Returns whether data tainting is enabled.">
+<input type="hidden" name="hideuserLanguage"     value="4|-|7|Retrieves the current user language.">
+
+<dl>
+<dt><big><b class="mainheading">Some Other Useful Navigator Properties</b></big>
+    <dd><table border=1 cellpadding=5 cellspacing=0>
+        <tr><td><b class="subheading">Property:</b></td>
+        <td><select name="otherprops" onchange="changeinfo()">
+        <option>[Choose Property]
+        <option>appMinorVersion
+        <option>browserLanguage&nbsp;&nbsp;&nbsp;&nbsp;
+        <option>cookieEnabled
+        <option>cpuClass
+        <option>javaEnabled
+        <option>language
+        <option>onLine
+        <option>platform
+        <option>systemLanguage&nbsp;&nbsp;&nbsp;&nbsp;
+        <option>taintEnabled
+        <option>userLanguage
+        </select>
+    </td></tr>
+    <tr><th align=left><b class="alert2">Support:</b><br><b class="alert2">Description:</b><br><b
+            class="alert2">Test:</b></th>
+        <td><input type="text" name="othersupp" value=""><br>
+            <input type="text" name="otherdesc" value="" size=60><br>
+            <input type="text" name="othertest" value="" size=60></td></tr>
+    </table>
+</dl>
+</form>
+
+<a name="uastrings"></a>
+<form>
+<dl>
+<dt><big><b class="mainheading">Example User Agent Strings</b></big>
+   <dd><table border=1 cellpadding=5 cellspacing=0>
+       <tr><td><b class="subheading">Browser:</b></td>
+       <td><select name="uastrings" onchange="dispUAstr()">
+           <option>[Choose Browser]
+           <option>Internet Explorer
+           <option>Netscape
+           <option>Opera
+           <option>Other...
+           </select></td></tr>
+    <tr><th align=left valign=top><b class="alert2">Description:</b></th>
+        <td><textarea name="uaresult" rows=8 cols=70>[Result]</textarea></td></tr>
+    </table>
+</dl>
+</form>
+
+<a name="browsedetect"></a>
+<dl>
+<dt><big><b class="mainheading">Browser Detection Scripts</b></big>
+    <dd>You may notice that the number of distinct UA strings is limitless and
+        does not always follow a concrete pattern.
+        How then can you detect what browser a reader is using? You can create
+        your own detection routine using Javascript's string manipulation
+        functions, given what you now know about UA strings. If you want to
+        avoid re-inventing the wheel, there are several public routines on the
+        Internet and in books that will do this as well. These routines are
+        often more exhaustive and bulky than what you will need for a given
+        task. You will have to decide if the exhaustive approach suits your needs.
+        For an example of an exhaustive browser detection script, try Netscape's
+        "<a href="http://developer.netscape.com/docs/examples/javascript/browser_type.html">Ultimate
+        JavaScript Client Sniffer.</a>"
+</dl>
+
+
+<a name="refs"></a>
+<dl>
+<dt><big><b class="mainheading">References</b></big>
+<dt><a href="http://webtips.dantobias.com/brand-x/"
+       class="relevant">http://webtips.dantobias.com/brand-x/</a>
+    <dd>Dan's Web Tips: "Brand-X" Browsers: Beyond the Big Two
+<dt><a href="http://web.archive.org/web/20000604031558/http://wkweb5.cableinet.co.uk/jcsr/authoring/browser/index.html"
+       class="relevant">http://web.archive.org/web/20000604031558/http://wkweb5.cableinet.co.uk/jcsr/authoring/browser/index.html</a>
+    <dd>Internet Authoring Hints'n'Tips: Browser Detection [Linking to Internet Archive's last known good snapshot due to Link Rot.]
+<dt><a href="http://www.statmarket.com/" class="relevant">http://www.statmarket.com/</a>
+    <dd>Statmarket: An interesting sample of browser statistics
+</dl>
+</td></tr>
+<tr><td><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</body>
+</html>

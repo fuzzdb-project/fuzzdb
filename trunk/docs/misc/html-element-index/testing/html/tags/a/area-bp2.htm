@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>AREA: Browser peculiarity - ALT/title tooltip generation</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<div class="assert">Handling of ALT and TITLE attribute tooltip rendering for AREA element:
+<ul>
+<li>IE 4+: ALT content rendered if present. TITLE content rendered if present. If both present, only ALT is rendered.
+<li>NS 3.x: TITLE and ALT ignored.
+<li>NS 4.x: ALT attribute rendered, TITLE ignored.
+<li>NS 6.x+: TITLE rendered, ALT ignored.
+<li>O -4.x: TITLE and ALT ignored.
+<li>O 5.x+: TITLE attribute content rendered as tooltip and in status toolbar.
+</ul></div>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) No TITLE or ALT attribute:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map1">
+<map name="map1">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) simple TITLE attribute ("title test") only:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map2">
+<map name="map2">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" title="title test">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) simple ALT attribute ("alt test") only:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map3">
+<map name="map3">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="alt test">
+</map>
+filler text
+<hr>
+<br>
+
+<b>Image (right.gif); AREA (rect: 0,0,50,50) both ALT ("alt test") and TITLE ("title test") present.:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif" usemap="#map4">
+<map name="map4">
+<area shape="rect" coords="0,0,50,50" href="http://blooberry.com/" alt="alt test" title="title test">
+</map>
+filler text
+<hr>
+<br>
+
+
+
+</body>
+</html>

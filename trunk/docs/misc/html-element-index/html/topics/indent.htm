@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Indenting with Html</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Indenting With HTML</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#issue">The Issue</a> |
+        <a href="#possible">Possible Solutions</a> |
+        <a href="#conclusion">Conclusions</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+     <a name="issue"></a>
+     <big><b class="mainheading">The Issue</b></big>
+     <hr width="30%" align=left size=1>
+     &#160;&#160;&#160;&#160;&quot;How can you indent in HTML?&quot; <br>
+     I see this question asked quite a bit in the various forums I frequent.
+     The question should probably be: <br>
+     &#160;&#160;&#160;&#160;&quot;How do I <em>reliably</em> indent in
+     HTML?&quot;<br>
+     The answer is not what most authors would want. The natural behavior of
+     HTML in most common browsers is to collapse multiple spaces in HTML code
+     content to a single space. How then can an author produce a reliable indent?
+     <br><br>
+
+     There are potential drawbacks to ALL methods available to produce content
+     that is not left-justified to the viewing area (the common default in
+     browsers.) None of the solutions will work in ALL browsers, so you must
+     decide which method will work best given the capabilities of your expected
+     readership and weighing the potential loss of easy readability for some users.
+     <br><br>
+
+     <b class="subheading">Note:</b> <a href="mailto:jbarchuk@worldnet.att.net">Jim
+     Barchuk</a> has created an excellent page related to this topic that you may
+     want to check out called '<a href="http://www.jbarchuk.com/indent/">Stupid
+     HTML Indent Tricks</a>.' It is devoted to the investigation of actual left
+     margin and indenting sizes/values used by various browsers (including those
+     surveyed in these pages.)
+     <br><br>
+
+     <a name="possible"></a>
+     <big><b class="mainheading">Possible Solutions</b></big>
+     <hr width="30%" align=left size=1>
+     <ul>
+     <li><a href="#nbsp">Non-breaking Spacing</a>
+     <li><a href="#pre">Preformatted Text</a>
+     <li><a href="#blockquote">Blockquotes</a>
+     <li><a href="#spacer">Netscape Spacer Tag</a>
+     <li><a href="#dl">Definition Lists</a>
+     <li><a href="#img">Images</a>
+     <li><a href="#lists">Bad List Structures</a>
+     <li><a href="#table">Tables</a>
+     <li><a href="#css">Cascading Style Sheets</a>
+     </ul>
+
+     <a name="nbsp"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> <a href="../tagpages/text.htm">&amp;nbsp;
+         or &amp;#160;</a>
+     <dt><b class="subheading">Support</b> (&amp;#160;): 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">Support</b> (&amp;nbsp;): 
+         [<b class="s">IE2</b>|<i class="fs"><b>M2A8</b></i>|<b class="s">N1.1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>Browsers usually treat multiple consecutive spaces and/or carriage returns as
+             a single space. In the case of non-breaking spaces (&amp;nbsp; or &amp;#160;)
+             browsers will typically honor multiple consecutive occurrences as-is with no
+             collapsing to a single space. <br>
+     <dt><b class="subheading">Pros:</b>
+       <dd><ul type=disc>
+           <li>Generally works in most browsers
+           <li>No HTML structures are necessary to achieve the indent
+           <li>Almost ALL browsers will understand &amp;#160;
+           <li>Author can crudely effect indent size using desired number of
+               multiple &amp;nbsp; (or &amp;#160;) entities.
+           </ul>
+     <dt><b class="subheading">Cons:</b>
+       <dd><ul type=disc>
+           <li>Only works for a single line of indent - when it wraps it returns
+               to previous indentation level.
+           <li>Not ALL browsers will render multiple &amp;nbsp; occurrences as-is.
+               Some browsers will collapse this to a single space.
+           <li>Some old browsers do not understand the &amp;nbsp; named entity
+           <li>Author cannot guarantee exact size of indent (Depending on font
+               size, platform and viewer resolution, the size of a space can vary.)
+           </ul>
+      </dl>
+
+     <a name="pre"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big>
+         &lt;<a href="../tagpages/p/pre.htm">Pre</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>The PRE tag preserves ALL spaces, carriage returns and line feeds
+             'as-is' from the original HTML source code. A predetermined layout
+             can thus be created.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Most ALL browsers support this feature, even text-only browsers.
+             <li>Can control indentation for multiple lines of text.
+             <li>Supported in HTML 2.0 - Older browsers support it.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>PRE formatting generally applies a fixed-width font to the text
+                 in order to achieve the desired fixed appearance.
+             <li>Linebreaking is always preserved (may be an unwanted side-effect.)
+             <li>PRE is a block formatting structure and a linebreak is always inserted
+                 before and after the structure. The size of the spacing before and
+                 after the block cannot be guaranteed from browser to browser.
+           </ul>
+     </dl>
+
+     <a name="blockquote"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big>
+          &lt;<a href="../tagpages/b/blockquote.htm">Blockquote</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>Most browsers render the contents of a BLOCKQUOTE passage indented.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Can usually nest BLOCKQUOTEs to create deeper indenting.
+             <li>Most browsers indent BLOCKQUOTE structures.
+             <li>The markup is supported in HTML 2.0 - Older browsers support it.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Some browsers unconditionally apply italics to BLOCKQUOTE
+                 structures as well as an indent.
+             <li>Author cannot control the size of the indent.
+             <li>BLOCKQUOTE is a block formatting structure and a linebreak is always
+                 inserted before and after the structure. The size of the spacing
+                 before and after the block cannot be guaranteed from browser to browser.
+             <li>By marking code with BLOCKQUOTE, it does not actually mean "indent me";
+                 HTML definitions do not REQUIRE a browser to indent BLOCKQUOTE
+                 structures...it simply indicates that the content is (or <em>SHOULD</em>
+                 be) a quotation.
+             </ul>
+     </dl>
+
+     <a name="spacer"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big>
+         &lt;<a href="../tagpages/s/spacer.htm">Spacer</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u 
+                class="sr">N3B5-6.2</u></b></i>|<span class="ns">O</span>|<span class="ns">S</span>]
+     <dt><b class="subheading">How:</b>
+         <dd>Netscape created a tag specifically for the purpose of controlling
+             white space in an HTML document. An author can produce horizontal-only,
+             vertical-only or block white space using this tag.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Gives pixel-level control of the size of spacing desired.
+             <li>Tag is specifically made for controlling the desired indent
+                 property.
+             <li>This method also allows the creation of floating spacing elements.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Netscape specific tag only supported in some versions so it is 
+                 VERY limited in support. It is also not currently in any HTML 
+                 standard, nor will it ever be (more control is possible with 
+                 Style Sheets now.)
+             <li>There is nothing backward compatible about the SPACER structure to
+                 allow for graceful degradation on non-supporting browsers.
+             <li>This element is no longer supported in current Netscape versions.
+             </ul>
+     </dl>
+
+     <a name="dl"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> &lt;<a href="../tagpages/d/dl.htm">Dl</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>The DD term of a Definition List is usually indented by most browsers
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Most browsers indent DD terms in DL structures.
+             <li>Supported in HTML 2.0 - Older browsers will support it.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Some browsers MAY indent a DD term on the same line as a
+                 previous DT term.
+             <li>The HTML specifications recommend that a DD term should not exist
+                 without a DT term coupled to it, but this is almost never required
+                 in browsers.
+             <li>Size of indent is static and cannot be controlled - Internet Explorer
+                 indent is about half that of Netscape and Mosaic's indent size.
+             <li>By marking code with DL, it does not actually mean "indent me";
+                 HTML definitions do not REQUIRE a browser to indent the DD term in a 
+                 definition list structure...it simply indicates that the content is 
+                 (or <em>SHOULD</em> be) the associated explanation of a defining term.
+             </ul>
+     </dl>
+
+     <a name="lists"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> &lt;<a href="../tagpages/o/ol.htm">Ol</a>&gt;,
+         &lt;<a href="../tagpages/u/ul.htm">Ul</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>It is possible to use a list containing structure without the
+             necessary list items (LI) to achieve indent in several browsers.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Internet Explorer, Mosaic, Netscape and Opera all exhibit the indenting
+                 behavior with this HTML.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Strictly speaking, this HTML is not valid with respect to the established
+                 standards. Whenever you use illegal HTML the end result can NOT be
+                 guaranteed. This method should not be used.<br>[Note: One could argue that
+                 using only a list structure such as the list header (LH) element
+                 existing only in the expired HTML 3.0 draft would be an instance where
+                 you could get away with this behavior... still, syntax like LH is
+                 deprecated markup and not recommended.]
+             </ul>
+     </dl>
+
+     <a name="img"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> &lt;<a href="../tagpages/i/image.htm">Img</a>&gt;
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE1</b>|<i class="fs"><b>M1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>Use of a transparent image of desired indentation width dimension or
+             using a small (1 X 1 pixel will suffice and keeps download time
+             minimal) transparent image with explicit width dimension allows
+             definition of the desired white space area.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Allows pixel level indentation control.
+             <li>This method also allows the creation of floating spacing elements.
+             <li>Fair degradation can occur by using the ALT attribute - browsers often
+                 preserve multiple spaces in its display.
+             <li>Most graphical browsers support image insertion.
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Text-only browsers will not be able to render the desired graphic
+                 indentation.
+             <li>ALT attribute to the image tag may collapse multiple consecutive
+                 spaces to one.
+             <li>Extra download request and time is necessary to load the image.
+             <li>Only indents a single line of text unless more recent
+                 tags/attributes are used (Tables or floating IMG ALIGN attributes.)
+             <li>Browsers that support images but do not support <em>transparent</em>
+                 images may display a colored image in the requested indentation space.
+             </ul>
+     </dl>
+
+     <a name="table"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> <a href="../tagpages/tables.htm">Tables</a>
+     <dt><b class="subheading">Support:</b> 
+         [<b class="s">IE2</b>|<i class="fs"><b>M2A8</b></i>|<b class="s">N1.1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>Using the first column of a table or the first cell of a row to
+             control indentation can be quite successful. Many methods can be
+             used to size this first column: transparent images or non-breaking
+             spaces in the cell content, or explicit WIDTH attribute declarations
+             for the cell definitions.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Can control either first line or entire blocks of text.
+             <li>Allows pixel level indentation size control.
+             <li>Complex indentation appearances are possible using tables
+                 (COLSPAN and ROWSPAN attributes allow even greater
+                 display possibilities.)
+             <li>In-cell methods used to create indentation (transparent images
+                 and non-breaking spaces) degrade well in browsers that do not
+                 understand tables.
+             <li>Almost all browsers now support Tables
+             </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li><em>Historically</em>, tables have not always been supported. Very
+                 old browsers are not likely to support them.
+             <li>Browsers that do not allow nested tables may not display nested
+                 content well.
+             <li>Using table structuring mechanisms to control indentation size
+                 (such as WIDTH attributes) will not degrade well on browsers that
+                 do not understand tables.
+             <li>Table structures require more HTML tags to create - this can cause
+                 longer download time in contrast to some other indenting methods.
+             <li>Ever since tables were created, they were used to create spacing and 
+                 alignments for one or more text and/or other content objects. 
+                 Tables should, strictly speaking, represent <em>tabular data.</em> 
+                 Nothing about a table strictly means "indent me" - that is just what 
+                 many users and authors have come to expect. Authors should not rely on this.
+             </ul>
+     </dl>
+
+         <a name="css"></a>
+     <hr width="50%" size=1>
+     <dl>
+     <dt><big><b class="mainheading">What:</b></big> <a href="http://www.blooberry.com/indexdot/css/">Cascading
+               Style Sheets</a> <span class="external">[--&gt;Index DOT Css]</span>
+     <dt><b class="subheading">Support:</b> 
+         [<i class="fs"><b>IE3B1</b></i>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dt><b class="subheading">How:</b>
+         <dd>Using Cascading Style Sheet Margin and/or Padding properties on
+             most <em>ANY</em> HTML allows indentation on any side of an
+             element - even negative values with margins.
+     <dt><b class="subheading">Pros:</b>
+         <dd><ul type=disc>
+             <li>Higher degree of control possible on most any element than with
+                 any other method.
+             <li>Rendering information can be attached to HTML elements without
+                 losing the original semantic meaning (good backward compatibility.)
+           </ul>
+     <dt><b class="subheading">Cons:</b>
+         <dd><ul type=disc>
+             <li>Older browsers will never support Cascading Style Sheets. Newer 
+                 browsers <em>DO</em> support CSS with varying degrees of accuracy.
+             </ul>
+     </dl>
+     <br><br>
+
+<a name="conclusion"></a>
+<big><b class="mainheading">Conclusions</b></big>
+<hr width="30%" align=left size=1>
+Of the common methods mentioned here, only a few work really well on many
+browsers. The prime question you should ask when you wish to indent is
+&quot;Does the method degrade well on non-supporting browsers?&quot; The
+answer should be fairly easy after that. To help though, here is a summary:
+<table border=1 cellspacing=0 cellpadding=5>
+<tr>
+     <th valign=bottom><b class="subheading">Use is Encouraged</b></th>
+     <th valign=bottom><b class="subheading">Works OK in Some<br>
+         or Most Cases</b></th>
+     <th valign=bottom><b class="subheading">Use is Discouraged</b></th>
+</tr>
+<tr>
+     <td align=left valign=top style="background-color: #009900">
+         <ul>
+         <li>Cascading Style Sheets</li>
+         <li>Images</li>
+         <li>Tables</li>
+         </ul></td>
+     <td align=left valign=top style="background-color: #ffff33"><ul>
+         <li>Non-breaking Spacing</li>
+         <li>Preformatted Text</li>
+         <li>Blockquotes</li>
+         <li>Definition Lists</li>
+         </ul>
+     </td>
+     <td align=left valign=top style="background-color: #990000"><ul>
+         <li>The SPACER element</li>
+         <li>Bad list structures</li>
+         </ul>
+     </td>
+</tr>
+</table>
+<br>
+<b class="alert">Personal Opinion Addendum:</b><br>
+It has been several years since I first wrote this page, and browsers have come a long 
+way, as has popular practice in authoring. While the standards have always wanted
+authors to author documents semantically marked up correctly with respect to their 
+contents, in reality it was often not an option.<br><br>
+
+But authors should no longer ignore these wishes if we are to create, or at least 
+slowly evolve the web into a domain of correctly marked-up documents. Of the 
+recommended methods for indentation listed above, I now can really only recommend 
+one method to reliably indent: CSS. With the advent of greater personalization 
+given to readers, different rendering devices (such as cell phones), and the 
+trends towards making the web more accessible to all readers and devices it is 
+silly to try and guarantee indentation...any method you choose is simply an "indent 
+me <em>please</em>." There simply is <em>NO</em> 100% reliable way to indent...Get 
+over it. =) Let go of attempting to create pixel-perfect pages and 
+give in to the adaptive rendering way of thinking.<br><br>
+</td></tr>
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

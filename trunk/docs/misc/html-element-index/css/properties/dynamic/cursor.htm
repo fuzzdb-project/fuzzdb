@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cursor - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">cursor</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]<br></td>
+    <td align=center><b class="alert">Other Dynamic<br>Content Properties</b><br></td>
+</tr>
+<tr>
+    <td align=center>
+    <a href="accelerator.htm">accelerator</a><br>
+    <a href="filter.htm">filter</a><br>
+    <a href="behavior.htm">behavior</a><br>
+    <a href="zoom.htm">zoom</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">Auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Spec: Yes; In Practice: Not always (see below)</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual, Interactive</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/ui.html#cursor-props">CSS2: Sect. 18.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/ui.html#cursor-props">CSS2.1: Sect. 18.1</a><br>
+        <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/cursor.asp#cursor">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property controls the type of cursor that is used when a pointing
+        device is over an element. Accepts a comma separated list of the below
+        values. Browsers should attempt to first use the cursor indicated on
+        the left, working to the right until it has a cursor it can use.
+        <br><br>
+
+        <b class="alert">Note:</b> Although the CSS spec says that this property is 
+        inherited, there are some cases in browsers where it is not explicitly so. 
+        Some elements that use a different default cursor (eg: hyperlinks, text entry 
+        elements) will override the parent cursor type by default unless explicitly 
+        set to "inherit".
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">default</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Browser default cursor. Often an arrow.</dd>
+
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Browser determines what cursor to display according to context.</dd>
+
+<dt><b class="subheading">[URL]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        URL of a custom cursor to be used for the specified selector.
+        If multiple URLs are listed for a cursor, the leftmost one
+        is used. If that is not available, an attempt is made for the
+        the next one indicated to the right, and so on. If none of
+        the URL-defined cursors can be used, a generic cursor
+        indicated at the end of the list is used.</dd>
+
+<dt><b class="subheading">n-resize|ne-resize|e-resize|se-resize|<br>
+    s-resize|sw-resize|w-resize|nw-resize</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate when an edge of a box is to be moved/re-sized. Values 
+        represent directions relative to up/north.</dd>
+
+<dt><b class="subheading">crosshair</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Usually resembles a plus sign ('+').</dd>
+
+<dt><b class="subheading">pointer</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE6</b>|<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to present an actively selectable element, such as a hyperlink.</dd>
+
+<dt><b class="subheading">move</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate when something is movable.</dd>
+
+<dt><b class="subheading">text</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that content is selectable. Often represented using an I-bar.</dd>
+
+<dt><b class="subheading">wait</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>]  
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that the user must wait because the program
+        is busy. Usually represented by an hourglass or clock.</dd>
+
+<dt><b class="subheading">help</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that help is available for the element. Often
+        represented as a question mark or balloon.</dd>
+
+<dt><b class="subheading">hand</b></dt>
+<dt>[<b><i class="fs">IE4</i></b>|<b class="s">O7</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Use a hand icon.</dd>
+
+<dt><b class="subheading">all-scroll</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Use an up/down/left/right arrow with a dot in the middle. Used to indicate
+        that content can be scrolled in any direction.</dd>
+
+<dt><b class="subheading">col-resize</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that a column can be horizontally re-sized. Represented
+        with a vertical bar in the middle of two arrows pointing in opposite
+        left/right directions.</dd>
+
+<dt><b class="subheading">row-resize</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that a row or item can be vertically re-sized. Represented
+        with a horizontal bar in the middle of two arrows pointing in opposite
+        up/down directions.</dd>
+
+<dt><b class="subheading">no-drop</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that a dragged item cannot be dropped at the current
+        cursor position. Represented as a hand next to a small circle with a
+        slash through it.</dd>
+
+<dt><b class="subheading">not-allowed</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that a requested action can not be performed. Represented
+        as a circle with a slash through it.</dd>
+
+<dt><b class="subheading">progress</b></dt>
+<dt>[<b><i class="fs">CSS2.1</i></b>]
+    [<b><i class="fs">IE6</i></b>|<b class="s">O7.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates that a process is running in the background, which will not
+        affect user interaction with the system. Represented as an arrow with
+        an hourglass next to it.</dd>
+
+<dt><b class="subheading">vertical-text</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to represent editable vertical content. Represented as a horizontal I-bar.</dd>
+
+<dt><b class="subheading">alias</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Use a cursor to indicate a shortcut or alias to another object.
+        Often represented as an arrow with a small curved arrow next to it.</dd>
+
+<dt><b class="subheading">cell</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that one or more "cells" (as in a spreadsheet) may be
+        selected. Often rendered as a thick plus-sign, possibly having a dot in
+        the middle.</dd>
+
+<dt><b class="subheading">copy</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that content will be copied. Often rendered as an
+        arrow with a small plus next to it.</dd>
+
+<dt><b class="subheading">count-down</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate a "count-down" operation by a program.</dd>
+
+<dt><b class="subheading">count-up</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate a "count-up" operation by a program.</dd>
+
+<dt><b class="subheading">count-up-down</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate a program is "counting-up" and "counting-down" in succession
+        operation in a program.</dd>
+
+<dt><b class="subheading">grab</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that content is "grabbable". Often rendered as an
+        open hand.</dd>
+
+<dt><b class="subheading">grabbing</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that content is in the act of being "grabbed". Often
+        rendered as a closed/clenched hand.</dd>
+
+<dt><b class="subheading">spinning</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used to indicate that processing is being done by the program. Slightly
+        different from the 'wait' value - 'wait' should indicate that no user
+        interaction with the program is possible while the cursor is in that state,
+        whereas 'spinning' indicates that the user may still interact with the
+        program. Sometimes rendered as a spinning, striped ball.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">blockquote</b> {
+        <span class="property">cursor:</span> help }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">blockquote</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">cursor:</span>
+        help&quot;&gt;To be or not to be, that is the
+        question&lt;/<b class="tagname">blockquote</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2.1 adds the "progress" value.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+        <dd><b class="alert2">6.0+:</b>
+        <dd>- Beginning in version 6.0 supports custom cursors via the [URL] 
+            syntax, but it only supports .cur and .ani file types.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+        <dd><b class="alert2">7.0+:</b>
+        <dd>- Even though this property is supposed to be inherited, using "cursor: inherit" 
+            has no effect when it is applied to elements that  have their own 
+            default cursor behavior (eg: hyperlinks, some form widgets, etc.)
+        </dl>
+    <li><b class="alert">Safari</b>
+        <dl>
+        <dd><b class="alert2">1.0-1.1:</b>
+        <dd>- Although proper support for this property did not begin until 
+            Safari 1.2, previous version do appear to do something with this property.
+            The "auto" and "pointer" values appear to work as expected, while the 
+            following values produce an arrow/pointer icon: progress, all direction values 
+            (with the exception of "w-resize". How odd!), wait, text, move, crosshair and default.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

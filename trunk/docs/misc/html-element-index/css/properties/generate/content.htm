@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Content - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">content</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]<br></td>
+    <td align=center><b class="alert">Other Generated<br>Content Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top align=center><a href="quotes.htm">quotes</a><br>
+    <a href="counterreset.htm">counter-reset</a><br>
+    <a href="counterinc.htm">counter-increment</a><br>
+    <a href="incsource.htm">include-source</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>Empty string</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>:before and :after Pseudo-elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/generate.html#quotes-insert">CSS2: Sect. 12.4.2</a>,
+        <a href="http://www.w3.org/TR/CSS21/generate.html#content">CSS2.1: Sect 12.2</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property automatically generates content to attach before/after
+        a CSS selector (using the :before and :after pseudo-elements.) One or more
+        keywords may be specified for this property, but the content does not actually
+        exist in the document tree; it is generated "on-the-fly." The 'display'
+        property is used with this property to specify the type of rendering box for
+        the generated content.</dd>
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">normal</b></dt>
+<dt>[<b><i class="fs">CSS2.1</i></b>] [<b><i class="fs">O7</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        For pseudo-elements, no content will be generated.</dd>
+
+<dt><b class="subheading">[string]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The content of the value will be used as the generated text.</dd>
+
+<dt><b class="subheading">[URL]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        An absolute or relative URL pointing to an embeddable object. If rendering
+        of the file is not possible by the browser, it should be ignored.</dd>
+
+<dt><b class="subheading">[counter()|counters()]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        <b class="alert">counter(name) | counter(name, list-style-type)</b><br>
+        Generated text is produced using "name" (the name of the counter at
+        the current point in the document tree), and "list-style-type" accepts one
+        of the named values used for the '<a href="../list/lstype.htm">list-style-type</a>'
+        property (default "list-style-type" for the counter() function is 'decimal'.)
+        <br><br>
+
+        <b class="alert">counters(name, string) | counters(name, string, list-style-type)</b><br>
+        All counters with the indicated "name" label at the current point
+        in the document tree will become the generated text, separated by the
+        specified string value. The counters are rendered using the "list-style-type"
+        (one of the named values used for the '<a href="../list/lstype.htm">list-style-type</a>'
+        property, default "list-style-type" for the counters() function being 'decimal'.)</dd>
+
+<dt><b class="subheading">open-quote|close-quote</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        A quote of the indicated type is inserted as appropriate, taking its value
+        from the 'quotes' property.</dd>
+
+<dt><b class="subheading">no-open-quote|no-close-quote</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        A quote is not inserted for the open/close quote, but the quote nesting level
+        is still incremented/decremented accordingly.</dd>
+
+<dt><b class="subheading">[attr(X)]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This syntax returns a string which is the unparsed value of the indicated
+        element attribute (X) for the current CSS selector. If the specified
+        attribute does not exist, an empty string should be returned. Case
+        sensitivity of the attribute name should depend on the language in use
+        (eg: XML is case sensitive while HTML is not.) If the system supports it,
+        you can also supply a namespace prefix to narrow down the attribute selection
+        as well, eg: "attr(foo|align)" where "foo" is the namespace prefix,
+        and "align" is the attribute being selected in that namespace <em>ONLY</em>.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">em:before</b> {
+        <span class="property">content:</span> url("ding.wav") }</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 states that newlines can be placed in generated content by using an
+        escape code ("\A" - the Unicode hex value for a carriage return) within the
+        value of a string in the 'content' property.
+    <li>CSS2 also states that the content of the :before and :after pseudo-elements
+        will carry the same style as the element they apply to (there is no way yet
+        to select and apply styles to only portions of generated content.)
+    <li>Although this property allows for the embedding of external URL objects, CSS2
+        does not allow the additional properties that are usually associated with
+        replaced objects, such as sizing control and accessibility descriptions.
+    <li>CSS2.1 adds the "normal" value.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape 6.x: for the [URL] syntax, I only tried a few different data
+        types, but I found that .gifs (and presumably other image types) work
+        here, but .txt and .htm data types do not.
+    <li>Opera up to 6.x: this property only applied if a :before or :after pseudo-element was used.<br>
+        7.x+: This property now applies to all elements and do not require pseudo-elements to apply.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

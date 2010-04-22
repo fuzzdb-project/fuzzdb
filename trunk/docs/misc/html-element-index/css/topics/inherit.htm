@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Style Sheet Inheritance</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">CSS Inheritance</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<br><br>
+<big><b class="mainheading">Inheritance</b></big>
+<hr width="30%" size=1 align=left>
+If a particular CSS property is not explicitly specified for an element,
+what rendering properties should the element have? For assigning
+properties to multiple selectors, it would be redundant, time-consuming
+and space-consuming having to re-state the same properties for multiple
+sections and levels of a document. The size of the style sheet
+information would quickly become unwieldy. Additionally, a style sheet
+author may not know ahead of time the structure of the document the style
+sheet will be attached to. CSS avoids this problem by allowing style
+properties to be inherited between elements.
+<br><br>
+
+<big><b class="mainheading">Every Document Is A Tree</b></big>
+<hr width="30%" size=1 align=left>
+Every document containing markup is a tree of information, where nested
+elements are nodes that branch from the topmost element (In the case of
+HTML, the HTML element is the top of this tree.) Elements nested within
+other elements represent branches, while empty elements and text represent
+leaves of the tree. CSS allows some properties applied to certain elements
+to be inherited from those specified for parent elements further up the
+document tree (toward the root element.) Not all CSS properties are
+inherited, and those that are may not always be inheritable by all
+elements. Please refer to the pages for each of the
+<a href="../propindex/font.htm">individual CSS properties</a> to find a
+breakdown of inheritance rules.
+<br><br>
+
+<big><b class="mainheading">The Advantages of Inheritance</b></big>
+<hr width="30%" size=1 align=left>
+Inheritance quickly becomes nothing short of vital for applying style
+information when you consider the following:
+
+<ul type="disc">
+    <li>It reduces redundancy of author effort and storage space because a
+        rule only needs to be declared once for multiple nodes of a
+        document tree. Beyond this, only exceptions to the inherited styles
+        need to be given to override these rules.
+    <li>When a document's structure will be ambiguous, as is possible in
+        XML markup languages, inheritance will often be the author's best
+        tool to control rendering with complex documents.
+</ul>
+
+<big><b class="mainheading">Notes</b></big>
+<hr width="30%" size=1 align=left>
+<ul type="disc">
+    <li>In HTML, default properties for a document can be set by applying
+        style rules to the HTML or BODY elements.
+    <li>While not all CSS properties automatically inherit, CSS2 introduces
+        a new value for every CSS property ("inherit") which automatically
+        causes the property to be inherited from a parent in the element
+        tree. This also gives the inheritance directive a greater weight in
+        the <a href="cascade.htm">Cascade</a> calculation.
+</ul>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</body>
+</html>

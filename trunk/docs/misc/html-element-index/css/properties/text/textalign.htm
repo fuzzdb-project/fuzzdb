@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text-Align - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">text-align</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Text Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="wordspace.htm">word-spacing</a><br>
+        <a href="letterspace.htm">letter-spacing</a><br>
+        <a href="whitespace.htm">white-space</a><br>
+        <a href="wordwrap.htm">word-wrap</a><br>
+        <a href="textalignlast.htm">text-align-last</a><br></td>
+    <td valign=top><a href="textdec.htm">text-decoration</a><br>
+        <a href="texttrans.htm">text-transform</a><br>
+        <a href="textshadow.htm">text-shadow</a><br>
+        <a href="textindent.htm">text-indent</a><br>
+        <a href="textunderpos.htm">text-underline-position</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>Dependent on browser defaults and language direction</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block-level elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">center</b>&gt; | &lt;<b class="tagname">p</b>|<b
+        class="tagname">hX</b>|<b class="tagname">div</b>|<b
+        class="tagname">table</b>|<b class="tagname">thead</b>|<b
+        class="tagname">tbody</b>|<b class="tagname">tfoot</b>|<b
+        class="tagname">tr</b>|<b class="tagname">th</b>|<b class="tagname">td</b>
+        <span class="tagattrib">ALIGN</span>=&quot;value&quot;&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#text-align">CSS1: Sect 5.4.6</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/text.html#alignment-prop">CSS2: Sect 16.2</a>,
+        <a href="http://www.w3.org/TR/CSS21/text.html#alignment-prop">CSS2.1: Sect 16.2</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property details how text will be horizontally aligned within the current element.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">left</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Left aligns all text in the current element.</dd>
+
+<dt><b class="subheading">right</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Right aligns all text in the current element.</dd>
+
+<dt><b class="subheading">center</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Center aligns all text in the current element.</dd>
+
+<dt><b class="subheading">justify</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Applies double text justification to all text content in the current element.</dd>
+
+<dt><b class="subheading">[string]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Calculated</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies a string around which cells in a table column will align. Only
+        applies to table cells. If used for other element types, it will be
+        treated as as "left" or "right" depending on the current language writing
+        direction ("left" for English.)</dd>
+
+<dt><b class="subheading">-moz-center</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Mozilla proprietary value - authors should not use this value.
+        CSS should be inherited in to table structures, so properties like "text-align"
+        should apply globally to all cells in the table. In Netscape 4.x, the
+        effects of this property did NOT inherit into table cell content. This
+        property value lets inheritance skip table content for "center" text-alignment
+        like Netscape 4.x did, probably to allow for "backward compatibility mode."</dd>
+
+<dt><b class="subheading">-moz-right</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Mozilla proprietary value - authors should not use this value.
+        CSS should be inherited in to table structures, so properties like "text-align"
+        should apply globally to all cells in the table. In Netscape 4.x, the
+        effects of this property did NOT inherit into table cell content. This
+        property value lets inheritance skip table content for "right" text-alignment
+        like Netscape 4.x did, probably to allow for "backward compatibility mode."</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">blockquote</b> {
+        <span class="property">text-align:</span> justify }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">blockquote</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">text-align:</span> justify&quot;&gt;this<br>blockquote
+        text is double justified&lt;/<b class="tagname">blockquote</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> The value of "justify" may be
+        treated by CSS1 conformant browsers as "left" or "right" depending on
+        the current language writing direction ("left" for English.)
+    <li>If you are used to using &lt;CENTER&gt; and &lt;DIV ALIGN&gt; in HTML
+        to set alignment on block structures, it is done a bit differently in CSS.
+        Using 'text-align' does not align the blocks themselves, it aligns the
+        <em>text content</em> within a block. To center a block structure in CSS (such as,
+        say, a TABLE), you might use something like:<br>
+        &#160;&#160;&#160;<b class="selector">table</b> { <span class="property">margin-left:</span> auto;
+        <span class="property">margin-right:</span> auto; }<br>
+        (which works in IE6+ [strict], N6+, and O4+)
+    <li>The [string] value type has been removed in CSS2.1.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- [Reported elsewhere] Macintosh versions do not support the
+                "justify" value for this property.
+            <dd>- Specifying alignment for form button widgets (Input
+                Type=Submit|Reset|Button) and intrinsic controls (Input
+                Type=Checkbox|Radio) has no effect. Form Text controls (Input
+                Type="File|Text", Textarea) apply the alignment within the field.
+            <dd>- When applied to the Table element, this property applies to
+                content within the individual table cells, not the table structure
+                relative to its containing block.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- When applied to form fields, the alignment is relative to the
+                field's containing block.
+            <dd>- When applied to list items, the alignment is applied to the
+                list item before it.
+            <dd>- When applied to inline/replaced elements, alignment is applied
+                to the element, along with any non-marked up content before the
+                element as well. After the element ends, a line-break is applied.
+            <dd>- When applied to the Table element, this property applies to
+                content within the individual table cells, not the table structure
+                relative to its containing block.
+            <dd>- When content is given the "justify" value, any 'background-color'
+                effect is only applied to the word content and normal spacing between
+                them. Extra justification spacing uses the 'background-color' of
+                the parent element.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- This property does not apply to form fields
+            <dd>- When applied to the Table element, this property applies to
+                content within the individual table cells, not the table structure
+                relative to its containing block.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

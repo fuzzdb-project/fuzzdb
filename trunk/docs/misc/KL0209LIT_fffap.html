@@ -1,0 +1,776 @@
+<html>
+<head>
+<title>Fuzzing for Fun and Profit</title>
+<pre>
+KL0209LIT_fffap.txt
+02.11.2009
+Krakow Labs Literature [www.krakowlabs.com]
+Fuzzing for Fun and Profit
+http://www.krakowlabs.com/res/lit/KL0209LIT_fffap.txt
+rush@KL (Jeremy Brown) [rush@krakowlabs.com]
+KL0209LIT_fffap.txt
+
+                                                    Krakow Labs Literature
+                                                 &quot;Fuzzing for Fun and Profit&quot;
+                                         rush@KL (Jeremy Brown) [rush@krakowlabs.com]
+
+============================================================================================================================
+
+1)   Introduction
+1.1) Fuzzer Specifications
+
+2)   Local Fuzzing
+2.1) Information Gathering
+2.2) Writing the Fuzzer (mbsefuzz.c)
+2.3) Fuzzing the Target
+
+3)   Remote Fuzzing
+3.1) Information Gathering
+3.2) Writing the Fuzzer (sftpfuzz.pl)
+3.3) Fuzzing the Target
+
+4)   Conclusion
+4.1) Disclaimer
+
+============================================================================================================================
+
+1) Introduction
+
+Many different resources define fuzzing many different ways. I believe this definition is more suiting than most:
+
+&quot;Fuzzing is targeting input and delivering data that is handled by a target with the intent of identifying bugs.&quot;
+
+Fuzzing can occur theoretically where ever input is possible.
+
+There are two kinds of fuzzing: &quot;dumb&quot; and &quot;smart&quot;. Dumb fuzzing is fuzzing without regard for any guidelines that may be
+required for input. Smart fuzzing is just the opposite. While dumb fuzzers are easy to write and easy to use, smart fuzzers
+are almost always preferred. Smart fuzzers actually know what how the handle the target's specifications for data. what input
+it can fuzz, and how to fuzz it. When we refer to fuzzers in this literature, the reader should assume we are elaborating on
+smart fuzzers.
+
+Fuzzing can be done locally or remote. Some examples of local fuzzing is through command line, manipulating file formats, user
+interface input, and more. Remote fuzzing is usually fuzzing protocols, servers, etc.
+
+The data you use to fuzz with, called the fuzzing oracle, is essential to being successful at fuzzing. The fuzzing oracle
+can be random data, or data that is not random at all but still provides reliable angles to fuzz which have proved successful
+in triggering bugs in the past. This article focuses on the latter technique. Linux is also the host operating system that
+our fuzzing examples will work on best and/or without modification.
+
+The following table is information on what a fuzzing oracle should at least have to possibly trigger vulnerabilities.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Buffer Overflows
+The ability to overflow buffers in the stack or heap; often exploitable to execute code unless data is uncontrollably corrupted.
+
+EXAMPLE: sprintf(buf, &quot;%s&quot;, input); [we control 'input']
+-------------------------------------------------------------------------------------------------------------------------------
+Format Strings
+The ability to control a function's format string; often exploitable to execute code unless writing data isn't possible, then
+information disclosure may be achieved.
+
+EXAMPLE: syslog(priority, input); [we control 'input']
+-------------------------------------------------------------------------------------------------------------------------------
+Integer Overflows
+The ability to overflow an integer; often non-exploitable unless integer can be overflowed to affect size calculation of a buffer
+where we control input.
+
+EXAMPLE: if(len &gt; 512) { return -1; } memcpy(buf, input, len); [we control 'input' and 'len']
+-------------------------------------------------------------------------------------------------------------------------------
+Out-of-Bounds Breakage
+The ability to exploit unsafe functions; often exploitable to read, write, or execute files unless integrity checks are placed
+in passing functions.
+
+EXAMPLE: system(input); [we control 'input' and it is not sanitized]
+-------------------------------------------------------------------------------------------------------------------------------
+
+Too much data, your fuzzer shows characteristics of a stress test. Not enough data and you may miss something. Finding that
+balance shouldn't be a main goal, nor should it be completely defined: there is no line to cross in fuzzing. You either
+fuzz, or you don't, and there is no standard, just structure; find your niche and develop beauty in code and command line.
+
+Fuzzing includes a lot of testing. You could spend hours and hours modifying and compiling and running the same but slightly
+different code over and over just to get the better results. Planning, preparation, and testing are a part of fuzzing, and
+laboring hours on end for the humble task of perfection, stability, and reproduceability can thankfully be very rewarding.
+
+Fuzzing is useful because...
+
+1) Fuzzing can find bugs in firmware/software that aren't open source, therefore restricting classical auditing by the public.
+2) Fuzzing can be a fast and reliable bug finding solution, making source code auditing look so hard and fuzzing seem easy.
+3) Fuzzing can also be used as a stress tester and memory management problem detector. It is, as concepted, a bug finding art.
+
+============================================================================================================================
+
+1.1 Fuzzer Specifications
+
+Fuzzing is not usually done by hand, so people write fuzzers. There are three key elements each fuzzer should include:
+
+1) A robust fuzzing oracle
+2) A specific data format to prepare for fuzzing
+3) A way of communicating with the target
+
+Fuzzers should be semi-automatic or automatic as they fuzz and may provide features to create a quality atmosphere when
+fuzzing. Some fuzzer include debuggers, event notification such as alerts and logging, and sometimes even automatic exploit
+generation. Fuzzing features, in most situations, are only limited to the imagination.
+
+A typical fuzzer could be outlined something like this (this example is in no particular programming or scripting language):
+
+(BEGIN FUZZER)
+
+FUZZORACLE = &quot;A&quot; x 550, &quot;A&quot; x 1100, &quot;A&quot; x 2100, &quot;%n%n%n%n%n&quot;, &quot;-1&quot;, &quot;32767&quot;, &quot;test|id &gt; /tmp/fuzzed|test&quot;;
+
+.....
+
+OPTIONS = &quot;FILE&quot;, &quot;DIRECTORY&quot;, &quot;SEND&quot;, &quot;STORE&quot;, &quot;RENAME&quot;;
+
+.....
+
+loop(run-through-fuzz-data) { send(option[count], fuzzoracle[count], target); }
+
+(END FUZZER)
+
+============================================================================================================================
+
+2. Local Fuzzing
+
+Local fuzzing deals with fuzzing applications locally or hosted on the target system. This can include, but isn't limited to:
+
+Command Line Fuzzing - Fuzzing applications via the command line and/or environmental variables
+File Format Fuzzing - Fuzzing applications that read files in a specific format or format(s)
+Kernel Fuzzing - Fuzzing core kernel features, kernel modules, and system calls
+
+As said previously, if a target takes input, it can probably be fuzzed.
+
+============================================================================================================================
+
+2.1 Information Gathering
+
+As the first step in many technical projects, information gathering is vital. Knowing exactly what input your fuzzing and how
+your target works is very important when writing a fuzzer. Information sources include RFCs, API specifications, other
+technical documentation, sniffing, and reverse engineering.
+
+For this example of local fuzzing, we will be exploring MBSE BBS (http://www.mbse.eu/mbse/mbsebbs/index.html) which had a
+local buffer overflow in its suid &quot;mbuseradd&quot; program. Writing a fuzzer shouldn't be very hard for this application.
+
+linux:/home/fuzz/mbsebbs-0.70.0/unix# make install
+install -c -s -o root -g root -m 6711 mbuseradd /opt/mbse/bin
+install -c -s -o root -g root -m 6711 mbpasswd  /opt/mbse/bin
+install -c -s -o root -g root -m 0755 mblogin   /opt/mbse/bin
+linux:/home/fuzz/mbsebbs-0.70.0/unix# exit
+exit
+fuzz@linux:~$ 
+
+First, lets see exactly what we can fuzz.
+
+fuzz@linux:~$ /opt/mbse/bin/mbuseradd
+
+mbuseradd commandline:
+
+mbuseradd [gid] [name] [comment] [usersdir]
+fuzz@linux:~$  
+
+Seems we have 4 different arguments we can fuzz. Now lets check out the source and look for any environmental variables
+that it might take as input.
+
+fuzz@linux:~$ grep getenv audit/mbse*/*/mbuseradd.c
+    sprintf(shell, &quot;%s/bin/mbsebbs&quot;, getenv(&quot;MBSE_ROOT&quot;));
+fuzz@linux:~$
+
+Alright, we can fuzz MBSE_ROOT too.
+
+============================================================================================================================
+
+2.2 Writing the Fuzzer
+
+Fuzzers can be written in probably any programming or scripting language but this example will be written in C.
+
+When writing a fuzzer, keep in mind the principles we discussed earlier in section 1.1.
+
+[mbsefuzz.c]
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/wait.h&gt;
+
+#define MBUSERADD  &quot;/opt/mbse/bin/mbuseradd&quot;
+#define LOGFILE    &quot;mbsefuzz.log&quot;
+
+#define FZORCTOTAL 20-1
+#define ENVTOTAL   1-1
+
+#define GID      &quot;1&quot;
+#define NAME     &quot;mbsefuzz&quot;
+#define COMMENT  &quot;fuzzing&quot;
+#define USERSDIR &quot;/tmp&quot;
+
+void fuzz(char *bin, char *desc, char *src, char *a, char *b, char *c, char *d);
+
+struct
+{
+
+     char *data;
+     char *desc;
+
+}
+
+fzorc[] = // fuzzing oracle
+{
+
+     {&quot;&quot;, &quot;A x 550&quot;},
+     {&quot;&quot;, &quot;A x 1100&quot;},
+     {&quot;&quot;, &quot;A x 2100&quot;},
+     {&quot;&quot;, &quot;A x 4200&quot;},
+     {&quot;&quot;, &quot;A x 8400&quot;},
+
+     {&quot;%n%n%n%n%n&quot;, &quot;%n x 5&quot;},
+     {&quot;%%20n&quot;, &quot;%%20n&quot;},
+     {&quot;%n%p%s%d%x&quot;, &quot;%n%p%s%d%x&quot;},
+     {&quot;%.1024d&quot;, &quot;%.1024d&quot;},
+     {&quot;%.2049d&quot;, &quot;%.2049d&quot;},
+
+     {&quot;-1&quot;, &quot;-1&quot;},
+     {&quot;32767&quot;, &quot;32767&quot;},
+     {&quot;65535&quot;, &quot;65535&quot;},
+     {&quot;-2147483647&quot;, &quot;-2147483647&quot;},
+     {&quot;0xffffffff&quot;, &quot;0xffffffff&quot;},
+
+     {&quot;a|id &gt; /tmp/FZ|b&quot;, &quot;a|id &gt; /tmp/FZ|b&quot;},
+     {&quot;a`id &gt; /tmp/FZ`b&quot;, &quot;a`id &gt; /tmp/FZ`b&quot;},
+     {&quot;a'id &gt; /tmp/FZ'b&quot;, &quot;a'id &gt; /tmp/FZ'b&quot;},
+     {&quot;a;id &gt; /tmp/FZ;b&quot;, &quot;a;id &gt; /tmp/FZ;b&quot;},
+     {&quot;a&amp;&amp;id &gt; /tmp/FZ&amp;&amp;b&quot;, &quot;a&amp;&amp;id &gt; /tmp/FZ&amp;&amp;b&quot;},
+
+};
+
+struct
+{
+
+     char *data;
+
+}
+
+envvar[] = // options example, usually more than one in there
+{
+
+     {&quot;MBSE_ROOT&quot;},
+
+};
+
+void fuzz(char *bin, char *desc, char *src, char *a, char *b, char *c, char *d)
+{
+
+FILE *fd;
+
+if(fork() == 0)
+{
+
+     execl(bin, bin, a, b, c, d, 0);
+
+}
+
+else
+{
+
+int pid, signal, status;
+
+     pid = wait(&amp;status);
+
+if(WIFSIGNALED(status))
+{
+
+     signal = WTERMSIG(status);
+     printf(&quot;***** SIG%d CAUGHT [%s + %s] *****\n&quot;, signal, src, desc);
+
+     fd = fopen(LOGFILE, &quot;a+&quot;);
+     fprintf(fd, &quot;[%s]-&gt;SIG%d [%s + %s]\n&quot;, bin, signal, src, desc);
+     fclose(fd);
+
+}
+}
+}
+
+int main()
+{
+
+char of1[550], of2[1100], of3[2100], of4[4200], of5[8400], *src, source[32];
+int i;
+
+     memset(of5, 'A', sizeof(of5));
+     of5[8400] = 0;
+     fzorc[4].data = of5;
+
+     memset(of4, 'A', sizeof(of4));
+     of4[4200] = 0;
+     fzorc[3].data = of4;
+
+     memset(of3, 'A', sizeof(of3));
+     of3[2100] = 0;
+     fzorc[2].data = of3;
+
+     memset(of2, 'A', sizeof(of2));
+     of2[1100] = 0;
+     fzorc[1].data = of2;
+
+     memset(of1, 'A', sizeof(of1));
+     of1[550] = 0;
+     fzorc[0].data = of1;
+
+src = &quot;CL:  GID&quot;;
+for(i = 0; i &lt;= FZORCTOTAL; i++) // loops
+{
+
+     fuzz(MBUSERADD, fzorc[i].desc, src, fzorc[i].data, NAME, COMMENT, USERSDIR);
+
+}
+
+src = &quot;CL:  NAME&quot;;
+for(i = 0; i &lt;= FZORCTOTAL; i++)
+{
+
+     fuzz(MBUSERADD, fzorc[i].desc, src, GID, fzorc[i].data, COMMENT, USERSDIR);
+
+}
+
+src = &quot;CL:  COMMENT&quot;;
+for(i = 0; i &lt;= FZORCTOTAL; i++)
+{
+
+     fuzz(MBUSERADD, fzorc[i].desc, src, GID, NAME, fzorc[i].data, USERSDIR);
+
+}
+
+src = &quot;CL:  USERSDIR&quot;;
+for(i = 0; i &lt;= FZORCTOTAL; i++)
+{
+
+     fuzz(MBUSERADD, fzorc[i].desc, src, GID, NAME, COMMENT, fzorc[i].data);
+
+}
+
+src = &quot;ENV: &quot;;
+for(i = 0; i &lt;= ENVTOTAL; i++)
+{
+
+char *env = envvar[i].data;
+
+     snprintf(source, sizeof(source), &quot;%s%s&quot;, src, env);
+
+for(i = 0; i &lt;= FZORCTOTAL; i++)
+{
+
+     setenv(env, fzorc[i].data, 1);
+     fuzz(MBUSERADD, fzorc[i].desc, source, GID, NAME, COMMENT, USERSDIR);
+
+}
+}
+
+     return 0;
+
+}
+
+[mbsefuzz.c]
+
+We now have a simple, local fuzzer with command line and environmental fuzzing capabilities, as well as fault detection.
+
+============================================================================================================================
+
+2.3 Fuzzing the Target
+
+Since we have written the fuzzer, we can compile and run it against our target.
+
+Note: Some of the fuzz data is valid for mbse and may add some accounts to your system, clean out /etc/passwd after use.
+
+fuzz@linux:~$ gcc -o mbsefuzz mbsefuzz.c
+
+fuzz@linux:~$ ./mbsefuzz
+mbuseradd: Argument 1 is too long
+mbuseradd: Argument 1 is too long
+mbuseradd: Argument 1 is too long
+mbuseradd: Argument 1 is too long
+mbuseradd: Argument 1 is too long
+useradd: unknown group %n%n%n%n%n
+useradd: unknown group %%20n
+useradd: unknown group %n%p%s%d%x
+useradd: unknown group %.1024d
+useradd: unknown group %.2049d
+useradd: unknown group -1
+.....
+useradd: invalid shell `AAAAA...../bin/mbsebbs'
+useradd: invalid shell `AAAAA...../bin/mbsebbs'
+useradd: invalid shell `AAAAA...../bin/mbsebbs'
+***** SIG11 CAUGHT [ENV: MBSE_ROOT + A x 4200] *****
+***** SIG11 CAUGHT [ENV: MBSE_ROOT + A x 8400] *****
+useradd: invalid shell `%n%n%n%n%n/bin/mbsebbs'
+useradd: invalid shell `%%20n/bin/mbsebbs'
+useradd: invalid shell `%n%p%s%d%x/bin/mbsebbs'
+useradd: invalid shell `%.1024d/bin/mbsebbs'
+useradd: invalid shell `%.2049d/bin/mbsebbs'
+.....
+useradd: invalid shell `a'id &gt; /tmp/FZ'b/bin/mbsebbs'
+useradd: invalid shell `a;id &gt; /tmp/FZ;b/bin/mbsebbs'
+useradd: invalid shell `a&amp;&amp;id &gt; /tmp/FZ&amp;&amp;b/bin/mbsebbs'
+fuzz@linux:~$
+
+fuzz@linux:~$ cat mbsefuzz.log
+[/opt/mbse/bin/mbuseradd]-&gt;SIG11 [ENV: MBSE_ROOT + A x 4200]
+[/opt/mbse/bin/mbuseradd]-&gt;SIG11 [ENV: MBSE_ROOT + A x 8400]
+fuzz@linux:~$
+
+Looks like we did catch a bug or two. Lets also quickly check /tmp for OBB.
+
+fuzz@linux:~$ ls /tmp/FZ*
+ls: /tmp/FZ*: No such file or directory
+fuzz@linux:~$ 
+
+Nope, no out-of-bounds breakage here. Let us now further explore what we did find.
+
+fuzz@linux:~$ cat mbsefuzz.log
+[/opt/mbse/bin/mbuseradd]-&gt;SIG11 [ENV: MBSE_ROOT + A x 4200]
+[/opt/mbse/bin/mbuseradd]-&gt;SIG11 [ENV: MBSE_ROOT + A x 8400] (same bug as previous)
+fuzz@linux:~$
+
+fuzz@linux:~$ export MBSE_ROOT=`perl -e 'print &quot;A&quot; x 4200'`
+fuzz@linux:~$ /opt/mbse/bin/mbuseradd        
+
+mbuseradd commandline:
+
+mbuseradd [gid] [name] [comment] [usersdir]
+fuzz@linux:~$ /opt/mbse/bin/mbuseradd a b c d
+Segmentation fault
+fuzz@linux:~$
+
+fuzz@linux:~$ su
+Password: 
+linux:/home/fuzz# gdb /opt/mbse/bin/mbuseradd
+GNU gdb 6.3
+Copyright 2004 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type &quot;show copying&quot; to see the conditions.
+There is absolutely no warranty for GDB.  Type &quot;show warranty&quot; for details.
+This GDB was configured as &quot;i386-linux&quot;...(no debugging symbols found)
+Using host libthread_db library &quot;/lib/libthread_db.so.1&quot;.
+
+(gdb) r a b c d
+Starting program: /opt/mbse/bin/mbuseradd a b c d
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+[Thread debugging using libthread_db enabled]
+[New Thread 16384 (LWP 11571)]
+(no debugging symbols found)
+(no debugging symbols found)
+
+Program received signal SIGSEGV, Segmentation fault.
+[Switching to Thread 16384 (LWP 11571)]
+0x41414141 in ?? ()
+(gdb) i r
+eax            0x0	0
+ecx            0xbfffd994	-1073751660
+edx            0x0	0
+ebx            0x41414141	1094795585
+esp            0xbfffe9d0	0xbfffe9d0
+ebp            0x41414141	0x41414141
+esi            0x41414141	1094795585
+edi            0x41414141	1094795585
+eip            0x41414141	0x41414141
+eflags         0x10246	66118
+cs             0x23	35
+ss             0x2b	43
+ds             0x2b	43
+es             0x2b	43
+fs             0x0	0
+gs             0x0	0
+(gdb) bt
+#0  0x41414141 in ?? ()
+#1  0x41414141 in ?? ()
+#2  0x41414141 in ?? ()
+#3  0x41414141 in ?? ()
+#4  0x64414141 in ?? ()
+#5  0x6220622f in ?? ()
+#6  0xbfffeb00 in ?? ()
+#7  0x40016ed8 in _r_debug ()
+#8  0xbfffeac4 in ?? ()
+#9  0xbfffea24 in ?? ()
+#10 0x400c630c in ?? () from /lib/libc.so.6
+#11 0x40069270 in ?? ()
+#12 0x40073f7e in __pthread_alt_unlock () from /lib/libpthread.so.0
+Previous frame inner to this frame (corrupt stack?)
+(gdb) q
+The program is running.  Exit anyway? (y or n) y
+linux:/home/fuzz# exit
+exit
+fuzz@linux:~$ 
+
+The instruction pointer (EIP) is overwritten along with many other registers with our fuzzing data.
+
+VULNERABLE CODE:
+
+[mbsebbs-0.70.0/unix/mbuseradd.c]
+
+    shell   = calloc(PATH_MAX, sizeof(char));
+
+.....
+
+    sprintf(shell, &quot;%s/bin/mbsebbs&quot;, getenv(&quot;MBSE_ROOT&quot;));
+
+[mbsebbs-0.70.0/unix/mbuseradd.c]
+
+Conclusion: Our target is suid root and contains an exploitable stack-based buffer overflow.
+
+Our fuzzer was able to detect it for us :)
+
+GNU/Linux MBSE-BBS 0.70.0 &amp; Below Stack Overflow Exploit
+http://www.milw0rm.com/exploits/3154
+
+============================================================================================================================
+
+3. Remote Fuzzing
+
+Remote fuzzing deals with fuzzing a target remotely or a the network. This can include, but isn't limited to:
+
+Network Protocol Fuzzing - Fuzzing applications or even a kernel that implements a specific protocol
+Database Fuzzing - Fuzzing database modules and/or database input sanitation policies
+Web Application Fuzzing - Fuzzing input vectors of web applications hosted on a web server
+
+============================================================================================================================
+
+3.1 Information Gathering
+
+For this example of remote fuzzing, we will be exploring GoodTech SSH Server (http://www.goodtechsys.com/sshdnt2000.asp)
+which was vulnerable to a remote buffer overflow vulnerability in its SFTP server part. We need to figure out the protocol
+standards and get information on how to communicate with the SSH/SFTP server in order to fuzz it.
+
+PERL extensions that can be installed through CPAN can be extremely helpful in writing an efficient fuzzer. There is actually
+a PERL extension that will allow us to communicate through SSH2 with SFTP servers making fuzzing a breeze, it is called
+Net::SSH2::SFTP (http://search.cpan.org/~dbrobins/Net-SSH2-0.18/lib/Net/SSH2/SFTP.pm). You will need to install libssh2
+(http://www.libssh2.org/wiki/index.php/Main_Page) first in order for Net::SSH2 to install correctly. After that, you can
+install Net::SSH2 by running &quot;cpan&quot; from your shell (as root, usually) and doing a &quot;install Net::SSH2&quot;. After you have
+installed the library and extension, we can use it for our perl-based SFTP fuzzer and it allows us to work with the SSH2
+protocol fairly easily.
+
+By looking at the documentation for Net::SSH2, it will allow us to fuzz the following parameters (for SFTP):
+
+open     -&gt; Open or create a file
+opendir  -&gt; Open a directory
+unlink   -&gt; Delete a file
+rename   -&gt; Rename a file or directory
+mkdir    -&gt; Create a directory
+rmdir    -&gt; Delete a directory
+stat     -&gt; Get file attributes
+setstat  -&gt; Set file attributes
+symlink  -&gt; Create a symbolic link
+readlink -&gt; Return the target of a link
+realpath -&gt; Resolve a file's path
+
+These functions are called by each method provided, and we will fuzz their parameters (being our input), on the SFTP server.
+
+============================================================================================================================
+
+3.2 Writing the Fuzzer
+
+This example for SFTP fuzzing will be written in PERL and will be using libssh2/Net::SSH2 (this is not the only way to use
+and fuzz SFTP, other libaries and extensions that may be more extensive and/or low-level are available).
+
+[sftpfuzz.pl]
+
+#!/usr/bin/perl
+
+use Net::SSH2;
+
+@fzorc = (&quot;A&quot; x 550, &quot;A&quot; x 1100, &quot;A&quot; x 2100, &quot;A&quot; x 4200, &quot;A&quot; x 8400, # overflow
+          &quot;\%n\%n\%n\%n\%n&quot;, &quot;\%\%20n&quot;, &quot;\%n\%p\%s\%d\%x&quot;, &quot;%.1024d&quot;, &quot;%.2049d&quot;, # format string
+          &quot;-1&quot;, &quot;32767&quot;, &quot;65535&quot;, &quot;-2147483647&quot;, &quot;0xffffffff&quot;, # numbers
+          &quot;a|id &gt; /tmp/FZ|b&quot;, &quot;a`id &gt; /tmp/FZ`b&quot;, &quot;a'id &gt; /tmp/FZ'b&quot;, # out-of-bounds breakage
+          &quot;a;id &gt; /tmp/FZ;b&quot;, &quot;a&amp;&amp;id &gt; /tmp/FZ&amp;&amp;b&quot;);
+
+@fzdesc = (&quot;A x 550&quot;, &quot;A x 1100&quot;, &quot;A x 2100&quot;, &quot;A x 4200&quot;, &quot;A x 8400&quot;,
+          &quot;\%n\%n\%n\%n\%n&quot;, &quot;\%\%20n&quot;, &quot;\%n\%p\%s\%d\%x&quot;, &quot;%.1024d&quot;, &quot;%.2049d&quot;,
+           &quot;-1&quot;, &quot;32767&quot;, &quot;65535&quot;, &quot;-2147483647&quot;, &quot;0xffffffff&quot;,
+           &quot;a|id &gt; /tmp/FZ|b&quot;, &quot;a`id &gt; /tmp/FZ`b&quot;, &quot;a'id &gt; /tmp/FZ'b&quot;,
+           &quot;a;id &gt; /tmp/FZ;b&quot;, &quot;a&amp;&amp;id &gt; /tmp/FZ&amp;&amp;b&quot;);
+
+@funcs1 = (&quot;open&quot;, &quot;opendir&quot;, &quot;unlink&quot;, &quot;mkdir&quot;, &quot;rmdir&quot;, &quot;stat&quot;, &quot;setstat&quot;, &quot;readlink&quot;, &quot;realpath&quot;); # 1 arg
+@funcs2 = (&quot;rename&quot;, &quot;symlink&quot;); # 2 args
+
+$server  = &quot;1.2.3.4&quot;;
+$user    = &quot;sftp&quot;;
+$pass    = &quot;fuzz&quot;;
+$logfile = &quot;sftpfuzz.log&quot;;
+
+$| = 1;
+
+$ssh2 = Net::SSH2-&gt;new();
+$ssh2-&gt;connect($server);
+$ssh2-&gt;disconnect();
+
+$i = 0;
+for($z = 0; $z &lt; 9; $z++)
+{
+
+foreach(@fzorc)
+{
+
+$func = $funcs1[$z];
+$arg  = 1;
+$fuzz = $_;
+
+     sftpfuzz($func, $fuzz, $arg, $i);
+
+if($i == 19) { $i = -1; }
+     $i++;
+
+}
+}
+
+$i = 0;
+for($z = 0; $z &lt; 2; $z++)
+{
+
+foreach(@fzorc)
+{
+
+$func = $funcs2[$z];
+$arg  = 2;
+$fuzz = $_;
+
+     sftpfuzz($func, $fuzz, $arg, $i);
+
+if($i == 19) { $i = -1; }
+     $i++;
+
+}
+}
+
+sub sftpfuzz
+{
+
+     $func = $_[0];
+     $fuzz = $_[1];
+     $arg  = $_[2];
+     $i    = $_[3];
+
+$desc = $fzdesc[$i];
+
+$ssh2 = Net::SSH2-&gt;new();
+$ssh2-&gt;connect($server) or logit($func, $i);
+
+     print &quot;sftpfuzz fuzzing [sftp + $func + $desc]\n&quot;;
+
+if($ssh2-&gt;auth_password($user, $pass))
+{
+
+     $sftp = $ssh2-&gt;sftp();
+
+if($arg == 1)
+{
+
+     $fuzr = $sftp-&gt;$func($fuzz);
+
+}
+
+if($arg == 2)
+{
+
+     $fuzr = $sftp-&gt;$func($fuzz, $fuzz);
+
+}
+}
+
+else { die &quot;ERROR: auth_password($user/$pass)\n&quot;; }
+
+     $ssh2-&gt;disconnect();
+
+}
+
+sub logit
+{
+
+     $fuzz = $_[0];
+     $i    = $_[1];
+
+$desc = $fzdesc[$i-1];
+
+     open(FD, &quot;&gt;&gt;$logfile&quot;);
+     print FD $server . &quot; -&gt; [sftp + $func + $desc]\n&quot;;
+     close(FD);
+
+     die &quot;$server down -&gt; check $logfile\n&quot;;
+
+}
+
+[sftpfuzz.pl]
+
+Now we have a simple, remote SFTP fuzzer that can somewhat reliably tell us at least if we find any faults in the server.
+
+============================================================================================================================
+
+3.3 Fuzzing the Target
+
+Work time is over-- play time is upon us. Lets run the fuzzer against our target.
+
+fuzz@linux:~$ perl sftpfuzz.pl
+sftpfuzz fuzzing [sftp + open + A x 550]
+1.2.3.4 down -&gt; check sftpfuzz.log
+fuzz@linux:~$
+
+Looks like we've got something...
+
+fuzz@linux:~$ cat sftpfuzz.log
+1.2.3.4 -&gt; [sftp + open + A x 550]
+fuzz@linux:~$
+
+The server went down right after we hit &quot;open&quot; with a 550 byte request. Lets now check out the target process on our machine.
+
+EAX 00000001
+ECX 41414141
+EDX 00890608
+EBX 00000000
+ESP 01448968 ASCII &quot;AAAAA.....&quot;
+EBP 41414141
+ESI 0000014F
+EDI 0144E7E0
+EIP 41414141
+
+The instruction pointer (EIP) and other registers are overwritten with our fuzzing data.
+
+Conclusion: Our target contains a remotely exploitable stack-based buffer overflow.
+
+Source code auditing wasn't available here because our target seems to be closed source. Once again, our fuzzer was able
+to detect the vulnerability for us :)
+
+GoodTech SSH Remote Buffer Overflow Exploit
+http://www.milw0rm.com/exploits/6804
+
+============================================================================================================================
+
+4. Conclusion
+
+Fuzzing is a developing art. As we progress in computer security, fuzzing will grow stronger as well. Nonpublished code
+will sit on the most remote boxes, possibly thanking fuzzing for leading the way in its R&amp;D. One might guess millions
+will be made from the marketing of fuzzing technologies. Many things will come from the vulnerabilities they discover.
+
+Fuzzers are code-- code programmed by human beings. They can be as perfect and flawless as we are. The age of fuzzing has
+made its debut some years ago, was silently studied, and reawoken to fuel vulnerability discovery like never before.
+
+Enjoy the game, fuzz some code.
+
+============================================================================================================================
+
+4.1 Disclaimer
+
+Krakow Labs assumes no liability for the use or misuse of any or all information contained in this document or information
+available at or referring to this document. Any or all information contained in this document or available at or referring to
+this document is not misleading and all information provided by Krakow Labs in this document is accurate to the best knowledge
+of Krakow Labs. This document can be published and/or reproduced as long as the document's data is left unchanged. Krakow Labs
+may be accessed via krakowlabs.com for more information, personal reference, or other agendas supporting Krakow Labs.
+
+KL0209LIT_fffap.txt
+02.11.2009
+Krakow Labs Literature [www.krakowlabs.com]
+Fuzzing for Fun and Profit
+http://www.krakowlabs.com/res/lit/KL0209LIT_fffap.txt
+rush@KL (Jeremy Brown) [rush@krakowlabs.com]
+KL0209LIT_fffap.txt
+
+# milw0rm.com [2009-02-11]</pre>
+</html>

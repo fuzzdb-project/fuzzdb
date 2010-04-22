@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>HR: Browser peculiarity - Alignment in table cells</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Opera versions 3.5-3.6x have an interesting artifact in the 
+interaction of HR and tables: HR normally has a default ALIGN value of CENTER 
+when the WIDTH is not 100%, but within table cells, the HR alignment defaults 
+instead to the horizontal alignment of the cell. Other browsers as well as older 
+Opera versions always obey the HR ALIGN default. Opera versions 4+ revert to the older behavior.</div>
+<br>
+
+<b>Table with HRs inside. HRs have no width or align attributes applied.  
+Cells in col 1/2 have no ALIGN attribute. Col 3 cells have "align=right":</b>
+<hr>
+filler text
+<table border="1">
+<tr><th>TH cell 1 filler text TH cell 1. Default alignment</th><td>TD cell 2 filler text TD cell 2. Default alignment</td>
+    <td align="right">TD cell 3 filler text TD cell 3. Align="right"</td></tr>
+<tr><th>TH cell 4. Default alignment</th><td>TD cell 5. Default alignment</td><td align="right">TD cell 6. Align="right"</td></tr>
+<tr><th><hr></th><td><hr></td><td align="right"><hr></td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Table with HRs inside. HRs have width=20 and no ALIGN attribute applied. 
+Cells in col 1/2 have no ALIGN attribute. Col 3 cells have "align=right":</b>
+<hr>
+filler text
+<table border="1">
+<tr><th>TH cell 1 filler text TH cell 1. Default alignment</th><td>TD cell 2 filler text TD cell 2. Default alignment</td>
+    <td align="right">TD cell 3 filler text TD cell 3. Align="right"</td></tr>
+<tr><th>TH cell 4. Default alignment</th><td>TD cell 5. Default alignment</td>
+    <td align="right">TD cell 6. Align="right"</td></tr>
+<tr><th><hr width="50"></th><td><hr width="50"></td><td align="right"><hr width="50"></td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Table with HRs inside. HRs have width=20 and ALIGN=right attribute applied. 
+Cells in col 1/2 have no ALIGN attribute. Col 3 cells have "align=right":</b>
+<hr>
+filler text
+<table border="1">
+<tr><th>TH cell 1 filler text TH cell 1. Default alignment</th><td>TD cell 2 filler text TD cell 2. Default alignment</td>
+    <td align="right">TD cell 3 filler text TD cell 3. Align="right"</td></tr>
+<tr><th>TH cell 4. Default alignment</th><td>TD cell 5. Default alignment</td>
+    <td align="right">TD cell 6. Align="right"</td></tr>
+<tr><th><hr width="50" align="right"></th><td><hr width="50" align="right"></td>
+    <td align="right"><hr width="50" align="right"></td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

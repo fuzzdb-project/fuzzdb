@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Button: Browser Peculiarities: Submitting data when DISABLED</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 5/6: Using the DISABLED attribute still sends the name/value 
+pair for the element to the form processing script. It should not do this.</div>
+<br>
+
+<b>Submitting plain Button field. Click submit to see results [both fields should successfully submit]:</b>
+<hr>
+filler text 
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+Text: <input type="text" name="text1" value="value1"><br>
+Button: <button type="submit" name="button1" value="value2">Submit</button><br>
+</form>
+filler text
+<hr>
+<br>
+
+<b>Button=submit with button disabled. Click submit to see results 
+[form submission should not succeed]:</b>
+<hr>
+filler text 
+<form method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+Text: <input type="text" name="text1" value="value1"><br>
+Button: <button type="submit" name="button1" value="value2" disabled>Submit</button><br>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

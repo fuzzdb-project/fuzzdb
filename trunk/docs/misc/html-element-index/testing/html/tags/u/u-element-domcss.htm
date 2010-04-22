@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Underline element DOMCSS test</title>
+<!-- 
+    Element Definition:
+    U: element indicates underline
+-->
+<style type="text/css">
+.text   { color: blue }
+.pass   { background-color: #008000; color: #ffffff }
+.fail   { background-color: #800000; color: #ffff00 }
+</style>
+<script type="text/javascript">
+var expCssProp   = new Array(
+                   "fontStyle", "fontWeight", "fontSize", 
+                   "paddingTop", "paddingRight", "paddingBottom", "paddingLeft", 
+                   "marginTop", "marginRight", "marginBottom", "marginLeft",
+                   "textAlign", "color", "backgroundColor", "textDecoration", "display");
+var expCssResult = new Array(
+                   "normal", "400", "[relfontsize-eq]",
+                   "0px", "0px", "0px", "0px", 
+                   "0px", "0px", "0px", "0px", 
+                   "left", "[relcolor]", "transparent", "underline", "inline");
+</script>
+<script src="../../scripts/htmldomcss.js" type="text/javascript"></script>
+</head>
+
+<body onload="theTest();">
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<u id="test">u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u 
+u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u 
+u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u u</u>
+
+<span id="compare" onclick="defaultProp('fontSize');">
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text</span>
+<hr>
+<span class="text">Test is above this line</span><br><br>
+
+<form>
+<table border=1 cellspacing=0 cellpadding=0>
+<tr><th>Property</th>     <th>Actual</th><th>Result</th></tr>
+<tr><td>fontStyle</td>    <td><input type="text" name="act0"></td><td><input type="text" name="res0"></td></tr>
+<tr><td>fontWeight</td>   <td><input type="text" name="act1"></td><td><input type="text" name="res1"></td></tr>
+<tr><td>fontSize</td>     <td><input type="text" name="act2"></td><td><input type="text" name="res2"></td></tr>
+<tr><td>paddingTop</td>   <td><input type="text" name="act3"></td><td><input type="text" name="res3"></td></tr>
+<tr><td>paddingRight</td> <td><input type="text" name="act4"></td><td><input type="text" name="res4"></td></tr>
+<tr><td>paddingBottom</td><td><input type="text" name="act5"></td><td><input type="text" name="res5"></td></tr>
+<tr><td>paddingLeft</td>  <td><input type="text" name="act6"></td><td><input type="text" name="res6"></td></tr>
+<tr><td>marginTop</td>    <td><input type="text" name="act7"></td><td><input type="text" name="res7"></td></tr>
+<tr><td>marginRight</td>  <td><input type="text" name="act8"></td><td><input type="text" name="res8"></td></tr>
+<tr><td>marginBottom</td> <td><input type="text" name="act9"></td><td><input type="text" name="res9"></td></tr>
+<tr><td>marginLeft</td>   <td><input type="text" name="act10"></td><td><input type="text" name="res10"></td></tr>
+<tr><td>textAlign</td>    <td><input type="text" name="act11"></td><td><input type="text" name="res11"></td></tr>
+<tr><td>color</td>        <td><input type="text" name="act12"></td><td><input type="text" name="res12"></td></tr>
+<tr><td>backgroundColor</td> <td><input type="text" name="act13"></td><td><input type="text" name="res13"></td></tr>
+<tr><td>textDecoration</td>  <td><input type="text" name="act14"></td><td><input type="text" name="res14"></td></tr>
+<tr><td>display</td>      <td><input type="text" name="act15"></td><td><input type="text" name="res15"></td></tr>
+</table>
+</form>
+
+</body>
+</html>

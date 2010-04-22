@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MAP: Browser Peculiarities: Using a map definition in an external document</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape has never supported external IDs/URLs in the USEMAP 
+attribute to the IMG element as per the specification (only internal anchors can be used.) 
+Internet Explorer supports external IDs/URLs from version 1.0 to 3.0, now it does 
+not support them. Opera has supported external IDs/URLs since version 3.0.</div>
+<br>
+
+<b>IMG reference, with a map definition in an external document 
+(map-externalmapdef.htm#myimagemap):</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" usemap="http://www.blooberry.com/test/map-externalmapdef.htm#myimagemap">
+filler text
+<hr>
+<br>
+
+<b>Shape destinations on image:</b>
+<table cellpadding="3" cellspacing="0" border=2>
+<tr><th align="left"><big>Shape</big></th><th align="left"><big>URL</big></th></tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-greenlink.gif" height="20" width="20"></td>
+    <td>http://www.yahoo.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-orangelink.gif" height="20" width="20"></td>
+    <td>http://www.google.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-yellowlink.gif" height="20" width="20"></td>
+    <td>http://www.blooberry.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-bluelink.gif" height="20" width="20"></td>
+    <td>http://slashdot.org/</td>
+</tr>
+</table>
+
+</body>
+</html>

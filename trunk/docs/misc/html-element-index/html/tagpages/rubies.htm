@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about rubies in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Rubies in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#usage">Elements used</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+</center>
+
+<hr align="center" width="20%">
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification</b></big>
+    <dd>A Ruby is part of an annotation pair - a piece of text ("Ruby Text") that is 
+        associated with another piece of text known as a "Ruby Base". A common 
+        need for such a structure arises in some asian writing systems where a ruby 
+        association is used to present helper readings for uncommonly used writing 
+        characters. 
+        <br><br>
+
+        With a character set as complex as Chinese or Japanese, some characters are used
+        rarely and are thus not as easily recognizable by younger children or possibly
+        many adults. In Japanese writing, for example, the phonetic Hiragana alphabet 
+        is used to pair phonetic 'helper' readings (called Furigana or Yomigana in 
+        Japanese) with the Chinese character counterpart.
+        <br><br>
+
+        A Ruby text will usually be rendered next to the Base text such that the 
+        association between each Base text and Ruby text is clear (often directly 
+        above the Base text.) Ruby text is usually also rendered in a smaller font 
+        than the Base text to help visually clarify which part is which in the 
+        association relationship.
+        <br><br>
+        
+        Ruby markup has two main usage modes in XHTML - Simple Rubies, where 
+        a single annotation or helper text is associated with a single piece of 
+        Base text, and Complex Rubies, where as many as two Ruby text annotations 
+        can be bound to a single piece of Base text. Complex Rubies also allow 
+        Base text and Ruby text to be broken down further, so that even more 
+        detailed associations can be made between them.
+        <br><br>
+        
+<dt><big><b class="mainheading">Simple Rubies</b></big>
+    <dd>Simple Rubies will often be the only type of annotation mechanism that most 
+        authors need. In this type of ruby markup, two main elements exist nested 
+        in the RUBY element - the Base text (the <a href="r/rb.htm">RB</a> element), 
+        followed by the Ruby text (the <a href="r/rt.htm">RT</a> element.) 
+        <br><br>
+        
+        For browsers that do not understand the RUBY markup, they will display the 
+        content of the RT element directly following the contents of the RB content. 
+        Since this sort of fallback may not be enough to distinguish the association 
+        relationship between the two content pieces, one final, optional fallback 
+        element is provided to make the association clear in non-supporting browser 
+        scenarios: the <a href="r/rp.htm">RP</a> element. An RP element containing 
+        a single character (usually an open or close parenthesis, depending on 
+        the context - RP <em>DOES</em> stand for Ruby <em>Parenthesis</em>...) should 
+        be put on either side of the RT element. Ruby-supporting browsers should 
+        ignore the RP element completely and not render it in any way; in 
+        non-supporting browsers however, the contents of the RP element will surround 
+        the RT content to tie the content with the previous RB content.
+        <br><br>
+
+<dt><big><b class="mainheading">Complex Rubies</b></big>
+    <dd>Complex rubies can have multiple Base elements, and multiple Ruby Text 
+        components. In a Complex Ruby, all of the Base elements (<a href="r/rb.htm">RB</a>) 
+        are enclosed in an <a href="r/rbc.htm">RBC</a> element (RBC: Ruby Base 
+        Container.) For the Ruby Text elements (<a href="r/rt.htm">RT</a>), these 
+        are enclosed in an <a href="r/rtc.htm">RTC</a> element (RTC: Ruby Text 
+        Container.) A Complex Ruby can have one or two RTC elements which allows 
+        for two text associations to be given for any given Base text. Default 
+        rendering might render the first RTC group <em>ABOVE</em> the Base text, 
+        with the second RTC group possibly rendered <em>BELOW</em> the Base text... 
+        but, this rendering is definitely not guaranteed - allowances for alternate 
+        writing directions (eg: vertical rather than horizontal) and other criteria 
+        can complicate rendering, and CSS properties have already been proposed 
+        specifically for Ruby markup in future CSS versions to control these details.
+        <br><br>
+
+        The content of the Ruby Base Container (RBC) is, of course, RB elements. 
+        Similarly, the content of any Ruby Text Containers (RTC) are RT elements. 
+        With Complex Rubies, RT elements have an additional attribute RBSPAN which 
+        acts like COLSPAN does for TD and TH elements in tables - it allows a 
+        piece of Ruby Text content to be associated with multiple RB base elements.
+</dl>
+
+<a name="usage"></a>
+<dl>
+<dt><big><b class="mainheading">Elements Used</b></big>
+<dt><b class="subheading">Simple Rubies</b>
+    <dd>[&lt;<a href="r/ruby.htm">Ruby</a>&gt;, &lt;<a href="r/rb.htm">Rb</a>&gt;,
+        &lt;<a href="r/rt.htm">Rt</a>&gt;, &lt;<a href="r/rp.htm">Rp</a>&gt;]
+
+<dt><b class="subheading">Complex Rubies</b>
+    <dd>[&lt;<a href="r/ruby.htm">Ruby</a>&gt;, &lt;<a href="r/rbc.htm">Rbc</a>&gt;,
+        &lt;<a href="r/rb.htm">Rb</a>&gt;, &lt;<a href="r/rtc.htm">Rtc</a>&gt;,
+        &lt;<a href="r/rt.htm">Rt</a>&gt;]
+</dl>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.w3.org/TR/ruby/" class="relevant">http://www.w3.org/TR/ruby/</a>
+    <dd><span class="relevant">W3C: "Ruby Annotation" (May 2001 W3C Recommendation)</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer element reference<br>
+        [Includes documentation on RT and RUBY]</span>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

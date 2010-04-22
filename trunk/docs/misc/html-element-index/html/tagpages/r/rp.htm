@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Rp</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Rp (Ruby Parenthesis)</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<b><i class="fs">X1.1</i></b>]
+         [<b><i class="fs">IE5B2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>Support beginning in XHTML 1.1 DTD.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>Ruby</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Content ignored if element understood</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/ruby/#rp">XHTML 1.1: Ruby Module</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>A <a href="ruby.htm">Ruby</a> is part of an annotation pair - a piece of 
+        text ("Ruby Text") that is associated with another piece of text known as 
+        a "Ruby Base". A common need for such a structure arises in some asian 
+        writing systems where a ruby association is used to present helper readings 
+        for uncommonly used writing characters. 
+        <br><br>
+
+        With a character set as complex as Chinese or Japanese, some characters are used
+        rarely and are thus not as easily recognizable by younger children or possibly
+        many adults. In Japanese writing, for example, the phonetic Hiragana alphabet 
+        is used to pair phonetic 'helper' readings (called Furigana or Yomigana in 
+        Japanese) with the Chinese character counterpart.
+        <br><br>
+
+        A Ruby text will usually be rendered next to the Base text such that the 
+        association between each Base text and Ruby text is clear (often directly 
+        above the Base text.) Ruby text is usually also rendered in a smaller font 
+        than the Base text to help visually clarify which part is which in the 
+        association relationship.
+        <br><br>
+
+
+     <dd>The RP element is a fall-back mechanism for browsers that do not understand 
+         the Simple Ruby syntax. It should not be used in Complex Ruby markup. The 
+         element semantically denotes content that will be used to clarify the 
+         association between a simple RB/RT relationship. Content within the RP 
+         element is hidden from browsers that support RUBY, for the express purpose 
+         of allowing the insertion of delimiters surrounding RT content to make 
+         the RB/RT relationship clear in non-supporting browsers. Although RP 
+         stands for Ruby <em>Parenthesis</em>, any characters could be used as RP 
+         content, as long as they assist in making this relationship clear.
+         <br><br>
+        
+<dt><big><b class="mainheading">Simple Rubies</b></big>
+    <dd>Simple Rubies will often be the only type of annotation mechanism that most 
+        authors need. In this type of ruby markup, two main elements exist nested 
+        in the RUBY element - the Base text (the <a href="rb.htm">RB</a> element), 
+        followed by the Ruby text (the <a href="rt.htm">RT</a> element.) 
+        <br><br>
+        
+        For browsers that do not understand the RUBY markup, they will display the 
+        content of the RT element directly following the contents of the RB content. 
+        Since this sort of fallback may not be enough to distinguish the association 
+        relationship between the two content pieces, one final, optional fallback 
+        element is provided to make the association clear in non-supporting browser 
+        scenarios: the RP element. An RP element containing 
+        a single character (usually an open or close parenthesis, depending on 
+        the context - RP <em>DOES</em> stand for Ruby <em>Parenthesis</em>...) should 
+        be put on either side of the RT element. Ruby-supporting browsers should 
+        ignore the RP element completely and not render it in any way; in 
+        non-supporting browsers however, the contents of the RP element will surround 
+        the RT content to tie the content with the previous RB content.
+        <br><br>
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<b><i class="fs">X1.1</i></b>]
+        [<b><i class="fs">IE5B2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<b><i class="fs">X1.1</i></b>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<b><i class="fs">X1.1</i></b>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<b><i class="fs">X1.1</i></b>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<dt><b class="subheading">Simple Ruby example:</b>
+    <dd><div class="example">&lt;<b class="tagname">ruby</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">rb</b>&gt;HTML&lt;/<b class="tagname">rb</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">rp</b>&gt;(&lt;/<b class="tagname">rp</b>&gt; 
+        &lt;<b class="tagname">rt</b>&gt;HyperText Markup Language&lt;/<b class="tagname">rt</b>&gt;
+        &lt;<b class="tagname">rp</b>&gt;)&lt;/<b class="tagname">rp</b>&gt;<br>
+        &lt;/<b class="tagname">ruby</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../r/ruby.htm">ruby</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#text">Text</a>%</b>
+
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>The RP element was not designed to be used in Complex Ruby authoring situations.
+        The RP element was meant to be a simple fallback mechanism, and it is not suited
+        to the complexity of the Complex Ruby usage scenario.
+    <li><a href="../../../testing/html/tags/r/rp-bp1.htm">[Test]</a>
+        The functionality of the RP element can also be achieved with the :before and
+        :after CSS2 pseudo-elements in conjunction with the CSS 'content' property.
+    <li>If a ruby fallback mechanism is not necessary or not a concern for a given 
+        authoring situation, using the RP element is optional.
+    <li>An RP element should occur twice in Simple Ruby markup - right before the RT
+        element and right after it.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>This element is not documented by Microsoft anywhere that I could find, 
+        but its behavior works as expected in IE5+ (eg: content inside is not  displayed.)
+    <li>I decided not to list IE support for the common attributes (except ID in Core) 
+        since the purpose of this element in supporting browsers is to be ignored.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

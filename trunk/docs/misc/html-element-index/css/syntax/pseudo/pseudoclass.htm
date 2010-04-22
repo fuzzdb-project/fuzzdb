@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Classes - Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Pseudo-classes</span></h1>
+<div align="center"><b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+[<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></div>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+    <dd>The original pseudo-classes defined dynamic states of an element that are
+        entered and exited over time, or through user intervention. CSS2 expanded
+        on this concept to include virtual conceptual document components or
+        inferred portions of the document tree (Netscape 6 has really expanded
+        the use of this latter type of pseudo-class.)
+        <br><br>
+
+        The CSS specs do not always define which elements may be in a pseudo-class
+        dynamic state, or the method in which the state is entered or exited.
+        CSS2 <em>DOES</em> state that a browser is not required to re-render a
+        document because of pseudo-class state transitions however.
+        <br><br>
+
+        Unlike Pseudo-elements, Pseudo-classes are allowed anywhere in CSS selectors.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>Ext/Doc: <b class="selector">[element]:[pseudo-class]</b>
+        { <span class="property">property:</span> value }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">CSS Pseudo-Classes</b></big>
+<dd><b class="l3heading">State-dependent:</b>
+    <dd>
+    <ul type="disc">
+    <li><a href="pclasslink.htm">:Link</a> 
+        [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br>
+        Applies to an unvisited hyperlink
+    <li><a href="pclassvisited.htm">:Visited</a> 
+        [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br>
+        Applies to a visited hyperlink
+    <li><a href="pclassactive.htm">:Active</a> 
+        [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O5</b>|<b class="s">S1</b>]<br>
+        The state during pointer activation (eg: press and release of a mouse)
+        within the rendering region of an element.
+    <li><a href="pclasshover.htm">:Hover</a>
+        [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O4</b>|<b class="s">S1</b>]<br>
+        The state during pointer movement within the rendering region of an element.
+    <li><a href="pclassfocus.htm">:Focus</a> 
+        [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">N6</i></b>|<b class="s">O7</b>]<br>
+        The state during which an element accepts keyboard input.
+    </ul>
+
+<dd><b class="l3heading">Document Tree:</b>
+    <dd>
+    <ul>
+    <li><a href="pclassroot.htm">:Root</a> [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]<br>
+        Applies to the top-level (root) element in a document. In HTML, it is the HTML element.
+    <li><a href="pclassempty.htm">:Empty</a> [<b><i class="fs">N6</i></b>]<br>
+        Applies to elements that have no content.
+    <li><a href="pclassnot.htm">:Not</a> [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]<br>
+        This is a negation pseudo-class, allowing other selector rules to be negated.
+    <li><a href="pclassfirstchild.htm">:First-child</a> 
+        [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+        [<b><i class="fs">N6</i></b>|<b class="s">O7</b>]<br>
+        Applies to the first child/descendent of an element
+    <li><a href="pclassfirstnode.htm">:First-node</a> [<b><i class="fs">N6</i></b>]<br>
+        Applies to the first occurrence of an element/selector in the document tree.
+    <li><a href="pclasslastchild.htm">:Last-child</a> [<b><i class="fs">N6</i></b>]<br>
+        Applies to the last child/descendent of an element
+    <li><a href="pclasslastnode.htm">:Last-node</a> [<b><i class="fs">N6</i></b>]<br>
+        Applies to the last occurrence of an element/selector in the document tree.
+    <li><a href="pclasslang.htm">:Lang</a> 
+        [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>]
+        [<b><i class="fs">N7.1</i></b>|<b class="s">O7.5</b>]<br>
+        Applies to an element that contains the specified language (indicated using
+        the lang or xml:lang attributes.)
+    </ul>
+
+<dd><b class="l3heading">Printing:</b>
+     <dd>
+     <ul type="disc">
+     <li><a href="pclassfirstlr.htm">:First, :Left, :Right</a> 
+         [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] [<b class="s">O??</b>]<br>
+         These only apply to the Page Box using the <a href="../atrules/page.htm">@Page</a> At-Rule.
+     </ul>
+
+<dd><b class="l3heading">Proprietary:</b>
+<dd>(No sub-pages on most of these here because there is no real documentation for
+    them anywhere at Mozilla/Netscape other than mention in the source code. Their
+    use is discouraged anyway and are mentioned here only for the sake of completeness.)
+     <dd>
+     <ul type="disc">
+     <li><a href="pclassviewport.htm">:Viewport</a> [<b><i class="fs">N6</i></b>]<br>
+         Refers to the visual rendered viewing area.
+     <li><a href="pclassviewportscroll.htm">:Viewport-Scroll</a> [<b><i class="fs">N6</i></b>]<br>
+         Refers to the box containing the visual rendered viewing area <em>AND</em>
+         its attendant scrollbars.
+     <li><a href="pclasscanvas.htm">:Canvas</a> [<b><i class="fs">N6</i></b>]<br>
+         Applies to the document's rendering canvas.
+     <li><a href="pclassscrolledcontent.htm">:Scrolled-Content</a> [<b><i class="fs">N6</i></b>]<br>
+         Applies to elements that use scrollbars (whether by default rendering
+         behavior or through the use of the 'overflow' property's "scroll" value.
+
+     <li><b>:button-content</b> [<b><i class="fs">N6</i></b>]<br>
+         Applies to the inside of BUTTON elements in forms.
+     <li><b>:cell-content</b> [<b><i class="fs">N6</i></b>]<br>
+         Applies to individual cells in tables.
+     <li><b>:fieldset-content</b> [<b><i class="fs">N6</i></b>]<br>
+         Applies to the inside of FIELDSET elements in forms. The region this
+         can cover seems haphazard.
+     <li><b>:table-column</b> [<b><i class="fs">N6</i></b>]<br>
+         Appears to apply to individual columns in tables.
+     <li><b>:table-column-group</b> [<b><i class="fs">N6?</i></b>]<br>
+         Probably applies to column groups in tables. I haven't tried this one,
+         but I am making the assumption that this works since :table-column does as well.
+     <li><b>:table-outer</b> [<b><i class="fs">N6</i></b>]<br>
+         Appears to apply to the box defined by the outside edge of a table. Most
+         properties don't apply, but 'padding' did.
+
+     <li><b>:-moz-any-link</b> [<b><i class="fs">N6</i></b>]<br>
+         Applies to hyperlinks in any state ("viewed" or "unviewed")
+     <li><b>:-moz-dropdown-list</b> [<b><i class="fs">N6</i></b>]<br>
+         Appears to only apply to SELECT lists in forms.
+     <li><b>:-moz-focus-inner</b> [<b><i class="fs">N6</i></b>]<br>
+         Seems to apply only to form buttons widgets, on the inner edge, and only
+         some properties - border and margin properties. Others like color, background
+         and padding appeared to have no effect.
+     <li><b>:-moz-focus-outer</b> [<b><i class="fs">N6</i></b>]<br>
+         Seems to apply only to form buttons widgets, on the outer edge, and only
+         some properties - border and margin properties. Others like color, background
+         and padding appeared to have no effect.
+     <li><b>:-moz-list-bullet</b> [<b><i class="fs">N6</i></b>]<br>
+         Appears to only apply the list marker (bullets, numbers) in lists. Most
+         properties did not apply, but 'padding' was odd - it directly changed
+         the size of the bullet.
+     </ul>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Mozilla/Netscape 6 mentions <em>MANY</em> pseudo-classes, using both
+        proprietary syntax ("-moz-" prefix) and normal syntax. Some of these I
+        can not confirm through direct testing, and without any documentation,
+        they will remain a mystery. =) (except for their minor claim-to-fame here):<br>
+        <b><u>Addressing Elements:</u></b><br>
+        - :-moz-radio<br>
+        - :-moz-checkbox<br>
+        - :label-content<br>
+        - :legend-content<br>
+        - :table<br>
+        - :table-cell<br>
+        - :table-row<br>
+        - :table-row-group<br>
+        <b><u>Addressing Element State:</u></b><br>
+        - :checked<br>
+        - :disabled<br>
+        - :enabled<br>
+        <b><u>Other:</u></b> (I haven't a clue what these may or may not do)<br>
+        - :body-column, <br>
+        - :-moz-anonymous-block, <br>
+        - :-moz-anonymous-positioned-block<br>
+        - :-moz-first-line-fixup<br>
+        - :-moz-line-frame<br>
+        - :-moz-singleline-textcontrol-frame<br>
+        - :-moz-display-comboboxcontrol-frame<br>
+        - :frameset-blank<br>
+        - :hframeset-border<br>
+        - :vframeset-border<br>
+        - :placeholder-frame<br>
+        - :wrapped-frame
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

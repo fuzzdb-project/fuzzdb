@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax - Embedded Style Sheets</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Embedded Style Sheets</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a CSS style specification method is only used with HTML. An
+        entire style sheet can be embedded in an HTML document using the
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/s/style.htm">STYLE</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element contained
+        within the HEAD block. The complete range of <a href="../syntax.htm">CSS
+        syntax</a> is allowed in this inclusion method - the style information
+        is not explicitly tied directly to the document's elements, so
+        <a href="../selectors/selectors.htm">Selector syntax</a> is used to
+        specify what styles attach to which portions of the document tree (the
+        same as with External Style Sheets, but in this case the style sheet
+        is contained within the document itself.)
+        <br><br>
+
+        Unlike external style sheets, this method can only specify style
+        information for the current document. If equivalent style rules are
+        specified in an external and embedded style sheet, the embedded style
+        sheet rule will have higher precedence.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">HTML Inclusion Method</b></big>
+    <dd>In HTML, an Embedded Style Sheet is specified using the
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/s/style.htm">STYLE</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element
+        within the HEAD element block. For backward compatibility
+        with browsers that do not understand style sheet syntax, the entire
+        contents of the Style element may be embedded in an HTML comment (&lt;!-- --&gt;)
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">style</b>
+        <span class="tagattrib">TYPE</span>="text/css"&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;!--<br>
+        &#160;&#160;&#160;&#160;[<span class="alert2">CSS Style Sheet</span>]<br>
+        &#160;&#160;&#160;&#160;--&gt;<br>
+        &#160;&#160;&#160;&#160;&lt;/<b class="tagname">style</b>&gt;
+    <dd>[<a href="../../examples/cssembedded.htm">See complex HTML example using
+        Embedded Style Sheets</a>]
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

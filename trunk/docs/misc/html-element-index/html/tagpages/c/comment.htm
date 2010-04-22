@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Comments</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Comments</h1>
+         <b class="alert">End Tag:</b> <span class="magicword">Required</span><br>
+         <a href="../stats.htm#std">Standards Details:</a><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;Comment: Obsolete<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&#160;--&gt;: Intrinsic part of SGML/XML<br>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b><br>
+         &#160;&#160;&#160;&#160;Comment: 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]<br>
+         &#160;&#160;&#160;&#160;&lt;!--&#160;&#160;--&gt;:
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>]
+         [<b class="s">X1</b>|<b class="s">X1.1</b>] 
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Comments are regions of text and/or HTML tags that are ignored by
+        the browser. Any text between the opening and closing comment delimeters
+        will not appear on the screen. There are currently two methods to do this;
+        the <b class="tagname">COMMENT</b> element (obsolete) and the
+        <b class="tagname">!-- --</b> delimiters (recommended.) The second method
+        is a special HTML and XML syntax originating from SGML and uses
+        '<b class="tagname">&lt;!--</b>' as a beginning delimiter and
+        '<b class="tagname">--&gt;</b>' as an end delimiter. White space is allowed 
+        between the closing '<b class="tagname">--</b>' and '<b class="tagname">&gt;</b>' but not 
+        between the opening '<b class="tagname">&lt;!</b>' and '<b class="tagname">--</b>'.
+        Comments are non-nestable.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Attributes</b></big>
+    <dd><b class="alert">These elements/syntaxes do not allow any attributes.</b>
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">!--</b> This is a comment
+        <b class="tagname">--</b>&gt;<br>
+        - OR -<br>
+        &lt;<b class="tagname">comment</b>&gt; This is a comment
+        &lt;/<b class="tagname">comment</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>NA
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd>NA
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> The &lt;COMMENT&gt; construct was considered
+        an <em>OBSOLETE</em> element in HTML 2.0 and has disappeared from subsequent
+        HTML proposals and standards.
+    <li>The &lt;!--&#160;--&gt; syntax is almost universally supported, so it is 
+        highly recommended to use it instead of the obsolete COMMENT element in any situation.
+    <li>You can comment out regions of HTML elements using the
+        &lt;!--&#160;--&gt; syntax.
+    <li><b class="alert">Note:</b> This is the exact quote from the HTML 2.0 
+        specification which describes the precise syntax of an SGML comment:
+        <blockquote class="quotation">&quot;To include comments in an
+        HTML document, use a comment declaration. A comment declaration
+        consists of `&lt;!' followed by zero or more comments followed by `&gt;'.
+        Each comment starts with `--' and includes all text up to and including
+        the next occurrence of `--'. In a comment declaration, white space is
+        allowed after each comment, but not before the first comment. The
+        entire comment declaration is ignored.&quot;</blockquote>
+        The strict view on this definition appears to allow multiple comment
+        structures (such as &lt;!-- hello -- -- there --&gt;) to be legal. Also,
+        under this interpretation, scripting expressions containing decrement
+        operators (which is allowed in JavaScript) could prematurely end the
+        parsing of a comment structure (with possibly undesired results.) Not
+        all browsers interpret SGML comments the same, or this strictly, so
+        keep this in mind when testing your documents.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Some early browser versions considered the end of a comment to occur with 
+        a <b class="tagname">&gt;</b> instead of the complete <b class="tagname">--&gt;</b> 
+        which created problems when nesting HTML tags in comments.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

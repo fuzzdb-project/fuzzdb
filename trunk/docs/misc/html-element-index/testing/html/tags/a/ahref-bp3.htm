@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>A HREF: Browser peculiarity - Jumping to ID fragment URLs</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Netscape 4.x has a bug: A location in a document can be defined 
+using the ID attribute as well as the A NAME element. In Netscape 4.x this can be 
+accessed using hyperlinks from external documents, but if the hyperlink is within 
+the same document, the link does nothing.</div>
+<br>
+
+<b>Jump to fragment identifiers in an external document:</b>
+<hr>
+filler text<br>
+<a href="ahref-externalfragments1.htm#aname">Jump to A NAME fragment in another document (bottom of page)</a><br>
+<a href="ahref-externalfragments1.htm#aid">Jump to A ID fragment in another document (bottom of page)</a><br>
+<a href="ahref-externalfragments1.htm#divid">Jump to DIV ID fragment in another document (bottom of page)</a><br>
+filler text
+<hr>
+
+<b>Jumping within a current document to fragment identifiers:</b>
+<hr>
+filler text
+<a href="ahref-externalfragments1.htm">Click to access the in-page tests</a><br>
+filler text
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax - External Style Sheets</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">External Style Sheets</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This CSS specification mechanism is the farthest removed of the
+        allowed methods from the portion(s) of the document tree it controls.
+        This method allows a style sheet external to the document to be
+        "attached" to the current document.
+        <br><br>
+
+        This is the most powerful of all the CSS attachment methods, as it
+        allows a single style sheet to control the rendering of multiple
+        documents. This results in a time-savings for the author, a savings of
+        space for the web server, and less download time for the user. In
+        addition, this method can be used in <em>both</em> HTML and XML.
+        <br><br>
+
+        An External Style Sheet is a file containing only CSS syntax
+        (no document content or elements) and should carry a MIME type of
+        "text/css." The style information is not explicitly tied directly to
+        the document's elements, so <a href="../selectors/selectors.htm">Selector
+        syntax</a> is used to specify what styles attach to which portions of
+        the document tree. The full range of <a href="../syntax.htm">CSS syntax</a>
+        is allowed in this method.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">HTML Inclusion Method</b></big>
+    <dd>In HTML, an External Style Sheet is specified using the
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/l/link.htm">LINK</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element
+        within the HEAD element block to specify the URL location of the
+        External Style Sheet. URL values may be relative or absolute.
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&lt;<b class="tagname">link</b>
+        <span class="tagattrib">REL</span>="STYLESHEET"
+        <span class="tagattrib">TYPE</span>="text/css"
+        <span class="tagattrib">HREF</span>="[<span class="alert2">Style sheet URL</span>]"&gt;
+    <dd>[<a href="../../examples/cssexternal.htm">See complex HTML example
+        using External Style Sheets</a>]
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">XML Inclusion Method</b></big>
+    <dd>A style sheet processing instruction (PI) is included in the prologue
+        of an XML document indicating the URL of the external style sheet.
+    <dd><b class="alert">Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&lt;?<b class="tagname">xml-stylesheet</b>
+        <span class="tagattrib">href</span>="[<span class="alert2">Style Sheet URL</span>]"
+        <span class="tagattrib">type</span>="text/css"?&gt;
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

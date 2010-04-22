@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>P: Browser Peculiarities: Lack of align=justify support</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The 'justify' value of the ALIGN attribute is currently only 
+supported in the 4.0 Beta 2 and above versions of Netscape and Internet Explorer.
+(With 'Justify' both the left and right sides of the P block will be even...no raggedness).</div>
+
+<br>
+<b>P element with no ALIGN attribute:</b>
+<hr>
+filler text 
+<p>The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. </p>
+filler text
+<hr>
+<br>
+
+<br>
+<b>P element with ALIGN=justify attribute:</b>
+<hr>
+filler text 
+<p align="justify">The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. 
+   The quick brown fox jumped over the lazy dog. </p>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

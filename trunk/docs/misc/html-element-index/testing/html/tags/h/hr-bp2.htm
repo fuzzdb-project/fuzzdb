@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>HR: Browser peculiarity - Limitations on the SIZE attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">The SIZE attribute has some limitations: In Opera, Mosaic and 
+IE versions 3.0 and before, there are no restrictions on the SIZE attribute. 
+If you specify a pixel size, it will be rendered. In all versions of Netscape and 
+in IE 4.0+, the SIZE attribute is limited to 100 pixels - values above this amount 
+will be rendered as SIZE=100 in these browsers.</div>
+<br>
+
+<b>Table showing different values for HR SIZE attribute:</b>
+<hr>
+<table border="0" cellpadding=3 cellspacing=0>
+<tr>
+    <th>0</th><th>1</th>
+    <th>5</th><th>20</th>
+    <th>95</th><th>100</th>
+    <th>105</th><th>150</th>
+    <th>500</th>
+</tr>
+<tr>
+    <th valign="top"><hr width="20" size="0"></th>
+    <th valign="top"><hr width="20" size="1"></th>
+    <th valign="top"><hr width="20" size="5"></th>
+    <th valign="top"><hr width="20" size="20"></th>
+    <th valign="top"><hr width="20" size="95"></th>
+    <th valign="top"><hr width="20" size="100"></th>
+    <th valign="top"><hr width="20" size="105"></th>
+    <th valign="top"><hr width="20" size="150"></th>
+    <th valign="top"><hr width="20" size="500"></th>
+</tr>
+</table>
+<hr>
+<br>
+
+
+</body>
+</html>

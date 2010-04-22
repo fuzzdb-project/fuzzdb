@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Border-Collapse - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">border-collapse</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N7</b>|<b class="s">O4</b>|<b class="s">S1.2</b>]<br></td>
+    <td align=center><b class="alert">Other Table Properties</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="bspace.htm">border-spacing</a><br>
+    <a href="capside.htm">caption-side</a><br>
+    <a href="emptycell.htm">empty-cells</a><br>
+    <a href="speakhead.htm">speak-header</a><br>
+    <a href="tlayout.htm">table-layout</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">separate</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>&lt;<b class="tagname">table</b>&gt; or elements with an assigned
+        '<span class="property">display</span>' value of "table" or "inline-table"</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/tables.html#borders">CSS2: Sect. 17.6</a>,
+        <a href="http://www.w3.org/TR/CSS21/tables.html#borders">CSS2.1: Sect 17.6</a><br>
+        <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/bordercollapse.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The rendering of table borders is divided into two categories in CSS2 -
+        "collapsed" and "separated". This property specifies which border
+        rendering mode to use.  In the collapsed border model, adjacent table
+        cells share borders. In the separated model, adjacent cells each have
+        their own distinct borders (the distance between them given by the
+        '<a href="bspace.htm">border-spacing</a>' property.)
+        <br><br>
+
+        In the CSS2 collapsed border model, provision is made for resolution of 
+        cases where borders specified for adjacent cells differ and are in conflict:
+        <ol type="disc">
+           <li>If any shared border has a component where the 'border' is set
+               to "hidden" for <em>ANY</em> of the sharing members, the common
+               border should be unconditionally set to "hidden".
+           <li>If any shared border has a component where the 'border' is set
+               to "none", it can be overridden by any other border-sharing
+               member carrying a renderable 'border' property value. If <em>ALL</em>
+               border-sharing members specify a value of "none" for a border
+               component, only then will the border be set to "none".
+           <li>If a shared border has a 'border-width' contention, (with no
+               component having a 'border' value of "hidden" of course...),
+               the largest border-width should be rendered.
+           <li>If a shared border has a 'border-style' contention, the suggested
+               priority should be used (decreasing from left to right): "double",
+               "solid", "dashed", "dotted", "ridge", "outset", "groove", "inset."
+           <li>If a shared border has a 'border-color' contention, the suggested
+               priority should be used (decreasing from left to right): Table cell,
+               table row, row group, column, column group, table.
+       </ol>
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N7</i></b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">collapse</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N7</b>|<b class="s">O4</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Use the "collapsed borders" rendering model.</dd>
+
+<dt><b class="subheading">separate</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N7</b>|<b class="s">O4</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Use the "separated borders" rendering model.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">table</b> {
+        <span class="property">border:</span> medium double red;<br>
+        <span class="property">border-collapse:</span> separate;
+        <span class="property">border-spacing:</span> 10pt 5pt }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">table</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">border:</span> medium double red;<br>
+        <span class="property">border-collapse:</span> separate;
+        <span class="property">border-spacing:</span> 10pt 5pt&quot;&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>In the "collapsed border" rendering model, the 'border-style' value of
+        "inset" behaves like "groove", and "outset"  behaves like "ridge."
+    <li>CSS2 specified that the initial value for this property was "collapse". 
+        Because Mozilla and Opera behave such that the initial value is "separate", 
+        CSS2.1 now makes "separate" the official initial value.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer 5.0: In the "collapsed" table model, borders set
+        on the TABLE element win out over borders set on individual cells.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

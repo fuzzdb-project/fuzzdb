@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: Scrolled-Content - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>scrolled-content</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">N6</i></b>]<br></td>
+    <td align=center><b class="alert">Other Rendering-Area<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="pclassviewport.htm">viewport</a><br>
+    <a href="pclassviewportscroll.htm">viewport-scroll</a><br>
+    <a href="pclasscanvas.htm">canvas</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>BODY, SELECT and elements with the 'overflow' property set to "scroll".</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This Pseudo-class applies to content that is scrolled in a visual rendering environment.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">body :scrolled-content</b>
+        { <span class="property">background-color:</span> red }<br>
+        (apply a red background to scrollable elements inside the BODY element.</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Remember that the BODY element is itself scrollable, so if you
+        just say ":scrolled-content" as a selector, it will apply it to
+        the whole document canvas. To specify this pseudo-class for all
+        OTHER scrollable areas, use "body :scrolled-content" (<a
+        href="../selectors/element.htm#descendent">Descendent selectors</a>.)
+    <li>Netscape 6 applies this to the SELECT element contents, but not
+        to TEXTAREA elements. I find that odd. 8-}
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

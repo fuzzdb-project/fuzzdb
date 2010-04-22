@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LI: Browser Peculiarities: Treatment of "0" and negative values for VALUE attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">VALUE attribute behavior for "0" and negative values:
+<ul>
+<li><b>IE:</b> (all) Value ignored
+<li><b>Netscape/Mozilla:</b> (all) Both value types treated as "1" (default)
+<li><b>Opera 2.1-6.x:</b> Value Ignored
+<li><b>Opera 7.x+:</b> "0" honored; negative values cause no marker to be rendered on that LI or any thereafter.
+</ul>
+</div>
+
+<b>OL list with 2nd LI VALUE="5":</b>
+<hr>
+filler text <ol><li>LI item 1<li value="5">LI item 2<li>LI item 3</ol> filler text
+<hr>
+
+<br>
+<b>OL list with 2nd LI VALUE="0":</b>
+<hr>
+filler text <ol><li>LI item 1<li value="0">LI item 2<li>LI item 3</ol> filler text
+<hr>
+
+<br>
+<b>OL list with 2nd LI VALUE="-5":</b>
+<hr>
+filler text <ol><li>LI item 1<li value="-5">LI item 2<li>LI item 3</ol> filler text
+<hr>
+<br>
+
+</body>
+</html>

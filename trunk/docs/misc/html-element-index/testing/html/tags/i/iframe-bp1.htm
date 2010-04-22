@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IFRAME: Browser Peculiarities: BORDER attribute</title>
+<style>
+.assert { color: green; }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">There is an attribute that Microsoft's references list for 
+this element called BORDER. It does appear to have some effect, but it appears 
+to be to render padding around the frame (which is what the HSPACE and VSPACE 
+attributes accomplish) instead of rendering a distinct border around the frame.</div>
+<br>
+
+<b>Simple IFRAME, no BORDER attribute applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="75" width="100"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, BORDER=0 attribute applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="75" width="100" border="0"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, BORDER=1 attribute applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="75" width="100" border="1"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, BORDER=10 attribute applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="75" width="100" border="10"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, BORDER=30 attribute applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="75" width="100" border="30"></iframe>
+filler text
+<hr>
+
+</body>
+</html>

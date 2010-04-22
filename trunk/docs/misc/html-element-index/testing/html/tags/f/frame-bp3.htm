@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FRAME: Browser peculiarity - ROWS and COLS in same FRAMESET definition</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Authors can also choose to specify ROWS and COLS in the same 
+FRAMESET element. If this is done, the nested FRAME references will be assigned 
+sequentially to the ROWS and COLS layout specifications as follows: left to right, 
+top to bottom (eg: COLS, then ROWS.)</div>
+<br>
+
+
+<hr>
+<a href="frametest5.htm">Frameset definition: rows="*,*,*" cols="*,*", Frames in order: A, B, C, D, E, F</a>
+<hr>
+<br>
+
+<hr>
+<a href="frametest6.htm">Frameset definition: cols="*,*" rows="*,*,*", Frames in order: A, B, C, D, E, F</a>
+<hr>
+<br>
+
+<hr>
+<a href="frametest6.htm">Frameset definition: cols="*,*,*" rows="*,*", Frames in order: A, B, C, D, E, F</a>
+<hr>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text-Justify - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">text-justify</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE5.5B1</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other International Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="unibidi.htm">unicode-bidi</a><br>
+    <a href="direction.htm">direction</a><br>
+    <a href="ralign.htm">ruby-align</a><br>
+    <a href="roverhang.htm">ruby-overhang</a><br>
+    <a href="rposition.htm">ruby-position</a><br>
+    <a href="linebreak.htm">line-break</a><br>
+    <a href="wordbreak.htm">word-break</a><br>
+    <a href="writingmode.htm">writing-mode</a><br></td>
+    <td valign=top><a href="imemode.htm">ime-mode</a><br>
+    <a href="textaspace.htm">text-autospace</a><br>
+    <a href="textkspace.htm">text-kashida-space</a><br>
+    <a href="lflow.htm">layout-flow</a><br>
+    <a href="lgrid.htm">layout-grid</a><br>
+    <a href="lgmode.htm">layout-grid-mode</a><br>
+    <a href="lgtype.htm">layout-grid-type</a><br>
+    <a href="lgline.htm">layout-grid-line</a><br>
+    <a href="lgchar.htm">layout-grid-char</a><br>
+    <a href="lgcharspace.htm">layout-grid-char-spacing</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block-level elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA<br></td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/textJustify.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property appears to offer a refinement on the "justify" value used
+        in the 'text-align' property. Indeed, the "justify" value must be set for
+        that property for 'text-justify' to have any effect.
+        <br><br>
+
+        'Text-justify' offers a fine level of justification control over the
+        enclosed content, allowing for a variety of sophisticated justification
+        models used in different language writing systems.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The browser will determine the appropriate justification algorithm to use</dd>
+
+<dt><b class="subheading">distribute</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Justification is handled similarly to the "newspaper" value, but this
+        version is optimized for East Asian content (especially the Thai
+        language.) In this justification method, the last line is not justified.</dd>
+
+<dt><b class="subheading">distribute-all-lines</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Behavior and intent for this value is the same as with the "distribute"
+        value, but the last line is also justified.</dd>
+
+<dt><b class="subheading">inter-cluster</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Justifies content that does not have any inter-word spacing (such as
+        with many East Asian languages.)</dd>
+
+<dt><b class="subheading">inter-ideograph</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Used for justifying blocks of ideographic content. Justification is
+        achieved by increasing or decreasing spacing between ideographic
+        characters and words as well.</dd>
+
+<dt><b class="subheading">inter-word</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Justification is achieved by increasing the spacing between words. It
+        is the quickest method of justification and does not justify the last
+        line of a content block.</dd>
+
+<dt><b class="subheading">newspaper</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Spacing between letters and words are increased or decreased as necessary.
+        The IE reference says "it is the most sophisticated form of justification
+        for Latin alphabets."</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">div</b>
+        { <span class="property">text-align:</span> justify;
+        <span class="property">text-justify:</span> newspaper }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">div</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">text-align:</span>
+        justify; <span class="property">text-justify:</span> newspaper&quot;&gt;This
+        is "Newspaper" justified content&lt;/<b class="tagname">div</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+     <li>Nothing to report yet.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

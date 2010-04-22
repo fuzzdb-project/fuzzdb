@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pre</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Preformatted Text</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Text</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><span class="property"><a href="../../../css/properties/font/fontfamily.htm">font-family:</a></span> monospace,
+        <a href="../../../css/properties/text/whitespace.htm">white-space:</a></span> pre</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Fixed-width font, all spacing, line-feeds, etc. preserved on output</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/text.html#h-9.3.4">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_textmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The PRE element indicates text that has been formatted for the
+        screen and is rendered using a fixed-width font. All whitespace characters
+        are interpreted literally and retained in display (including multiple
+        spaces, tabs, carriage returns and linefeeds.) Normally, parsing behavior
+        in HTML collapses multiple spaces, tabs, CRs, or linefeeds to a single space.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>] 
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Clear</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute helps an author in situations with floating objects (images,
+        tables, etc.) produced through the <b class="alert">Left</b> and
+        <b class="alert">Right</b> ALIGN attributes. It allows content to stop being
+        flowed around the floated element.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">None</b>
+        [<b class="magicword">DEFAULT</b> - No special line breaking
+        effects are applied relative to the floating element.]<br>
+        &#160;&#160;&#160;<b class="alert">Left</b> [breaks line after this element
+        and moves down vertically until the left margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">Right</b> [breaks line after this element
+        and moves down vertically until the right margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">All</b> [breaks line after this element
+        and moves down vertically until both margins are clear of floated objects.]
+
+<dt><b class="subheading">Cols</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the maximum number of characters for a line. If
+        the preformatted content extends beyond this, a line-wrap is forced.
+    <dd><b class="l3heading">Values:</b> Positive integer values
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies the name of the element
+        to convert this element to in the SDA element group (in this case the
+        'Lit' element - "literal or computer text".)
+    <dd><b class="l3heading">Value:</b> 
+        <b class="alert">Lit</b> (Denotes 'literal or computer text' in SDA.)
+
+<dt><b class="subheading">VARIABLE</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This stand-alone attribute tells the browser to use a pre-formatted mode, 
+        but to use a variable-width font instead of the usual fixed-width font.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">variable</b> (XHTML)
+
+<dt><b class="subheading">Width</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6B1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the maximum number of characters for a line
+        and allows the browser to select a suitable font and indentation.
+        Values of <b class="alert">40</b>, <b class="alert">80</b> and
+        <b class="alert">132</b> characters should be presented optimally,
+        with other widths being rounded up.
+    <dd><b class="l3heading">Values:</b> Positive integer values
+
+<dt><b class="subheading">WRAP</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This stand-alone attribute tells the browser to use a pre-formatted
+        mode, but to line-wrap the content if it reaches the edge of the screen.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">wrap</b> (XHTML)
+
+<dt><b class="subheading">xml:space</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<b><i class="fs">X1</i></b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> Intrinsic part of XML
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a basic XML syntax that keeps all whitespace characters intact when they are parsed. This is 
+        the XML moral equivalent to the PRE element anyway, so its inclusion for this 
+        element in the standards makes sense.
+    <dd><b class="l3heading">Values:</b> <b class="alert">preserve</b> - maintain all 
+        whitespace characters in rendering and data storage (including multiple
+        spaces, tabs, carriage returns and linefeeds.)
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">pre</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;this&#160;&#160;&#160;
+        &#160;is&#160;&#160;&#160;&#160;a&#160;&#160;&#160;&#160;test<br>
+        &lt;/<b class="tagname">pre</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b><br>
+        <b class="alert">Exceptions:</b>
+        &lt;<a href="../a/applet.htm">applet</a>&gt; |
+        &lt;<a href="../b/basefont.htm">basefont</a>&gt; |
+        &lt;<a href="../b/big.htm">big</a>&gt; |
+        &lt;<a href="../b/blink.htm">blink</a>&gt; |
+        &lt;<a href="../f/font.htm">font</a>&gt; |
+        &lt;<a href="../i/iframe.htm">iframe</a>&gt; |
+        &lt;<a href="../i/image.htm">img</a>&gt; |
+        &lt;<a href="../s/sup.htm">nobr</a>&gt; |
+        &lt;<a href="../o/object.htm">object</a>&gt;
+        &lt;<a href="../s/small.htm">small</a>&gt;
+        &lt;<a href="../s/sub.htm">sub</a>&gt;
+        &lt;<a href="../s/sup.htm">sup</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+
+<dl>
+<dt><big><b class="mainheading">Tips &amp; Tricks</b></big>
+<dt><b class="subheading">General</b>
+    <dd><ul type=disc>
+        <li><b class="alert">DTD Note:</b> The HTML specifications have always gone
+            out of their way to exclude objects and size modifying markup from
+            PRE content. HTML 4.0 continues this trend, but does not exclude
+            the IFRAME element. This seems odd since other objects like IMG, APPLET
+            and OBJECT <em>ARE</em> excluded.
+        <li><b class="alert">DTD Note:</b> I excluded the NOBR and BLINK elements,
+            from the PRE content model. These elements are very similar to other
+            excluded physical markup in the HTML 4.0 DTD.
+        <li>The HTML 3.2 specification lists support for the WIDTH attribute.
+            The specification at one time had a note by this attribute asking:
+            <em>&quot;Does anyone support this?&quot;</em>. Of the reviewed
+            browsers, none do.
+        <li>Application of styles in PRE should not have any effect on the
+            preservation of spaces.
+        </ul>
+<dt><b class="subheading">Spaces</b>
+    <dd><ul type=disc>
+        <li>All spaces should be preserved.
+        </ul>
+<dt><b class="subheading">Tabs</b>
+    <dd><ul type=disc>
+        <li><a href="../../../testing/html/tags/p/pre-bp1.htm">[Test]</a>
+            &quot;The horizontal tab character (code position 9 in the HTML
+            document character set) must be interpreted as the smallest positive
+            nonzero number of spaces which will leave the number of characters so
+            far on the line as a multiple of 8. Documents should not contain tab
+            characters as they are not supported consistently.&quot; With this
+            caveat, it is easy to see that the behavior of tabs may be VERY
+            inconsistent from browser to browser.
+         </ul>
+<dt><b class="subheading">Linefeeds and Carriage Returns</b>
+    <dd><ul type=disc>
+        <li>There are different forms of linefeeds and carriage returns used on
+            different operating systems. All of them should be preserved.
+        </ul>
+</dl>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Parent/content behavior of this element may be very browser-dependent.
+    <li>Mozilla's documentation speaks of another attribute here called TABSTOP
+        and I could not get this to work the way I expected it might. Seeing as
+        there is NO other documentation regarding this attribute anywhere, it
+        is safe to ignore it.
+    <li>There was a brief hiccup in Netscape support for the VARIABLE attribute.
+        It worked all the way through the 4.x series, but wasn't introduced in
+        Mozilla/Netscape 6 until version 6.1.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

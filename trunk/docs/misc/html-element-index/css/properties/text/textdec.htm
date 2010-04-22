@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text-Decoration - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">text-decoration</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Text Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="wordspace.htm">word-spacing</a><br>
+        <a href="letterspace.htm">letter-spacing</a><br>
+        <a href="whitespace.htm">white-space</a><br>
+        <a href="wordwrap.htm">word-wrap</a><br>
+        <a href="textalign.htm">text-align</a><br></td>
+    <td valign=top><a href="textalignlast.htm">text-align-last</a><br>
+        <a href="texttrans.htm">text-transform</a><br>
+        <a href="textshadow.htm">text-shadow</a><br>
+        <a href="textindent.htm">text-indent</a><br>
+        <a href="textunderpos.htm">text-underline-position</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">none</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No (see below)</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">u</b>&gt; | &lt;<b class="tagname">s</b>&gt; |
+        &lt;<b class="tagname">strike</b>&gt; | &lt;<b class="tagname">blink</b>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#text-decoration">CSS1: Sect 5.4.3</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/text.html#lining-striking-props">CSS2: Sect 16.3.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/text.html#lining-striking-props">CSS2.1: Sect 16.3.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property describes the appearance characteristics of text that are not
+        specified with the '<a href="../font/fontstyle.htm">font-style</a>' and
+        '<a href="../font/fontweight.htm">font-weight</a>' properties. The color of the
+        text-decoration is taken from the 'color' property for the element. The
+        characteristics of this property <em>ARE</em> used by child elements if the
+        parent element is set to block. If this property is specified for an element/section
+        containing no text (like the IMG element) or is empty, this property has
+        no effect. Browsers may treat unknown values as <b class="alert">underline</b>.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B3</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This adds no decoration to the section.</dd>
+
+<dt><b class="subheading">underline</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The text in the section will be underlined.</dd>
+
+<dt><b class="subheading">overline</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The text in the section should have a line at the top of the text.</dd>
+
+<dt><b class="subheading">line-through</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The text in the section will have a line through the middle (strikethrough text.)</dd>
+
+<dt><b class="subheading">blink</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N4B2</i></b>|<b class="s">O4</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The text in the section blinks.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">strong</b> {
+        <span class="property">text-decoration:</span> overline }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">strong</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">text-decoration:</span> overline&quot;&gt;this
+        is a test&lt;/<b class="tagname">strong</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> Browsers may ignore the "blink"
+        value and still be considered CSS1 conformant.
+    <li>The CSS spec says that the default value for this property is "none",
+        but the IE online reference makes a good point: the default value is
+        element-dependent in HTML. For the most part, the default value <em>IS</em>
+        "none", but for STRIKE, S and DEL, it is usually "line-through." For
+        A HREF, U and INS the default is typically "underline."
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">3.0:</b>
+            <dd>- Multiple, space-separated values are not understood. The
+                entire property value is ignored.
+            <dd><b class="alert2">3.0+:</b>
+            <dd>- The effects of 'text-decoration' are not always used by child
+                elements as they should be (they are ignored most of the time.)
+                When they are honored (such as when a generic SPAN controlling text
+                color is nested inside), the characteristics of the original
+                decoration are not honored, rather the child element's style is used.
+            <dd><b class="alert2">5.5+:</b>
+            <dd>- Previous versions did not inherit the underline color from the
+                'color' property as it should. Beginning in this version it does.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.0 Beta 2:</b>
+            <dd>- This version had a default 'text-decoration' value of 'underline' -
+                which makes the values of 'none' and 'overline' into underlined
+                passages. The correct behavior occurs in subsequent releases.
+            <dd><b class="alert2">4.x:</b>
+            <dd>- The effects of 'text-decoration' are not always used by child
+                elements as they should be (they are ignored most of the time.)
+                When they are honored (such as when a generic SPAN controlling text
+                color is nested inside), the characteristics of the original
+                decoration are not honored, rather the child element's style is used.
+            <dd>- Applying styles to hyperlink Pseudo-classes applies the styles to
+                all hyperlinks.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- The effects of 'text-decoration' are not always used by child
+                elements as they should be (they are ignored most of the time.)
+                When they are honored (such as when a generic SPAN controlling text
+                color is nested inside), the characteristics of the original
+                decoration are not honored, rather the child element's style is used.
+            <dd>- Applying styles to hyperlink Pseudo-classes applies the styles to
+                all hyperlinks.
+            <dd>- Text decoration values of "none" and "underline" set for hyperlinks
+                do not work as expected - User preferences for hyperlink underlining
+                are used instead.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

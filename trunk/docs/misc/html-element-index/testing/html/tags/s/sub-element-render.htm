@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Subscript element rendering test</title>
+<!-- 
+    Element Definition:
+    Sub: element indicates content that is subscripted in relation to surrounding content.
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>If the test section (repeated "sub") is inline, has a font size 
+smaller than (and with a font baseline lower than) the surrounding filler text font size, 
+the test passes</i></b>.
+<br><br>
+
+<span class="text">Test is between the next two ruled lines</span>
+
+<hr>
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<sub>sub sub sub sub sub sub sub sub sub sub sub sub sub sub 
+sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub 
+sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub</sub>
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text
+<hr>
+
+</body>
+</html>

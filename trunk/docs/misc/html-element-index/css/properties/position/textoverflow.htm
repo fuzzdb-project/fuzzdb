@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text-Overflow - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">text-overflow</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE6</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Positioning Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="top.htm">top</a><br>
+    <a href="right.htm">right</a><br>
+    <a href="bottom.htm">bottom</a><br> 
+    <a href="left.htm">left</a><br>
+    <a href="vertalign.htm">vertical-align</a><br></td>
+    <td valign=top><a href="overflow.htm">overflow</a><br>
+    <a href="overflowx.htm">overflow-x</a><br>
+    <a href="overflowy.htm">overflow-y</a><br>
+    <a href="clip.htm">clip</a><br>
+    <a href="zindex.htm">z-index</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">clip</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA<br></td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/textOverflow.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Some content in an element may fall outside the element's rendering
+        box for a number of reasons (negative margins, absolute positioning,
+        content exceeding the width/height set for an element, etc.) In
+        cases where this occurs, the 'overflow' (set to "hidden" or "scroll"
+        for this property to have an effect), and 'clip' properties define
+        what content will be visible.
+        <br><br>
+
+        If text is too long for the overflow/clipping area and the content is to
+        be visually clipped, this property allows the clipped content to be visually
+        represented by the string "..." (called an "ellipsis") in the non-clipped area.
+        <br><br>
+
+        This property only applies to text overflow content in the flow of text
+        (horizontal for western text.) To explicitly force an overflow situation,
+        content must be in either a NOBR element or an element with the
+        'white-space' property set to "nowrap" - otherwise, only a natural
+        non-breaking word existing at the clipping boundary will induce this
+        property to have an ellipsis effect (if the property is thus set.)
+        <br><br>
+
+        The clipped content can still be selected by selecting the ellipsis.
+        When selected, the ellipsis will disappear and be visually replaced
+        by as much of the the text content as is possible to display in the
+        clipping area.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">clip</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Clips the viewable content to the area defined by the rendering box,
+        the 'overflow', and 'clip' property values.</dd>
+
+<dt><b class="subheading">ellipsis</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        If text content will overflow, display the string "..." in the
+        visibly-rendered region for content outside the visible area.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <br>
+        <b class="selector">div</b>
+        { <span
+        class="property">position:</span> absolute;
+        <span class="property">left:</span> 20px; <span class="property">top:</span> 50px;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="property">width:</span> 120px;
+        <span class="property">height:</span> 50px; <span class="property">border:</span> thin solid black;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="property">overflow:</span> hidden;
+        <span class="property">text-overflow:</span> ellipsis }</div>
+    <dd><div class="example">In-Line:&#160; <br>
+        &lt;<b class="tagname">div</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">position:</span> absolute;
+        <span class="property">left:</span> 20px; <span class="property">top:</span> 50px;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="property">width:</span> 120px;
+        <span class="property">height:</span> 50px; <span class="property">border:</span> thin solid black;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="property">overflow:</span> hidden;
+        <span class="property">text-overflow:</span> ellipsis&quot;&gt;<br>
+        &lt;<b class="tagname">nobr</b>&gt;This is a NOBR section of moderate length and size.&lt;/<b class="tagname">nobr</b>&gt;
+        <br>&lt;/<b class="tagname">div</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

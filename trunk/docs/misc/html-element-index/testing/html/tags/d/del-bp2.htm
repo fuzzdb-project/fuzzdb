@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>DEL: Browser peculiarity - Nesting INS and DEL</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">INS and DEL can be nested. Because the only visual difference 
+is strike and underline, only simple nesting will have any visual effect. Nesting 
+INS within INS, for example, will look no different from a single INS element occurrence. 
+Nesting INS within DEL however will produce the necessary feedback.</div>
+<br>
+
+<b>Simple INS example:</b>
+<hr>
+filler text <ins cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">ins text</ins> filler text
+<hr>
+<br>
+
+<b>Simple DEL example:</b>
+<hr>
+filler text <del cite="#jan25-2001" datetime="2002-04-31T12:00:00PST">del text</del> filler text
+<hr>
+<br>
+
+<b>INS nested inside INS example:</b>
+<hr>
+filler text <ins cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">ins1 
+<ins cite="#jan25-2001" datetime="2001-01-27T11:35:00PST">ins2</ins> ins1</ins> filler text
+<hr>
+<br>
+
+<b>DEL nested inside DEL example:</b>
+<hr>
+filler text <del cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">del1 
+<del cite="#jan25-2001" datetime="2001-01-27T11:35:00PST">del2</del> del1</del> filler text
+<hr>
+<br>
+
+<b>DEL nested inside INS example:</b>
+<hr>
+filler text <ins cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">ins1 
+<del cite="#jan25-2001" datetime="2001-01-27T11:35:00PST">del2</del> ins1</ins> filler text
+<hr>
+<br>
+
+<b>INS nested inside DEL example:</b>
+<hr>
+filler text <del cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">del1 
+<ins cite="#jan25-2001" datetime="2001-01-27T11:35:00PST">ins2</ins> del1</del> filler text
+<hr>
+<br>
+
+</body>
+</html>

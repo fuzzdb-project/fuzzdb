@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Common Tag Attributes: Event Handlers</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle"><b class="alert">%</b>Events<b class="alert">%</b>
+Attributes</span><br><font size=2>= <span class="sitetitle">Index DOT Html</span> 
+by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../tree/htmltree.htm">Element Tree</a> |
+    <a href="../../tagindex/a.htm">Element Index</a> |
+    <a href="../../supportkey/a.htm">HTML Support History</a></font></td></tr>
+</table>
+</center>
+
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What are Event Handlers?</b></big>
+    <dd>Event Handlers allow embedded scripting languages to trap events
+        and actions that occur as a page is experienced by a reader. These
+        optional attributes then trigger external or in-line script code. The
+        sheer quantity of event handlers now available hint at the
+        possibilities for enriching a reader's page experience...but mostly to 
+        the author, it is just really scary at first. =)
+        <br><br>
+
+        This attribute category draws its inspiration from a
+        <a href="../shorthands.htm#param">Parameter Entity</a> category
+        defined in HTML 4.x called "%events" - but that category only covers
+        the attributes defined here as the first 10 "Generic Events" ('onkeypress', 
+        'onkeydown', and 'onkeyup', 'onclick', 'ondblclick', 'onmousedown', 
+        'onmouseup', 'onmouseover', 'onmousemove', 'onmouseout'.) I decided to 
+        expand this category to include <em>ALL</em> event handlers to save space.
+</dl>
+
+
+
+<table cellspacing=0 width="95%" cellpadding=3 border=2>
+<tr>
+    <th colspan=5><br><big>Event Types: <a href="#generic">Generic</a> |
+    <a href="#page">Page</a> | <a href="#form">Form</a> |
+    <a href="#marquee">Marquee</a> | <a href="#edit">Editing</a> |
+    <a href="#dso">Data Binding</a> | <a href="#misc">Misc</a></big><br></th>
+</tr>
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="generic>">Generic
+    Events</a></b></big><br></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=15 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=15 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events1.htm">onKeyPress</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]</small></td>
+    <td>A keyboard key is pressed and released for an element that has focus.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events1.htm">onKeyDown</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]</small></td>
+    <td>A keyboard key is depressed for an element that has focus.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events1.htm">onKeyUp</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]</small></td>
+    <td>A keyboard key is released for an element that has focus.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onclick.htm">onClick</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The pointing device has been clicked.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="ondblclick.htm">onDblClick</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b></small>]</td>
+    <td>The pointing device has been double-clicked.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events2.htm">onMouseDown</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]</small></td>
+    <td>The pointing device button has just been pressed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events2.htm">onMouseUp</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]</small></td>
+    <td>The pointing device button has just been released.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onmouseover.htm">onMouseOver</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The pointing device enters the bounds of an element from outside the element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onmousemove.htm">onMouseMove</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O5</b></small>]</td>
+    <td>The pointing device was moved within the boundary of the element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onmouseout.htm">onMouseOut</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE4</b>|<b><i class="fs">N3</i></b>|<b class="s">O3</b></small>]</td>
+    <td>The pointing device was moved out of the boundary of the element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events13.htm">onMouseEnter</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The pointing device was moved into the boundary of the element. Unlike ONMOUSEOVER, 
+    this event handler does not "bubble" - eg, it does not fire over rendered regions 
+    that are children of the element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events13.htm">onMouseLeave</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The pointing device was moved out of the boundary of the element. From Microsoft's 
+    documentation descriptions, there is no difference between this event handler 
+    and ONMOUSEOUT.</td>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onmousewheel.htm">onMouseWheel</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the mouse wheel button is rotated.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="oncontextmenu.htm">onContextMenu</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6</b>|<span class="ns">O</span>]</small></td>
+    <td>The right mouse button (or its equivalent keyboard sequence) has been activated
+    for an element.</td>
+</tr>
+
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="page">Page/Dependency Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=10 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=10 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onabort.htm">onAbort</a></b></th>
+    <td valign=top nowrap><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<b><i><u class="sr">N3-4.x</u></i></b>|<span class="ns">O</span>]</small></td>
+    <td>Image downloading has been interrupted.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onbeforeunload.htm">onBeforeUnload</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The page is about to be unloaded from its current context.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onerror.htm">onError</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<b><i class="fs">N3</i></b>|<b class="s">O4</b>]</small></td>
+    <td>An error has occurred during the loading of external page dependencies or
+    during the processing of a script.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onload.htm">onLoad</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The document or other external dependency has finished loading to the browser.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onmove.htm">onMove</a></b></th>
+    <td valign=top nowrap><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE5.5</b>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]</small></td>
+    <td>The element or browser window has been moved.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onresize.htm">onResize</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]</small></td>
+    <td>The window/object has been resized.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onscroll.htm">onScroll</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N7</b>|<b class="s">O7</b>]</small></td>
+    <td>The element's scrollbar position has been changed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onstop.htm">onStop</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The browser's Stop button has been activated or the document is unloading.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onunload.htm">onUnload</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The page is unloading from its current context.</td>
+</tr>
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="form">Form/Focus Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=13 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=13 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onreset.htm">onReset</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE4</b>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]</small></td>
+    <td>A form's RESET button has been activated.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onsubmit.htm">onSubmit</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>A form's submittal process is beginning.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onblur.htm">onBlur</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The current element has lost focus (by keyboard tabbing or mouse.)</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onchange.htm">onChange</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The current element has lost focus (by keyboard or mouse) and the element's
+    contents have changed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onfocus.htm">onFocus</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3</b>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]</small></td>
+    <td>The element has received focus.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events14.htm">onFocusIn</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered just prior to setting focus on an element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events14.htm">onFocusOut</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered immediately after moving focus from the current element.</td>
+</tr>
+
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="oninput.htm">onInput</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<b><i class="fs">N6</i></b>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when data is entered to a form field that accepts text content.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onbeforeactivate.htm">onBeforeActivate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered immediately before the current element is set to an "active" state.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events15.htm">onActivate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the current element is set to an "active" state.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events15.htm">onBeforDeactivate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the current element is in an active state and immediately before 
+    switching the active state to another element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events15.htm">onDeactivate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the current element is "active" and is switching "active" status to 
+    another element.</td>
+</tr>
+
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="marquee">Marquee Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=4 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=4 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events4.htm">onBounce</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The content of the Marquee element has moved to the boundary of the Marquee display area.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events4.htm">onFinish</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The Marquee element has finished its prescribed movement pattern.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events4.htm">onStart</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The Marquee element is beginning its prescribed movement pattern.</td>
+</tr>
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="edit">Editing Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=23 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=23 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events12.htm">onBeforeCopy</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>A selection is about to be copied to the system clipboard.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events8.htm">onBeforeCut</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>All or a portion of the element is about to be removed (cut) from the document
+    and moved to the system clipboard.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onbeforeeditfocus.htm">onBeforeEditFocus</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The current element is about to enter an "active" state.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events8.htm">onBeforePaste</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Content is about to be transferred (pasted) from the system clipboard.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onbeforeupdate.htm">onBeforeUpdate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Notifies the target element before the contents of the system clipboard are pasted.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events12.htm">onCopy</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>All or a portion of the element has been selected and copied to the
+    system clipboard.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events8.htm">onCut</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>All or a portion of the element has been removed (cut) from the document and moved
+    to the system clipboard.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDrag</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Continually notifies the source element that a drag operation is occurring.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="ondragdrop.htm">onDragDrop</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]</small></td>
+    <td>An external resource has been dropped into a window or frame.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDragEnd</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Notifies the source element that a drag operation has ended (mouse has
+    been released.)</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDragEnter</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Notifies the target element when the contents being dragged have entered a
+    valid target.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDragLeave</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Notifies the target element when the mouse moves out of a valid target
+    during a drag operation.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDragOver</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Continually notifies the target element when the contents being dragged are within
+    a valid target.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="ondragstart.htm">onDragStart</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Notifies the source element when a drag operation begins.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events5.htm">onDrop</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The mouse button has been released during a drag operation.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onlosecapture.htm">onLoseCapture</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The element has lost mouse selection capture.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events8.htm">onPaste</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Content has been transferred (pasted) from the system clipboard.</td>
+</tr>
+
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onselect.htm">onSelect</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<span class="ns">O</span>]</small></td>
+    <td>Text content has been selected in a form field text entry element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onselectstart.htm">onSelectStart</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Content selection has begun.</td>
+</tr>
+
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events16.htm">onControlSelect</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when control-selection occurs on the element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events16.htm">onMoveStart</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the element begins to move.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events16.htm">onMoveEnd</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Triggered when the element stops moving.</td>
+</tr>
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="dso">Data Binding Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=11 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=11 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onafterupdate.htm">onAfterUpdate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Data has finished transfer from the source element to the data source object.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="oncellchange.htm">onCellChange</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Data has changed in a data source provider.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events9.htm">onDataAvailable</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Data has arrived asynchronously from a data source object.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events9.htm">onDatasetChanged</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Data in the data source object has changed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events9.htm">onDatasetComplete</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>All currently available data has been loaded from the data source object.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onerrorupdate.htm">onErrorUpdate</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>onBeforeUpdate has cancelled the data transfer. Takes place of onAfterUpdate event.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events6.htm">onRowEnter</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The current row in the data source object has changed and new data is available.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events6.htm">onRowExit</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The current row is about to be changed in the data source object.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events7.htm">onRowsDelete</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Rows are about to be deleted from the current Data Source Object recordset.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events7.htm">onRowsInserted</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>Rows have just been inserted into the current Data Source Object recordset.</td>
+</tr>
+<tr><th align=left colspan=5><br><big><b class="mainheading"><a name="misc">Misc Events</a></b></big></th></tr>
+<tr>
+    <th><b class="subheading">Event</b></th>
+    <td rowspan=7 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Support</b></th>
+    <td rowspan=7 bgcolor="#808080">&#160;&#160;</td>
+    <th><b class="subheading">Description</b></th>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events10.htm">onAfterPrint</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The document has just been printed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="events10.htm">onBeforePrint</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The state just before the document is to be printed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onfilterchange.htm">onFilterChange</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The state of an element has been changed by a filter or filter transition
+    has been completed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onhelp.htm">onHelp</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The user has pressed the F1 key or HELP from the browser menu for this element.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onpropertychange.htm">onPropertyChange</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>One or more of the element's properties have changed.</td>
+</tr>
+<tr>
+    <th align=left valign=top><b class="l3heading"><a href="onreadystatechange.htm">onReadyStateChange</a></b></th>
+    <td valign=top><small>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">N</span>|<span class="ns">O</span>]</small></td>
+    <td>The element has changed its ReadyState.</td>
+</tr>
+<tr>
+    <th colspan=5><br><big>Event Types: <a href="#generic">Generic</a> |
+    <a href="#page">Page</a> | <a href="#form">Form</a> |
+    <a href="#marquee">Marquee</a> | <a href="#edit">Editing</a> |
+    <a href="#dso">Data Binding</a> | <a href="#misc">Misc</a></big><br></th>
+</tr>
+</table>
+<br>
+
+<a name="tips"></a>
+<big><b class="mainheading">Notes, Tips &amp; Tricks</b></big>
+<ul>
+    <li>I had to make some decisions about testing these event handlers. 
+        There are just SO many event handlers now that testing all of them 
+        on all elements is an insane proposition. With the proliferation of 
+        totally proprietary event handlers in IE, I chose to trust Microsoft's 
+        documentation in some cases. The information for the following event 
+        handlers is based off of Microsoft's documentation for the respective events: 
+        all the events in the editing category (except ONDRAGDROP, ONSELECT and 
+        ONMOVE), all data binding events, and all miscellaneous events (except ONHELP.)
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape 6.x: Basic event handler attributes are handled for any
+        element, even nonsense made-up elements.
+    <li>Opera 4.x and Netscape 6.x: Events appear strange on table cells here -
+        eg: a mouseover on a TD element will fire twice on entry to the cell
+        content, and also fire on every content line in the cell as you move
+        between them, as if areas that are blank in the cell are "outside" the
+        mouseover area of the cell. This seems incorrect to me.
+    <li>Microsoft's documentation tends to regularly leave out a few elements
+        from their support charts, like ACRONYM, BASEFONT, DEL, FONT, INS and 
+        Q...but when I <em>DO</em> test these elements for support that their 
+        charts say is lacking, they <em>ARE</em> supported. So, I generally try to
+        list these as being supported in IE when MS' charts say they support 
+        similar inline elements.
+    <li>Microsoft's pages list support (IE5.5+) for two event handlers: 
+        ONRESIZESTART and ONRESIZEEND. I tried many scenarios and conditions
+        as stated by MS' docs and I could never get them to fire.
+    <li>Mozilla's source code makes mention of ONDRAGDROP and ONMOVE, but in trying 
+        test cases that work in Netscape 4.x, it doesn't look like these are supported anymore.
+    <li>Digging in the Mozilla source code, I was able to find references to 
+        many other event handlers, but I was not able to confirm support or 
+        behavior for any of them without any sort of documentation:<br>
+        <b class="alert">onbroadcast</b>, <b class="alert">onclose</b>, <b class="alert">oncommand</b>, 
+        <b class="alert">oncommandupdate</b>, <b class="alert">onpopupshowing</b>,
+        <b class="alert">onpopupshown</b>, <b class="alert">onpopuphiding</b>, 
+        <b class="alert">onpopuphidden</b>, <b class="alert">ondragdrop</b>, 
+        <b class="alert">ondragenter</b>, <b class="alert">ondragexit</b>, 
+        <b class="alert">ondraggesture</b>, <b class="alert">ondragover</b>, 
+        <b class="alert">onpaint</b>, <b class="alert">onoverflow</b>, 
+        <b class="alert">onunderflow</b>, <b class="alert">onoverflowchanged</b>
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax - Miscellaneous Syntax Details</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Miscellaneous Syntax Details</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<a name="character"></a>
+<dl>
+<dt><big><b class="mainheading">Unicode Character Escape Mechanism</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE6</i></b>|<b><i class="fs">N6</i></b>|<b class="s">O6</b>|<b class="s">S1</b>]
+    <dd>The base character set for CSS is Unicode, a set which allows for
+        approximately 65,000 characters and extension mechanisms allowing
+        for millions more.) Keyboards are just not capable of directly
+        inputing all of these characters. Yet, there will likely be times
+        when an author wishes to use a character that can not be directly
+        input from the keyboard. A special new syntax in CSS2 allows for this.
+        <br><br>
+
+        Use of the backslash character ("\") indicates that what
+        follows is an escape sequence for a Unicode character. The hexadecimal
+        escape code that follows the backslash represents the desired Unicode
+        code point. As many as six hexadecimal digits may be specified after the
+        backslash character, but fewer may be used. Unlike in HTML, character
+        references in CSS have a beginning delimiter, but no end delimiter other
+        than the constraint that there will be no <em>MORE</em> than 6 hexadecimal
+        digits for the reference. For character references <em>LESS</em> than 6
+        hexadecimal digits in length, appending the value with a white-space
+        character ensures that the Unicode value reference is properly terminated.
+        In CSS2, The first trailing white-space character following a Unicode
+        character reference should be ignored.
+        <br><br>
+
+        <b class="alert">Syntax:</b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"\" [0..9a..f]{1,6} [" "]?<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(eg: "\00007btext" --&gt; "{text")<br>
+        <b class="alert">Notes:</b>
+        <ul type="disc">
+            <li>The backslash character can also be used to avoid parsing of special
+                CSS syntax characters (eg: the ";" character can be escaped as "\;".)
+                Hexadecimal characters can not be escaped this way because they are
+                interpreted in the manner listed above.
+            <li>A newline character is ignored in a string value if it is immediately
+                preceded by the backslash character.
+        </ul>
+
+</dl>
+
+<a name="comment"></a>
+<dl>
+<dt><big><b class="mainheading">CSS Comments</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd>While Cascading Style Sheet syntax is very self-documenting, there will
+        be times when an author will want to add explanations or comments in a
+        style sheet. CSS syntax allows for this. A CSS comment (like in the C
+        programming language) begins with "/*", and ends with "*/" - everything
+        that lies between these delimiters is the comment and should be ignored
+        by the CSS parser. Comments may not be nested and can occur anywhere
+        between CSS syntax constructs.
+        <br><br>
+
+    <dd><b class="alert">Note:</b>
+    <dd>The specification does not seem to be clear on how HTML/XML comment
+        constructs ("&lt;!-- --&gt;") are treated in CSS syntax.</dd>
+</dl>
+
+<a name="important"></a>
+<dl>
+<dt><big><b class="mainheading">'!important' Rules</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd>CSS allows both the author and the reader to specify style information
+        for a document. An author's style sheet will usually contain rules
+        attempting to preserve the original design intent; a user's style sheet
+        may contain style rules that are imperative for their viewing needs (eg:
+        possibly larger font sizes for users with poorer eyesight.)
+        <br><br>
+
+        By default, style rules in an author's style sheet will have higher
+        precedence than an equivalent style rule in a user's style sheet. This
+        skews the decision-making of page rendering decidedly towards the author,
+        which can be very limiting for some users ...to the point of making
+        content exclusionary in some cases.
+        <br><br>
+
+        CSS allows the scales to be balanced with the "!important" keyword. When
+        this keyword is added at the end of a style declaration (eg: "h2 { color:
+        white !important }") it is given higher precedence than an equivalent style
+        rule that does not carry the "!important" keyword. When equivalent style
+        rules in an author and user style sheet both carry the "!important" keyword,
+        the user's style rule takes precedence.
+
+    <dd><br><b class="alert">Example:</b><br>
+        <div class="example"><span class="text"><b class="selector">Selector</b>
+        { <span class="property">CSS-Property:</span> Property-value
+        <b class="alert2">!important</b> }</span></div>
+
+    <dd><br><b class="alert">Notes:</b>
+        <ul type=disc>
+            <li>In CSS1, an author "!important" declaration has precedence over a
+                user "!important" declaration. This was changed in CSS2 to its current behavior.
+            <li>Setting a shorthand property to be "!important" sets all of its
+                sub-properties to "!important" as well, whether explicitly specified or
+                not (eg: setting the 'font' property for a selector as "!important" is
+                the same as setting the 'font-style', 'font-variant', 'font-weight',
+                'font-size, 'line-height', and 'font-family' properties as "!important.")
+        </ul>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- If an extra asterisk character ("*") is placed just before
+                the end of a comment (eg: using "**/" instead of "*/"), the
+                comment is not terminated, and valid style declarations that
+                follow are also treated as comments.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- Reported Elsewhere: Some cases of using the "!important" keyword
+                can cause the entire style declaration to be ignored (noted
+                situation: when the "!important" statement immediately follows
+                a style declaration without spaces between them.)
+        </dl>
+</ul>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

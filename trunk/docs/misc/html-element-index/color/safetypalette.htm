@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+ <TITLE>Form test</TITLE>
+     <link rel="stylesheet" type="text/css" href="../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../scripts/csschange.js"></script>
+
+<script language="javascript" type="text/javascript">
+function setSwatch()
+{
+var value = "";
+var red   = document.safety.red.options[document.safety.red.selectedIndex].value;
+var green = document.safety.green.options[document.safety.green.selectedIndex].value;
+var blue  = document.safety.blue.options[document.safety.blue.selectedIndex].value;
+
+value = "#" + red + green + blue;
+document.forms[0].textresult.value = value;
+if (document.getElementById)
+   { document.getElementById('bgfield').style.backgroundColor = value; }
+else if (document.layers)
+   { document.layers[0].bgColor  = value; }
+else
+   { document.write("The functionality in this page does not seem to be supported by your browser"); }
+
+}
+</script>
+<style>
+#bgfield { background-color: #000000; }
+</style>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<noscript><b>Javascript is either not possible or disabled </b></noscript>
+<h1 align="center"><span class="pagetitle">RGB Safety Palette</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html/Css</span> by <a href="../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=left>Index DOT Html: <font size=2>
+     <a href="../html/index.html">Main Index</a> | <a href="../html/tree/htmltree.htm">Element Tree</a> |
+     <a href="../html/tagindex/a.htm">Element Index</a> | <a href="../html/supportkey/a.htm">HTML Support
+     History</a></font><br>
+     Index DOT Css: <font size=2><a href="../css/index.html">Main Index</a> |
+     <a href="../css/propindex/font.htm">Property Index</a> |
+     <a href="../css/supportkey/syntax.htm">CSS Support History</a> |
+     <a href="../history/browsers.htm">Browser History</a></font></td>
+</tr>
+</table>
+</center>
+<br>
+
+<form name="safety">
+<dl>
+<dt><big><b class="mainheading">Description</b></big>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+    <dd>This syntax represents a color using a triplet of hexadecimal
+        values concatenated together, preceded by a pound ("#") symbol. The
+        value represents the Red, Green and Blue components for a given color.
+        The Safety Palette is a very useful subset of values within the 16
+        million allowed color values. This subset represents the palette of
+        color values that will not <a href="../misc/glossary.htm#dither">dither</a>
+        on a system using only 256 colors. This "safe" range is composed of
+        six equally spaced values in the 256 value range for each color
+        component. With six values for each component, this gives a total of
+        216 (6 X 6 X 6) color combinations.
+
+<dt><br><big class="mainheading">Allowed values</big>
+    <dd><table border=3 cellpadding=3 cellspacing=0>
+        <tr><th align=right><b class="alert">Hexadecimal:</b></th>
+            <th>00</th><th>33</th><th>66</th><th>99</th><th>CC</th><th>FF</th>
+        </tr>
+        <tr><th align=right><b class="alert">Decimal:</b></th>
+            <th>00</th><th>51</th><th>102</th><th>153</th><th>204</th><th>255</th>
+        </tr>
+        </table>
+
+<dt><br><big class="mainheading">Color Swatches</big><br>
+    <dd><table border=3 cellpadding=0 cellspacing=0>
+        <tr><td valign=top><table><tr>
+        <th align=left valign=top>
+            <b class="alert">Red:</b> <select name="red" onchange="setSwatch()">
+            <option value="00" selected>00
+            <option value="33">33
+            <option value="66">66
+            <option value="99">99
+            <option value="cc">CC
+            <option value="ff">FF
+            </select>
+            <b class="alert">Green:</b> <select name="green" onchange="setSwatch()">
+            <option value="00" selected>00
+            <option value="33">33
+            <option value="66">66
+            <option value="99">99
+            <option value="cc">CC
+            <option value="ff">FF
+            </select>
+            <b class="alert">Blue:</b> <select name="blue" onchange="setSwatch()">
+            <option value="00" selected>00
+            <option value="33">33
+            <option value="66">66
+            <option value="99">99
+            <option value="cc">CC
+            <option value="ff">FF
+            </select><br>
+            <b class="magicword"><u>Hex Result:</u></b>
+            <input type="text" name="textresult" value="#000000" size=20>
+        </th></tr></table></td>
+<td><ilayer name="nn4ilr" bgcolor="#000000" width=75 height=75><img src="../images/trans.gif"
+    alt="placeholder image" width="75" height="75" id="bgfield"></ilayer></td>
+</tr>
+</table>
+</dl>
+
+</form>
+
+<br>
+<a href="../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>SELECT: Browser Peculiarities: Effects of DIR="rtl"</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The DIR="RTL" attribute right aligns the content of SELECT lists
+WITHIN the form field, not the element itself relative to the viewport as it does for other elements.</div>
+<br>
+
+<form>
+<b>Plain SELECT:</b>
+<hr>
+filler text
+<select name="optionlist1">
+<option value="optionvalue1">Short option1</option>
+<option value="optionvalue2" selected>Long option Filler text Filler text</option>
+<option value="optionvalue3">Short option3</option>
+</select><br>
+filler text
+<hr>
+<br>
+
+<b>Plain SELECT, dir=rtl:</b>
+<hr>
+filler text
+<select name="optionlist2" dir="rtl">
+<option value="optionvalue1">Short option1</option>
+<option value="optionvalue2" selected>Long option Filler text Filler text</option>
+<option value="optionvalue3">Short option3</option>
+</select><br>
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

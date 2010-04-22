@@ -1,0 +1,582 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Img</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><font size=6><b class="pagetitle">Image</b></font><br>
+        <font size=1>&#160;</font><br>
+        <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+        [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th valign=top align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>HTML: In all 4.x DTDs<br>
+        XHTML: In all 1.0 and 1.1 DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Image</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (replaced element)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced by image of specified dimensions</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_imagemodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The IMG element is the main method for including multimedia content
+        in an HTML document, accomplished via in-line graphics.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s">IE4B1</b>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the alignment of text following the IMG
+        reference relative to the graphic on screen. LEFT and RIGHT specify
+        floating horizontal alignment of the image in the browser window,
+        and subsequent text will wrap around the image. The other options specify 
+        vertical alignment of text relative to the image on the same line.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Left</b> | <b class="alert">Right</b> |
+        <b class="alert">Top</b> | <b class="alert">Texttop</b> |
+        <b class="alert">Middle</b> | <b class="alert">Absmiddle</b> |
+        <b class="alert">Baseline</b> | <b class="alert">Bottom</b> |
+        <b class="alert">Absbottom</b>
+
+<dt><b class="subheading">Alt</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s">M2</b>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This is text to be displayed in place of an image for browsers that can 
+        not handle this ability or for browsers that have disabled this ability.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">Border</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b class="s">M3B2</b><a href="#peculiar">*</a>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls the thickness of the border around the image (in pixels)
+        whether as a hyperlink or as a stand-alone image. If the image is
+        stand-alone, the border color will usually be the color of the surrounding
+        text (affected also by the TEXT attribute to the BODY element.) If the image
+        is within a hyperlink the border color will the default hyperlink color
+        (affected also by the LINK/VLINK attributes to the BODY element.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [<b class="alert">0</b>, for no border, or a positive integer pixel value.]
+
+<dt><b class="subheading">Controls</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This standalone attribute specifies a set of video controls be
+        available to the user in order to allow the user the ability to pause,
+        stop, re-start or skip parts of the video. It is used in conjunction
+        with the DYNSRC attribute.
+    <dd><b class="l3heading">Values:</b> NA
+
+<dt><b class="subheading">DynSrc</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of an in-line video.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s">M3B2</b><a href="#peculiar">*</a>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of the graphic in pixels.
+        It is mainly used to create custom image dimensions without physically
+        changing the image itself. It can also be used to speed up display of
+        the document being downloaded so it can pre-render the document with
+        image placeholders while the images download.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values or positive integers paired with a "%" character 
+        denoting a percentage of the parent element height.]
+
+<dt><b class="subheading">HSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the horizontal spacing around images in pixels
+        (left and right side padding.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values]
+
+<dt><b class="subheading">ISMap</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which is used in combination with a
+        hyperlink to identify the image as a sensitive map. When used in
+        combination with a hyperlink whose destination is a coordinate map
+        file, the browser sends the coordinates clicked on by the user to
+        the map file for processing.
+        <br><br>
+        The map file is a series of shape names with associated coordinate values 
+        that list corresponding URLs to jump to when the coordinates are received.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">ismap</b> (XHTML)
+
+<dt><b class="subheading">Longdesc</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6.1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of a longer description of the image
+        specified in the SRC attribute. This would allow long passages of
+        descriptive narrative with markup to be used for image descriptions.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Loop</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the number of times the video will play.
+        This attribute is used in conjunction with the DYNSRC attribute.
+    <dd><b class="l3heading">Values:</b>
+        Specified as a positive integer, or <b class="alert">Infinite
+        (or -1)</b> which will play the video indefinitely.
+
+<dt><b class="subheading">LowSrc</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4B1</b>|<span class="ns">M</span>|<b><i><u class="sr">N1-6.01</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of a low-resolution image to be
+        downloaded before a higher resolution image specified in the SRC
+        attribute. The reasoning is that a low-resolution image is smaller in
+        size than a higher resolution image and is thus faster to download.
+        After the lowres image has been downloaded, it is displayed until the
+        high resolution image is downloaded.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Introduced in HTML 4.01. In all HTML 4.01 DTDs. In Transitional/Frameset 
+        DTDs (not in Strict) in XHTML 1.0. Dropped in XHTML 1.1 in favor of the 
+        ID attribute.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is used to give a unique label to this image
+        so that it can be referenced and manipulated with scripting code.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">SDAPref</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>BEFORE</em> the original element content (in this case the string
+        "&lt;Fig&gt;&lt;?SDATrans Img: #AttList&gt;#AltVal(Alt)&lt;/Fig&gt;") when 
+        the SDA document is rendered (SDA also allows attributes and values from 
+        the original element to be used in the new SDA element where necessary.) 
+        #AttList lists out all of the attribute="value" pairs from the original 
+        code, and #AltVal(Alt) echoes the value of the original IMG ALT attribute.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">&lt;Fig&gt;&lt;?SDATrans Img: 
+        <code class="alert2">#AttList</code>&gt;<code class="alert2">#AltVal(Alt)</code>&lt;/Fig&gt;</b>
+
+<dt><b class="subheading">Src</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates the URL to reference the graphic.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Start</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies when the video will start playing. This
+        attribute is used in conjunction with the DYNSRC attribute.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">Fileopen</b>
+        [The video starts as soon as it is finished loading]<br>
+        &#160;&#160;&#160;<b class="alert">Mouseover</b>
+        [The video should start playing when the user moves the mouse
+         over the video clip.]
+
+<dt><b class="subheading">Suppress</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Most browsers display a special icon (which may also display the ALT
+        attribute content) in place of an actual image until the real image is
+        finished being downloaded. This attribute specifies whether or not this
+        image placeholder will be displayed.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">True</b> [Suppress image placeholders and ALT content]<br>
+        <b class="alert">False</b> [Do not suppress image placeholders and ALT
+        content - <b class="magicword">DEFAULT</b>]
+
+<dt><b class="subheading">UseMap</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE1</i></b>|<b class="s">M2.1</b>|<b class="s">N2</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL (usually internal to the document) of
+        the client-side image map specification to be used if the browser has
+        that capability. If the argument to USEMAP begins with a &quot;#&quot;
+        it is assumed to be in the same document as the IMG element. This attribute
+        is well used in conjunction with the ISMAP attribute for browsers that
+        <em>cannot</em> understand client-side image maps. Client-side coordinate
+        mapping is done by the browser, so is inherently faster in processing
+        the coordinates than the ISMAP process. The presence of a USEMAP attribute 
+        overrides the effect of an anchor (A) element surrounding the IMG element.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [An absolute URL, a relative URL or an internal anchor name. All URLs should 
+        be <a href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">VRML</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL of an inline VRML world. Use of this
+        attribute will launch a VRML viewer if one is installed on the machine.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">VSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the vertical spacing around images in pixels
+        (top and bottom padding.) Values are specified in positive integers.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values]
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s"> M3B2</b><a href="#peculiar">*</a>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the graphic in pixels.
+        It is mainly used to create custom image dimensions without having to
+        physically change the image itself. It can also be used to speed up
+        display of the document being downloaded so it can pre-render the document
+        with image placeholders while the images download.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values or positive integers paired with a "%" character 
+        denoting a percentage of the parent element width.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">img</b>
+        <span class="tagattrib">src</span>=&quot;http://www.foo.com/foo.gif&quot;
+        <span class="tagattrib">align</span>=&quot;left&quot;<br>
+        <span class="tagattrib">alt</span>=&quot;alternate text&quot;
+        <span class="tagattrib">height</span>=&quot;20&quot; <span class="tagattrib">width</span>=&quot;30&quot;<br>
+        <span class="tagattrib">dynsrc</span>=&quot;http://www.foo.com/foo.avi&quot;
+        <span class="tagattrib">start</span>=&quot;fileopen&quot;<br>
+        <span class="tagattrib">loop</span>=&quot;infinite&quot;
+        <span class="tagattrib">border</span>=&quot;3&quot; /&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">This element does not accept any content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>The ALT attribute is now a required attribute in HTML 4.0. In
+        previous versions it was not. While the attribute is not necessary
+        for rendering the specified image, it is good practice to always
+        provide an ALT attribute - it allows the element to degrade gracefully
+        on browsers that do not support images or have them turned off.
+    <li><b class="alert">DTD Note:</b> Support for the NAME attribute was added
+        to HTML 4.01 and did not exist in the original HTML 4.0 DTDs. HTML 4.x+
+        recommends that authors use the ID attribute instead wherever possible,
+        since that will be the accepted method moving forward.
+    <li>If you decide to use any of the Internet Explorer specific IMG
+        attributes, <em>ALWAYS</em> use an alternate SRC attribute as well to
+        allow for graceful degradation on browsers that do not support these
+        attributes (which is every browser but Internet Explorer.)
+    <li>The ALIGN attribute has two sets of orthogonal behavior types
+        bundled together: Floating horizontal alignment and in-line vertical
+        alignment relative to surrounding text. There really doesn't seem to
+        be a need to specify both types because in each situation, the other
+        type of attribute is not necessary.
+    <li>Never specify a LOWSRC attribute without specifying a SRC attribute.
+    <li>Specifying a BORDER of 0 on an image embedded in a hyperlink may
+        confuse users who use this attribute to visually identify hyperlinks.
+    <li>In the past, it was recommended to use the USEMAP attribute in
+        conjunction with the ISMAP attribute since ISMAP had greater historical
+        support. Client-side image maps have been supported in browsers now since
+        late 1995, and this recommendation is not as necessary as it used to be.
+        Nowadays it should be sufficient to use only a client-side image map along
+        with an alternative that allows for text-only navigation and you should be safe.
+    <li>If you use the ISMAP attribute, always remember to include an alternate 
+        navigation method for users that are not using an image-capable browser.
+    <li>If you use a Width or Height attribute alone without the other
+        attribute, the image will be scaled at the same aspect ratio based
+        upon the provided single attribute.
+    <li>Tip: Always remember that a page high in image content can take
+        quite a long time to load depending on the power and speed of the
+        connection, equipment and network load. People can become impatient
+        and stop downloading in such cases, thus your page will never be read.
+        Strive to control the physical size and quantity of images in your pages.
+    <li><b class="alert">FAQ:</b> What is the
+       '<b class="magicword">NATURALSIZEFLAG</b>' attribute that can
+        sometimes be found in HTML documents?<br> <b class="alert">Quick
+        Answer:</b> An unnecessary attribute added by the Adobe SiteMill/PageMill
+        HTML editors. A more <a href="../../topics/naturalsize.htm">in-depth
+        answer</a> has also been compiled.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Support Note:</b> Mosaic supported the BORDER,
+        HEIGHT and WIDTH attributes to the IMG element in the Macintosh
+        3.0 Betas, but retracted it for its final PC version.
+    <li>Internet Explorer and Netscape also seem to support a value
+        for ALIGN called 'center'. This value gives the same results as
+        the value of 'middle' which vertically aligns the centerline of
+        an image to the centerline of the surrounding text. Best bet is
+        to use the legal value of 'middle'.
+    <li>Internet Explorer 3.0 and above, and Netscape 1.0 and above
+        also support percentage values for the HEIGHT and WIDTH attributes.
+    <li>Some older browsers may not support the floating capabilities
+        offered by the ALIGN attribute (such as Mosaic versions below 3.0)
+        Vertical alignment relative to the line is historically much more widespread.
+    <li><a href="../../../testing/html/tags/m/map-bp2.htm">[Test]</a>
+        Netscape has never supported external IDs/URLs in the USEMAP attribute
+        to the IMG element as per the specification (only internal anchors can
+        be used.) Internet Explorer supports external IDs/URLs from version 1.0
+        to 3.0, now it does not support them. Opera has supported external
+        IDs/URLs since version 3.0.
+    <li><a href="../../../testing/html/tags/i/img-bp1.htm">[Test]</a>
+        <b class="alert">Thought you might like to know:</b> All
+        the browsers surveyed also support another form of this element (which
+        is not a part of <em>ANY</em> HTML standard.) The string
+        &quot;IMAGE&quot; can replace &quot;IMG&quot;. Internet Explorer supports
+        this since version 1.0, Mosaic since at least 2.1, and Netscape since
+        version 1.1. Internet Explorer did not support this in v4.0 Beta 1
+        (presumably because the parser/rendering engine for 4.0 was re-built
+        from scratch), but the strange syntax is again recognized in 4.0 Beta 2.
+    <li><a href="../../../testing/html/tags/i/img-bp4.htm">[Test]</a>
+        If an image is used as an image map in a document, the coordinates
+        specified in the AREA elements must represent the coordinates on
+        the image <em>AS IT WILL BE USED</em> in the document. Eg: if different
+        HEIGHT and/or WIDTH attributes are specified in the IMG element the
+        map coordinates must reflect this. Take care - if percentage heights
+        and widths are specified, it will be almost <em>IMPOSSIBLE</em> to
+        give accurate coordinates in the client side image map. This warning
+        applies to all browsers surveyed that support client-side image maps.
+    <li><a href="../../../testing/html/tags/i/img-bp3.htm">[Test]</a>
+        Netscape does not seem to adjust the dimensions of an image if a
+        LOWSRC attribute is also supplied, ie: The dimensions of the LOWSRC
+        image are used to render the SRC image if no other HEIGHT and WIDTH
+        properties have been set.
+    <li><a href="../../../testing/html/tags/i/img-bp2.htm">[Test]</a>
+        Setting either of the WIDTH or HEIGHT attributes to zero does strange
+        things. In Netscape 4, this causes the image to be displayed at its
+        natural dimensions. In Internet Explorer 4 the image disappears. The odd 
+        thing is, in previous versions of these browsers the behavior is reversed.
+    <li>The SUPPRESS attribute in Netscape 4 appears to be somewhat buggy, but
+        it does appear to work. One of my tests tried suppressing placeholders
+        with WIDTH and HEIGHT also specified, and the behavior failed. Be sure
+        to test this behavior well before you use this attribute in pages you
+        author. For official reference on this attribute, see
+        <a href="http://developer.netscape.com/docs/manuals/htmlguid/tags8.htm">http://developer.netscape.com/docs/manuals/htmlguid/tags8.htm</a>.
+    <li><a href="../../../testing/html/tags/i/img-bp5.htm">[Test]</a>
+        Linefeed and Carriage Return handling (&amp;#10; and &amp;#13;
+        respectively) for the ALT attribute:<br>
+        - <b class="alert">Internet Explorer:</b> All literal/unencoded or
+          encoded CR/LFs are maintained and displayed as intended.<br>
+        - <b class="alert">Netscape:</b> All unencoded or encoded CR/LFs are
+          collapsed to nothing in ALT display (not the normal method for
+          spacing-character collapsing - usually it would collapse to a
+          single space.)<br>
+        - <b class="alert">Opera:</b> When the SRC attribute is unavailable,
+          ALT contents are displayed; unencoded CR/LFs are collapsed to a
+          single space, while Encoded entities are honored and displayed as
+          intended.<br>
+    <li>Support for the LOWSRC attribute was not added to Mozilla/Netscape 6
+        until Beta 2 - Beta 1 did NOT support LOWSRC. <br>
+        <b>Update:</b> LOWSRC support in Mozilla has now been deleted, starting
+        in Netscape 6.1. (See <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=92453">Bugzilla 92453</a>)
+    <li>The LONGDESC attribute is exposed in Netscape 6.1+ by invoking a context 
+        menu on the image (PC: right clicking) and choosing "properties."
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>CAPTION: Browser Peculiarities: CSS application and inheritence</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 3.5+: CSS does not directly apply or inherit to this element.
+(Behavior may vary with Quirks mode - this test case is in standards mode).</div>
+<br>
+
+<b>CAPTION element with no CSS applied:</b>
+<hr>
+filler text 
+<table border="1">
+<caption>This is a caption</caption>
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>CAPTION element with CSS directly applied (style="background-color: yellow; color: green; text-decoration: line-through"):</b>
+<hr>
+filler text 
+<table border="1">
+<caption style="background-color: yellow; color: green; text-decoration: line-through">This is a caption</caption>
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>CAPTION element with CSS applied to TABLE (style="background-color: yellow; color: green; text-decoration: line-through"):</b>
+<hr>
+filler text 
+<table border="1" style="background-color: yellow; color: green; text-decoration: line-through">
+<caption>This is a caption</caption>
+<tr><td>Cell 1 Cell 1</td><td>Cell 2 Cell 2</td></tr>
+<tr><td>Cell 3 Cell 3</td><td>Cell 4 Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

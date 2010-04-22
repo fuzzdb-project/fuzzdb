@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Input Type=Button</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><font size=6><b class="pagetitle">Input Type=Button</b></font><br>
+         <font size=1>&#160;</font><br>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O3</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Forms</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (Replaced element)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th valign=top align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>An activate-able button widget with the indicated VALUE attribute as the displayed content</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.4">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_extformsmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>BUTTON is a TYPE attribute value to the INPUT element for FORMs. It places 
+        a button on an HTML form and uses scripting code to make the button perform 
+        an action you define (this is aside from the information that it sends in 
+        the Name/Value pair upon form submittal.) Note that this INPUT type does 
+        not actually initiate a form submission.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s"> IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accesskey</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]    
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B2</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the active field.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A single, case-insensitive character from a browser's character set.]
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6B1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the alignment of text following the INPUT
+        reference relative to the field on screen. LEFT and RIGHT specify floating 
+        horizontal alignment of the form field in the browser window, and subsequent 
+        text will wrap around the form field. The other options specify vertical 
+        alignment of text relative to the form field on the same line.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Left</b> | <b class="alert">Right</b> |
+        <b class="alert">Top</b> | <b class="alert">Texttop</b> |
+        <b class="alert">Middle</b> | <b class="alert">Absmiddle</b> |
+        <b class="alert">Baseline</b> | <b class="alert">Bottom</b> |
+        <b class="alert">Absbottom</b>
+
+<dt><b class="subheading">Disabled</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates the element is
+        initially non-functional. Disabled form elements should not be submitted
+        to the form processing script.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">disabled</b> (XHTML)
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B2-4.x</u></i></b>|<b><u class="sr">O4-6.x</u></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of the button widget in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This is a required attribute that associates a symbolic name to the
+        field for submittal to the form processing script.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Tabindex</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B2</i></b>|<span class="ns">M</span>|<b class="s">N6B3</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+        <li>Active elements using the TABINDEX attribute with positive integers are
+            navigated first. Low values are navigated first.
+        <li>Active elements not specifying any TABINDEX attribute
+        </ol>
+        Those elements carrying a DISABLED attribute or using negative TABINDEX
+        values do not participate in the tabbing cycle.
+     <dd><b class="l3heading">Values:</b> Positive or negative integers.
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes<b class="alert">*</b>
+    <dd><b class="l3heading">Description:</b><br>
+        <b class="alert">*</b> This is the required TYPE attribute for <em>this</em> 
+        INPUT mechanism. From the strict view, the TYPE attribute is not required.
+    <dd><b class="l3heading">Values:</b> <b class="alert">BUTTON</b>
+
+<dt><b class="subheading">Value</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This is a required attribute representing the symbolic result of the button 
+        field when activated that is passed to the form processing script. It is 
+        also used to indicate a label to be displayed on the face of the button.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B2-4.x</u></i></b>|<b><u class="sr">O4-6.x</u></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the button widget in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">form</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">input</b>
+        <span class="tagattrib">type</span>=&quot;button&quot;
+        <span class="tagattrib">value</span>=&quot;Press Me&quot;
+        <span class="tagattrib">name</span>=&quot;foo&quot;
+        <span class="tagattrib">onClick</span>=&quot;test1(this.form)&quot; /&gt;<br>
+        &lt;/<b class="tagname">form</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">This element does not accept any content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> 
+        I made VALUE a required attribute because browsers do not usually have 
+        a default button label for the element (unlike submit and reset) - this makes
+        the button blank or almost non-existant if no VALUE is present.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>I was surprised to find that Netscape has supported this element
+        since version 1.0. I am not sure what purpose it served in that era
+        because its main focus is now related to scripting (which was not
+        supported until Navigator 2.0)
+    <li>Netscape does not appear to have advertised that it supports the
+        HEIGHT and WIDTH attributes for this element. A reader alerted me
+        to them when he discovered them by accident.
+    <li><b class="alert">Note:</b> If HEIGHT and/or WIDTH dimensions are
+        specified that are smaller than the default size required to
+        display a button, the default size will be used.
+    <li><a href="../../../testing/html/tags/i/inputbutton-bp4.htm">[Test]</a>
+        Internet Explorer 4.0 honors all whitespace and carriage returns in the value 
+        attribute for this element. The button will preserve and display them 'as-is'. 
+        Other browsers and earlier versions of Internet Explorer do not do this.
+    <li><a href="../../../testing/html/tags/i/inputbutton-bp2.htm">[Test]</a>
+        Netscape 4+ allows some Character-level formatting to be applied to the
+        contents of this form field. These physical formatting elements (along with
+        virtual formatting elements that are rendered identically, such as
+        EM and I) apply to this form field: I, U, TT, S, STRIKE, SUB, SUP, BIG,
+        SMALL, FONT SIZE and FONT FACE.
+    <li><a href="../../../testing/html/tags/i/inputbutton-bp3.htm">[Test]</a>
+        The DIR="RTL" attribute right aligns the content of INPUT elements
+        <em>WITHIN</em> the form field, not the element itself relative to the
+        viewport as it does for other elements.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

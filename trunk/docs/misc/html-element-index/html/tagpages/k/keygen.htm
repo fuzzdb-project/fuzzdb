@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Keygen</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Keygen</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+<br>
+[<b class="subheading">NOTE:</b> Information on this element is VERY scarce and
+almost all of the content below is verbatim from Netscape's lean documentation -
+I have not been able to verify any of this. See the '<a href="#tips">Tips &amp; Tricks</a>'
+section for all known reference URLs (mostly pointed out by alert readers) on
+this issue.]
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1615503">Netscape's 
+        HTML Tag reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The KEYGEN element is a Netscape creation used to process security
+        transactions with web-based certificate management systems.
+        This element is used in the context of an HTML form along
+        with other information needed to construct a certificate request
+        - the generation of key material and submission of the
+        public key - and the result of the transaction will be a signed
+        certificate that the form can use to generate a challenge string
+        paired with the KEYGEN's NAME attribute.
+        <br><br>
+         
+        Use of the KEYGEN element generates a menu of key-size choices
+        that the user must choose from. When the form contents are submitted
+        for processing, a key pair of the selected size is generated. The
+        private key is encrypted and stored in the local key database.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Challenge</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the challenge string to be packaged with the public
+        key for use in verification of the form submission. If no challenge
+        string is provided, then it is encoded as an 'IA5STRING' [see relevant URLs
+        in '<a href="#tips">Tips and Tricks</a>'] of length zero.
+    <dd><b class="l3heading">Values:</b> Alphanumeric characters.
+
+<dt><b class="subheading">Keytype</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the type of encryption security method to use
+        to verify the KEYGEN element.
+    <dd><b class="l3heading">Values:</b> <b class="alert">RSA</b>
+        [<b class="magicword">DEFAULT</b>], <b class="alert">DSA</b>
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N3</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute assigns a name to the keygen element.
+    <dd><b class="l3heading">Values:</b> Alphanumeric characters.
+
+<dt><b class="subheading">PQG</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute appears to be a security string to be sent and verified.
+    <dd><b class="l3heading">Values:</b> Alphanumeric characters.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">form</b>
+        <span class="tagattrib">method</span>=&quot;post&quot;
+        <span class="tagattrib">action</span>=&quot;http://example.com/secure/keygen/test.cgi&quot;
+        <span class="tagattrib">enctype</span>=&quot;application/x-www-form-urlencoded&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">keygen</b>
+        <span class="tagattrib">name</span>=&quot;randomkey&quot;
+        <span class="tagattrib">challenge</span>=&quot;1234567890&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">input</b>
+        <span class="tagattrib">type</span>=&quot;text&quot;
+        <span class="tagattrib">name</span>=&quot;Field1&quot;
+        <span class="tagattrib">value</span>=&quot;Default Text&quot; /&gt;<br>
+        &lt;/<b class="tagname">form</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../f/form.htm">form</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">NA</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>The documentation for the KEYTYPE and PQG attributes is VERY thin - I
+        only found reference to them in the Mozilla source code (which is why I
+        only list support as v.6.0 and above) and even that was scarce. I only
+        try to document them here for the sake of completeness.
+    <li>These are the URLs I have been able to find that document this element. They mostly seem
+        to be oriented toward the developer, which is understandable considering
+        proper use of this element involves non-trivial negotiation with a server.
+        <dl>
+        <dt><a href="http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1615503" class="relevant">http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1615503</a>
+            <dd><span class="relevant">Netscape's official documentation on the KEYGEN element.</span>
+        <dt><a href="http://wp.netscape.com/eng/security/ca-interface.html" class="relevant">http://wp.netscape.com/eng/security/ca-interface.html</a>
+            <dd><span class="relevant">A draft proposal from Netscape going in to a little
+                more detail on the KEYGEN element.</span>
+        <dt><a href="http://wp.netscape.com/eng/security/cert-exts.html" class="relevant">http://wp.netscape.com/eng/security/cert-exts.html</a>
+            <dd><span class="relevant">Netscape Certificate Extensions - a developer oriented
+                document on KEYGEN interaction with server software.</span>
+        <dt><a href="http://wp.netscape.com/eng/security/downloadcert.html" class="relevant">http://wp.netscape.com/eng/security/downloadcert.html</a><br>
+            <dd><span class="relevant">Netscape Certificate Download Specification - another
+                technical, developer oriented document describing KEYGEN and server interaction.</span>
+        </dl>
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The documentation states that export versions of Netscape (non-US versions)
+        only allow a 512 bit key size to be chosen, while US versions allow key size
+        choices of 512 bits, 768 bits, and 1024 bits.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

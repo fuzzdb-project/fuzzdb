@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>White-Space - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">white-space</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5.5</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Text Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="wordspace.htm">word-spacing</a><br>
+        <a href="letterspace.htm">letter-spacing</a><br>
+        <a href="wordwrap.htm">word-wrap</a><br>
+        <a href="textalign.htm">text-align</a><br>
+        <a href="textalignlast.htm">text-align-last</a><br></td>
+    <td valign=top><a href="textdec.htm">text-decoration</a><br>
+        <a href="texttrans.htm">text-transform</a><br>
+        <a href="textshadow.htm">text-shadow</a><br>
+        <a href="textindent.htm">text-indent</a><br>
+        <a href="textunderpos.htm">text-underline-position</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">normal</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block Level Elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">pre</b>&gt; | &lt;<b class="tagname">nobr</b>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#white-space">CSS1: Sect 5.6.2</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/text.html#white-space-prop">CSS2: Sect 16.6</a>,
+        <a href="http://www.w3.org/TR/CSS21/text.html#white-space-prop">CSS2.1: Sect 16.6</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property controls how white space and carriage returns/linefeeds should
+        be handled in a document. 'Normal' is the inherent value for most HTML
+        elements, with the exceptions having their own tags to create special behavior.
+        This is a very powerful property and should be used with caution.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">normal</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5.5</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting is the normal behavior of most HTML elements. Occurrences of
+        carriage returns, linefeeds and multiple spaces are treated as a single
+        space. Line wrapping is controlled by the browser.</dd>
+
+<dt><b class="subheading">pre</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5.5</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting makes rendered content behave like the HTML
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/p/pre.htm">PRE</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element , where
+        line-wrapping control is taken away from the browser and all spaces,
+        carriage returns, and linefeeds in the document are preserved and
+        displayed &quot;as-is&quot; from the source.</dd>
+
+<dt><b class="subheading">pre-wrap</b></dt>
+<dt>[<b><i class="fs">CSS2.1</i></b>] [<b><i class="fs">O7.5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting behaves the same as "pre", with one exception...line-wrapping
+        control is returned to the browser when the browser needs it (such as
+        the browser window boundary or something similar) Tabs, multiple spaces
+        and existing line-feeds are also honored as well. This is a new value in 
+        CSS 2.1 which I don't cover yet, but because it recognizes the need presented
+        by -moz-pre-wrap and -o-pre-wrap (see below), I thought it would be good 
+        to start discussing it even thought the major browsers also do not support 
+        it yet.</dd>
+
+<dt><b class="subheading">pre-line</b></dt>
+<dt>[<b><i class="fs">CSS2.1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting behaves the same as "normal", except that new line characters 
+        in the source cause line breaking in the rendered output.</dd>
+
+<dt><b class="subheading">-moz-pre-wrap</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting behaves the same as "pre", with one exception...line-wrapping
+        control is returned to the browser when the browser needs it (such as
+        the browser window boundary or something similar) Tabs, multiple spaces
+        and existing line-feeds are also honored as well.</dd>
+
+<dt><b class="subheading">-o-pre-wrap</b></dt>
+<dt>[<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This setting behaves the same as "pre", with one exception...line-wrapping
+        control is returned to the browser when the browser needs it (such as
+        the browser window boundary or something similar) Multiple spaces
+        and existing line-feeds are also honored as well. Tabs are displayed as 
+        an box character (an undisplayable glyph.)</dd>
+
+<dt><b class="subheading">nowrap</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5.5</b>|<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Selector content with a property value of 'nowrap' collapse multiple
+        carriage returns/linefeeds and multiple spaces to a single space, but
+        linebreaking is not controlled by the browser. They are instead
+        controlled only by the HTML
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/b/break.htm">BR</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b> {
+        <span class="property">white-space:</span> normal }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">p</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">white-space:</span>
+        normal&quot;&gt;text&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> Browsers may ignore this property
+        and still be considered CSS1 conformant. In such a case, the browser
+        defaults must be used instead.
+    <li>CSS2.1 adds the "pre-wrap" and "pre-line" values.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Opera 4.x-6.x: The "-o-pre-wrap" value was called "-pre-wrap" in these versions.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

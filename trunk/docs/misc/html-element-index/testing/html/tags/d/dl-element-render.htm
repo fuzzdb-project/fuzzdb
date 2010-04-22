@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Dl element rendering test</title>
+<!-- 
+    Element Definition:
+    Dl: Definition List - element indicates content is a definition term and explanation 
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>Passes if top and bottom margins of test section ("dt/dd item N") are non-zero. 
+Legal sub-elements - DT should act like a block element
+with no special formatting, while the DD element is a block element with a non-zero left margin.
+Wrapped list items should also stay at the same indentation level relative to the marker.</i></b>
+<br><br>
+
+<span class="text">Test is between the next two ruled lines</span>
+
+<hr>
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<dl>
+<dt>dt item 1
+<dd>dd item 2<br>dd item 2
+<dt>dt item 3
+</dl>
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Text Characters</h1>
+         <b class="alert">End Tag:</b> <span class="magicword">NA</span><br>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> <b><i class="fs"> 2
+         </i></b>|<b class="s"> 3 </b>|<b class="s"> 3.2 </b>|<b class="s"> 4
+         </b>|<b class="s"> IE1 </b>|<b><i class="fs"> M1
+         </i></b>|<b class="s"> N1 </b>|<b class="s"> O2.1</b></td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+     <dd>A text character usually lives as an Octet, which is a single byte
+         or 8 bits of data. Using 8 bits allows for 256 possible distinct character
+         codes (a range from 0-255.) While the HTTP protocol that is used to
+         transport web documents allows the full 256 character range of the
+         <a href="../text.htm#iso8859">ISO 8859-1</a> characters to be transmitted
+         (allowing support of <a href="../text.htm#languages">many western languages</a>),
+         not all operating systems or applications may natively support this range.
+         <br><br>
+<a name="ascii"></a>
+         In order to increase portability/viewability of the entire character set,
+         HTML offers alternative versions of all the ISO 8859-1 characters
+         using coded entity representations. These codes are created using
+         characters from the proper subset of the ISO-8859-1 character set known
+         as <a href="../../../misc/glossary.htm#ascii">ASCII</a> (in all ISO 8859
+         languages ASCII is the character range 0-127.)
+         A special syntax is used to represent these
+         <a href="../c/charents.htm">Character Entities</a> using either a number
+         value or a shorthand mnemonic word. Character entities can
+         address the entire ISO 8859-1 character range, but the printable characters
+         that make up the ASCII character set (032-126) usually do not need to be
+         encoded. It is this subset that makes up the 'TEXT' grouping that this
+         page is named for.
+     <table cellpadding=2>
+     <tr>
+         <th rowspan=3><b class="subheading">Printable ASCII<br>Character
+             Set Positions</b></th>
+         <td><hr></td>
+     </tr>
+     <tr>
+         <td align=center><a href="../entities/charentity32-64.htm">032-064</a> |
+             <a href="../entities/charentity65-96.htm">065-096</a> |
+             <a href="../entities/charentity97-126.htm">097-126</a></td>
+     </tr>
+     <tr><td><hr></td></tr>
+     </table>
+</dl>
+
+
+<a name="reserved"></a>
+<dl>
+<dt><br><big><b class="mainheading">Reserved HTML Characters</b></big>
+     <dd><span class="text">While most all computers and browsers should recognize ASCII,
+     a few common characters in this range are reserved for use in the HTML
+     language. These exceptions [see chart below] will need to be encoded
+     as <a href="../c/charents.htm">character entities</a> if they are to be
+     displayed in an HTML document. The use of the Entity Name is encouraged
+     over the Entity Number in these special cases.</span>
+
+    <dl>
+    <dd><table cellpadding=3 cellspacing=0>
+        <tr>
+        <th valign=bottom><b class="subheading">Character&#160;Name</b></th>
+        <th valign=bottom><b class="subheading">ISO&#160;8859-1<br>position</b></th>
+        <th valign=bottom><b class="subheading">Entity<br>Number</b></th>
+        <th valign=bottom><b class="subheading">Entity<br>Name</b></th>
+        <th valign=bottom><b class="subheading">HTML<br>result</b></th>
+        </tr>
+        <tr><td colspan=5><hr></td></tr>
+        <tr>
+         <td align=left><b class="alert2">Quotation Mark<br>Ampersand<br>
+             Less Than Symbol<br>Greater Than Symbol</b></td>
+         <td align=center>34<br>38<br>60<br>62</td>
+         <td align=center>&amp;#34;<br>&amp;#38;<br>&amp;#60;<br>&amp;#62;</td>
+         <td align=center>&amp;quot;<br>&amp;amp;<br>&amp;lt;<br>&amp;gt;</td>
+         <td align=center>&quot;<br>&amp;<br>&lt;<br>&gt;</td></tr>
+        <tr><td colspan=5><hr></td></tr>
+        </table>
+    </dl>
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Attributes</b></big>
+     <dd><b class="alert">Text characters do not accept any attributes</b>
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+     <dd><div class="example"><span class="text">Hi there, this is normal text.
+         Testing - 1, 2, 3.</span></div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+     <dd><span class="text"><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line
+      Parent</a>%</b> |
+      <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b> |
+         &lt;<a href="../d/del.htm">Del</a>&gt; |
+   &lt;<a href="../i/ins.htm">Ins</a>&gt; |
+   &lt;<a href="../l/legend.htm">Legend</a>&gt; |
+   &lt;<a href="../o/option.htm">Option</a>&gt; |
+   &lt;<a href="../s/script.htm">Script</a>&gt; |
+      &lt;<a href="../s/style.htm">Style</a>&gt; |
+   &lt;<a href="../t/textarea.htm">Textarea</a>&gt; |
+   &lt;<a href="../t/title.htm">Title</a>&gt;</span>
+<dt><big><b class="mainheading">Content Model</b></big>
+     <dd><b class="alert">Text does not accept any content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+     <li><span class="text"><b class="alert">DTD Note:</b> The &amp;quot; named character
+         entity was retracted from the HTML 3.2 DTD. There is still some confusion
+         as to <em>WHY</em> this was done, as this entity is in wide use, and exists in the
+         HTML 2.0, 3.0 and 4.0 DTDs. There are two differing stories as to why
+         it was deleted from the 3.2 DTD:</span>
+         <ol>
+            <li><span class="text">Dan Connolly (co-author of HTML 2.0) has said the
+       omission was a mistake.</span>
+            <li><span class="text">Dave Raggett (author of HTML 3.0, 3.2 and 4.0)
+       has said that the omission was intentional due to a disagreement in
+    the HTML ERB over which entities should be in HTML 3.2. Only the basic
+    set of entities was agreed upon. (Many thanks to a reader who sent me
+    some mail clarifying this.)</span>
+         </ol>
+         <span class="text">Any documents using &amp;quot; will generate validation
+   errors under the HTML 3.2 DTD, but it should be safe to leave these entities
+   in legacy documents due to wide legacy and future browser/DTD support. The
+   alternate form of this entity ('&amp;#34;') <em>WILL</em> validate and should
+   be considered when authoring new documents.</span>
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+     <li><span class="text">Nothing to Report</span>
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>A HREF: Browser peculiarity - FONT and A HREF interaction</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">A brief history of FONT COLOR and A HREF interaction behavior:<br>
+<b>Netscape 2,3:</b> Coloring Hyperlinks only works if the FONT COLOR is applied INSIDE the hyperlink, and ONLY if both are INSIDE a table cell.<br>
+<b>Internet Explorer 1, 2, 3, Netscape 4.0 Beta 1-3, Opera:</b> Coloring hyperlinks does not work at all.<br> 
+<b>Internet Explorer 4.0, Netscape 4.0 Beta 4+:</b> Coloring hyperlinks works anywhere (not just inside tables) if the FONT COLOR is applied INSIDE the hyperlink. </div>
+<br>
+<br>
+
+<b>Line 1: Plain FONT COLOR=#ff8000 text. Line 2: Plain A HREF.</b>
+<hr>
+filler text <font color="#ff8000">Orange text</font> filler text<br>
+filler text <a href="http://www.yahoo.com/">http://www.yahoo.com/</a> filler text
+<hr>
+<br>
+
+<b>Plain FONT COLOR=#ff8000 with A HREF as the only embedded content.</b>
+<hr>
+filler text <font color="#ff8000"><a href="http://www.yahoo.com/">http://www.yahoo.com/</a></font> filler text
+<hr>
+<br>
+
+<b>Plain A HREF embedded in FONT COLOR=#ff8000 along with other text</b>
+<hr>
+filler text <font color="#ff8000">orange filler text 
+<a href="http://www.yahoo.com/">http://www.yahoo.com/</a> 
+orange filler text</font> filler text
+<hr>
+<br>
+
+<b>Plain A HREF with FONT COLOR=#ff8000 as the only embedded content.</b>
+<hr>
+filler text <a href="http://www.yahoo.com/"><font color="#ff8000">http://www.yahoo.com/</font></a> filler text
+<hr>
+<br>
+
+<b>Plain FONT COLOR=#ff8000 embedded in A HREF along with other text</b>
+<hr>
+filler text <a href="http://www.yahoo.com/">Yahoo <font color="#ff8000">Orange text</font> Yahoo</a> filler text
+<hr>
+<br>
+
+<b>Previous tests, in TABLE cell context:<br>
+Cell 1: Plain FONT COLOR=#ff8000 with A HREF as the only embedded content; 
+Cell2: Plain A HREF embedded in FONT COLOR=#ff8000 along with other text; 
+Cell 3: Plain A HREF with FONT COLOR=#ff8000 as the only embedded content; 
+Cell 4: Plain FONT COLOR=#ff8000 embedded in A HREF along with other text</b>
+<hr>
+<table border=1 cellspacing=0>
+<tr>
+    <td>filler text <font color="#ff8000"><a href="http://www.yahoo.com/">http://www.yahoo.com/</a></font> filler text</td>
+    <td>filler text <font color="#ff8000">orange filler text 
+        <a href="http://www.yahoo.com/">http://www.yahoo.com/</a> 
+        orange filler text</font> filler text</td>
+</tr>
+<tr>
+    <td>filler text <a href="http://www.yahoo.com/"><font color="#ff8000">http://www.yahoo.com/</font></a> filler text</td>
+    <td>filler text <a href="http://www.yahoo.com/">Yahoo <font color="#ff8000">Orange 
+        text</font> Yahoo</a> filler text</td>
+</tr>
+</table>
+<hr>
+<br>
+
+
+</body>
+</html>

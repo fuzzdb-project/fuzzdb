@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TABLE: Browser Peculiarities: BGCOLOR affecting some form field widgets</title>
+<style>
+.assert { color: white }
+.test   { background-color: yellow }
+</style>
+</head>
+
+<body bgcolor="red">
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4.x has a strange rendering bug with checkbox and 
+radio button form fields. If a BGCOLOR attribute is declared for a table - or a 
+cell within a table - the rendering boxes of any checkboxes and radio buttons 
+(also INPUT FILE fields to a small extent) in that cell/table will not use the 
+indicated BGCOLOR - it will instead use the BGCOLOR of the document itself. 
+If you use Netscape 4.x, you will see this bug apparent at almost every large-scale site you go to.</div>
+<br>
+
+<b>BODY uses BGCOLOR=red to create extreme contrast to exhibit the behavior</b>
+<br><br>
+
+<form>
+<b>TABLE with cellpadding=20 and bgcolor=yellow (extreme contrast to help see the behavior):</b>
+<hr>
+filler text
+<table cellpadding="20" bgcolor="yellow" >
+<tr>
+    <td align="right">TD Cell 1<br>
+        Radio button:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"><br>
+        Checkbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><br>
+        File:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file"><br>
+        TD Cell 1</th>
+    <th align="right">TH Cell 2<br>
+        Radio button:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"><br>
+        Checkbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><br>
+        File:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file"><br>
+        TH Cell 2</th>
+</tr>
+</table>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

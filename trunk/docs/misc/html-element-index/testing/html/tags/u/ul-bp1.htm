@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>UL: Browser Peculiarities: Use of FONT to alter list marker size/color/etc</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Both Internet Explorer and Netscape alter the listing mechanism 
+(the bullets) if a font changing tag (e.g. FONT SIZE) spans a list structure or if 
+it is placed incorrectly before the first LI tag.</div>
+
+<br>
+<b>Plain UL list:</b>
+<hr>
+filler text 
+<ul>
+    <li>LI item 1</li>
+    <li>LI item 2</li>
+    <li>LI item 3</li>
+</ul> 
+filler text
+<hr>
+<br>
+
+<br>
+<b>UL list with font tags in the list items (font size=6 color=green on LI item 2):</b>
+<hr>
+filler text 
+<ul>
+    <li>LI item 1</li>
+    <li><font size="6" color="green">LI item 2</font></li>
+    <li>LI item 3</li>
+</ul> 
+filler text
+<hr>
+<br>
+
+<br>
+<b>UL list with font tags around the list structure (font size=6 color=green) and U:</b>
+<hr>
+filler text 
+<font size="6" color="green">
+<ul>
+    <li>LI item 1
+    <li>LI item 2
+    <li>LI item 3
+</ul>
+</font> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

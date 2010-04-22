@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>RUBY: Browser Peculiarities: Element content rendering - Form fields</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE 5+: While Block elements can exist within a Ruby element, 
+some interesting behaviors are apparent. Images render fine also, but not form widgets.</div>
+<br>
+
+<b>Simple RUBY element, text-only content:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>RUBY</rb>
+   <rt>Really Ugly Brown Yarn</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<form>
+<b>Plain form fields: Checkbox (checked), Reset, Text</b>
+<hr>
+filler text 
+<input type="checkbox" checked>
+<input type="reset">
+<input type="text">
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Simple RUBY element, RT=("Really Ugly Brown Yarn"); Form fields (Checkbox (checked), Reset, Text)
+inserted between "Ugly" and "Brown" in RT:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>RUBY</rb>
+   <rt>Really Ugly 
+   <input type="checkbox" checked>
+   <input type="text"> 
+   <input type="reset">
+   Brown Yarn</rt>
+</ruby>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Common Tag Attributes: Editing Attributes</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle"><b class="alert">%</b>Editing<b class="alert">%</b>
+Attributes</span><br><font size=2>= <span class="sitetitle">Index DOT Html</span> 
+by <a href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+ <td><font size=2><a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font></td></tr>
+</table>
+</center>
+
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What are the Editing Attributes?</b></big>
+    <dd>These new global attributes are additions in Microsoft Internet
+        Explorer 5.5. They help allow IE to become not just a static web page
+        viewing device, but a platform that can dynamically edit web pages as well.
+</dl>
+
+
+<dl>
+<dt><big><b class="mainheading">Editing Attributes</b></big>
+<dt><b class="subheading"><a href="contenteditable.htm">ContentEditable</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>|<span class="ns">S</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies whether or not the contents of the element may be modified by the user.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">True</b> - The content may be edited by the user.<br>
+        <b class="alert">False</b> - The content may not be edited by the user.<br>
+        <b class="alert">Inherit</b> - The control over the ability to edit an
+        element is inherited from its parent element.
+        [<b class="magicword">DEFAULT</b>]
+
+<dt><b class="subheading"><a href="hidefocus.htm">HideFocus</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>|<span class="ns">S</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute controls whether an element gives visual feedback
+        when it has control 'focus'. In Windows this is indicated by a dotted
+        rectangle within the elements' rendering box. This attribute does not
+        specify how focus is given to an element, only whether visual feedback
+        for that state is visible.
+    <dd><b class="l3heading">Values:</b> NA<br>
+        (IE's reference says that this attribute takes "true" and "false"
+        values, but in direct testing, they both seem to have the same effect.
+        Using this attribute as a standalone (no value) hides the element focus
+        visual feedback, and not using this attribute defaults to having the
+        element focus state giving visual feedback.)
+
+<dt><b class="subheading"><a href="unselectable.htm">Unselectable</a></b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5.5</i></b>|<span class="ns">N</span>|<span class="ns">O</span>|<span class="ns">S</span>]
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the user selectability for an element (usually
+        initiated with a pointing device.) Element content that has this attribute
+        set to "on" can still be selected by selecting surrounding content.
+        Conversely, setting the UNSELECTABLE attribute to "off" also does not
+        ensure that the element is selectable either.
+     <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">On</b> - Selection by the user is prohibited.<br>
+        <b class="alert">Off</b> - Selection by the user is allowed.
+        [<b class="magicword">DEFAULT</b>]
+</dl>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>For some reason, IE5.5 doesn't support the HIDEFOCUS attribute on the
+        CODE and NOBR elements. There doesn't appear to be anything special
+        about these elements (indeed, there are many elements very much like
+        these in the same class that <em>DO</em> support the HIDEFOCUS
+        attribute that it seems these small omissions seem glaring by comparison.)
+    <li>Microsoft's documentation says that INPUT TYPE=radio is supported with
+        the CONTENTEDITABLE attribute, but not INPUT TYPE=checkbox. These two
+        elements seem like an equivalence situation, so I included INPUT TYPE=checkbox
+        as being supported. It may or may not be.
+    <li>It looks like the UNSELECTABLE="yes" value only means that selection can 
+        not begin INSIDE the elements contents. If you start the selection outside
+        the element with this attribute set to "yes", you can then select whatever
+        you want inside the element. The only application of this attribute I can 
+        think of off the top of my head for something like this is application 
+        to a top-level element BODY.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

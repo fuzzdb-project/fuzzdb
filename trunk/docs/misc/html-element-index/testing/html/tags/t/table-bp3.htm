@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TABLE: Browser Peculiarities: BORDERCOLOR differences between IE and Netscape</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The BORDERCOLOR attribute affects a table differently in Internet 
+Explorer and Netscape - In Internet Explorer, both exterior and interior borders 
+are given the border color. In Netscape, only the outermost edge of the exterior 
+'box' border of the table uses the border color.</div>
+<br>
+
+<b>Plain TABLE border=20, cellspacing=10:</b>
+<hr>
+filler text
+<table border="10" cellspacing="10">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Plain TABLE border=20, cellspacing=10, bordercolor=green:</b>
+<hr>
+filler text
+<table border="10" cellspacing="10" bordercolor="green">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

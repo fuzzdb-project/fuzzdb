@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+     <title>How to change the Style Sheet files for the site</title>
+     <link rel="stylesheet" type="text/css" href="../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align=center><span class="pagetitle">Explanation of the CSS file</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html/Css</span> by 
+<a href="../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+     <tr>
+     <td align=left>Index DOT Html: <font size=2>
+     <a href="../html/index.html">Main Index</a> |
+     <a href="../html/tree/htmltree.htm">Element Tree</a> |
+     <a href="../html/tagindex/a.htm">Element Index</a> |
+     <a href="../html/supportkey/a.htm">HTML Support History</a></font><br>
+     Index DOT Css: <font size=2><a href="../css/index.html">Main Index</a> |
+     <a href="../css/propindex/font.htm">Property Index</a> |
+     <a href="../css/supportkey/syntax.htm">CSS Support History</a> |
+     <a href="../history/browsers.htm">Browser History</a></font></td>
+     </tr>
+</table>
+</center>
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">Rationale</b></big>
+     <dd>I have created situation specific, CLASS-based markup on a
+         foundation of simple formatting. This should help ensure that the
+         site looks good on most any delivery platform. This extensive use
+         of the CLASS structure to classify information is not highly
+         recommended for use in HTML, but for complex informational webs
+         like this, it is <em>THE</em> best solution to conquering the
+         complexity beast in this language.
+         <br><br>
+
+         The class names used <em>should</em> be fairly self-explanatory -
+         you should be able to tell what it is you are controlling by the
+         class name. If you do not understand what some of the
+         <a href="../css/propindex/font.htm">CSS properties</a> or values
+         do, or don't understand the syntax, the content of this site is
+         the place to start.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Selector Blocks</b></big>
+<dt><b class="subheading">Page Appearance rules</b>
+<dt><b class="l3heading">Description:</b><br>
+    These control the common page background, foreground, hyperlink and rule appearances
+     <dd><table border=1 cellspacing=0>
+         <tr><th align=left><b class="alert">body, dl, dt, dd,<br>ul, ol, li, td, th, .text</b></th>
+             <td valign=top>basic content properties</td></tr>
+         <tr><th align=left><b class="alert">.gc</b></th> <td>Base display of support table cell content</td></tr>
+         <tr><th align=left><b class="alert">hr</b></th> <td>HR properties</td></tr>
+         <tr><th align=left><b class="alert">.field</b></th> <td>Used to set the background field of table headers</td></tr>
+         <tr><th align=left><b class="alert">a:link</b></th> <td>unvisited hyperlinks</td></tr>
+         <tr><th align=left><b class="alert">a:visited</b></th> <td>visited hyperlinks</td></tr>
+         </table>
+</dl>
+
+<dl>
+<dt><b class="subheading">Page Titles, Headers, Important Info, Generic Font Sizing</b>
+<dt><b class="l3heading">Description:</b><br>
+    These are generic rules used in most pages to bring information to the
+    user's attention. They control page titles, important headings,
+    important incidental information and generic font sizing info.
+     <dd><table border=1 cellspacing=0>
+         <tr><th align=left><b class="alert">.pagetitle</b></th>
+             <td valign=top>On each page: The on-screen title of the page</td></tr>
+         <tr><th align=left><b class="alert">.subtitle</b></th>
+             <td valign=top>On each page: Any on-screen sub-headers of the page title</td></tr>
+         <tr><th align=left><b class="alert">.sitetitle</b></th>
+             <td valign=top>On each page: The name of the site</td></tr>
+         <tr><th align=left><b class="alert">.mainheading</b></th>
+             <td valign=top>Highest importance headings</td></tr>
+         <tr><th align=left><b class="alert">.subheading</b></th>
+             <td valign=top>Second level headings</td></tr>
+         <tr><th align=left><b class="alert">.l3heading</b></th>
+             <td valign=top>Third level headings</td></tr>
+
+         <tr><th align=left><b class="alert">.alert</b></th>
+             <td valign=top>General emphasized content</td></tr>
+         <tr><th align=left><b class="alert">.quotation</b></th>
+             <td valign=top>Quoted passages</td></tr>
+         <tr><th align=left><b class="alert">.alert2</b></th>
+             <td valign=top>General emphasized content when 'l3heading' is skipped</td></tr>
+         <tr><th align=left><b class="alert">.magicword</b></th>
+             <td valign=top>Extreme emphasis content</td></tr>
+         <tr><th align=left><b class="alert">.unselected</b></th>
+             <td valign=top>Item in HTML/CSS/Support key jump indices indicating
+              current category</td></tr>
+         <tr><th align=left><b class="alert">.smalltext</b></th>
+             <td valign=top>Generic smaller content</td></tr>
+         <tr><th align=left><b class="alert">.largetext</b></th>
+             <td valign=top>Generic larger content</td></tr>
+</table>
+</dl>
+
+<dl>
+<dt><b class="subheading">Specific Page Titles, Headers and Subheaders, and Font</b>
+<dt><b class="l3heading">Description:</b><br>
+    These rules are only used in some of the pages to control the display of
+    specific content.
+     <dd><table border=1 cellspacing=0>
+         <tr><th align=left><b class="alert">.indexsitetitle</b></th>
+             <td valign=top>Main index: The name of the site</td></tr>
+         <tr><th align=left><b class="alert">.colheaders</b></th>
+             <td valign=top>Main index: column header content</td></tr>
+         <tr><th align=left><b class="alert">.entityheader</b></th>
+             <td valign=top>Used only in character entity pages to indicate
+             column headings</td></tr>
+         <tr><th align=left><b class="alert">.taghead</b></th>
+             <td valign=top>Used in support grid header cells - tag/property name</td></tr>                      
+             <tr><th align=left><b class="alert">.attribhead</b></th>
+             <td valign=top>Used in support grid header cells - subcomponent name</td></tr>
+         <tr><th align=left><b class="alert">.supporthead</b></th>
+             <td valign=top>Used in support grid header cells - standard/browser name</td></tr>
+</table>
+</dl>
+
+<dl>
+<dt><b class="subheading">Meaningful HTML/CSS syntax</b>
+<dt><b class="l3heading">Description:</b><br>
+    All HTML tag names and attributes, CSS selectors and properties use
+    these classes.
+     <dd><table border=1 cellspacing=0>
+         <tr><th align=left><b class="alert">.tagname</b></th>
+             <td valign=top>HTML element names</td></tr>
+         <tr><th align=left><b class="alert">.tagattrib</b></th>
+             <td valign=top>HTML attributes for elements</td></tr>
+         <tr><th align=left><b class="alert">.selector</b></th>
+             <td valign=top>CSS Selectors</td></tr>
+         <tr><th align=left><b class="alert">.property</b></th>
+             <td valign=top>CSS Properties</td></tr>
+</table>
+</dl>
+
+<dl>
+<dt><b class="subheading">Specification/Browser Support Information</b>
+<dt><b class="l3heading">Description:</b><br>
+    Rules controlling display of support information and color picker legends.
+     <dd><table border=1 cellspacing=0>
+        <tr><th align=left><b class="alert">.fs</b></th>
+            <td valign=top>This was the first browser/standard to support the
+            indicated feature</td></tr>
+        <tr><th align=left><b class="alert">.s</b></th>
+            <td valign=top>This browser/standard supports the indicated feature,
+            but was not the first to do so.</td></tr>
+        <tr><th align=left><b class="alert">.sr</b></th>
+            <td valign=top>This browser/standard supported the indicated feature,
+            but no longer does. Contents lists start and end version support.</td></tr>
+        <tr><th align=left><b class="alert">.ns</b></th>
+            <td valign=top>This browser/standard does not support the
+            indicated feature</td></tr>
+        <tr><th align=left><b class="alert">.colorname</b></th>
+            <td valign=top>Used in the color chooser app - indicates the color's common name</td></tr>
+        <tr><th align=left><b class="alert">.colorvalue</b></th>
+            <td valign=top>Used in the color chooser app - indicates the color's hex value</td></tr>
+</table>
+</dl>
+
+<dl>
+<dt><b class="subheading">Unused rules</b>
+<dt><b class="l3heading">Description:</b><br>
+    I added these classes, but have never really done anything with them. All
+    external links and their descriptions carry the 'relevant' class. The
+    anchors themselves can carry special behavior beyond this.
+    <dd><table border=1 cellspacing=0>
+        <tr><th align=left><b class="alert">.related</b></th>
+            <td valign=top>Used for related links</td></tr>
+        <tr><th align=left><b class="alert">.external</b></th>
+            <td valign=top>Used for absolute URL links to other sites</td></tr>
+</table>
+</dl>
+
+<br>
+<a href="../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+</body>
+</html>

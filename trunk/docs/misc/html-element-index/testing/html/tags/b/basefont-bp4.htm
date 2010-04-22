@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BASEFONT: Browser peculiarity - Affects on tables</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Netscape 1.0-4.x and Internet Explorer versions ignore this 
+element when applied around table structures. For it to apply within a table 
+structure as well, one must apply FONT or BASEFONT elements in each table cell. 
+This is painful. The only way to eliminate so much extra effort is to use style sheets.</div>
+<br>
+
+<b>Table with contents at default font size:</b><br>
+<hr>
+Filler text <br>
+<table border=1><tr><td>Td Cell 1 Filler text</td><th>Th Cell 2 Filler text</th></tr></table>
+Filler text
+<hr>
+<br>
+
+<b>BASEFONT size=6 encapsulating Table with contents using relative font size changes (size=+1):</b><br>
+<hr>
+Filler text <br>
+<font size="+1">Font size=+1</font><br>
+<basefont size="6">Basefont size=6
+<table border=1>
+<tr>
+    <td>Td Cell 1 <font size="+1">Font size=+1</font></td>
+    <th>Th Cell 2 <font size="+1">Font size=+1</font></th>
+</tr>
+</table>
+Basefont size=6</basefont><br>
+Filler text
+<hr>
+<br>
+
+<b>BASEFONT size=6, color=green encapsulating Table with contents at default font size:</b><br>
+<hr>
+Filler text <br>
+<basefont size="6" color="green">Basefont size=6, color=green
+<table border=1><tr><td>Td Cell 1 Filler text</td><th>Th Cell 2 Filler text</th></tr></table>
+Basefont size=6, color=green
+</basefont><br>
+Filler text
+<hr>
+<br>
+
+<b>BASEFONT size=6, color=green encapsulating cell content in each table cell:</b><br>
+<hr>
+Filler text <br>
+<table border=1>
+<tr>
+    <td><basefont size="6" color="green">Td Cell 1 Filler text</basefont></td>
+    <th><basefont size="6" color="green">Th Cell 2 Filler text</basefont></th>
+</tr>
+</table>
+</basefont>
+Filler text
+<hr>
+<br>
+
+
+</body>
+</html>

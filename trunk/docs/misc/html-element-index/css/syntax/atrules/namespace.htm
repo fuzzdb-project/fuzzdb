@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>@Namespace - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">@namespace</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS3</i></b>]
+    [<b><i class="fs">N6</i></b>]<br></td>
+    <td align=center><b class="alert">Other<br>At-Rules</b><br></td>
+</tr>
+<tr>
+    <td><a href="charset.htm">@charset</a><br>
+    <a href="import.htm">@import</a><br>
+    <a href="media.htm">@media</a><br>
+    <a href="page.htm">@page</a><br>
+    <a href="fontdef.htm">@fontdef</a><br>
+    <a href="fontface.htm">@font-face</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The @namespace rule allows the declaration of a namespace prefix
+        to be used by selectors in a stylesheet. It is associated with
+        a namespace URL.
+        <br><br>
+
+        If the optional namespace prefix is omitted, then the URL provided is
+        considered to be the default namespace. This default namespace applies
+        only to selectors that have no explicit namespace prefix declared.
+        Once a namespace prefix is defined though, it can be used in
+        CSS selectors and in property values as well that use element
+        attributes and values.
+        <br><br>
+
+        <b>Gory details:</b><br>
+        Any @namespace rules in a style sheet must come after all @import and
+        @charset At-rules and come before all CSS rule sets. If a prefix is
+        declared more than once, the last instance should be used. If a
+        prefix is not understood by the parser in whatever the context, it
+        should be ignored.
+        <br><br>
+
+        <b>Selector and attribute usage of namespaces:</b><br>
+        Namespaces can be used to further narrow down style application. They
+        can be used with <a href="../selectors/element.htm#namespace">elements</a>,
+        <a href="../selectors/attribute.htm#namespace">attributes</a>, and even
+        in <a href="../../properties/generate/content.htm">some CSS properties</a>.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>Basic Syntax: @<b class="selector">namespace</b>
+        [<span class="alert2">Optional Namespace Prefix</span>]
+        url([<span class="alert2">URL</span>]);
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Examples</b></big>
+    <dd><div class="example">@<b class="selector">namespace</b>
+        <span class="atrule">foo</span> url("http://www.example.com/");</div>
+</dl>
+
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BUTTON: Browser peculiarity - Default rendering of element</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Opera 5.0 used the background color/image of the parent as the 
+default face for the button (unless set by CSS for the button of course.) 
+Opera 6 uses the system user interface color designated for button faces as IE and Netscape does.</div>
+<br>
+
+<form action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi" method="get">
+<b>Plain Button element :</b>
+<hr>
+filler text 
+<button type="submit">This <u>is a</u> <b>button</b></button> 
+filler text
+<hr>
+</form>
+<br>
+
+<form action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi" method="get">
+<b>Button element embedded in table, no background:</b>
+<hr>
+filler text 
+<table border="1" cellpadding="5">
+<tr><td><button type="submit">This <u>is a</u> <b>button</b> in cell 1</button></td>
+<th>Cell 2</th></tr>
+</table>
+filler text
+<hr>
+</form>
+<br>
+
+<form action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi" method="get">
+<b>Button element embedded in table, table has bgcolor=green:</b>
+<hr>
+filler text 
+<table border="1" bgcolor="green" cellpadding="5">
+<tr><td><button type="submit">This <u>is a</u> <b>button</b> in cell 1</button></td>
+<th>Cell 2</th></tr>
+</table>
+filler text
+<hr>
+</form>
+<br>
+
+<form action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi" method="get">
+<b>Button element embedded in table, table has background image (crosshair.gif):</b>
+<hr>
+filler text 
+<table border="1" background="../../../objects/crosshair.gif" cellpadding="5">
+<tr><td><button type="submit">This <u>is a</u> <b>button</b> in cell 1</button></td>
+<th>Cell 2</th></tr>
+</table>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

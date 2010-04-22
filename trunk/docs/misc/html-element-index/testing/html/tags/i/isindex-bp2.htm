@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>ISINDEX: Browser Peculiarities: Sending data via POST</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">In Netscape 1.0-4.x, when data is sent via POST, it is sent 
+as a name/value pair (exactly like it is done with normal forms.) 
+The data is sent as: The ISINDEX value is what is entered by the user, and the 
+variable name it is assigned to is "isindex." If the GET method is used, the 
+value is the only data that is sent.</div>
+<br>
+
+<b>Clicking on the link will generate the ISINDEX test case. Click on the link, 
+type some text in the isindex box and hit the enter key.</b>
+<hr size=5>
+<a href="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi?returntype=isindex&isindexmethod=post">Generate 
+ISINDEX with METHOD=post</a>
+<hr size=5>
+<br>
+
+</body>
+</html>

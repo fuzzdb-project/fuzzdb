@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Font element test</title>
+<!-- 
+    Element Definition:
+    Font: Inline Physical formatting/phrasal element that indicates change of color, size or actual font used
+-->
+<style type="text/css">
+.text   { color: blue }
+.pass   { background-color: #99cc99 }
+.fail   { background-color: #cc9999 }
+</style>
+<script type="text/javascript">
+var expCssProp   = new Array(
+                   "fontStyle", "fontWeight", "fontSize", 
+                   "paddingTop", "paddingRight", "paddingBottom", "paddingLeft", 
+                   "marginTop", "marginRight", "marginBottom", "marginLeft",
+                   "textAlign", "color", "backgroundColor", "textDecoration", "display", "fontFamily");
+var expCssResult = new Array(
+                   "normal", "400", "[relfontsize-eq]", 
+                   "0px", "0px", "0px", "0px", 
+                   "0px", "0px", "0px", "0px", "left", 
+                   "[relcolor]", "transparent", "none", "inline", "[or]serif|Times New Roman");
+
+function theTest()
+{
+
+for (i=0;i<expCssProp.length;i++)
+    {
+     if (window.getComputedStyle)
+        {
+         eval("document.forms[0].act" + i + 
+              ".value = getComputedStyle(document.getElementById('test'), null)." + 
+              expCssProp[i]);
+        }
+     if (document.getElementById("test").currentStyle)
+        {
+         eval("document.forms[0].act" + i + 
+              ".value = document.getElementById('test').currentStyle." + expCssProp[i]);
+        }
+        
+// Analyze results. Allow for dynamic values
+     var actResult = eval("document.forms[0].act" + i + ".value");
+
+     if (expCssResult[i].indexOf("[relfontsize-") != -1)  // Font size relative to base default
+        { 
+          resultVector = compareFontSize(actResult,
+                         expCssResult[i].substring(expCssResult[i].length-3, expCssResult[i].length-1)); 
+        }
+
+     else if (expCssResult[i] == "[relcolor]")    // Font size relative to base default
+        { 
+         if (actResult == compareColor())
+            { resultVector = "pass"; }
+         else
+            { resultVector = "false"; }
+        }
+
+     else if (expCssResult[i].indexOf("[or]") > -1)
+        {
+         resultVector = compareOr(actResult, expCssResult[i].substring(4, expCssResult[i].length));
+        }
+
+     else if (actResult == expCssResult[i])
+        { resultVector = "pass"; }
+     else
+        { resultVector = "fail"; }
+
+// Print results
+     if (resultVector == "pass")
+        {
+         eval("document.forms[0].res" + i + ".className = 'pass'"); 
+         eval("document.forms[0].res" + i + ".value = 'pass'"); 
+        }
+     else
+        {
+         eval("document.forms[0].res" + i + ".className = 'fail'"); 
+         eval("document.forms[0].res" + i + ".value = expCssResult[" + i + "]"); 
+        }
+   }
+   
+}
+
+function compareFontSize(actual, comparison)
+{
+var theSize = "";
+var theResult = "";
+var retVal  = "fail";
+
+// Get the actual value
+if      (window.getComputedStyle)
+        { theSize = getComputedStyle(document.getElementById("compare"), null).fontSize; }
+else if (document.getElementById("test").currentStyle)
+        { theSize = document.getElementById('compare').currentStyle.fontSize; }
+
+// Do the comparisons using localeCompare so that units are taken into account
+theResult = actual.localeCompare(theSize);
+if (comparison == "lt" && theResult < 0)
+   { retVal = "pass"; }
+else if (comparison == "eq" && theResult == 0)
+   { retVal = "pass"; }
+else if (comparison == "gt" && theResult > 0)
+   { retVal = "pass"; }   
+
+return retVal;
+}
+
+function compareColor()
+{
+var theColor = "";
+
+if      (window.getComputedStyle)
+        { theColor = getComputedStyle(document.getElementById("compare"), null).color; }
+else if (document.getElementById("test").currentStyle)
+        { theColor = document.getElementById('compare').currentStyle.color; }
+
+return theColor;
+}
+
+function compareOr(actual, orVals)
+{
+ var orArray = orVals.split("|");
+ var retVal  = "fail";
+
+ for (compareloop=0;compareloop<orArray.length;compareloop++)   // Examine each of the options
+     {                                                          // Allow for quoted font names in Opera
+      if (actual == orArray[compareloop] || actual == "\"" + orArray[compareloop] + "\"")
+         { retVal = "pass"; } 
+     }
+
+return retVal;
+}
+
+function defaultProp(cssProp)
+{
+if      (window.getComputedStyle)
+        { eval("alert('Default font size is: ' + getComputedStyle(document.getElementById('compare'), null)." + cssProp + ")"); }
+else if (document.getElementById("test").currentStyle)
+        { eval("alert('Default font size is: ' + document.getElementById('compare').currentStyle." + cssProp + ")"); }
+
+return true;
+}
+</script>
+</head>
+
+<body onload="theTest();">
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<font id="test">font font font font font font font font font font font 
+font font font font font font font font font font font font font font font 
+font font font font font font font font font font font font font font font</font>
+
+<span id="compare" onclick="defaultProp('fontFamily');">
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text</span>
+<hr>
+<span class="text">Test is above this line</span><br><br>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>If the test section looks like the surrounding text, the test passes</i></b>.<br>
+<br>
+
+<form>
+<table border=1 cellspacing=0 cellpadding=0>
+<tr><th>Property</th>     <th>Actual</th><th>Result</th></tr>
+<tr><td>fontStyle</td>    <td><input type="text" name="act0"></td><td><input type="text" name="res0"></td></tr>
+<tr><td>fontWeight</td>   <td><input type="text" name="act1"></td><td><input type="text" name="res1"></td></tr>
+<tr><td>fontSize</td>     <td><input type="text" name="act2"></td><td><input type="text" name="res2"></td></tr>
+<tr><td>paddingTop</td>   <td><input type="text" name="act3"></td><td><input type="text" name="res3"></td></tr>
+<tr><td>paddingRight</td> <td><input type="text" name="act4"></td><td><input type="text" name="res4"></td></tr>
+<tr><td>paddingBottom</td><td><input type="text" name="act5"></td><td><input type="text" name="res5"></td></tr>
+<tr><td>paddingLeft</td>  <td><input type="text" name="act6"></td><td><input type="text" name="res6"></td></tr>
+<tr><td>marginTop</td>    <td><input type="text" name="act7"></td><td><input type="text" name="res7"></td></tr>
+<tr><td>marginRight</td>  <td><input type="text" name="act8"></td><td><input type="text" name="res8"></td></tr>
+<tr><td>marginBottom</td> <td><input type="text" name="act9"></td><td><input type="text" name="res9"></td></tr>
+<tr><td>marginLeft</td>   <td><input type="text" name="act10"></td><td><input type="text" name="res10"></td></tr>
+<tr><td>textAlign</td>    <td><input type="text" name="act11"></td><td><input type="text" name="res11"></td></tr>
+<tr><td>color</td>        <td><input type="text" name="act12"></td><td><input type="text" name="res12"></td></tr>
+<tr><td>backgroundColor</td> <td><input type="text" name="act13"></td><td><input type="text" name="res13"></td></tr>
+<tr><td>textDecoration</td>  <td><input type="text" name="act14"></td><td><input type="text" name="res14"></td></tr>
+<tr><td>display</td>      <td><input type="text" name="act15"></td><td><input type="text" name="res15"></td></tr>
+<tr><td>fontFamily</td>   <td><input type="text" name="act16"></td><td><input type="text" name="res16"></td></tr>
+</table>
+</form>
+
+</body>
+</html>

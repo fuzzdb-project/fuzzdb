@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Letter-Spacing - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">letter-spacing</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Text Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="wordspace.htm">word-spacing</a><br>
+        <a href="whitespace.htm">white-space</a><br>
+        <a href="wordwrap.htm">word-wrap</a><br>
+        <a href="textalign.htm">text-align</a><br>
+        <a href="textalignlast.htm">text-align-last</a><br></td>
+    <td valign=top><a href="textdec.htm">text-decoration</a><br>
+        <a href="texttrans.htm">text-transform</a><br>
+        <a href="textshadow.htm">text-shadow</a><br>
+        <a href="textindent.htm">text-indent</a><br>
+        <a href="textunderpos.htm">text-underline-position</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">normal</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#letter-spacing">CSS1: Sect 5.4.2</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/text.html#spacing-props">CSS2: Sect 16.4</a>,
+        <a href="http://www.w3.org/TR/CSS21/text.html#spacing-props">CSS2.1: Sect 16.4</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property controls the space <em>in addition to</em> the default
+        spacing between letters in a given section. Values may be negative.
+        The <b class="alert">justify</b> value to the <b class="property">align</b>
+        property may influence the effects of this property.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">normal</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This value specifies that the font/browser default letter spacing will be used.</dd>
+
+<dt><b class="subheading">[length]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The length value is an amount in <em>addition</em> to the browser default
+        space between letters. Any of the standard
+        <a href="../../syntax/units/abslength.htm">Absolute</a>
+        or <a href="../../syntax/units/rellength.htm">Relative</a> Length
+        Units may be used. Negative values are allowed, but browsers may have
+        limits to behavior in such situations.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">h5.close</b> {
+        <span class="property">letter-spacing:</span> 0.1cm }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">h5</b> <span
+        class="tagattrib">STYLE</span>=&quot;<span class="property">letter-spacing:</span>
+        0.1cm&quot;&gt;This is a test&lt;/<b class="tagname">h5</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> Browsers may treat any value
+        of this property as if it was set to "normal."
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

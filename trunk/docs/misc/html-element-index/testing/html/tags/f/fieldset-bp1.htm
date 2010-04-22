@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FIELDSET: Browser Peculiarities: ALIGN attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Note: The reference for Internet Explorer 4.0 lists the ALIGN 
+attribute as valid. In experimenting with the FIELDSET element it DOES appear to 
+have some effect on the FIELDSET itself, not on the contents of the FIELDSET as 
+documented. The effect it has is just barely discernible, but it is trying to do 
+SOMETHING  with this attribute (but it doesn't appear to be succeeding very well =)</div>
+<br>
+
+<form>
+<b>Simple FIELDSET element, no ALIGN attribute:</b>
+<hr>
+filler text 
+<fieldset>
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Simple FIELDSET element, ALIGN=right:</b>
+<hr>
+filler text 
+<fieldset align="right">
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Simple FIELDSET element, ALIGN=center:</b>
+<hr>
+filler text 
+<fieldset align="center">
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Simple FIELDSET element, ALIGN=left:</b>
+<hr>
+filler text 
+<fieldset align="left">
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

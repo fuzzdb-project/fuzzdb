@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Width - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">width</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Dimension Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="minwidth.htm">min-width</a><br>
+    <a href="maxwidth.htm">max-width</a><br>
+    <a href="lineheight.htm">line-height</a><br></td>
+    <td><a href="height.htm">height</a><br>
+    <a href="minheight.htm">min-height</a><br>
+    <a href="maxheight.htm">max-height</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All except inline non-replaced elements, table rows, and table
+        row groups</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td><span class="tagattrib">WIDTH</span> attribute used in tables and replaced elements.</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#width">CSS1: Sect. 5.5.23</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/visudet.html#the-width-property">CSS2: Sect. 10.2</a>,
+        <a href="http://www.w3.org/TR/CSS21/visudet.html#the-width-property">CSS2.1: Sect 10.2</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property specifies the width of an element's rendering box for
+        block-level and replaced elements. Negative values are not allowed.
+        <br><br>
+
+        In addition to the 'width' property, two other properties - 'min-width'
+        and 'max-width' - place constraints on the allowed value for an element's
+        rendering box width. The 'width' value is first computed without
+        consideration for these other two properties. If the computed value is
+        greater than the 'max-width' value or less than the 'min-width' value,
+        the width is re-calculated using the 'max-width' or 'min-width' as the
+        new 'width' value.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The width is determinant on the values of other properties.</dd>
+
+<dt><b class="subheading">[length]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Refers to an absolute measurement for the computed element
+        box width. Negative values are not allowed.</dd>
+
+<dt><b class="subheading">[percentage]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Calculated</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Refers to a percentage of the width of the containing element block.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">img.class1</b>
+        { <span class="property">height:</span> 75px;
+        <span class="property">width:</span> 75px }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">img</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">height:</span> 75px;
+        <span class="property">width:</span>
+        75px&quot; <span class="tagattrib">SRC</span>=&quot;image.jpg&quot;&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- This property does not apply to inline elements, input type=checkbox|radio
+                elements, list structures (ol, ul, dl) and list sub-items (li, dt, dd.)
+            <dd>- This property is supported for the DIV element, but not for other
+                block structures.
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- If this property is applied to table structures, it is only applied
+                if the specified width is greater than sum of the total table cell
+                minimums needed for each cell to render correctly. Any extra width is
+                distributed evenly in the table columns.
+            <dd><b class="alert2">5.0:</b>
+            <dd>- This property now applies to inline elements, list structures
+                (ol, ul, dl) and list sub-items (li, dt, dd.)
+            <dd>- This property can now be applied to all block element structures.
+            <dd>- This property now applies to form checkbox and radio buttons
+                (input type=checkbox|password|radio|text.) These controls have an
+                intrinsic width, so the extra width is added as padding around the field.
+            <dd>- Applying this property to an OL list structure turns the markers
+                into bullets.
+            <dd>- Applying this property to an OL list item resets the counter.
+            <dd>- Applying this property to an UL/OL list structure makes the 'list-style-type'
+                into "bullet", and the 'list-style-position' is set to "inside",
+                not "outside."
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- This property does not apply to form field or replaced object
+                (eg: IMG element) dimensions.
+            <dd>- Applying this property to DL structures applies the specified width to
+                each DT and DD sub element.
+            <dd>- Applying this property to DT/DD elements has no effect.
+            <dd>- Applying this property to inline elements and replaced elements (such as
+                images) often has odd effects. The usual behavior is to begin rendering the
+                inline element at the start of the current line, overlapping previous
+                content. In the rare cases where this does not happen (for reasons
+                related to the element's width), a linefeed occurs before the element.
+            <dd>- This property <em>DOES</em> appear to be supported for HR elements.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- This property has no effect on inline elements, form fields or tables.
+            <dd>- If only one dimension is given for an image, the other dimension is
+                calculated such that the image has the same height/width proportions
+                as the original image.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

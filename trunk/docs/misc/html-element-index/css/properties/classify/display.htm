@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Display - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">display</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B1</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Classification Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="visibility.htm">visibility</a><br>
+    <a href="position.htm">position</a><br></td>
+    <td><a href="float.htm">float</a><br>
+    <a href="clear.htm">clear</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">inline</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#display">CSS1: Sect. 5.6.1</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/visuren.html#display-prop">CSS2: Sect. 9.2.5</a>, 
+        <a href="http://www.w3.org/TR/CSS21/visuren.html#display-prop">CSS2.1: Sect 9.2.4</a><br>
+        <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/display.asp#display">Microsoft MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property specifies the type of rendering box used for an element.
+        In a language such as HTML where existing elements have well-defined behavior,
+        default 'display' property values are taken from behaviors described in the
+        HTML specifications or from the browser/user default stylesheet. In languages
+        where display behavior is not defined (like XML), the default value is
+        'inline'.
+        <br><br>
+
+        In addition to the many different allowed display box types, one other
+        value, "none", allows the display of an element to be turned off; all child
+        elements also have their display turned off. The document is rendered as
+        though the element did not exist in the document tree. This value allows
+        for powerful capabilities, but should be used with caution.
+        <br><br>
+
+        <b class="subheading">"Block" Versus "In-line" Elements</b><br>
+        Block-level elements create vertically distinct blocks of content (in the
+        visual context) - generally using a line-break before and after the content.
+        Only this value for the 'display' is allowed to generate a positioned element.
+        Block behavior is exhibited by such HTML elements as BLOCKQUOTEs, DIVs and
+        Headings (Hn.)<br>
+        <b class="alert2">'Display' property values creating a block element type:</b>
+        'block', 'list-item', 'table, 'compact' and 'run-in'
+        <br><br>
+
+        In-line elements do not create distinct blocks of content; element content
+        is rendered using a line box (content is distributed line by line within a
+        containing physical or virtual block element.) In-line behavior is exhibited
+        by such HTML elements as physical and virtual character formatting, non-floated
+        images and unmarked content.<br>
+        <b class="alert2">'Display' property values creating an in-line element type:</b>
+        'inline', 'inline-table', 'compact' and 'run-in'.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B1</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This value turns off the display of an element (it has no effect on layout);
+        all child elements also have their display turned off unconditionally. The
+        document is rendered as though the element did not exist in the document
+        tree. To render an element box's dimensions in the document formatting scheme,
+        yet have its contents be invisible, see the
+        '<a href="visibility.htm">visibility</a>' property.</dd>
+
+<dt><b class="subheading">inline</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5</b>|<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This causes the element to generate one or more inline element boxes.</dd>
+
+<dt><b class="subheading">block</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE5</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This causes the element to generate a block element box.</dd>
+
+<dt><b class="subheading">inline-block</b></dt>
+<dt>[<b><i class="fs">CSS2.1</i></b>] 
+    [<b><i class="fs">O7</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Introduced in CSS 2.1. This causes the element to generate a block element 
+        box that will be flowed with surrounding content as if it were an single 
+        inline box (behaving much like a replaced element would.)</dd>
+
+<dt><b class="subheading">list-item</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE6</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O4</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This causes the element to generate a block box for the content and a
+        separate list-item inline box.</dd>
+
+<dt><b class="subheading">marker</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This causes an additional marker box to be generated along with the
+        content box. Generated content using the :before and :after
+        pseudo-elements with this display value will place content in the
+        marker box. If a marker is used with another type of element, the value
+        is treated as "in-line." The position of the marker will lie outside
+        the block box.</dd>
+
+<dt><b class="subheading">compact</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>] [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Depending on context, this value for the display property creates either an in-line
+        or block level rendering box. In each case different CSS properties may
+        apply to the compact element. In a block level context, the compact element
+        is rendered in the left or right margin of the block element. The compact
+        element participates in line-height calculations for the current line, and
+        the 'vertical-align' property value is relative to the block element.</dd>
+
+<dt><b class="subheading">run-in</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Depending on context, this value for the display property creates either an in-line
+        or block level rendering box. In each case different CSS properties may
+        apply to the run-in element. Properties for the run-in element are
+        inherited from its parent element in the document tree, not from the
+        block element box it participates in.</dd>
+
+<dt><b class="subheading">[table-header-group|table-footer-group]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6</b>|<b class="s">O4</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding THEAD and TFOOT
+        HTML table elements which these values take their name from.</dd>
+
+<dt><b class="subheading">table</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+
+<dt><b class="subheading">inline-table</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+
+<dt><b class="subheading">table-caption</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+
+<dt><b class="subheading">table-cell</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+
+<dt><b class="subheading">table-row|table-row-group</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+
+<dt><b class="subheading">table-column|table-column-group</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N??</b>|<b class="s">O7</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values cause the element to behave like the corresponding HTML table
+        element which these values take their name from. The 'inline-table' value does
+        not have a direct mapping in HTML.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b>
+        { <span class="property">display:</span> block }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">p</b> <span
+        class="tagattrib">STYLE</span>=&quot;<span class="property">display:</span>
+        block&quot;&gt;text&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> browsers may legally ignore the
+        'display' property and instead use browser defaults for each element.
+    <li>In CSS1 the default value for this property was "block." In CSS2
+        it has been changed to "inline".
+    <li>CSS2.1 adds the "inline-block" value.
+    <li>CSS2.1 removes the "compact" and "marker" values.
+</ul>
+
+<big><b class="mainheading">Some rendering details of arbitrarily-created tables</b></big>
+<ul>
+    <li>Netscape:<br>
+        - Items must originally be of type "block" to ensure table rendering ("inline" can cause problems.)<br>
+        - Row elements must originally be of type "block", cells must be set to 'display: table-cell.'<br>
+        - The 'display: table' element doesn't HAVE to exist to work. It could be
+          an inline element for example (SPAN.)<br>
+        - 'display: table-row' seems extraneous - the entire structure can function without it.<br>
+        - Many CSS properties are ignored for "table-row" and "table-row-group" 'display' values.
+    <li>Opera:<br>
+        - As long as there is a "table-like" structure (in-line or block),
+        (elements enclosing groups of cells set to 'display: table-cell') then
+        it renders as a table.<br>
+        - Row structuring elements (even if just span) must exist for rows to display correctly.<br>
+        - 'display: table-row seems extraneous - the entire structure can function without it.<br>
+        - Many CSS properties are ignored for "table-row" and "table-row-group" 'display' values.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+    <dl>
+        <dd><b class="alert2">4.0:</b>
+        <dd>- 'display: none' on a block-level element still renders a linefeed.
+        <dd>- 'display: none' on a table row makes that row disappear, but it
+            still leaves ~2 pixels extra height where that row would have been.
+            Later IE versions make it all collapse as expected.
+        <dd><b class="alert2">5.0:</b>
+        <dd>- 'display: inline' on OL turns the list into a UL. Applied to
+            OL/UL, 'list-style-position' is set to "inside" instead of "outside."
+        <dd>- 'display: inline' applied to LI: List marker disappears.
+        <dd>- 'display: inline' applied to DT/DD: renders DT and DD on the
+            same line.
+        <dd>- 'display: inline' applied to TABLE: renders the table like
+            what 'display: inline-table' should be (this seems like a good
+            thing.)
+        <dd>- 'display: inline' for block level elements seems to have
+            trouble with the P element as the parent - A linefeed is placed
+            before the nested block element.
+        <dd>- 'display: inline': For block elements, any space following the
+            end tag is not displayed. Trailing space <em>INSIDE</em> the
+            end tag is treated in the normal HTML manner.
+        <dd>- 'display: none' applied to LI: What should subsequent list markers 
+            in a OL be? Should the markers iterate for the item that isn't displayed? 
+            IE5 does not iterate. I don't think this is correct.
+        <dd><b class="alert2">6.0:</b>
+        <dd>- IE says it supports an "inline-block" value on this property,
+            which would make a rendered block behave like an inline element
+            box to the content surrounding it (eg, line-feeds in or caused by
+            an element have no effect on surrounding in-line content.)
+            But in testing, it does not work on elements that have an intrinsic
+            "block" 'display' value (DIV, TABLE). It <em>does</em> work as
+            expected on elements that have an intrinsic "inline" 'display' value
+            (eg: SPAN.) If "inline-block" worked the way it <em>should</em>,
+            then the explicit 'display' value would override an element's
+            default 'display' value.
+        <dd>- IE seems to re-start whatever numbering scheme that was in effect
+            before the 'display: list-item' was declared.
+    </dl>
+    <li><b class="alert">Netscape</b>
+    <dl>
+        <dd><b class="alert2">4.x:</b>
+        <dd>- 'display: inline' on a block-level element still renders a
+            linefeed after.
+        <dd>- 'display: inline' applied to LI renders marker and content
+            on the previous LI line, with the marker overlapping the
+            previous content.
+        <dd>- 'display: inline' applied to DT and DD render the content
+            on top of each other.
+        <dd>- 'display: block' applied to inline elements, form fields,
+            and IMG renders a linefeed before, but not after. Correct
+            behavior for these elements may be achieved by applying
+            the 'margin-bottom' property as well.
+        <dd>- 'display: list-item' always places a line-break before and
+            after, along with a standard 'margin-left' value for the content.
+        <dd>- 'display: list-item' applied to OL makes it behave line a UL list.
+        <dd>- 'display: list-item' applied to LI: Markers always rendered
+            as a bullet, margin-left indentation is significantly greater
+            than normal, and a linebreak is rendered before the LI content.
+        <dd>- 'display: list-item' applied to DD: The same indentation is
+            used as for the DT element (eg: none at all.)
+        <dd>- 'display: list-item' applied to TH/TD: Content is indented
+            within the cell.
+        <dd>- 'display: none' on a block-level element still renders a linefeed.
+        <dd>- 'display: none' applied to LI: LI content is rendered on previous
+            list item line, no marker added to its content.
+        <dd>- 'display: none' applied to DT/DD has no effect.
+        <dd>- 'display: none' applied to SELECT: displays an empty selection
+            list with zero length.
+        <dd>- 'display: none' applied to OPTION: renders the option value
+            concatenated to previous OPTION in the selection list field.
+        <dd><b class="alert2">6.x:</b>
+        <dd>- 'display: inline-block' tries to do <em>something</em>, but it
+            gets it wrong. It treats such an element as inline relative to the
+            content before it (expected), but puts a linefeed after the element
+            (not expected.)
+    </dl>
+    <li><b class="alert">Opera</b>
+    <dl>
+        <dd><b class="alert2">3.5:</b>
+        <dd>- 'display: inline' on a block-level element still renders a linefeed before.
+        <dd>- 'display: inline' applied to OL does not render markers, UL does. Normal
+            list structure margin-left defaults are not applied.
+        <dd>- 'display: inline' applied to LI in an OL list does not render
+            the marker, but the next rendered LI marker is incremented by 2
+            instead of one.
+        <dd>- 'display: inline' applied to DD renders a greater indent than normal.
+        <dd>- 'display: inline' applied to TD/TH makes cell content disappear!
+        <dd>- 'display: inline' applied to TABLE element renders cell content,
+            kind of preformatted, but with no table borders, etc.
+        <dd>- 'display: block' does not apply to form fields.
+        <dd>- 'display: none' on a block-level element still renders a linefeed.
+        <dd><b class="alert2">4.x+:</b>
+        <dd>- 'display: list-item' screws up any existing list numbering scheme
+            already in effect..
+    </dl>
+    <li><b class="alert">Safari</b>
+    <dl>
+        <dd><b class="alert2">1.0+:</b>
+        <dd>- 'display: inline' applied to TABLE: renders the table like
+            what 'display: inline-table' should be (this seems like a good
+            thing.)
+    </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>@Font-Face - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">@font-face</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>] [<b><i class="fs">IE4</i></b>]<br></td>
+    <td align=center><b class="alert">Other<br>At-Rules</b><br></td>
+</tr>
+<tr>
+    <td><a href="charset.htm">@charset</a><br>
+    <a href="import.htm">@import</a><br>
+    <a href="media.htm">@media</a><br>
+    <a href="namespace.htm">@namespace</a><br>
+    <a href="page.htm">@page</a><br>
+    <a href="fontdef.htm">@fontdef</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This At-Rule syntax maps an embedded OpenType file to a font already
+        on the user's system or an entirely new font name. The 'font-face'
+        At-rule consists of at least a font name to reference the font, and the
+        URL of the OpenType file. If the font name already exists on the user's
+        system, the OpenType file will be used instead of the system font,
+        wherever it occurs in the document. If other font styles are applied
+        in the At-rule (such as bold, etc), these serve as conditions for the
+        application of the OpenType file (eg: if 'font-weight' is set to "bold"
+        in the At-rule, the OpenType font file should only be applied when the
+        specified font name is also set to bold.)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>@<b class="selector">font-face</b> {<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="property">font-family:</b>
+        [<span class="alert2">New or Existing Font Family Name</span>];<br>
+        &#160;&#160;&#160;&#160;&#160;[<span class="alert2">Other Declarations</span>]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="property">src:</b>
+        url([<span class="alert2">Embedded OpenType File URL</span>]);<br>
+        &#160;&#160;&#160;&#160;&#160;}
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">But Wait... There's More!</b></big>
+    <dd>CSS2 introduces the concept of 'font descriptors', which allow for a much 
+        greater control over font specification - of which the downloadable "src:" 
+        descriptor is only one. This will be covered here in more detail in the 
+        future, but current browsers do not yet support this model.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Examples</b></big>
+    <dd><div class="example">@<b class="selector">font-face</b> {<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="property">font-family:</b> dreamy;<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="property">font-weight:</b> bold;<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="property">src:</b>
+        url(http://www.example.com/font.eot);<br>
+        &#160;&#160;&#160;&#160;&#160;}</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

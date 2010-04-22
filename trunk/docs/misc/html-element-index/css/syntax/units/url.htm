@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>URLs - Cascading Style Sheet Units of Measure</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">URLs</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td align=center colspan=2><b class="alert">Other Units</b><br></td>
+</tr>
+<tr>
+     <td><a href="rellength.htm">Relative Length</a><br>
+         <a href="abslength.htm">Absolute Length</a><br>
+         <a href="color.htm">Color</a><br></td>
+     <td><a href="angle.htm">Angle</a><br>
+         <a href="time.htm">Time</a><br>
+         <a href="frequency.htm">Frequency</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>A URL indicates the address of a resource on the Internet. An absolute
+        URL gives the full address while a relative URL gives an address value
+        that is relative to some other absolute URL (usually the address of the
+        requesting document or if used in a separate stylesheet, relative to
+        the address of the style sheet.) See
+        <a href="http://www.rfc-editor.org/rfc/rfc1738.txt">RFC
+        1738</a> and <a href="http://www.rfc-editor.org/rfc/rfc1808.txt">RFC
+        1808</a> for more information on URL syntax.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">URL Units in CSS</b></big>
+<dt><b class="subheading">[Relative URL]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Description:</b><br> An Internet address relative
+        to some other resource. In the case where the CSS statement is contained
+        within a document, the address is relative to the document itself or its
+        assigned base URL. In the case where the CSS statement is in a separate
+        CSS file, the Relative URL is relative to the address of the style sheet.
+        The protocol and machine name are already be known, so a Relative URL
+        only consists of local directory structure information.
+
+<dt><b class="subheading">[Absolute URL]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Description:</b><br> A complete specific URL address
+        consisting of a protocol, followed by a machine address, optional port number,
+        and finally by the address within the local directory structure of the
+        indicated machine address.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>"url(" [space]* ["|'] [URL Address] ["|'] [space]* ")"
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example"><b class="selector">span</b>
+        { <span class="property">background-image:</span> url("../images/mybackground.gif") }</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">3.0:</b>
+            <dd>- Absolute URLs are not understood.
+            <dd>- URLs using single or double quotes are not understood. Only
+                URLs of the form <b class="alert">url(../foo.gif)</b> are usable.
+            <dd>- Reported Elsewhere: URLs referencing deep/complex directory
+                structures may fail.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- Relative URLs in external stylesheets are relative to the HTML
+                document, not to the stylesheet.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

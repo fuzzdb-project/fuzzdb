@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Text-Underline-Position - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">text-underline-position</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE5.5B1</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Text Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="wordspace.htm">word-spacing</a><br>
+        <a href="letterspace.htm">letter-spacing</a><br>
+        <a href="whitespace.htm">white-space</a><br>
+        <a href="wordwrap.htm">word-wrap</a><br>
+        <a href="textalign.htm">text-align</a><br></td>
+    <td valign=top><a href="textalignlast.htm">text-align-last</a><br>
+        <a href="textdec.htm">text-decoration</a><br>
+        <a href="texttrans.htm">text-transform</a><br>
+        <a href="textshadow.htm">text-shadow</a><br>
+        <a href="textindent.htm">text-indent</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/textUnderlinePosition.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property specifies the default position of the underline which is
+        set using the 'text-decoration' property "underline" value.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Underline decoration appears <em>above</em> the text if the HTML LANG
+        attribute for an underlined element is set to "ja" (Japanese) and the
+        writing-mode CSS property is set to "tb-rl". Otherwise, the underline
+        decoration appears <em>below</em> the content.</dd>
+
+<dt><b class="subheading">auto-pos</b></dt>
+<dt>[<b><i class="fs">IE6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        IE's documentation says that this value behaves the same as "auto."</dd>
+
+<dt><b class="subheading">below</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Underline decoration will appear below the enclosed content.</dd>
+
+<dt><b class="subheading">above</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Underline decoration will appear above the enclosed content.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b> {
+        <span class="property">text-underline-position:</span> above;
+        <span class="property">text-decoration:</span> underline }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">p</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">text-underline-position:</span>
+        above; <span class="property">text-decoration:</span>
+        underline&quot;&gt;text&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>I am still trying to understand the point of this property. If someone
+        wanted to create an overline effect, why not use 'text-decoration:
+        overline'? Wouldn't an underline that isn't <em>UNDER</em> the object
+        in question no longer be an underline? Perhaps the semantics of this are
+        best appreciated with content that is not the typical Western left-to-right flow...
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>In IE5.5, the default value for this property is "below", not "auto".
+    <li>One has to wonder why IE has introduced both "auto" and "auto-pos" as
+        valid values in IE6 if they behave the same. They created this property,
+        so the duplication doesn't make much sense.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+
+</BODY>
+</HTML>

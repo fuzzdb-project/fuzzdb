@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Relative Lengths - Cascading Style Sheet Units of Measure</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Relative Lengths</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B3</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td align=center colspan=2><b class="alert">Other Units</b><br></td>
+</tr>
+<tr>
+     <td><a href="abslength.htm">Absolute Length</a><br>
+         <a href="url.htm">URL</a><br>
+         <a href="color.htm">Color</a><br></td>
+     <td><a href="angle.htm">Angle</a><br>
+         <a href="time.htm">Time</a><br>
+         <a href="frequency.htm">Frequency</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Relative length units describe physical dimensions relative to some
+        other dynamic reference measure. This type of unit measure tends to
+        scale better between different rendering mediums. A relative length
+        consists of an optional sign character ("+"/"-"), followed by a number,
+        followed immediately by a relative length unit. If the given length
+        is zero, the sign character and unit measure are optional. Values that
+        can not be supported by the rendering device should be mapped to the
+        nearest value that <em>CAN</em> be supported.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Relative Length Units in CSS</b></big>
+<dt><b class="subheading">em</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Description:</b><br>Ems. A scaling factor relative
+        to the value of the current element's 'font-size' property. If 'em's are
+        used in the 'font-size' property for an element, the scaling factor is
+        relative to the value of the 'font-size' property of the parent element.
+        If this type of unit is specified for the root element of a document, the
+        scaling factor should be relative to the browser default value for the property.
+
+<dt><b class="subheading">ex</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Description:</b><br>X-height. A scaling factor
+        relative to the height of the letter 'x' for a font (also known as the
+        relationship of lowercase low-rise letters to high-rise characters.)
+        If this type of unit is specified for the root element of a document, the
+        scaling factor should be relative to the browser default value for the property.
+
+<dt><b class="subheading">px</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Description:</b>
+        <br>Pixels. The size of a pixel is dependent on the resolution of the
+        rendering device. The CSS2 Recommendation advises a "reference pixel"
+        scaling that should be used if the available resolution is significantly
+        different than typical resolutions:
+        <blockquote class="quotation">"It is recommended that the reference pixel be
+        the visual angle of one pixel on a device with a pixel density of 90dpi
+        and a distance from the reader of an arm's length. For a nominal arm's
+        length of 28 inches, the visual angle is therefore about 0.0227 degrees."</blockquote>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example"><b class="selector">div</b> 
+        { <span class="property">margin-top:</span> 12px }</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">3.0+:</b>
+            <dd>- If no length unit is specified, the units default to pixels. They should be ignored.
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- "ex" units are not calculated properly relative to the current 'font-size' value.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- The "no length unit = pixels" bug described for Internet Explorer
+                is also said to be true for Netscape, but testing in Netscape 4.04
+                and 4.5 did not indicate that this is true.
+            <dd>- "ex" units are not calculated properly relative to the current 'font-size' value.
+            <dd>- "em" units are calculated based on the browser default font-size
+                for an element, not its 'font-size' value.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

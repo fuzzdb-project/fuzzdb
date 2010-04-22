@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Colors in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../scripts/csschange.js"></script>
+
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Colors in HTML and CSS</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html/Css</span> by 
+<a href="../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=left>Index DOT Html: <font size=2>
+     <a href="../html/index.html">Main Index</a> | <a href="../html/tree/htmltree.htm">Element Tree</a> |
+     <a href="../html/tagindex/a.htm">Element Index</a> | <a href="../html/supportkey/a.htm">HTML Support
+     History</a></font><br>
+     Index DOT Css: <font size=2><a href="../css/index.html">Main Index</a> |
+     <a href="../css/propindex/font.htm">Property Index</a> |
+     <a href="../css/supportkey/syntax.htm">CSS Support History</a> |
+     <a href="../history/browsers.htm">Browser History</a></font></td>
+</tr>
+</table>
+</center>
+<br>
+
+
+<dl>
+<dt><big><b class="mainheading">Color References in HTML and CSS</b></big>
+     <dd>There are many cases when HTML and CSS specify colors for presentation
+         of a portion of the document tree. In the computer and publishing
+         industries, many different syntaxes and methods have evolved to represent
+         a color, whether it be by a conglomeration of color component values
+         or by a friendly common name. Each of the methods available in HTML and
+         CSS have a specific number of allowed values. When an attempt is
+         made to render a color, it is displayed as specified, unless the
+         presentation medium can not support it (for any number of reasons,
+         such as limitations in the OS or video card capability.)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Elements With Color Attributes</b></big>
+     <dd><b class="alert">Misc. Elements:</b>
+         &lt;<a href="../html/tagpages/b/basefont.htm">Basefont</a>&gt;,
+         &lt;<a href="../html/tagpages/b/body.htm">Body</a>&gt;,
+         &lt;<a href="../html/tagpages/f/font.htm">Font</a>&gt;,
+         &lt;<a href="../html/tagpages/f/frame.htm">Frame</a>&gt;,
+         &lt;<a href="../html/tagpages/f/frameset.htm">Frameset</a>&gt;,
+         &lt;<a href="../html/tagpages/h/hr.htm">Hr</a>&gt;,
+         &lt;<a href="../html/tagpages/i/ilayer.htm">Ilayer</a>&gt;,
+         &lt;<a href="../html/tagpages/l/layer.htm">Layer</a>&gt;,
+         &lt;<a href="../html/tagpages/m/marquee.htm">Marquee</a>&gt;<br>
+         <b class="alert">Table Elements:</b>
+         &lt;<a href="../html/tagpages/t/table.htm">Table</a>&gt;,
+         &lt;<a href="../html/tagpages/t/thtd.htm">Td</a>&gt;,
+         &lt;<a href="../html/tagpages/t/thtd.htm">Th</a>&gt;,
+         &lt;<a href="../html/tagpages/t/tr.htm">Tr</a>&gt;,
+         &lt;<a href="../html/tagpages/t/thead.htm">Thead</a>&gt;,
+         &lt;<a href="../html/tagpages/t/tbody.htm">Tbody</a>&gt;,
+         &lt;<a href="../html/tagpages/t/tfoot.htm">Tfoot</a>&gt;
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Color Specification Methods</b></big>
+<dt><b class="subheading">RGB Color Components</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Possible color values:</b> 16,777,216
+    <dd><b class="l3heading">Description:</b><br>
+         This method represents a color using a triplet of hexadecimal
+         values concatenated together. These values represent the Red,
+         Green and Blue components for a given color. The range of each
+         component value is 00-FF in Hexadecimal (0-255 Decimal.) The
+         total value should be prefixed by a pound "#" symbol.<br>
+    <dd><b class="l3heading">Syntax:</b><br>
+         &lt;<b class="tagname">tag</b>
+         <span class="tagattrib">ATTRIBUTE</span>=&quot;<span
+         class="alert2">#RRGGBB</span>&quot;&gt;<br>
+         (where  RR, GG and BB are the respective hexadecimal values for
+         Red, Green and Blue).
+    <dd><b class="l3heading">Example:</b> <div class="example">&lt;<b class="tagname">font</b>
+         <span class="tagattrib">color</span>=&quot;<span
+         class="alert2">#ff802d</span>&quot;&gt;</div>
+
+<dt><br><b class="subheading">Color-Safe Palette</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Possible color values:</b> 216
+    <dd><b class="l3heading">Description:</b><br>
+         The syntax of this method is exactly the same as for the general
+         RGB color component method, but represents a very useful subset of
+         values within the 16 million allowed colors. This subset represents
+         the palette of color values that will not
+         <a href="../misc/glossary.htm#dither">dither</a> on a system using only
+         256 colors. This "safe" range is composed of six equally spaced values
+         in the 256 value range for each color component. With six values for
+         each component, this gives a total of 216 (6 X 6 X 6) color combinations.<br>
+         &nbsp;&nbsp;&nbsp;<b class="alert">Hexadecimal:</b> 00, 33, 66, 99,
+         cc, and ff<br>
+         &nbsp;&nbsp;&nbsp;<b class="alert">Decimal:</b> 0,
+         51, 102, 153, 204, and 255
+    <dd><b class="l3heading">Example:</b> <div class="example">&lt;<b class="tagname">body</b>
+        <span class="tagattrib">bgcolor</span>=&quot;<span
+        class="alert2">#3399cc</span>&quot;&gt;</div>
+    <dd><b class="l3heading">Color Swatches:</b>
+        <a href="safetypalette.htm">RGB Safety Palette</a>
+
+<a name="vga"></a>
+<dt><br><b class="subheading">Windows VGA Color Names</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE1</i></b>|<b class="s">M3</b>|<b class="s">N2</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Possible color values:</b> 16
+    <dd><b class="l3heading">Description:</b><br>
+        These friendly color names are taken from the Windows 16-color VGA
+        palette. The color names represent zero, half and full-values (00, 80 and
+        ff respectively) in the RGB component method. Associating names with
+        colors is usually easier for many authors to remember, but the cost
+        is limiting the choice to only 16 values.
+    <dd><b class="l3heading">Example:</b> <div class="example">&lt;<b class="tagname">table</b>
+        <span class="tagattrib">bordercolor</span>=&quot;<span
+        class="alert2">blue</span>&quot;&gt;</div>
+    <dd><b class="l3heading">Color Swatches:</b>
+        <a href="vganame.htm">VGA Color Names</a>
+
+<dt><br><b class="subheading">X11 Color Names</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Possible color values:</b> 140
+    <dd><b class="l3heading">Description:</b><br>
+        While the VGA color names may be easy to remember, the range of colors
+        is very limited. Netscape expanded this set of named colors to a
+        standard set of 140 color names used for many years in the UNIX X11
+        environment. This set of names assigns arbitrary (and somewhat long)
+        names to specific RGB values. The color values used seem fairly random
+        and none of them are in the 216-color "safety palette" (see above,) but
+        the X11 names <em>DO</em> contain all the names in the Windows VGA
+        color name palette.
+    <dd><b class="l3heading">Example:</b> <div class="example">&lt;<b class="tagname">frame</b>
+        <span class="tagattrib">bordercolor</span>=&quot;<span
+        class="alert2">DeepPink</span>&quot;&gt;</div>
+    <dd><b class="l3heading">Color Swatches:</b> <a href="x11redirect.htm">X11 Color Names</a>
+
+<dt><br><b class="subheading">User Interface Color Names</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading">Possible color values:</b> 28
+    <dd><b class="l3heading">Description:</b><br>
+        One of the main problems in User Interface design is the inability satisfy
+        every user. With colors especially, not every user will like or be able to
+        efficiently use the same colors (because of visual disabilities,
+        personal preference or other factors.) How can a page be designed with color,
+        <em>AND</em> allow for such a wide spectrum of user color requirements? The
+        answer is fairly simple - let the user decide.
+        <br><br>
+        Each piece of the user interface in a GUI environment usually has an
+        addressable system name/label, from scrollbars all the way to the
+        application background. A user will have specific colors or values
+        specified for use by each of these pieces in the system. Colors can now
+        be specified using these system labels to give some control over page
+        appearance to the viewer. In theory, letting the user decide what their
+        own user interface should look like will yield the greatest satisfaction.
+    <dd><b class="l3heading">Example:</b> <div class="example">&lt;<b class="tagname">td</b>
+        <span class="tagattrib">bgcolor</span>=&quot;<span
+        class="alert2">ButtonFace</span>&quot;&gt;</div>
+    <dd><b class="l3heading">Color Swatches:</b>
+        <a href="uiname.htm">UI color names</a>
+</dl>
+
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Some browsers can recognize RGB color component colors without the
+        "#" symbol present, but this should not be relied on.
+    <li>Case sensitivity should not be an issue for any of the color name
+        methods mentioned above.
+    <li>It is wise to specify the text and link colors when the BGCOLOR
+        attribute is also specified. This is to ensure proper contrast is
+        maintained between these basic page elements.
+</ul>
+
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The "GrayText" UI color name is set to #000000 (black) if the display
+        driver in use does not support a solid gray color.
+    <li>Looking at the X11 color swatches in Opera 3.5 on Windows 98, it appears
+        that these color names are <em>NOT</em> supported: AliceBlue, BurlyWood,
+        Crimson, DarkBlue, DarkCyan, DarkGray, DarkMagenta, DarkRed, Indigo,
+        LightGreen, LightGray, SaddleBrown, Salmon, WhiteSmoke
+</ul>
+
+<dl>
+<dt><big><b class="mainheading">Related Links</b></big>
+<dt><a href="http://www.w3.org/Graphics/Color/sRGB" class="relevant">http://www.w3.org/Graphics/Color/sRGB</a>
+    <dd>The sRGB color model, W3C.
+<dt><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnwebgen/html/colorpick.asp"
+       class="relevant">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnwebgen/html/colorpick.asp</a>
+    <dd>"The Safety Palette", by Robert Hess of Microsoft.
+<dt><a href="http://www.lynda.com/hex.html" class="relevant">http://www.lynda.com/hex.html</a>
+    <dd>Lynda Weinman's pages are considered by many to be de-facto standard reading on color issues.
+<dt><a href="http://web.archive.org/web/20020201212126/http://www.two4u.com/bg-faq/" class="relevant">http://web.archive.org/web/20020201212126/http://www.two4u.com/bg-faq/</a>
+    <dd>The Background FAQ, maintained by Mark Koenen. A bit old, but still
+        some good information here. [Archive.org copy]
+<dt><a href="http://www.firelily.com/opinions/color.html"
+       class="relevant">http://www.firelily.com/opinions/color.html</a>
+    <dd>"Color Vision, Color Deficiency," by Diane Wilson. Good discussion of
+        color issues to keep in mind when considering the needs of your reader.
+<dt><a href="http://www.visibone.com/colorlab/"
+       class="relevant">http://www.visibone.com/colorlab/</a>
+    <dd>Possibly the best visual representation I have ever seen of the 216-color
+        "Safety Palette."
+<dt><a href="http://www.bagism.com/colormaker/" class="relevant">http://www.bagism.com/colormaker/</a>
+    <dd>An excellent color picker page.
+</dl>
+
+<br>
+<a href="../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

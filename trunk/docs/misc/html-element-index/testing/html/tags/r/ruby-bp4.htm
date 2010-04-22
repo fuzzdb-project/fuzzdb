@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>RUBY: Browser Peculiarities: Element content rendering - Inline markup</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE 5+: While Block elements can exist within a Ruby element, 
+some interesting behaviors are apparent. Images render fine also, but not form widgets.</div>
+<br>
+
+<b>Simple RUBY element, text-only content:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>RUBY</rb>
+   <rt>Really Ugly Brown Yarn</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Plain markup: Bold, small, underline, font color=green ("Ugly Brown")</b>
+<hr>
+filler text 
+<b><u><small><font color="green">Ugly Brown</font></small></u></b>
+filler text
+<hr>
+<br>
+
+<b>Simple RUBY element, RT=("Really Ugly Brown Yarn"); B, U, SMALL, FONT COLOR=green on "Ugly Brown") in RT:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>RUBY</rb>
+   <rt>Really <b><u><small><font color="green">Ugly Brown</font></small></u></b> Yarn</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Font</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Font</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+         [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Legacy</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><span class="property"><a href="../../../css/properties/font/fontsize.htm">font-size</a></span>,
+        <span class="property"><a href="../../../css/properties/font/fontfamily.htm">font-family</a></span>,
+        <span class="property"><a href="../../../css/properties/colorbg/color.htm">color</a></span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/present/graphics.html#h-15.2.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_legacymodule">XHTML 1.0</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This Physical Style element is the most versatile of all the
+        character formatting elements and is also the only one of this type to
+        accept its own special attributes. The element was first introduced by Netscape which
+        allowed for the SIZE attribute to control font sizing. Internet Explorer
+        followed suit and added two new attributes, COLOR and FACE
+        which control the text color and typeface respectively. Until this element
+        was introduced, the only font display variations produced at the
+        character level by graphical browsers were usually Bold, Italic,
+        Underline and fixed-width fonts, or combinations of those
+        characteristics. Addition of this element to HTML greatly increased an
+        author's presentation capabilities (although this control is quite meager 
+        now compared to what <a href="http://www.blooberry.com/indexdot/css/index.html">Cascading
+        Style Sheets</a> <span class="external">[--&gt;Index DOT Css]</span> now
+        allows.)
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Color</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE1</i></b>|<span class="ns">M</span>|<b class="s">N2</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Dropped in XHTML 1.1 in favor of CSS
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b>
+         Specifies the color of the enclosed text.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+         [The standard <a href="../../../color/colors.htm">HTML color
+         specification</a> methods apply.]
+
+<dt><b class="subheading">Face</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE1</i></b>|<span class="ns">M</span>|<b class="s">N3B5</b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Dropped in XHTML 1.1 in favor of CSS
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute indicates a specific font typeface to be used instead
+         of the default typeface used in the browser. If the system that is
+         viewing the document does not have the font typeface specified by
+         this attribute then the browser default is used. To ease portability,
+         multiple typefaces can be specified in the attribute value separated
+         by commas. It will check for availability starting from the style name
+         on the left, working its way right.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [Comma separated list of font names. If the font name contains spaces,
+         the whole name should be embedded in single quotes (the ' character.)]
+
+<dt><b class="subheading">Font-weight</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4B5</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This attribute controls the boldness characteristics of text content
+         in the same way the
+         '<a href="http://www.blooberry.com/indexdot/css/properties/font/fontweight.htm">font-weight</a>'
+        <span class="external">[--&gt;Index DOT Css]</span> property
+         does in CSS - a nine level boldness scale (100-900) with '400' being the
+         standard default. Values can also be expressed as relative changes (+/-)
+         of the current font boldness.
+     <dd><b class="l3heading">Values:</b> 
+         <b class="alert">100</b> | <b class="alert">200</b> | <b class="alert">300</b> |
+         <b class="alert">400</b> [DEFAULT]| <b class="alert">500</b> | <b class="alert">600</b> |
+         <b class="alert">700</b> | <b class="alert">800</b> | <b class="alert">900</b>
+
+<dt><b class="subheading">Point-size</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4B5</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+        This new Netscape attribute is an alternate method of specifying the
+        size of text content. It allows for a richer range of font sizes than
+        the static 7 level scale used by the SIZE attribute. Documentation does
+        not specify what should happen if <em>BOTH</em> SIZE and POINT-SIZE
+        attributes are present.
+     <dd><b class="l3heading">Values:</b> Integers representing font point size
+
+<dt><b class="subheading">Size</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Dropped in XHTML 1.1 in favor of CSS
+     <dd><b class="l3heading">Required?</b> No
+     <dd><b class="l3heading">Description:</b><br>
+         This controls the size of text contained in the font tag.
+     <dd><b class="l3heading">Values:</b><br>
+         <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [Values are integers which represent absolute values in the size
+         range from <b class="alert">1</b> (smallest) to
+         <b class="alert">7</b> (largest). Values can also be
+         specified relative to the current BASEFONT value (default
+         usually being 3) by preceding an integer value with a '+' or
+         '-' symbol.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Markup example and Tests</b></big>
+    <dd><div class="example">Font SIZE relative: &#160;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">size</span>=&quot;+2&quot;&gt;font text&lt;/<b class="tagname">font</b>&gt;<br>
+        Font SIZE absolute: &lt;<b class="tagname">font</b>
+        <span class="tagattrib">size</span>=&quot;6&quot;&gt;font text&lt;/<b class="tagname">font</b>&gt;<br>
+        Font POINT-SIZE: &#160;&#160;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">point-size</span>=&quot;20&quot;&gt;font text&lt;/<b class="tagname">font</b>&gt;<br>
+        Font COLOR: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">font</b>
+        <span class="tagattrib">color</span>=&quot;#00FF00&quot;&gt;font text&lt;/<b class="tagname">font</b>&gt;<br>
+        Font FACE: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        &lt;<b class="tagname">font</b>
+        <span class="tagattrib">face</span>=&quot;Verdana,'Times New Roman',System&quot;&gt;font text&lt;/<b class="tagname">font</b>&gt;</div>
+    <dd>
+        <ul>
+            <li><a href="../../../testing/html/tags/f/font-example.htm" class="testcase">Markup examples</a>
+            <li><a href="../../../testing/html/tags/f/font-element-render.htm" class="testcase">Basic element rendering test</a>
+            <li><a href="../../../testing/html/tags/f/font-element-domhtml.htm" class="testcase">DOMHTML test</a>
+            <li><a href="../../../testing/html/tags/f/font-element-domcss.htm" class="testcase">DOMCSS test</a>
+        </ul>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<dl>
+<dt><b class="subheading">General</b>
+    <dd>
+        <ul type="disc">
+        <li>The FONT element should behave as any other character formatting
+            element would, but because its behavior is an expanded set over other
+            elements like it, its behavior can not be assumed to be as consistent as
+            other character elements on ANY browser.
+        <li>FONT characteristics can be applied and mixed within Heading
+            levels to provide further visual clarification between headings in
+            addition to system default heading differences. Doing this will
+            still preserve the semantic differences between headings.
+        </ul>
+<dt><b class="subheading">Color</b>
+    <dd>
+        <ul type="disc">
+        <li>The COLOR attribute offers a <em>GREAT</em> alternative way to
+            create visually distinct text/section markers in long runs of text.
+        <li>There has been an interesting progression of support for applying
+            FONT COLOR to hyperlink elements. Early behavior of the browsers that support
+            this attribute (which has since changed) was that it generally had no
+            effect on the hyperlink color. This may have been to ensure a consistent
+            visual scheme to identify the links. See the 'Browser Peculiarities
+            section below for more details. (Note: The use of
+            <a href="http://www.blooberry.com/indexdot/css/index.html">Cascading Style
+            Sheets</a> <span class="external">[--&gt;Index DOT Css]</span>
+            in supporting browsers can offer an easy solution to this issue as well.)
+        <li>It is possible to set a passage of text to the background
+            color. You will be hanging yourself if you do this. =)
+        <li>Warning: On browsers that do not support this, all visual
+            distinctiveness gained through applied color formatting will
+            <em>NOT</em> appear. Use at your own risk.
+        </ul>
+<dt><b class="subheading">Face</b>
+    <dd>
+        <ul type="disc">
+        <li>This is a tricky attribute. Because the font specified must be
+            on the reader's system in order for the element to work, the use of this
+            attribute is not terribly wise. The problem is that each type of platform
+            (Macintosh, PC, UNIX, Etc.) has its own specific set of fonts.
+        <li>Another reason not to use this is because authors can almost
+            never guarantee that a given font name is on the browser's system.
+        <li><a href="../../../testing/html/tags/f/font-bp1.htm">[Test]</a>
+            Beginning in Netscape 4.0 beta 5 a consistent set of generic,
+            cross-platform font family names are available for use in Netscape browsers
+            for the FONT FACE element. These are the same generic names allowed by the
+            '<a href="http://www.blooberry.com/indexdot/css/properties/font/fontfamily.htm">font-family</a>'
+            <span class="external">[--&gt;Index DOT Css]</span>
+            CSS property:<br> <b class="alert">serif</b> |
+            <b class="alert">sans-serif</b> | <b class="alert">cursive</b> |
+            <b class="alert">fantasy</b> | <b class="alert">monospace</b>
+        <li>There was work underway to create a common set of fonts for the web to 
+            solve this problem, (and work in CSS2 to describe downloadable fonts), but 
+            this scheme hasn't been widely implemented or used.
+        </ul>
+<dt><b class="subheading">Size</b>
+    <dd>
+        <ul type="disc">
+        <li><a href="../../../testing/html/tags/f/font-bp2.htm">[Test]</a> 
+            Decimal values for SIZE are usually rounded, and values that are
+            out of bounds should be set to the nearest equivalent value.
+        <li>It is strange that HTML heading levels have 6 integral levels, while 
+            FONT SIZE has 7. Special attention should be paid to these differences.
+        <li>Using a FONT SIZE (or other attribute) <em>instead</em> of a corresponding
+            heading level to distinguish the importance of contained text is not
+            recommended. Use the heading level elements instead.
+        </ul>
+</dl>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>
+    <dl>
+    <dt><a href="../../../testing/html/tags/a/ahref-bp1.htm">[Test]</a>
+        A brief history of FONT COLOR and A HREF interaction behavior:
+    <dt><b class="alert">Netscape 2,3:</b>
+        <dd>Coloring Hyperlinks only works if the FONT COLOR is applied INSIDE
+            the hyperlink, and ONLY if both are INSIDE a table cell.
+    <dt><b class="alert">Internet Explorer 1, 2, 3, Netscape 4.0 Beta 1-3, Opera:</b>
+        <dd>Coloring hyperlinks does not work at all.
+    <dt><b class="alert">Internet Explorer 4.0, Netscape 4.0 Beta 4+:</b>
+        <dd>Coloring hyperlinks works anywhere (not just inside tables) if the
+            FONT COLOR is applied INSIDE the hyperlink.
+    </dl>
+    <li>
+    <dl>
+    <dt>[Tests: <a href="../../../testing/html/tags/t/table-bp1.htm">1</a>,
+        <a href="../../../testing/html/tags/t/table-bp2.htm">2</a>]
+        The effects of the FONT element are generally not inherited by content
+        nested inside tables. If an author wishes to ensure that the effects
+        of the FONT element are applied everywhere, the element must also be applied 
+        for every table cell in a table (in such a case CSS would be a simpler answer.) 
+        These are the FONT attributes which apply to content within tables:
+    <dt><b class="alert">Internet Explorer</b>
+        <dd><b class="alert">2.0:</b> COLOR and FACE applied, SIZE ignored
+        <dd><b class="alert">3.0+:</b> FACE applied, COLOR and SIZE ignored
+    <dt><b class="alert">Netscape:</b>
+        <dd>None of the FONT element attributes has any effect on content nested in tables.
+    <dt><b class="alert">Opera:</b>
+        <dd>All FONT element attributes have an effect on content nested in tables.
+    </dl>
+    <li>Netscape's POINT-SIZE attribute is curious - it appears to be an attempt
+        to give added control over fonts similar to that allowed through CSS. One
+        of the main reasons for CSS was to STOP the proliferation of new physical style
+        elements and attributes created by the browsers.
+    <li>A reader has reported a possible use for POINT-SIZE: Applying a 'font-size'
+        property to the BODY element overrides all FONT SIZE attributes. The
+        POINT-SIZE attribute appears to give control over font size <em>back</em>
+        to the FONT element.
+    <li>The few places where Netscape's documentation mentions the behavior for
+        FONT-WEIGHT attribute, it incorrectly calls it the WEIGHT attribute.
+        I believe this is just a typo intended to document the actual
+        FONT-WEIGHT attribute (which only appears to have been documented in
+        a document on the Mozilla site.)
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Multimedia in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Multimedia in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#ensure">Making Content Available To All</a><br>
+     <a href="#mmtags">Delivering Multimedia In HTML</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification of Multimedia in HTML</b></big>
+    <dd>One of the biggest factors in the growth of the web has been the
+        integration of multimedia capabilities within HTML documents. Since the
+        early versions of HTML, it has been possible to include references to images
+        in a document that would allow the embedding of the image in-line along with
+        document text content. Later, HTML was extended to allow the embedding of
+        not just static images, but sound, video, and VRML files as well. All of
+        these capabilities now allow for a very rich web surfing experience.
+</dl>
+<br>
+
+<a name="ensure"></a>
+<dl>
+<dt><big><b class="mainheading">Ensuring Your Content is Conveyed as Intended</b></big>
+    <dd>To be sure, not all browsers for HTML can support multimedia. Nor can
+        every reader experience all the features that multimedia can provide. This
+        fact must also always be considered in HTML design. As the quantities and
+        types of multimedia capability have grown in HTML, it has become ever more
+        difficult to prevent the persistent slide of content on the web to being
+        primarily multimedia based. Not to say this is a bad thing, but not
+        <em>EVERYONE</em> can experience these capabilities. The reader may have a
+        physical disability that may prevent the full effect from being experienced or
+        the user may only have access to a text-based browser. Authors must always
+        remember that not <em>ALL</em> browsers or readers have the capability to
+        experience the full intended multimedia experience that they try to deliver.
+        <br><br>
+
+        To this end, there are several methods available to help make multimedia
+        content degrade well for browsers that can not support it. The IMG element
+        allows the inclusion of a text string that is only available when an image
+        can not be loaded (whatever the reason.) The OBJECT element also extends this
+        a step further by allowing text representations of an Image Map to be
+        displayed when the Image Map can not be used. These options should
+        <em>ALWAYS</em> be used to ensure that your content is delivered in
+        <em>SOME</em> fashion to all readers.
+</dl>
+<br>
+
+<a name="mmtags"></a>
+<dl>
+<dt><big><b class="mainheading">Delivering Multimedia In HTML</b></big>
+<dt><b class="subheading">In-line Images, Movies, and VRML Worlds</b>
+<dt>[ <a href="i/image.htm">Img</a> ]
+    <dd>This is the grandpa multimedia element. It was the first element introduced
+        to allow multimedia capability within documents. It also has the
+        most extensions of any element (about 20) which allow everything from
+        the embedding of videos and VRML to a range of border, alignment
+        and size properties.
+
+<dt><b class="subheading">Client Side Image Maps</b>
+<dt>[ <a href="a/area.htm">Area</a>, <a href="m/map.htm">Map</a> ]
+    <dd>This is a method introduced by Spyglass to allow the browser to handle
+        the transit decisions related to using image maps (hyperlinks defined
+        by geometric regions of an image.) This process was previously handled
+        by an external file that contained the geometric hyperlink definitions.
+        The old method required an extra download request, and possibly
+        non-trivial access to a web server. This newer method includes the
+        information inside the HTML page and is generally a faster solution.
+
+<dt><b class="subheading">Background Sounds</b>
+<dt>[ <a href="b/bgsound.htm">BGSound</a>, <a href="s/sound.htm">Sound</a> ]
+    <dd>These elements are analogous to the BACKGROUND attribute to the
+        <a href="b/body.htm">BODY</a> element. They allow the embedding of a
+        sound that plays while a page is viewed. They are both extensions by
+        different browser vendors that were created at approximately the same
+        time. Neither of these elements will ever make it into an HTML standard 
+        now that the <a href="o/object.htm">OBJECT</a> element can absorb this 
+        functionality.
+
+<dt><b class="subheading">Multimedia Objects</b>
+<dt>[ <a href="o/object.htm">Object</a> ]
+    <dd>This is the new element meant to absorb all of the functionality of
+        the many disparate elements designed to include and process other
+        multimedia content within an HTML document. This element is meant to absorb and
+        obsolete the <a href="a/applet.htm">Applet</a>, <a href="a/area.htm">Area</a>,
+        <a href="b/bgsound.htm">BGSound</a>, <a href="e/embed.htm">Embed</a>,
+        <a href="i/image.htm">Img</a>, <a href="m/map.htm">Map</a>, and
+        <a href="s/sound.htm">Sound</a> elements.
+</dl>
+<br>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes the APPLET element and Client Side Image Maps]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus the OBJECT element]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.3" class="relevant">http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.3</a>
+    <dd><span class="relevant"><b class="l3heading">OBJECT:</b> Object portion of the HTML 4.0 Recommendation.</span>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1980.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1980.txt</a>
+    <dd><span class="relevant"><b class="l3heading">CSIM:</b> RFC 1980 draft regarding Client-Side Image Maps</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 2.0<br>
+        [<b class="l3heading">IMG:</b> Details the many IMG element extensions created for v1.1]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions_3.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions_3.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 3.0<br>
+        [<b class="l3heading">CSIM:</b> Details Client Side Image Map elements]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [<b class="l3heading">BGSound:</b> Includes description of BGSound, OBJECT, CSIM and IMG element extensions.]</span>
+
+<dt><br><b class="subheading">Other Related Links</b>
+<dt><a href="http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/color_information/"
+       class="relevant">http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/color_information/</a>
+    <dd><span class="relevant">Yahoo's list of resources on color in HTML documents</span>
+<dt><a href="http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/graphics/icons/"
+       class="relevant">http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/graphics/icons/</a>
+    <dd><span class="relevant">Yahoo's Image Icon link collection</span>
+<dt><a href="http://dir.yahoo.com/Computers_and_Internet/graphics/clip_art/"
+       class="relevant">http://dir.yahoo.com/Computers_and_Internet/graphics/clip_art/</a>
+    <dd><span class="relevant">Yahoo's Image Clip-art link collection</span>
+<dt><a href="http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/graphics/backgrounds/"
+       class="relevant">http://dir.yahoo.com/Arts/design_arts/graphic_design/web_page_design_and_layout/graphics/backgrounds/</a>
+    <dd><span class="relevant">Yahoo's Background Image link collection</span>
+<dt><a href="http://dir.yahoo.com/Entertainment/Comics_and_Animation/Animation/Computer_Animation/Animated_GIFs/"
+       class="relevant">http://dir.yahoo.com/Entertainment/Comics_and_Animation/Animation/Computer_Animation/Animated_GIFs/</a>
+    <dd><span class="relevant">Yahoo's Animated GIF link collection</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

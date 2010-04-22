@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Meta</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Meta</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE2</b>|<b class="s">M2</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>HTML: In all 4.x DTDs<br>XHTML: In all 1.0 and 1.1 DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class="alert">Metainformation</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/global.html#h-7.4.4">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_metamodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr></table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The Meta element is an extensible mechanism for use in identifying
+        specialized document meta-information. Each Meta element occurrence specifies a
+        Name/Value pair. If multiple Meta elements are specified with the same
+        name, their combined CONTENT sections should be concatenated as a comma
+        separated list to be associated with the common NAME value.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Current common uses for META</b></big>
+<dt><a href="metauses.htm#clientpull">Client Pull</a>
+    <dd>Loads a document automatically after a specified number of seconds
+<dt><a href="metauses.htm#charset">Document Character Set Identification</a>
+    <dd>Defines the character set of the current document
+<dt><a href="metauses.htm#editor">Editor Identification</a>
+    <dd>Identifies the program that created the code for the document
+<dt><a href="metauses.htm#searchid">Search Engine Identification</a>
+    <dd>Specifies keywords and descriptions for use by several major search engines
+<dt><a href="metauses.htm#pragma">Browser Cache Override, 'Pragma' version</a>
+    <dd>Tells the browser not to refer to the cache when loading the current page
+<dt><a href="metauses.htm#expires">Browser Cache Override, 'Expires' version</a>
+    <dd>Specifies an expiration date for the current page. After the date indicated,
+        the browser should not use a cached version of the page
+<dt><a href="metauses.htm#pics">PICS Identification</a>
+    <dd>Content categorization and ratings system
+<dt><a href="metauses.htm#filter">Inter-page Transition Filter Effects</a>
+    <dd>Visual effects for page entry and exit events
+<dt>[<b class="alert">For other META usages, take a look at
+    <a href="http://vancouver-webpages.com/META/">http://vancouver-webpages.com/META/</a></b>]
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<b><i class="fs">X1</i></b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Content</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b class="s">M2</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b>
+     <dd>Specifies the value of the Name/Value pair. The values allowed for
+         this attribute are dependent on the NAME or HTTP-EQUIV attribute used.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">HTTP-Equiv</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b class="s">M2</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b>
+    <dd>This attribute binds the Meta CONTENT element to an HTTP header
+        field. When a browser requests a particular page containing a META
+        HTTP-Equiv element from a server, the CONTENT portion of the element
+        will be attached to the document header that is passed to the browser
+        before the rest of the actual document content. The browser or HTTP
+        server may use this information to process the document. Values are
+        not case sensitive.
+    <dd><b class="l3heading">Values:</b> 
+        Must begin with a letter ([A-Za-z]), followed by any number of characters in [A-Za-z0-9-_:.] 
+
+<dt><b class="subheading">Name</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b class="s">M2</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b>
+    <dd>An attribute that specifies the name of the Name/Value pair.  If not
+        present, HTTP-EQUIV must be supplied in its place.
+    <dd><b class="l3heading">Values:</b> 
+        Must begin with a letter ([A-Za-z]), followed by any number of characters in [A-Za-z0-9-_:.]
+
+<dt><b class="subheading">Scheme</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b>
+    <dd>Indicates a pre-determined scheme/format to be used to interpret the
+        CONTENT attribute value in cases where multiple formats are supported.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>. 
+        [Dependent on the property name and the profile being used.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">meta</b>
+        <span class="tagattrib">http-equiv</span>=&quot;Refresh&quot;
+        <span class="tagattrib">content</span>=&quot;5;
+        URL=http://www.foo.com/foo.html&quot; /&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../h/head.htm">head</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">This element does not accept any content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>To help search engines better index your pages, the KEYWORDS and
+        DESCRIPTION values are strongly recommended to authors, especially for
+        use in top-level structure pages.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to Report
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

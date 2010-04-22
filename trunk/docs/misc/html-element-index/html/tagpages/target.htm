@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Frame Targets</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><h1 class="pagetitle">Frame Targets</h1>
+    <a href="../../misc/suppkey.htm">Support Key:</a> 
+    [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1.0</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]</td>
+     <td>
+     <a href="#what">What is it?</a><br>
+     <a href="#special">Special Target Names</a><br>
+     <a href="#tips">Tips &amp; Tricks</a><br>
+     <a href="#peculiar">Browser Peculiarities</a>
+     </td>
+</tr>
+<tr><td colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../index.html">Main Index</a> |
+     <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../tagindex/a.htm">Element Index</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Conventional behavior when clicking on a hyperlink or submitting a
+        form was to have the result load on top of the current document in the
+        browser window. With frames, we now have multiple documents in a single
+        browser area. It makes sense to be able to address specific frames in a
+        FRAMESET structure in such actions. The assignment of frame identity is
+        accomplished via the NAME attribute in the FRAME element. The addressing of
+        these frames occurs when a user initiates an action command with a TARGET
+        attribute that specifies the NAME of a frame to use as a destination for
+        its action.
+        <br><br>
+
+        The TARGET attribute is used by the <a href="a/a-hyperlink.htm">A</a>,
+        <a href="a/area.htm">AREA</a>, <a href="b/base.htm">BASE</a> and
+        <a href="f/form.htm">FORM</a> elements [Please see the pages for these
+        elements to see examples of the attribute in use.] If the frame name
+        specified does not exist, the action will load in a new browser window
+        using the given frame name.
+
+<dt><b class="alert">Note:</b>
+    <dd>The window name specified by a TARGET attribute must begin with
+        an alpha-numeric or underscore characters (&quot;_&quot;) to be valid.
+        All other window names should be ignored.
+</dl>
+
+
+<a name="special"></a>
+<dl>
+<dt><big><b class="mainheading">Special Target Names</b></big>
+<dt><b class="subheading">TARGET=&quot;_blank&quot;</b>
+    <dd>This target will cause the link to always be loaded in a new blank window.
+        This window is not named.
+<dt><b class="subheading">TARGET=&quot;_parent&quot;</b>
+    <dd>This target makes the link load in the immediate FRAMESET parent
+        of this document. This defaults to acting like &quot;_self&quot; if
+        the document has no parent.
+<dt><b class="subheading">TARGET=&quot;_search&quot;</b>
+    <dd>This target causes the link to load in the browser's Search pane.
+        (Internet Explorer 5.0 and later.)
+<dt><b class="subheading">TARGET=&quot;_self&quot;</b>
+    <dd>This target causes the link to always load in the same window
+        where the action originated. This is useful for overriding a globally
+        assigned BASE target.
+<dt><b class="subheading">TARGET=&quot;_top&quot;</b>
+    <dd>This target makes the link load in the full body of the window.
+        This defaults to acting like &quot;_self&quot; if the document is
+        already at the top. It is useful for breaking out of an arbitrarily
+        deep FRAME nesting.
+</dl>
+
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Make sure to <em>ALWAYS</em> check where the hyperlinks, etc. in
+        your frames structure load to. The default is <b class="alert">_self</b>,
+        which may not be what was intended.
+</ul>
+
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The Macintosh Mosaic beta versions that support frames did not
+        support the TARGET attribute for any elements.
+</ul>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

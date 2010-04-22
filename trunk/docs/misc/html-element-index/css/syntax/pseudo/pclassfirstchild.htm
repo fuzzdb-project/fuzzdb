@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: First-Child - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>first-child</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Document-Tree<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="pclassroot.htm">root</a><br>
+    <a href="pclassempty.htm">empty</a><br>
+    <a href="pclassnot.htm">not</a><br></td>
+    <td valign=top><a href="pclassfirstnode.htm">first-node</a><br>
+    <a href="pclasslastchild.htm">last-child</a><br>
+    <a href="pclasslastnode.htm">last-node</a><br>
+    <a href="pclasslang.htm">lang</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Any</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The First-child Pseudo-class selects an element context that is the
+        first child node of another selector in the document element tree. This
+        meaning may be clear, but the targets (which is the child element, and
+        which is the parent) may be confusing. If a selector looks like this:
+        "<b class="selector">strong:first-child</b>", it means "all STRONG elements
+        that are the first-child node of other elements, <em>NOT</em> "all
+        first-child nodes of STRONG elements." If you want to specify all
+        first-child nodes of STRONG elements, the syntax would look like:
+        "<b class="selector">strong :first-child</b>" (notice the space in there
+        indicating a descendent selector.)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p a:first-child</b>
+        { <span class="property">color:</span> green }<br>
+        (selects the first hyperlink child element of any P elements and turns the content green.)</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MARQUEE: Browser Peculiarities: Block structures in Marquee</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The use of block structures in MARQUEEs (such as BLOCKQUOTE) 
+will be ignored in IE versions 3.0x and below, while in IE 4.0 and above it makes 
+the marquee appear as a multi-line field.</div>
+<br>
+
+<b>Basic MARQUEE element, no width. Span nested inside:</b>
+<hr>
+filler text 
+<marquee>Marquee <span>innerSpan</span> Marquee</marquee> 
+filler text
+<hr>
+<br>
+
+<b>Basic MARQUEE element, no width. Blockquote nested inside:</b>
+<hr>
+filler text 
+<marquee>Marquee <blockquote>Blockquote</blockquote> Marquee</marquee> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

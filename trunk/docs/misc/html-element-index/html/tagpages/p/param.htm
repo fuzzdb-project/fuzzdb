@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Param</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Parameters</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Omitted</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Applet</b> and <b class=alert>Object</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.3.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_objectmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The PARAM element is used to pass values to an embedded
+        <a href="../o/object.htm">OBJECT</a> (usually an embedded program) or to
+        an embedded Java <a href="../a/applet.htm">APPLET</a>. In both situations
+        PARAM serves the same purpose and has almost the same implementation
+        (mostly because the official OBJECT with PARAM usage was meant to absorb
+        the APPLET with PARAM functionality.)
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O7</b>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute identifies a symbolic name for the current parameter.
+        It is coupled to a VALUE attribute to complete the parameter assignment.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">M</span>|<span class="ns">N??</span>|<b class="s">O6</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This identifies the MIME type of the resource indicated by the VALUE
+        attribute <em>ONLY</em> when the VALUETYPE attribute has a value of REF.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Alphanumeric MIME type]
+
+<dt><b class="subheading">Value</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3.5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This identifies a value for the current parameter.
+        It is coupled to a NAME attribute to complete the parameter assignment.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Valuetype</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE6</i></b>|<span class="ns">M</span>|<span class="ns">N??</span>|<b class="s">O6</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This identifies the type of the value attribute.
+    <dd><b class="l3heading">Values:</b> <br>
+        <b class="alert">DATA</b> - [<b class="magicword">DEFAULT</b>]
+        The value will be passed directly to the OBJECT as a string, after
+        embedded character entities are resolved.<br>
+        <b class="alert">REF</b> - The value indicated by the VALUE
+        attribute is a URL where run-time values are stored.<br>
+        <b class="alert">OBJECT</b> - Indicates a reference internal to the document 
+        where values are stored. Value is any valid ID attribute label.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<dt>[<a href="../a/applet.htm">Applet</a> usage]
+    <dd><div class="example">&lt;<b class="tagname">applet</b> 
+        <span class="tagattrib">codebase</span>=&quot;http://www.foo.com/java/&quot;<br>
+        <span class="tagattrib">code</span>=&quot;javaexample.class&quot;
+        <span class="tagattrib">width</span>=&quot;200&quot; <span class="tagattrib">height</span>=&quot;300&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b> <span class="tagattrib">name</span>=&quot;text1&quot;
+        <span class="tagattrib">value</span>=&quot;Example Text 1&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b> <span class="tagattrib">name</span>=&quot;imagecaption&quot;
+        <span class="tagattrib">value</span>=&quot;Image Caption&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">param</b> <span class="tagattrib">name</span>=&quot;bounceimage&quot;
+        <span class="tagattrib">value</span>=&quot;bounce1.gif&quot /&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">img</b> <span class="tagattrib">src</span>=&quot;non_java_image.gif&quot;
+        <span class="tagattrib">width</span>=&quot;200&quot; <span class="tagattrib">height</span>=&quot;300&quot;<br>
+        &#160;&#160;&#160;<span class="tagattrib">border</span>=&quot;0&quot; <span class="tagattrib">alt</span>=&quot;You
+        are missing the full Java Experience.&quot; /&gt;<br>
+        &lt;/<b class="tagname">applet</b>&gt;</div>
+
+<dt><br>[<a href="../o/object.htm">Object</a> usage]
+    <dd><div class="example">&lt;<b class="tagname">object</b>
+        <span class="tagattrib">codetype</span>=&quot;application/java-vm&quot;
+        <span class="tagattrib">codebase</span>=&quot;http://www.foo.com/applet.class&quot;<br>
+        <span class="tagattrib">classid</span>=&quot;java:program.start&quot;
+        <span class="tagattrib">height</span>=&quot;100&quot;
+        <span class="tagattrib">width</span>=&quot;100&quot;&gt;<br>
+        &lt;<b class="tagname">param</b> <span class="tagattrib">name</span>=&quot;options&quot;
+        <span class="tagattrib">value</span>=&quot;xqz&quot; /&gt;<br>
+        &#160;&#160;&#160;If you can read this you are too close.&lt;<b class="tagname">br</b> /&gt;<br>
+        &#160;&#160;&#160;AND your browser does not support Java.<br>
+        &lt;/<b class="tagname">object</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../a/applet.htm">applet</a>&gt; |
+        &lt;<a href="../o/object.htm">object</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">This element does not accept any content</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Nothing to Report
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>The online DTD and HTML reference for Microsoft Internet
+        Explorer mentioned support for the TYPE and VALUETYPE attributes in the
+        3.0 version timeframe, but the IE 4.0 version of the documentation did
+        <em>NOT</em>. I have yet to verify if these two attributes are really
+        supported in either version yet. Note: These attributes are back in IE's 
+        references as of IE6.
+    <li>The TYPE and VALUETYPE attributes may have been supported before Opera 6 - 
+        The information for these two attributes is based on support information on 
+        Opera's website and not verified.
+    <li>Support information for the %Core% attributes (actually, only the ID attribute
+        makes any sense for this element) is purely semi-educated guesswork. ID 
+        can be used by the DOM to add or delete a PARAM element, or change a PARAM's 
+        attributes. The versions listed for %core% reflect the general version where 
+        real DOM changeability was added to the indicated browsers.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

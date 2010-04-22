@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Direction - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">direction</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6.1</b>|<b 
+    class="s">O7.2</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other International Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="unibidi.htm">unicode-bidi</a><br>
+    <a href="ralign.htm">ruby-align</a><br>
+    <a href="roverhang.htm">ruby-overhang</a><br>
+    <a href="rposition.htm">ruby-position</a><br>
+    <a href="linebreak.htm">line-break</a><br>
+    <a href="wordbreak.htm">word-break</a><br>
+    <a href="writingmode.htm">writing-mode</a><br>
+    <a href="imemode.htm">ime-mode</a><br></td>
+    <td valign=top><a href="textjustify.htm">text-justify</a><br>
+    <a href="textaspace.htm">text-autospace</a><br>
+    <a href="textkspace.htm">text-kashida-space</a><br>
+    <a href="lflow.htm">layout-flow</a><br>
+    <a href="lgrid.htm">layout-grid</a><br>
+    <a href="lgmode.htm">layout-grid-mode</a><br>
+    <a href="lgtype.htm">layout-grid-type</a><br>
+    <a href="lgline.htm">layout-grid-line</a><br>
+    <a href="lgchar.htm">layout-grid-char</a><br>
+    <a href="lgcharspace.htm">layout-grid-char-spacing</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">ltr</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">element</b> <span class="tagattrib">DIR</span>="ltr|rtl"&gt;<br></td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/visuren.html#direction">CSS2: Sect. 9.10</a>,
+        <a href="http://www.w3.org/TR/CSS21/visuren.html#direction">CSS2.1: Sect 9.10</a><br> 
+        <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/direction_1.asp">Microsoft MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Text in some languages flows from right to left, while many other
+        languages flow from left to right. There will inevitably be cases
+        where left to right text and right to left content must be
+        intermingled. Unicode allows for a complex process of determining
+        the directional flow of content based on properties of the characters
+        and content, as well as explicit controls for language "embeddings"
+        and directional overrides. This algorithm should be used with
+        bi-directional content as formatted by CSS. The 'unicode-bidi' and
+        'direction' properties specify how document content maps to the Unicode
+        algorithm.
+        <br><br>
+
+        The 'direction' property specifies the base direction (reading order) for text
+        content in an element. It is also meant to control the directionality
+        of table columns, text overflow and positioning of justified text.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6.1</b>|<b class="s">O7.2</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">ltr</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6.1</b>|<b class="s">O7.2</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Text flow is left-to-right.</dd>
+
+<dt><b class="subheading">rtl</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6.1</b>|<b class="s">O7.2</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Text flow is right-to-left.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">div</b>
+        { <span class="property">unicode-bidi:</span> embed;
+        <span class="property">direction:</span> rtl }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">div</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">unicode-bidi:</span>
+        embed; <span class="property">direction:</span> rtl&quot;&gt;Bidi
+        content&lt;/<b class="tagname">div</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>The 'unicode-bidi' property must be set to "embed" or "bidi-override" in
+        order for the direction property to have an effect on inline elements.
+    <li>CSS2 states that, because HTML 4.0 defines bidi behavior for HTML
+        elements, a browser conforming to CSS2 may ignore the 'unicode-bidi'
+        and 'direction' CSS properties.
+    <li>This property should also control the direction of the layout of table
+        columns, horizontal overflow content and the position of 'text-align:
+        justify" last-line remainders.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report yet.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

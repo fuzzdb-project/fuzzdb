@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Xmp element rendering test</title>
+<!-- 
+    Element Definition:
+    Xmp: obsolete block element 
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>If the test block (repeated "xmp") uses a monospace font, and preserves 
+linefeeds and multiple spaces, the test passes</i></b>.<br>
+Additional possibilities:
+<ul>
+<li>Top and bottom margins may be larger than normal as well.</li>
+<li>Embedded tags may not be parsed (embedded bold element)</li>
+</ul>
+
+<span class="text">Test is between the next two ruled lines</span>
+
+<hr>
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<xmp>xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp 
+xmp xmp xmp xmp xmp xmp xmp               xmp xmp xmp <b>xmp</b> xmp xmp xmp xmp xmp xmp xmp 
+xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp xmp </xmp>
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text
+<hr>
+
+</body>
+</html>

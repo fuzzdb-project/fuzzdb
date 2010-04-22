@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Font-Weight - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">font-weight</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Font Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="fontsizeadjust.htm">font-size-adjust</a><br>
+    <a href="fontstretch.htm">font-stretch</a><br>
+    <a href="font.htm">font</a><br>
+    <a href="fontstyle.htm">font-style</a><br></td>
+    <td valign=top><a href="fontvariant.htm">font-variant</a><br>
+    <a href="fontsize.htm">font-size</a><br>
+    <a href="fontfamily.htm">font-family</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">normal</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">b</b>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#font-weight">CSS1: Sect 5.2.5</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/fonts.html#font-styling">CSS2: Sect 15.2.3</a>,
+        <a href="http://www.w3.org/TR/CSS21/fonts.html#font-boldness">CSS2.1: Sect 15.6</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property describes the font thickness of a section. Its value can be
+        absolute or relative to the parent container thickness if it has one.
+        Child elements inherit the resulting weight, not the keyword value. If the
+        desired font-weight is not available to the browser, the nearest
+        approximation should be used.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">100</b> | <b class="subheading">200</b> |
+    <b class="subheading">300</b> | <b class="subheading">400</b> |
+    <b class="subheading">500</b> | <b class="subheading">600</b> |
+    <b class="subheading">700</b> | <b class="subheading">800</b> |
+    <b class="subheading">900</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B1</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values are absolute font weights on a scale. As such, it allows
+        much greater control than the HTML &lt;b&gt; element it replaces. The
+        values 'normal' and 'bold' listed below map to 400 and 700 respectively.</dd>
+
+<dt><b class="subheading">normal</b> | <b class="subheading">bold</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values are simple toggles to allow an author to specify a section
+        as bold or not bold.</dd>
+
+<dt><b class="subheading">lighter</b> | <b class="subheading">bolder</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B1</b>|<b><i class="fs">N4B2</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Calculated</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values select the next higher or lower value on the font weight
+        scale relative to the weight inherited from the parent if possible.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">em</b> {
+        <span class="property">font-weight:</span> lighter }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">em</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">font-weight:</span>
+        lighter&quot;&gt;text&lt;/<b class="tagname">em</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">All</b>
+        <dl>
+            <dd>- Font weights 1-500 seem to do nothing in my Windows tests. Reported
+                elsewhere: IE Macintosh does nothing with levels 100-400.
+            <dd>- 700 appears to map correctly to bold, but in my tests 800 was the
+                same as 700, and 600 was bolder than both 700/800.
+            <dd>- The "inherit" value is listed in the standards for this property, although 
+                the property is itself inherited. This means it is impossible to check
+                to see if this value is actually supported in any browser. Mozilla began 
+                generally supporting "inherit" where appropriate in version 6.x, and 
+                Opera beginning mostly in 7.x. IE does not yet support "inherit" anywhere 
+                yet. So, for all inherited properties, support information for the 
+                "inherit" value will be listed as beginning in these respective versions.
+        </dl>
+     <li><b class="alert">Internet Explorer</b>
+         <dl>
+             <dd><b class="alert2">4.0+:</b>
+             <dd>- Scenario: content is made "bold" (700.) Nested inside is a section
+                 made "bolder" (900.) Nested inside this section is a section made
+                 "lighter" - the result is 600 instead of the original 700.
+         </dl>
+     <li><b class="alert">Netscape</b>
+         <dl>
+             <dd><b class="alert2">4.x:</b>
+             <dd>- Making normal (400) text "bolder" does not <em>appear</em> to
+                 have any immediate effect, but 500 is the next step up, which is
+                 not rendered differently than 400. Bolder/lighter <em>DO</em>
+                 have an effect though.
+         </dl>
+     <li><b class="alert">Opera</b>
+         <dl>
+             <dd><b class="alert2">3.5:</b>
+             <dd>- Scenario: content is made "bold" (700.) Nested inside is a section
+                 made "bolder" (900.) Nested inside this section is a section made
+                 "lighter" - the result is 600 instead of the original 700.
+         </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

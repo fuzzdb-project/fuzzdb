@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>RP: Browser Peculiarities: RP behavior duplicated in CSS</title>
+<style>
+.assert { color: green }
+#test1:before { content: "("; }
+#test1:after  { content: ")"; }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The functionality of the RP element can also be achieved with 
+the :before and :after CSS2 pseudo-elements in conjunction with the CSS 'content' property.</div>
+<br>
+
+<b>RUBY element with no RP element:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>HTML</rb>
+   <rt>HyperText Markup Language</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Plain RUBY element with RP element for surrounding parenthesis:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>HTML</rb>
+   <rp>(</rp> <rt>HyperText Markup Language</rt> <rp>)</rp>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>RUBY element with no RP element. Using CSS :before and :after pseudo-elements for "(" and ")":</b>
+<hr>
+filler text 
+<ruby>
+   <rb>HTML</rb>
+   <rt id="test1">HyperText Markup Language</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

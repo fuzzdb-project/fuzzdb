@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Hx: Browser Peculiarities: Nesting Heading levels</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The DTD for HTML 4 says that heading elements are not nestable. 
+In practice though, you'll find that authors have often historically done this, 
+and browsers have no problems rendering this sort of thing either.</div>
+
+<br>
+<b>Nesting all Heading levels H1 (outside) - H6 (inside)</b>
+<hr>
+filler text 
+<h1>Heading level 1
+<h2>Heading level 2
+<h3>Heading level 3
+<h4>Heading level 4
+<h5>Heading level 5
+<h6>Heading level 6</h6>
+Heading level 5</h5>
+Heading level 4</h4>
+Heading level 3</h3>
+Heading level 2</h2>
+Heading level 1</h1>
+filler text
+<hr>
+
+</body>
+</html>

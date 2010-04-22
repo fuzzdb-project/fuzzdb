@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=File: Browser Peculiarities: Use of the VALUE attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer and Netscape do not use the VALUE attribute 
+as the default contents of the input area. Any default value set via HTML is not 
+usable via scripting and the DOM as well (hence it is not listed as 'supported' 
+in any of the browsers.) If a user enters text in the field however, that value 
+is then reachable via the DOM as it normally would be for a normal INPUT field 
+(via the .value property.) The reason for this behavior would presumably be to 
+ensure the security/safety of users against malicious authors. Opera displays 
+the default VALUE attribute value and submits it as well (although it prompts for 
+confirmation on submit if you have not altered that value.)</div>
+<br>
+
+<b>Plain Input Type=File field, no VALUE attribute. Click the "get DOM .value" 
+button to see the value attribute both before and after entering text or choosing a 
+file in the INPUT FILE widget:</b>
+<hr>
+filler text 
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<input type="file" name="f1"><br>
+<input type="text" name="dr1" value="" readonly>
+<input type="button" value="get DOM .value" onclick="this.form.dr1.value=this.form.f1.value">
+</form>
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=File field, VALUE attribute present ("loadedValue"). Click the "get DOM .value" 
+button to see the value attribute both before and after entering text or choosing a 
+file in the INPUT FILE widget:</b>
+<hr>
+filler text 
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<input type="file" name="f1"><br>
+<input type="text" name="dr1" value="" readonly>
+<input type="button" value="get DOM .value" onclick="this.form.dr1.value=this.form.f1.value">
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

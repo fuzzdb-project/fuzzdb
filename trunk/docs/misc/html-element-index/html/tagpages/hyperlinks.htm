@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Hyperlink in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Hyperlinks in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center><a href="#justify">Justification</a> |
+     <a href="#absrel">Absolute Vs. Relative URLs</a> |
+     <a href="#urlenc">URL Encoding</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for Hyperlinks</b></big>
+    <dd>Hyperlinks are the heart of HTML. They allow the linking together
+        of remote documents with the convenience of a click or other activation
+        mechanism. Hyperlinks are used to establish a relationship between two documents:
+        a source (usually the current document) and the destination. The
+        destination of a hyperlink jump can be either an entire document or a
+        specific location within a document. In addition, the hyperlinking element (A)
+        can play the role of destination for a URL (using the <a href="a/a-bookmark.htm">NAME</a>
+        or ID attribute), the activation point to another URL (using the 
+        <a href="a/a-hyperlink.htm">HREF</a> attribute), or both at the same time.
+        <br><br>
+
+        The A element has many other attributes as well (such as <a href="target.htm">TARGET</a>)
+        which serve to further communicate information about the source and destination documents.
+</dl>
+
+<a name="absrel"></a>
+<dl>
+<dt><big><b class="mainheading">Absolute Vs. Relative URLs</b></big>
+    <dd>A hyperlink destination is defined as a Uniform Resource Locator
+        (URL) using this general format:<br>
+        [<b class="alert">protocol</b>]://[<b class="magicword">network
+        location ID</b>]/[<b class="magicword">path on machine</b>]/[<b class="magicword">file
+        name</b>]?[<b class="magicword">query string</b>]#[<b class="alert2">internal 
+        document location</b>]<br>This is only a general format for specifying a URL - There are many
+        variations within this framework (such as a &quot;mailto&quot; URL), and
+        portions of the format can be omitted (such as the [<b class="alert2">internal 
+        document location</b>].) Please see <a href="http://www.rfc-editor.org/rfc/rfc1738.txt">RFC1738</a> 
+        for more details on URLs.
+        <br><br>
+
+        The path to a document can <em>ALSO</em> be specified relative to the
+        originating document. In such cases, the [<b class="alert">protocol</b>] 
+        and [<b class="magicword">network location ID</b>] portions of the above 
+        syntax are omitted and [<b class="magicword">path on machine</b>] is given 
+        relative to the current file or to a complete URL referenced in the BASE element.
+</dl>
+
+<a name="urlenc"></a>
+<dl>
+<dt><big><b class="mainheading">URL Encoding</b></big>
+    <dd>URLs only allow a subset of allowable <a href="text.htm">ISO-8859-1 
+        (ISO-Latin)</a> characters to be used. Any other characters must be encoded 
+        using a special escape syntax that uses combinations of the allowable subset. 
+        A separate page in the Topics section covers <a href="../topics/urlencoding.htm">URL 
+        encoding</a> in much greater detail, and even provides a little utility to 
+        automatically create URL encodings of characters.
+</dl>
+
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 character elements and newer formatting elements in common use]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus many new features]</span>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1738.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1738.txt</a>
+    <dd><span class="relevant">RFC 1738: Uniform Resource Locators (URL)<br>
+        [RFC explaining different allowed URL protocols]</span>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1808.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1808.txt</a>
+    <dd><span class="relevant">RFC 1808: Relative Uniform Resource Locators<br>
+        [Another RFC explaining different allowed URL protocols]</span>
+<dt><a href="http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/target.html" class="relevant">http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/target.html</a>
+    <dd><span class="relevant">Netscape Frames Discussion Document - Targeting Windows</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details hyperlink usage including common extensions]</span>
+
+
+<dt><br><b class="subheading">Other Related Links</b>
+<dt><a href="http://dir.yahoo.com/Reference/Libraries/Library_and_Information_Science/Metadata/URIs___Universal_Resource_Identifiers/" class="relevant">http://dir.yahoo.com/..../URIs___Universal_Resource_Identifiers/</a>
+    <dd><span class="relevant">Yahoo's UR* index</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

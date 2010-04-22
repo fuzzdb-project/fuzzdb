@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>STYLE: Browser Peculiarities: Media type support</title>
+<style>
+.assert { color: green }
+</style>
+<style media="all">#test1        { background-color: green; text-transform: uppercase; }</style>
+<style media="aural">#test2      { background-color: green; text-transform: uppercase; }</style>
+<style media="braille">#test3    { background-color: green; text-transform: uppercase; }</style>
+<style media="embossed">#test4   { background-color: green; text-transform: uppercase; }</style>
+<style media="handheld">#test5   { background-color: green; text-transform: uppercase; }</style>
+<style media="print">#test6      { background-color: green; text-transform: uppercase; }</style>
+<style media="projection">#test7 { background-color: green; text-transform: uppercase; }</style>
+<style media="screen">#test8     { background-color: green; text-transform: uppercase; }</style>
+<style media="speech">#test9     { background-color: green; text-transform: uppercase; }</style>
+<style media="tty">#test10       { background-color: green; text-transform: uppercase; }</style>
+<style media="tv">#test11        { background-color: green; text-transform: uppercase; }</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer 4.0 only supports the 'screen', 'print' and 
+'all' Media attribute values.</div>
+<br>
+
+<b>Multiple STYLE blocks are defined in the HEAD, one block for each of the following DIVs. 
+Each block has a different MEDIA type. If a media type is supported, the DIV will be green and 
+all uppercase.</b>
+<hr>
+filler text 
+<div id="test1">This is a div. Media="all"</div>
+filler text 
+<div id="test2">This is a div. Media="aural"</div>
+filler text 
+<div id="test3">This is a div. Media="braille"</div>
+filler text 
+<div id="test4">This is a div. Media="embossed"</div>
+filler text 
+<div id="test5">This is a div. Media="handheld"</div>
+filler text 
+<div id="test6">This is a div. Media="print"</div>
+filler text 
+<div id="test7">This is a div. Media="projection"</div>
+filler text 
+<div id="test8">This is a div. Media="screen"</div>
+filler text 
+<div id="test9">This is a div. Media="speech"</div>
+filler text 
+<div id="test10">This is a div. Media="tty"</div>
+filler text 
+<div id="test11">This is a div. Media="tv"</div>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

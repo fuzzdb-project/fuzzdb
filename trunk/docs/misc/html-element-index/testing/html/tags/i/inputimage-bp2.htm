@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>INPUT type=image: Browser Peculiarities: Laying out form fields on the same line as 
+    INPUT type=image widget</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 3.5-3.6x has a problem laying out form fields on the same 
+line as INPUT IMAGE fields... fields on the same line BEFORE the image are top 
+aligned with the top of the image, and fields on the same line AFTER the image 
+are bottom aligned with the bottom of the image. This behavior is fixed in Opera 4. 
+(If the fields are RADIO or IMAGE, they seem to be immune to this effect.)</div>
+<br>
+
+
+<form>
+<b>Form 1, Simple INPUT type=image element, all form widgets before AND after:</b>
+<hr>
+text 
+<input type="button" value="b">
+<input type="file" value="">
+<input type="password" value="" size=3>
+<input type="radio" value="" checked>
+<input type="reset" value="r">
+<input type="submit" value="s">
+<input type="text" value="" size=3>
+<select><option>op1<option>op2</select>
+<textarea rows="1" cols="5"></textarea>
+<input type="checkbox" value="" checked>
+<input type="image" src="../../../objects/images/overlap.gif"> 
+<input type="button" value="b">
+<input type="file" value="">
+<input type="password" value="" size=3>
+<input type="radio" value="" checked>
+<input type="reset" value="r">
+<input type="submit" value="s">
+<input type="text" value="" size=3>
+<select><option>op1<option>op2</select>
+<textarea rows="1" cols="5"></textarea>
+text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Form 2, Simple INPUT type=image element, all form widgets before AND after:</b>
+<hr>
+text 
+<input type="button" value="b">
+<input type="file" value="">
+<input type="password" value="" size=3>
+<input type="radio" value="" checked>
+<input type="reset" value="r">
+<input type="submit" value="s">
+<input type="text" value="" size=3>
+<select><option>op1<option>op2</select>
+<textarea rows="1" cols="5"></textarea>
+<input type="checkbox" value="" checked>
+<input type="image" src="../../../objects/images/overlap.gif"> 
+<input type="button" value="b">
+<input type="file" value="">
+<input type="password" value="" size=3>
+<input type="radio" value="" checked>
+<input type="reset" value="r">
+<input type="submit" value="s">
+<input type="text" value="" size=3>
+<select><option>op1<option>op2</select>
+<textarea rows="1" cols="5"></textarea>
+text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

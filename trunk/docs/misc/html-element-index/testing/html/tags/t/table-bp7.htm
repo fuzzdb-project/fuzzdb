@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TABLE: Browser Peculiarities: Background image inheritence</title>
+<style>
+.assert { color: green }
+td, th  { color: #cccccc }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">An author with an eagle eye pointed this one out:
+The scenario - In Netscape 4.x, if you use a background image on a table, 
+any nested tables will inherit the same background image and not be transparent 
+the way they should be. In other words, the background image is re-started 
+(overlaid) in the nested table. The author who pointed this bug out also mentioned 
+a useful fix which does not appear to be at all harmful: specify an empty BACKGROUND 
+attribute (BACKGROUND="") in nested TABLE elements in this scenario.</div>
+<br>
+
+<b>Image used as the table background:</b>
+<hr>
+<img src="../../../objects/crosshair.gif">
+<hr>
+
+<b>Plain table, table nested in cell 1, no background image:</b>
+<hr>
+filler text
+<table border="2">
+<tr><td>TD Cell 1<br><br><br>
+        <table border="1">
+        <tr><td>cell a<br><br><br></td><td>cell b<br><br><br></td></tr>
+        <tr><td>cell c<br><br><br></td><td>cell d<br><br><br></td></tr>
+        </table>
+        TD Cell 1</td>
+    <th>TH Cell 2<br>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+
+
+<b>Plain table, table nested in cell 1, background image on outer table present only:</b>
+<hr>
+filler text
+<table border="2" background="../../../objects/crosshair.gif">
+<tr><td>TD Cell 1<br><br><br>
+        <table border="1">
+        <tr><td>cell a<br><br><br></td><td>cell b<br><br><br></td></tr>
+        <tr><td>cell c<br><br><br></td><td>cell d<br><br><br></td></tr>
+        </table>
+        TD Cell 1</td>
+    <th>TH Cell 2<br>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+
+<b>Plain table, table nested in cell 1, background image on outer table present, 
+null background image reference on inner table:</b>
+<hr>
+filler text
+<table border="2" background="../../../objects/crosshair.gif">
+<tr><td>TD Cell 1<br><br><br>
+        <table border="1" background="">
+        <tr><td>cell a<br><br><br></td><td>cell b<br><br><br></td></tr>
+        <tr><td>cell c<br><br><br></td><td>cell d<br><br><br></td></tr>
+        </table>
+        TD Cell 1</td>
+    <th>TH Cell 2<br>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+
+</body>
+</html>

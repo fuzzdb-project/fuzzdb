@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>PLAINTEXT: Browser Peculiarities: Displaying all characters literally</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">
+<ol>
+<li>All Opera versions, IE4+, and Netscape up to version 6.0 support the original 
+    PLAINTEXT specification which did not accept a closing tag.
+<li>Internet Explorer up to version 3, Netscape 6.1+ and all Mosaic versions 
+    provide for a closing tag. A closing tag would allow placement in regions 
+    other than the end of a HTML document. 
+</ol>
+</div>
+
+<br>
+<b>Plain PLAINTEXT element, with nested B element (It should be fairly evident if parsing stops beyond the end tag):</b>
+<hr>
+filler text 
+<plaintext>plaintext <b>NESTED BOLD ELEMENT</b>, character entity: &amp; plaintext</plaintext> 
+filler text
+<hr>
+<br>
+
+
+
+</body>
+</html>

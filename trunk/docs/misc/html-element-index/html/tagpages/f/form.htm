@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Form</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Form</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Basic Forms</b>, <b class=alert>Forms</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.3">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_extformsmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The FORM element is used to delimit the range of data fields for
+        a form. This element also serves to contain information on <em>HOW</em> to
+        process the information collected in the form. There can be more than
+        one form in a HTML document but the FORM element can not be nested. An
+        explanation of HOW to process the submitted data is beyond the scope
+        of these documents - please refer to the <a href="../forms.htm#related">Forms
+        Overview</a> page for sites that deal with this subject in greater detail.
+        <br><br>
+
+    <dt><big><b class="l3heading">Two great testing sites to echo form info:</b></big>
+    <dt><b class="alert">Method=GET:</b>
+        <dd>http://hoohoo.ncsa.uiuc.edu/htbin/query
+    <dt><b class="alert">Method=POST:</b>
+        <dd>http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accept</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards
+        Details:</a></b> Introduced in HTML 4.01. Now in all HTML 4.01/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME types that the form processing server
+        and script should correctly handle. A browser may use this information
+        to filter out non-conforming files when prompting a user to select
+        files to upload.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Comma-separated list of MIME types.]
+
+<dt><b class="subheading">Accept-charset</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a list of acceptable language character sets for the
+        form data. No mention is made what should happen if data is submitted
+        that is NOT from any of these sets.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A space and/or comma separated list of language character set encodings.]
+
+<dt><b class="subheading">Action</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the action URL that will process the form contents.
+        If this attribute is absent it defaults to the BASE URL of the
+        current document.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O4</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the horizontal alignment of the content in this block
+        element relative to the browser window.
+    <dd><b class="l3heading">Values:</b>  <b class="alert">Left</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">Center</b>
+        | <b class="alert">Right</b>
+
+<dt><b class="subheading">Autocomplete</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute sets the status of the form/form field 'Autocomplete' feature
+        in Internet Explorer 5.0. A value of 'On' indicates Autocomplete is enabled,
+        and 'Off' disables.
+    <dd><b class="l3heading">Values:</b> <b class="alert">On</b>
+        (<span class="magicword">DEFAULT</span>), <b class="alert">Off</b>
+
+<dt><b class="subheading">Enctype</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME media type used to encode the
+        name/value pairs for transport to the form processing mechanism, in
+        case the protocol itself does not impose a format.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">application/x-www-form-urlencoded</b>
+        [<b class="magicword">DEFAULT</b>]<br>
+        &#160;&#160;&#160;<b class="alert">multipart/form-data</b>
+        [MIME type used when an INPUT TYPE=FILE field is present]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of this block element
+        in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">Method</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This optional attribute specifies a method or protocol for accessing
+        the ACTION URL. A method of <b class="alert">GET</b> will
+        gather all form name/value pair information into a query URL that
+        looks like:<br>
+        &#160;&#160;&#160;<b class="alert">URL?name=value&name=value&name=value</b><br>
+        where <em>URL</em> is the URL specified by the ACTION attribute, or
+        the current document URL if no ACTION attribute was specified.
+        In the <b class="alert">POST</b> method, the contents of
+        the form are sent in the body of the HTTP request.
+    <dd><b class="l3heading">Values:</b> <b class="alert">GET</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">POST</b>
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Introduced in HTML 4.01. Now in all HTML 4.01/XHTML 1.0 DTDs. Dropped in XHTML 1.1 in favor of ID attribute.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is used to give a unique label to this form group
+        so that it can be referenced and manipulated with scripting code.
+     <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">SDAPref</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>BEFORE</em> the original element content (in this case the string
+        "&lt;Para&gt;Form:&lt;/Para&gt;") when the SDA document is rendered.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">&lt;Para&gt;Form:&lt;/Para&gt;</b>"
+
+<dt><b class="subheading">SDASuff</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>AFTER</em> the original element content (in this case the string
+        "&lt;Para&gt;Form End.&lt;/Para&gt;") when the SDA document is rendered.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">&lt;Para&gt;Form End.&lt;/Para&gt;</b>"
+
+<dt><b class="subheading">Target</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In Transitional and Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the named frame for the browser to display
+        the form results after the user submits information to a
+        processing script.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [The TARGET <a href="../target.htm">reserved names</a> apply.]
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of this block element
+        in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">form</b>
+        <span class="tagattrib">method</span>=&quot;get&quot;
+        <span class="tagattrib">action</span>=&quot;http://hoohoo.ncsa.uiuc.edu/htbin/query&quot;
+        <span class="tagattrib">enctype</span>=&quot;application/x-www-form-urlencoded&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">input</b>
+        <span class="tagattrib">type</span>=&quot;password&quot;
+        <span class="tagattrib">name</span>=&quot;foo&quot; /&gt;<br>
+        &lt;/<b class="tagname">form</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b><br>
+        <b class="alert">Exceptions:</b> &lt;form&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b> |
+        &lt;<a href="../k/keygen.htm">keygen</a>&gt;<br>
+        <b class="alert">Exceptions:</b> &lt;form&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> The ACTION attribute has not been required
+        historically in older HTML DTDs (although it is now in HTML 4.0), but now
+        that form fields can be used outside of the FORM context, usage of FORM
+        suggests that some independent action will be taken with submitted information.
+    <li><b class="alert">DTD Note:</b> Support for the ACCEPT and NAME attributes
+        was added to HTML 4.01 and did not exist in the original HTML 4.0 DTDs.
+        HTML 4.x+ recommends that authors use the ID attribute instead of NAME
+        wherever possible, and indeed NAME has since been dropped from XHTML beginning 
+        in XHTML 1.1.
+    <li>When using the GET method, form contents must be <a href="../../topics/urlencoding.htm">URL
+        encoded</a>, which can often require additional effort on the client
+        and server ends of things. Only the POST method can safely use the
+        entire Unicode character set.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>[Tests: <a href="../../../testing/html/tags/l/layer-bp1.htm">1</a>,
+        <a href="../../../testing/html/tags/i/ilayer-bp1.htm">2</a>]
+        There is some odd behavior with forms and the LAYER/ILAYER elements.
+        If a LAYER/ILAYER element is nested <em>inside</em> a FORM element,
+        and any widgets for the form (buttons, text fields, etc) are contained
+        within the layer, they will not appear/be rendered. If a widget/field is
+        to show up, the containing FORM element must lie <em>within</em> the
+        same LAYER/ILAYER element as its widgets/fields.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

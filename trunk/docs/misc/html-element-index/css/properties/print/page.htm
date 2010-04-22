@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Page - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">page</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Printing Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="pbbefore.htm">page-break-before</a><br>
+    <a href="pbinside.htm">page-break-inside</a><br>
+    <a href="pbafter.htm">page-break-after</a><br>
+    <a href="marks.htm">marks</a><br></td>
+    <td valign=top><a href="size.htm">size</a><br>
+    <a href="widows.htm">widows</a><br>
+    <a href="orphans.htm">orphans</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block level elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual, Paged</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/page.html#named-pages">CSS2: Sect. 13.3.2</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property is used to specify a specific page type to use when
+        displaying an element box. If the value specified is different than
+        the one for the rendered element box that precedes it, one or two
+        page breaks should be inserted between them, and the element box
+        should then be rendered on a page box of the indicated type.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        References the current default page.</dd>
+
+<dt><b class="subheading">[identifier]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies an identifier for a page type defined in an @page rule.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc:<br>
+        &#160;&#160;&#160;<b class="selector">@page doublepage</b> {
+        <span class="property">size:</span> 8.5in 11in;
+        <span class="property">page-break-after:</span> left }<br>
+        &#160;&#160;&#160;<b class="selector">body</b> {
+        <span class="property">page:</span>
+        doublepage; <span class="property">page-break-after:</span> right }</div>
+    <dd><div class="example">In-Line: &lt;<b class="tagname">body</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">page:</span>
+        doublepage;<br><span class="property">page-break-after:</span> right&quot;&gt;test
+        text in the body&lt;/<b class="tagname">body</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>This property has been removed in CSS2.1.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

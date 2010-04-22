@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MAP: Browser Peculiarities: Displayable content inside MAP element</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 6 betas 1 and 2 did not allow any displayable content 
+inside the MAP element. All other browsers have allowed this, and Netscape 6 beta 3+ 
+does as well.</div>
+<br>
+
+<b>Plain MAP element, no displayable content within (MAP element within "[" and "]" characters):</b>
+<hr>
+filler text 
+[<map name="map1">
+    <area shape="rect" coords="0,0,100,100"   href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+</map>]
+filler text
+<hr>
+<br>
+
+<b>Plain MAP element, displayable content within ("[THIS IS A MAP ELEMENT]"):</b>
+<hr>
+filler text 
+[<map name="map2">
+    <area shape="rect" coords="0,0,100,100"   href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+<span>THIS IS A MAP ELEMENT</span>
+</map>]
+filler text
+<hr>
+<br>
+
+<b>Plain MAP element, displayable content within ("[THIS IS A MAP ELEMENT]"), with 
+CSS applied to MAP element (style="color: green") should inherit to content:</b>
+<hr>
+filler text 
+[<map name="map3" style="color: green">
+    <area shape="rect" coords="0,0,100,100"   href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+<span>THIS IS A MAP ELEMENT</span>
+</map>]
+filler text
+<hr>
+<br>
+
+</body>
+</html>

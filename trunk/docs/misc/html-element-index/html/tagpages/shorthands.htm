@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Parent/Content Model Shorthand Notations</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<h1 align="center"><span class="pagetitle">Parent/Content Models<br>
+= <span class="subtitle">Shorthand Notations</span> =</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<table border=3 cellpadding=3>
+<tr><td><a href="#pcmodel">Parent/Content Models</a>: <a href="#gen">General</a> |
+     <a href="#pmodel">Parent</a> | <a href="#cmodel">Content</a>,
+     %<a href="#param">Parameter Entities</a>%</td></tr>
+<tr><td align=center><font size=2>
+     <a href="../index.html">Main Index</a> |
+     <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../tagindex/a.htm">Element Index</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font>
+</td></tr>
+</table>
+</center>
+
+
+<br><br>
+The nuts and bolts definitions for HTML/xHTML are expressed using SGML and XML
+<a href="../../misc/glossary.htm#dtd">Document Type Definitions (DTDs.)</a>
+This site presents as many of the details found in DTDs as possible,
+often using or drawing direct inspiration from DTD concepts. These
+DTD details can be fairly difficult to decode on the first through
+third (or more!) glance without some major explanation.
+<br><br>
+
+<a name="pcmodel"></a>
+<big><b class="mainheading">Parent/Content Models</b></big>
+<hr width="33%" align=left size=1>
+A DTD defines, among other things, the syntax of elements and their
+attributes. It also specifies "Content Models" for each element -
+describing which elements (if any) are directly nestable inside of
+a given element. This is accomplished in a DTD using a simplified
+<a href="../../misc/glossary.htm#bnf">BNF</a> syntax that specifies
+content order, occurrence and exclusion behaviors for each HTML
+element.
+<br><br>
+
+Content Models in SGML DTDs only specify allowed HTML element
+relationships in terms of element content (which elements are allowed
+to directly nest inside of another HTML element.) Obviously, this is only a
+one-way relationship definition. This site also lists "Parent Models"
+for each element (which elements are allowed as direct parents of a
+specific element.) So - how does one come up with these parent
+relationships? Thankfully, taking all the element Content Models in
+a DTD as a whole *ALSO* implicitly defines all the allowed 
+<em class="alert">Parent Elements</em> for any given element.
+<br><br>
+
+In an early HTML 2.0 DTD draft I used long ago, these parent
+relationships were explicitly defined alongside the usual Content Models
+for each element, and I found this information to be useful - Useful
+enough to document and explicitly include on this site as well.
+<br><br>
+
+<a name="gen"></a>
+<big><b class="mainheading">General Models</b></big>
+<hr width="33%" align=left size=1>
+<a name="text"></a>
+<dl>
+<dt><b class="subheading">%<em>Text</em>% includes:</b>
+    <dd><a href="t/text.htm">Text</a> |
+        <a href="c/charents.htm">Character Entities</a>
+
+<a name="ffields"></a>
+<dt><br><b class="subheading">%<em>Form Fields</em>% includes:</b>
+    <dd>&lt;<a href="i/inputbutton.htm">Input Type=Button</a>&gt; |
+        &lt;<a href="i/inputcheck.htm">Input Type=Checkbox</a>&gt; |
+        &lt;<a href="i/inputfile.htm">Input Type=File</a>&gt; |
+        &lt;<a href="i/inputhidden.htm">Input Type=Hidden</a>&gt; |
+        &lt;<a href="i/inputimage.htm">Input Type=Image</a>&gt; |
+        &lt;<a href="i/inputpassword.htm">Input Type=Password</a>&gt; |
+        &lt;<a href="i/inputradio.htm">Input Type=Radio</a>&gt; |
+        &lt;<a href="i/inputreadonly.htm">Input Type=Readonly</a>&gt; |
+        &lt;<a href="i/inputreset.htm">Input Type=Reset</a>&gt; |
+        &lt;<a href="i/inputsubmit.htm">Input Type=Submit</a>&gt; |
+        &lt;<a href="i/inputtext.htm">Input Type=Text</a>&gt; |
+        &lt;<a href="b/button.htm">Button</a>&gt; |
+        &lt;<a href="l/label.htm">Label</a>&gt; |
+        &lt;<a href="s/select.htm">Select</a>&gt; |
+        &lt;<a href="t/textarea.htm">Textarea</a>&gt;
+</dl>
+
+<a name="pmodel"></a>
+<br>
+<big><b class="mainheading">Parent Models</b></big>
+<hr width="33%" align=left size=1>
+<a name="blockparent"></a>
+<dl>
+<dt><b class="subheading">%<em>Block Parent</em>% includes:</b>
+    <dd><b class="l3heading">Lists:</b>
+        &lt;<a href="d/dtdd.htm">Dd</a>&gt; |
+        &lt;<a href="l/li.htm">Li</a>&gt;
+
+    <dd><b class="l3heading">Tables:</b>
+        &lt;<a href="t/thtd.htm">Td</a>&gt; |
+        &lt;<a href="t/thtd.htm">Th</a>&gt;
+
+    <dd><b class="l3heading">Multimedia:</b>
+        &lt;<a href="a/applet.htm">Applet</a>&gt; |
+        &lt;<a href="e/embed.htm">Embed</a>&gt; |
+        &lt;<a href="i/iframe.htm">Iframe</a>&gt; |
+        &lt;<a href="o/object.htm">Object</a>&gt;
+
+    <dd><b class="l3heading">Backward Compatibility:</b>
+        &lt;<a href="n/noembed.htm">Noembed</a>&gt; |
+        &lt;<a href="n/noframes.htm">Noframes</a>&gt; |
+        &lt;<a href="n/nolayer.htm">Nolayer</a>&gt; |
+        &lt;<a href="n/noscript.htm">Noscript</a>&gt;
+
+    <dd><b class="l3heading">General Block:</b>
+        &lt;<a href="b/basefont.htm">Basefont</a>&gt; |
+        &lt;<a href="b/blockquote.htm">Blockquote</a>&gt; |
+        &lt;<a href="b/body.htm">Body</a>&gt; |
+        &lt;<a href="c/center.htm">Center</a>&gt; |
+        &lt;<a href="d/div.htm">Div</a>&gt; |
+        &lt;<a href="f/fieldset.htm">Fieldset</a>&gt; |
+        &lt;<a href="f/form.htm">Form</a>&gt; |
+        &lt;<a href="l/layer.htm">Layer</a>&gt; |
+        &lt;<a href="m/multicol.htm">Multicol</a>&gt; |
+        &lt;<a href="p/pre.htm">Pre</a>&gt;<br>
+
+    <dd><b class="l3heading">Obsolete Elements:</b>
+        &lt;<a href="l/listing.htm">Listing</a>&gt; |
+        &lt;<a href="p/plaintext.htm">Plaintext</a>&gt; |
+        &lt;<a href="x/xmp.htm">Xmp</a>&gt;
+</dl>
+
+
+<a name="inlineparent"></a>
+<dl>
+<dt><b class="subheading">%<em>In-line Parent</em>% includes:</b>
+    <dd><b class="l3heading">Font Markup:</b>
+        &lt;<a href="b/bold.htm">B</a>&gt; |
+        &lt;<a href="b/big.htm">Big</a>&gt; |
+        &lt;<a href="b/blink.htm">Blink</a>&gt; |
+        &lt;<a href="f/font.htm">Font</a>&gt; |
+        &lt;<a href="i/i.htm">I</a>&gt; |
+        &lt;<a href="n/nobr.htm">Nobr</a>&gt; |
+        &lt;<a href="s/strike.htm">S</a>&gt; |
+        &lt;<a href="s/small.htm">Small</a>&gt; |
+        &lt;<a href="s/strike.htm">Strike</a>&gt; |
+        &lt;<a href="s/sub.htm">Sub</a>&gt; |
+        &lt;<a href="s/sup.htm">Sup</a>&gt; |
+        &lt;<a href="t/tt.htm">Tt</a>&gt; |
+        &lt;<a href="u/u.htm">U</a>&gt;
+
+    <dd><b class="l3heading">Phrase Markup:</b>
+        &lt;<a href="a/abbr.htm">Abbr</a>&gt; |
+        &lt;<a href="a/acronym.htm">Acronym</a>&gt; |
+        &lt;<a href="c/cite.htm">Cite</a>&gt; |
+        &lt;<a href="c/code.htm">Code</a>&gt; |
+        &lt;<a href="d/dfn.htm">Dfn</a>&gt; |
+        &lt;<a href="e/em.htm">Em</a>&gt; |
+        &lt;<a href="i/inlineinput.htm">Inlineinput</a>&gt; |
+        &lt;<a href="k/kbd.htm">Kbd</a>&gt; | 
+        &lt;<a href="q/q.htm">Q</a>&gt; |
+        &lt;<a href="s/samp.htm">Samp</a>&gt; |
+        &lt;<a href="s/span.htm">Span</a>&gt; |
+        &lt;<a href="s/spell.htm">Spell</a>&gt; |
+        &lt;<a href="s/strong.htm">Strong</a>&gt; |
+        &lt;<a href="v/var.htm">Var</a>&gt;
+
+    <dd><b class="l3heading">Anchors:</b>
+        &lt;<a href="a/a-hyperlink.htm">A href</a>&gt; |
+        &lt;<a href="a/a-bookmark.htm">A name</a>&gt;
+
+    <dd><b class="l3heading">General Elements:</b>
+        &lt;<a href="a/address.htm">Address</a>&gt; |
+        &lt;<a href="b/bdo.htm">Bdo</a>&gt; |
+        &lt;<a href="b/button.htm">Button</a>&gt; |
+        &lt;<a href="c/caption.htm">Caption</a>&gt; |
+        &lt;<a href="d/dtdd.htm">Dt</a>&gt; |
+        &lt;<a href="h/heading.htm">Hx</a>&gt; |
+        &lt;<a href="i/ilayer.htm">Ilayer</a>&gt; |
+        &lt;<a href="l/label.htm">Label</a>&gt; |
+        &lt;<a href="l/legend.htm">Legend</a>&gt; |
+        &lt;<a href="m/marquee.htm">Marquee</a>&gt; |
+        &lt;<a href="p/p.htm">P</a>&gt; |
+        &lt;<a href="r/ruby.htm">Ruby</a>&gt;
+
+</dl>
+
+<a name="cmodel"></a>
+<br>
+<big><b class="mainheading">Content Models</b></big>
+<hr width="33%" align=left size=1>
+<a name="headcontent"></a>
+<dl>
+<dt><b class="subheading">%<em>Head Content</em>% includes:</b>
+    <dd>&lt;<a href="b/base.htm">Base</a>&gt; |
+        &lt;<a href="b/bgsound.htm">BGSound</a>&gt; |
+        &lt;<a href="i/isindex.htm">Isindex</a>&gt; |
+        &lt;<a href="l/link.htm">Link</a>&gt; |
+        &lt;<a href="m/meta.htm">Meta</a>&gt; |
+        &lt;<a href="n/nextid.htm">NextID</a>&gt; |
+        &lt;<a href="s/script.htm">Script</a>&gt; |
+        &lt;<a href="s/sound.htm">Sound</a>&gt; |
+        &lt;<a href="s/style.htm">Style</a>&gt; |
+        &lt;<a href="t/title.htm">Title</a>&gt;
+
+<a name="blockcontent"></a>
+<dt><br><b class="subheading">%<em>Block Content</em>% includes:</b>
+    <dd><b class="l3heading">General Block:</b>
+        &lt;<a href="a/address.htm">Address</a>&gt; |
+        &lt;<a href="b/basefont.htm">Basefont</a>&gt; |
+        &lt;<a href="b/blockquote.htm">Blockquote</a>&gt; |
+        &lt;<a href="d/div.htm">Div</a>&gt; |
+        &lt;<a href="h/hr.htm">Hr</a>&gt; |
+        &lt;<a href="h/heading.htm">Hx</a>&gt; |
+        &lt;<a href="i/isindex.htm">Isindex</a>&gt; |
+        &lt;<a href="l/layer.htm">Layer</a>&gt; |
+        &lt;<a href="m/marquee.htm">Marquee</a>&gt; |
+        &lt;<a href="m/multicol.htm">Multicol</a>&gt;
+        &lt;<a href="p/p.htm">P</a>&gt; |
+        &lt;<a href="p/pre.htm">Pre</a>&gt; |
+        &lt;<a href="t/table.htm">Table</a>&gt;<br>
+
+    <dd><b class="l3heading">Lists:</b>
+        &lt;<a href="d/dir.htm">Dir</a>&gt; |
+        &lt;<a href="d/dl.htm">Dl</a>&gt; |
+        &lt;<a href="m/menu.htm">Menu</a>&gt; |
+        &lt;<a href="o/ol.htm">Ol</a>&gt; |
+        &lt;<a href="u/ul.htm">Ul</a>&gt;<br>
+
+    <dd><b class="l3heading">Form Structures:</b>
+        &lt;<a href="f/fieldset.htm">Fieldset</a>&gt; |
+        &lt;<a href="f/form.htm">Form</a>&gt;<br>
+
+    <dd><b class="l3heading">Backward Compatibility:</b>
+        &lt;<a href="n/noembed.htm">Noembed</a>&gt; |
+        &lt;<a href="n/noframes.htm">Noframes</a>&gt; |
+        &lt;<a href="n/nolayer.htm">Nolayer</a>&gt; |
+        &lt;<a href="n/noscript.htm">Noscript</a>&gt;<br>
+
+    <dd><b class="l3heading">Obsolete Elements:</b>
+        &lt;<a href="l/listing.htm">Listing</a>&gt; |
+        &lt;<a href="p/plaintext.htm">Plaintext</a>&gt; |
+        &lt;<a href="x/xmp.htm">Xmp</a>&gt;
+
+<a name="inlinecontent"></a>
+<dt><br><b class="subheading">%<em>In-line Content</em>% includes:</b>
+    <dd><b class="l3heading">Text:</b> %<a href="#text">Text</a>%
+    <dd><b class="l3heading">Form Fields:</b> %<a href="#ffields">Form Fields</a>%
+    <dd><b class="l3heading">Font Markup:</b>
+        &lt;<a href="b/bold.htm">B</a>&gt; |
+        &lt;<a href="b/big.htm">Big</a>&gt; |
+        &lt;<a href="b/blink.htm">Blink</a>&gt; |
+        &lt;<a href="f/font.htm">Font</a>&gt; |
+        &lt;<a href="i/i.htm">I</a>&gt; |
+        &lt;<a href="n/nobr.htm">Nobr</a>&gt; |
+        &lt;<a href="s/strike.htm">S</a>&gt; |
+        &lt;<a href="s/small.htm">Small</a>&gt; |
+        &lt;<a href="s/strike.htm">Strike</a>&gt; |
+        &lt;<a href="s/sub.htm">Sub</a>&gt; |
+        &lt;<a href="s/sup.htm">Sup</a>&gt; |
+        &lt;<a href="t/tt.htm">Tt</a>&gt; |
+        &lt;<a href="u/u.htm">U</a>&gt;
+
+    <dd><b class="l3heading">Phrase Markup:</b>
+        &lt;<a href="a/abbr.htm">Abbr</a>&gt; |
+        &lt;<a href="a/acronym.htm">Acronym</a>&gt; |
+        &lt;<a href="c/cite.htm">Cite</a>&gt; |
+        &lt;<a href="c/code.htm">Code</a>&gt; |
+        &lt;<a href="d/dfn.htm">Dfn</a>&gt; |
+        &lt;<a href="e/em.htm">Em</a>&gt; |
+        &lt;<a href="i/inlineinput.htm">Inlineinput</a>&gt; |
+        &lt;<a href="k/kbd.htm">Kbd</a>&gt; |
+        &lt;<a href="q/q.htm">Q</a>&gt; |
+        &lt;<a href="s/samp.htm">Samp</a>&gt; |
+        &lt;<a href="s/span.htm">Span</a>&gt; |
+        &lt;<a href="s/spell.htm">Spell</a>&gt; |
+        &lt;<a href="s/strong.htm">Strong</a>&gt; |
+        &lt;<a href="v/var.htm">Var</a>&gt;
+
+    <dd><b class="l3heading">Anchors:</b>
+        &lt;<a href="a/a-hyperlink.htm">A href</a>&gt; |
+        &lt;<a href="a/a-bookmark.htm">A name</a>&gt;
+
+    <dd><b class="l3heading">Line-breaking:</b>
+        &lt;<a href="b/break.htm">Br</a>&gt; |
+        &lt;<a href="w/wbr.htm">Wbr</a>&gt;
+
+    <dd><b class="l3heading">Languages and Positioning:</b>
+        &lt;<a href="b/bdo.htm">Bdo</a>&gt; |
+        &lt;<a href="i/ilayer.htm">Ilayer</a>&gt; |
+        &lt;<a href="r/ruby.htm">Ruby</a>&gt; |
+        &lt;<a href="s/script.htm">Script</a>&gt; |
+        &lt;<a href="s/spacer.htm">Spacer</a>&gt;
+
+    <dd><b class="l3heading">Multimedia:</b>
+        &lt;<a href="a/applet.htm">Applet</a>&gt; |
+        &lt;<a href="b/bgsound.htm">BGSound</a>&gt; |
+        &lt;<a href="e/embed.htm">Embed</a>&gt; |
+        &lt;<a href="i/image.htm">Img</a>&gt; |
+        &lt;<a href="i/iframe.htm">Iframe</a>&gt; |
+        &lt;<a href="m/map.htm">Map</a>&gt; |
+        &lt;<a href="o/object.htm">Object</a>&gt; |
+        &lt;<a href="s/sound.htm">Sound</a>&gt;
+
+</dl>
+
+<a name="param"></a>
+<big><b class="mainheading">%Parameter Entities%</b></big>
+<hr width="33%" align=left size=1>
+Another bit of syntax which draws inspiration from SGML are the
+"Shorthand" notations used for defining Parent and Content Model
+groupings. This shorthand form is also used to define the Common
+Attributes categories. Throughout the HTML reference site, these
+hyperlinked "macros" may be found, beginning and ending with a
+"%" character. This syntax is based on an SGML DTD construct known
+as a "Parameter Entity" - a form of macro which is used to save time
+and space in cross-referencing information within the DTD.
+<br><br>
+
+The shorthand macros I have defined (click on the hyperlinks to expand
+the macros) are usually directly related to Parameter Entities that
+are defined in the HTML 4.0 DTD (eg: the "%Core%" macro on this site
+refers to the CLASS, ID and STYLE attributes, while the "%coreattrs" 
+Parameter Entity in HTML 4.0 refers to the CLASS, ID, STYLE, and TITLE 
+attributes.)
+<br><br>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

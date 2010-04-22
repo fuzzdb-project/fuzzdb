@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Body</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Body</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Start &amp; End tag optional</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Structure</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Browser dependent</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/global.html#h-7.5.1">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_structuremodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a top level HTML document structure which encapsulates
+        and defines all content (text and images) <em>in</em> the document
+        structure; all document content should be contained within the BODY
+        element. All attributes to this element define document wide
+        properties and display characteristics.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>] 
+        [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O4</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the horizontal alignment of the content in this block
+        element relative to the browser window.
+    <dd><b class="l3heading">Values:</b>  <b class="alert">Left</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">Center</b>
+        | <b class="alert">Right</b>
+
+<dt><b class="subheading">Alink</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>] 
+    [<b class="s">IE4B1</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O7.11</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the color that a hyperlink assumes when it is
+        activated or clicked on. This state is usually only temporary until the
+        activation event ends
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.]
+
+<dt><b class="subheading">Background</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>] 
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies an image to be used in the background of the
+        document. If the referenced image is smaller than the browser window,
+        it will be tiled to fit and will scroll with the text on the page.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL indicating the location of the graphic.
+        All URLs should be <a href="../../topics/urlencoding.htm">URL encoded</a>
+        where required.]
+
+<dt><b class="subheading">BGColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the color of the document background and
+        allows control over background appearance without requiring the browser
+        to make an additional download of an image. If a BACKGROUND image
+        attribute is also present, the BGCOLOR specified will shine through regions
+        where the background image is transparent.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.]
+
+<dt><b class="subheading">BGProperties</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is dependent upon the BACKGROUND attribute for
+        proper operation. The only allowable value currently is
+        <b class="alert">Fixed</b>, and it indicates to the browser that
+        the specified background image will be watermarked in the browser window
+        [image will not scroll when the text scrolls.] If this attribute is absent,
+        the default scrolling behavior is used.
+    <dd><b class="l3heading">Values:</b> <b class="alert">Fixed</b>
+
+<dt><b class="subheading">BottomMargin</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the bottom margin of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified in pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">LeftMargin</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N6.2</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the left margin of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified in pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">Link</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the default color of hyperlinks that have not yet been
+        activated.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.]
+
+<dt><b class="subheading">Marginheight</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the top and bottom margins of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified in pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">Marginwidth</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the left and right margins of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified in pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">NoWrap</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies whether or not the content of the element will
+        use normal HTML linebreaking conventions. If False, normal linebreaking
+        behavior is used. If set to True, the element will not wrap to the
+        rendering viewport unless explicit linebreaking elements are added.
+    <dd><b class="l3heading">Values:</b> <b class="alert">False</b>
+        (<span class="magicword">DEFAULT</span>), <b class="alert">True</b><br>
+        May also be used as a standalone attribute, in which case the value is treated as TRUE.
+
+<dt><b class="subheading">RightMargin</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the right margin of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified in pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">Scroll</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls whether or not a vertical scrollbar is rendered on the edge of the
+        document window.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Yes</b> [<b class="magicword">DEFAULT</b>] | <b class="alert">No</b>
+
+<dt><b class="subheading">Text</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        When this attribute is present it indicates the default color of the
+        document text. This color can be overridden locally by specifying a
+        FONT COLOR value.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.]
+
+<dt><b class="subheading">TopMargin</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N6.2</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute gives the author control over the amount of space devoted
+        to the top margin of the document.
+    <dd><b class="l3heading">Values:</b>
+        Specified as pixels with integer values of <b class="alert">0</b> or greater.
+
+<dt><b class="subheading">VLink</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b class="s">M2FB</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the default color of hyperlinks that have already
+        been activated.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+         [The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">html</b>&gt;<br>
+        &lt;<b class="tagname">head</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;
+        &lt;<b class="tagname">title</b>&gt;this is the document title&lt;/<b class="tagname">title</b>&gt;<br>
+        &lt;/<b class="tagname">head</b>&gt;<br>
+        &lt;<b class="tagname">body</b>
+        <span class="tagattrib">background</span>=&quot;image.gif&quot;
+        <span class="tagattrib">bgproperties</span>=&quot;fixed&quot;
+        <span class="tagattrib">text</span>=&quot;#ff0000&quot;
+        <span class="tagattrib">link</span>=&quot;#ffff00&quot;&gt;<br>
+        document text<br>
+        &lt;/<b class="tagname">body</b>&gt;<br>
+        &lt;/<b class="tagname">html</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="subheading">Pre-HTML 4.0 Parent Model</b>
+    <dd>&lt;<a href="../h/html.htm">html</a>&gt; |
+        &lt;<a href="../n/noframes.htm">noframes</a>&gt;
+    <dd><b class="subheading">HTML 4.0 Parent Model</b> <a href="#tips">*</a>
+    <dd>&lt;<a href="../h/html.htm">html</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b> |
+        &lt;<a href="../d/del.htm">del</a>&gt; |
+        &lt;<a href="../i/ins.htm">ins</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> HTML 4.0 has changed the interaction
+        behavior for the BODY element in relation to framed documents. Before
+        HTML 4.0, a frame specification document would contain a HEAD element and
+        a FRAMESET element. Backward compatible content would be contained within
+        the BODY tag, which was nested inside the NOFRAMES element, which was in
+        turn nested within the FRAMESET structure.
+        <br><br>
+        In HTML 4.0, the BODY element always remains at the top level, such that
+        a framed document structure consists of a HEAD element, followed by a
+        FRAMESET structure, <em>followed</em> by a BODY structure. It is unknown
+        if Netscape or Internet Explorer honor this or the expanded syntax for
+        NOFRAMES yet.
+    <li>Because the BACKGROUND attribute requires an extra HTTP request,
+        download time will be increased.
+    <li>Of the BODY attributes introduced in HTML 3.2, the ALINK attribute never
+        gained wide support. Recommend against using this attribute.
+    <li>It is wise to specify a BGColor in addition to a BACKGROUND attribute.
+        It should be of sufficient contrast to the chosen color scheme in the
+        off chance of the background image not loading (Choosing a BGColor
+        similar to the dominant color of the background is a good choice.)
+    <li>It is also wise to specify the text and link colors when the BGCOLOR
+        attribute is also specified. This is to ensure proper contrast is
+        maintained between these basic page elements.
+    <li>Curious how many of the common BODY attributes map to CSS? Look
+        <a href="../../topics/bodycssmapping.htm">here</a> for the answer.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Some browsers may not display any of the page until the BACKGROUND
+        image download has completed.
+    <li>[Tests: <a href="../../../testing/html/tags/b/body-bp2.htm">1</a>, 
+        <a href="../../../testing/html/tags/b/body-bp3.htm">2</a>,
+        <a href="../../../testing/html/tags/b/body-bp4.htm">3</a>,
+        <a href="../../../testing/html/tags/b/body-bp5.htm">4</a>]
+        If the background image fails to download  for any reason and no
+        BGColor is specified it is common practice for browsers not to apply
+        the other coloring attributes (this ensures readability with the
+        default browser color schemes.)
+    <li><a href="../../../testing/html/tags/b/body-bp6.htm">[Test]</a>
+        Until each of their 4.0 Beta 2 versions, both Netscape and Internet
+        Explorer have not allowed an animated Gif to be used as a background
+        image. Sometimes only the first frame of the animation would be shown -
+        otherwise no image at all. <b class="alert">Warning:</b> even though
+        background animations are now possible, <em>PLEASE</em> exercise caution
+        in their use! This behavior could be many more times as annoying (and
+        headache causing =)) to readers than special effects such as BLINK or
+        MARQUEE ever have been.
+    <li>The ALINK attribute is interesting in that Netscape created it along
+        with the other major BODY attributes for V1.1. The other BODY attributes
+        Netscape created were quickly adopted by other browsers except for this one. 
+    <li><a href="../../../testing/html/tags/b/body-bp1.htm">[Test]</a>
+        Early versions of Netscape 1.1 had a bug/feature whereby it was
+        possible to create a &quot;shimmering&quot; effect by specifying multiple
+        BODY tags in succession, each with its own BGColor value. As each BODY
+        tag was parsed it would display the specified color. This was fixed very
+        soon after it was found, but authors considered this a &quot;feature&quot;
+        for a while and its use spread for a time.
+    <li>The Left/Top/Right/BottomMargin attributes in Internet Explorer control the
+        margins of the displayed document, <em>NOT</em> the margins of the parent
+        <em>WINDOW</em>.
+    <li>Setting the MARGINHEIGHT and MARGINWIDTH values to zero may be the only way
+        in Netscape that an author can achieve seamless cross-frame images.
+    <li>The HEIGHT and WIDTH attributes in Opera 4+ specify the desired dimensions
+        of the content in the BODY element within the display window - the
+        browser may not be able to honor this for a number of reasons.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>
