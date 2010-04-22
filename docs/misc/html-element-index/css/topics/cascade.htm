@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets: The Cascade</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Style Sheets Guide<br>
+=<span class="subtitle">The Cascade</span>=</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+        <a href="../propindex/font.htm">Property Index</a> |
+        <a href="../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</center>
+
+<br>
+<br><br>
+<a name="cascade"></a>
+<big><b class="mainheading">Introduction to the Cascade</b></big>
+<hr width="40%" align=left>
+<b class="subheading">Multiple Sources</b><br>
+The most common scenario authors will be concerned with are the style rules
+which are declared by the author, but a style sheet may originate from several
+different sources:
+<ul>
+    <li>The Author may specify style rules for a document
+    <li>The User may also specify style behaviors for viewing one or more
+        documents - possibly through a special user interface or through
+        a special external style sheet.
+    <li>The browser will also have its own set of default rendering behaviors
+        which, whether specified using an <em>ACTUAL</em> style sheet or by
+        some other means accomplishes the same goal - behaving as if the
+        browser has its own "default style sheet." This default style sheet
+        is the base set of rendering rules - applied whether the user and
+        author specify their own style sheet rules or not.
+</ul>
+
+<b class="subheading">Multiple Methods</b><br>
+In addition, style sheet rules may be specified using several different
+methods, any of which are legal:
+<ul>
+    <li><a href="../syntax/inclusion/external.htm">External</a> Style Sheets
+        (using the HTML <a href="../../html/tagpages/l/link.htm">LINK</a>
+        element <span class="external">[--&gt;Index DOT Html]</span>)
+    <li><a href="../syntax/inclusion/embedded.htm">Embedded</a> Style Sheets
+        (using the HTML <a href="../../html/tagpages/s/style.htm">STYLE</a>
+        element <span class="external">[--&gt;Index DOT Html]</span>)
+    <li>Imported Style Sheets (<a href="../syntax/atrules/import.htm">@import</a>)
+    <li><a href="../syntax/inclusion/inline.htm">Inline</a> Style Rules
+        (using the HTML <a href="../../html/tagpages/attributes/core.htm#style">STYLE</a>
+        attribute <span class="external">[--&gt;Index DOT Html]</span>)
+    <li>Non-CSS rendering rules (eg: the HTML
+        <a href="../../html/tagpages/f/font.htm">FONT</a> element
+        <span class="external">[--&gt;Index DOT Html]</span>)
+</ul>
+
+When more than one style rule is specified for a single CSS selector or element,
+using any of these sources or methods, and they are in direct conflict with one
+another, what should happen? When all is said and done, CSS generates a single,
+cohesive "virtual" style sheet using all the style rules (explicitly stated or
+not) from all of these disparate sources; CSS "cascades" (combines) all of them
+together. When conflicts arise between style rules, resolution is determined
+using a weighted scale. Each style rule will carry a specific weight on this
+scale; when two or more rules are in conflict, the rule with the highest weight
+will "win" and be rendered.
+<br><br>
+
+<big><b class="mainheading">Basic Cascading Order</b></big>
+<hr width="40%" align=left>
+The chart below is only a brief reference to resolving style conflicts, and it
+ignores many of the more complex cascading rules (for a more complete cascading
+guide, please see the next section.) If multiple style rules are in conflict
+for a given selector, the scales shown below can help determine which of these
+style rules will be used. A style rule with higher importance will win over an
+identical style rule with lower importance.<br>
+
+<center>
+<table>
+<tr><th colspan=4><hr></th></tr>
+<tr>
+     <th></th><th><big><b class="subheading">Lowest<br>Importance</b></big></th>
+     <th><b class="subheading">&lt;================&gt</b></th>
+     <th><big><b class="subheading">Highest<br>Importance</b></big></th>
+</tr>
+<tr><th></th><th colspan=3><hr></th></tr>
+<tr>
+     <th><big><b class="alert">Ownership:</b></big></th><td align=center>Browser<br>Defaults</td>
+     <td align=center>Reader's<br>Style&#160;Sheet</td><td align=center>Author's<br>Style&#160;Sheet</td>
+</tr>
+<tr><th></th><th colspan=3><hr></th></tr>
+<tr>
+     <th><big><b class="alert">Specification<br>Method:</b></big></th><td align=center>Linked<br>Style&#160;Sheet</td>
+     <td align=center>Embedded<br>Style&#160;Sheet</td><td align=center>Inline<br>Styles</td>
+</tr>
+<tr><th></th><th colspan=3><hr></th></tr>
+<tr>
+     <th><big><b class="alert">Element<br>Selector<br>Specificity:</b></big></th>
+     <td align=center>Contextual<br>Selector<br>Depth</td>
+     <td align=center>CLASS</td><td align=center>ID</td>
+</tr>
+<tr><th colspan=4><hr></th></tr>
+</table>
+</center>
+<br>
+
+<a name="cascadecalc"></a>
+<big><b class="mainheading">Complete Cascade Calculations</b></big>
+<hr width="40%" align=left>
+The following rules are used to determine which style rules will apply to a
+selector, given that it has more than one style in contention for that selector.
+<dl>
+<dt><b class="subheading">Step 1:</b>
+    <dd><b class="l3heading">Gather all rules that apply to the selector</b><br>
+        Find all the style declarations that implicitly or explicitly
+        apply to the element or selector in question for the desired Media
+        Type.
+<dt><b class="subheading">Step 2:</b>
+    <dd><b class="l3heading">Sort by origin and importance</b><br>
+        This is the primary Cascade sorting method. Style rules occurring in
+        the browser default style sheet have the lowest precedence. Reader
+        style sheets take precedence over browser style sheets, and Author
+        style sheets take precendence over both of these. <br>
+        [<b class="alert">Note:</b> Imported style sheets have the same origin
+        level as the style sheet that imported it.]
+        <br><br>
+
+        Using a special flag in a style rule, precendence of equivalent
+        style rules can be reversed in the Author and Reader realms. The
+        special keyword "!important" is added after the style declaration to
+        signify that greater precendence should be given to a particular style
+        rule. "!important" declarations override equal style rules that do not
+        use the "!important" keyword, and when both Reader and Author style
+        sheets specify the "!important" flag, the Reader's style rule will
+        override the Author's - this is to allow the Reader the greater degree of
+        rendering control, if necessary.<br>
+        <b class="alert">Notes:</b>
+        <ul type="disc">
+        <li>In CSS1, the Cascade precedence for the "!important" keyword
+            was reversed - "!important" Author rules would carry higher
+            precedence than equivalent "!important" Reader rules]
+        <li>Setting the "!important" flag for a shorthand property (eg:
+            'background') is the same as setting each individual
+            sub-property to be "!important".]
+        </ul>
+
+<dt><b class="subheading">Step 3:</b>
+    <dd><b class="l3heading">Sort by specificity of the CSS selector</b><br>
+        More specific CSS selectors will override more general ones. To
+        determine the "specificity" of a CSS selector, use the following
+        steps:<br>
+        <ol>
+        <li>Count the number if ID attributes in the selector
+        <li>Count the number of attributes and pseudo-classes in the selector.
+        <li>Count the number of element names in the selector
+        </ol>
+        Now concatenate these three numbers together (CSS2 says "in a number
+        system with a large base") to find the exact specificity of the selector.
+        The selector with the highest specificity number will be used.
+
+        <div class="example"><b class="alert">Example:</b><br>
+        Comparing the specificities of "<b class="selector">h2 em</b>
+        { <span class="property">color:</span> green }" and
+        "<b class="selector">h2 em#foo</b> {
+        <span class="property">color:</span> red }":<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specificity of "<b class="selector">h2 em</b> 
+        { <span class="property">color:</span> green }" = <b class="alert2">0-0-2 (or "2")</b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specificity of "<b class="selector">h2 em#foo</b> 
+        { <span class="property">color:</span> red }" = <b class="alert2">1-0-2 (or "102")</b><br>
+        in other words, "<b class="selector">h2 em#foo</b> { <span class="property">color:</span> red }" has a higher specificity
+        and would win this Cascade calculation.</div>
+        <b class="alert">Notes:</b>
+        <ul type="disc">
+        <li>CSS2 says that HTML presentational criteria which have
+            corresponding CSS renderings should be treated as having a
+            specificity of "0" in the Cascade calculation and are treated
+            as occurring at the beginning of a style sheet.
+        <li>In CSS1, HTML presentation criteria had a specificity of 1. The
+            change is to allow for the CSS2 "Universal Selector", which
+            has a specificity of "0".
+        <li>CSS2 says two conflicting things about Pseudo-elements: that
+            they are counted as elements in the specificity calculation and
+            also that they should be ignored. This is a direct contradiction
+            and I am not sure which is true.
+        </ul>
+<dt><b class="subheading">Step 4:</b>
+    <dd><b class="l3heading">Sort by order specified</b><br>
+        If two or more style rules have the same importance, origin and
+        specificity, The rule that is specified last wins.
+        <br>
+        <b class="alert">Notes:</b>
+        <ul type="disc">
+        <li>The browser default stylesheet is treated as if it is an imported
+            stylesheet imported before all others in a document.
+        <li>Imported style sheets are cascaded depending on their import order,
+            and are considered to exist before the style sheet that imported them.
+        </ul>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</body>
+</html>

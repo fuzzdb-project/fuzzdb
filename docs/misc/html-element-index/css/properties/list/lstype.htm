@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>List-Style-Type - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">list-style-type</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td align=center colspan=2><b class="alert">Other List-Style Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="markeroff.htm">marker-offset</a><br>
+    <a href="liststyle.htm">list-style</a><br></td>
+    <td valign=top><a href="lsposition.htm">list-style-position</a><br>
+    <a href="lsimage.htm">list-style-image</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">disc</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All elements with a default or assigned  <span class="property">display</span>
+        property value of '<b class="alert">list-item</b>'</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">ul</b> <span class="tagattrib">TYPE</span>&gt; |
+        &lt;<b class="tagname">ol</b> <span class="tagattrib">TYPE</span>&gt; |
+        &lt;<b class="tagname">li</b> <span class="tagattrib">TYPE</span>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#list-style-type">CSS1: Sect 5.6.3</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/generate.html#lists">CSS2: Sect 12.6.2</a>,
+        <a href="http://www.w3.org/TR/CSS21/generate.html#lists">CSS2.1: Sect 12.5.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property is used when the author wishes to change the default appearance of
+        list-markers in HTML list structures. If a 'list-style-image' property is also
+        given and it has a value of 'none' or the URL can not be loaded, the
+        'list-style-type' property value will be used in its place. This property should
+        always be specified in the event the URL pointed to in 'list-style-image' can
+        not be loaded. If a value for this property is not understood, the value
+        'decimal' should be used.
+        <br><br>
+
+        <b class="alert">NOTE:</b> <br>
+        Although the CSS specs say that this property is inherited, in practice
+        it is a different matter. IE, Netscape and Opera all treat this as a
+        non-inherited property - nested lists do not inherit the list-style-type
+        from the parent.
+</dl>
+
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        No list-marker will be displayed for each list item.</dd>
+
+<dt><b class="subheading">disc | circle | square</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies standard symbols to use as non-ordered list markers.
+        For each successive list-item, the symbol will remain the same.<br>
+        &#160;&#160;&#160;- '<b class="alert">disc</b>': Solid bullet<br>
+        &#160;&#160;&#160;- '<b class="alert">circle</b>': Hollow bullet.<br>
+        &#160;&#160;&#160;- '<b class="alert">square</b>': Solid square.</dd>
+
+<dt><b class="subheading">decimal</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbols to use as ordered list markers.
+        The values increment with each successive list item using a numeric
+        sequence, eg: decimal integers - 1, 2, 3, 4, 5,... </dd>
+
+<dt><b class="subheading">decimal-leading-zero</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbols to use as ordered list markers.
+        The values increment with each successive list item using a numeric
+        sequence, eg: decimal integers padded by initial zeros - 01, 02, 03, 04, 05,...</dd>
+
+<dt><b class="subheading">lower-roman | upper-roman</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbols to use as ordered list markers. The 
+        values increment with each successive list item using an alpha-numeric sequence, eg:<br>
+        &#160;&#160;&#160;lower-roman - i, ii, iii, iv, v,...<br>
+        &#160;&#160;&#160;upper-roman - I, II, III, IV, V,...</dd>
+
+<dt><b class="subheading">lower-alpha | upper-alpha</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B5</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbol systems to use as ordered list markers.
+        The values increment with each successive list item using an alphabetic sequence, eg:<br>
+        &#160;&#160;&#160;lower-alpha - a, b, c, d, e,...<br>
+        &#160;&#160;&#160;upper-alpha - A, B, C, D, E,...</dd>
+
+<dt><b class="subheading">lower-greek | lower-latin | upper-latin</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O6</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbol systems to use as ordered list markers.
+        The values increment with each successive list item using an alphabetic
+        sequence, eg:<br>
+        &#160;&#160;&#160;lower-greek - [alpha], [beta], [gamma], [delta],...<br>
+        &#160;&#160;&#160;lower-latin - lower case latin letters<br>
+        &#160;&#160;&#160;upper-latin - upper case latin letters</dd>
+
+<dt><b class="subheading">armenian | georgian</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O6</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbol systems to use as ordered list markers.
+        The values increment with each successive list item using an alphabetic
+        sequence, eg:<br>
+        &#160;&#160;&#160;armenian - traditional Armenian numbering<br>
+        &#160;&#160;&#160;georgian - traditional Georgian numbering<br>
+        &#160;&#160;&#160;hebrew - traditional Hebrew numbering<br></dd>
+
+<dt><b class="subheading">hebrew</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O6</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbol systems to use as ordered list markers.
+        The values increment with each successive list item using an alphabetic
+        sequence, eg:<br>
+        &#160;&#160;&#160;hebrew - traditional Hebrew numbering<br></dd>
+
+<dt><b class="subheading">cjk-ideographic | hiragana | katakana | hiragana-iroha | katakana-iroha</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>] 
+    [<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies a standard set of symbol systems to use as ordered list markers.
+        The values increment with each successive list item using an alphabetic
+        sequence, eg:<br>
+        &#160;&#160;&#160;cjk-ideographic - 'plain ideographic numbers'<br>
+        &#160;&#160;&#160;hiragana - Japanese phonetic Hiragana ordering: a, i, u, e, o, ka, ki,...<br>
+        &#160;&#160;&#160;katakana - Japanese phonetic Katakana ordering: a, i, u, e, o, ka, ki,...<br>
+        &#160;&#160;&#160;hiragana-iroha - Japanese phonetic Hiragana ordering:
+        i, ro, ha, ni, ho, he, to,...<br>
+        &#160;&#160;&#160;katakana-iroha - Japanese phonetic Katakana ordering:
+        i, ro, ha, ni, ho, he, to,...</dd>
+
+<dt><b class="subheading">[Netscape Proprietary]</b></dt>
+<dt>[<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These are proprietary values found in the Mozilla code, and at least some
+        of them seem to work. There is no documentation though for them, so here
+        they are without preamble...<br>
+        <b class="alert">-moz_cjk_heavenly_stem</b>, <b class="alert">-moz_cjk_earthly_branch</b>,
+        <b class="alert">-moz_trad_chinese_informal</b>, <b class="alert">-moz_trad_chinese_formal</b>,
+        <b class="alert">-moz_simp_chinese_informal</b>, <b class="alert">-moz_simp_chinese_formal</b>,
+        <b class="alert">-moz_japanese_informal</b>, <b class="alert">-moz_japanese_formal</b>,
+        <b class="alert">-moz_arabic_indic</b>, <b class="alert">-moz_persian</b>,
+        <b class="alert">-moz_urdu</b>, <b class="alert">-moz_devanagari</b>, <b class="alert">-moz_gurmukhi</b>,
+        <b class="alert">-moz_gujarati</b>, <b class="alert">-moz_oriya</b>, <b class="alert">-moz_kannada</b>,
+        <b class="alert">-moz_malayalam</b>, <b class="alert">-moz_bengali</b>, <b class="alert">-moz_tamil</b>,
+        <b class="alert">-moz_telugu</b>, <b class="alert">-moz_thai</b>, <b class="alert">-moz_lao</b>,
+        <b class="alert">-moz_myanmar</b>, <b class="alert">-moz_khmer</b>, <b class="alert">-moz_hangul</b>,
+        <b class="alert">-moz_hangul_consonant</b>
+</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">ul</b> {
+        <span class="property">list-style-type:</span> square }</div>
+    <dd><div class="example">In-Line: &lt;<b class="tagname">ul</b>&gt;&lt;<b class="tagname">li</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">list-style-type:</span>
+        square&quot;&gt;test text in the list
+        item&lt;/<b class="tagname">li</b>&gt;&lt;/<b class="tagname">ul</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- If this property is applied to list items (LI), it also applies to any LIs that follow.
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- Does not apply to elements with assigned 'display' property of "list-item"
+                and does not apply to DL/DT/DD.
+            <dd>- UL elements have a default 'list-style-type' value of "disc", OL default
+                value is "decimal."
+         </dl>
+     <li><b class="alert">Netscape</b>
+         <dl>
+             <dd><b class="alert2">4.x:</b>
+             <dd>- Does not apply to elements with assigned 'display' property of "list-item"
+                 and does not apply to DL/DT/DD.
+             <dd>- UL elements have a default 'list-style-type' value of "disc", OL default
+                 value is "decimal."
+             <dd>- Adding border/margin/padding properties to UL/OL/LI elements with
+                 the 'list-style-type' property set to "none" still renders the list markers.
+             <dd>- Applying this property to list items (LI) has odd effects (LI):<br>
+                 &nbsp;&nbsp;&nbsp;If OL list: only "decimal", "lower-roman",
+                 "upper-roman", "lower-alpha", and "upper-alpha" work<br>
+                 &nbsp;&nbsp;&nbsp;If UL list: only "none", "disc", "circle" and "square"
+                 work correctly; values of "decimal", "lower-roman", "upper-roman", "lower-alpha", 
+                 and "upper-alpha" are treated as "circle."
+             <dd>- <em>WEIRD</em>: A value of "armenian" is treated like "lower-alpha" for
+                 OL/UL lists, but ignored for list items (LI).
+             <dd>- <em>WEIRD</em>: A value of "hebrew" is treated like "lower-alpha" for
+                 list items (LI), but ignored for OL/UL lists.
+             <dd>- Reported elsewhere: Macintosh versions display a question mark
+                 character "?" in place of the marker when this property is set to "none."
+             <dd><b class="alert2">6.x:</b>
+             <dd>- Of the Eastern European/Middle Eastern list-style-types, Netcscape 6
+                 appears to render "hebrew" correctly, but with "armenian" and "georgian"
+                 it "tries" to display something other than the default value, but
+                 it is failing in those cases. Admittedly, I may not have the
+                 correct character sets installed on my system.
+         </dl>
+     <li><b class="alert">Opera</b>
+         <dl>
+             <dd><b class="alert2">3.5:</b>
+             <dd>- Does not apply to elements with assigned 'display' property of 
+                 "list-item" and does not apply to DL/DT/DD.
+             <dd>- If this property is applied to list items (LI), it also applies to
+                 any LIs that follow.
+             <dd>- UL elements have a default 'list-style-type' value of "disc", OL 
+                 default value is "decimal."
+             <dd><b class="alert2">3.5+:</b>
+             <dd>- Using a keyword of "inherit" makes the list-style-type "none" -
+                 it doesn't display any marker. It certainly isn't inheriting properly,
+                 and it isn't using the property default of "disc", so this looks like a bug.
+             <dd><b class="alert2">6.0:</b>
+             <dd>- Of the Greek/Latin/Eastern European/Middle Eastern list-style-types,
+                 Opera appears to get "lower-greek", "armenian" and "georgian" correct.
+                 It appears to fail on "lower-latin", "upper-latin" and "hebrew".
+                 Admittedly, I can not read these languages, and I may not have the
+                 correct character sets installed on my system, but Netscape 6 on
+                 the same system can display these fine.
+         </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>RTC: Browser Peculiarities: Multiple RTC elements</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">It is undefined in the specification what should happen if more 
+than two RTC elements exist in a complex RUBY element.</div>
+<br>
+
+<b>Complex RUBY element, Single RTC group:</b>
+<hr>
+filler text 
+<ruby>
+<rbc>
+   <rb>http://</rb>
+   <rb>www.blooberry.com</rb>
+   <rb>/directory/file.htm</rb>
+</rbc>
+<rtc>
+   <rt>Protocol</rt>
+   <rt>Hostname</rt>
+   <rt>Path</rt>
+</rtc>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Complex RUBY element, Two RTC groups. Group 1 uses "["/"]" to delimit, 
+and Group 2 uses "^"/"^" to delimit:</b>
+<hr>
+filler text 
+<ruby>
+<rbc>
+   <rb>http://</rb>
+   <rb>www.blooberry.com</rb>
+   <rb>/directory/file.htm</rb>
+</rbc>
+<rtc>
+   <rt rbspan="3">[Uniform Resource Locator]</rt>
+</rtc>
+<rtc>
+   <rt>^Protocol^</rt>
+   <rt>^Hostname^</rt>
+   <rt>^Path^</rt>
+</rtc>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Complex RUBY element, Three RTC groups. Group 1 uses "["/"]" to delimit, 
+Group 2 uses "^"/"^" to delimit, and Group 3 uses "*"/"*" to delimit:</b>
+<hr>
+filler text 
+<ruby>
+<rbc>
+   <rb>http://</rb>
+   <rb>www.blooberry.com</rb>
+   <rb>/directory/file.htm</rb>
+</rbc>
+<rtc>
+   <rt rbspan="3">[Spanning RTC1]</rt>
+</rtc>
+<rtc>
+   <rt>^RTC2-p1^</rt>
+   <rt>^RTC2-p2^</rt>
+   <rt>^RTC2-p3^</rt>
+</rtc>
+<rtc>
+   <rt>*RTC3-p1*</rt>
+   <rt>*RTC3-p2*</rt>
+   <rt>*RTC3-p3*</rt>
+</rtc>
+</ruby>
+filler text
+<hr>
+<br>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>HR: Browser peculiarity - Affect of the ALIGN attribute without width attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">The ALIGN attribute is meaningless unless the WIDTH attribute is also specified.</div>
+<br>
+
+<b>Successive HR elements with no WIDTH attribute. First with no align, second with align=left, third with align=center
+and fourth with align=right</b>
+<hr noshade size="10">
+<br>
+<hr>
+<hr align="left">
+<hr align="center">
+<hr align="right">
+<br>
+<hr noshade size="10">
+<br>
+
+<b>Successive HR elements with WIDTH=100 attribute. First with no align, second with align=left, third with align=center
+and fourth with align=right</b>
+<hr noshade size="10">
+<br>
+<hr width="100">
+<hr align="left" width="100">
+<hr align="center" width="100">
+<hr align="right" width="100">
+<br>
+<hr noshade size="10">
+<br>
+
+</body>
+</html>

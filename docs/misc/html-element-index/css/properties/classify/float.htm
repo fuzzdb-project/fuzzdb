@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Float - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">float</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Classification Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="display.htm">display</a><br>
+    <a href="visibility.htm">visibility</a><br></td>
+    <td><a href="position.htm">position</a><br>
+    <a href="clear.htm">clear</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">none</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All (excepting generated content and positioned elements)</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">applet|iframe|img|object|spacer|table</b>
+        <span class="tagattrib">ALIGN</span>=&quot;right,left&quot;&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#float">CSS1: Sect. 5.5.25</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/visuren.html#float-position">CSS2: Sect. 9.5.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/visuren.html#float-position">CSS2.1: Sect 9.5.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Floating elements are elements whose rendering boxes are shifted to
+        the left or right side of the current line. Content boxes that follow
+        are rendered along the side of the floated element; down the right
+        side of elements floated to the left, and down the left side of elements
+        floated to the right. This property controls this floating behavior,
+        specifying an element float to the left, right, or not at all.
+        For correct rendering, a floated element needs to have an intrinsic
+        or assigned 'width' value.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element box is not floated.</dd>
+
+<dt><b class="subheading">left</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The current element box will be floated to the left. Subsequent content
+        flows around it to the right, starting at the top of the element box
+        If this value is given, the 'display' property for the current element
+        is ignored, unless it has the value 'none'.</dd>
+
+<dt><b class="subheading">right</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The current element box will be floated to the right. Subsequent content
+        flows around it to the left, starting at the top of the element box
+        If this value is given, the 'display' property for the current element
+        is ignored, unless it has the value 'none'.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">img.test</b> {
+        <span class="property">float:</span> left }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">img</b>
+        <span class="tagattrib">SRC</span>=&quot;image.gif&quot;
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">float:</span>
+        left&quot;&gt;This<br>is text following the image. It floats on the right.</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>If there isn't enough room on a line horizontally, a float will be
+        shifted downward, line by line, until a line has enough room.
+    <li>Float element overlap -<br>
+        Inline boxes: content, background, and borders of the inline box should
+        be rendered in front of the float.<br>
+        Block boxes: background and borders of the block box should be rendered
+        behind the float (but visible for portions of the floated element that
+        are transparent.) The content of the block box should be rendered in
+        front of the float.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- This property does not apply to inline elements, list structures
+                (UL/OL/DL), list items (LI/DT/DD), TABLE or table cells (TH/TD.)
+            <dd>- Macintosh - Reported Elsewhere: Margins on floats do not work correctly.
+            <dd><b class="alert2">5.0:</b>
+            <dd>- This property now applies to inline elements, list structures
+                (UL/OL/DL), and list items (LI/DT/DD.)
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- This property does not apply to list items (LI/DT/DD), TABLE
+                or table cells (TH/TD.)
+            <dd>- Applying this property to SELECT or TEXTAREA elements destroys
+                the form field, strips out the content and floats it as specified
+                as plain text.
+            <dd>- Applying this property to OL lists changes it to a UL.
+            <dd>- Applying this property to OL/UL displays all markers as small
+                bullets (not the default size), with the default list-style-position
+                set to "inside" not "outside" as normal.
+            <dd>- This property appears to do odd things to inline elements. Difficult
+                to determine what is really going on, but it appears to be attempting
+                SOME sort of element floating.
+            <dd>- Netscape accepts an illegal value of "center" for this property,
+                floating the specified element and unmarked content before it to
+                the center of the page.
+            <dd>- Negative margins on some floated elements seem to ignore the float
+                specification and only apply the margin value.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- This property does not apply to list structures (OL/UL/DL), TABLE
+                or table cells (TH/TD.)
+            <dd>- Floating form elements (INPUT/SELECT) makes them disappear!
+            <dd>- Floating a TEXTAREA destroys it and instead displays garbage characters!
+            <dd>- Floating an IMG to the right causes horizontal scrollbars to
+                appear and the image to be placed partly off-screen.
+            <dd>- Floating a DT and DD to the same side places them on the same line.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

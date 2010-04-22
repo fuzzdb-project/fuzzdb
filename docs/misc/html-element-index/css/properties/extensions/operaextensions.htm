@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Opera CSS Extensions - Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Opera CSS Extensions</span></h1>
+<div align="center"><b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+[<b><i class="fs">O4</i></b>]<br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></div>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+    <dd>Many browser makers have been <a href="http://lists.w3.org/Archives/Public/www-style/2002Jan/0094.html">following
+        a convention</a> of using a dash
+        character ("-") as a prefix for proprietary CSS properties...Opera follows
+        this convention with a few XML-specific CSS properties created to enable
+        some functionalities in their XML rendering of WML, mail and news.
+        (BTW, Microsoft's Internet Explorer for Win32 doesn't adhere to this
+        convention - they have chosen to name their proprietary properties
+        anything they feel like, which may create compatibility problems later on.)
+        <br><br>
+
+        These proprietary properties allow replaced element images and hyperlinking
+        behavior to be included in general XML documents. An author could use
+        XHTML for this purpose, but for cases where that is not possible, these
+        Opera CSS properties add this basic functionality from HTML to any XML
+        document. (NOTE: These properties only work on non-HTML/XHTML documents.)
+        <br><br>
+
+        Should you use these proprietary CSS properties and values? Opera suggests
+        that you should not. But, as long as you keep in mind that Opera is the
+        only browser that can utilize these properties, hanging yourself because
+        of possible cross-browser incompatibilities should be a choice that anyone
+        has in their development toolbox. Of course, Opera is making things as 
+        difficult as possible for authors to use these properties: with every browser
+        version they have changed the names of these properties every time. 
+        I attempt to list these properties here mostly for completeness sake.
+        <br><br>
+
+        The following information is mostly from <a href="http://www.opera.com/docs/specs/">Opera's
+        documentation</a>, quoted where directly referenced.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Proprietary Opera CSS Properties</b></big>
+<dt><b class="subheading">-o-replace</b></dt>
+    <dd><b class="l3heading">Support:</b> [<b><i class="fs">O7</i></b>] 
+    (See note below about the previous names for this property in older Opera versions)</dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>None</b>: [DEFAULT] Element is not a replaced element.<br>
+        - <b>attr([ATTRIBUTE])</b>:  Element will be replaced by the
+        contents of the URL specified in the [ATTRIBUTE] value.</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        Primarily used to to display images in XML documents...<br>
+        "This property declares the element to be replaced or not. If replaced,
+        the attr() function is used to point to the attribute where the URI to
+        the content can be found."</dd>
+
+<dt><b class="subheading">-o-set-link-source</b></dt>
+    <dd><b class="l3heading">Support:</b> [<b><i class="fs">O7</i></b>]
+    (See note below about the previous names for this property in older Opera versions)</dd></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>None</b>: [DEFAULT] Do not set a link source for this element.<br>
+        - <b>attr([ATTRIBUTE])</b>: Use the value of the [ATTRIBUTE] attribute as the link-source<br>
+        - <b>[URL]</b>: Use the specified URL as the link-source<br>
+        - <b>[String]</b>: Use the specified string as the link-source<br>
+        - <b>content()</b>:  Unknown - This is from Opera's documentation, but there
+          are no examples listed to aid in understanding this usage</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        Primarily used to set the destination URL for a hyperlink in XML documents...<br>
+        "This property sets the value of the 'link' variable which can later be used
+        to generate a link through the '-o-use-link-source' property." </dd>
+
+<dt><b class="subheading">-o-use-link-source</b></dt>
+    <dd><b class="l3heading">Support:</b> [<b><i class="fs">O7</i></b>]
+    (See note below about the previous names for this property in older Opera versions)</dd></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>None</b>: [DEFAULT] Do not use any link-source for this element.<br>
+        - <b>Current</b>: Use the current '-o-set-link-source' value as the destination
+          URL for this element.<br>
+        - <b>Next</b>: Use the next '-o-set-link-source' value (as defined in
+          document order?) as the destination URL for this element.</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        Primarily used to set the usable activation target for a hyperlink in XML documents...<br>
+        "This property sets the element to be a source anchor and, if so, declares
+        which value of the 'link' variable that should be used: the current or the next."</dd>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Opera</b>
+        <dl>
+        <dd><b class="alert2">General:</b>
+        <dd><dl>
+            <dt>- Follow the bouncing ball: What will Opera call its proprietary 
+                properties in the next version?<br> 
+                Opera can't seem to make up its mind about what to call these properties. 
+                With every new version they keep changing their names:
+            <dt><b>-o-replace</b>:
+                <dd>4.x-6.x: -replace; 7.x: -o-replace
+            <dt><b>-o-use-link-source</b>:
+                <dd>4.x: -link-use; 5.x: use-link-source; 6.x: -use-link-source; 7.x: -o-use-link-source
+            <dt><b>-o-set-link-source</b>:
+                <dd>4.x: -link-set; 5.x: set-link-source; 6.x: -set-link-source; 7.x: -o-set-link-source
+            <dt>I wonder what they'll call them in the next version? ;-}
+            </dl>
+        <dd><b class="alert2">4.x:</b>
+        <dd>- This version seems to double the height/width dimensions of any image
+            I have tried so far using the '-replace' property. In 5.x+, the correct
+            dimensions are used.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Script</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Script</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b><a href="#tips">*</a>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N2B3</i></b>|<b class="s">O3</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Scripting</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_scriptmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The SCRIPT element is the method used by browsers to recognize
+        scripting languages in an HTML document. Scripting (both embedded and external to
+        the page) allows web pages to perform actions and change dynamically in response
+        to events such as screen exit and entry, or user mouse-clicks.
+        <br><br>
+        
+        While discussing the full scope of scripting in HTML pages is not the intent
+        of these documents, discussion of how scripting affects HTML authoring is
+        <em>DEFINITELY</em> relevant. Many other sites have covered the details of
+        scripting languages with far greater skill and detail than I could ever manage.
+        Please see the <a href="../embed.htm#related">Related Links</a> section
+        for pointers to good resources on the subject.
+</dl>
+
+<a name="javascript"></a>
+<dl>
+<dt><big><b class="mainheading">JavaScript and Other Scripting Languages</b></big>
+    <dd>The most popular browser scripting language at this time is the
+        <a href="../embed.htm#javascript">JavaScript</a> language from Netscape. The
+        JavaScript language has been standardized by
+        <a href="../../../misc/glossary.htm#ecma">ECMA</a> as
+        <a href="http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM">ECMA-262</a>,
+        (AKA EcmaScript.) Microsoft has also implemented a version of the JavaScript
+        language under the name JScript.
+        <br><br>
+
+        While JavaScript is the most widely implemented scripting language, it is possible to
+        use any language, provided the browser you are using can understand it. Microsoft,
+        for example, also makes a scripting language for the Internet Explorer browser
+        called VBScript (based on the Visual Basic programming language) and a few other
+        languages (such as Perl) are also usable with some web browsers.
+</dl>
+
+<a name="events"></a>
+<dl>
+<dt><big><b class="mainheading">Event Handlers and Script Invocation</b></big>
+    <dd>Scripting code can be invoked either as a function call to a routine
+        contained in the SCRIPT element or the scripting language statements can
+        be included in-line within the attribute value of the attribute that
+        invokes it.
+        <br><br>
+
+        To allow scripting to interact dynamically with web page elements, a class of
+        HTML attributes were added called &quot;<a href="../attributes/events.htm">Event
+        Handlers</a>.&quot; These HTML attributes (there are now over 50 different
+        events) trigger script code when the action/event that they are bound to occurs
+        for an element.
+        <br><br>
+
+        Javascript allows an extra type of event trapping beyond event handlers. The
+        <a href="../a/a-hyperlink.htm#tips">A HREF</a> element can also be used to invoke
+        script code. The script is run when the user activates the hyperlink (see the
+        <a href="../a/a-hyperlink.htm#tips">A HREF</a> page for more details.)
+</dl>
+
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<b><i class="fs">X1</i></b>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Archive</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies an archive file containing the external script
+        file necessary for use in the current document.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL to a Java ARchive (.jar) file. All
+        URLs should be <a href="../../topics/urlencoding.htm">URL encoded</a>
+        where required.
+
+<dt><b class="subheading">Charset</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the character encoding of the script contents.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A recognized RFC 2045 language character set string. Default is ISO-8859-1.]
+
+<dt><b class="subheading">Defer</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O??</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This stand alone attribute is used to advise the browser that the
+        script is not going to generate any rendered document content and
+        thus, the user agent can continue parsing and rendering.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">defer</b> (XHTML)
+
+<dt><b class="subheading">Event</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Added in HTML 4.01. Present in all HTML 4.01 DTDs. Dropped in XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the event the script is being written for.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>. [Event name]
+
+<dt><b class="subheading">For</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Added in HTML 4.01. Present in all HTML 4.01 DTDs. Dropped in XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies which element is being bound to the event script.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A scripting object or element ID.]
+
+<dt><b class="subheading">Language</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3B1</b>|<span class="ns">M</span>|<b><i class="fs">N2B3</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the scripting language the script is written
+        in. It is required if the SRC attribute is not specified, optional otherwise.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [The two most popular scripting languages currently are
+        <b class="alert">JavaScript</b> and <b class="alert">VBScript</b>]
+
+<dt><b class="subheading">Src</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE3.02</b>|<span class="ns">M</span>|<b><i class="fs">N3B5</i></b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies an external source for the script code.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b><i class="fs">N4</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME type of the scripting code.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Alphanumeric MIME type]
+
+<dt><b class="subheading">xml:space</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<b><i class="fs">X1</i></b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> Intrinsic part of XML
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a basic XML syntax that keeps all whitespace characters intact when they are parsed. Spacing 
+        characters are almost always an important part of script syntax and string processing, so including 
+        this attribute in the standards for this element makes sense.
+    <dd><b class="l3heading">Values:</b> <b class="alert">preserve</b> - maintain all 
+        whitespace characters in rendering and data storage (including multiple
+        spaces, tabs, carriage returns and linefeeds.)
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<!-- Example used with many thanks from 'Java by Voodoo' at:
+        http://rummelplatz.uni-mannheim.de/~skoch/js/javascr.htm#ex2
+-->
+    <dd><div class="example">&lt;<b class="tagname">html</b>&gt;<br>
+        &lt;<b class="tagname">head</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">script</b>
+        <span class="tagattrib">language</span>=&quot;JavaScript&quot;
+        <span class="tagattrib">type</span>=&quot;text/javascript&quot;&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;!--  hide script from old browsers<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;function getname(str) {<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;alert(&quot;Hi, &quot;+ str + &quot;!&quot;);<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;}<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;// end hiding contents --&gt;<br>
+        &#160;&#160;&#160;&lt;/<b class="tagname">script</b>&gt;<br>
+        &lt;/<b class="tagname">head</b>&gt;<br>
+        &lt;<b class="tagname">body</b>&gt;<br>
+        &#160;&#160;&#160;Please enter your name:<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">form</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">input</b>
+        <span class="tagattrib">type</span>=&quot;text&quot;
+        <span class="tagattrib">name</span>=&quot;name&quot;
+        <span class="tagattrib">onblur</span>=&quot;getname(this.value)&quot;
+        <span class="tagattrib">value</span>=&quot;&quot; /&gt;<br>
+        &#160;&#160;&#160;&lt;/<b class="tagname">form</b>&gt;<br>
+        &lt;/<b class="tagname">body</b>&gt;<br>
+        &lt;/<b class="tagname">html</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b> |
+        &lt;<a href="../h/head.htm">Head</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#text">Text</a>%</b> |
+        &lt;<a href="../c/comment.htm">!-- --</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/s/script-bp1.htm">[Test]</a>
+        <b class="alert">NOTE:</b> Because this element has content between the start
+        and end tags, older browsers may end up displaying the style content it
+        contains. In order to prevent this, it is <em>STRONGLY</em> recommended to
+        embed this information within the SGML/HTML Comment structure
+        (<a href="../c/comment.htm">&lt;!-- --&gt;</a>).
+    <li>HTML is evaluated as it is loaded. If an event handler attempts to trigger a
+        script that has not yet been loaded, the attempt will fail. Because of this,
+        it is generally safest to place a SCRIPT statement at the top of a document
+        in the HEAD element.
+    <li><b class="alert">DTD Note:</b> This element exists in the HTML 3.2
+        recommendation but only as a place holder until version 4.0 of HTML
+        which details the usage of the element.
+    <li><b class="alert">DTD Note:</b> The Internet Explorer 3.0
+        DTD lists extra supported attributes for script: NAME and TYPE.
+        I have not yet verified if these are really supported yet in IE3.
+    <li><b class="alert">DTD Note:</b> Even though the LANGUAGE attribute exists in
+        HTML 4.0, its usage is deprecated in favor of the TYPE attribute.
+    <li><b class="alert">DTD Note:</b> The EVENT and FOR attributes were
+        only added to HTML beginning in HTML 4.01.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>According to a document on the Mozilla web site, Netscape 4 (and possibly
+        more) also supports these attributes (of course they don't have ANY
+        explanation with this claim): HREF, and CODEBASE. I have never seen these 
+        attributes mentioned elsewhere, and have not been able to verify yet if 
+        these attributes are supported or not, nor do I know their exact usage if so.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>
+

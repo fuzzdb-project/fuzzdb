@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+ <title>HTML Test Creator, v1.0 beta4</title>
+<script>
+var stdTagArray   = new Array ("a", "address", "applet", "area", "b",
+    "basefont", "bdo", "blockquote", "br", "button", "caption", "center",
+    "dd", "del", "dir", "div", "dl", "dt", "em", "embed", "fieldset", "font",
+    "form", "hr", "h2", "i", "iframe", "img", "inputbutton", "inputcheck",
+    "inputfile", "inputimage", "inputpasswd", "inputradio", "inputreset",
+    "inputsub", "inputtext", "ins", "label", "legend", "li", "listing",
+    "map", "marquee", "menu", "nobr", "object", "ol", "optgroup", "option",
+    "p", "pre", "ruby", "s", "select", "span", "strong", "table", "td",
+    "textarea", "th", "tr", "u", "ul", "wbr");
+
+var html4Trans   = new Array ("a", "abbr", "acronym", "address", "applet",
+    "area", "b", "basefont", "bdo", "big", "blockquote", "br",
+    "button", "caption", "center", "cite", "code", "col", "colgroup", "dd",
+    "del", "dfn", "dir", "div", "dl", "dt", "em", "fieldset", "font", "form",
+    "hr", "h1", "h2", "h3", "h4", "h5", "h6", "i", "iframe", "img",
+    "inputbutton", "inputcheck", "inputfile", "inputimage", "inputpasswd",
+    "inputradio", "inputreset", "inputsub", "inputtext", "ins",
+    "kbd", "label", "legend", "li", "map", "menu", "noframes",
+    "noscript", "object", "ol", "optgroup", "option", "p", "pre",
+    "q", "s", "samp", "select", "small", "span", "strike", "strong", "sub",
+    "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead", "tr",
+    "tt", "u", "ul", "var");
+
+var html4Strict   = new Array ("a", "abbr", "acronym", "address", "area", "b",
+    "bdo", "big", "blockquote", "br", "button", "caption", "cite", "code",
+    "col", "colgroup", "dd", "del", "dfn", "div", "dl", "dt", "em", "fieldset",
+    "form", "hr", "h1", "h2", "h3", "h4", "h5", "h6", "i", "img", "inputbutton",
+    "inputcheck", "inputfile", "inputimage", "inputpasswd", "inputradio",
+    "inputreset", "inputsub", "inputtext", "ins", "kbd", "label", "legend",
+    "li", "map", "noscript", "object", "ol", "optgroup", "option", "p", "pre",
+    "q", "samp", "select", "small", "span", "strong", "sub", "sup", "table",
+    "tbody", "td", "textarea", "tfoot", "th", "thead", "tr", "tt", "ul", "var");
+
+//var html4Strict   = new Array (0, 1, 2, 3, 5, 6, 8, 9, 11, 12, 13, 14, 15, 17, 18,
+//    19, 20, 21, 22, 23, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36, 37, 38, 39, 41,
+//    44, 45, 46, 47, 48, 49, 50, 52, 53, 54, 55, 56, 57, 59, 60, 63, 71, 72, 73,
+//    74, 75, 76, 78, 79, 83, 84, 85, 87, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98,
+//    99, 100, 102, 103);
+
+var headArray  = new Array ("base", "bgsound", "isindex", "link", "meta", "style", "title");
+
+var tagArray   = new Array ("a", "abbr", "acronym", "address", "applet", // end=4
+    "area", "b", "basefont", "bdo", "big", "blink", "blockquote", "br", // end=12
+    "button", "caption", "center", "cite", "code", "col", "colgroup", // end=19
+    "dd", "del", "dfn", "dir", "div", "dl", "dt", "em", "embed", "fieldset", // end=29
+    "font", "form", "hr", "h1", "h2", "h3", "h4", "h5", "h6", "h7", "i", // end=40
+    "iframe", "ilayer", "inlineinput", "img", "inputbutton", "inputcheck", "inputfile", // end=47
+    "inputimage", "inputpasswd", "inputradio", "inputreadonly", "inputreset", // end=52
+    "inputsub", "inputtext", "ins", "kbd", "label", "layer", "legend", "li", // end=60
+    "listing", "map", "marquee", "menu", "multicol", "nobr", "noembed", // end=68
+    "noframes", "nolayer", "noscript", "object", "ol", "optgroup", "option", // end=75
+    "p", "pre", "q", "ruby", "s", "samp", "select", "small", // end=85
+    "spacer", "span", "spell", "strike", "strong", "sub", "sup", "table", "tbody", "td", // end=95
+    "textarea", "tfoot", "th", "thead", "tr", "tt", "u", "ul", "var", "wbr", "xml", "xmp");
+
+
+var htmlarraytype     = "default";
+var htmlarray         = new Array (); htmlarray = stdTagArray;
+var attribsarray      = new Array ();
+
+var boolDefBody       = false;  // default body attributes used?
+var boolDefAttribs    = false;  // default attributes used?
+var boolDefGeneral    = false;  // generic attributes used?
+var boolDefGenEvent   = false;  // event handlers used?
+var boolDefCustom     = true;   // custom global attributes used?
+var boolDefGenVal     = true;   // default values used for generic attribs?
+var boolDefContent    = false;  // default content used?
+
+var strBodyExtra = "";
+var strGenAttr   = "";
+var strEventAttr = "";
+var strCustAttr  = "";
+var strCntBef    = "";
+var strCntDur    = "";
+var strCntAft    = "";
+
+
+var genatts    = new Array (
+                 "--------CORE--------", "class", "id", "style",
+                 "---ACCESSIBILITY----", "accesskey", "disabled", "tabindex", "title",
+                 "------LANGUAGE------", "dir", "lang", "language",
+                 "---DATA BINDING-----", "datafld", "dataformatas", "datasrc",
+                 "------EDITING-------", "contenteditable", "hidefocus", "unselectable");
+
+var events     = new Array ("------GENERIC------", "onClick", "onDblClick",
+                 "onMouseDown", "onMouseUp", "onMouseOver", "onMouseMove",
+                 "onMouseOut", "onKeyPress", "onKeyDown", "onKeyUp",
+                 "-PAGE DEPENDENCY--", "onAbort", "onBeforeUnload", "onError",
+                 "onLoad", "onMove", "onResize", "onScroll", "onStop", "onUnload",
+                 "-------FORM-------", "onBlur", "onChange", "onFocus", "onReset", "onSubmit",
+                 "-----MARQUEE------", "onBounce", "onFinish", "onStart",
+                 "-----EDITING------", "onBeforeCopy", "onBeforeCut", "onBeforeEditFocus",
+                 "onBeforePaste", "onBeforeUpdate", "onContextMenu", "onCopy",
+                 "onCut", "onDrag", "onDragDrop", "onDragEnd", "onDragEnter",
+                 "onDragLeave", "onDragOver", "onDragStart", "onDrop",
+                 "onLoseCapture", "onPaste", "onSelect", "onSelectStart",
+                 "---DATA BINDING---", "onAfterUpdate", "onCellChange",
+                 "onDataAvailable", "onDatasetChanged", "onDatasetComplete",
+                 "onErrorUpdate", "onRowEnter", "onRowExit", "onRowsDelete", "onRowsInserted",
+                 "-------MISC-------", "onAfterPrint", "onBeforePrint",
+                 "onFilterChange", "onHelp", "onPropertyChange", "onReadyStateChange");
+
+var taga          = new Array ("<a", " href='http://www.yahoo.com'", ">link ", " text</a>",
+                    16, "accesskey", "charset", "coords", "href", "hreflang", "methods",
+                    "name", "rel", "rev", "shape", "suppress", "tabindex", "target", "title",
+                    "type", "urn");
+var tagabbr       = new Array ("<abbr", " title='abbrvtn'", ">This is ABBR",
+                    " Abbreviation content</abbr>", 0);
+var tagacronym    = new Array ("<acronym", " title='World Wide Web'", ">This is ACRONYM",
+                    " acronym content</acronym>", 0);
+var tagaddress    = new Array ("<address", "", ">1234 Square Circle<br>Nowhere, NV 00000",
+                    "</address>", 4, "align", "clear", "height", "width");
+var tagapplet     = new Array ("<applet", " code='' width=300 height=300 alt='this is applet alt text'",
+                    "><param name='' value=''>", "<param name='' value=''></applet>",
+                    14, "align", "alt", "archive", "border", "code", "codebase",
+                    "height", "hspace", "mayscript", "name", "object", "src",
+                    "vspace", "width");
+var tagarea       = new Array ("<img src='http://www.blooberry.com/pics/right.gif' usemap='#area1'>\n<map name=area1><area",
+                    " shape=rect coords='0,0,20,20' href='http://www.blooberry.com'",
+                    "><area shape=rect coords='20,0,40,20' href='http://www.yahoo.com/'>",
+                    "</map>", 9, "accesskey", "alt", "coords", "href", "nohref",
+                    "shape", "suppress", "tabindex", "target");
+var tagb          = new Array ("<b", "", ">This is B. ", " bold content</b>", 0);
+var tagbase       = new Array ("<base", " href='http://www.blooberry.com'", ">", "",
+                    2, "href", "target");
+var tagbasefont   = new Array ("<basefont", " size=6 face=courier color=red",
+                    ">This is Basefont: size=6, face=courier, color=red <font size='+1'>relative fontsize change: +1</font>",
+                    "end of basefont<font size=4>fontsize change to 4</font> after font</basefont>",
+                    3, "color", "face", "size");
+var tagbdo        = new Array ("<bdo", "", ">This is BDO. ", " bi-directional override content</bdo>",
+                    2, "dir", "lang");
+var tagbig        = new Array ("<big", "", ">This is BIG. ", " big content</big>", 0);
+var tagblink      = new Array ("<blink", "", ">This is BLINK. ", " blinking content</blink>", 0);
+var tagblockquote = new Array ("<blockquote", "", ">This is blockquote. ",
+                    " blockquote content</blockquote>", 6, "align", "cite", "clear",
+                    "height", "type", "width");
+var tagbody       = new Array ("<body", "", ">This is body. ", " body content</blockquote>", 18,
+                    "Align", "Alink", "Background", "BGColor", "BGProperties", "BottomMargin",
+                    "Height","LeftMargin", "Link", "Marginheight", "Marginwidth", "NoWrap",
+                    "RightMargin", "Scroll", "Text", "TopMargin", "Vlink", "Width");
+var tagbr         = new Array ("<br", "", ">linebreak was just before", "", 1, "clear");
+var tagbutton     = new Array ("<form><button", " TYPE=submit NAME=helpbutton TABINDEX=1", ">BUTTON text <img SRC='http://www.blooberry.com/pics/right.gif' ALIGN=middle>",
+                    " Get the Button <strong>HELP</strong> that you need here...\n</button></form>", 6,
+                    "accesskey", "disabled", "name", "tabindex", "type", "value");
+var tagcaption    = new Array ("<table border=1><caption", "",
+                    ">This is the table caption. ",
+                    "caption content</caption><tr><th>cell 1 has some longer content</th><th>cell 2</th></tr><tr><td>cell 3</td><td>cell 4 has some longer content too</td></tr></table>",
+                    4, "align", "height", "valign", "width");
+var tagcenter     = new Array ("<center", "", ">This is centered. ",
+                    " center content</center>", 3, "align", "height", "width");
+var tagcite       = new Array ("<cite", "", ">This is CITE. ", " cite content</cite>", 0);
+var tagcode       = new Array ("<code", "", ">This is CODE. ", " code content</code>", 0);
+var tagcol        = new Array ("");
+var tagcolgroup   = new Array ("");
+var tagdd         = new Array ("<dl><dt>This is DL:DT1. end of DT1.</dt><dd", "", ">This is DL:DD1.",
+                    " End of DL: DD1</dd><dt>This is the last DL:DT</dt><dd>This is the last DL:DD</dt></dl>",
+                    5, "align", "clear", "height", "nowrap", "width");
+var tagdel        = new Array ("<del", "", ">This is DEL. ", " deleted content</del>",
+                    2, "cite", "datetime");
+var tagdfn        = new Array ("<dfn", "", ">This is DFN. ", " definition content</dfn>", 0);
+var tagdir        = new Array ("<dir", "", "><li>This is DIR:LI1.<li>This is DIR:LI2 ",
+                    "<li>This is the last DIR:LI</dir>", 7, "align", "clear", "compact",
+                    "height", "start", "type", "width");
+var tagdiv        = new Array ("<div", "", ">This is DIV. ", " division content</div>",
+                    7, "align", "clear", "cols", "gutter", "height", "nowrap", "width");
+var tagdl         = new Array ("<dl", "", "><dt>This is DL:DT1.<dd>This is DL:DD1 ",
+                    "<dt>This is the last DL:DT<dd>This is the last DL:DD</dl>",
+                    5, "align", "clear", "compact", "height", "width");
+var tagdt         = new Array ("<dl><dt", "", ">This is DL:DT1.",
+                    " end of DT1.</dt><dd>This is DL:DD1 </dd><dt>This is the last DL:DT</dt><dd>This is the last DL:DD</dt></dl>",
+                    5, "align", "clear", "height", "nowrap", "width");
+var tagem         = new Array ("<em", "", ">This is EM. ", " emphasized content</em>", 0);
+var tagembed      = new Array ("<embed", " src='http://www.blooberry.com/chord.wav' height=200 width=200",
+                    ">embed content", "this is embed</embed>", 14,
+                    "align", "disabled", "height", "hidden", "hspace", "name", "palette",
+                    "pluginspage", "pluginurl", "src", "type", "units", "vspace", "width");
+var tagfieldset   = new Array ("<form><fieldset", " align=right",
+                    "><legend>Gender</legend>\n<label accesskey=M><input type=radio name=Gender value=Male>Male</label><br>\n<label ACCESSKEY=F><input TYPE=RADIO NAME=Gender VALUE=Female>Female</label>\n",
+                    "</fieldset>\n</form>", 3, "align", "height", "width");
+var tagfont       = new Array ("<font", " size=5 color=green face=arial",
+                    ">This is FONT: 5, green, arial", " font content</font>",
+                    5, "color", "face", "font-weight", "point-size", "size");
+var tagform       = new Array ("<form", " method=get action='http://test.com/test.cgi' enctype='application/x-www-form-urlencoded'",
+                    ">form begin<br><input type=text value='test content'>", " form end</form>",
+                    11, "accept", "accept-charset", "action", "align", "autocomplete",
+                    "enctype", "height", "method", "name", "target", "width");
+var taghr         = new Array ("<hr", "", "> ", "",
+                    6, "align", "clear", "color", "noshade", "size", "width");
+var tagh1         = new Array ("<h1", "", ">This is H1. ", " heading1 content</h1>",
+                    4, "align", "clear", "height", "width");
+var tagh2         = new Array ("<h2", "", ">This is H2. ", " heading2 content</h2>",
+                    4, "align", "clear", "height", "width");
+var tagh3         = new Array ("<h3", "", ">This is H3. ", " heading3 content</h3>",
+                    4, "align", "clear", "height", "width");
+var tagh4         = new Array ("<h4", "", ">This is H4. ", " heading4 content</h4>",
+                    4, "align", "clear", "height", "width");
+var tagh5         = new Array ("<h5", "", ">This is H5. ", " heading5 content</h5>",
+                    4, "align", "clear", "height", "width");
+var tagh6         = new Array ("<h6", "", ">This is H6. ", " heading6 content</h6>",
+                    4, "align", "clear", "height", "width");
+var tagh7         = new Array ("<h7", "", ">This is H7. ", " heading7 content</h7>", 0);
+var tagi          = new Array ("<i", "", ">This is I. ", " italicized content</i>", 0);
+var tagiframe     = new Array ("<iframe", " src='http://www.blooberry.com/' height=250 width=250 hspace=25 vspace=25",
+                    ">That was an image with height/width=100, hspace/vspace=25, src=http://www.blooberry.com/pics/right.gif",
+                    " text at end of iframe</iframe>", 14, "align", "allowtransparency", "application", "frameborder",
+                    "height", "hspace", "longdesc", "marginheight", "marginwidth",
+                    "name", "scrolling", "src", "vspace", "width");
+var tagilayer     = new Array ("<ilayer", " name=two left=40 top=20 z-index=2",
+                    "><font size=6 color='#0000ff'>Ilayer Two zindex=2</font> </ilayer>\n",
+                    "<ilayer name=one left='-125' top=25 z-index=1><font size=6 color='#ffff00'>Ilayer One zindex=1</font> </ilayer>\n",
+                    16, "above", "background", "below", "bgcolor", "clip",
+                    "height", "left", "name", "overflow", "pagex", "pagey",
+                    "src", "top", "visibility", "width", "z-index");
+var tagimg        = new Array ("<img", " src='http://www.blooberry.com/pics/right.gif' height=100 width=100 hspace=25 vspace=25",
+                    ">That was an image with height/width=100, hspace/vspace=25, src=http://www.blooberry.com/pics/right.gif",
+                    "", 19, "align", "alt", "border", "controls", "dynsrc", "height",
+                    "hspace", "ismap", "longdesc", "loop", "lowsrc", "name", "src",
+                    "start", "suppress", "usemap", "vrml", "vspace", "width");
+var taginlineinput = new Array ("<inlineinput", "", ">This is INLINEINPUT. ",
+                    " inlineinput content</i>", 0);
+var taginputbutton = new Array ("<form><input type=button", " name=but1 value='input button'",
+                    ">The control before this was Input type=button", "</form>",
+                    8, "accesskey", "align", "disabled", "height", "name",
+                    "tabindex", "value", "width");
+var taginputcheck = new Array ("<form><input type=checkbox", " name=chk1 value='chk1'",
+                    ">The control before this was Input type=checkbox, checked",
+                    "</form>", 7, "accesskey", "align", "checked", "disabled",
+                    "name", "tabindex", "value");
+var taginputfile  = new Array ("<form><input type=file", " name=file1 value='file1'",
+                    ">The control before this was Input type=file", "</form>",
+                    10, "accept", "accesskey", "align", "disabled", "maxlength",
+                    "name", "readonly", "size", "tabindex", "value");
+var taginputimage = new Array ("<form><input type=image", " name=iimg1 value='iimg1' src='http://www.blooberry.com/pics/left.gif' alt='input image alt' height=100 width=100",
+                    ">The control before this was Input type=image, src=http://www.blooberry.com/pics/left.gif, height/width=100, alt='input image alt'", "</form>",
+                    18, "accesskey", "align", "alt", "border", "disabled",
+                    "dynsrc", "height", "hspace", "ismap", "loop", "lowsrc",
+                    "name", "src", "tabindex", "usemap", "value", "vspace", "width");
+var taginputpasswd = new Array ("<form><input type=password", " name=pw1 value='pw1'",
+                    ">The control before this was Input type=password", "</form>", 13, "accesskey", "align", "autocomplete",
+                    "disabled", "height", "maxlength", "name", "readonly", "size",
+                    "tabindex", "value", "vcard_name", "width");
+var taginputradio = new Array ("<form><input type=radio", " name=rad1 value='rad1'",
+                    ">The control before this was Input type=radio", "</form>", 7, "accesskey", "align",
+                    "checked", "disabled", "name", "tabindex", "value");
+var taginputreadonly = new Array ("<form><input type=readonly", " name=ro1 value='ro1'",
+                    ">The control before this was Input type=readonly (Netscape)",
+                    "</form>", 4, "maxlength", "name", "size", "value");
+var taginputreset = new Array ("<form><input type=reset", " name=reset1 value='input reset'",
+                    ">The control before this was Input type=reset", "</form>",
+                    7, "accesskey", "align", "disabled", "height", "tabindex",
+                    "value", "width");
+var taginputsub   = new Array ("<form><input type=submit", " name=sub1 value='input submit'",
+                    ">The control before this was Input type=submit", "</form>",
+                    8, "accesskey", "align", "disabled", "height", "name",
+                    "tabindex", "value", "width");
+var taginputtext  = new Array ("<form><input type=text", " name=txt1 value='txt1'",
+                    ">The control before this was Input type=text", "</form>",
+                    13, "accesskey", "align", "autocomplete", "disabled",
+                    "height", "maxlength", "name", "readonly", "size",
+                    "tabindex", "value", "vcard_name", "width");
+var tagins        = new Array ("<ins", "", ">This is INS. ", " inserted content</ins>",
+                    2, "cite", "datetime");
+var tagisindex    = new Array ("<isindex", " prompt='this is an isindex prompt", ">", "",
+                    8, "action", "align", "enctype", "height", "method", "prompt", "target", "width");
+var tagkbd        = new Array ("<kbd", "", ">This is KBD. ", " keyboard content</kbd>", 0);
+var taglabel      = new Array ("<form><fieldset><legend>Gender</legend><label",
+                   " for=vote", "><input type=checkbox id=vote value=Yes> Yes (id=vote)", "</label></fieldset></form>",
+                   2, "accesskey", "for");
+var taglayer      = new Array ("<layer", " name=two left=40 top=100 z-index=2",
+                    "><font size=7 color='#0000ff'>Layer Two zindex=2</font> </layer>\n",
+                    "<layer name=one left=25 top=90 z-index=1><font size=7 color='#ffff00'>Layer One zindex=1</font> </layer>\n",
+                    16, "above", "background", "below", "bgcolor", "clip",
+                    "height", "left", "name", "overflow", "pagex", "pagey",
+                    "src", "top", "visibility", "width", "z-index");
+var taglegend     = new Array ("<form><fieldset align=right><legend", "", ">Gender</legend>\n<label ACCESSKEY=M><input TYPE=RADIO NAME=Gender VALUE=Male>Male</label><br>\n<label for='genderf' ACCESSKEY=F></label> <input TYPE=RADIO NAME=Gender id='genderf' VALUE=Female>Female\n",
+                    "</fieldset>\n</form>", 2, "accesskey", "align");
+var tagli         = new Array ("<ul><li>This is UL:LI21.<li", "", ">This is UL:LI2 ",
+                    "<li>This is the last UL:LI</ul>",
+                    6, "align", "clear", "height", "type", "value", "width");
+var taglink       = new Array ("<link", "rel=stylesheet type='text/css' href='test.css'", ">", "",
+                    15, "charset", "disabled", "href", "hreflang", "language",
+                    "media", "methods", "name", "rel", "rev", "src", "target",
+                    "title", "type", "urn");
+var taglisting    = new Array ("<listing", "", ">This is LISTING. ", " listing content</listing>",
+                    3, "align", "height", "width");
+var tagmap        = new Array ("<img src='http://www.blooberry.com/pics/right.gif' usemap='#map1'>\n<map",
+                    " name=map1", "><area shape=rect coords='0,0,20,20' href='http://www.blooberry.com'><area shape=rect coords='20,0,40,20' href='http://www.yahoo.com/'>", "</map>",
+                    1, "name");
+var tagmarquee    = new Array ("<marquee", " ALIGN=Top LOOP='-1' BEHAVIOR=scroll BGCOLOR='#FF0000' DIRECTION=left HEIGHT=30 WIDTH=400", ">MARQUEE Sliding Text Example",
+                    "Text at the end of the marquee</marquee>", 11, "behavior", "bgcolor",
+                    "direction", "height", "hspace", "loop", "scrollamount", "scrolldelay",
+                    "truespeed", "vspace", "width");
+var tagmenu       = new Array ("<menu", "", "><li>This is MENU:LI1.<li>This is MENU:LI2 ",
+                    "<li>This is the last MENU:LI</menu>", 7, "align", "clear", "compact",
+                    "height", "start", "type", "width");
+var tagmeta       = new Array ("<meta", " http-equiv=refresh content='5'", ">", "",
+                    4, "content", "http-equiv", "name", "scheme");
+var tagmulticol   = new Array ("<multicol", " COLS=3 WIDTH='80%' GUTTER=20",
+                    ">This is MULTICOL layout text that should be distributed evenly across 3 columns",
+                    " This is multi-column content</multicol>", 3, "cols", "gutter", "width");
+var tagnobr       = new Array ("<nobr", "", ">This is NOBR. ",
+                    " long content that should never break at all. It is just an example and no one should look very closely. If they do they might be sorry. nobreak content</nobr>", 0);
+var tagnoembed    = new Array ("<noembed", "", ">This is NOEMBED. ", " noembed content</noembed>", 0);
+var tagnoframes   = new Array ("<noframes", "", ">This is NOFRAMES. ", " noframes content</noframes>", 0);
+var tagnolayer    = new Array ("<nolayer", "", ">This is NOLAYER. ", " nolayer content</nolayer>", 0);
+var tagnoscript   = new Array ("<noscript", "", ">This is NOSCRIPT. ", " noscript content</noscript>", 0);
+var tagobject     = new Array ("<object", " type='image/gif' data='http://www.blooberry.com/pics/right.gif' height=100 width=100>",
+                    ">This is a multimedia object. ", "object multimedia content</object>",
+                    19, "accesskey", "align", "archive", "border", "classid", "code",
+                    "codebase", "codetype", "data", "declare", "height", "hspace", "name",
+                    "standby", "tabindex", "type", "usemap", "vspace", "width");
+var tagol         = new Array ("<ol", "", "><li>This is OL:LI1.<li>This is OL:LI2 ",
+                    "<li>This is the last OL:LI</ol>", 7, "align", "clear", "compact",
+                    "height", "start", "type", "width");
+var tagoptgroup   = new Array ("<form><select name=optg1>\n<option label=Bill value=bill>Bill Smith\n<option label=Mary VALUE=mary>Mary Smith\n<optgroup",
+                    " LABEL=Joe", ">\n<option VALUE=michael>Michael Smith\n<option VALUE=susan>Susan Smith\n",
+                    "<option value=howard>Howard Smith\n</optgroup>\n</select></form>",
+                    2, "disabled", "label");
+var tagoption     = new Array ("<form><select name=op1><option value=o1>Option 1<option",
+                    "", ">Option 2", "<option>Option Last</select></form>",
+                    4, "disabled", "label", "selected", "value");
+var tagp          = new Array ("<p", "", ">This is P content", " paragraph content",
+                    2, "align", "clear", "height", "width");
+var tagplaintext  = new Array ("<plaintext", "", ">This is PLAINTEXT. ",
+                    " plaintext content</plaintext>", 0);
+var tagpre        = new Array ("<pre", "", ">This         is     PRE. ",
+                    " preformatted    text           content</pre>",
+                    5, "clear", "cols", "variable", "width", "wrap");
+var tagq          = new Array ("<q", "", ">This is Q. ", " quotation content</q>", 1, "cite");
+var tagruby       = new Array ("<ruby", "", ">Ruby Base ", "<rt>Ruby Text</rt></ruby>", 1, "name");
+var tags          = new Array ("<s", "", ">This is S. ", " strike1 content</s>", 0);
+var tagsamp       = new Array ("<samp", "", ">This is SAMP. ", " sample content</samp>", 0);
+var tagselect     = new Array ("<form><select", " name='select'", "><option value='sval1'>This is SELECT 1. ", " <option value='svalfin'>final select content</select></form>",
+                    8, "accesskey", "align", "disabled", "multiple", "name", "size", "tabindex", "width");
+var tagsmall      = new Array ("<small", "", ">This is SMALL. ", " small content</small>", 0);
+var tagspacer     = new Array ("<spacer", " type=block height=100 width=100",
+                    ">That was a Netscape Spacer of type=block with height/width=100",
+                    "", 5, "align", "height", "size", "type", "width");
+var tagspan       = new Array ("<span", "", ">This is SPAN. ", " span content</span>", 0);
+var tagspell      = new Array ("<spell", "", ">This is SPELL. ", " spell content</spell>", 0);
+var tagstrike     = new Array ("<strike", "", ">This is STRIKE. ", " strikethrough content</strike>", 0);
+var tagstrong     = new Array ("<strong", "", ">This is STRONG. ", " strong content</strong>", 0);
+var tagstyle      = new Array ("<style", " type='text/css'", ">", "</style>",
+                    5, "disabled", "language", "media", "title", "media");
+var tagsub        = new Array ("<sub", "", ">This is SUB. ", " subscript content</sub>", 0);
+var tagsup        = new Array ("<sup", "", ">This is SUP. ", " superscript content</sup>", 0);
+var tagtable      = new Array ("<table", " border=1", "><tr><th>TABLE cell one<br>is TH</th>",
+                    "<td>Final TABLE cell<br>is TD</td></tr></table>", 23, "align", "background",
+                    "bgcolor", "border", "bordercolor", "bordercolordark", "bordercolorlight",
+                    "bottompadding", "cellpadding", "cellspacing", "clear", "cols",
+                    "datapagesize", "frame", "height", "hspace", "leftpadding", "rightpadding",
+                    "rules", "summary", "toppadding", "vspace", "width");
+var tagtbody      = new Array ("<table border=1 rules=groups><caption>caption: table has border=1, rules=groups</caption><thead><tr><th>cell 1</th><th>cell 2</th></tr><tr><th>cell 3</th><th>cell 4</th></tr></thead><tbody",
+                    " bgcolor=green", "><tr><th>tbody TH 1</th><td>tbody TD 2</td></tr><tr><td>tbody TD 3</td><th>tbody TH 4</th></tr>",
+                    "<tr><th>final TBODY TH cell</th><td>final TBODY TD cell</td></tr></tbody><tfoot><tr><th>cell 1</th><th>cell 2</th></tr></tfoot></table>",
+                    5, "align", "bgcolor", "char", "charoff", "valign");
+var tagtd         = new Array ("<table border=1><tr><td" , "", ">TABLE cell TD one",
+                    "<br>is TD</td><th>Final TABLE cell<br>is TH</th></tr></table>",
+                    18, "abbr", "align", "axis", "background", "bgcolor",
+                    "bordercolor", "bordercolordark", "bordercolorlight", "char",
+                    "charoff", "colspan", "headers", "height", "nowrap", "rowspan",
+                    "scope", "valign", "width");
+var tagtextarea   = new Array ("<form><textarea", " rows='3' cols='40' name='ta1'", ">textarea content. ",
+                    "Textarea content again</textarea></form>", 8, "accesskey", "cols",
+                    "disabled", "height", "name", "readonly", "rows", "tabindex", "width", "wrap");
+var tagtfoot      = new Array ("<table border=1 rules=groups><caption>caption: table has border=1, rules=groups</caption><thead><tr><th>cell 1</th><th>cell 2</th></tr><tr><th>cell 3</th><th>cell 4</th></tr></thead><tbody><tr><th>tbody TH 1</th><td>tbody TD 2</td></tr><tr><td>tbody TD 3</td><th>tbody TH 4</th></tr>",
+                    "<tr><th>final TBODY TH cell</th><td>final TBODY TD cell</td></tr></tbody><tfoot",
+                    " bgcolor=green",
+                    "><tr><th>foot TH 1</th><td>foot TD 2</td></tr></tfoot></table>",
+                    5, "align", "bgcolor", "char", "charoff", "valign");
+var tagth         = new Array ("<table border=1><tr><th" , "", ">TABLE cell TH one",
+                    "<br>is TH</th><td>Final TABLE cell<br>is TD</td></tr></table>",
+                    18, "abbr", "align", "axis", "background", "bgcolor",
+                    "bordercolor", "bordercolordark", "bordercolorlight", "char",
+                    "charoff", "colspan", "headers", "height", "nowrap", "rowspan",
+                    "scope", "valign", "width");
+var tagthead      = new Array ("<table border=1 rules=groups><caption>caption: table has border=1, rules=groups</caption><thead",
+                    " bgcolor=green", "><tr><th>thead TH 1</th><td>thead TD 2</td></tr><tr><td>thead TD 3</td><th>thead TH 4</th></tr>",
+                    "</thead><tbody><tr><th>tbody TH 1</th><td>tbody TD 2</td></tr><tr><td>tbody TD 3</td><th>tbody TH 4</th></tr><tr><th>final TBODY TH cell</th><td>final TBODY TD cell</td></tr></tbody><tfoot><tr><th>foot TH 1</th><td>foot TD 2</td></tr></tfoot></table>",
+                    5, "align", "bgcolor", "char", "charoff", "valign");
+var tagtitle      = new Array ("<title", "", ">", "</title>", 0);
+var tagtr         = new Array ("<table border=1><tr", "", "><th>TABLE cell TH one",
+                    "<br>is TH</th><td>Final TABLE cell<br>is TD</td></tr><tr><td>cell 3 is a longer cell, but you like it that way</td><th>cell 4</th></tr></table>",
+                    11, "align", "background", "bgcolor", "bordercolor", "bordercolordark",
+                    "bordercolorlight", "char", "charoff", "height", "nowrap", "valign");
+var tagtt         = new Array ("<tt", "", ">This is TT. ", " teletype content</tt>", 0);
+var tagu          = new Array ("<u", "", ">This is U. ", " underlined content</u>", 0);
+var tagul         = new Array ("<ul", "", "><li>This is UL:LI21.<li>This is UL:LI2 ",
+                    "<li>This is the last UL:LI</ul>", 7, "align", "clear", "compact",
+                    "height", "start", "type", "width");
+var tagvar        = new Array ("<var", "", ">This is VAR. ", " variable content</var>", 0);
+var tagwbr        = new Array ("<wbr", "", ">Wordbreak was just before", "", 0);
+var tagxml        = new Array ("<xml", "", ">This is XML. ", " XML content</xml>",
+                    3, "ns", "prefix", "src");
+var tagxmp        = new Array ("<xmp", "", ">This is XMP. ", " example content</xmp>", 0);
+
+function flattenQuotes(val)
+{
+var fqLen = val.length;
+for (fq1=0;fq1<fqLen;fq1++)
+    {
+     if (val.substring(fq1,fq1+1) == "\"")
+        { val = val.substring(0,fq1) + "'" + val.substring(fq1+1,fqLen); }
+    }
+return (val);
+}
+
+function escapeQuotes(val)
+{
+var eqLen  = val.length;
+var newStr = "";
+for (eq1=0;eq1<eqLen;eq1++)
+    {
+     if (val.substring(eq1,eq1+1) == "\"")
+        { newStr = newStr + "''"; }
+     else
+        { newStr = newStr + val.substring(eq1,eq1+1); }
+    }
+return (newStr);
+}
+
+function unescapeQuotes(val)
+{
+var uqLen  = val.length;
+var newStr = "";
+var uq1    = 0;
+while (uq1<uqLen)
+    {
+     if (val.substring(uq1,uq1+2) == "''")
+        { newStr = newStr + "\""; uq1++; uq1++ }
+     else
+        { newStr = newStr + val.substring(uq1,uq1+1); uq1++ }
+    }
+return (newStr);
+}
+
+function syncSelect(radnum)
+{
+var ssFrm  = frames[0].document.forms[0].test;
+var ssType = "stdTagArray";
+var sseencounter = 0;
+
+if (radnum == 0)      { ssType = "stdTagArray"; }
+else if (radnum == 1) { ssType = "html4Strict"; }
+else if (radnum == 2) { ssType = "html4Trans"; }
+else if (radnum == 3) { ssType = "tagArray"; }
+else                  { ssType = "other"; }
+
+if (ssType != "other")
+   {
+    for (ss1=0;ss1<tagArray.length;ss1++)
+        {
+         ssFrm.options[ss1].selected = false; // reset vals for curr. option
+         if (eval(ssType + ".length") != 0 &&
+             tagArray[ss1] == eval(ssType + "[sseencounter]"))
+            { ssFrm.options[ss1].selected = true; sseencounter++; }
+        }
+   }
+}
+
+// Prints HTML output headers and footers
+function writeHeaders(frameNum)
+{
+frames[frameNum].document.open();
+frames[frameNum].document.write("<html>\n<head>\n");
+frames[frameNum].document.write("<style>\n.label { background-color: green; font-family: " +
+      "arial; font-size: 14pt; }\n.caption { font-family: tahoma; font-size: 7pt; }\n" +
+      ".greyed { font-family: tahoma; font-size: 7pt; color: #666666 }\n" +
+      "a.rslt { color: black; text-decoration: none }\n" +
+      ".body th, .body td { font-size: 8pt; font-family: tahoma }\n.hdr { font-size: 9pt; " +
+      "font-weight: bold; font-family: tahoma; color: maroon }\n" +
+      ".frmhdr { font-size: 11pt; font-weight: bold; font-family: tahoma; " +
+      "color: maroon; background-color: white; margin-top: 5px; " +
+      "margin-bottom: 1px }\n</style>\n</head>\n\n");
+}
+
+function writeFooters(frameNum)
+{
+frames[frameNum].document.write("\n</body>\n</html>\n");
+frames[frameNum].document.close();
+}
+
+function writeContent(frameNum, message)
+{ frames[frameNum].document.write(message + "\n"); }
+
+function makeFirstState() // prints form in frame 0 for selecting elems to test
+{
+var mfsflag = false;
+var mfsseencounter = 0;
+
+var content = "<body class=body>\n<form name=query><b class=label>HTML Elements to Test</b><br>\n" +
+    "<table border=0 cellspacing=0 cellpadding=0>\n<tr><th rowspan=11>&nbsp;&nbsp;&nbsp;&nbsp;" +
+    "</th><th align=left colspan=3><div class=frmhdr>Choose Elements</div><hr></th></tr>\n" +
+    "<tr><th valign=top align=left><table border=0 cellspacing=0 cellpadding=0>\n" +
+    "<tr><th nowrap align=left><input type=radio name=html1 " +
+     "onclick=\"parent.htmlarraytype='default';parent.syncSelect(0);\"";
+if (htmlarraytype == "default")
+   { content = content + " checked"; }
+content = content + ">&nbsp;Default Set<br><input type=radio name=html1 " +
+     "onclick=\"parent.htmlarraytype='html4strict';parent.syncSelect(1);\"";
+if (htmlarraytype == "html4strict")
+   { content = content + " checked"; }
+content = content + ">&nbsp;HTML4 Strict<br><input type=radio name=html1 " +
+     "onclick=\"parent.htmlarraytype='html4trans';parent.syncSelect(2);\"";
+if (htmlarraytype == "html4trans")
+   { content = content + " checked"; }
+content = content + ">&nbsp;HTML4 Trans<br><input type=radio name=html1 " +
+     "onclick=\"parent.htmlarraytype='all';parent.syncSelect(3);\"";
+if (htmlarraytype == "all")
+   { content = content + " checked"; }
+content = content + ">&nbsp;All<br><input type=radio name=html1 " +
+     "onclick=\"parent.htmlarraytype='other';parent.syncSelect(4);\"";
+if (htmlarraytype == "other")
+   { content = content + " checked"; }
+content = content + ">&nbsp;Other</th></tr></table>\n</th>\n\n<th>&nbsp;&nbsp;&nbsp;</th>" +
+    "<th align=left><select multiple align=bottom size=7 " +
+    "onclick=\"document.forms[0].html1[4].checked=true;parent.htmlarraytype='other';\" name='test'>\n";
+
+for (mfs1=0;mfs1<tagArray.length;mfs1++)
+    {
+     content = content + "\n<option value='" + tagArray[mfs1] + "'";
+     if (htmlarray.length != 0 && (tagArray[mfs1]) == htmlarray[mfsseencounter])
+        // handle non=beginning entry to output and preselect existing tags
+        { content = content + " selected"; mfsseencounter++; }
+     content = content + ">" + tagArray[mfs1];
+    }
+content = content + "\n</select>\n</th></tr>\n" +
+    "<tr><th colspan=3><font size=1>&nbsp;</font></th></tr>\n" +
+    "<tr><th align=left colspan=3><div class=frmhdr>Document Options</div><hr></th></tr>" +
+    "<tr><th colspan=3 align=left><input type=checkbox name=bodyattr";
+if (strBodyExtra == "")  { content = content + " checked"; }
+content = content + ">&nbsp;Use BODY default attributes</th></tr>\n";
+
+for (mfs2=0;mfs2<attribsarray.length;mfs2++) // make this into a while loop for optimization
+    { if (attribsarray[mfs2] != "") { mfsflag = true; } }
+content = content + "<tr><th colspan=3 align=left><input type=checkbox name=defattr";
+if (mfsflag == false)  { content = content + " checked"; }
+content = content + ">&nbsp;Use element default attributes</th></tr>\n";
+
+content = content + "<tr><th colspan=3 align=left><input type=checkbox name=defgen";
+if (strGenAttr == "" && strEventAttr == "" && strCustAttr == "")
+   { content = content + " checked"; }
+content = content + ">&nbsp;Skip global attributes</th></tr>\n";
+
+content = content + "<tr><th colspan=3 align=left><input type=checkbox name=defcont";
+if (strCntBef == "" && strCntDur == "" && strCntAft == "")
+   { content = content + " checked"; }
+content = content + ">&nbsp;Use default content</th></tr>\n" +
+    "<tr><th colspan=3 align=center><hr size=5><input type=button value='     Next &gt;     ' " +
+    "onclick='parent.processForm1(document.forms[0].html1,document.forms[0].bodyattr,\n" +
+    "document.forms[0].defattr,document.forms[0].defgen,document.forms[0].defcont,\n" +
+    "document.forms[0].test);'><hr size=5></th></tr></table>\n</form>\n";
+
+writeHeaders(0); writeContent(0, content); writeFooters(0);
+makeStatusFrame(1);
+}
+
+function makeSecondState() // prints the form in frame 0 for selecting attribs to test
+{
+var content = "<body class=body>\n<form name=query><b class=label>Attributes to Test</b><br><br>\n" +
+    "<table border=0 cellspacing=0 cellpadding=0>";
+if (!boolDefBody)  // only write this part if we need to populate BODY attribs
+   {
+     content = content + "<tr><th></th><th colspan=2 " +
+               " align=left><div class=frmhdr>body</div></th></tr>\n";
+     content = content + "<tr><th></th><th><input type=checkbox name=chkcustbody";
+     if (!boolDefBody && strBodyExtra != "") { content = content + " checked"; }
+     content = content + "></th><th align=left>Custom</th></tr>\n" +
+               "<tr><th></th><th></th><th align=left><input type=text name=txtcustbody " +
+               "onchange=\"document.forms[0].chkcustbody.checked=true;\"";
+     if (!boolDefBody && strBodyExtra != "")
+        { content = content + " value=\"" + flattenQuotes(strBodyExtra) + "\""; }
+     content = content + "></th></tr><tr><th></th><th></th><th><hr></th></tr>\n";
+     for (mssloop0=1;mssloop0<tagbody[4];mssloop0++)
+         {
+           content = content + "<tr><th></th><th><input type=checkbox name=chkbody" +
+           eval("tagbody[" + (mssloop0+5) + "]") + "></th><th align=left>" +
+           eval("tagbody[" + (mssloop0+5) + "]") + "</th></tr>\n" +
+           "<tr><th></th><th></th><th align=left><input type=text name=txtbody" +
+           (mssloop0 + "") + " onchange=\"document.forms[0].chkbody" +
+           eval("tagbody[" + (mssloop0+5) + "]") + ".checked=true;\"" +
+           (mssloop0 + "") + "></th></tr>\n";
+         }
+     content = content + "<tr><th></th><th colspan=2><hr size=5></th></tr>";
+   }
+if (!boolDefAttribs) // only write this part if we need to populate other attribs
+{
+for (mssloop1=0;mssloop1<htmlarray.length;mssloop1++)
+    {
+     content = content + "<tr><th></th><th colspan=2 " +
+               "align=left><div class=frmhdr>" + htmlarray[mssloop1] + "</div></th></tr>\n";
+     content = content + "<tr><th></th><th><input type=checkbox name=chkcust" + htmlarray[mssloop1];
+     if (!boolDefAttribs && attribsarray[mssloop1] != "")
+        { content = content + " checked"; }
+     content = content + "></th><th align=left>Custom</th></tr>\n" +
+               "<tr><th></th><th></th><th align=left><input type=text name=txtcust" +
+               htmlarray[mssloop1] + " onchange=\"document.forms[0].chkcust" +
+               htmlarray[mssloop1] + ".checked=true;\""; ;
+     if (!boolDefAttribs && attribsarray[mssloop1] != "")
+        { content = content + " value=\"" + flattenQuotes(attribsarray[mssloop1]) + "\""; }
+     content = content + htmlarray[mssloop1] + "></th></tr>\n";
+
+     var strTmp = eval("tag"+ htmlarray[mssloop1]);
+     var len    = eval(strTmp[4]);
+     if (len != 0)
+        {
+        content = content + "<tr><th></th><th colspan=2><hr></th></tr>";
+         for (mssloop2=1;mssloop2<=len;mssloop2++)
+             {
+             //variable names need to change
+              content = content + "<tr><th></th><th><input type=checkbox name=chk" +
+              htmlarray[mssloop1] + eval("strTmp[" + (mssloop2+4) + "]") +
+              "></th><th align=left>" + eval("strTmp[" + (mssloop2+4) + "]") + "</th></tr>\n" +
+              "<tr><th></th><th></th><th align=left><input type=text name=txt" +
+              htmlarray[mssloop1] + (mssloop2 + "") +
+              " onchange=\"document.forms[0].chk" + htmlarray[mssloop1] +
+              eval("strTmp[" + (mssloop2+4) + "]") + ".checked=true;\"></th></tr>\n";
+             }
+        }
+     content = content + "<tr><th></th><th colspan=2><hr size=5></th></tr>";
+    }
+}
+
+if (boolDefBody && boolDefAttribs)   // handle boundary case of re-entry from non-1 state
+   { content = content + "<tr><th></th><th align=left colspan=2>Body and Attributes Selection " +
+     "never chosen. Return to step one to enable.<hr size=5></th></tr>"; }
+
+content = content +
+    "<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;</th><th colspan=2 align=center><input " +
+    "type=button value='     Next &gt;     ' onclick='parent.processForm2();'><hr size=5>" +
+    "</th></tr></table></form>\n";
+
+writeHeaders(0); writeContent(0, content); writeFooters(0);
+makeStatusFrame(2);
+}
+
+function makeThirdState() // prints form in frame 0 for creating global attributes
+{
+var content = "<body class=body>\n<form name=query>\n" +
+    "<table border=0 cellspacing=0 cellpadding=0>\n" +
+    "<tr><th align=left colspan=3><b class=label>Global Attributes</b></th></tr>\n" +
+    "<tr><th rowspan=6>&nbsp;&nbsp;&nbsp;&nbsp;</th>" +
+    "<th valign=bottom><input type=checkbox name=genattribcheck></th>\n    " +
+    "<th align=left><div class=frmhdr>Generic Attributes</div></th></tr>\n"  +
+    "<tr><th></th><th align=left><select multiple size=4 align=bottom " +
+    "onchange=\"document.forms[0].genattribcheck.checked=true;\" name='galist'>\n";
+for (mts1=0;mts1<genatts.length;mts1++)
+    { content = content + "<option value='" + genatts[mts1] + "'>" + genatts[mts1] + "\n"; }
+content = content + "</select>\n</th></tr>" +
+    "<tr><th></th><th align=left class=hdr>Attribute Values</th></tr>\n" +
+    "<tr><th colspan=2 align=left>&nbsp;&nbsp;&nbsp;" +
+    "&nbsp;&nbsp;&nbsp;<input type=text name=genattcustval " +
+    "onchange=\"document.forms[0].genattribcheck.checked=true;\"" +
+    "size=15></th></tr>\n<tr><th colspan=2>" +
+    "<hr></th></tr>\n<tr><th valign=bottom><input type=checkbox " +
+    "name=eventattribcheck></th>\n    <th align=left colspan=2 " +
+    "><div class=frmhdr>Event Attributes</div></th></tr>\n<tr><th " +
+    "rowspan=10>&nbsp;&nbsp;&nbsp;&nbsp;</th><th></th><th " +
+    "align=left><select multiple size=4 align=bottom " +
+    "onchange=\"document.forms[0].eventattribcheck.checked=true;\" name='ealist'>\n";
+for (mts2=0;mts2<events.length;mts2++)
+    { content = content + "<option value='" + events[mts2] + "'>" + events[mts2] + "\n"; }
+
+content = content + "</select>\n</th></tr>\n" +
+    "<tr><th></th><th align=left class=hdr>Attribute Values</th></tr>\n" +
+    "<tr><th></th><th align=left><input type=radio " +
+    "name=eventrad value=yes> Default</th>\n</tr>\n<tr><th></th><th " +
+    "align=left><input type=radio name=eventrad " +
+    "value=yes> Custom</th></tr>\n<tr><th></th><th align=left>&nbsp;&nbsp;&nbsp;" +
+    "&nbsp;&nbsp;&nbsp;<input type=text name=eventattcustval " +
+    "onchange=\"document.forms[0].eventattribcheck.checked=true;" +
+    "document.forms[0].eventrad[1].checked=true;\" size=15></th></tr>\n" +
+    "<tr><th colspan=2></th></tr>\n<tr><th colspan=2><hr></th></tr>" +  // hello
+    "<tr><th valign=bottom><input type=checkbox name=custattribcheck";
+if (strEventAttr != "") {strCustAttr = strEventAttr + strCustAttr; strEventAttr = "";}
+if (strGenAttr != "")   {strCustAttr = strGenAttr + strCustAttr; strGenAttr = "";}
+if (strCustAttr != "")  { content = content + " checked"; boolDefGeneral  = false; }
+   // this forces process to use this screen next time around
+content = content + "></th>\n    " +
+    "<th align=left colspan=2 nowrap><div class=frmhdr>Custom Attribute/Value</div></th></tr>\n" +
+    "<tr><th></th><th align=left><input type=text name=custattcustval " +
+    "onchange=\"document.forms[0].custattribcheck.checked=true;\"";
+if (strCustAttr != "")  { content = content + " value=\"" + escapeQuotes(strCustAttr) + "\""; }
+content = content +" size=15></th></tr>" +
+    "<tr><th colspan=2 align=center><hr size=5><input type=button value='     Next >     ' \n" +
+    "onclick='parent.processForm3(document.forms[0].genattribcheck,\n" +
+    "document.forms[0].galist,document.forms[0].genattcustval.value," +
+    "\ndocument.forms[0].eventattribcheck,document.forms[0].ealist,\n" +
+    "document.forms[0].eventrad,document.forms[0].eventattcustval.value,\n" +
+    "document.forms[0].custattribcheck,document.forms[0].custattcustval.value);'>" +
+    "<hr size=5></th></tr></table>\n</form>\n";
+
+writeHeaders(0); writeContent(0, content); writeFooters(0);
+}
+
+function makeFourthState() // prints the form in frame 0 for creating custom content
+{
+var content = "<body class=body>\n<form name=query><b class=label>Content to Test</b><br>\n" +
+    "<table border=0 cellspacing=0 cellpadding=0>\n<tr><th rowspan=13>&nbsp;&nbsp;" +
+    "&nbsp;&nbsp;</th><th align=left colspan=2><div class=frmhdr>Content Before?</div></th>" +
+    "</tr>\n<tr><th><input type=radio name=before1 value=cb1 ";
+if (strCntBef == "") { content = content + "checked"; } // set to default
+content = content + "></th><th align=left>Default (None)</th></tr>\n" +
+    "<tr><th><input type=radio name=before1 value=cb2 ";
+if (strCntBef != "") { content = content + "checked"; }
+content = content + "></th><th align=left>Custom</th></tr>\n" +
+    "<tr><th>&nbsp;</th><th align=left><input type=text name=cbtext size=15 " +
+    "onchange=\"document.forms[0].before1[1].checked=true;\"";
+if (strCntBef != "") { content = content + "value=\"" + strCntBef + "\""; }
+
+content = content + "></th></tr>\n" +
+    "<tr><th align=left colspan=2><div class=frmhdr>Content During?</div></th></tr>\n" +
+    "<tr><th><input type=radio name=during1 value=cd1 ";
+if (strCntDur == "") { content = content + "checked"; } // set to default
+content = content + "></th><th align=left>Default</th></tr>\n" +
+    "<tr><th><input type=radio name=during1 value=cd2 ";
+if (strCntDur != "") { content = content + "checked"; }
+content = content + "></th><th align=left>Custom</th></tr>\n" +
+    "<tr><th>&nbsp;</th><th align=left><input type=text name=cdtext size=15 " +
+    "onchange=\"document.forms[0].during1[1].checked=true;\"";
+if (strCntDur != "") { content = content + "value=\"" + strCntDur + "\""; }
+content = content + "></th></tr>\n" +
+
+    "<tr><th align=left colspan=2><div class=frmhdr>Content After?</div></th></tr>\n" +
+    "<tr><th><input type=radio name=after1 value=ca1 ";
+if (strCntAft == "") { content = content + "checked"; } // set to default
+content = content + "></th><th align=left>Default (None)</th></tr>\n" +
+    "<tr><th><input type=radio name=after1 value=ca2 ";
+if (strCntAft != "") { content = content + "checked"; } // set to default
+content = content + "></th><th align=left>Custom</th></tr>\n" +
+    "<tr><th>&nbsp;</th><th align=left><input type=text name=catext size=15 " +
+    "onchange=\"document.forms[0].after1[1].checked=true;\"";
+if (strCntAft != "") { content = content + "value=\"" + strCntAft + "\""; }
+
+content = content + "></th></tr>\n" +
+    "<tr><th colspan=2 align=center><hr size=5><input type=button value='     Next &gt;     ' " +
+    "onclick='parent.processForm4(document.forms[0].before1,document.forms[0].during1," +
+    "document.forms[0].after1,document.forms[0].cbtext.value," +
+    "document.forms[0].cdtext.value,document.forms[0].catext.value);'><hr size=5></th></tr></table></form>\n";
+
+writeHeaders(0); writeContent(0, content); writeFooters(0);
+makeStatusFrame(4);
+}
+
+function processForm1(elemradio,bodyattrcheck,defattrcheck,defattrgen,defcontcheck,elemlist)
+{
+if (htmlarraytype != "other")
+   {
+    if (htmlarraytype == "default")
+       { htmlarray = stdTagArray; }
+    else if (htmlarraytype == "html4strict")
+       { htmlarray = html4Strict; }
+    else if (htmlarraytype == "html4trans")
+       { htmlarray = html4Trans; }
+    else
+       { htmlarray = tagArray; }
+    var len   = htmlarray.length;
+    for (looppf1=0;looppf1<len;looppf1++)  // zero the attribs array
+        { attribsarray[looppf1] = ""; }
+   }
+
+else
+   {
+    htmlarray = new Array ();
+    var len   = elemlist.length;
+    var count = 0;
+    for (looppf12=0;looppf12<len;looppf12++)
+        {
+         if (elemlist.options[looppf12].selected)
+            {
+             htmlarray[count] = elemlist.options[looppf12].value;
+             attribsarray[count] = "";
+             count++;
+            }
+        }
+   }
+
+// Set the entry state booleans. True means use the defaults. Need to explicitly
+// set both states because state may be inherited from a non-1 form
+if   (defattrcheck.checked)
+     { boolDefAttribs  = true; }
+else { boolDefAttribs  = false; }
+if   (bodyattrcheck.checked)
+     { boolDefBody     = true; }
+else { boolDefBody     = false; }
+if   (defattrgen.checked)
+     { boolDefGeneral  = true; boolDefGenEvent = true; boolDefCustom = true; strCustAttr = ""; }
+else { boolDefGeneral  = false; }
+
+if (defcontcheck.checked)
+    { boolDefContent  = true;
+      strCntBef = ""; strCntDur = ""; strCntAft = "";
+    } // these vars are zeroed but we should inherit the vals instead
+else { boolDefContent = false; }
+
+if (boolDefAttribs && boolDefBody && boolDefGeneral && !boolDefContent)
+   // boundary condition: only custom content
+   { makeStatusFrame(4); makeFourthState(); }
+else if (boolDefBody && boolDefAttribs && !boolDefGeneral)
+   // boundary condition: only generic attributes
+   { makeStatusFrame(3); makeThirdState(); }
+else if (boolDefBody && boolDefAttribs && boolDefGeneral && boolDefContent)
+   // boundary condition: All are defaults
+   { makeStatusFrame(5); renderNow("reg"); }
+else   // general condition: enter custom attributes
+   { makeStatusFrame(2); makeSecondState(); }
+}
+
+function processForm2()
+// This processes the attributes form
+{
+var attForm = frames[0].document.forms[0];
+if (!boolDefBody) {
+strBodyExtra = "";
+if (attForm.chkcustbody.checked && attForm.txtcustbody.value != "")
+   { strBodyExtra = strBodyExtra + " " + attForm.txtcustbody.value; }
+for (pf20=1;pf20 < tagbody[4];pf20++)         // loop through all attributes for the element
+    {
+     if (eval("attForm.chkbody" + tagbody[pf20 + 5] + ".checked") &&
+         eval("attForm.txtbody" + pf20 + ".value") != "")
+             {
+              strBodyExtra = strBodyExtra + " " + tagbody[pf20 + 5] +
+              "=\"" + eval("attForm.txtbody" + pf20 + ".value") + "\"";
+             }
+    }
+}
+
+if (!boolDefAttribs) {
+for (pf21=0;pf21<htmlarray.length;pf21++) // for every element we have spec'ed
+    {
+     var strTmp = eval("tag"+ htmlarray[pf21]);
+     var len    = eval(strTmp[4]);
+     attribsarray[pf21] = "";
+
+     for (pf22=1;pf22<=len;pf22++)         // loop through all attributes for the element
+         {
+          var tmp = eval("tag"+ htmlarray[pf21] + "[" + (pf22+4) + "]"); // instead of double eval-ing
+          if (eval("attForm.chk" + htmlarray[pf21] + tmp + ".checked") &&
+              eval("attForm.txt" + htmlarray[pf21] + pf22 + ".value") != "")
+             { attribsarray[pf21] = attribsarray[pf21]  + " " + tmp +
+             "=\"" + eval("attForm.txt" + htmlarray[pf21] + pf22 + ".value") + "\"";
+             }
+          else
+             { attribsarray[pf21] = attribsarray[pf21] + ""; }
+         }
+     // handle the custom attribute, if any.
+     if (eval("attForm.chkcust" + htmlarray[pf21] + ".checked") &&
+         eval("attForm.txtcust" + htmlarray[pf21] + ".value") != "")
+        { attribsarray[pf21] = attribsarray[pf21] + " " +
+          eval("attForm.txtcust" + htmlarray[pf21] + ".value");
+        }
+     else
+        { attribsarray[pf21] = attribsarray[pf21] + ""; }
+    }
+}
+
+if      (!boolDefGeneral)
+        { makeStatusFrame(3); makeThirdState(); } // do generic attributes
+else if (!boolDefContent && boolDefGeneral)
+        { makeStatusFrame(4); makeFourthState();  }
+else    { makeStatusFrame(5); renderNow("reg"); }  // jump to test rendering section
+}
+
+function processForm3(gacheck1, gaselect1, gaval, eventcheck1,
+         eventselect1, eventrads, eventval, custattcheck, custattvalpair)
+// This processes the general attributes form
+{
+strGenAttr      = "";
+strEventAttr    = "";
+strCustAttr     = "";
+boolDefGenEvent = true;
+
+if (gacheck1.checked) // only analyze if the gen atts checkbox is activated
+   {
+   for (pf31=0;pf31<gaselect1.length;pf31++)
+       {
+        if (gaselect1.options[pf31].selected && pf31 !=0 && pf31 !=4 && pf31 !=9 &&
+            pf31 !=13 && pf31 !=17)  // ignore the helper lines in dropdown
+           { strGenAttr = strGenAttr + " " + gaselect1.options[pf31].value + "=\"" +
+                          gaval + "\"";
+           }
+       }
+   }
+
+if (eventcheck1.checked) // only analyze if the event checkbox is activated
+   {
+   if (eventrads[1].checked && eventval != "") { boolDefGenEvent = false }
+   for (pf32=0;pf32<eventselect1.length;pf32++)
+       {
+        if (eventselect1.options[pf32].selected && pf32 !=0 && pf32 !=11 && pf32 !=21 &&
+            pf32 !=27 && pf32 !=31 && pf32 !=52 && pf32 !=63) // ignore the helper lines in dropdown
+           {
+            if (!boolDefGenEvent) // Use custom val
+               { strEventAttr = strEventAttr + " " + eventselect1.options[pf32].value +
+                 "=\"" + eventval + "\""; }
+            else // Use default val
+               { strEventAttr = strEventAttr + " " + eventselect1.options[pf32].value +
+                 "=\"alert('" + eventselect1.options[pf32].value + " event fired');\""; }
+
+           }
+       }
+   }
+
+if (custattcheck.checked && custattvalpair != "") // only analyze if the cust atts checkbox is activated
+   { strCustAttr = strCustAttr + " " + flattenQuotes(custattvalpair); }
+
+if (strGenAttr != "" || strEventAttr != "" || strCustAttr != "" )
+   { boolDefGeneral = false; }  // handle pesky case of returning to form from non-1 start
+
+if      (!boolDefContent)
+        { makeStatusFrame(4); makeFourthState(); } // do custom content
+else    { makeStatusFrame(5); renderNow("reg"); }  // jump to test rendering section
+}
+
+function processForm4(bradio,dradio,aradio,bcontent,dcontent,acontent)
+{
+if (bradio[1].checked)
+     { strCntBef = bcontent; }
+else { strCntBef = ""; }
+if (dradio[1].checked)
+     { strCntDur = dcontent; }
+else { strCntDur = ""; }
+if (aradio[1].checked)
+     { strCntAft  = acontent; }
+else { strCntAft = ""; }
+
+makeStatusFrame(5);
+renderNow("reg");
+}
+
+function setStage(stage)
+{ if (stage==4) { var boolDefContent = false; } }
+
+function blankTest()
+{ writeHeaders(2); parent.writeContent(2,''); parent.writeFooters(2); }
+
+function makeStatusFrame(currstate)
+{
+content = "<body class=body>\n<b class=label>Test Summary</b><br><table>\n";
+// Print line 1: Choosing HTML Elements
+if (currstate == 1)
+     { content = content + "<tr><th><b class=caption>&gt;</b></th>\n    <th align=left>" +
+       "<b class=caption>State 1:&nbsp;&nbsp;HTML Elements</b></th></tr>\n"; }
+else if (currstate > 1)
+     { content = content + "<th></th><th align=left><a class=rslt href=\"javascript:" +
+       "parent.setStage(1);parent.blankTest();parent.makeFirstState();parent.makeStatusFrame" +
+       "(1);\"><b class=caption>State 1:&nbsp;&nbsp;HTML Elements</b></a></th></tr>\n"; }
+else { content = content + "<th></th><th align=left><b class=greyed>State " +
+       "1:&nbsp;&nbsp;HTML Elements</b></th></tr>\n"; }
+
+// Print line 2: Choosing HTML Attributes
+if (currstate == 2)
+     { content = content + "<tr><th><b class=caption>&gt;</b></th>\n    <th align=left>" +
+       "<b class=caption>State 2:&nbsp;&nbsp;HTML Attributes</b></th></tr>\n"; }
+else if (currstate > 2)
+     { content = content + "<th></th><th align=left><a class=rslt href=\"javascript:" +
+       "parent.setStage(2);parent.blankTest();parent.makeSecondState();parent.makeStatusFrame" +
+       "(2);\"><b class=caption>State 2:&nbsp;&nbsp;HTML Attributes</b></a></th></tr>\n" }
+else
+     { content = content + "<th></th><th align=left><b class=greyed>State " +
+       "2:&nbsp;&nbsp;HTML Attributes</b></th></tr>\n" }
+
+// Print line 3: Choosing Generic Attributes
+if (currstate == 3)
+     { content = content + "<tr><th><b class=caption>&gt;</b></th>\n    <th align=left>" +
+       "<b class=caption>State 3:&nbsp;&nbsp;Global Attributes</b></th></tr>\n"; }
+else if (currstate >3)
+     { content = content + "<th></th><th align=left><a class=rslt href=\"javascript:" +
+       "parent.setStage(3);parent.blankTest();parent.makeThirdState();parent.makeStatusFrame" +
+       "(3);\"><b class=caption>State 3:&nbsp;&nbsp;Global Attributes</b></a></th></tr>\n"; }
+else
+     { content = content + "<th></th><th align=left><b class=greyed>State " +
+       "3:&nbsp;&nbsp;Global Attributes</b></th></tr>\n"; }
+
+// Print line 4: Choosing Element Content
+if (currstate == 4)
+     { content = content + "<tr><th><b class=caption>&gt;</b></th>\n    <th align=left>" +
+       "<b class=caption>State 4:&nbsp;&nbsp;HTML Content</b></th></tr>\n"; }
+else if (currstate >4)
+     { content = content + "<th></th><th align=left><a class=rslt href=\"javascript:" +
+       "parent.setStage(4);parent.blankTest();parent.makeFourthState();parent.makeStatusFrame" +
+       "(4);\"><b class=caption>State 4:&nbsp;&nbsp;HTML Content</b></a></th></tr>\n"; }
+else
+     { content = content + "<th></th><th align=left><b class=greyed>State " +
+       "4:&nbsp;&nbsp;HTML Content</b></th></tr>\n"; }
+
+// Print line 5: Render the test
+if (currstate == 5)
+     { content = content + "<tr><th><b class=caption>&gt;</b></th>\n    <th align=left><b class=caption>"; }
+else { content = content + "<th></th><th align=left><b class=greyed>" }
+content = content + "State 5:&nbsp;&nbsp;Make the Test!</b></th></tr>\n</table>\n";
+
+writeHeaders(1);
+writeContent(1, content);
+writeFooters(1);
+}
+
+function renderNow(mode)
+{
+if (strBodyExtra != "" && !boolDefBody)
+   { var content = "<body " + strBodyExtra + ">\n"; }
+else
+   { var content = "<body>\n"; }
+
+content = content + "<table width='100%'><tr><td valign=top align=left><b class=label>Test " +
+     "Results</b></td><td valign=top align=right><form><input type=button name=viewsrc " +
+     "value='View Source' onclick=\"parent.renderNow('src');\"></form></td></tr></table>\n";
+for (looprn=0;looprn<htmlarray.length;looprn++)
+    {
+      content = content + "<b class=hdr><u>Tag:</u> " + htmlarray[looprn] + "</b><br>before\n" +
+                strCntBef;
+      if (boolDefAttribs)   // put in the default attributes
+         { content = content + eval("tag" + htmlarray[looprn] + "[0]") +
+           eval("tag" + htmlarray[looprn] + "[1]"); }
+      else                  // put in custom attributes
+         { content = content + eval("tag" + htmlarray[looprn] + "[0]") +
+           attribsarray[looprn]; }
+
+      if (strGenAttr != "" && !boolDefGeneral)   // handle global attributes, if any
+         { content = content + strGenAttr; }
+      if (strEventAttr != "" && !boolDefGenEvent) // handle event attributes, if any
+         { content = content + strEventAttr; }
+      if (strCustAttr != "") // handle custom global attributes, if any
+         { content = content + unescapeQuotes(strCustAttr); }
+
+      if (strCntDur == "")    // handle case=no custom content inside tag
+         { content = content + eval("tag" + htmlarray[looprn] + "[2]");  }
+      else                    // tag has custom content
+         { content = content + ">" + strCntDur; }
+      content = content + eval("tag" + htmlarray[looprn] + "[3]") +
+                strCntAft + " after<br><br>\n\n";
+    }
+
+if (mode == "src")  // render exception: view source
+{
+ content = content + "</body>\n";
+ content = content.replace(/<([^\>]*)>/g, "<b style='color: navy'>&lt;$1&gt;</b>");
+ content = "<body>[Note: this is not really 'view source' - it's created on the fly.]\n\n" + content;
+ content = content.replace(/\n/g, "<br>");
+}
+
+writeHeaders(2); writeContent(2, content); writeFooters(2);
+}
+</script>
+</head>
+
+<frameset cols="30%,*" onload="makeFirstState()">
+    <frameset rows="*,160">
+       <frame name="frame0" src="blank.htm">
+       <frame name="frame1" src="blank.htm">
+    </frameset>
+    <frame name="frame3" src="blank.htm">
+</frameset>
+</html>
+

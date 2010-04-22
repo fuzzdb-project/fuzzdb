@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Scrollbar-Darkshadow-Color - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">scrollbar-<br>darkshadow-color</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">IE5.5B1</i></b>|<b class="s">O7</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Scrollbar Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="scrollbarfc.htm">scrollbar-face-color</a><br>
+        <a href="scrollbarac.htm">scrollbar-arrow-color</a><br>
+        <a href="scrollbarbc.htm">scrollbar-base-color</a><br><br></td>
+    <td><a href="scrollbarsc.htm">scrollbar-shadow-color</a><br>
+        <a href="scrollbarhc.htm">scrollbar-highlight-color</a><br>
+        <a href="scrollbar3dlc.htm">scrollbar-3dlight-color</a><br>
+        <a href="scrollbartc.htm">scrollbar-track-color</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Elements whose intrinsic display may use scrollbars<br>
+        (<b class="tagname">APPLET</b>,
+        <b class="tagname">BODY</b>, <b class="tagname">EMBED</b>,
+        <b class="tagname">OBJECT</b>, <b class="tagname">SELECT</b>,
+        <b class="tagname">TABLE</b>, <b class="tagname">TEXTAREA</b>)<br>
+        or elements with an assigned 'overflow' property value of "scroll" or "auto".</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarDarkShadowColor.asp">Microsoft 
+        MSDN Reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property describes the color of the outer bottom and right
+        bevel edges (the normally darker portion of the "shadows") of the
+        scrollbar arrows and scroll bar slider box portions of a scroll bar
+        (see the <a href="../scrollbar.htm#diagram">illustrated diagram</a>
+        showing the components of a scrollbar interface.)
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">[color]</b></dt>
+<dt>[<b><i class="fs">IE5.5B1</i></b>|<b class="s">O7</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This is a representation of the values for Red/Green/Blue used to
+        determine a final display color. Please see the section on
+        <a href="../../syntax/units/color.htm">Color Units</a> for details on the
+        various color specification schemes.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">body</b> {
+        <span class="property">scrollbar-darkshadow-color:</span> #00ffff }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">body</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">scrollbar-darkshadow-color:</span>
+        #00ffff&quot;&gt;text&lt;/<b class="tagname">body</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">5.5 Beta 1:</b>
+            <dd>- Microsoft's OWN IE online reference originally incorrectly
+                stated that this property was called 'scrollbar-dark-shadow-color'
+                (note the extra dash.)
+            <dd>- The listing for "Applicable Elements" previously mentioned is
+                taken directly from the IE online reference. Under direct
+                experimentation, it looks like BODY, DIV and TEXTAREA are all
+                supported, but I could not find a way to get APPLET, EMBED,
+                OBJECT, SELECT and TABLE to recognize this property.
+        </dl>
+
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">7.x:</b>
+            <dd>- Opera supports CSS scrollbar coloring, but this feature is not
+                enabled by default, nor is the setting available in the UI. The user
+                has to manually add a line to their Opera6.ini file. In the "[User Prefs]" 
+                section, the following line should be added on its own line:<br>
+                <em>Enable Scrollbar Colors=1</em>
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Object</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Object</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Object</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>" (replaced)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced with object of specified dimensions</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/objects.html#h-13.3">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_objectmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The OBJECT element aims to replace and absorb the many methods in use to 
+        include multi-media and embedded content in HTML documents. This element 
+        can replace all of the functionality in the existing APPLET, EMBED, BGSOUND, 
+        SOUND and IMG elements. In order to achieve this, the element has many 
+        attributes that require some explanation.
+        <br><br>
+
+        When using OBJECT in place of the APPLET element, the PARAM element is used 
+        exactly as it would be with the <a href="../a/applet.htm">APPLET</a> element.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accesskey</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the active field.
+    <dd><b class="l3heading">Values:</b>
+        A single, case-insensitive alphanumeric character from a browser's character set.
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the alignment of text following the OBJECT
+        reference relative to the object on screen. LEFT and RIGHT specify
+        floating horizontal alignment of the object in the browser window,
+        and subsequent content will wrap around the object. The other options
+        specify vertical alignment of text relative to the object on the
+        same line.
+    <dd><b class="l3heading">Values:</b>
+         <b class="alert">Left</b> | <b class="alert">Right</b> |
+         <b class="alert">Top</b> | <b class="alert">Texttop</b> |
+         <b class="alert">Middle</b> | <b class="alert">Absmiddle</b> |
+         <b class="alert">Baseline</b> | <b class="alert">Bottom</b> |
+         <b class="alert">Absbottom</b>
+
+<dt><b class="subheading">Archive</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6B1</i></b>|<span class="ns">O??</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies one or more archives that may contain
+        components relevant to the Object. This may include data that is also
+        specified in the DATA and CLASSID attributes.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+        [Space separated list of absolute or relative URLs. If a relative URL is
+        used, it is relative first to the CODEBASE attribute. All URLs should be
+        <a href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Border</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE6</b>|<span class="ns">M</span>|<b><i class="fs">N6B1</i></b>|<b class="s">O7.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls the thickness of the border around the object (in pixels.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+        [<b class="alert">0</b>, for no border, or a positive integer value.]
+
+<dt><b class="subheading">ClassID</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is a URL indicating the implementation for the OBJECT.
+        In some systems this is a class identifier.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Code</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O??</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates a URL pointing to the Object's code/class.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">CodeBase</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute allows the author to specify the URL of the OBJECT's
+        implementation, which some URL schemes require in addition to the
+        CLASSID URL.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">CodeType</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME type of the code referenced by the
+        CLASSID attribute in advance of actually retrieving it. Browsers may
+        use this value to skip over unsupported MIME types without needing to
+        make a network access.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+        [Alphanumeric MIME type.]
+
+<dt><b class="subheading">Data</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates a URL pointing to the OBJECTs data, such as a
+        GIF file for an image. If the CLASSID attribute is absent, the media
+        (MIME) type of the data is used to determine a default value for the
+        CLASSID attribute. The implementation is then loaded as if the CLASSID
+        attribute had been explicitly specified.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Declare</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N??</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates an object that is not
+        created or instantiated until needed by something that references it
+        (i.e. late binding.) Each such &quot;binding&quot; typically results in
+        a separate copy of the object (this is class dependent.) So in such cases,
+        DECLARE is treated as a declaration for making an instance of an object.
+        See the <a href="http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.3.4">DECLARE
+        explanation</a> in the OBJECT specification for more details.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">declare</b> (XHTML)
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of the object in pixels.
+        It can be used to speed up display of the document being downloaded so it
+        can pre-render the document with object placeholders while the object downloads.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values or positive integers paired with a "%" character 
+        denoting a percentage of the parent element height.]
+
+<dt><b class="subheading">HSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the horizontal spacing around objects in
+        pixels (left and right padding.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values]
+
+<dt><b class="subheading">Name</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This provides a way for the object to participate in a FORM submission
+        process. If the NAME attribute is specified and the DECLARE attribute is
+        absent, then the browser should use the data obtained from the OBJECT
+        [the method used to obtain the data from the object is specific to each
+        object] paired with the NAME in the FORM submission process.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Standby</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O7.1</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This allows you to specify a short text string for the browser to display
+        while it loads the OBJECT's implementation and data. The character data
+        can include character entities.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Tabindex</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+        <li>Active elements using the TABINDEX attribute with positive integers are
+            navigated first. Low values are navigated first.
+        <li>Active elements not specifying any TABINDEX attribute
+        </ol>
+        Those elements carrying a DISABLED attribute or using negative TABINDEX
+        values do not participate in the tabbing cycle.
+    <dd><b class="l3heading">Values:</b> Positive or negative integers.
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME type of the data referenced in the DATA
+        attribute in advance of retrieving it. In the absence of the CLASSID
+        attribute, it allows the browser to retrieve the code implementing the
+        OBJECT concurrently with the data and to skip over unsupported MIME
+        types without having to make network accesses.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Alphanumeric MIME type]
+
+<dt><b class="subheading">UseMap</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6B1</i></b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the URL (usually internal to the document) of
+        the client-side image map specification to be used if the browser has
+        that capability. If the argument to USEMAP begins with a &quot;#&quot;
+        it is assumed to be in the current document. Client-side
+        coordinate mapping is done by the browser, so is inherently faster in
+        processing the coordinates than the old ISMAP process for the IMG element.
+        This attribute is usually only used for static image OBJECTs.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [An absolute URL, a relative URL or an internal anchor name. All URLs should 
+        be <a href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">VSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the vertical spacing around objects in pixels
+        (top and bottom padding.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values]
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the object in pixels.
+        It can be used to speed up display of the document being downloaded so it
+        can pre-render the document with object placeholders while the object
+        downloads.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integer pixel values or positive integers paired with a "%" character 
+        denoting a percentage of the parent element width.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">object</b>
+        <span class="tagattrib">codetype</span>=&quot;application/java-vm&quot;
+        <span class="tagattrib">codebase</span>=&quot;http://www.foo.com/applet.class&quot;<br>
+        <span class="tagattrib">classid</span>=&quot;java:program.start&quot;
+        <span class="tagattrib">height</span>=&quot;100&quot;
+        <span class="tagattrib">width</span>=&quot;100&quot;&gt;<br>
+        &lt;<b class="tagname">param</b>
+        <span class="tagattrib">name</span>=&quot;options&quot;
+        <span class="tagattrib">value</span>=&quot;xqz&quot; /&gt;<br>
+        &#160;&#160;&#160;If you can read this you are too close.&lt<b class="tagname">br</b> /&gt;<br>
+        &#160;&#160;&#160;AND your browser does not support Java.<br>
+        &lt;/<b class="tagname">object</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b> |
+        &lt;<a href="../h/head.htm">head</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b> |
+        &lt;<a href="../p/param.htm">param</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>I have to say that I have not really used this element much yet, so
+        can not offer any advice in this area. Most content for this page
+        was taken directly from the
+        <a href="http://www.w3.org/TR/REC-html40/struct/objects.html#h-13.3">OBJECT</a>
+        portion of the HTML 4 specification.
+    <li><b class="alert">More about shaped hyperlinks with OBJECTs:</b> If you're 
+        like me, shaped hyperlinks (those extra SHAPE and COORDS attributes for 
+        the A element) didn't make a lot of sense - the HTML spec didn't go out 
+        of its way to explain why an author might choose to use these attributes.
+        <br><br>
+        At first blush, one might think that a shaped hyperlink could be used to 
+        define a single clickable sub-area within a hyperlinked object (such as an image;)
+        You could perhaps also use A elements inside a MAP element instead of using
+        AREA elements. A third scenario is using shaped hyperlinks within an 
+        OBJECT element to define a clickable map; it is this last which provides
+        the interesting use-case in supporting browsers. This case acts like a 
+        MAP/USEMAP scenario for an image, and the regular hyperlinks themselves 
+        are not displayed (because they are nested in the OBJECT element.) In 
+        this case though, the shape map is for an OBJECT region and it degrades 
+        better to non-supporting browsers better than USEMAP-imagemaps can. For 
+        browsers that can not support rendering the OBJECT as specified, you are 
+        left with a simple and very usable list of hyperlinks. See the 
+        <a href="../a/a-hyperlink.htm#example">examples section</a> for the A element.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer 3.0 only appears to support the use of OBJECT
+        for use in replacing the APPLET and EMBED elements.
+    <li>The use of OBJECT for creating shaped hyperlinks is not
+        supported in Internet Explorer.
+    <li>Use of OBJECT to import images, videos and sounds is also
+        not supported by Internet Explorer 3.0/4.0. Limited support exists for
+        this in version 5.0.
+   <li>Late versions of Netscape 4.0 seem to support this element after a
+       fashion. It is nowhere near complete with respect to the W3C
+       specification, and is often spotty. PC versions of 4.0 do not
+       seem to have OBJECT support (although late betas seem to have had
+       some), while a final Macintosh version of 4.0 did support it under
+       at least one case. If any real support exists for this element in
+       Netscape 4.0, it would appear to be an exception to the rule of
+       the specification.
+    <li>According to a document on the Mozilla web site, Netscape 6 also
+        supports these attributes (of course they don't have ANY
+        explanation of how these attributes are used with this claim): HIDDEN,
+        and MAYSCRIPT. I have not seen these attributes mentioned elsewhere,
+        and have not been able to verify yet if these attributes are supported
+        or not, nor do I know their exact usage if so.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Visibility - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">visibility</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Classification Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="display.htm">display</a><br>
+    <a href="position.htm">position</a><br></td>
+    <td><a href="float.htm">float</a><br>
+    <a href="clear.htm">clear</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">visible</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">layer</b>
+        <span class="tagattrib">VISIBILITY</span>=""&gt;<br> </td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/visufx.html#visibility">CSS2: Sect. 11.2</a>, 
+        <a href="http://www.w3.org/TR/CSS21/visufx.html#visibility">CSS2.1: Sect 11.2</a><br>
+        <a href="http://developer.netscape.com/docs/manuals/communicator/dynhtml/layers32.htm#1008632">Netscape's
+        "Dynamic HTML in Netscape Communicator"</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+     <dd>This property controls whether the content of an element box is rendered
+         (including the borders and backgrounds.) If an element box is invisible
+         it still affects document layout as if it were visible (to prevent an
+         element box from affecting layout, the 'display' property should be
+         set to 'none'.)
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">visible</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N4.5x</b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element box is visible.</dd>
+
+<dt><b class="subheading">hidden</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N4.5x</b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element box is invisible (completely transparent to content beneath),
+        but still affects document layout flow as if it were visible.</dd>
+
+<dt><b class="subheading">collapse</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Unless this value is used in the context of table rows or columns, it will
+        have the same effect as 'hidden'. In the context of tables, spanned cells 
+        may be clipped and reacts similar to 'display: none' for the table element.</dd>
+
+<dt><b class="subheading">hide</b></dt>
+<dt>[<b><i><u class="sr">N4-4.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element box is invisible (completely transparent to content beneath),
+        but still affects document layout flow as if it were visible.</dd>
+
+<dt><b class="subheading">show</b></dt>
+<dt>[<b><i><u class="sr">N4-4.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element box is visible.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b>
+        { <span class="property">visibility:</span> hidden }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">p</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">visibility:</span>
+        hidden&quot;&gt;text&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Before its inclusion in CSS2, this property was first proposed in the W3C
+        Working Draft "Positioning HTML Elements with Cascading Style Sheets" (8/19/97,
+        <a href="http://www.w3.org/TR/WD-positioning">http://www.w3.org/TR/WD-positioning</a>)
+    <li>In CSS2, this was not an "inherit from parent" property, and the default 
+        value was "inherit" (yes, a little odd, that =)). In CSS 2.1 the default 
+        changes to "visible" and it becomes an inherited-from-parent property
+        (which is the way the browsers already treat it anyway.)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- Using a value of "hidden" for this property and a 'position'
+                value of "absolute" will behave exactly the same as setting
+                the 'display' property to "none."
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- This property does not apply to LI/DT/DD, form fields,
+                TABLE, and IMG elements.
+            <dd>- Using a value of "hide" for this property and a 'position'
+                value of "absolute" will behave exactly the same as setting
+                the 'display' property to "none."
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

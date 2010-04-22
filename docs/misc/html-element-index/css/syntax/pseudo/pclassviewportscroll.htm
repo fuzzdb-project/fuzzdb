@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: Viewport-Scroll - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>viewport-scroll</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs"> N6 </i></b>]<br></td>
+    <td align=center><b class="alert">Other Rendering-Area<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="pclassviewport.htm">viewport</a><br>
+    <a href="pclasscanvas.htm">canvas</a><br>
+    <a href="pclassscrolledcontent.htm">scrolled-content</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>None</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a pseudo-class indicating a virtual component of a document -
+        the rendering viewport, including the scrollbar area. As such, its use is 
+        limited and should not be combined with other elements in a selector.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">:viewport-scroll</b>
+        { <span class="property">border:</span> thick solid blue }<br>
+        (make a thick, solid, blue border around the viewport, including the
+        scrollbar-area.)</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>In Netscape 6, applying backgrounds and colors behaves the same as
+        :viewport or BODY as selectors. But, it gets interesting if you apply
+        borders, margin or other box properties - because the rendering box
+        in question isn't just the viewport, but it includes the scrollbar
+        area as well.
+    <li>Applying 'margin' properties with this pseudo-class seems to only
+        apply it to the region to the right of the scrollbar area on the
+        right-hand side of the viewport. Padding seems to create odd effects too.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

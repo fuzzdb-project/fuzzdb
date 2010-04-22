@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Border-Top-Width - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">border-top-width</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Border-Width Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="bwidth.htm">border-width</a><br>
+    <a href="brwidth.htm">border-right-width</a><br></td>
+    <td><a href="bbwidth.htm">border-bottom-width</a><br>
+    <a href="blwidth.htm">border-left-width</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">medium</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>ALL</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">img</b>
+        <span class="tagattrib">BORDER</span>&gt; | &lt;<b class="tagname">table</b>
+        <span class="tagattrib">BORDER</span>&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#border-top-width">CSS1: Sect. 5.5.11</a><br> 
+        <a href="http://www.w3.org/TR/REC-CSS2/box.html#border-width-properties">CSS2: Sect. 8.5.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">CSS2.1: Sect 8.5.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property controls the thickness (width) of the top border of an
+        element's rendering box. Negative values are not allowed.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">thin</b> | <b class="subheading">medium</b> |
+    <b class="subheading">thick</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Calculated</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Renders a &quot;thin&quot;, &quot;medium&quot; or &quot;thick&quot; border
+        on the top side of the element's rendering box. The actual thickness of
+        these border values is not specified, but &quot;thin&quot; should have a
+        smaller thickness than &quot;medium&quot;, which should have a smaller
+        thickness than &quot;thick&quot;.</dd>
+
+<dt><b class="subheading">[length]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">IE4B2</b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Sets the width of the border on the top side of the element's rendering box
+        to an explicit measurement.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">strong</b> {
+        <span class="property">border-top-width:</span> thin }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">strong</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">border-top-width:</span>
+        thin&quot;&gt;this is a beautiful test&lt;/<b class="tagname">strong</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- This property does not apply to input TYPE=checkbox/radio fields
+            <dd>- Applying border properties to list items skews the normal placement of the marker
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- The default 'border-style' for form fields and tables/table cells
+                is not "none."
+            <dd>- Using a 'border-style' of "double" with 'border-width' set to "thin"
+                produces a solid, thin border, not a double border.
+            <dd><b class="alert2">4.0-5.0:</b>
+            <dd>- This property does not apply to inline elements.
+            <dd><b class="alert2">5.0:</b>
+            <dd>- A static size is given to input TYPE=checkbox/radio fields.
+                Borders are rendered within this. Depending on the border-width,
+                this can possibly obscure part or all of the field.
+            <dd><b class="alert2">5.5+:</b>
+            <dd>- Beginning in 5.5 Beta 1, this property now applies to inline elements.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- Inline elements are turned into block elements when Border properties
+                are applied.
+            <dd>- Border properties have no effect on tables and table cells
+            <dd>- Border properties applied to form fields and images: creates a linefeed
+                after the element followed by a small box carrying the border property/value.
+            <dd>- Border properties applied to list items (LI) and DT/DD:
+                creates a small box carrying the border property/value, followed by
+                a linefeed, followed by the list item content.
+            <dd>- Border properties applied to list structures (OL/UL): causes the list
+                markers to be shown as small bullets, regardless of the 'list-style-type' applied.
+            <dd>- The default value for 'border-style' is "solid", not "none". The
+                default value for 'border-width' is "0", not "medium."
+            <dd>- Border properties applied to hyperlinks make the hyperlink unusable!
+            <dd>- Border styles applied to unclosed P element, nested inside a floating
+                element: all content after opening P element disappears.
+            <dd>- Reported elsewhere: Crash when border applied to unclosed P element
+                in table cell, while another table is nested in the cell (verified in
+                4.0x, NT but appears ok in 4.5x, 98)
+            <dd>- Even if the 'border-style' is set to "none", an element is rendered
+                with space allowance for any indicated 'border-width' value.
+            <dd>- Reported elsewhere: Assigning border properties to elements with
+                'width' set to "100%" can cause unnecessary linefeeds when printing.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5:</b>
+            <dd>- Borders have no effect on images, tables, table cells and form fields.
+            <dd>- Using a 'border-style' of "double" with 'border-width' set to "thin"
+                produces a solid, thin border, not a double border.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

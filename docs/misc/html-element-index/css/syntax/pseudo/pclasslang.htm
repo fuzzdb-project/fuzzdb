@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: Lang - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>lang</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>]
+    [<b><i class="fs">N7.1</i></b>|<b class="s">O7.5</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Document-Tree<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="pclassroot.htm">root</a><br>
+    <a href="pclassempty.htm">empty</a><br>
+    <a href="pclassnot.htm">not</a><br>
+    <a href="pclassfirstchild.htm">first-child</a><br></td>
+    <td valign=top><a href="pclassfirstnode.htm">first-node</a><br>
+    <a href="pclasslastchild.htm">last-child</a><br>
+    <a href="pclasslastnode.htm">last-node</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Any</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>It is possible to specify the particular language in use for a document or even a
+        particular element. In HTML there is the common LANG attribute available, the META
+        element <em>charset</em> values and special HTTP headers, all allowing an author
+        to specify the human language of the content. In XML, there is the common 'xml:lang'
+        attribute.
+        <br><br>
+
+        The :lang Pseudo-element in CSS creates a selector that can address content according
+        to the human language it is encoded in. It takes as a value a string that identifies a
+        language system used for communication (with the exception of computer languages.)
+        The syntax and registry of HTML language tags is identical to the system specified in
+        <a href="http://www.rfc-editor.org/rfc/rfc1766.txt" class="relevant">RFC 1766</a>.
+        <br><br>
+
+        A language tag is composed of one or more parts: A primary language tag
+        and a possibly empty series of subtags:
+        <br>
+        &#160;&#160;&#160;<b class="alert">language-tag</b>  = [<b class="alert2">Primary
+        Language Tag</b>] ("-" [<b class="alert2">Language Subtag</b>])*<br>
+        &#160;&#160;&#160;[<b class="alert2">Primary Language Tag</b>]   = "i"
+        (for IANA defined languages) | "x" (custom/private use language) | [ISO 639 2-letter
+        Language Code]<br>
+        &#160;&#160;&#160;[<b class="alert2">Language Subtag</b>] =
+        [ISO 3166 2-letter country code] | [dialect or other locale/situation specific
+        language]
+        <br>
+        Language tags are case-insensitive and spaces are not allowed. The
+        registering of language tags is administered by the
+        Internet Assigned Numbers Authority (<a href="http://www.iana.org" class="relevant">IANA</a>).
+        Example language tags include <b class="alert">en</b>, <b class="alert">en-US</b>,
+        and <b class="alert">x-pig-latin</b>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">blockquote:lang(fr)</b>
+        { <span class="property">quotes:</span> '« ' ' »' }<br>
+        &#160;&#160;&#160;(Sets the 'quotes' property on French BLOCKQUOTE elements to
+        use French quotation marks.)</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

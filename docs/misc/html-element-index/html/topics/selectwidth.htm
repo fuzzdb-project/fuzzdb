@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Controlling the width of SELECT lists</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Controlling the width of SELECT lists</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#issue">The Issue</a> |
+    <a href="#solutions">Possible Solutions</a> |
+    <a href="#recommend">Recommendation</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+<a name="issue"></a>
+<big><b class="mainheading">The Issue</b></big>
+<hr width="30%" align=left size=1>
+The default width of a SELECT form control is usually dependent on the
+width of the widest OPTION item in the list; the width of the SELECT
+list will basically be not much greater (but no less) than this width.
+<br><br>
+
+The HTML standards don't allow for a way to control this width. CSS, on
+the other hand, would be perfect for controlling this, but historical
+support for CSS on form controls is rather weak.
+<br><br>
+
+<a name="solutions"></a>
+<big><b class="mainheading">Solution 1:</b>
+<b class="subheading">Using &amp;nbsp; to pad OPTION element content</b></big><br>
+<a href="../../misc/suppkey.htm">Support Key:</a>
+[<b class="s">IE1</b>|<i class="fs"><b>M2A1</b></i>|<b class="s">N1</b>|<b class="s">O2.1</b>|<b class="s">S1</b>]
+<hr width="30%" align=left size=1>
+This solution can work rather well - non-breaking spaces are treated as
+displayable content, so these can be used to add crude right and left
+"padding" widths to the SELECT control. The one downside of this method
+is that it is difficult to achieve a precise width for the control.
+<br><br>
+
+<big><b class="mainheading">Solution 2:</b>
+<b class="subheading">Using a WIDTH attribute on the SELECT control</b></big><br>
+<a href="../../misc/suppkey.htm">Support Key:</a>
+[<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>|<span class="ns">S</span>]
+<hr width="30%" align=left size=1>
+This proprietary attribute was added in Netscape 4.x, and has been retired
+in Netscape 6.x, but this attribute takes as a value a positive integer
+representing a pixel width for the control. The disadvantage here is that
+only Netscape 4.x supports it.
+<br><br>
+
+<big><b class="mainheading">Solution 3:</b> <b class="subheading">CSS on the SELECT control</b></big><br>
+<a href="../../misc/suppkey.htm">Support Key:</a>
+[<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>|<b class="s">S1</b>]
+<hr width="30%" align=left size=1>
+This is by far the best solution, using the
+'<a href="../../css/properties/dimension/width.htm">width</a>' CSS
+property - and it has the widest support.
+<br><br>
+
+<a name="recommend"></a>
+<big><b class="mainheading">Recommendation</b></big><br>
+<hr width="30%" align=left size=1>
+Since Netscape 4 has only the proprietary attribute that will give the
+desired effect, it will not hurt anything to combine the use of CSS and
+the WIDTH attribute.<br><br>
+
+<dl>
+<dt><big><b class="subheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">select</b>
+        <span class="tagattrib">name</span>=&quot;foo&quot;
+        <span class="tagattrib">width</span>=&quot;300&quot;
+        <span class="tagattrib">style</span>=&quot;<span
+              class="property">width:</span> 300px&quot;&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b class="tagname">option</b>&gt;one
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b class="tagname">option</b>&gt;two
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b class="tagname">option</b>&gt;three
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &lt;/<b class="tagname">select</b>&gt;
+        </div>
+</dl>
+
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

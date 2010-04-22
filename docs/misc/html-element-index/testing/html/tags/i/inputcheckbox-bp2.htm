@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>INPUT TYPE=Checkbox/Radio: Browser Peculiarities: Background image not 
+           affecting small portion of some form field widgets</title>
+<style>
+.assert { color: white }
+.test   { background-color: yellow }
+</style>
+</head>
+
+<body bgcolor="red">
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape versions 2.0 and above have a small idiosyncrasy 
+relating to background images with this element. The background image of the document 
+(if one is specified) is not used inside a square region surrounding the radio button. 
+If the document has a background color, it is used in the "non-radio" portion of 
+this square instead. This does not happen before Netscape 2.0 - it appears that 
+form field rendering was changed for version 2.0.</div>
+<br>
+
+<b>BODY uses BGCOLOR=red to create extreme contrast to exhibit the behavior</b>
+<br><br>
+
+<form>
+<b>TABLE with cellpadding=20 and background="tilepattern.gif" (extreme contrast to help see the behavior):</b>
+<hr>
+filler text
+<table cellpadding="20" background="../../../objects/images/tilepattern.gif">
+<tr>
+    <td align="right">TD Cell 1<br>
+        Radio button:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"><br>
+        Checkbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><br>
+        File:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file"><br>
+        TD Cell 1</th>
+    <th align="right">TH Cell 2<br>
+        Radio button:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"><br>
+        Checkbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><br>
+        File:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file"><br>
+        TH Cell 2</th>
+</tr>
+</table>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

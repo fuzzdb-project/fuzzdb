@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about positioning elements in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Positioning Elements in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> | <a href="#support">Support</a> |
+     <a href="#usage">Usage</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+</center>
+
+<hr align="center" width="20%">
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification</b></big>
+    <dd>The positioning elements in HTML were introduced by Netscape to
+        allow an author to define precisely positioned, 2-dimensional
+        layout consisting of overlapping layers of transparent or
+        solid content on a web page. Content of these positioning mechanisms
+        can be treated as a single item of content that can be moved and
+        altered in various ways.
+</dl>
+<br>
+
+<a name="support"></a>
+<dl>
+<dt><big><b class="mainheading">Support</b></big>
+     <dd>These elements are curious in that it mirrors almost all of the functionality
+         and capabilities now offered through the
+         <a href="http://www.blooberry.com/indexdot/css/propindex/position.htm">Style
+         Sheet Positioning</a> <span class="external">[--&gt;Index DOT Css]</span> properties.
+         for <a href="http://www.blooberry.com/indexdot/css/" class="relevant">Cascading
+         Style Sheets</a>. The LAYER and ILAYER elements are essentially
+         HTML-based solutions to the same functionality that these CSS properties
+         provide. It is interesting to note that support for CSS positioning and
+         the LAYER/ILAYER elements appeared in Netscape at the same time (4.x.) However,
+         CSS positioning has been created with the official sanctioning of the W3C,
+         and Netscape itself has abandoned support for these elements after 4.x. 
+         Hence, use of these elements is <em class="alert">NOT</em> recommended.
+</dl>
+<br>
+
+<a name="usage"></a>
+<dl>
+<dt><big><b class="mainheading">Usage</b></big>
+<dt>[ &lt;<a href="i/ilayer.htm">Ilayer</a>&gt;,
+      &lt;<a href="l/layer.htm">Layer</a>&gt;,
+      &lt;<a href="n/nolayer.htm">Nolayer</a>&gt; ]
+<dt><b class="subheading">Ilayer:</b>
+    <dd>This element indicates an &quot;in-line&quot; layer. If no positioning is
+        specified, the layer will appear within the flow of a document (behaving
+        like an IMG element.) If positioning values <em>ARE</em> used on this type
+        of layer, the positioning coordinates are relative to where the layer
+        would ordinarily occur in the document flow.
+<dt><b class="subheading">Layer:</b>
+    <dd>This type of layer is also known as an &quot;out-of-flow&quot; or
+        &quot;positioned&quot; layer. It is used to define explicit positioning
+        of a block of content.
+<dt><b class="subheading">Nolayer:</b>
+    <dd>This element is used to mark a section of document content for display
+        only for backward compatibility purposes. Browsers that understand HTML
+        positioning elements will ignore this and non-supporting browsers will
+        render it. It may also be applicable when non-conforming browsers try to
+        render layered pages that include these elements using the SRC attribute.
+        In such a case, older browsers would not be able to access the referenced
+        sub-document, so this element becomes a necessary fallback.
+</dl>
+<br>
+
+
+<a name="related"></a>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://developer.netscape.com/docs/manuals/communicator/dynhtml/layers3.htm" 
+       class="relevant">http://developer.netscape.com/docs/manuals/communicator/dynhtml/layers3.htm</a>
+    <dd><span class="relevant">Netscape's documentation for the LAYER/ILAYER/NOLAYER elements</span>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

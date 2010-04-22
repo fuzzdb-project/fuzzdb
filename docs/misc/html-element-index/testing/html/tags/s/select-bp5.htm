@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>SELECT: Browser Peculiarities: background color in 256 color mode</title>
+<style>
+.assert { color: green }
+.test1  { background-color: #9999ff; }
+.test2  { background-color: green; }
+.test3  { background-color: #df48a9; }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer (PC versions at least) have a problem with displaying
+     background colors for select lists when only 256 colors are available.
+     If the background-color specified (even color safe colors) is also
+     used for other elements or even for backgrounds on other form controls,
+     the color used for the select list is very different than what it
+     should be. I do not know how widespread this problem is, or what causes it.</div>
+<br><br>
+
+<form>
+<b>Plain SELECT list. No CSS applied:</b>
+<hr>
+filler text<br>
+<select>
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Plain SELECT list with CSS applied ("background-color: #9999ff"):</b>
+<hr>
+filler text<br>
+<select class="test1">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<select multiple size="3" class="test1">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>filler text
+<hr>
+</form>
+<br>
+
+
+<form>
+<b>Plain SELECT list with CSS applied ("background-color: green"):</b>
+<hr>
+filler text<br>
+<select class="test2">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<select multiple size="3" class="test2">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Plain SELECT list with CSS applied ("background-color: #df48a9"):</b>
+<hr>
+filler text<br>
+<select class="test3">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<select multiple size="3" class="test3">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

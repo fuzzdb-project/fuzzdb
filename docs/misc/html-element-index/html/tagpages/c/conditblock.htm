@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Conditional Blocks</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Conditional Blocks</h1>
+         <b class="alert">End Tag:</b> <span class="magicword">NA</span><br>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b><br>
+         "Downlevel-Revealed":
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<b><i class="fs">IE5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]<br>
+         "Downlevel-Hidden":&nbsp;&nbsp;&nbsp;&nbsp;
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]        
+         [<b><i class="fs">IE5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]<br></td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#blocktypes">Block Types</a><br>
+         <a href="#syntax">Syntax Details</a>
+     </td>
+     <td><a href="#example">Example</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+     <dd>This is a syntax introduced in Internet Explorer 5.0 that allows content to
+         be executed based on the browser and/or version being used, without
+         resorting to scripting. Conditional execution is used to allow for
+         capabilities of different browsers and browser generations without settling
+         on a "lowest common denominator" solution. Current methods of conditional
+         execution rely on browser "sniffing" by the web server or browser, which
+         can take time and considerable code logic to accomplish. Browser sniffing
+         locally using scripting is particularly troublesome, as this functionality
+         can be turned off, and not all browsers have scripting capability to begin
+         with.
+         <br><br>
+
+         Conditional blocks serve two purposes - to create a powerful conditional
+         execution logic system and to provide a simple, gracefully degrading
+         conditional logic system for browsers that do not understand this structure. 
+         Conditional syntax is currently limited to IE browser/version
+         checking, but the syntax is extensible and more powerful constructs may
+         be added in the future.
+</dl>
+
+<a name="blocktypes"></a>
+<dl>
+<dt><big><b class="mainheading">"Downlevel-Revealed" Conditional Block</b></big>
+    <dd>This syntax is contained within an HTML tag structure. Browsers that
+        do not understand the syntax will always parse the contents of the block.
+    <dd><b class="alert">Basic Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&#160;"<b class="alert">&lt;![if </b>"
+        [<span class="alert2">space</span>]*  [<span class="alert2">expression</span>]
+        [<span class="alert2">space</span>]* "<b class="alert">]&gt;</b>"<br>
+        &#160;&#160;&#160;&#160;&#160;[<span class="alert2">html code</span>]<br>
+        &#160;&#160;&#160;&#160;&#160;"<b class="alert">&lt;![endif]&gt;</b>"
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">"Downlevel-Hidden" Conditional Block</b></big>
+    <dd>This syntax is contained within an HTML comment. Browsers that do not
+        understand conditional blocks will not see any of the block content.
+        For browsers that <em>DO</em> understand conditional blocks, the content
+        will only be enabled if the expression condition matches.
+        This ensures that browsers that does not understand the
+        embedded syntax will ignore the block entirely. If the [expression]
+        is evaluated as true by a browser that understands the syntax, the
+        content will be executed.
+    <dd><b class="alert">Basic Syntax:</b><br>
+        &#160;&#160;&#160;&#160;&#160;"<b class="alert">&lt;!--[if </b>"
+        [<span class="alert2">space</span>]*  [<span class="alert2">expression</span>]
+        [<span class="alert2">space</span>]* "<b class="alert">]&gt;</b>"<br>
+        &#160;&#160;&#160;&#160;&#160;[<span class="alert2">html code</span>]<br>
+        &#160;&#160;&#160;&#160;&#160;"<b class="alert">&lt;![endif]--&gt;</b>"
+</dl>
+
+<a name="syntax"></a>
+<dl>
+<dt><big><b class="mainheading">Syntax Details</b></big>
+    <dd>[<span class="alert2">expression</span>] = [<span class="alert2">term</span>]
+        ( "<b class="alert"> | </b>" [<span class="alert2">term</span>])*
+    <dd>[<span class="alert2">term</span>]         = [<span class="alert2">value</span>]
+        ( " &amp; " + [<span class="alert2">value</span>])*
+    <dd>[<span class="alert2">value</span>]        = ( "<b class="alert">!</b>" )?
+        ( [<span class="alert2">comparison</span>] | "<b class="alert">true</b>" |
+        "<b class="alert">false</b>" )
+    <dd>[<span class="alert2">comparison</span>] = ( "<b class="alert">lt </b>" |
+        "<b class="alert">lte </b>" | "<b class="alert">gt </b>" |
+        "<b class="alert">gte </b>")? " <b class="alert">IE</b> "
+        [<span class="alert2">version</span>]?
+    <dd>[<span class="alert2">version</span>]  = [0-9][A-Za-z0-9.]*
+<dt>The BNF syntax above basically states that one or more expression terms can be
+    chained together, where an expression can be "true", "false", or a browser
+    version test. Note the spaces in the literal string portions of the syntax
+    (between the quotes.) The comparison operators should be self-explanatory, 
+    but to spell them out:
+    <dd>"<b class="alert">lt</b>" = less than<br>
+    <dd>"<b class="alert">lte</b>" = less than or equal to<br>
+    <dd>"<b class="alert">gt</b>" = greater than<br>
+    <dd>"<b class="alert">gte</b>" = greater than or equal to
+</dl>
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">!--[if gte IE 4 ]</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b class="tagname">div</b>
+        <span class="tagattrib">style</span>="<span
+        class="property">filter:</span> flipv(); <span
+        class="property">width:</span> 200; <span
+        class="property">height:</span> 50"&gt;This
+        is filtered&lt;/<b class="tagname">div</b>&gt;<br>
+        &lt;<b class="tagname">![endif]--</b>&gt;<br>
+        &lt;<b class="tagname">![if lt IE 4 ]</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b class="tagname">img</b>
+        <span class="tagattrib">src</span>="example.gif" /&gt;<br>
+        &lt;<b class="tagname">![endif]</b>&gt;</div>
+</dl>
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>HTML comments may not be nested, so comments should not be
+        contained within the "Downlevel-Hidden" conditional block.
+    <li>For a "Downlevel-Hidden" or "Downlevel-Revealed" block that is not
+        evaluated, external document dependencies inside such as images or
+        stylesheets are not downloaded. This saves download time.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>I only tried integers as [version] values. I am not sure how other
+        values would be treated.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

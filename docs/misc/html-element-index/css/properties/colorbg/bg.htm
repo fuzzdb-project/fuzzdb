@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Background - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">background</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Color/Background Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="color.htm">color</a><br>
+        <a href="lbgcolor.htm">layer-background-color</a><br>
+        <a href="lbgcolor.htm">layer-background-color</a><br>
+        <a href="bgcolor.htm">background-color</a><br>
+        <a href="bgimage.htm">background-image</a><br></td>
+    <td><a href="bgrepeat.htm">background-repeat</a><br>
+        <a href="bgattach.htm">background-attachment</a><br>
+        <a href="bgposit.htm">background-position</a><br>
+        <a href="bgpositx.htm">background-position-x</a><br>
+        <a href="bgposity.htm">background-position-y</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left valign=top><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td valign=top>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Applicable Elements: </b><br></th>
+    <td valign=top>All</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td valign=top>No</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Applicable Media: </b><br></th>
+    <td valign=top>Visual</td></tr>
+<tr><th align=left valign=top><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td valign=top>&lt;<b class="tagname">body</b>
+    <span class="tagattrib">BGCOLOR</span>=&quot;#RRGGBB&quot;
+    <span class="tagattrib">BACKGROUND</span>=&quot;URL&quot;
+    <span class="tagattrib">BGPROPERTIES</span>=&quot;fixed&quot;&gt; |<br>
+    &lt;<b class="tagname">table|thead|tbody|tfoot|tr|th|td</b>
+    <span class="tagattrib">BGCOLOR</span>=&quot;#RRGGBB&quot;
+    <span class="tagattrib">BACKGROUND</span>=&quot;URL&quot;&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#background">CSS1: Sect. 5.3.7</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/colors.html#background-properties">CSS2: Sect. 14.2.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/colors.html#background-properties">CSS2.1: Sect 14.2.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is a shorthand property notation for specifying information about how
+        to display the background surface onto which content (images, text, etc.)
+        is rendered. Backgrounds can be colors and/or images. If an image is specified,
+        many choices are available to specify display behavior. Both a background
+        color and image can be specified in the same property definition, but it is
+        not required to have both. If URL behavior properties are listed without an
+        accompanying URL, the values will be ignored. Although this property does not
+        inherit, a parent element's background will shine through because of the default
+        'transparent' background-color value in the children elements. The background
+        property is one of several shorthand properties that specify values controlling
+        many aspects of display behavior.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">[background-color]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="bgcolor.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[background-image]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="bgimage.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[background-repeat]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">NS4B3</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="bgrepeat.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[background-attachment]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">NS6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="bgattach.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+
+<dt><b class="subheading">[background-position]</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">NS6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> NA</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        See the <a href="bgposit.htm">individual property</a> for details on
+        syntax and allowed values.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd><b class="selector">Selector</b> { <span class="property">background:</span>
+        [background-color] [background-image] [background-repeat]
+        [background-attachment] [background-position] }
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">body</b> { <span class="property">background:</span>
+        white url(http://www.foo.com/image.gif) repeat-x fixed top right}</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">body</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">background:</span>
+        white url(http://www.foo.com/image.gif) <br>repeat-x fixed top right&quot;&gt;test
+        text in the body&lt;/<b class="tagname">body</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">3.0:</b>
+            <dd>- [background-color and background-image]: Does not work in
+                external stylesheets. Must be used in Embedded or Inline style sheet.
+            <dd>- [background-color]: Does not apply to Selection
+                lists or DL lists.
+            <dd>- [background-color]: When applied to block elements, it only
+                applies to the text, not the entire line block.
+            <dd>- [background-color]: Does not apply to images, except
+                for a 1-pixel horizontal strip on the top and bottom of the image.
+                The color does not shine through in transparent image areas.
+            <dd>- [background-color]: The 1-pixel horizontal strip
+                behavior described previously also occurs for input type=password|text,
+                input type=checkbox|radio, input type=button|reset|submit and textarea.
+            <dd>- [background-color]: Applied to UL/OL only
+                applies color to small vertical strip at end of each LI element.
+            <dd>- [background-color]: Applied to table cells extends
+                over the bottom and right cell borders.
+            <dd>- [background-image]: Does not apply to forms or DL lists.
+            <dd>- [background-image]: When applied to block elements, it only
+                applies to the text, not the entire line block.
+            <dd>- [background-image]: Does not apply to images, except
+                for a 1-pixel horizontal strip on the top and bottom of the image.
+                The color does not shine through in transparent image areas.
+            <dd>- [background-image]: Applied to UL/OL only
+                applies color to small vertical strip at end of each LI element.
+            <dd>- [background-image]: Applied to table cells extends
+                over the bottom and right cell borders.
+            <dd>- [background-repeat]: only applies to BODY, TABLE, and TD/TH.
+            <dd>- [background-repeat]: A value of "repeat-x" only
+                repeats to the right of the starting position, not both left and right.
+            <dd>- [background-repeat]: A value of "repeat-y" only
+                repeats downward from the starting position, not both up and down.
+            <dd>- [background-repeat]: A value of "repeat" only
+                repeats downward and to the right from the starting position,
+                not both up/down.
+             <dd>- [background-position]: only applies to BODY, TABLE, and TD/TH.
+             <dd>- [background-position]: Some keywords seem to work,
+                 some do not work as expected...and a value of "right" on the BODY
+                 element does not put the image to the right side of the screen
+             <dd>- [background-position]: Percentages are ok, absolute
+                 measurements do not work.
+
+             <dd><b class="alert2">4.0+:</b>
+             <dd>- The same caveats listed for each of the 'background' property
+                 subcomponents should apply here as well.
+             <dd><b class="alert2">5.5+:</b>
+             <dd>- [background-color]: Beginning in 5.5 Beta 1 the "transparent"
+                 value for can now apply to frame and IFRAME elements.
+         </dl>
+     <li><b class="alert">Netscape</b>
+         <dl>
+             <dd><b class="alert2">4.0 Beta 2:</b>
+             <dd>- This version supports 'background-color' and 'background-image'
+                 properties only for the shorthand 'background' property.
+             <dd><b class="alert2">4.0 Beta 3:</b>
+             <dd>- This version adds 'background-repeat' to the properties
+                 supported for the shorthand 'background' property.
+             <dd><b class="alert2">4.x:</b>
+             <dd>- The same caveats listed for each of the 'background' property
+                 subcomponents should apply here as well.
+         </dl>
+     <li><b class="alert">Opera</b>
+         <dl>
+             <dd><b class="alert2">3.5:</b>
+             <dd>- The same caveats listed for each of the 'background' property
+                 subcomponents should apply here as well.
+         </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

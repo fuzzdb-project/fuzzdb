@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Subjects in Mailto: URLs</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Subjects in Mailto: URLs</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#problem">The Problem</a> |
+    <a href="#original">The Original Syntax</a> | <a href="#redefine">Redefining
+    'Mailto:' URLs</a><br><a href="#details">Syntax Support Details</a> |
+    <a href="#addis">Advantages and Disadvantages</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+    <a name="problem"></a>
+    <big><b class="mainheading">The Problem</b></big>
+    <hr width="30%" align=left size=1>
+    The E-mail addressing protocol
+    (<a href="http://www.rfc-editor.org/rfc/rfc822.txt">RFC
+    822</a>, Aug. '82) allows for the specification of many fields which give the
+    sender control over a variety of sending options and meta-informational content.
+    <br><br>
+
+    Some message headers mentioned in RFC 822:<br>
+    '<b class="alert">To</b>', '<b class="alert">cc</b>', '<b class="alert">bcc</b>',
+    '<b class="alert">Subject</b>', '<b class="alert">Keywords</b>',
+    '<b class="alert">Sender</b>', '<b class="alert">From</b>',
+    '<b class="alert">Date</b>', '<b class="alert">Received</b>', etc.<br>
+    [See RFC 822 for more information on these and other message header fields.]
+    <br><br>
+
+    You may sometimes see a mailto URL of the form:<br>
+    &lt;<b class="tagname">a</b>
+    <span class="tagattrib">href</span>=&quot;mailto:foo@bar.com?subject=test%20subject&quot;&gt;e-mail
+    me&lt;/<b class="tagname">a</b>&gt;<br> or something similar. Netscape was the
+    first browser to extend the mailto: URL to allow control over message headers
+    in this manner (in Netscape 2.0 and above.)
+    <br><br>
+
+    Using this syntax will initiate the default email program in Netscape
+    populating the 'To:' field <em>as well as</em> the 'Subject:' field. But, aside
+    from significant historic support by Netscape, only some browser versions
+    support this syntax. In many older browsers this form of mailto: URL will
+    not work - it will only populate the 'To:' field with everything after the
+    'mailto:' string (in the above case it would put 'foo@bar.com?subject=test
+    subject' in the 'To:' field, which would bounce when sent.)
+    <br><br>
+
+<a name="original"></a>
+<big><b class="mainheading">The Original 'Mailto:' Syntax</b></big>
+<hr width="30%" align=left size=1>
+Until recently, specifying anything other than the "To:" mail header field
+in 'Mailto:' URLs was illegal syntax (although it appears that support for multiple
+addresses is possible by separating them with commas) according to the original
+specification for URL addressing
+(<a href="http://www.rfc-editor.org/rfc/rfc1738.txt">RFC 1738</a>, (Dec. '94.) 
+Sect. 3.5 precisely defines the Mailto: URL scheme:
+   <blockquote class="quotation">&quot;The mailto URL scheme is used to designate
+   the Internet mailing address of an individual or service. No additional
+   information other than an Internet mailing address is present or
+   implied.&quot;</blockquote>
+
+<dl>
+<dt>It goes on to formally define the 'Mailto:' syntax: 
+    <dd>'<b class="alert">mailto:</b>' [<span class="alert2">RFC 822 Address spec</span>]'
+
+    <dd>where '[<b class="alert">RFC 822 Address spec</b>]' = [<span class="alert2">local-part</span>] "@"
+        [<span class="alert2">domain</span>] (","
+        [<span class="alert2">local-part</span>] "@"
+        [<span class="alert2">domain</span>])*
+<dt><b class="alert">Example:</b>
+    <div class="example">&lt;<b class="tagname">a</b>
+    <span class="tagattrib">href</span>=&quot;mailto:address@test.com&quot;&gt;mail
+    me&lt;/<b class="tagname">a</b>&gt;</div>
+
+</dl>      
+     <br><br>
+
+<a name="redefine"></a>
+<big><b class="mainheading">A New RFC Proposal: Redefining the 'Mailto:' URL Scheme</b></big>
+<hr width="30%" align=left size=1>
+<a href="http://www.pmg.lcs.mit.edu/cgi-bin/rfc/view?number=2368">RFC 2368</a>
+was released in July, 1998 (interesting to note that one of the co-authors is
+from Netscape.) It allows any and all message header fields to be specified in
+a 'Mailto:' URL. As with other URL forms, special reserved URL characters must
+be encoded - in particular, parentheses, commas, and the percent sign.
+The RFC states:
+   <blockquote class="quotation">&quot;For greater functionality, because interaction
+   with some resources may require message headers or message bodies to be
+   specified as well as the mail address, the mailto URL scheme is extended to
+   allow setting mail header fields and the message body.&quot;</blockquote>
+
+<big><b class="mainheading">RFC 2368 Proposed New Syntax</b></big>
+<hr width="30%" align=left size=1>
+&#160;&#160;&#160;&quot;<b class="alert">mailto:</b>&quot;
+[<span class="alert2">to</span>]
+( &quot;?&quot;
+[<span class="alert2">header</span>] ( &quot;&amp;&quot;
+[<span class="alert2">header</span>] )* ) ?<br>
+&#160;&#160;&#160;&#160;where <b class="alert">to</b> =
+[<span class="alert2">RFC 822 Address spec</span>] (see above)<br>
+&#160;&#160;&#160;&#160;where <b class="alert">header</b> =
+[<span class="alert2">RFC 822 header</span>] "="
+[<span class="alert2">RFC 822 header value</span>]<br>
+<b class="alert">Example:</b><br>
+(Automatically fills in the title and body of the e-mail)
+<div class="example">&lt;<b class="tagname">a</b>
+<span class="tagattrib">href</span>=&quot;mailto:address@test.com?subject=test&amp;body=I%20agree%20with%20what%20you%20said!&quot;&gt;mail
+link&lt;/<b class="tagname">a</b>&gt;</div>
+
+<br><br>
+<a name="details"></a>
+<big><b class="mainheading">Syntax Support Details</b></big>
+<hr width="30%" align=left size=1>
+<b class="alert">Old Syntax:</b> 
+[<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>|<b class="s">S1</b>]<br>
+<b class="alert">New Syntax:</b> 
+[<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b><b class="alert">*</b>|<b class="s">S1</b>]
+<br><br>
+
+Only the latest versions of other browsers, such as IE 4, Opera 3.x and
+the latest Lynx support this new 'Mailto:' syntax. (I've been told this
+crashes some versions of Netscapes, but older versions just concatenated
+the mail header field info to the mail address.)
+<br><br>
+
+[<b class="alert">*</b>] Opera 3 only partially supports the new syntax -
+it thinks that all extra header info is meant to be a 'Subject:' header.
+It also doesn't support escaped characters.
+<br><br>
+
+<a name="addis"></a>
+<big><b class="mainheading">Weighing the Advantages and Disadvantages</b></big>
+<hr width="30%" align=left size=1>
+<dl>
+<dt><b class="alert">Pros:</b> Allows addressing of all message fields
+<dt><b class="alert">Cons:</b> Non-supporting browsers will only populate
+    the 'To:' field with all the information in the mailto: line. Sending
+    mail to such addresses will fail.
+<dt><b class="alert">Advice:</b> Unless you can guarantee what browsers/email 
+    clients your readers are using, say on an intranet environment, or you can 
+    warn them of the potential problems if they are using non-supporting
+    browsers, recommend against using the newer syntax until it becomes
+    more widespread.
+</dl>
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

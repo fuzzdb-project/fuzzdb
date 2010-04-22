@@ -1,0 +1,388 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>URL Encoding</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+
+<script type="text/javascript">
+var hexVals = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+              "A", "B", "C", "D", "E", "F");
+var unsafeString = "\"<>%\\^[]`\+\$\,";
+// deleted these chars from the include list ";", "/", "?", ":", "@", "=", "&" and #
+// so that we could analyze actual URLs
+
+function isUnsafe(compareChar)
+// this function checks to see if a char is URL unsafe.
+// Returns bool result. True = unsafe, False = safe
+{
+if (unsafeString.indexOf(compareChar) == -1 && compareChar.charCodeAt(0) > 32
+    && compareChar.charCodeAt(0) < 123)
+   { return false; } // found no unsafe chars, return false
+else
+   { return true; }
+}
+
+function decToHex(num, radix)
+// part of the hex-ifying functionality
+{
+var hexString = "";
+while (num >= radix)
+      {
+       temp = num % radix;
+       num = Math.floor(num / radix);
+       hexString += hexVals[temp];
+      }
+hexString += hexVals[num];
+return reversal(hexString);
+}
+
+function reversal(s) // part of the hex-ifying functionality
+{
+var len = s.length;
+var trans = "";
+for (i=0; i<len; i++)
+    { trans = trans + s.substring(len-i-1, len-i); }
+s = trans;
+return s;
+}
+
+function convert(val) // this converts a given char to url hex form
+{ return  "%" + decToHex(val.charCodeAt(0), 16); }
+
+function setRadio()
+// gets the radio state and swaps it. Returns state
+{
+var state;
+if (document.forms[0].state.value == "none")
+    {
+     document.forms[0].state.value = "urlenc"; // set new state
+     document.forms[0].enc[1].checked = true;  // set new radio button
+    }
+else
+   {
+    document.forms[0].state.value = "none";  // set new state
+    document.forms[0].enc[0].checked = true; // set new radio button
+   }
+return document.forms[0].state.value;
+}
+
+function changeIt(val)
+// changed Mar 25, 2002: added if on 122 and else block on 129 to exclude Unicode range
+{
+var state   = setRadio();
+var len     = val.length;
+var backlen = len;
+var i       = 0;
+
+var newStr  = "";
+var frag    = "";
+var encval  = "";
+var original = val;
+
+if (state == "none") // needs to be converted to normal chars
+   {
+     while (backlen > 0)
+           {
+             lastpercent = val.lastIndexOf("%");
+             if (lastpercent != -1) // we found a % char. Need to handle
+                {
+                  // everything *after* the %
+                  frag = val.substring(lastpercent+1,val.length);
+                  // re-assign val to everything *before* the %
+                  val  = val.substring(0,lastpercent);
+                  if (frag.length >= 2) // end contains unencoded
+                     {
+                     //  alert ("frag is greater than or equal to 2");
+                       encval = frag.substring(0,2);
+                       newStr = frag.substring(2,frag.length) + newStr;
+                       //convert the char here. for now it just doesn't add it.
+                       if ("01234567890abcdefABCDEF".indexOf(encval.substring(0,1)) != -1 &&
+                           "01234567890abcdefABCDEF".indexOf(encval.substring(1,2)) != -1)
+                          {
+                           encval = String.fromCharCode(parseInt(encval, 16)); // hex to base 10
+                           newStr = encval + newStr; // prepend the char in
+                          }
+                       // if so, convert. Else, ignore it.
+                     }
+                  // adjust length of the string to be examined
+                  backlen = lastpercent;
+                 // alert ("backlen at the end of the found % if is: " + backlen);
+                }
+            else { newStr = val + newStr; backlen = 0; } // if there is no %, just leave the value as-is
+           } // end while
+   }         // end 'state=none' conversion
+else         // value needs to be converted to URL encoded chars
+   {
+    for (i=0;i<len;i++)
+        {
+          if (val.substring(i,i+1).charCodeAt(0) < 255)  // hack to eliminate the rest of unicode from this
+             {
+              if (isUnsafe(val.substring(i,i+1)) == false)
+                 { newStr = newStr + val.substring(i,i+1); }
+              else
+                 { newStr = newStr + convert(val.substring(i,i+1)); }
+             }
+          else // woopsie! restore.
+             {
+               alert ("Found a non-ISO-8859-1 character at position: " + (i+1) + ",\nPlease eliminate before continuing.");
+               document.forms[0].state.value = "none";
+               document.forms[0].enc[0].checked = true; // set back to "no encoding"
+               newStr = original; i=len;                // short-circuit the loop and exit
+             }
+        }
+
+   }
+    document.forms[0].origval.value = newStr;
+}
+</script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">URL Encoding<br>
+(or: 'What are those "%20" codes in URLs?')</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#rfc1738">RFC 1738</a> |
+    <a href="#whatwhy">Which characters must be encoded and why</a><br>
+    <a href="#how">How to URL encode characters</a> | <a href="#rollown">URL
+    encode a character</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+     <a name="rfc1738"></a>
+  <big><b class="mainheading">RFC 1738: Uniform Resource Locators (URL) specification</b></big>
+     <hr width="30%" align=left size=1>
+     The specification for URLs (<a
+     href="http://www.rfc-editor.org/rfc/rfc1738.txt">RFC 1738</a>,
+     Dec. '94) poses a problem, in that it limits the use of allowed characters
+     in URLs to only a limited subset of the US-ASCII character set:
+        <blockquote class="quotation">&quot;...Only alphanumerics [0-9a-zA-Z],
+        the special characters "$-_.+!*'()," <b>[not including the quotes -
+        ed]</b>, and reserved characters used for their reserved purposes may
+        be used unencoded within a URL.&quot;</blockquote>
+
+     HTML, on the other hand, allows the entire range of the
+     <a href="../tagpages/text.htm">ISO-8859-1 (ISO-Latin)</a> character set
+     to be used in documents - and HTML4 expands the allowable range to include
+     all of the <a href="../tagpages/text.htm#unicode">Unicode character
+     set</a> as well. In the case of non-ISO-8859-1 characters (characters above
+     FF hex/255 decimal in the Unicode set), they just can not be used in URLs,
+     because there is no safe way to specify character set information in the
+     URL content yet [<a href="http://www.rfc-editor.org/rfc/rfc2396.txt">RFC2396</a>.]
+     <br><br>
+
+     URLs should be encoded everywhere in an HTML document that a URL is
+     referenced to import an object (<a href="../tagpages/a/a-hyperlink.htm">A</a>, 
+     <a href="../tagpages/a/applet.htm">APPLET</a>, <a href="../tagpages/a/area.htm">AREA</a>, 
+     <a href="../tagpages/b/base.htm">BASE</a>, <a href="../tagpages/b/bgsound.htm">BGSOUND</a>, 
+     <a href="../tagpages/b/body.htm">BODY</a>,
+     <a href="../tagpages/e/embed.htm">EMBED</a>, <a href="../tagpages/f/form.htm">FORM</a>, 
+     <a href="../tagpages/f/frame.htm">FRAME</a>, <a href="../tagpages/i/iframe.htm">IFRAME</a>, 
+     <a href="../tagpages/i/ilayer.htm">ILAYER</a>, <a href="../tagpages/i/image.htm">IMG</a>, 
+     <a href="../tagpages/i/isindex.htm">ISINDEX</a>, <a href="../tagpages/i/inputtext.htm">INPUT</a>, 
+     <a href="../tagpages/l/layer.htm">LAYER</a>, <a href="../tagpages/l/link.htm">LINK</a>,
+     <a href="../tagpages/o/object.htm">OBJECT</a>, <a href="../tagpages/s/script.htm">SCRIPT</a>, 
+     <a href="../tagpages/s/sound.htm">SOUND</a>, <a href="../tagpages/t/table.htm">TABLE</a>, 
+     <a href="../tagpages/t/thtd.htm">TD</a>, <a href="../tagpages/t/thtd.htm">TH</a>, 
+     and <a href="../tagpages/t/tr.htm">TR</a> elements.)
+     <br><br>
+
+<a name="whatwhy"></a>
+  <big><b class="mainheading">What characters need to be encoded and why?</b></big>
+     <hr width="30%" align=left size=1>
+     <table>
+     <tr><td colspan=3><b class="subheading">ASCII Control characters</b></td></tr>
+     <tr><td rowspan=2>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         <td valign=top><b class="l3heading">Why:</b></td>
+         <td>These characters are not printable.</td></tr>
+     <tr><td valign=top><b class="l3heading">Characters:</b></td>
+         <td>Includes the <a href="../tagpages/text.htm">ISO-8859-1
+         (ISO-Latin)</a> character ranges 00-1F hex (0-31 decimal) and 7F
+         (127 decimal.)</td></tr>
+     </table>
+
+     <table>
+     <tr><td colspan=3><b class="subheading">Non-ASCII characters</b></td></tr>
+     <tr><td rowspan=2>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         <td valign=top><b class="l3heading">Why:</b></td>
+         <td>These are by definition not legal in URLs since they are not in
+             the ASCII set.</td></tr>
+     <tr><td valign=top><b class="l3heading">Characters:</b></td>
+         <td>Includes the entire "top half" of the
+             <a href="../tagpages/text.htm">ISO-Latin</a> set 80-FF hex
+             (128-255 decimal.)</td></tr>
+     </table>
+
+     <table>
+     <tr><td colspan=3><b class="subheading">"Reserved characters"</b></td></tr>
+     <tr><td rowspan=2>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         <td valign=top><b class="l3heading">Why:</b></td>
+         <td>URLs use some characters for special use in defining their syntax.
+             When these characters are not used in their special role inside a
+             URL, they need to be encoded.</td></tr>
+     <tr><td valign=top><b class="l3heading">Characters:</b></td>
+         <td>
+         <table border=1 cellpadding=3 cellspacing=0>
+         <tr><th>Character</th><th>Code<br>Points<br>(Hex)</th>
+             <th>Code<br>Points<br>(Dec)</th></tr>
+         <tr><td nowrap valign=top>&nbsp;Dollar ("$")<br>
+             &nbsp;Ampersand ("&amp")<br>
+             &nbsp;Plus ("+")<br>
+             &nbsp;Comma (",")<br>
+             &nbsp;Forward slash/Virgule ("/")<br>
+             &nbsp;Colon (":")<br>
+             &nbsp;Semi-colon (";")<br>
+             &nbsp;Equals ("=")<br>
+             &nbsp;Question mark ("?")<br>
+             &nbsp;'At' symbol ("@")<br></td>
+             <td align=center valign=top>24<br>26<br>2B<br>2C<br>2F<br>3A<br>3B<br>3D<br>3F<br>40</td>
+             <td align=center valign=top>36<br>38<br>43<br>44<br>47<br>58<br>59<br>61<br>63<br>64</td></tr>
+         </table>
+         </td></tr>
+
+     </table>
+
+     <table>
+     <tr><td colspan=3><b class="subheading">"Unsafe characters"</b></td></tr>
+     <tr><td rowspan=2>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         <td valign=top><b class="l3heading">Why:</b></td>
+         <td>Some characters present the <em>possibility</em> of being 
+             misunderstood within URLs for various reasons. These characters
+             should also always be encoded.</td></tr>
+     <tr><td valign=top><b class="l3heading">Characters:</b></td>
+         <td>
+         <table border=1 cellpadding=3 cellspacing=0>
+         <tr><th>Character</th><th>Code<br>Points<br>(Hex)</th>
+             <th>Code<br>Points<br>(Dec)</th><th>Why encode?</th></tr>
+         <tr><td>Space</td><td align=center>20</td><td align=center>32</td>
+             <td valign=top>Significant sequences of spaces may be lost in some
+                 uses (especially multiple spaces)</td></tr>
+         <tr><td nowrap>Quotation marks<br>'Less Than' symbol ("&lt;")<br>
+                 'Greater Than' symbol ("&gt;")</td>
+                 <td align=center>22<br>3C<br>3E</td><td align=center>34<br>60<br>62</td>
+             <td valign=top>These characters are often used to delimit URLs
+                 in plain text.</td></tr>
+         <tr><td nowrap>'Pound' character ("#")</td>
+                 <td align=center>23</td><td align=center>35</td>
+             <td valign=top>This is used in URLs to indicate where a fragment
+                 identifier (bookmarks/anchors in HTML) begins.</td></tr>
+         <tr><td nowrap>Percent character ("%")</td>
+                 <td align=center>25</td><td align=center>37</td>
+             <td valign=top>This is used to URL encode/escape other characters,
+                 so it should itself also be encoded.</td></tr>
+         <tr><td nowrap><b>Misc. characters:</b><br>
+                 &nbsp;&nbsp;&nbsp;Left Curly Brace ("{")<br>
+                 &nbsp;&nbsp;&nbsp;Right Curly Brace ("}")<br>
+                 &nbsp;&nbsp;&nbsp;Vertical Bar/Pipe ("|")<br>
+                 &nbsp;&nbsp;&nbsp;Backslash ("\")<br>
+                 &nbsp;&nbsp;&nbsp;Caret ("^")<br>
+                 &nbsp;&nbsp;&nbsp;Tilde ("~")<br>
+                 &nbsp;&nbsp;&nbsp;Left Square Bracket ("[")<br>
+                 &nbsp;&nbsp;&nbsp;Right Square Bracket ("]")<br>
+                 &nbsp;&nbsp;&nbsp;Grave Accent ("`")</td>
+                 <td align=center><br>7B<br>7D<br>7C<br>5C<br>5E<br>7E<br>5B<br>5D<br>60</td>
+                 <td align=center><br>123<br>125<br>124<br>92<br>94<br>126<br>91<br>93<br>96</td>
+             <td valign=top>Some systems can possibly modify these characters.</td></tr>
+         </table>
+         </td></tr>
+     </table>
+<br><br>
+
+
+
+<a name="how"></a>
+  <big><b class="mainheading">How are characters URL encoded?</b></big>
+     <hr width="30%" align=left size=1>
+     <span class="text">URL encoding of a character consists of a "%" symbol,
+     followed by the two-digit hexadecimal representation (case-insensitive)
+     of the <a href="../tagpages/text.htm">ISO-Latin</a> code point for the
+     character.</span>
+
+     <dl>
+     <dt><b class="subheading">Example</b>
+     <dd><div class="example">
+         <ul>
+             <li>Space = decimal code point 32 in the
+                 <a href="../tagpages/text.htm">ISO-Latin</a> set.
+             <li>32 decimal = 20 in hexadecimal
+             <li>The URL encoded representation will be "%20"
+         </ul></div>
+     </dl>
+
+<br>
+<a name="rollown"></a>
+<big><b class="mainheading">URL encoding converter</b></big>
+<hr width="30%" align=left size=1>
+<span class="text">The box below allows you to convert content
+between its unencoded and encoded forms. The initial input
+state is considered to be "unencoded" (hit 'Convert' at the
+beginning to start in the encoded state.) Further, to allow actual
+URLs to be encoded, this little converter does not encode
+URL syntax characters (the <b>";", "/", "?", ":", "@", "=", "#"</b>
+and <b>"&amp;"</b> characters)...if you also need to encode these
+characters for any reason, see the "Reserved characters" table
+above for the appropriate encoded values.<br><br>
+<b class="smalltext"><b class="alert">NOTE:</b><br>
+This converter uses the String.charCodeAt and String.fromCharCode
+functions, which are only available in Javascript version 1.2 or
+better, so it doesn't work in Opera 3.x and below, Netscape 3 and below, and
+IE 3 and below. Browser detection <em>can</em> be tiresome, so this
+will just fail in those browsers...you have been warned. 8-}</b>
+</span><br>
+
+<form name="urlenc">
+<input type="hidden" name="state" value="none">
+<blockquote><table border=0>
+<tr><th colspan=3><input type=text name="origval" value="" size=50></th></tr>
+<tr><td align=center><input type=radio name="enc" checked></td>
+    <td align=center><input type=button value="&lt;-- Convert --&gt;"
+        onclick="changeIt(document.forms[0].origval.value);"></td>
+    <td align=center><input type=radio name="enc"></td>
+</tr>
+<tr>
+   <th><font size=2>No<br>Encoding</font></th>
+   <th></th>
+   <th><font size=2>URL-Safe<br>Encoding</font></th>
+</tr>
+</table>
+</blockquote>
+</form>
+
+<br>
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<hr width="30%" align=left size=1>
+<ul>
+    <li>Internet Explorer is notoriously relaxed in its requirements for
+        encoding spaces in URLs. This tends to contribute to author
+        sloppiness in authoring URLs. Keep in mind that Netscape and
+        Opera are much more strict on this point, and spaces <em>MUST</em>
+        be encoded if the URL is to be considered to be correct.
+</ul>
+
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

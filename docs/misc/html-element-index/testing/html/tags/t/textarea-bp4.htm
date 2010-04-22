@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Textarea: Browser Peculiarities: Rows/Cols calculation</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Mozilla/Netscape 6+ does not calculate the rows and cols attributes 
+correctly. If you specify a TEXTAREA with rows=10 and cols=20, you will get a control 
+that is about 22 cols/characters wide by 11 rows/characters. It appears that the 
+difference is pretty constant - generally about 3 extra cols wide and one extra row tall. 
+The reader that pointed this out to me also noted it appears that Mozilla is allowing 
+space for the scroll bars in addition to the rows/cols you specify, even though they 
+are not present by default. (bugzilla #33654.)</div>
+<br>
+
+<form>
+<b>Textarea field with no rows or cols:</b>
+<hr>
+filler text 
+<textarea name="textarea1">a1234567890123456789
+b1234567890123456789
+c1234567890123456789</textarea>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Textarea field with rows=2 and cols=20. Actual character quantity inside:</b>
+<hr>
+filler text 
+<textarea name="textarea1" rows=2 cols=20>a1234567890123456789
+b1234567890123456789</textarea>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Textarea field with rows=2 and cols=20. Realistic character quantity inside:</b>
+<hr>
+filler text 
+<textarea name="textarea1" rows=2 cols=20>a1234567890123456789012
+b1234567890123456789012
+b1234567890123456789012</textarea>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Textarea field with rows=10 and cols=30. Actual character quantity inside:</b>
+<hr>
+filler text 
+<textarea name="textarea1" rows=10 cols=30>a12345678901234567890123456789
+b12345678901234567890123456789
+c12345678901234567890123456789
+d12345678901234567890123456789
+e12345678901234567890123456789
+f12345678901234567890123456789
+g12345678901234567890123456789
+h12345678901234567890123456789
+i12345678901234567890123456789
+j12345678901234567890123456789</textarea>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Textarea field with rows=10 and cols=30. Realistic character quantity inside:</b>
+<hr>
+filler text 
+<textarea name="textarea1" rows=10 cols=30>a12345678901234567890123456789012
+b12345678901234567890123456789012
+c12345678901234567890123456789012
+d12345678901234567890123456789012
+e12345678901234567890123456789012
+f12345678901234567890123456789012
+g12345678901234567890123456789012
+h12345678901234567890123456789012
+i12345678901234567890123456789012
+j12345678901234567890123456789012
+k12345678901234567890123456789012</textarea>
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

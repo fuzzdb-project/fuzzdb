@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MARQUEE: Browser Peculiarities: block versus inline marquees</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">If no WIDTH attribute is set for a MARQUEE element, it behaves like a
+     block-level element (linebreak before and after) and occupies 100% of the containing 
+     element/window width. If a width is set, it behaves like an in-line element.</div>
+<br>
+
+<b>Basic MARQUEE element, no width:</b>
+<hr>
+filler text 
+<marquee>Marquee1 Marquee2</marquee> 
+filler text
+<hr>
+<br>
+
+<b>Basic MARQUEE element, width=500:</b>
+<hr>
+filler text 
+<marquee width="500">Marquee1 Marquee2</marquee> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

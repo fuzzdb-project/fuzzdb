@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>HR: Browser peculiarity - Limitations on WIDTH in table cells</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">If an HR element is used in a table cell and there is no 
+content in the rest of the column, the width of the HR will default to 1 or two 
+pixels. All of the reviewed browsers behave this way (well, except for Mosaic, 
+which seems to automatically impose an ~40 pixel width on such HRs.)</div>
+<br>
+
+<b>4 column table with plain HR elements in Row 2 
+Row 1: Col 1 has content. Col 2 has &amp;nbsp;. Col 3 has a bare space. Col 4 has no content.<br>
+Note - Results may be hard to see:</b>
+<hr>
+<table border="0" cellpadding=0 cellspacing=5>
+<tr><td>Column 1</td><td>&nbsp;</td><td> </td><td></td></tr>
+<tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr>
+</table>
+<hr>
+<br>
+
+<b>4 column table with HR WIDTH=50 elements in Row 2 
+Row 1: Col 1 has content. Col 2 has &amp;nbsp;. Col 3 has a bare space. <br>
+Note - Results may be hard to see:</b>
+<hr>
+<table border="0" cellpadding=0 cellspacing=5>
+<tr><td>Column 1</td><td>&nbsp;</td><td> </td><td></td></tr>
+<tr><td><hr width="50"></td><td><hr width="50"></td><td><hr width="50"></td><td><hr width="50"></td></tr>
+</table>
+<hr>
+<br>
+
+</body>
+</html>

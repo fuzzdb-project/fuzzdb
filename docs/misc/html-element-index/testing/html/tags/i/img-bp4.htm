@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IMG: Browser Peculiarities: AREA definitions dependent on final 
+    display size, not on default image size</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">If an image is used as an image map in a document, the coordinates 
+specified in the AREA elements must represent the coordinates on the image AS IT 
+WILL BE USED in the document. Eg: if different HEIGHT and/or WIDTH attributes are 
+specified in the IMG element the map coordinates must reflect this. Take care - 
+if percentage heights and widths are specified, it will be almost IMPOSSIBLE to 
+give accurate coordinates in the client side image map. This warning applies to 
+all browsers surveyed that support client-side image maps.</div>
+<br>
+
+<b>Shape destinations on image:</b>
+<table cellpadding="3" cellspacing="0" border=2>
+<tr><th align="left"><big>Shape</big></th><th align="left"><big>URL</big></th></tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-greenlink.gif" height="20" width="20"></td>
+    <td>http://www.yahoo.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-orangelink.gif" height="20" width="20"></td>
+    <td>http://www.google.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-yellowlink.gif" height="20" width="20"></td>
+    <td>http://www.blooberry.com/</td>
+</tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-bluelink.gif" height="20" width="20"></td>
+    <td>http://slashdot.org/</td>
+</tr>
+</table>
+<br>
+
+<b>IMG reference with default size, with a map definition (#imagemap1).
+All links should be accurate for the shape definitions:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" usemap="#imagemap1">
+filler text
+<hr>
+<br>
+
+<b>IMG reference with height=300 width=300, with a map definition using coordinates at final dimensions (#imagemap2).
+All links should be accurate for the shape definitions:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" width="300" height="300" usemap="#imagemap2">
+filler text
+<hr>
+<br>
+
+<b>IMG reference with height=300 width=300, with a map definition using default 
+size coordinates (#imagemap1). Links will be incorrect for some parts of the shapes:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemaptest.gif" width="300" height="300" usemap="#imagemap1">
+filler text
+<hr>
+<br>
+
+<map name="imagemap1">
+    <area shape="rect" coords="0,0,100,100" href="http://www.yahoo.com/">
+    <area shape="rect" coords="100,0,200,100" href="http://www.google.com/">
+    <area shape="circle" coords="50,150,50" href="http://www.blooberry.com/">
+    <area shape="poly" coords="100,200,150,100,200,200" href="http://slashdot.org/">
+</map>
+
+<map name="imagemap2">
+    <area shape="rect" coords="0,0,150,150" href="http://www.yahoo.com/">
+    <area shape="rect" coords="150,0,300,150" href="http://www.google.com/">
+    <area shape="circle" coords="75,225,75" href="http://www.blooberry.com/">
+    <area shape="poly" coords="150,300,225,150,300,300" href="http://slashdot.org/">
+</map>
+
+</body>
+</html>

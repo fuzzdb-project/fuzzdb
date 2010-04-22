@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Select</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Selection List</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Basic Forms</b>, <b class=alert>Forms</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Replaced with a widget that displays a dropdown/scrollable list of OPTION elements</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.6">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_extformsmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The SELECT element indicates the contents will be a list
+        of values. The values of this list are represented by one or more
+        OPTION elements. A common implementation is a drop-down list box.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>]
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accesskey</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the active field.
+    <dd><b class="l3heading">Values:</b>
+        A single, case-insensitive character from a browser's character set.
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the alignment of text following the selection list
+        relative to the list on the rendering device. LEFT and RIGHT alignment
+        specify floating horizontal alignment of the selection list in the
+        browser window, and subsequent content in the document will wrap
+        around the list. The other values specify vertical alignment of
+        content relative to the selection list on the same line.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Left</b> | <b class="alert">Right</b> |
+        <b class="alert">Top</b> | <b class="alert">Middle</b> |
+        <b class="alert">Bottom</b>
+
+<dt><b class="subheading">Disabled</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates the element is
+        initially non-functional. Disabled form elements should not be submitted
+        to the form processing script.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">disabled</b> (XHTML)
+
+<dt><b class="subheading">Multiple</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates that more than one option can be selected at
+        one time to be included in the return value to the form processing script.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">multiple</b> (XHTML)
+
+<dt><b class="subheading">Name</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> Yes
+    <dd><b class="l3heading">Description:</b><br>
+        This is a required attribute that associates a symbolic name to the
+        field for submittal to the form processing script.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies the name of the element
+        to convert this element to in the SDA element group (in this case the
+        'List' element - "list of items".)
+    <dd><b class="l3heading">Value:</b> 
+        <b class="alert">List</b> (Denotes a 'list of items' in SDA.)
+
+<dt><b class="subheading">SDAPref</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>BEFORE</em> the original element content (in this case the string
+        "&lt;LHead&gt;Select #AttVal(Multiple)&lt;/LHead&gt;")
+        when the SDA document is rendered (SDA also allows attributes and values
+        from the original element to be used in the new SDA element where necessary.)
+        "#AttVal(Multiple)" references the value of the SELECT MULTIPLE attribute,
+        if present.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">&lt;LHead&gt;Select <code
+        class="alert2">#AttVal(Multiple)</code>&lt;/LHead&gt;</b>"
+
+<dt><b class="subheading">Size</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M2A1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the number of visible items in the list.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">Tabindex</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B3</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+        <li>Active elements using the TABINDEX attribute with positive integers are
+        navigated first. Low values are navigated first.
+        <li>Active elements not specifying any TABINDEX attribute
+        </ol>
+        Those elements carrying a DISABLED attribute or using negative TABINDEX
+        values do not participate in the tabbing cycle.
+    <dd><b class="l3heading">Values:</b> Positive or negative integers.
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of the select element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">form</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">select</b>
+        <span class="tagattrib">name</span>=&quot;list1&quot;
+        <span class="tagattrib">size</span>=&quot;3&quot; <span class="tagattrib">multiple</span>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">option</b>
+        <span class="tagattrib">value</span>=&quot;opt1&quot;&gt;option1
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">option</b>
+        <span class="tagattrib">value</span>=&quot;opt2&quot;&gt;option2
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">option</b>
+        <span class="tagattrib">selected</span>
+        <span class="tagattrib">value</span>=&quot;opt3&quot;&gt;option3
+        &lt;/<b class="tagname">option</b>&gt;<br>
+        &#160;&#160;&#160;&lt;/<b class="tagname">select</b>&gt;<br>
+        &lt;/<b class="tagname">form</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd>&lt;<a href="../o/optgroup.htm">optgroup</a>&gt; |
+        &lt;<a href="../o/option.htm">option</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Markup other than the OPTION or OPTGROUP elements should never appear in a
+        selection list.
+    <li><a href="../../../testing/html/tags/o/option-bp1.htm">[Test]</a>
+        If no VALUE attribute is supplied for an OPTION element, the displayed
+        content of the OPTION is submitted to the form processing script. Otherwise,
+        the VALUE attribute is sent.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/o/option-bp2.htm">[Test]</a>
+        In Internet Explorer 4.0/5.0, only the CSS 'color' and 'background-color'
+        properties apply to the OPTION element (as well as the 'background-color'
+        component of the 'background' shorthand property.) All other CSS properties
+        for the OPTION element are ignored. CSS properties set for individual OPTION
+        elements override properties set for the SELECT element.
+    <li><a href="../../../testing/html/tags/s/select-bp2.htm">[Test]</a>
+        Netscape 4+ allows some Character-level formatting to be applied to the
+        contents of this form field. These physical formatting elements (along with
+        virtual formatting elements that are rendered identically, such as
+        EM and I) apply to this form field: I, U, TT, S, STRIKE, SUB, SUP, BIG,
+        SMALL, FONT SIZE and FONT FACE.
+    <li><a href="../../../testing/html/tags/s/select-bp3.htm">[Test]</a>
+        The DIR="RTL" attribute right aligns the content of SELECT element
+        <em>WITHIN</em> the form field, not the element itself relative to the
+        viewport as it does for other elements.
+    <li>The same document that clued me in to the support of the WIDTH attribute
+        in Netscape 4.x also claimed that it supported a HEIGHT attribute as well,
+        but despite much testing I could not confirm that.
+    <li><a href="../../../testing/html/tags/s/select-bp5.htm">[Test]</a>
+        Internet Explorer (PC versions at least) have a problem with displaying
+        background colors for select lists when only 256 colors are available.
+        If the background-color specified (even color safe colors) is also
+        used for other elements or even for backgrounds on other form controls,
+        the color used for the select list is very different than what it
+        should be. I do not know how widespread this problem is, or what causes it.
+    <li><a href="../../../testing/html/tags/s/select-bp4.htm">[Test]</a>
+        Opera 4+: Only a few CSS properties (like 'margin', which apply to the
+        region AROUND the SELECT list) are used. Most others are ignored.
+    <li><a href="../../../testing/html/tags/s/select-bp1.htm">[Test]</a>
+        Opera 5/6: Using the DISABLED attribute still sends the name/value pair
+        for the element to the form processing script. It should not do this.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

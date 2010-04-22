@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Reset: Browser Peculiarities: Constraining the default widget size</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Note: If HEIGHT and/or WIDTH dimensions are specified that are 
+smaller than the default size required to display a button, the default size will be used.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Reset field, value=value1:</b>
+<hr>
+filler text
+<input type="reset" value="value1">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions constrained by poorly supported height/width attributes (0h X 0w):</b>
+<hr>
+filler text
+<input type="reset" value="value1" height="0" width="0">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions constrained by poorly supported height/width attributes (15h X 30w):</b>
+<hr>
+filler text
+<input type="reset" value="value1" height="15" width="30">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions expanded by poorly supported height/width attributes (50h X 100w):</b>
+<hr>
+filler text
+<input type="reset" value="value1" height="50" width="100">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions constrained by CSS (style="height: 0px; width: 0px"):</b>
+<hr>
+filler text
+<input type="reset" value="value1" style="height: 0px; width: 0px">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions constrained by CSS (style="height: 15px; width: 30px"):</b>
+<hr>
+filler text
+<input type="reset" value="value1" style="height: 15px; width: 30px">
+filler text
+<hr>
+<br>
+
+<b>Plain Input Type=Reset field, value=value1. 
+Dimensions expanded by CSS (style="height: 50px; width: 100px"):</b>
+<hr>
+filler text
+<input type="reset" value="value1" style="height: 50px; width: 100px">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

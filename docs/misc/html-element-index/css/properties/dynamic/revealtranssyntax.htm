@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Reveal Transition Filter Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Reveal Transition Filter Syntax</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Reveal transition filters are time-varying visual filters allowing content to
+        be transformed in a prescribed manner. Their role is to visually transition
+        a control from one state to another. Scripting languages must be used to change
+        between the beginning and ending states for the 23 possible Reveal transition
+        types. Transition filters can also be specified using syntax in the HTML META
+        element to create blend transitions between page loads.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+<dt><b class="selector">Selector</b>
+    { <span class="property">filter:</span>
+    <b class="alert2">revealtrans</b>([<span class="alert">duration</span>],
+    [<span class="alert">transition-type</span>]) }
+    <dd>[<b class="alert2">duration</b>] - Floating point value representing
+        the length of time used for the transition. Value is given in seconds
+        and milliseconds (eg: 1.234 = 1,234 milliseconds.)
+    <dd>[<b class="alert2">transition-type</b>] - Integer code value (0-23)
+        indicating the shape of the Reveal transition.
+</dl>
+
+
+<dl>
+<dt><big><b class="mainheading">Transition Types</b></big>
+    <dd><table width="90%" border=2 cellspacing=0 cellpadding=2>
+        <tr>
+            <th class="field" valign=bottom><b class="subheading">Transition<br>Type</b></th>
+            <th class="field" valign=bottom><b class="subheading">Description</b></th>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">0</b></td>
+            <td><b class="alert">Box In</b> -
+                Starts at box outside boundary and goes to center in a rectangular transition.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">1</b></td>
+            <td><b class="alert">Box Out</b> -
+                Starts at box center and goes to outside boundary in a rectangular transition.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">2</b></td>
+            <td><b class="alert">Circle In</b> -
+                Starts at box outside boundary and goes to center in a circular transition.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">3</b></td>
+            <td><b class="alert">Circle Out</b> -
+                Starts at box center and goes to outside boundary in a circular increasing
+                radius transition.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">4</b></td>
+            <td><b class="alert">Wipe Up</b> -
+                Starts at bottom of box and transition works its way upward.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">5</b></td>
+            <td><b class="alert">Wipe Down</b> -
+                Starts at top of box and transition works its way downward.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">6</b></td>
+            <td><b class="alert">Wipe Right</b> -
+                Starts at left side of box and transition works its way to the right.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">7</b></td>
+            <td><b class="alert">Wipe Left</b> -
+                Starts at right side of box and transition works its way to the left.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">8</b></td>
+            <td><b class="alert">Vertical Blinds</b> -
+                Segments the box into vertical strips. Transition moves from left to right.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">9</b></td>
+            <td><b class="alert">Horizontal Blinds</b> -
+                Segments the box into horizontal strips. Transition moves from top to bottom.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">10</b></td>
+            <td><b class="alert">Checkerboard Across</b> -
+                Segments the box into a grid of squares. Transition moves from left to right.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">11</b></td>
+            <td><b class="alert">Checkerboard Down</b> -
+                Segments the box into a grid of squares. Transition moves from top to bottom.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">12</b></td>
+            <td><b class="alert">Random Dissolve</b> -
+                Randomly changes pixels in the box to their new state over the course of
+                the duration time.</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">13</b></td>
+            <td><b class="alert">Split Vertical In</b> -
+                Starts at the left and right sides of the box and moves toward the center
+                (closing sliding double door.)</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">14</b></td>
+            <td><b class="alert">Split Vertical Out</b> -
+                Starts at the center of the box and moves toward the left and right sides
+                (opening sliding double door.)</td>
+        </tr>
+        <tr>
+            <td valign=top align="center"><b class="l3heading">15</b></td>
+            <td><b class="alert">Split Horizontal In</b> -
+                Starts at the top and bottom sides of the box and moves toward the center.</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">16</b></td>
+            <td><b class="alert">Split Horizontal Out</b> -
+                Starts at the center of the box and moves toward the top and bottom sides.</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">17</b></td>
+            <td><b class="alert">Strips Left Down</b> -
+                Starts at upper right corner of box moving toward the bottom left corner in
+                diagonal line (page turn from top right.)</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">18</b></td>
+            <td><b class="alert">Strips Left Up</b> -
+                Starts at bottom right corner of box moving toward the top left corner in
+                diagonal line (page turn from bottom right.)</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">19</b></td>
+            <td><b class="alert">Strips Right Down</b> -
+                Starts at upper left corner of box moving toward the bottom right corner in
+                diagonal line (page turn from top left.)</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">20</b></td>
+            <td><b class="alert">Strips Right Up</b> -
+                Starts at bottom left corner of box moving toward the top right corner in
+                diagonal line (page turn from bottom left.)</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">21</b></td>
+            <td><b class="alert">Random Bars Horizontal</b> -
+                Transition to new state occurs horizontal pixel line-by-line in random
+                fashion until complete.</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">22</b></td>
+            <td><b class="alert">Random Bars Vertical</b> -
+                Transition to new state occurs vertical pixel line-by-line in random fashion
+                until complete.</td>
+        </tr>
+        <tr>
+            <td valign=top align=center><b class="l3heading">23</b></td>
+            <td><b class="alert">Random</b> -
+                One of the previous 23 reveal filter types is randomly used.</td>
+        </tr>
+        </table>
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+
+</BODY>
+</HTML>

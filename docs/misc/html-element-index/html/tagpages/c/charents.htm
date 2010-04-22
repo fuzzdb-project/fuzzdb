@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Character Entities</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Character Entities</h1>
+         <b class="alert">End Tag:</b> <span class="magicword">NA</span><br>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>A text character usually lives as an Octet, which is a single byte
+        or 8 bits of data. Using 8 bits allows for 256 (a range from 0-255)
+        possible distinct character codes. While the HTTP protocol allows the full
+        256 character range of the ISO 8859-1 (ISO Latin) characters to be
+        transported, not all operating systems or applications may natively support
+        this range. In order to increase portability and viewability of this character
+        set on all browsers, HTML offers alternative representations of all the ISO
+        Latin characters using coded Character Entities (see index below.) These
+        case-sensitive, coded representations are created using characters from a
+        proper subset of the ISO Latin  character set known as
+        <a href="../t/text.htm#ascii">ASCII</a>.
+        <br><br>
+   
+        Included in the Character Entity domain are both numbered and named entities:
+        <dl>
+        <dt><b class="magicword">Numbered Entity Syntax:</b>
+            <b class="alert">&amp;#charnumber;</b>
+            <dd>Where <em>charnumber</em> is a distinct integer from 0-255.
+        <dt><b class="magicword">Named Entity Syntax:</b>
+            <b class="alert">&amp;charname;</b>
+            <dd>Where <em>charname</em> is a unique mnemonic shorthand of
+                the character to be represented.
+        </dl>
+        <br>
+        <b class="alert">Note:</b> The trailing semi-colon character (';') is only
+        <em>necessary</em> if the character following the entity reference would
+        be recognized as part of the entity. Even so, it is probably wise to
+        <em>always</em> use this trailing termination character to be consistent.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Character Entity Indexes</b></big>
+<dt><a name="iso88591"><b class="subheading">The ISO-8859-1 Character Set</b></a>
+    <dd><a href="../entities/charentity0-31.htm">000-031</a> |
+        <a href="../entities/charentity32-64.htm">032-064</a> |
+        <a href="../entities/charentity65-96.htm">065-096</a> |
+        <a href="../entities/charentity97-126.htm">097-126</a>
+    <dd><a href="../entities/charentity127-159.htm">127-159</a> |
+        <a href="../entities/charentity160-191.htm">160-191</a> |
+        <a href="../entities/charentity192-223.htm">192-223</a> |
+        <a href="../entities/charentity224-255.htm">224-255</a>
+
+<dt><br><a name="unichars"><b class="subheading">Unicode Character Entities</b></a>
+    <dd><a href="../entities/arrow.htm">Arrows</a> - Arrow Shapes
+    <dd><a href="../entities/greekcapitals.htm">Greek Capitals</a> - Greek capital characters
+    <dd><a href="../entities/greeksmalls.htm">Greek Smalls</a> - Greek 'lower case' characters
+    <dd><a href="../entities/math.htm">Math Symbols</a> - Characters commonly used in mathematics
+    <dd><a href="../entities/miscletters.htm">Miscellaneous letters</a> - Latin Extended-A
+        and B characters and Letter-like Symbols
+    <dd><a href="../entities/miscshapes.htm">Miscellaneous shapes</a> - Playing card suit
+        symbols and other graphical symbols
+    <dd><a href="../entities/misctechnical.htm">Miscellaneous technical symbols</a> -
+        Characters used in various technical disciplines
+    <dd><a href="../entities/spacebidi.htm">Bi-directional and spacing characters</a> -
+        Characters used to control bi-directional text and text spacing
+    <dd><a href="../entities/genpunctuation1.htm">General punctuation set 1</a> -
+        Commonly used punctuation characters
+    <dd><a href="../entities/genpunctuation2.htm">General punctuation set 2</a> -
+        More commonly used punctuation characters
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Attributes</b></big>
+    <dd><b class="alert">Character Entities do not accept attributes</b>
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example"><b class="tagname">&amp;Agrave;</b> = &Agrave;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b> |
+        &lt;<a href="../d/del.htm">Del</a>&gt; |
+        &lt;<a href="../i/ins.htm">Ins</a>&gt; |
+        &lt;<a href="../l/legend.htm">Legend</a>&gt; |
+        &lt;<a href="../o/option.htm">Option</a>&gt; |
+        &lt;<a href="../s/script.htm">Script</a>&gt; |
+        &lt;<a href="../s/style.htm">Style</a>&gt; |
+        &lt;<a href="../t/textarea.htm">Textarea</a>&gt; |
+        &lt;<a href="../t/title.htm">Title</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">Character Entities do not accept content.</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Character entities can be used anywhere regular characters will be
+        displayed on screen.
+    <li>In cases like IMG or INPUT, entities are used only for final display
+        purposes (ALT text for Images or VALUE for Input elements.)
+    <li>Entities are not to be used in path names for URLs.
+    <li><b class="alert">DTD Note:</b> The &amp;quot; named character
+        entity was retracted from the HTML 3.2 DTD. There is still some confusion
+        as to <em>WHY</em> this was done, as this entity is in wide use, and exists in the
+        HTML 2.0, 3.0 and 4.0 DTDs. There are two differing stories as to why
+        it was deleted from the 3.2 DTD:
+        <ol>
+            <li>Dan Connolly (co-author of HTML 2.0) has said the omission was a mistake.
+            <li>Dave Raggett (author of HTML 3.0, 3.2 and 4.0) has said that the
+                omission was intentional due to a disagreement in the HTML ERB over
+                which entities should be in HTML 3.2. Only the basic set of entities was
+                agreed upon. (Many thanks to a reader who sent me some mail clarifying this.)
+         </ol>
+         Any documents using &amp;quot; will generate validation errors under the HTML
+         3.2 DTD, but it should be safe to leave these entities in legacy documents
+         due to wide legacy and future browser/DTD support. The alternate form of this
+         entity ('&amp;#34;') <em>WILL</em> validate and should be considered when
+         authoring new documents.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer 1.0-3.0 treated character entities case-insensitively,
+        such that "&amp;EacuTE;" was treated the same as "&amp;eacute;" In IE4.0+,
+        character entities are correctly case-sensitive.
+    <li>IE seems to be VERY lenient on character entity parsing - it will allow
+        an author to leave off the trailing semi-colon in every case that I have tried,
+        whereas the Netscape 4.x+ and Opera browsers I tried choked the same way
+        for the same test cases about half the time (Netscape/Opera could handle
+        *&amp;nbsp.test*, *&amp;nbsp test*, and *&amp;nbsp&amp;nbsp;test*, but they
+        couldn't handle *&amp;nbsptest*, *&amp;nbsp1test*, *&amp;nbspptest*,
+        *&amp;nbsp99test* and *&amp;nbsp&amp;nbsptest*.) IE handles <em>ALL</em>
+        of these cases just fine and renders all of the attempted non-breaking
+        spaces. I leave it to the reader to infer equivalence classes for this
+        behavior, but the gist of this item is: don't forget the semi-colon!
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

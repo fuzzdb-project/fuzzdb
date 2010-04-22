@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Frames in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Frames in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#usage">Usage</a><br>
+     <a href="#use">Frames: To Use or Not?</a> </td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for Frames</b></big>
+    <dd>The &quot;Frame&quot; feature set in HTML was created by Netscape
+        for version 2.0 of its Navigator product. It allows the browser window to
+        be sub-divided into smaller viewable areas for use in keeping certain content
+        constant while other content is scrolled or replaced. Each of these areas
+        (also known as <em>&quot;frames&quot;</em>) represent a completely separate
+        sub-document which can be individually controlled and addressed. Frames also
+        allow an author to specify the placement and usage behaviors of these embedded
+        HTML sub-documents. It is a very nice concept, but as specified only works
+        essentially as a visual paradigm - eg: how would a Braille browser present
+        frames? In addition, the visual results of a document layout specified with
+        frames is often VERY resolution dependent. An alternate navigation sometimes
+        offered for frames is a simple navigable list of sub-frame documents.
+        <br><br>
+
+        <b class="alert">Note:</b> At least one of the fundamental problems with
+        the original design of framed documents has been addressed by HTML 4.0.
+        It broadens the scope of the NOFRAMES element so that it can be
+        used in sub-documents as well as in the frame layout document. This allows
+        for better backward compatibility and reduces the need for multiple versions
+        of the same document. Repeatable sections which would normally be in separate
+        frames can now exist in NOFRAMES elements in subdocuments as well - older
+        browsers will see the noframes content and frames-capable browsers will ignore it.
+</dl>
+<br>
+
+<a name="usage"></a>
+<dl>
+<dt><big><b class="mainheading">Frames Usage</b></big>
+<dt>[ &lt;<a href="f/frameset.htm">frameset</a>&gt;, &lt;<a href="f/frame.htm">frame</a>&gt;,
+    &lt;<a href="n/noframes.htm">noframes</a>&gt; ]
+<dt><b class="subheading">Frameset:</b>
+    <dd>This element controls the layout of sub-documents on the browser
+        display. It allows the display to be divided up into a specified
+        number of rows or columns with specific or dynamic sizes. Each
+        frameset structure can be further divided into more rows and columns
+        by nesting other FRAMESET structures within its contents.
+<dt><b class="subheading">Frame:</b>
+    <dd>This is the element that actually defines what the content of the
+        frame will be. This element indicates a URL of a document to place
+        within the space provided for it by the FRAMESET layout definition.
+        Other properties of displaying the frame, such as resizing and
+        scrolling capability, are also controlled through this element.
+<dt><b class="subheading">Noframes:</b>
+    <dd>The FRAMESET element takes the place that is normally occupied by the
+        BODY element. This eliminates the traditional structure of an HTML
+        document, so the NOFRAMES element comes to the rescue in these
+        situations. This element allows for backward compatibility with older
+        browsers by allowing a traditional BODY structure to be placed within
+        a NOFRAMES element. Browsers that DO support frames will ignore the
+        NOFRAMES element, and older browsers will only see the traditional
+        HTML document structure in place. All browsers <em>should</em> be happy.
+</dl>
+<br>
+
+<a name="use"></a>
+<dl>
+<dt><big><b class="mainheading">Frames: To Use or Not?</b></big>
+<dt>There are many readers out there who do <em>NOT</em> like to read
+    pages that use frames. Indeed, there are some compelling arguments against
+    their use. Such arguments mostly involve issues with the speed and
+    implementation of the frames concept.
+    There are situations when their use is also very helpful, and the arguments
+    in favor of frames in these cases is for better intuitive navigation. In
+    the end, it is the author that must decide whether to create a document
+    using frames or not, and whether the advantages outweigh the disadvantages.
+
+     <dd><br><b class="subheading">Advantages to Using Frames</b>
+     <dd>
+     <ul type=disc>
+     <li>Elements that the user should always see (such as navigation bars,
+         copyrights, and titles) only need to be specified once.
+     <li>Table of contents are more intuitive - One frame can contain a Table
+         of contents that can be clicked upon. The results can be displayed in
+         an adjoining frame.
+     <li>Side-by-side presentation of multiple documents allows queries to
+         be posed and answered on the same page.
+     </ul>
+
+     <dd><br><b class="subheading">Disadvantages to Using Frames</b>
+     <dd>
+     <ul type=disc>
+     <li>Frame layout is often heavily dependent on resolution. Unintended
+         scrollbars are often displayed which can eclipse the frame content.
+     <li>Reduction of the overall amount of usable space for sub-document
+         content usually occurs as the number of sub-frames increases.
+     <li>An extra download request must be made for each sub-frame. Each of
+         these requests can be more and more costly as the download bandwidth
+         for the user is reduced.
+     </ul>
+</dl>
+<br>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus frames syntax for the first time]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/frames.html">http://wp.netscape.com/assist/net_sites/frames.html</a>
+    <dd><span class="relevant">Netscape's official documentation for frames</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details frame usage and IFRAME syntax]</span>
+
+<br><br>
+
+<dt><b class="subheading">Tutorials</b>
+<dt><a href="http://sharkysoft.com/tutorials/frames/" class="relevant">http://sharkysoft.com/tutorials/frames/</a>
+    <dd><span class="relevant">Charlton D. Rose's Netscape Frames Tutorial</span>
+<dt><a href="http://manda.com/frames/" class="relevant">http://manda.com/frames/</a>
+    <dd><span class="relevant">WebSpinner's Frames Tutorial</span>
+<dt><a href="http://www.hwg.org/resources/faqs/frameFAQ.html" class="relevant">http://www.hwg.org/resources/faqs/frameFAQ.html</a>
+    <dd><span class="relevant">Matthew Miller's Frames FAQ</span>
+<dt><a href="http://homepages.uc.edu/~solkode/w3guide/frames.html" class="relevant">http://homepages.uc.edu/~solkode/w3guide/frames.html</a>
+    <dd><span class="relevant">Dave Solko's 'All about frames'</span>
+<dt><a href="http://www.htmlhelp.com/design/frames/whatswrong.html" class="relevant">http://www.htmlhelp.com/design/frames/whatswrong.html</a>
+    <dd><span class="relevant">'Guide to frames usage' - an analysis of many of the problems with the frames concept</span>
+<dt><a href="http://www.bagism.com/frameshop/" class="relevant">http://www.bagism.com/frameshop/</a>
+    <dd><span class="relevant">Frame Shop - Create a framed document structure by filling out a form.</span>
+
+<br><br>
+
+<dt><b class="subheading">Other Related Links</b>
+<dt><a href="http://www.w3.org/TR/WD-layout.html" class="relevant">http://www.w3.org/TR/WD-layout.html</a>
+    <dd><span class="relevant">W3C's draft for &quot;Frame-based layout via Style Sheets&quot; - a historically
+        interesting proposal that never came to pass.</span>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

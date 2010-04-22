@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>STYLE: Browser Peculiarities: Multiple STYLE element blocks</title>
+<style>
+.assert { color: green }
+.test   { color: green; }
+</style>
+<style>
+.test   { background-color: yellow; }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE 3.0 only allowed for a single LINK or STYLE block. 
+Only the last one specified in the document is used. 
+IE 4.0 and above, Netscape and Opera merge/cascade multiple STYLE elements.</div>
+<br>
+
+<b>Simple DIV element with class="test". <br>
+First STYLE block contains ".test { color: green }". Second STYLE block contains 
+".test { background-color: yellow }". <br>
+Both should be cascaded together on the one 
+test DIV to produce a div with background-color=yellow and color=green.</b>
+<hr>
+filler text 
+<div class="test">This is a div</div>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

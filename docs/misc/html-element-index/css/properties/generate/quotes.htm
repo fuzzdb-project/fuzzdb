@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Quotes - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">quotes</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]<br></td>
+    <td align=center><b class="alert">Other Generated<br>Content Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top align=center><a href="content.htm">content</a><br>
+    <a href="counterreset.htm">counter-reset</a><br>
+    <a href="counterinc.htm">counter-increment</a><br>
+    <a href="incsource.htm">include-source</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td>Browser/settings dependent</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/generate.html#quotes-specify">CSS2: Sect. 12.4.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/generate.html#quotes-specify">CSS2.1: Sect 12.3.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property determines the type of quotation marks that will
+        be used in a document. One or more quotation mark pairs are
+        given, with the basic quotation characters being the left-most
+        pair. Each subsequent pair represents the quotation characters
+        used at progressively deeper element nesting contexts.
+        <br><br>
+
+        Values of the 'content' property are used to specify where the
+        open/close quotation marks should or should not occur - the
+        "open-quote", "close-quote", "no-open-quote", and "no-close-quote"
+        values. "Open-quote" refers to the left (first) of a given pair of
+        specified quotes, while "close-quote" refers to the second (right)
+        quote character in the pair. Quotes can be skipped at a particular
+        location by using the "no-close-quote" and "no-open-quote" value. In
+        the event that the quote character nesting depth is not covered in
+        the 'quotes' property specification, the last valid quotation pair
+        set should be used.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Quotation characters</b></big>
+    <dd><table border=1 cellspacing=0 cellpadding=2>
+        <tr><th valign=bottom><b class="l3heading">Example</b></th>
+            <th valign=bottom><b class="l3heading">Character<br>Reference</b></th>
+            <th valign=bottom><b class="l3heading">Unicode</b></th>
+            <th valign=bottom><b class="l3heading">Description</b></th></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote34.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#34;</td><td>0022</td><td>ASCII double quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote39.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#39;</td><td>0027</td><td>ASCII single quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8249.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8249;</td><td>2039</td><td>Single, left angle quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8250.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+        <td>&amp;#8250;</td><td>203A</td><td>Single, right angle quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote171.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#171;</td><td>00AB</td><td>Double, left angle quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote187.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#187;</td><td>00BB</td><td>Double, right angle quote</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8216.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8216;</td><td>2018</td><td>Left quote (Single high-6)</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8217.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8217;</td><td>2019</td><td>Right quote (Single high-9)</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8220.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8220;</td><td>201C</td><td>Left quote (Double high-6)</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8221.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8221;</td><td>201D</td><td>Right quote (Double high-9)</td></tr>
+        <tr><td align=center><table border=2 cellspacing=0 cellpadding=0><tr><td><img src="../../../images/quote8222.gif" width=30
+            height=30 alt="ASCII double quote graphic"></td></tr></table></td>
+            <td>&amp;#8222;</td><td>201E</td><td>Double quote (Double low-9)</td></tr>
+        </table>
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">none</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The 'open-quote' and 'close-quote' values of the 'content' property
+        produce no quotations marks.</dd>
+
+<dt><b class="subheading">([string] [string])</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Syntax:</b> ([string] [string])+
+    <dd><b class="l3heading">Description:</b><br>
+        Values for the 'open-quote' and 'close-quote' values of the 'content'
+        property are taken from this list of quote mark pairs. The first
+        or possibly only) pair on the left represents the outermost level of
+        quotation embedding, the pair to the right (if any) is the first level
+        of quote embedding, etc.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big><br>
+    <dd><div class="example">Ext/Doc:<br>
+        <b class="selector">blockquote[lang-=fr]</b> {
+        <span class="property">quotes:</span> "\201C" "\201D" }<br>
+        <b class="selector">blockquote[lang-=en]</b> {
+        <span class="property">quotes:</span> "\00AB" "\00BB" }<br>
+        <b class="selector">blockquote:before</b> { content: open-quote }<br>
+        <b class="selector">blockquote:after</b> { content: close-quote }<br>
+        [Applies correct quotes based on language used]</div>
+</dl>
+
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 states that contents of a quotation that are in a different
+        language than the surrounding content should use quotes appropriate
+        to the surrounding content, <em>NOT</em> those from the quoted content.
+    <li>In practice, only the HTML element Q will understand this property
+        without also specifying any of the quote values in the 'content'
+        property for :before and :after pseudo-elements.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">6.x+:</b>
+            <dd>- If more than one pair of [String String] is mentioned, it is supposed
+                to be used for nested quotes, but that doesn't seem to work as expected;
+                only the first quote-pair is repeated at each nesting level.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">4.0x+:</b>
+            <dd>- If you have nested quotes, and you specify strings on each element
+                (rather than listing multiple string-pairs on the parent element),
+                the nested element quoting will ignore the first half of the string
+                quote-pair, and use the second half of the string quote-pair for the
+                first quote. The second quote uses the normal double-quote character
+                Ex: &lt;q style="'#' '#'"&gt;this is a &lt;q style="'$' '@'"&gt;weird&lt;/q&gt;
+                quote&lt;/q&gt;...should be rendered as<br>
+                #this is a $weird$ quote# <br> but in O4+ it is rendered as <br>
+                #this is a @weird" quote#
+   </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

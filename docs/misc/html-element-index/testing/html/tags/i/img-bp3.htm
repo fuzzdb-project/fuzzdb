@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IMG: Browser Peculiarities: Alternate form - LOWSRC dimensions affect SRC dimensions</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape does not seem to adjust the dimensions of an image 
+if a LOWSRC attribute is also supplied, ie: The dimensions of the LOWSRC image 
+are used to render the SRC image if no other HEIGHT and WIDTH properties have been set.</div>
+<br>
+
+<b>Reference Image (zenpattern.gif), default size:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/zenpattern.gif"> 
+filler text
+<hr>
+<br>
+
+<b>Reference Image (right.gif), default size:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/right.gif"> 
+filler text
+<hr>
+<br>
+
+<b>Test case with right.gif as the LOWSRC, and zenpattern.gif as the SRC. 
+Dimensions of the image are different:</b>
+<hr>
+<a href="img-helper-lowsrc1.htm">Click to see test case</a>
+<hr>
+<br>
+
+</body>
+</html>

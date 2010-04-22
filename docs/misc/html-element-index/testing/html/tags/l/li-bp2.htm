@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LI: Browser Peculiarities: Use of TYPE attribute with list elements</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4.0 and above support the use of ALL allowable TYPE 
+values for ALL list types (DIR, MENU, OL and UL.) Internet Explorer, Opera and 
+Netscape 3.0 and before only allow the UL Types for UL lists, and OL Types for OL lists.</div>
+
+<br>
+<b>UL list with LI TYPE attribute set to non-default, UL type domain ('square'):</b>
+<hr>
+filler text <ul><li>LI item 1<li type="square">LI item 2 with TYPE="square"<li>LI item 3</ul> filler text
+<hr>
+<br>
+
+<br>
+<b>UL list with LI TYPE attribute set to non-default, OL type domain ('i'):</b>
+<hr>
+filler text <ul><li>LI item 1<li type="i">LI item 2 with TYPE="i"<li>LI item 3</ul> filler text
+<hr>
+<br>
+
+<br>
+<b>OL list with LI TYPE attribute set to non-default, OL type domain ('a'):</b>
+<hr>
+filler text <ol><li>LI item 1<li type="a">LI item 2 with TYPE="a"<li>LI item 3</ol> filler text
+<hr>
+<br>
+
+<br>
+<b>OL list with LI TYPE attribute set to non-default, UL type domain ('circle'):</b>
+<hr>
+filler text <ol><li>LI item 1<li type="circle">LI item 2 with TYPE="circle"<li>LI item 3</ol> filler text
+<hr>
+<br>
+
+<br>
+<b>DIR list with LI TYPE attribute set to non-default, UL type domain ('circle'):</b>
+<hr>
+filler text <dir><li>LI item 1<li type="circle">LI item 2 with TYPE="circle"<li>LI item 3</dir> filler text
+<hr>
+<br>
+
+<br>
+<b>DIR list with LI TYPE attribute set to non-default, OL type domain ('A'):</b>
+<hr>
+filler text <dir><li>LI item 1<li type="A">LI item 2 with TYPE="A"<li>LI item 3</dir> filler text
+<hr>
+<br>
+
+<br>
+<b>MENU list with LI TYPE attribute set to non-default, UL type domain ('circle'):</b>
+<hr>
+filler text <menu><li>LI item 1<li type="circle">LI item 2 with TYPE="circle"<li>LI item 3</menu> filler text
+<hr>
+<br>
+
+<br>
+<b>MENU list with LI TYPE attribute set to non-default, OL type domain ('A'):</b>
+<hr>
+filler text <menu><li>LI item 1<li type="A">LI item 2 with TYPE="A"<li>LI item 3</menu> filler text
+<hr>
+<br>
+
+</body>
+</html>

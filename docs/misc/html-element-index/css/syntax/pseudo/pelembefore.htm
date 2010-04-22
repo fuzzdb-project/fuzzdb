@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Element: Before - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-element: before</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]<br></td>
+    <td align=center><b class="alert">Other CSS<br>Pseudo-Elements</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="pelemafter.htm">after</a><br>
+    <a href="pelemfirstletter.htm">first-letter</a><br>
+    <a href="pelemfirstline.htm">first-line</a><br>
+    <a href="pelemselection.htm">selection</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+     <td>All</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+     <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The :before pseudo-element specifies generated content that will occur
+        before an element's document tree content (there is also a companion
+        <a href="pelemafter.htm">:after</a> Pseudo-element for placing generated
+        content after an element.) This Pseudo-element is used in conjunction with the
+        '<a href="../../properties/generate/content.htm">content</a>' property to
+        specify what is to be inserted. Generated content is not a new concept -
+        it already plays an important role in the list mechanisms of HTML; in CSS
+        it has the potential to be very useful in Aural and other rendering media as well.
+        <br><br>
+
+        There are several rules governing the behavior of generated content and
+        :Before Pseudo-elements:
+        <ul type="disc">
+        <li>The box model for rendering elements includes the generated content
+            (eg: 'border' properties are rendered surrounding the element
+            <em>AND</em> the generated content.)
+        <li>Properties for the Pseudo-element are inherited from the element they
+            are attached to.
+        <li>If the element that the :before Pseudo-element is attached to is a
+            block level element, values for the 'display' property are limited to
+            'none', 'inline', 'block', and 'marker'. If any other value is used,
+            it will be interpreted as if it were 'block'.
+        <li>If the element that the :before Pseudo-element is attached to is an
+            in-line element, values for the 'display' property are limited to 'none'
+            and 'inline'. If any other value is used, it will be interpreted as
+            if it were 'inline'.
+    </ul></dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">em:before</b> {
+        <span class="property">content:</span> url("ding.wav") }</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 states that the 'float', 'list', 'position' and table properties
+        should be ignored by browsers if they are applied to the :before
+        Pseudo-element.
+    <li>CSS2 notes that the special syntax combination of :first-letter or
+        :first-line Pseudo-elements paired with :before applies to the generated
+         content as well as to the first letter or line of the element.
+    <li><b class="alert">:Before interaction behavior with 'compact' and 'run-in' elements:</b>
+    <ul type=disc>
+        <li>A :before Pseudo-element is attached to an in-line 'run-in' or 'compact'
+            element - the element's rendering box will include the Pseudo-element.
+        <li>An :after Pseudo-element is attached to a block level 'run-in' or 'compact'
+            element - the pseudo-element is rendered as a block above the regular
+            element content, and is not a part of the element's box size calculation.
+        <li>An element that comes directly after a 'run-in' or 'compact' element
+            has an attached :before Pseudo-element with an in-line or block level
+            display behavior - Rendering of the run-in/compact element is
+            dependent on the subsequent element/Pseudo-element.
+    </ul>
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

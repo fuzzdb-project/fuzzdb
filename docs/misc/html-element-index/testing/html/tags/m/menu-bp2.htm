@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MENU: Browser Peculiarities: Indentation when LIs are closed and not closed</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 6 Beta 1 had a bug with MENU lists: Unless LI elements 
+in the menu list were explicitly closed (they should be optional), the menu 
+indentation level was maintained for the rest of the document. This behavior was fixed in 6.0 Beta 2.</div>
+<br>
+
+<b>Basic MENU list with closing LI elements:</b>
+<hr>
+filler text 
+<menu>
+    <li>LI item 1</li>
+    <li>LI item 2</li>
+    <li>LI item 3</li>
+</menu> 
+filler text
+<hr>
+<br>
+
+<b>Basic MENU list with no closing LI elements:</b>
+<hr>
+filler text 
+<menu>
+    <li>LI item 1
+    <li>LI item 2
+    <li>LI item 3
+</menu> 
+filler text
+<hr>
+
+</body>
+</html>

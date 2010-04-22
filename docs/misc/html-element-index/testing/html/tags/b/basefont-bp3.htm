@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BASEFONT: Browser peculiarity - Relative font size changes only for BASEFONT</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">The effect of BASEFONT SIZE in Internet Explorer 1.0-2.0, 
+Netscape 1.0 and Opera is to serve as a starting point in calculating relative 
+FONT SIZE change values. Later versions of Internet Explorer and Netscape 1.1-4.x 
+allow the setting of a default font size for contained text.</div>
+<br>
+
+<b>Normal relative font size changes -3 -> +3, with no BASEFONT modification:</b><br>
+<hr>
+Filler text <br>
+<font size="-3">Font size=-3</font><br>
+<font size="-2">Font size=-2</font><br>
+<font size="-1">Font size=-1</font><br>
+<font size="+0">Font size=+0</font><br>
+<font size="+1">Font size=+1</font><br>
+<font size="+2">Font size=+2</font><br>
+<font size="+3">Font size=+3</font><br>
+Filler text
+<hr>
+<br>
+
+<b>BASEFONT SIZE=6 encapsulating relative font size changes -3 -> +3:</b><br>
+<hr>
+Filler text <br>
+<basefont size="6">
+basefont size=6<br>
+<font size="-3">Font size=-3</font><br>
+<font size="-2">Font size=-2</font><br>
+<font size="-1">Font size=-1</font><br>
+<font size="+0">Font size=+0</font><br>
+<font size="+1">Font size=+1</font><br>
+<font size="+2">Font size=+2</font><br>
+<font size="+3">Font size=+3</font><br>
+basefont size=6
+</basefont><br>
+Filler text
+<hr>
+<br>
+
+</body>
+</html>

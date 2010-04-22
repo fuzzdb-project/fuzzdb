@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LAYER: Browser Peculiarities: Form fields and usability</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">There is some odd behavior with forms and the LAYER/ILAYER elements. 
+If a LAYER/ILAYER element is nested inside a FORM element, and any widgets for the form 
+(buttons, text fields, etc) are contained within the layer, they will not appear/be rendered. 
+If a widget/field is to show up, the containing FORM element must lie within the 
+same LAYER/ILAYER element as its widgets/fields.</div>
+
+<br>
+<b>Plain FORM with a text, checkbox and submit button field.
+Form has a medium, solid black border:</b>
+<hr>
+filler text 
+<form style="border: medium solid black" method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+Text field: <input type="text" name="f1"><br>
+Checkbox field: <input type="checkbox" name="f2"><br>
+Submit button: <input type="submit">
+</form>
+filler text
+<hr>
+<br>
+
+<br>
+<b>Plain FORM with LAYER nested inside. Form has a medium, solid black border. Text, checkbox and submit button fields nested inside the LAYER.
+Layer has the following attributes:  bgcolor="lime" height="100" width="300" left="250" top="400"</b>
+<hr>
+filler text 
+<form style="border: medium solid black" method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<layer bgcolor="lime" height="100" width="300" left="250" top="400">
+Text field: <input type="text" name="f1"><br>
+Checkbox field: <input type="checkbox" name="f2"><br>
+Submit button: <input type="submit">
+</layer>
+</form>
+filler text
+<hr>
+<br>
+
+<br>
+<b>Plain FORM nested inside a LAYER element. 
+Form has a medium, solid black border. 
+Form has Text, checkbox and submit button fields nested inside.
+Layer has the following attributes:  bgcolor="green" height="100" width="300" left="250" top="600"</b>
+<hr>
+filler text 
+<layer bgcolor="green" height="100" width="300" left="250" top="600">
+<form style="border: medium solid black" method="get" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+Text field: <input type="text" name="f1"><br>
+Checkbox field: <input type="checkbox" name="f2"><br>
+Submit button: <input type="submit">
+</form>
+</layer>
+filler text
+<hr>
+<br>
+
+
+</body>
+</html>

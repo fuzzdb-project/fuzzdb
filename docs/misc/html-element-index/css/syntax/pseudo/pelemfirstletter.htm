@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Element: First-Letter - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-element: first-letter</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">IE5.5B1</b>|<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]<br></td>
+    <td align=center><b class="alert">Other CSS<br>Pseudo-Elements</b><br></td>
+</tr>
+<tr>
+    <td><a href="pelembefore.htm">before</a><br>
+    <a href="pelemafter.htm">after</a><br>
+    <a href="pelemfirstline.htm">first-line</a><br>
+    <a href="pelemselection.htm">selection</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block-level elements</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This pseudo-element is used to apply properties to the first rendered
+        character of a block element structure on the output device (browser
+        screen, printer, etc.) This pseudo-element does not actually exist as
+        part of the document tree - it is a "fictional tag sequence" that is
+        logically deduced from the content, as well as other language rules (some
+        languages have specific letter combination rules, and Unicode has rules
+        about keeping particular character/punctuation combinations together.)
+        <br><br>
+
+        The 'first-letter' pseudo-element may often be used to create "drop-caps"
+        or other similar first-letter effects. It is similar in behavior to an
+        in-line element if the 'float' property is set to 'none', but otherwise
+        it should react like a floated element (see restrictions on applicable
+        properties in the <b class="alert">Notes</b> section below.)</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">div:first-letter</b>
+        { <span class="property">font-size:</span> xx-large }</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 places restrictions on what properties can be applied to 'first-letter'
+        pseudo-elements: font properties, color and background properties,
+        margin properties, padding properties, border properties, and
+        the 'text-decoration', 'text-transform', 'text-shadow', 'float',
+        'clear', and 'line-height' properties. The 'vertical-align'
+        property can also be applied, only if the 'float' property is set to 'none'.
+    <li>In the fictional tag sequences defined by the 'first-letter' and
+        'first-line' pseudo-elements, the 'first-letter' fictional sequence
+        is contained inside the 'first-line' fictional tag sequence; this
+        allows properties applied to 'first-line' to properly cascade and
+        apply to the 'first-letter' pseudo element unless overridden.
+    <li><b class="alert">CSS1 Conformance:</b> A browser may ignore the
+        ':first-letter' Pseudo-element.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5+:</b>
+            <dd>- This Pseudo-element only applies to block elements, and
+                DL/DT/DD, and TABLE/TD/TH.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

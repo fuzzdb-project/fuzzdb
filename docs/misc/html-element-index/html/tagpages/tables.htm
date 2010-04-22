@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Tables in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Tables in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#history">History</a> |
+     <a href="#nutshell">In A Nutshell</a><br>
+     <a href="#simple">Simple Model</a> |
+     <a href="#complex">Complex Model</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for HTML Tables</b></big>
+    <dd>Before the creation of the HTML Table model, the only method
+        available for relative alignment of text or objects was through
+        the use of the <a href="p/pre.htm">PRE</a> element. While this was
+        useful in some situations, the effects of PRE are very limited,
+        and some other solution was definitely necessary to resolve this need.
+        <br><br>
+
+        Current desktop publishing packages provide a high degree of
+        control over table rendering using other document formats.
+        Unfortunately, it would be impractical to reproduce this in HTML
+        given the otherwise simplistic nature of the language, without
+        making HTML into a bulky rich text format [like RTF or MIF.]
+        <br><br>
+
+        Given this requirement, the table model that has been developed
+        is still definitely <em>THE</em> most complex formatting
+        structure in HTML. Its design supports rendering to braille or speech,
+        as well as exchange of tabular data with databases and spreadsheets.
+        The model is also designed to work well with style sheets, but does
+        not require them.
+</dl>
+
+<a name="history"></a>
+<dl>
+<dt><big><b class="mainheading">History of HTML Tables</b></big>
+    <dd>The HTML table model has evolved from studies of existing SGML
+        table models, the treatment of tables in common word processing
+        packages, and looking at a wide range of tabular layouts in
+        magazines, books and other paper-based documents.
+        <br><br>
+
+        After HTML 2.0 (RFC 1866) was forwarded as a proposed standard,
+        work had already begun on extending the capabilities of HTML.
+        The result of this was HTML + in late 1993. One of the most
+        important features of HTML + was its Table model which allowed
+        tabular representation of data <em>WITHOUT</em> the use of the
+        preformatted text (PRE) element.
+        <br><br>
+
+        HTML + later developed (after much refinement) into the draft for
+        HTML 3.0. The 3.0 draft sported Tables capability like its HTML +
+        predecessor, but improved on its features. Many browsers have since
+        implemented this 3.0 Table model.
+        <br><br>
+
+        Since creating this HTML 3 Table model, a great deal of refinement has
+        occurred. The current full Tables specification has risen from
+        the ashes of the expired HTML 3.0 draft to give the author an
+        intuitive and intentionally simple design that is sufficient for
+        most authoring purposes. This makes it practical to create the
+        HTML codes for tables with simple text editors and reduces the
+        learning curve when getting started - factors critical to the
+        success of HTML thus far.
+</dl>
+
+<a name="nutshell"></a>
+<dl>
+<dt><big><b class="mainheading">Tables in a Nutshell</b></big>
+    <dd>The concept of Tables in HTML involves content that is contained
+        in individual cell structures. These cells can contain other HTML
+        structures such as headers, lists, paragraphs, forms, multimedia objects,
+        preformatted text and even nested tables.
+        <br><br>
+
+        The TABLE model is a sort of hybrid element. It exhibits line-breaking
+        behaviors which are similar to other Block formatting structures (like
+        lists and headings) and floating ability similar to that of other
+        replaced elements (like IMG.)
+        <br><br>
+
+        The top level Table container element [<a href="t/table.htm">TABLE</a>]
+        controls global properties for the table structure itself, while
+        the various other elements and attributes for tables organize and
+        format the contained cell content into row and column structures.
+        Table capabilities such as in-cell alignment for example,
+        are allowed in most of the Table elements, from the cell level
+        [<a href="t/thtd.htm">TH</a>, <a href="t/thtd.htm">TD</a>] to the
+        highest grouping elements [<a href="c/colgroup.htm">COLGROUP</a>,
+        <a href="t/thead.htm">THEAD</a>, <a href="t/tbody.htm">TBODY</a>,
+        <a href="t/tfoot.htm">TFOOT</a>, <a href="t/tr.htm">TR</a>.] This
+        allows for more efficient specification of global properties. In
+        cases where global properties specified at one level conflicts
+        with that specified elsewhere, the most specific value wins - cell
+        properties take precedence over row grouping properties, and
+        properties within cells take precedence over all of these.
+</dl>
+
+
+<a name="simple"></a>
+<dl>
+<dt><big><b class="mainheading">Simple Table Model</b></big>
+<dt><b class="subheading">Elements Used in the Simple Table Model:</b><br>
+    [<a href="t/table.htm">TABLE</a>, <a href="c/caption.htm">CAPTION</a>,
+     <a href="t/tr.htm">TR</a>, <a href="t/thtd.htm">TH</a>,
+     <a href="t/thtd.htm">TD</a>]
+
+    <dd>This is the Table Model that most browsers currently support.
+        The model is from the HTML + and HTML 3.0 Draft specifications which
+        describes tables in terms of table cells grouped into row-based
+        [<a href="t/tr.htm">TR</a>] cell layouts. The row structures are the only
+        grouping mechanism for the Simple Table Model. Organization of content
+        with greater complexity is accomplished with greater finesse using the
+        Complex Model.
+        <br><br>
+
+        At the lowest level of a table structure are the table cells which contain
+        all table content. Table cells are distinguished into header
+        [<a href="t/thtd.htm">TH</a>] and data [<a href="t/thtd.htm">TD</a>]
+        cells. This distinction allows browsers to render header and data cells
+        distinctly, even in the absence of style sheets. Cells can also span or
+        merge across multiple rows and columns, and may be empty. Cells spanning
+        rows contribute to the column count on each of the spanned rows, but
+        only appear in the markup once (in the first row spanned.) The row count
+        is determined by the number of TR elements. Any rows implied by cells
+        spanning rows beyond this should be ignored.
+        <br><br>
+
+        If the column count for the table is greater than the number of cells
+        for a given row (after including cells for spanned rows), the missing
+        cells are treated as occurring on the right hand side of the table and
+        rendered as empty cells (or on the left side if the current language
+        direction indicates it.)
+        <br><br>
+
+        As can be guessed, it is also possible to create tables with overlapping
+        cells. In these cases, the rendering of the table is left to the browser.
+</dl>
+
+
+<br>
+<a name="complex"></a>
+<dl>
+<dt><big><b class="mainheading">Complex Table Model</b></big>
+<dt><b class="subheading">Elements Used in the Complex Table Model:</b><br>
+    [<a href="t/table.htm">TABLE</a>, <a href="c/colgroup.htm">COLGROUP</a>,
+     <a href="c/col.htm">COL</a>, <a href="c/caption.htm">CAPTION</a>,
+     <a href="t/thead.htm">THEAD</a>, <a href="t/tbody.htm">TBODY</a>,
+     <a href="t/tfoot.htm">TFOOT</a>, <a href="t/tr.htm">TR</a>,
+     <a href="t/thtd.htm">TH</a>, <a href="t/thtd.htm">TD</a>]
+    <dd>The Complex model incorporates all the elements of Simple
+        tables in addition to many new elements that give the author
+        even more organizational control. The Complex model inherits
+        certain aspects of the <a href="../../misc/glossary.htm#cals">CALS</a>
+        Table Model, such as the ability to group Table Rows into
+        <a href="t/thead.htm">THEAD</a>, <a href="t/tbody.htm">TBODY</a>
+        and <a href="t/tfoot.htm">TFOOT</a> sections, as well as the
+        ability to specify cell alignment compactly for sets of cells
+        according to the context. The Complex table model is also fully
+        backward-compatible with the Simple table model. This allows simple
+        tables to be expressed simply with extra complexity added only
+        when needed.
+        <br><br>
+
+     <dl>
+     <dt>The Complex Table Model offers several rendering advantages over
+         the Simple Model:
+     <dt><b class="subheading">Incremental Display</b>
+     <dd>For large tables or slow network connections, it is desirable to be
+         able to start displaying the table before all of the data has been
+         received. To achieve this, the table must explicitly state the number
+         of columns contained before any of the table content is received [<a
+         href="t/table.htm#attrib">COLS attribute</a>.] Using the <a
+         href="c/colgroup.htm">COLGROUP</a> and <a href="c/col.htm">COL</a>
+         elements the author can also specify relative or absolute sizes for each
+         column of the table (all cells in a column have the same width.)
+     <dt><b class="subheading">Scrolling and Non-Scrolling Table Regions</b>
+     <dd>When rendering to a paged device (i.e. a printer), tables will
+         often have to be broken across page boundaries. Grouping Table Rows
+         [<a href="t/tr.htm">TR</a>] in to Header
+         [<a href="t/thead.htm">THEAD</a>], Body
+         [<a href="t/tbody.htm">TBODY</a>] and Footer
+         [<a href="t/tfoot.htm">TFOOT</a>] elements allows the browser to
+         repeat the table foot at the bottom of the current page, and then the
+         table head at the top of the new page before continuing on with the
+         Table Body. Also, If the table has a large number of rows in the
+         TBODY, a browser may choose to use a scrolling region for its
+         display of the Table Body sections while keeping the Header and
+         Footer sections in a static position.<br>
+         <b>[<b class="alert">NOTE:</b> The suggestion about repeated table
+         headers/footers with printed material is a statement originally from
+         the HTML 4 spec - as of the time of writing, only Mozilla 1.0/Netscape 7.0
+         does this - maybe this feature will gain wider acceptance in the future.]</b>
+         <br><br>
+         THEAD and TFOOT are placed before the TBODY in the markup sequence,
+         so that browsers can render the header and footer before receiving
+         all of the Table Body data. Each THEAD, TFOOT and TBODY element must
+         contain one or more TR elements.
+     <dt><b class="subheading">Complex Internal and External Border
+         Control Rendering</b>
+     <dd>The Simple table model only offers one universal control mechanism
+         for specifying borders in a table. An author can specify a static border
+         thickness (or none at all) that applies around all cells in the table. The
+         Complex model, on the other hand, offers authors the ability to choose
+         from a set of commonly used classes of border styles to independently
+         control the outer table border [<a href="t/table.htm#attrib">FRAME
+         attribute</a>] and inner table cell borders
+         [<a href="t/table.htm#attrib">RULES attribute</a>.]
+     </dl>
+</dl>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.w3.org/TR/REC-html40/struct/tables.html" class="relevant">http://www.w3.org/TR/REC-html40/struct/tables.html</a>
+    <dd><span class="relevant">Table section of HTML 4.0.</span>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1942.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1942.txt</a>
+    <dd><span class="relevant">RFC 1942 is basically an official later version of the W3C Table Draft link.</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements and finally including <em>ALL</em> of RFC 1942]</span>
+<dt><a href="http://home.netscape.com/assist/net_sites/tables.html" class="relevant">http://home.netscape.com/assist/net_sites/tables.html</a>
+    <dd><span class="relevant">Netscape Simple Table Model implementation description detailing extra extensions to the model.</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference (covers all elements in the Complex Table Model.)</span>
+
+<dt><br><b class="subheading">Tutorials</b>
+<dt><a href="http://home.netscape.com/assist/net_sites/table_sample.html" class="relevant">http://home.netscape.com/assist/net_sites/table_sample.html</a>
+    <dd><span class="relevant">Netscape's Simple Table Model tutorial.</span>
+<dt><a href="http://junior.apk.net/~jbarta/tutor/tables/index.html" class="relevant">http://junior.apk.net/~jbarta/tutor/tables/index.html</a>
+    <dd>Joe Barta's Table Tutor - covers Simple Table model and Netscape Extensions.
+<dt><a href="http://home.netscape.com/assist/net_sites/table_sample.html" class="relevant">http://home.netscape.com/assist/net_sites/table_sample.html</a>
+    <dd><span class="relevant">Netscape's Table Sampler: side by side code samples with results</span>
+
+<dt><br><b class="subheading">Other Related Links</b>
+<dt><a href="http://web.archive.org/web/20010406102541/http://www-isl.stanford.edu/~marcush/tables.html" class="relevant">http://web.archive.org/web/20010406102541/http://www-isl.stanford.edu/~marcush/tables.html</a>
+    <dd><span class="relevant">Covers details of common problems with backward compatibility of content in Tables.[Original page gone or moved to unknown]</span>
+<dt><a href="http://www.bagism.com/tablemaker/" class="relevant">http://www.bagism.com/tablemaker/</a>
+    <dd><span class="relevant">Table Maker - Create a Simple Table Model table by filling out a form.</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

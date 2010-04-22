@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FIELDSET: Browser Peculiarities: DIR=rtl rendering</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 6 Beta 1 interprets the DIR=RTL attribute slightly 
+different than later Netscape betas and Internet Explorer.</div>
+<br>
+
+<form>
+<b>Simple FIELDSET element, no DIR attribute:</b>
+<hr>
+filler text 
+<fieldset>
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Simple FIELDSET element, DIR=rtl:</b>
+<hr>
+filler text 
+<fieldset dir="rtl">
+<legend>Legend Legend</legend>
+<input type="text">
+Filler Text
+<input type="reset">
+</fieldset>
+filler text
+<hr>
+</form>
+<br>
+
+
+</body>
+</html>

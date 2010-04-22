@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MARQUEE: Browser Peculiarities: width of marquees in table cells</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert"><b>Scenario:</b> MARQUEE is the only content of a table cell and 
+WIDTH attribute is not set for EITHER the table cell or MARQUEE element:<br>
+Internet Explorer 4.0 and above - cell width defaults to 1 pixel.<br>
+Internet Explorer 2.0/3.0 - cell width defaults to the width of the MARQUEE content.</div>
+<br>
+
+<b>Basic MARQUEE element ("Marquee text") in cell 1, no width.:</b>
+<hr>
+filler text 
+<table border=1 cellspacing=0>
+<tr><td><marquee>Marquee text</marquee></td><td>cell 2</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Basic MARQUEE element ("Marquee text") in cell 1, width=200.:</b>
+<hr>
+filler text 
+<table border=1 cellspacing=0>
+<tr><td><marquee width="200">Marquee text</marquee></td><td>cell 2</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>@Media - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">@media</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+  <td align=center><b class="alert">Other<br>At-Rules</b><br></td>
+</tr>
+<tr>
+    <td><a href="charset.htm">@charset</a><br>
+    <a href="import.htm">@import</a><br>
+    <a href="namespace.htm">@namespace</a><br>
+    <a href="page.htm">@page</a><br>
+    <a href="fontdef.htm">@fontdef</a><br>
+    <a href="fontface.htm">@font-face</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The CSS1 specification was aimed primarily at describing the visual
+        rendering of documents. Times and needs are changing, and the newer
+        CSS2 specification recognized that the use of different delivery
+        platforms and rendering devices was not only needed, but inevitable
+        as well. In allowing for other types of rendering devices, CSS2 has
+        created many properties and values which will only be applicable on
+        specific media types. CSS2 solves this logistics problem by allowing
+        style rules to be selectively applied to differing rendering devices
+        via the @media At-Rule and the <a href="import.htm">@import</a> At-Rule.
+        <br><br>
+
+        Using this syntax, different CSS rules can be specified and applied from
+        the same style sheet depending on whether the rendering device is the
+        printed page, a computer screen, speech synthesizer, etc.
+        <br><br>
+
+        An @media At-Rule specifies a comma separated list of case-insensitive
+        media types, followed by a Rule Set embedded within matching curly
+        braces ("{", "}".) If a browser supports a media type, it should support
+        all style properties applicable to that media type. If no @media rule
+        is specified for a Rule Set, it is applied to all media (default media = "all".)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Media Types Specified in CSS2</b></big>
+<dt>(This is not a definitive list - just the list of those found in CSS2.1;
+    the list may be expanded in the future.)
+     <dd><table border=1 cellspacing=0 cellpadding=5>
+         <tr><td>All</td><td>Braille</td></tr>
+         <tr><td>Embossed</td><td>Handheld</td></tr>
+         <tr><td>Print</td><td>Projection</td></tr>
+         <tr><td>Screen</td><td>Speech</td></tr>
+         <tr><td>Tty</td><td>Tv</td></tr>
+         </table>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>@<b class="selector">media</b>
+        ([<span class="alert2">media</span>]
+        ("," [<span class="alert2">media</span>])+ )?
+        <br>&#160;&#160;&#160;{<br>&#160;&#160;&#160;[<span class="alert2">Style
+        Declaration Block</span>] <br>&#160;&#160;&#160;}
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Examples</b></big>
+    <dd><div class="example">@<b class="selector">media</b> <span class="atrule">print, screen</span><br>
+        &#160;&#160;&#160;{<br>
+        &#160;&#160;&#160;<b class="selector">blockquote</b>
+        { <span class="property">font-size:</span> 16pt }<br>
+        &#160;&#160;&#160; }</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+        <dd><b class="alert2">4.0:</b>
+        <dd>- If an @media media type is not understood, only the first CSS
+            declaration in the block is ignored. Subsequent declarations are
+            treated as though they apply to the current media.
+        <dd><b class="alert2">4.0+:</b>
+        <dd>- Currently, only the 'all', 'screen' and 'print' media types are understood.
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+        <dd><b class="alert2">3.5+:</b>
+        <dd>- Only the 'all' and 'screen' media types are understood.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

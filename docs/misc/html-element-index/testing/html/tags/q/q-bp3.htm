@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Q: Browser peculiarity - Spaces preservation before and after inserted quotes</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape and Opera and the added quotes thing: Spaces before AND 
+after the begin tag are honored, which seems to be counter to how they are usually 
+treated for other elements (for an example try "test &lt;q&gt; hello &lt;/q&gt; test" 
+and compare the result to the same test using the U element).</div>
+
+<br>
+<b>Example of U element with spaces between each tag instance:
+'test1<u>&nbsp;</u>&lt;u&gt;<u>&nbsp;</u>hello<u>&nbsp;</u>&lt;/u&gt;<u>&nbsp;</u>test'</b>
+<hr>
+<span>test1 <u> hello </u> test2</span>
+<hr>
+
+<br>
+<b>Example of Q element with spaces between each tag instance:
+'test1<u>&nbsp;</u>&lt;q cite="http://www.shakespeare.com/"&gt;<u>&nbsp;</u>hello<u>&nbsp;</u>&lt;/q&gt;<u>&nbsp;</u>test'</b>
+<hr>
+<span>test1 <q cite="http://www.shakespeare.com/"> hello </q> test2</span>
+<hr>
+
+<br>
+<b>Example of Q element with multiple consecutive spaces between each tag instance:
+'test1<u>&nbsp;&nbsp;&nbsp;&nbsp;</u>&lt;q cite="http://www.shakespeare.com/"&gt;<u>&nbsp;&nbsp;&nbsp;&nbsp;</u>hello<u>&nbsp;&nbsp;&nbsp;&nbsp;</u>there<u>&nbsp;&nbsp;&nbsp;&nbsp;</u>&lt;/q&gt;<u>&nbsp;&nbsp;&nbsp;&nbsp;</u>test'</b>
+<hr>
+<span>test1    <q cite="http://www.shakespeare.com/">    hello    there    </q>    test2</span>
+<hr>
+
+</body>
+</html>

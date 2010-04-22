@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>DEL: Browser peculiarity - rendering effects in Mozilla</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The CITE/DATETIME attributes are exposed in Netscape 6.1+ by 
+invoking a context menu on the element (PC: right clicking) and choosing "properties."<br>
+The value of CITE for the test element below is: "#jan25-2001" and DATETIME is 
+"2001-01-25T18:00:00PST"</div>
+<br>
+
+<hr>
+filler text <del cite="#jan25-2001" datetime="2001-01-25T18:00:00PST">del text</del> filler text
+<hr>
+
+</body>
+</html>

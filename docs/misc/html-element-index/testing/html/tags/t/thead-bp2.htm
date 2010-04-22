@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>THEAD/TBODY/TFOOT: Browser Peculiarities: CSS on THEAD/TBODY/TFOOT</title>
+<style>
+.assert { color: green }
+#th1, #tb1, #tf1   { color: yellow; background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 4.0 does not allow CSS to be specified for THEAD elements. 
+They can be applied to TR and TD/TH elements though.</div>
+<br>
+
+<b>Complex table, TABLE border=2, THEAD/TBODY/TFOOT separate the three table rows. No CSS applied:</b>
+<hr>
+filler text
+<table border="2">
+<thead>
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text Filler text Filler text Filler text</td></tr>
+</thead>
+<tfoot>
+<tr><td>TD Cell 4 Filler text Filler text Filler text Filler text Filler text</td><td>TD Cell 5</td><th>TH Cell 6</th></tr>
+</tfoot>
+<tbody>
+<tr><td>TD Cell 7</td><td>TD Cell 8</td><th>TH Cell 9</th></tr>
+</tbody>
+</table>
+filler text
+<hr>
+
+<b>Complex table, TABLE border=2, THEAD/TBODY/TFOOT separate the three table rows. 
+THEAD CSS: "color: yellow; background-color: green":</b>
+<hr>
+filler text
+<table border="2">
+<thead id="th1">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text Filler text Filler text Filler text</td></tr>
+</thead>
+<tfoot>
+<tr><td>TD Cell 4 Filler text Filler text Filler text Filler text Filler text</td><td>TD Cell 5</td><th>TH Cell 6</th></tr>
+</tfoot>
+<tbody>
+<tr><td>TD Cell 7</td><td>TD Cell 8</td><th>TH Cell 9</th></tr>
+</tbody>
+</table>
+filler text
+<hr>
+
+<b>Complex table, TABLE border=2, THEAD/TBODY/TFOOT separate the three table rows. 
+TBODY CSS: "color: yellow; background-color: green":</b>
+<hr>
+filler text
+<table border="2">
+<thead>
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text Filler text Filler text Filler text</td></tr>
+</thead>
+<tfoot>
+<tr><td>TD Cell 4 Filler text Filler text Filler text Filler text Filler text</td><td>TD Cell 5</td><th>TH Cell 6</th></tr>
+</tfoot>
+<tbody id="tb1">
+<tr><td>TD Cell 7</td><td>TD Cell 8</td><th>TH Cell 9</th></tr>
+</tbody>
+</table>
+filler text
+<hr>
+
+<b>Complex table, TABLE border=2, THEAD/TBODY/TFOOT separate the three table rows. 
+TFOOT CSS: "color: yellow; background-color: green":</b>
+<hr>
+filler text
+<table border="2">
+<thead>
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text Filler text Filler text Filler text</td></tr>
+</thead>
+<tfoot id="tf1">
+<tr><td>TD Cell 4 Filler text Filler text Filler text Filler text Filler text</td><td>TD Cell 5</td><th>TH Cell 6</th></tr>
+</tfoot>
+<tbody>
+<tr><td>TD Cell 7</td><td>TD Cell 8</td><th>TH Cell 9</th></tr>
+</tbody>
+</table>
+filler text
+<hr>
+
+</body>
+</html>

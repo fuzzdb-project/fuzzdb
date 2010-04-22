@@ -1,0 +1,582 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Th/Td</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Table Header/Data Cell</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b><br>
+         TH: 
+         [<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]<br>
+
+         TD: 
+         [<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Optional</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Basic Tables</b>, <b class=alert>Tables</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">table-cell</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.6">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_tablemodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The Table Header(TH) and Table Data(TD) elements are part of the original
+        <a href="../tables.htm#simple">Simple Table Model</a> and are also part
+        of the newer, backward compatible <a href="../tables.htm#complex">Complex
+        Table Model</a>. These two elements are used to identify table cells for HTML
+        tables. All displayable content in a table will be contained within a
+        TH or TD cell. Header cells are identical to data cells in all respects
+        except common rendering: the TH typical default horizontal alignment
+        is <b class="alert">CENTER</b> and text within is made
+        <b class="alert">BOLD</b> - TD typical default horizontal alignment
+        is <b class="alert">LEFT</b> and text within is unmodified.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd><span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Abbr</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute defines an abbreviated name for a header cell. If no
+        abbreviation is listed, the default abbreviation is the cell content.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls the horizontal alignment of content within the current table cell.
+    <dd><b class="l3heading">Values:</b> <b class="alert">Left</b> | <b class="alert">Center</b> |
+        <b class="alert">Right</b> | <b class="alert">Justify</b> | <b class="alert">Char</b>
+
+<dt><b class="subheading">Axis</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This defines a name for a cell and will usually only be applied
+        to TH cells. This allows for a table to be mapped to a tree
+        hierarchy (most useful perhaps in non-visual rendering environments)
+        where the nodes are represented by the axis names and the leaves of
+        the nodes are the data cells of the Axis.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Comma-separated list of axis/category names]
+
+<dt><b class="subheading">Background</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N4B3</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies a background image to be placed in the current
+        table cell. All cell contents will be displayed over this image. If the
+        referenced image is smaller than the table cell size, it will be tiled to
+        fit all of the cell area. The value for this attribute indicates the URL
+        to reference the graphic.
+    <dd><b class="l3heading">Values:</b>
+        Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.
+
+<dt><b class="subheading">BGColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<b class="s">M3</b>|<b class="s">N3B1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute sets the background color to be used for the current table cell.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [The standard <a href="../../../color/colors.htm">HTML color specification</a> method values apply.]
+
+<dt><b class="subheading">BorderColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute sets the internal border color to be used for the
+        current table cell. Display of this attribute is dependent on the
+        presence of the BORDER attribute in the <a href="table.htm">TABLE</a> element.
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color specification</a> methods.
+
+<dt><b class="subheading">BorderColorDark</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute allows independent, 3-D color control over the upper and
+        left hand borders of the internal cell border color for the current table
+        cell. To change the lower and right hand borders of the internal cell
+        border color for each cell in the current row, use the BorderColorLight
+        attribute (see below.) Display of this attribute is dependent on the
+        presence of the BORDER attribute in the <a href="table.htm">TABLE</a> element.
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color specification</a> methods.
+
+<dt><b class="subheading">BorderColorLight</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute allows independent, 3-D color control over the lower and
+        right hand borders of the internal cell border color for each cell in
+        the current table cell. To change the upper and left hand borders of the
+        internal cell border color for each cell in the current row, use the
+        BorderColorDark attribute (see above.) Display of this attribute
+        is dependent on the presence of the BORDER attribute in the
+        <a href="table.htm">TABLE</a> element.
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color specification</a> methods.
+
+<dt><b class="subheading">Char</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies a character in the cell content to be used to
+        align the data data in the current cell (the first occurrence
+        should be used.) The default value for this attribute is the decimal
+        point character for the current specified language.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">Charoff</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the spacing offset to the first occurrence of the alignment
+        character (specified by the CHAR attribute) on each line of the current cell. The
+        direction of the offset is determined by the current text direction (set with the
+        DIR attribute or the BDO element.) In left-to-right scenarios (default), offset is
+        from the left margin. In right-to-left scenarios, offset is from the right margin.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Integers indicating pixel offset values.]
+
+<dt><b class="subheading">Colspan</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies how many cell columns of the table this cell should span.
+        If this attribute is used, no cell information is specified where
+        corresponding cell data would otherwise be in a similar table layout
+        filled with single cells that do not span.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Specified in integers with the default being 1. A value of zero should span 
+        the from the current column all the way to the end of the current column group 
+        (colgroup.)]
+
+<dt><b class="subheading">Headers</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the list of header cells that provide
+        header information for the current data cell. This can help
+        in non-visual rendering situations to explicitly bind header
+        information about data cells.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Space separated list of table cell ID values.]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE2</b>|<span class="ns">M</span>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the height of the current cell. A row in HTML tables can only
+        have a single height, so generally this sets the height for an entire
+        row. This attribute is not listed in the Tables specification, and in
+        cases where more than one explicit height is specified for cells in a
+        single column, the outcome is browser dependent.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>. 
+        [Specified in integer pixel values or a percentage of the browser window height.]
+
+<dt><b class="subheading">NOWRAP</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS ('white-space' property)
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which specifies that the data within the
+        current cell will not use normal HTML line-breaking conventions. The
+        table cell will enlarge to fit whatever data is specified in the cell
+        (unless explicit line-breaking tags are added.)
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">nowrap</b> (XHTML)
+
+<dt><b class="subheading">Rowspan</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies how many cell rows of the table this cell should span. If
+        this attribute is used, no cell information is specified where
+        corresponding cell data would otherwise be in a similar table layout
+        filled with single cells that do not span.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Specified in integers with the default being 1. A value of zero should span 
+        the from the current row all the way to the end of the current row group 
+        (thead/tfoot/tbody.)]
+
+<dt><b class="subheading">Scope</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the set of data cells for which the
+        current header cell provides header information. This attribute
+        may be used in place of the HEADERS attribute, particularly
+        for simple tables.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">row</b> - Current cell provides header
+        information for the rest of the row that contains it.<br>
+        <b class="alert">col</b> - Current cell provides header
+        information for the rest of the column specified for it.<br>
+        <b class="alert">rowgroup</b> - Current cell provides header
+        information for the rest of the row group that contains it. <br>
+        <b class="alert">colgroup</b> - Current cell provides header
+        information for the rest of the column group that contains it.
+
+<dt><b class="subheading">VAlign</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The VAlign attribute specifies the vertical alignment of the contents
+        of the cell relative to the cell boundaries.
+    <dd><b class="l3heading">Values:</b> <b class="alert">Top</b> |
+         <b class="alert">Middle</b> | <b class="alert">Bottom</b> | <b class="alert">Baseline</b>
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE2</b>|<b class="s">M3</b>|<b><i class="fs">N1.1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the width of the current cell. A column in an HTML table can
+        only have a single width and that width used is usually the widest value
+        of all the cells in a column. So, if a width explicitly specified for
+        a cell is smaller than the eventual calculated width of another cell in
+        the column, the larger value will be used instead. This attribute is not
+        listed in the Tables specification, and in cases where more than one
+        explicit width is specified for different cells in a single column, the
+        outcome can be browser dependent.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Specified in integer pixel values or a percentage of the table width.]
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big><br>
+    [Using the <a href="../tables.htm#simple">Simple Table Model</a>]
+    <dd><div class="example">&lt;<b class="tagname">table</b> 
+        <span class="tagattrib">border</span>=&quot;2&quot;
+        <span class="tagattrib">align</span>=&quot;left&quot;
+        <span class="tagattrib">cellpadding</span>=&quot;5&quot;<br>
+        <span class="tagattrib">bordercolor</span>=&quot;#ff0000&quot;
+        <span class="tagattrib">width</span>=&quot;75%&quot;&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">caption</b>
+        <span class="tagattrib">align</span>=&quot;top&quot;&gt;Juggling Capabilities of
+        Waterfront Performers&lt;/<b class="tagname">caption</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Juggler&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Pins&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Bowling Balls&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Flaming Baseballs&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Bob&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Larry&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;7!!!&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;NA&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Julie the Great&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;1&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;20&lt;<b class="tagname">br</b>&gt;(She
+        IS great!)&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b> <span class="tagattrib">colspan</span>=&quot;4&quot;&gt;NOTE:
+        This is only a small sample&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &lt;/<b class="tagname">table</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../t/tr.htm">tr</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>The HTML Tables specification says that end tags for the TH and
+        TD elements are not necessary. In practice, browsers are not very
+        forgiving on this issue. You should <em>ALWAYS</em> use end tags for
+        TH and TD elements - if not for better readability of your markup,
+        then to ensure that a browser can render your document correctly.
+    <li>Make sure that the only content of your top-level TABLE tags are TR
+        elements. Also make sure that the only content of your
+        <a href="tr.htm">TRs</a> are TH or TD elements. Otherwise, some
+        browsers may display table contents incorrectly.
+    <li>The Table model (even the Simple Table Model) is easily the most
+        complex markup structure in HTML. If you have general questions
+        about this structure see the <a href="../tables.htm">Table Overview</a>.
+    <li><b class="alert">Compatibility Tip:</b> Centering a Table
+        structure using any of the commonly available centering methods in
+        HTML can cause the entire contents of the table cells to be centered
+        in browsers that only support centering and not tables. This can cause
+        visual display problems in such cases.
+    <li><b class="alert">Compatibility Tip:</b>
+        To enable Table cell contents to display well on browsers that do not
+        support tables, it is common practice to put either an extra space at
+        the end of each table cell, or even better, put a
+        &lt;<b class="tagname">br</b>&gt; element at the end of the last cell in
+        each table row (eg: &lt;tr&gt; &lt;td&gt;cell 1&lt;/td&gt; &lt;td&gt;cell
+        2&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;.) This is perfectly legal HTML and
+        should cause no display problems for browsers that support tables (as
+        there is an implied line break anyway at the end of every table cell)
+        and should greatly improve readability on older browsers. 
+    <li>If you are writing your HTML by hand, it is always highly
+        recommended to use an HTML validator, but when authoring tables, this holds
+        doubly true, as it is easy to make mistakes in this area.
+    <li>Use of the WIDTH and HEIGHT attributes for TH and TD elements can
+        sometimes be inconsistent in Netscape and Internet Explorer. Keep
+        this in mind when authoring.
+    <li>If you are having problems with table layout and borders are turned
+        off, it can be helpful to temporarily turn them on - this can reveal
+        clues of why the layout is misbehaving.
+    <li><b class="alert">DTD Note:</b> HTML 3.2 did not contain the 'baseline'
+        value for the VALIGN attribute.
+    <li><b class="alert">DTD Note:</b> The actual macros specified for the
+        value of the WIDTH and HEIGHT attributes in HTML 4.0 were
+        <b class="alert">%Pixels</b>, not <b class="alert">%Length</b>.
+        This means that percentage values for these attributes would not
+        be officially legal (although browsers do understand them.) In HTML
+        4.01 these macros were altered to be <b class="alert">%Length</b>.
+    <li>HTML 4.01 adds the stipulation about row/colspans ending at the current 
+        colgroup/rowgroup (thead/tfoot/tbody) boundary.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape does not render a table until the entire table structure
+        is received. This behavior is very noticeable with pages using
+        very large table structures - especially when using a slower
+        connection. Internet Explorer tries to render the table as it
+        receives it, which tends to affect user perception of the download
+        time as being faster. A way to combat this difference is to break
+        tables up into smaller chunks, if possible. (Opera behavior is not
+        known here.)
+    <li>Internet Explorer seems to be generally more tolerant of invalid
+        HTML in the creation of table structures than Netscape or Mosaic is,
+        but do <em>NOT</em> rely on this robustness; check the display on
+        other browsers as well.
+    <li>Netscape now supports the BACKGROUND attribute for placement of
+        background images in table cells. I have never found this
+        documented anywhere and it was a reader that alerted me to the fact.
+        When testing the behavior, an occasional glitch seemed apparent -
+        be sure to check display of this attribute in supporting Netscape
+        versions for proper behavior if you plan to use it. Note also that
+        there is one readily apparent small bug with this behavior - if the
+        cell the background image is applied to is empty, the image will not
+        be displayed. You can get around this by using something as simple as
+        a non-breaking space (&amp;nbsp;) for the cell content.
+    <li><dl>
+        <dt>[Tests: <a href="../../../testing/html/tags/t/table-bp1.htm">1</a>,
+            <a href="../../../testing/html/tags/t/table-bp2.htm">2</a>]
+            The effects of the FONT element are generally not inherited by content
+            nested inside tables. If an author wishes to ensure that the effects
+            of the FONT element are applied everywhere, the element must also
+            be applied for every table cell in a table (in such a case CSS would be
+            a simpler answer.) These are the FONT attributes which apply to content
+            within tables:
+        <dt><b class="alert">Internet Explorer</b>
+            <dd><b class="alert">2.0:</b> COLOR and FACE applied, SIZE ignored
+            <dd><b class="alert">3.0+:</b> FACE applied, COLOR and SIZE ignored
+        <dt><b class="alert">Netscape:</b>
+            <dd>None of the FONT element attributes has any effect on content nested in tables.
+        <dt><b class="alert">Opera:</b>
+            <dd>All FONT element attributes have an effect on content nested in tables.
+        </dl>
+    <li><a href="../../../testing/html/tags/h/hr-bp1.htm">[Test]</a>
+        Opera versions 3.5 and above have an interesting artifact in the interaction
+        of HR and tables: HR normally has a default ALIGN value of CENTER when the
+        WIDTH is not 100%, but within table cells, the HR alignment defaults instead
+        to the horizontal alignment of the cell. Other browsers as well as older
+        Opera versions always obey the HR ALIGN default.
+    <li><a href="../../../testing/html/tags/t/thtd-bp1.htm">[Test]</a>
+        Netscape 4.x error condition bug: if a BGCOLOR and BACKGROUND attribute
+        have been specified for the cell, and the URL to the image fails to
+        load, the bgcolor should be used instead. Netscape 4.x does that for
+        a moment, but then this changes to a block only the size of the broken
+        image placeholder with the specified BGCOLOR in the upper, left corner
+        of the cell.
+    <li><a href="../../../testing/html/tags/t/thtd-bp2.htm">[Test]</a>
+        Netscape 4.x has a strange rendering bug with checkbox and radio button
+        form fields. If a BGCOLOR attribute is declared for a table - or a cell
+        within a table - the rendering boxes of any checkboxes and radio
+        buttons (also INPUT FILE fields to a small extent) in that cell/table
+        will not use the indicated BGCOLOR - it will instead use the BGCOLOR
+        of the document itself. If you use Netscape 4.x, you will see this bug
+        apparent at almost every large-scale site you go to.<br>
+        <b class="alert">Workaround:</b> Using the CSS
+        '<a href="http://www.blooberry.com/indexdot/css/properties/colorbg/bgcolor.htm">background-color</a>'
+        <span class="external">[--&gt;Index DOT Css]</span> property on the
+        checkbox or radio element itself, set to the background color of the
+        cell/table that you are in, things will be correctly displayed.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

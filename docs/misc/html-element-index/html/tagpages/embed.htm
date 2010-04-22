@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Embedded Functionality in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Embedded Functionality in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#use">Uses for Embedding</a><br>
+     <a href="#javascript">More about JavaScript</a> |
+     <a href="#timelines">JavaScript Timelines</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for Embedding Capabilities in HTML</b></big>
+    <dd>HTML has developed quite a bit since its beginnings, but let's face
+        it - HTML is only a language meant to attach semantic meaning and rendering
+        cues to documents. In recent history, the scope and functionality of web
+        pages has been extended far beyond the capabilities that mere HTML alone
+        can produce. This has been accomplished by allowing programatic capabilities
+        and embedded objects in the context of the HTML page. HTML has control of
+        the location, size, invocation and other properties of the objects, but
+        their functionality is driven by other technology - Java applications,
+        scripting functionality, Plug-ins and more.
+</dl>
+<br>
+
+<a name="use"></a>
+<dl>
+<dt><big><b class="mainheading">Uses for Embedding Functionality</b></big>
+<dt><b class="subheading">Java Applets</b>
+<dt>[ <a href="a/applet.htm">APPLET</a>, <a href="o/object.htm">OBJECT</a>,
+      <a href="p/param.htm">PARAM</a> ]
+    <dd>Java is a programming language (not a document markup language like HTML)
+        that has gained wide acceptance in Web applications. The APPLET element is
+        the HTML interface used to invoke a Java Applet, and the PARAM element is
+        used to pass parameter values to the Java application. The OBJECT element,
+        although not listed under the 'Embedded Functionality' umbrella, also belongs
+        here - one of its many functions is to absorb all of the functionality of the
+        APPLET element.
+
+<dt><b class="subheading">Web Page Scripting <br> (JavaScript/JScript/ECMAScript/VBScript/Etc.)</b>
+<dt>[ <a href="s/script.htm">SCRIPT</a>, <a href="n/noscript.htm">NOSCRIPT</a> ]
+    <dd>Scripting languages allow web pages to become dynamic. Scripts allow
+        programmatic logic and actions to be performed in response to events
+        that occur when experiencing a web page. The SCRIPT element allows
+        scripting statements to be included in an HTML Document structure. The
+        NOSCRIPT element is an element used to mark a section of a document for
+        display only in cases of SCRIPT element incompatibility/backward compatibility.
+
+<dt><b class="subheading">Browser Plug-Ins</b>
+<dt>[ <a href="e/embed.htm">EMBED</a>, <a href="n/noembed.htm">NOEMBED</a> ]
+    <dd>The Plug-in technology created by Netscape allows media performance
+        capacity to expand by leaps and bounds. Previously, browsers were limited
+        by their inherent capabilities. Now, a browser can be extensible through
+        the use of a &quot;Plug-In&quot; (usually third party) that allows it
+        to recognize varying non-conventional technologies or media formats
+        that are not actively supported by the browser without the Plug-in. The
+        NOEMBED element is used to mark a section of a document for rendering only
+        in cases of EMBED element incompatibility or for backward compatibility.
+
+<dt><b class="subheading">In-Line Frames</b>
+<dt>[ <a href="i/iframe.htm">IFRAME</a> ]
+     <dd>This is an extension to Netscape's frames concept (static document
+  layout) by Microsoft. It allows other HTML documents to be placed in an
+     HTML document the way one would place an HTML in-line image
+     (<a href="i/image.htm">IMG</a>.) Coincidentally, this basic concept was
+     the original intent of the <a href="e/embed.htm">EMBED</a> element until
+     Plug-ins were introduced.
+</dl>
+<br>
+
+<a name="javascript"></a>
+<dl>
+<dt><big><b class="mainheading">More About JavaScript</b></big>
+    <dd>JavaScript, originally known as LiveScript, was created by Netscape
+        for its Navigator 2.0 version. Microsoft created its own version of
+        JavaScript for Internet Explorer 3.0 called JScript (the name JavaScript
+        is owned by Netscape.) Netscape's version is the original though, and it 
+        was the basis for the now-standard EcmaScript.)
+        <br><br>
+
+        The term &quot;Java&quot; in JavaScript appears to be a marketing tie-in
+        with Sun's Java programming language. And that is where the apparent
+        similarities end - JavaScript is <em>NOT</em> a subset of Java:
+
+    <dd><br>
+        <table border=3 cellspacing=0 cellpadding=3 width="90%">
+        <tr>
+            <th><b class="subheading"><big>JavaScript</big></b></th>
+            <th><b class="subheading"><big>Java</big></b></th>
+        </tr>
+        <tr>
+            <td valign=top>
+            <ul>
+            <li>A web scripting language developed by Netscape
+            <li>Interpreted (not compiled) by client
+            <li>Object-based. Code uses built-in, extensible objects, but no classes
+                or inheritance
+            <li>Code integrated with, and embedded in HTML
+            <li>Variable data types not declared (loose typing)
+            <li>Dynamic binding. Object references checked at run-time
+            <li>Cannot (yet) automatically write to hard disk
+            </ul></td>
+            <td valign=top>
+            <ul>
+            <li>A multi-platform programming language developed by Sun.
+            <li>Compiles to byte-codes that are interpreted by a platform-independent
+                &quot;Virtual Machine&quot;
+            <li>Compiled on server before execution on client
+            <li>Object-oriented. Applets consist of object classes with inheritance
+            <li>Applets distinct from HTML (accessed from HTML pages)
+            <li>Variable data types must be declared (strong typing)
+            <li>Static binding. Object references must exist at compile-time
+            <li>Cannot automatically write to hard disk
+            <li>Theoretically secure
+            </ul></td>
+        </tr>
+        </table>
+</dl>
+
+
+<a name="timelines"></a>
+<dl>
+<dt><big><b class="mainheading">Javascript/VBScript Timelines and Standardization</b></big>
+     <dd>The two main implementations of JavaScript continue to have many differences
+      and incompatibilities. To ease this problem, several companies (including
+   Microsoft and Netscape) have worked with ECMA to create an official
+   accepted specification for the JavaScript language. Known as ECMA-262
+   or EcmaScript, this standard is now under consideration for standardization
+   by the Industry Standards Organization (ISO) as well. EcmaScript most
+   closely resembles (with a few variations) the version of JavaScript
+   found in Netscape Navigator 3.0 (JavaScript 1.1.)
+
+     <dd><br><table border=2 cellspacing=0 cellpadding=5>
+     <tr>
+     <th colspan=3><b><big class="subheading">JavaScript</big></b></th>
+     <th rowspan=6 bgcolor="#808080">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+     <th colspan=3><b><big class="subheading">JScript/VBScript</big></b></th>
+     </tr>
+     <tr>
+     <th valign=bottom><b class="l3heading">JavaScript<br>Version</b></th>
+     <th rowspan=5 bgcolor="#808080">&nbsp;</th>
+  <th valign=bottom><b class="l3heading">Netscape<br>Shipping<br>Vehicle</b></th>
+     <th valign=bottom><b class="l3heading">JScript/<br>VBScript<br>Version</b></th>
+     <th rowspan=5 bgcolor="#808080">&nbsp;</th>
+  <th valign=bottom><b class="l3heading">Microsoft<br>Shipping<br>Vehicle</b></th>
+     </tr>
+     <tr>
+     <td align=center>1.0</td><td align=center>Nav 2.0x</td>
+  <td align=center>1.0</td><td align=center>IE 3.0x</td>
+     </tr>
+     <tr>
+     <td align=center>1.1</td><td align=center>Nav 3.0x</td>
+  <td align=center>2.0</td><td align=center>IIS 3.0</td>
+     </tr>
+     <tr>
+     <td align=center>1.2</td><td align=center>Nav 4.0-4.05</td>
+  <td align=center>3.0</td><td align=center>IE 4.0x/IIS 4.0</td>
+     </tr>
+     <tr>
+     <td align=center>1.3</td><td align=center>Nav &gt;= 4.06</td>
+     <td align=center>5.0</td><td align=center>IE 5.0</td>
+     </tr>
+     <tr><th colspan=7><b class="alert">ECMAScript Compliant:</b><br>
+     JavaScript 1.3 &amp; above; JScript 3.0 &amp; above</th></tr>
+     </table>
+</dl>
+
+
+
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [This is the first inclusion of the APPLET element in an official spec. Scripting
+        is also mentioned in passing.]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus Script, Noscript and Iframe]</span>
+<dt><a href="http://www.netscape.com/assist/net_sites/new_html3_prop.html#Embed" class="relevant">http://www.netscape.com/assist/net_sites/new_html3_prop.html#Embed</a>
+    <dd><span class="relevant"><b class="l3heading">Embed:</b>
+        Netscape's &quot;New HTML 3.0 proposals&quot; page</span>
+<dt><a href="http://java.sun.com" class="relevant">http://java.sun.com</a>
+    <dd><span class="relevant"><b class="l3heading">Java:</b> Sun's official Java site.</span>
+<dt><a href="http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM">http://www.ecma.ch/ecma1/STAND/ECMA-262.HTM</a>
+    <dd><span class="relevant"><b class="l3heading">ECMA-262 (EcmaScript):</b> Official specification.</span>
+<dt><a href="http://developer.netscape.com/docs/manuals/javascript.html" class="relevant">http://developer.netscape.com/docs/manuals/javascript.html</a>
+    <dd><span class="relevant"><b class="l3heading">JavaScript:</b> Netscape's documentation for the JavaScript language.</span>
+<dt><a href="http://www.microsoft.com/vbscript/us/techinfo/vbsdocs.htm" class="relevant">http://www.microsoft.com/vbscript/us/techinfo/vbsdocs.htm</a>
+    <dd><span class="relevant"><b class="l3heading">VBScript:</b> Microsoft's official documentation for VBScript.</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details Applet, Iframe, and Script (Embed is also mentioned, but they
+        recommend OBJECT instead.)]</span>
+<br><br>
+
+<dt><b class="subheading">Tutorials</b>
+<dt><a href="http://java.sun.com/docs/books/tutorial/" class="relevant">http://java.sun.com/docs/books/tutorial/</a>
+    <dd><span class="relevant"><b class="l3heading">Java:</b> Sun's Java Tutorial</span>
+<dt><a href="http://www.disordered.org/Java-QA.html" class="relevant">http://www.disordered.org/Java-QA.html</a>
+    <dd><span class="relevant"><b class="l3heading">Java:</b> &quot;Making Sense of Java&quot;</span>
+<dt><a href="http://www.devx.com/" class="relevant">http://www.devx.com/</a>
+    <dd><span class="relevant"><b class="l3heading">VBScript, Java, XML and others:</b> &quot;DevX&quot;</span>
+<dt><a href="http://www.microsoft.com/vbscript/us/techinfo/VBsfaq.htm" class="relevant">http://www.microsoft.com/vbscript/us/techinfo/VBsfaq.htm</a>
+    <dd><span class="relevant"><b class="l3heading">VBScript:</b> Microsoft's VBScript FAQ</span>
+<br><br>
+
+<dt><b class="subheading">Other Related Links</b>
+<dt><a href="http://webdeveloper.earthweb.com/" class="relevant">http://webdeveloper.earthweb.com/</a>
+    <dd><span class="relevant"><b class="l3heading">Java and Javascript:</b> Gamelan/Developer.com<br>
+        [This site has a ton of resources, tutorials, examples, etc on Java,
+        JavaScript <em>AND</em> VBScript. Gamelan is under "Software Development".]</span>
+<dt><a href="http://developer.netscape.com/docs/manuals/jsresource.html" class="relevant">http://developer.netscape.com/docs/manuals/jsresource.html</a>
+    <dd><span class="relevant"><b class="l3heading">JavaScript:</b> Netscape list of JavaScript Resources</span>
+<dt><a href="http://home.netscape.com/comprod/products/navigator/version_2.0/plugins/" class="relevant">http://home.netscape.com/comprod/products/navigator/version_2.0/plugins/</a>
+    <dd><span class="relevant"><b class="l3heading">Plug-ins:</b> Netscape's list of Plug-ins.</span>
+<dt><a href="http://browserwatch.internet.com/plug-in.html" class="relevant">http://browserwatch.internet.com/plug-in.html</a>
+    <dd><span class="relevant"><b class="l3heading">Plug-ins:</b> BrowserWatch's &quot;Plug-In Plaza&quot;</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>General CSS Bugs</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">General CSS Bugs</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+        <a href="../propindex/font.htm">Property Index</a> |
+        <a href="../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+
+<br>
+<dl>
+<dt><big><b class="mainheading">Introduction</b></big>
+    <dd>Several of the problematic browser behaviors are not based on
+        CSS properties or syntax (these are documented elsewhere on the
+        pages most appropriate), but on usage with certain HTML elements
+        or scenarios. Since they can not be cleanly classified under
+        any specific CSS syntax page, they are lumped together here.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">General Syntax</b></big>
+    <dd>- IE 3.0: There is no documented way to specify a user style sheet.
+        An <a href="../topics/stylefaq.htm#fourteen">obscure method</a> does exist to
+        accomplish this.
+    <dd>- IE 3.0: Applying CSS properties to the BODY element via external
+        style sheets does not work.
+    <dd>- IE 3.0: The use of multiple STYLE and LINK elements is not unsupported.
+        Only the last one specified in the document is used.
+    <dd>- IE 3.0: The use of external <em>AND</em> embedded style sheets is
+        not supported.
+    <dd>- IE 3.0: It does not appear to cascade styles correctly.
+    <dd>- Netscape 4.x: Problems with CSS applied to HTML tags where "optional"
+        end tags are omitted (LI|DT|P|TR|TH|TD|THEAD|TBODY|TFOOT.)
+    <dd>- Netscape 4.x does not allow CLASS or ID attributes to contain
+        underscore characters ("_".) Underscores are legal in HTML atributes
+        according to the HTML standards but not according to the original CSS
+        standards (this has been ammended in the CSS2 errata document so that 
+        CSS now allows the underscore.
+    <dd>- Opera 3.5+: properties applied to some selectors controlled by user
+        settings, such as hyperlink Pseudo-classes have no effect (eg:
+        'text-decoration: none' applied to hyperlink Pseudo-classes are not
+        rendered, but are rendered if applied to the A element.
+    <dd>- Opera 3.5+: does not allow CLASS or ID attributes to contain
+        underscore characters ("_".) Underscores are legal in HTML atributes
+        according to the HTML standards but not according to the CSS standard.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">HTML Tags</b></big>
+<dt><b class="subheading">LI</b>
+    <dd>Netscape 4.0+: Many CSS properties applied to this element only affect
+        the list marker, not the list item content.
+<dt><b class="subheading">HR</b>
+    <dd>Netscape 4.0+: Most CSS properties do not apply to this element.
+<dt><b class="subheading">Form Fields</b>
+    <dd>Netscape 4.0+: Most CSS properties do not apply to these elements.
+<dt><b class="subheading">OPTION</b>
+    <dd>IE 4.0+: The only CSS properties applicable to this element are 'color'
+        and 'background-color'.
+<dt><b class="subheading">P</b>
+    <dd>IE 3.0: Unless a closing tag is added for this element, styles are not applied.
+<dt><b class="subheading">TABLE/TR</b>
+    <dd>- Netscape 4.0+: Most CSS properties do not apply to these elements. CSS
+        rules must be applied instead to TD and TH elements.
+    <dd>- Netscape 4.0+: Applying properties to TABLE/TR, some form element cases,
+        and TD/TH elements can cause problems with applying CSS to elements that
+        follow. To insure correct behavior, apply styles to redundant selectors.
+        (One reader told me wrapping the Table or form in its own DIV will often 
+        make this problem go away.)
+    <dd>- Internet Explorer 3.0 does not stop CSS property inheritance (eg from the
+        BODY element) when a table structure is encountered. Other browsers and
+        versions do. Style rules must be repeated for cell contents.
+    <dd>- Opera 3.50: Applying style rules to elements that contain tables -
+        Inheritance stops inside the table as expected, but the original CSS
+        rules are not applied on content that follows the table.
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</body>
+</html>

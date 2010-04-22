@@ -1,0 +1,80 @@
+/* Consult cssexplain.htm for explanation of all of these CSS rules.           */
+/* =========================================================================== */
+
+/* What:          Site Logo and main indices                                   */
+/* ----------------------------------------------------------------------------*/
+.ltop, .ltdvdr, .lbot, .lbdvdr { border-color: #000000; border-style: solid }
+.ltop             { border-width: 3px 3px 3px 0px; }
+.ltdvdr           { border-width: 0px 10px 0px 0px; }          
+.lbot             { border-width: 3px 0px 0px 0px; font-size: 8pt; } 
+.lbdvdr           { border-width: 3px 10px 0px 0px; }
+.srchbox          { font-family: verdana; border: 2px solid #999999; background-color: transparent }
+
+.mainbox, .sidebarbox { border: 3px solid #999999; padding: 1px; }
+.sidebar          { font-family: arial; font-size: 8pt }
+.indexsitetitle   { color: #006600; font-size: 16pt; line-height: 20pt }
+.colheaders       { font-size: 14pt; color: #ffffff; text-decoration: none }
+.field            { background-color: #999999 }
+.sbalert          { color: #990000 }
+                    
+/* What:          Page Appearance rules                                        */
+/* ----------------------------------------------------------------------------*/
+body              { background-color: #f0e0c0 }   
+body, dl, dt, dd, ul, ol, li, td, th, .text      
+                  { color: #000000; font-size: 10pt; font-family: verdana, arial, geneva, sans-serif; } 
+.gc1, .gc2        { color: #006600; font-weight: bold }  
+.gc2              { text-align: center }
+hr                { color: #333333 }
+a:link, a:visited { color: #003333; font-weight: bold }
+a:hover           { color: #003333; background: #ffffff; font-weight: bold }
+
+/* What:          Page Titles, Headers, Important Info, Generic Font Sizing    */
+/* ----------------------------------------------------------------------------*/
+.pagetitle        { color: #000000; font-size: 22pt }
+.subtitle         { color: #006600; font-size: 22pt }
+.sitetitle        { color: #000080 }
+
+.mainheading      { font-size: 15pt; color: #000066; background-color: #7CADB4; font-family: arial, geneva, sans-serif; font-weight: bold }   
+.subheading       { font-size: 13pt; color: #009999; font-weight: bold }   
+.l3heading        { color: #660000; font-weight: bold }
+
+.alert, .quotation{ background-color: #ffff66; color: #000000 }
+.alert2           { background-color: #ffffff; color: #000000; font-style: normal }
+.magicword        { color: #ff0000; font-weight: bold }
+.unselected       { color: #999999 }
+
+.smalltext        { font-size: 9pt }
+.reallysmall      { font-size: 8pt }
+.largetext        { font-size: 15pt }
+
+/* What:          Specific Page Titles, Headers and Subheaders, and Font       */
+/* ----------------------------------------------------------------------------*/
+.entityheader     { font-size: 10pt; color: #006600; font-weight: bold }
+.taghead          { font-size: 11pt; color: #003333 }
+.attribhead       { font-size: 11pt; color: #006600 }
+.supporthead      { font-size: 11pt; color: #990000 }
+.tagindexhead     { font-size: 22pt; border: medium solid #009900; padding: 0px }
+.example          { background-color: #D2B48C; border: thin solid #000099; padding:5px; margin-top: 5px; }
+
+/* What:          Meaningful HTML/CSS syntax                                   */
+/* ----------------------------------------------------------------------------*/
+.tagname       { color: #000066; font-weight: bold }
+.tagattrib     { color: #660000 }
+.selector      { color: #660000; font-weight: bold }
+.property      { color: #006600; font-weight: bold }
+.atrule        { color: #000066; font-weight: bold }
+
+/* What:          Specification/Browser Support Information                    */
+/* ----------------------------------------------------------------------------*/
+.fs            { font-style: italic; font-weight: bold; color: #990000; background-color: #3CB371 }
+.s             { color: #ffffff; background-color: #3CB371 }
+.sr            { color: #ffffff; background-color: #000000; border: 2px solid #990000; text-decoration: none }
+.ns            { color: #999999 }
+.colorname     { color: #660000; font-size: xx-small }
+.colorvalue    { color: #000000; font-size: x-small }
+
+/* What:          Special rules                                                */
+/* ----------------------------------------------------------------------------*/
+.relevant     { color: #000066; font-weight: bold }
+a.relevant    { color: #006666; font-weight: bold }
+.external     { color: #009900 }

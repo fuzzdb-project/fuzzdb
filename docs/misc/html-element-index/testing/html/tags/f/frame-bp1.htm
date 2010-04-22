@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FRAME: Browser Peculiarities: "some Internet Explorer versions where the 
+           BODY BACKGROUND attribute in the NOFRAMES section is applied to the frame borders. 
+           This behavior is an odd artifact and probably a bug."</title>
+</head>
+
+<frameset rows="*,*" framespacing="30" frameborder="1" border="30">
+   <frame src="frametest1.htm" name="frame1" />
+   <frame src="frametest1.htm" name="frame2" />
+</frameset>
+
+<noframes>
+<body background="../../../objects/crosshair.gif">
+
+whatever 
+
+</body>
+</noframes>
+</html>

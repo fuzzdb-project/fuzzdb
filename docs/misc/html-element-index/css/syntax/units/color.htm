@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Colors - Cascading Style Sheet Units of Measure</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Colors</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]<br></td>
+    <td align=center colspan=2><b class="alert">Other Units</b><br></td>
+</tr>
+<tr>
+     <td><a href="rellength.htm">Relative Length</a><br>
+         <a href="abslength.htm">Absolute Length</a><br>
+         <a href="url.htm">URL</a><br></td>
+     <td><a href="angle.htm">Angle</a><br>
+         <a href="time.htm">Time</a><br>
+         <a href="frequency.htm">Frequency</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>In the computer and publishing industries, many different syntaxes and
+        methods have evolved to represent a color, whether it be by a
+        conglomeration of color component values or by a friendly common name.
+        Each of the methods available in CSS have a specific number of allowed
+        values. When an attempt is made to render a color, it is displayed as
+        specified, unless the presentation medium can not support it (for any
+        number of reasons, such as limitations in the OS or video card
+        capability.) In such a case the closest suitable match is used, or more
+        commonly, the color value will be approximated using
+        <a href="../../../misc/glossary.htm#dither">dithering</a>.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">A special color subset: The Color-Safe Palette</b></big>
+    <dd>A very useful subset of values within the 16 million colors range is the
+        non-dithering "Color-Safe Palette". This subset represents the palette
+        of color values that will not <a href="../../../misc/glossary.htm#dither">dither</a>
+        on a system that uses only 256 colors. This "safe" range is composed
+        of six equally spaced values in the 256 value range for each color
+        component. With six values for each component, this gives a total of
+        216 (6 X 6 X 6) color combinations.<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">Hexadecimal:</b> 00, 33, 66, 99,
+        cc, and ff<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">Decimal:</b> 0,
+        51, 102, 153, 204, and 255<br>
+        &nbsp;&nbsp;&nbsp;<b class="alert">Percentage:</b> 0%, 20%, 40%, 60%
+        80%, and 100%
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Color Units in CSS</b></big>
+<dt><b class="subheading">[#RGB]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible Color Values:</b> 4096
+     <dd><b class="l3heading">Syntax:</b> <span class="alert">#RGB</span>
+     <dd><b class="l3heading">Description:</b><br>
+         This syntax is preceded by a '#' symbol, and represents a three character
+         hexadecimal string for each of the component values for Red, Green and Blue.
+         This shorthand version of the [#RRGGBB-color] syntax duplicates the hex
+         character for each color component to calculate the final value for each
+         component (thus, #84A in [#RGB] syntax is equal to #8844AA in [#RRGGBB]
+         syntax.
+         <br><br>
+         <b class="alert">NOTE:</b> Trying to map a [#RRGGBB-color] notation to
+         [#RGB-color] notation will not usually yield the same exact color value.
+         The method used to duplicate the second Hexadecimal number loses the least
+         significant hexadecimal digit. The resultant color difference will be very
+         small, but can be noticeable.
+
+<dt><br><b class="subheading">[#RRGGBB]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible Color Values:</b> 16,777,216
+     <dd><b class="l3heading">Syntax:</b> <span class="alert">#RRGGBB</span>
+     <dd><b class="l3heading">Description:</b><br>
+         This method represents a color using a triplet of hexadecimal
+         values concatenated together. These values represent the Red,
+         Green and Blue components for a given color. The range of each
+         component value is 00-FF in Hexadecimal (0-255 Decimal.) The
+         total value should be prefixed by a pound "#" symbol.
+
+<dt><br><b class="subheading">[rgb(r,g,b)]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B3</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible Color Values:</b> 16,777,216
+     <dd><b class="l3heading">Syntax:</b> <span class="alert">rgb(r,g,b)</span><br>
+     <dd><b class="l3heading">Description:</b><br>
+         This value is a comma separated list of integer values from 0-255 for
+         the Red, Green and Blue components of the color (just as with the #RRGGBB
+         method.) The notation is nested in parentheses and preceded by the
+         keyword 'rgb'.
+
+<dt><br><b class="subheading">[rgb(r%,g%,b%)]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B3</i></b>|<b><i class="fs">N4B3</i></b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible Color Values:</b> 16,777,216
+     <dd><b class="l3heading">Syntax:</b> <span class="alert">rgb(r%,g%,b%)</span><br>
+     <dd><b class="l3heading">Description:</b><br>
+         This value is a comma separated list of floating point percentage values for
+         each Red, Green and Blue color component. A value of 0% represents the
+         absence of a color component, while a value of 100% represents full presence
+         of the color component. The notation is nested in parentheses and preceded
+         by the keyword 'rgb'.
+
+<dt><br><b class="subheading">[VGA Name]</b>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE3B1</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible Color Values:</b> 16
+     <dd><b class="l3heading">Description:</b><br>These friendly color names are
+         taken from the Windows 16-color VGA palette. The color names represent zero,
+         half and full-values (00, 80 and ff respectively) in the RGB component method.
+         Associating names with colors is usually easier for many authors to remember,
+         but the cost is limiting the choice to only 16 values.
+     <dd><b class="l3heading">Color Swatches:</b>
+         <a href="../../../color/vganame.htm">VGA Color Names</a>
+
+<dt><br><b class="subheading">[X11 Name]</b>
+<dt>[<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O4</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Possible color values:</b> 140
+    <dd><b class="l3heading">Description:</b><br>
+        While the VGA color names may be easy to remember, the range of colors
+        is very limited. Netscape expanded this set of named colors in its
+        version 2.0 browser to a standard set of 140 color names used for many
+        years in the UNIX X11 environment. This set of names assigns arbitrary
+        (and somewhat long) names to specific RGB values. The color values used
+        seem fairly random and none of them are in the 216-color "safety palette"
+        (see above,) but the X11 names <em>DO</em> contain all the names in the
+        Windows VGA color name palette.
+    <dd><b class="l3heading">Color Swatches:</b>
+        <a href="../../../color/x11redirect.htm">X11 Color Names</a>
+
+<dt><br><b class="subheading">[UI Name]</b>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O6</b>|<b class="s">S1</b>]
+     <dd><b class="l3heading">Possible color values:</b> 28
+     <dd><b class="l3heading">Description:</b><br>
+         One of the main problems in user interface design is the inability satisfy
+         every user. With colors especially, not every user will like or be able to
+         efficiently use the same colors (because of visual disabilities,
+         personal preference or other factors.) How can a page be designed with color,
+         <em>AND</em> allow for such a wide spectrum of user color requirements? The
+         answer is fairly simple - let the user decide.
+         <br><br>
+
+         Each piece of the user interface in a GUI environment usually has an
+         addressable system name/label, from scrollbars all the way to the
+         application background. A user will have specific colors or values
+         specified for use by each of these pieces in the system. Colors can now
+         be specified using these system labels to give some control over page
+         appearance to the viewer. In theory, letting the user decide what their
+         own user interface should look like will yield the greatest satisfaction.
+         If the browser does not have a color associated with a given UI name,
+         it should be mapped to the color of the nearest available UI component,
+         or instead to a default color.
+     <dd><b class="l3heading">Color Swatches:</b>
+         <a href="../../../color/uiname.htm">UI color names</a>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><b class="selector">span</b> { <span class="property">color:</span> green }
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- Reported Elsewhere: Macintosh IE 4.0 ignores property assignments
+                that use decimal color value percentages.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- Netscape tries to interpret unknown color names (such as UI
+                Color Names) - they should be ignored. The result is usually a random color.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

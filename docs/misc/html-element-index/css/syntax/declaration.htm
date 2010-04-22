@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Declaration Blocks - Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Declaration Blocks</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+
+<dl>
+<dt><big><b class="mainheading">What Are Declaration Blocks?</b></big>
+    <dd>Declaration Blocks begin with a left curly brace ('{') and end when a
+        matching right curly brace ('}') is reached. Between these braces lie
+        semi-colon separated style declarations.
+        <br><br>
+
+        A style declaration consists of a simple assignment: a CSS property is
+        given a specific value. This is the heart of CSS - the assignment of
+        rendering properties. A CSS property is followed by a colon character
+        (':'), which is followed in turn by a value appropriate to the property.
+        White space around all of these declaration components is optional.
+        <br><br>
+
+        <b class="alert">Syntax:</b> "{" [<span class="alert2">space</span>]?
+        [<span class="alert2">Property</span>] [<span class="alert2">space</span>]? ":"
+        [<span class="alert2">space</span>]? [<span class="alert2">Value</span>]
+        [<span class="alert2">space</span>]? "}"<br>
+        <b class="alert">Example:</b>
+        <div class="example">{ <span class="property">font-size:</span> 14pt }</div>
+  </dd>
+</dl>
+
+<a name="decgroup"></a>
+<dl>
+<dt><big><b class="mainheading">Declaration Groupings</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd>A Selector may be repeated multiple times in order to assign multiple
+         properties, or alternatively, multiple declarations can be lumped together
+         within a Declaration Block for the Selector in order to save space.
+         Multiple declarations are separated by semi-colon characters (';'), with
+         White space around the semi-colon being optional.
+         <br><br>
+         <b class="alert">Example</b>
+         <div class="example">
+         <table>
+         <tr>
+             <td valign=top><b class="selector">h1</b> { <span class="property">font-size:</span> 14pt }<br>
+             <b class="selector">h1</b> { <span class="property">color:</span> green }<br>
+             <b class="selector">h1</b> { <span class="property">font-weight:</span> bold }</td>
+             <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td valign=top><b class="alert2">Becomes =&gt;</b></td>
+             <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td valign=top><b class="selector">h1</b> {<br>
+             <span class="property">font-size:</span> 14pt;<br>
+             <span class="property">color:</span> green;<br>
+             <span class="property">font-weight:</span> bold<br> }</td>
+         </tr>
+         </table>
+         </div></dd>
+</dl>
+
+<a name="decshorthand"></a>
+<dl>
+<dt><big><b class="mainheading">Shorthand Properties</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd>Thankfully, the creators of CSS realize that there are a <em>LOT</em> of
+         properties, many of which accomplish similar tasks. Some CSS properties exist 
+         to serve as a shorthand for specifying several other property/values at once.
+         <br><br>
+         <b class="alert">Example:</b>
+         <div class="example">{ <span class="property">font:</span>
+         bold small-caps 12pt/14pt sans-serif }<br> is the same as<br>
+         { <span class="property">font-weight:</span> bold;
+           <span class="property">font-variant:</span> small-caps;
+           <span class="property">font-size:</span> 12pt;
+           <span class="property">line-height:</span> 14pt;
+           <span class="property">font-family:</span> sans-serif }</div>
+         <br><br>
+
+         <b class="alert">CSS shorthand properties:</b><br>
+         <a href="../properties/font/font.htm">Font</a> |
+         <a href="../properties/colorbg/bg.htm">Background</a> |
+         <a href="../properties/list/liststyle.htm">List-style</a> |
+         <a href="../properties/outline/outline.htm">Outline</a> |
+         <a href="../properties/aural/pause.htm">Pause</a> |
+         <a href="../properties/aural/cue.htm">Cue</a> |
+         <a href="../properties/intl/lgrid.htm">Layout-grid</a> |
+         <a href="../properties/margin/margin.htm">Margin</a> |
+         <a href="../properties/padding/padding.htm">Padding</a><br>
+
+         <a href="../properties/border/border.htm">Border</a> |
+         <a href="../properties/border/btop.htm">Border-top</a> |
+         <a href="../properties/border/bright.htm">Border-right</a> |
+         <a href="../properties/border/bbottom.htm">Border-bottom</a> |
+         <a href="../properties/border/bleft.htm">Border-left</a> |
+         <a href="../properties/border/bwidth.htm">Border-width</a> |
+         <a href="../properties/border/bstyle.htm">Border-style</a> |
+         <a href="../properties/border/bcolor.htm">Border-color</a>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

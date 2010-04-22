@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BDO: Browser peculiarity - rendering effects in Netscape and Opera</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<ol>
+<li class="assert">Opera 4-6.x (so far) only offers generalized support for BDO 
+    (only class/id/style/event attributes.) It does not have any element-specific behaviors.</li>
+<li class="assert">Netscape 6.0 only offered generalized support for BDO - 
+    it only supported class/id/style/events, but did not offer any element-specific 
+    behavior. The same thing could be said for any made-up element name. This changed in 6.1.</li>
+</ol>
+
+<b>Plain BDO element:</b><br>
+<hr>
+filler text 
+<bdo>Plain BDO element, no attributes</bdo> 
+filler text
+<hr>
+<br>
+
+<b>Plain BDO element with DIR="rtl":</b><br>
+<hr>
+filler text 
+<bdo dir="rtl">Plain BDO element, no attributes</bdo> 
+filler text
+<hr>
+<br>
+
+<b>BDO element with CLASS, ID, STYLE, TITLE:</b>
+<hr>
+filler text 
+<bdo class="test" id="test1" style="word-spacing: 20px" title="this is a title">BLINK 
+element, with class="test" (Gray color), id="test1" (green background), 
+style ("word-spacing: 20px"), and title ("this is a title" on hover) attributes</bdo> 
+filler text
+<hr>
+
+</body>
+</html>

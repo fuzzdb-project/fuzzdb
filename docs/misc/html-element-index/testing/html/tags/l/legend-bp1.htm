@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LEGEND: Browser Peculiarities: Rendering in early Mozilla builds</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">In Netscape 6 Beta 1, a black bordered box was automatically 
+placed around the LEGEND content (equivalent of using &lt;legend STYLE="border: 2px solid black"&gt;). 
+In later versions, no border box is applied.<br>
+<br>
+If the behavior is as described, both cases should look alike.
+</div>
+
+<br>
+<b>Fieldset with normal LEGEND element:</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<legend>this is a legend</legend>
+<input type="text" name="f1">
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+<br>
+<b>Fieldset with LEGEND element having style="border: 2px solid black":</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<legend style="border: 2px solid black">this is a legend</legend>
+<input type="text" name="f2">
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

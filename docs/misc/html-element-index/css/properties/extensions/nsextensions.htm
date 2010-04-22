@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Netscape CSS Extensions - Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Netscape CSS Extensions</span></h1>
+<div align="center"><b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+ <b><i class="fs"> N6 </i></b><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></div>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+     <dd>Mozilla's code includes references to <em>MANY</em> proprietary CSS
+         properties and values. Browser makers have been following a convention [1]
+         of using a dash character ("-") as a prefix for proprietary
+         CSS properties...Mozilla/Netscape uses "-moz-" as a prefix.
+         (Of course, Microsoft's Internet Explorer for Win32 doesn't adhere to this -
+         they choose to name their proprietary properties anything they feel like.)
+         <br><br>
+
+         There is no real explanatory documentation of these properties in the
+         Mozilla code itself - you have to be a developer or at least trained in
+         the art of reading code trails to find a lot of these cross-references.
+         It <em>LOOKS</em> like many of these proprietary properties are one-to-one
+         mappings of many of the new features in the CSS3 working draft:
+         "<a href="http://www.w3.org/TR/css3-userint">User Interface for CSS3</a>".
+         Since this document has not been finalized, it looks like Mozilla decided
+         to err on the side of caution and put the functionality under special
+         names until CSS3 is more complete. I used that document for inspiration
+         of the descriptions below since Mozilla's documentation is so...
+         "non-existent." =) See the W3C document for fuller descriptions of some
+         of these properties/values - <em>THEY MAY OR MAY NOT REFLECT THE TRUE
+         BEHAVIOR IN MOZILLA</em> - be sure to test your CSS.
+         <br><br>
+
+         Should you use these proprietary CSS properties and values? The people
+         at Mozilla would suggest that you shouldn't - some of these properties
+         were created to help construct Mozilla/Netscape's own user interface
+         and weren't intended for wide usage. I attempt to list them here only
+         for completeness sake. But, as long as you keep in mind that Mozilla is
+         the only browser that can utilize these properties, and as long as your
+         documents do not <em>RELY</em> on them for their full functionality and
+         rendering, in most cases their use can be harmless. Also: remember that
+         Mozilla could retract support for these properties/values at any time
+         as CSS3 becomes mature. [2]
+         <br>
+         <br>
+
+         [1] <a href="http://lists.w3.org/Archives/Public/www-style/2002Jan/0094.html">http://lists.w3.org/Archives/Public/www-style/2002Jan/0094.html</a><br>
+         [2] <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=3935">http://bugzilla.mozilla.org/show_bug.cgi?id=3935</a>
+</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Proprietary Mozilla CSS Properties</b></big>
+<dt><b class="subheading">-moz-binding</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> Unknown</dd>
+    <dd><b class="l3heading">Allowed Values:</b> <br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>[None]</b>: Do not bind anything for this element.<br>
+        - <b>[URL]</b>: Specifies the URL for the binding.</dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        "Used to specify a binding to use for the element. The property should be
+        a URL of an XBL file containing the binding. The URL may contain an anchor
+        to point to a specific binding with the XBL file, referenced by its id attribute."
+</dd>
+
+<dt><b class="subheading">-moz-border-radius, <br>
+    -moz-border-radius-topleft, -moz-border-radius-topright,<br>
+    -moz-border-radius-bottomleft, -moz-border-radius-bottomright</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>[Length]</b>: Specifies a length and unit of the border/corner radius.<br>
+        - <b>[Percentage]</b>: Specifies a percentage. Not sure of what the percentage
+          relates to.</dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        This property controls the curve radius of borders at the corners, allowing
+        corners to be rounded (otherwise, borders are usually squared off.) The
+        '-moz-border-radius' property is a shorthand method for controlling this
+        effect for each corner. If one value is specified, it applies to all corners.
+        If only two values exist, the first applies to the top-left and bottom-right,
+        while the second value applies to the top-right and bottom-left. If all
+        four values are specified, they control, in order: [top-left] [top-right]
+        [bottom-right] [bottom-left]</dd>
+
+<dt><b class="subheading">-moz-border-top-colors, -moz-border-right-colors,<br>
+    -moz-border-bottom-colors, -moz-border-left-colors</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6.? (Mozilla 0.9.8) </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>None</b>: [DEFAULT] Do not use any color striping for this border side.<br>
+        - <b>[Color]+</b>: Indicating one or more [Color] values</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        This property tells the browser to use a color striping effect on the
+        indicated border-[side]. For borders thicker than 1 pixel, the indicated
+        colors are striped, a pixel width at a time, going from the outside to the
+        inside of the border thickness. If there are not enough colors specified to
+        cover all of the border thickness, the remaining inner thickness uses
+        the border-color property indicated for that side.</dd>
+
+<dt><b class="subheading">-moz-opacity</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>[Number]</b>: Values range from "0" (transparent) to "1" (non-transparent.)<br>
+        - <b>[Percentage]</b>: Values range from "0%" (transparent) to "100%" (non-transparent.)</dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        This is a pretty cool property; it allows the opacity of an element to be
+        controlled. Values can range from 0/0% (transparent) to 1/100% (non-transparent.)
+        Child elements have the same opacity, but subsequent applications of the
+        property adds to total opacity. There are a few bugs in the implementation
+        that I could see - cursors remain unaffected, dropdown lists act strangely,
+        and scrolling areas freeze and react oddly.</dd>
+
+<dt><b class="subheading">-moz-outline</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Syntax:</b><br>
+         &#160;&#160;&#160;&#160;<b class="selector">Selector</b> { <span class="property">-moz-outline:</span>
+         [<b class="alert2">-moz-outline-color</b>] [<b class="alert2">-moz-outline-style</b>]
+   [<b class="alert2">-moz-outline-width</b>] }</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        This is property that attempts to mirror the CSS2 'outline' property. It
+        is a shorthand property that allows an author to specify the '-moz-outline-color',
+        '-moz-outline-style' and '-moz-outline-width' properties in one place. See
+        the '<a href="../outline/outline.htm">outline</a>' property page for more
+        details on how this property should work. See the individual -moz-outline
+        sub-properties for details on this shorthand.</dd>
+
+<dt><b class="subheading">-moz-outline-color</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>Invert</b>: Inverts the color of the outline to the opposite value of
+          the color "underneath" the outline to ensure proper contrast.<br>
+        - <b>[Color]</b>: Sets the outline to the indicated color value. </dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        This is property that attempts to mirror the CSS2 'outline-color' property.
+        See the '<a href="../outline/outcolor.htm">outline-color</a>' property page
+        for more details on how this property should work.</dd>
+
+<dt><b class="subheading">-moz-outline-style</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        [See the '<a href="../border/bstyle.htm">border-style</a>' property for
+        list of allowed values]</dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        This is property that attempts to mirror the CSS2 'outline-style' property.
+        See the '<a href="../outline/outstyle.htm">outline-style</a>' property page
+        for more details on how this property should work.</dd>
+
+<dt><b class="subheading">-moz-outline-width</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>[Thin|Medium|Thick]</b>: The actual thickness of these outline values
+          is not specified, but "thin" should have a smaller thickness than "medium",
+          which should have a smaller thickness than "thick". <br>
+        - <b>[Length]</b>: Sets the width of the outline to an explicit measurement.</dd>
+    <dd><b class="l3heading">Purpose:</b> <br>
+        This is property that attempts to mirror the CSS2 'outline-width' property.
+        See the '<a href="../outline/outwidth.htm">outline-width</a>' property page
+        for more details on how this property should work.</dd>
+
+<dt><b class="subheading">-moz-user-focus</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> Yes</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>Auto</b>: Use the default focus behavior for the element.<br>
+        - <b>Normal</b>: Seems to be like "Auto".<br>
+        - <b>None</b>: The element can not receive focus.<br>
+        - <b>Ignore</b>: Seems to be like "None."</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        Known as 'user-focus' in the "User Interface for CSS3" W3C Working Draft.
+        The purpose of this property is to determine what happens to an element
+        when "focus" is given to it (usually through the keyboard, mouse or other
+        pointing device.) The values listed seem to work ok, but there are several
+        others listed in CSS3 which are not yet supported.
+        </dd>
+
+<dt><b class="subheading">-moz-user-input</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> Yes</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>Auto</b>: Use the element's default behavior for user-input behavior.<br>
+        - <b>None</b>: The element is considered to be neither enabled or disabled.<br>
+        - <b>Enabled</b>: Element can respond to user input.<br>
+        - <b>Disabled</b>: Element is disabled and will not respond to user input.</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        This property controls whether an element is allowed to have input focus
+        (like the HTML 4.x "disabled" flag for form elements.) This same behavior
+        is known as the 'user-input' property in the "User Interface for CSS3"
+        W3C Working Draft.</dd>
+
+<dt><b class="subheading">-moz-user-modify</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> Yes</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>Read-only</b>: User can view/select/copy information
+           in the element, but cannot modify the contents. <br>
+        - <b>Read-write</b>: User can view/select/copy and <em>edit</em> content
+           of the element.<br>
+        - <b>Write-only</b>: User can select/edit element contents, but cannot
+           view it (possibly like INPUT TYPE="password" fields.)
+        </dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        This property controls an element's ability to change its contents (like
+        the HTML 4.x "readonly" flag for form elements.) This same behavior is known
+        as the 'user-modify' property in the "User Interface for CSS3" W3C Working Draft.</dd>
+
+<dt><b class="subheading">-moz-user-select</b></dt>
+    <dd><b class="l3heading">Support:</b> <b><i class="fs"> N6 </i></b></dd>
+    <dd><b class="l3heading">Inherited:</b> No</dd>
+    <dd><b class="l3heading">Allowed Values:</b><br>
+        - <b>Inherit</b>: Use the value of this property from the parent element.<br>
+        - <b>None</b>: None of the element's content can be selected.<br>
+        - <b>Text</b>: [DEFAULT] Only the element's text content is selected,
+                       following the system's text selection model.<br>
+        - <b>Element</b>: One element at a time may be selected.<br>
+        - <b>Elements</b>: One or more elements at a time may be selected.<br>
+        - <b>All</b>: The element's contents can only be selected as a whole.<br>
+        - <b>Toggle</b>: The element's content is selected, following the system's
+                       standard text selection toggling model.<br>
+        - <b>Tri-State</b>: Unknown - probably Mozilla proprietary. May follow a
+                       3-state selection model.<br>
+        - <b>-moz-all</b>: Unknown - Mozilla proprietary. Seems similar to "All" value.</dd>
+    <dd><b class="l3heading">Purpose:</b><br>
+        This same behavior is known as the 'user-select' property in the "User Interface
+        for CSS3" W3C Working Draft. This property controls the selection control
+        model of an element (as with mouse selection.) Although the default value
+        is generally "Text", some elements may use a different default value
+        (eg: for FORM widgets.) Although the property is not inherited, it will
+        still affect child elements.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Other Proprietary Properties</b></big>
+     <dd>The Mozilla code lists a bunch of them, but there are some I haven't
+         been able to confirm yet:<br>
+         <ul>
+         <li><b>-moz-box-sizing:</b><br>Like the CSS3 'box-sizing' property, which
+             allows for slightly-different box-model rendering calculation for box
+             dimensions. The Mozilla version does not take the same values as the
+             CSS3 version, it looks like it shoudl take values of "content", "border"
+             and "padding," but I can't get it to work yet.
+         <li><b>-moz-float-edge:</b><br> Unknown
+         <li><b>-moz-image-region:</b><br>
+             "For elements that have an image, this property sets the area of
+             the image that is used. Syntax resembles the 'clip' property"
+         <li><b>-moz-key-equivalent:</b><br>
+             Like the CSS3 'key-equivalent' property, which allows an author to
+             set the shortcut-key combinations for giving focus to an element
+             (like the ACCESSKEY attribute in HTML.) Doesn't seem to work though.
+         <li><b>-moz-outline-radius:</b><br>Shorthand to create curved 'outline' corners?
+         <li><b>-moz-outline-radius-topleft:</b><br>Create curved 'outline' for top/left corner?
+         <li><b>-moz-outline-radius-topright:</b><br>Create curved 'outline' for top/right corner?
+         <li><b>-moz-outline-radius-bottomright:</b><br>Create curved 'outline' for bottom/right corner?
+         <li><b>-moz-outline-radius-bottomleft:</b><br>Create curved 'outline' for bottom/left corner?
+         <li><b>-moz-resizer:</b><br>Like the CSS3 'resizer' property.
+         </ul>
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

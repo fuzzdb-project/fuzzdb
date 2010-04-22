@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Position - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">position</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Classification Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="display.htm">display</a><br>
+    <a href="visibility.htm">visibility</a><br></td>
+    <td><a href="float.htm">float</a><br>
+    <a href="clear.htm">clear</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">static</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All (except generated content)</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/visuren.html#choose-position">CSS2: Sect. 9.3.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/visuren.html#choose-position">CSS2.1: Sect 9.3.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property determines whether normal, relative or absolute positioning methods
+        are used to render the current element box.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">static</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This is the default positioning scheme, where elements are rendered in order, as
+        they appear in the document flow. The 'top', 'left', 'right' and 'bottom' properties
+        have no effect if this value is set.</dd>
+
+<dt><b class="subheading">relative</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The element's normal document flow position is calculated as if the element
+        had a 'position' value of 'static'. It is then offset from this position
+        according to the 'top' and 'left' properties. Any elements that come after this
+        element will be laid out as if the element had not been offset (a phantom
+        height and width for the element is reserved in the normal document flow.)</dd>
+
+<dt><b class="subheading">absolute</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies that the element box be absolutely positioned using the
+        'top', 'left', 'right' and 'bottom' properties. These values use the element
+        box's containing block as origin. Absolutely positioned elements do
+        <em>NOT</em> exist in the normal document flow like relatively positioned
+        elements are - elements that follow will flow as if the absolutely positioned
+        element does not exist.</dd>
+
+<dt><b class="subheading">fixed</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6.1</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This value behaves like 'absolute' in all respects, but additionally, the positioned
+        element box is fixed with respect to a reference point. In scrolling media, it is in
+        reference to some fixed point on the screen; in paged media (printing) it will be in
+        reference to a point on the page. The positioned element will not move with
+        respect to that stationary point (eg, it will not moved when, say, the screen is
+        scrolled.)</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">h2</b>
+        { <span class="property">display:</span> block;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">top:</span> 20px;
+        <span class="property">right:</span> 50px;
+        <span class="property">bottom:</span> 20px;
+        <span class="property">left:</span> 50px }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">h2</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">display:</span> block;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">top:</span> 20px;
+        <span class="property">right:</span> 50px;
+        <span class="property">bottom:</span> 20px;
+        <span class="property">left:</span>
+        50px&quot;&gt;text&lt;/<b class="tagname">h2</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 recommends that if the value of 'fixed' is used, it should be specified on
+        a case-by-case basis depending on the media.
+    <li>Page-breaks may not occur inside boxes that are absolutely positioned.
+    <li>Before its inclusion in CSS2, this property was first proposed in the W3C
+        Working Draft "Positioning HTML Elements with Cascading Style Sheets" (8/19/97,
+        <a href="http://www.w3.org/TR/WD-positioning">http://www.w3.org/TR/WD-positioning</a>)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">4.0:</b>
+            <dd>- Absolute positioning applied to hyperlinks does not position
+                the element, and the hyperlink is unusable.
+            <dd>- Absolute positioning does not work for inline elements,
+                list structures OL/UL/DL, LI/DT/DD and table cells. (In IE5 it
+                works for these elements.)
+            <dd><b class="alert2">4.0+:</b>
+            <dd>- Relative positioning does not apply to table cells (TH/TD.)
+            <dd>- The 'top' and 'left' properties must also be specified if
+                Absolute positioning is used. Otherwise, element placement
+                may overlap content in unpredictable ways.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- Relative positioning does not apply to LI/DT/DD, form fields,
+                IMG, TABLE or table cells (TH/TD.)
+            <dd>- Absolute positioning does not apply to LI/DT/DD, or form fields.
+            <dd>- Applying Absolute positioning to the TABLE element strips all
+                the text content out of the table and serializes it, rendering
+                it at the specified position with no formatting.
+            <dd>- Applying this "position: absolute" to hyperlink elements
+                positions the element, but the hyperlink is unusable. If "position:
+                relative" is used, the active/clickable area is the region where
+                the hyperlink would have been displayed if the "relative" value
+                had not been assigned.
+            <dd>- Absolute positioning values are computed relative to the BODY
+                element, not an element's parent element.
+            <dd>- The 'top' and 'left' properties must also be specified if
+                Absolute positioning is used. Otherwise, element placement
+                may overlap content in unpredictable ways.
+            <dd>- Absolute positioning does not appear to apply directly to
+                IMG elements.
+            <dd>- Absolute positioning appears to cause random rendering bugs.
+                In my test page with dozens of positioned elements,
+                positioned elements may or may not appear (it seems random)
+                upon refresh.
+            <dd>- Form elements are always rendered on top of absolutely or
+                relatively positioned elements, regardless of where they are
+                located in the document tree or any 'z-index' value specified.
+            <dd>- If a form field is contained within an element that is
+                absolutely or relatively positioned, it disappears.
+            <dd>- If a relative or absolutely positioned element is nested
+                inside another relative or absolutely positioned element, any
+                further application of CSS is broken - no properties will be applied.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+
+</BODY>
+</HTML>

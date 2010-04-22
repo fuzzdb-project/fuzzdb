@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LAYER: Browser Peculiarities: Jumping to bookmarks in LAYERs</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4.x can not correctly hyperlink to a bookmark (A NAME) 
+that is nested inside a LAYER element from another document. It succeeds in jumping 
+to the document, and it does attempt to jump within the document, but I didn't see 
+a particular pattern to where it was jumping to...but it isn't the correct location. 
+Hyperlinking to a bookmark nested in a LAYER from within the same document appears to work correctly.</div>
+
+<br>
+<b>Simple link to another document with bookmark (A NAME). Document should scroll 
+so that the bookmark with the blue background is in view.</b>
+<hr>
+<a href="layeraname1.htm#bookmark1">Click on the link to see the described behavior</a>
+<hr>
+<br>
+
+<b>Link to another document with bookmark (A NAME) nested in a layer at the bottom 
+of the page. Document should scroll so that the bookmark with the green background is in view.:</b>
+<hr>
+<a href="layeraname1.htm#layer1">Click on the link to see the described behavior</a>
+<hr>
+<br>
+
+<b>Link to another document. At the top are links to bookmarks/anchors WITHIN the document.
+Anchors in LAYERs work within the document context but not externally:</b>
+<hr>
+<a href="layeraname1.htm">Click on the link to see the described behavior</a>
+<hr>
+<br>
+
+</body>
+</html>

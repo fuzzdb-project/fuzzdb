@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about Block Formatting in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About Block Formatting in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center><a href="#justify">Justification</a> |
+     <a href="#scope">The Full Scope</a><br><a href="#special">A
+     Special Generic Style</a> | <a href="#other">Other Block Elements</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for Block Formatting</b></big>
+    <dd>The main intent of SGML (and the derivative HTML language) is to be a
+        device independent language for describing the content of documents. To
+        accomplish this, it tries to divorce presentation rules from document
+        content. Simple Block Formatting elements all introduce line-breaking
+        behavior to their display while also assigning a semantic purpose
+        to the content.
+        <br><br>
+
+        Block Formatting in HTML provides the means to render content in sections
+        that are distinct both physically and often visually from other
+        surrounding sections and content. Browsers should render Block Formatted
+        sections with a line break before and after the content block in
+        addition to any other styles applied. <a href="character.htm">Character
+        Formatting</a> (the other main content formatting class of elements), on
+        the other hand, will render visual changes in-place.
+</dl>
+
+<a name="scope"></a>
+<dl>
+<dt><big><b class="mainheading">The Full Scope of Block Formatting</b></big>
+<dt>[&lt;<a href="a/address.htm">address</a>&gt;,
+     &lt;<a href="b/blockquote.htm">blockquote</a>&gt;,
+     &lt;<a href="c/center.htm">center</a>&gt;,
+     &lt;<a href="h/heading.htm">Hx</a>&gt;,
+     &lt;<a href="p/p.htm">p</a>&gt;,
+     &lt;<a href="p/pre.htm">pre</a>&gt;]
+    <dd>Other HTML element groupings also exhibit &quot;Block&quot; nature
+        similar to that of the Block Formatting elements. All
+        <a href="lists.htm">lists</a>, <a href="tables.htm">table</a> and
+        <a href="forms.htm">form</a> structures have the basic linebreaking
+        behavior that is characteristic of Block Formatting in order to produce
+        distinct regions of content. Discussion of these topics is best separated
+        from Block Formatting concepts because these other element groupings are not
+        meant to assign a simple semantic style to the content.
+        <br><br>
+
+<a name="special"></a>
+<dt><big><b class="mainheading">A Special Generic Block Style</b></big>
+<dt>[&lt;<a href="d/div.htm">div</a>&gt;]
+    <dd>The introduction of Style Sheets has added two new HTML elements to
+        allow for generic situations where no specific HTML markup would
+        be appropriate. The <a href="d/div.htm">DIV</a> element (and its companion
+        Character Formatting element <a href="s/span.htm">SPAN</a>) carry no
+        inherent semantic meaning assigned to its structure - the author can
+        assign Style Sheet presentation properties as needed. Of course there is
+        <em>one</em> inherent property given to DIV - the linebreak before and 
+        after its content.
+        <br><br>
+
+<a name="other"></a>
+<dt><big><b class="mainheading">Other Block Formatting Elements</b></big>
+<dt>[&lt;<a href="m/marquee.htm">marquee</a>&gt;,
+     &lt;<a href="m/multicol.htm">multicol</a>&gt;, &lt;<a href="h/hr.htm">hr</a>&gt;??]
+    <dd>I only recently decided to place these elements in this section,
+        having moved them from the 'miscellaneous' section. Marquee and Multicol were
+        both created by the browser companies and are not supported in any HTML 
+        standard, but they do exhibit the requirements necessary to be called Block 
+        Formatting elements. They define blocks of content, usually have some semantic 
+        meaning, and have an implied line break before and after the block. (Note: 
+        I also place HR in the "miscellaneous" category, but it is a vague element 
+        to define and it exhibits many "block" characteristics, so it seemed to 
+        deserve mention here.)
+</dl>
+
+
+<br>
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 character elements and newer formatting elements in common use]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus many new features]</span>
+<dt><a href="http://www.w3.org/TR/REC-CSS1.html" class="relevant">http://www.w3.org/TR/REC-CSS1.html</a>
+    <dd><span class="relevant">Cascading Style Sheets, Level 1<br>
+        [Includes usage of DIV and SPAN]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions.html" 
+       class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 2.0<br>
+        [Details CENTER element usage]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions_3.html" 
+       class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions_3.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 3.0<br>
+        [Includes ALIGN attributes of P and DIV]</span>
+<dt><a href="http://home.netscape.com/eng/mozilla/3.0/relnotes/windows-3.0.html#Layout" 
+       class="relevant">http://home.netscape.com/eng/mozilla/3.0/relnotes/windows-3.0.html#Layout</a>
+    <dd><span class="relevant">Netscape 3.0 release notes<br>
+        [Details the use of the MULTICOL element]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" 
+       class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details HTML 2.0, 3.2 and common extensions. Also details MARQUEE element]</span>
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

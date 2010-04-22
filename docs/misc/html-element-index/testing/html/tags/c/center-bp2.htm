@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Center: Browser peculiarity - Centering a table</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Tables capable browsers will need either a CENTER element or 
+a DIV ALIGN=CENTER element to center an entire table. TABLE ALIGN=CENTER may also 
+work for this purpose.</div>
+
+<hr>
+<b>Plain TABLE, no centering attempted:</b>
+<table border="1">
+<tr><td>TD: Cell 1</td><td>TD: Cell 2 Cell 2</td></tr>
+<tr><td>TD: Cell 3 Cell 3<br>Cell 3</td><td>TD: Cell 4</td></tr>
+</table>
+
+<hr>
+<b>Plain TABLE; TABLE ALIGN=CENTER attribute used:</b>
+<table border="1" align="center">
+<tr><td>TD: Cell 1</td><td>TD: Cell 2 Cell 2</td></tr>
+<tr><td>TD: Cell 3 Cell 3<br>Cell 3</td><td>TD: Cell 4</td></tr>
+</table>
+
+<hr>
+<b>Plain TABLE; Surrounding DIV ALIGN=CENTER used:</b>
+<div align="center">
+<table border="1" align="center">
+<tr><td>TD: Cell 1</td><td>TD: Cell 2 Cell 2</td></tr>
+<tr><td>TD: Cell 3 Cell 3<br>Cell 3</td><td>TD: Cell 4</td></tr>
+</table>
+</div>
+
+<hr>
+<b>Plain TABLE; Surrounding CENTER used:</b>
+<center>
+<table border="1" align="center">
+<tr><td>TD: Cell 1</td><td>TD: Cell 2 Cell 2</td></tr>
+<tr><td>TD: Cell 3 Cell 3<br>Cell 3</td><td>TD: Cell 4</td></tr>
+</table>
+</center>
+
+</body>
+</html>

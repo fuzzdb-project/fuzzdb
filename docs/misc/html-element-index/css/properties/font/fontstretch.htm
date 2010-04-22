@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Font-Stretch - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">font-stretch</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Font Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="fontsizeadjust.htm">font-size-adjust</a><br>
+    <a href="font.htm">font</a><br>
+    <a href="fontstyle.htm">font-style</a><br>
+    <a href="fontvariant.htm">font-variant</a><br></td>
+    <td valign=top><a href="fontweight.htm">font-weight</a><br>
+    <a href="fontsize.htm">font-size</a><br>
+    <a href="fontfamily.htm">font-family</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">normal</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/fonts.html#font-styling">CSS2: Sect 15.2.3</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property selects a normal, condensed or extended font to be used
+        from the current font-family. It appears to be intended to control the
+        condensation/expansion of the font in the horizontal (x-direction) only.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">narrower</b> | <b class="subheading">wider</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Calculated</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values select the next higher or lower value (if available) on the
+        'font-stretch' scale indicated below relative to the value inherited from
+        the parent.</dd>
+
+<dt><b class="subheading">ultra-condensed</b> | <b class="subheading">extra-condensed</b> |
+    <b class="subheading">condensed</b> | <b class="subheading">semi-condensed</b><br>
+    <b class="subheading">normal</b><br> <b class="subheading">semi-expanded</b> |
+    <b class="subheading">expanded</b> | <b class="subheading">extra-expanded</b> |
+    <b class="subheading">ultra-expanded</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        These values indicate a scale of condensation or expansion of the current
+        font-family. 'Ultra-condensed' is the narrowest value and 'ultra-expanded'
+        is the widest value.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">em</b> {
+        <span class="property">font-stretch:</span> extra-expanded }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">em</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">font-stretch:</span>
+        extra-expanded&quot;&gt;text&lt;/<b class="tagname">em</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>This property has been removed in CSS2.1.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>About Scrollbar Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">About Scrollbar Properties</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">Positioning Properties</b></big>
+    <dd><a href="scrollbar/scrollbarfc.htm">scrollbar-face-color</a> |
+        <a href="scrollbar/scrollbarac.htm">scrollbar-arrow-color</a> |
+        <a href="scrollbar/scrollbarbc.htm">scrollbar-base-color</a><br>
+        <a href="scrollbar/scrollbarsc.htm">scrollbar-shadow-color</a>
+        <a href="scrollbar/scrollbardsc.htm">scrollbar-darkshadow-color</a><br>
+        <a href="scrollbar/scrollbarhc.htm">scrollbar-highlight-color</a> |
+        <a href="scrollbar/scrollbar3dlc.htm">scrollbar-3dlight-color</a> |
+        <a href="scrollbar/scrollbartc.htm">scrollbar-track-color</a>
+</dl>
+
+<br>
+<dl>
+<dt><big><b class="mainheading">What Do They Do?</b></big>
+    <dd>Scrollbars are an essential part of the continuous visual media
+        user experience. Continuous rendering allows content to be rendered
+        within a "virtual viewport" - allowing only a portion of the actual
+        content to be revealed at any given time. The scrollbar widget controls
+        allow this viewport to be moved around the entire document contents.
+        <br><br>
+
+        Scrollbar widgets usually consist of a set of directional arrows at
+        either end of the scrollbar, a scrollbar slider object, and a "tray"
+        or "track" area that the slider object can move through. The arrows
+        allow the viewport to be moved in the direction indicated by the
+        arrow, either by a pointing device such as a mouse, or possibly through
+        the use of keyboard directional controls (arrows, PGUP/PGDN.) The
+        scrollbar slider widget, however, is generally only directly
+        controllable using a pointing device.
+        <br><br>
+
+        The slider element itself and the "tray" or "track" that it resides in
+        also serve another purpose. They represent a visual analogue for the
+        visual area represented by the viewport compared to the actual size
+        of the document being rendered. The length of the scrollbar tray will
+        always be a static size (eg: the vertical or horizontal size of the
+        viewport), but the length of the scrollbar slider in the tray is a direct 
+        ratio of the viewport length relative to the overall document length.
+        <br><br>
+
+        Hopefully, that previous description was not <em>TOO</em> confusing...
+        perhaps the best way to illustrate the components of a scrollbar is
+        through illustrations.
+</dl>
+
+<a name="diagram"></a>
+<dl>
+<dt><big><b class="mainheading">Diagram: The Components of a Scrollbar</b></big>
+    <dd><br>
+        <table border=3 cellpadding=0 cellspacing=0>
+        <tr><th><img src="../../images/scrollbar-pieces.jpg" width=437 height=195
+             alt="a color-coded legend of the components of a scrollbar"></th></tr>
+        </table>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Diagrams: The Scrollbar Properties</b></big>
+<dt>The best way to illustrate which parts of the scrollbar each scrollbar
+    property affects is to show examples. The following images show in dark red
+    the effect that each scrollbar property will have on a scrollbar. Note that
+    the scrollbar is blown up to larger than its default size. 
+
+<dt><br><b class="subheading">Default Scrollbar Appearance</b> (on my system)
+    <dd><img src="../../images/scrollbar-default.gif" width="410" height="55"
+        alt="no scrollbar CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Face-Color</b>
+    <dd><img src="../../images/scrollbar-face-color.gif" width="410" height="55"
+        alt="scrollbar-face-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Arrow-Color</b>
+    <dd><img src="../../images/scrollbar-arrow-color.gif" width="410" height="55"
+        alt="scrollbar-arrow-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Base-Color</b>
+    <dd><img src="../../images/scrollbar-base-color.gif" width="410" height="55"
+        alt="scrollbar-base-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Shadow-Color</b>
+    <dd><img src="../../images/scrollbar-shadow-color.gif" width="410" height="55"
+        alt="scrollbar-shadow-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Darkshadow-Color</b>
+    <dd><img src="../../images/scrollbar-ds-color.gif" width="410" height="55"
+        alt="scrollbar-darkshadow-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Highlight-Color</b>
+    <dd><img src="../../images/scrollbar-highlight-color.gif" width="410" height="55"
+        alt="scrollbar-highlight-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-3Dlight-Color</b>
+    <dd><img src="../../images/scrollbar-3dl-color.gif" width="410" height="55"
+        alt="scrollbar-3dlight-color CSS applied">
+
+<dt><br><b class="subheading">Scrollbar-Track-Color</b>
+    <dd><img src="../../images/scrollbar-track-color.gif" width="410" height="55"
+        alt="scrollbar-track-color CSS applied">
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Browser Reference: Microsoft MSDN</b>
+    <dd>'<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarFaceColor.asp">scrollbar-face-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarArrowColor.asp">scrollbar-arrow-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarBaseColor.asp">scrollbar-base-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarShadowColor.asp">scrollbar-shadow-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarDarkShadowColor.asp">scrollbar-darkshadow-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarHighlightColor.asp">scrollbar-highlight-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbar3dLightColor.asp">scrollbar-3dlight-color</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollbarTrackColor.asp">scrollbar-track-color</a>'<br>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

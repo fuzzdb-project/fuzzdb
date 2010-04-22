@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>@Charset - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">@charset</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE5.5</i></b>|<b class="s">N6</b>|<b class="s">O??</b>]<br></td>
+    <td align=center><b class="alert">Other<br>At-Rules</b><br></td>
+</tr>
+<tr>
+    <td><a href="import.htm">@import</a><br>
+    <a href="media.htm">@media</a><br>
+    <a href="namespace.htm">@namespace</a><br>
+    <a href="page.htm">@page</a><br>
+    <a href="fontdef.htm">@fontdef</a><br>
+    <a href="fontface.htm">@font-face</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+   <a href="../../propindex/font.htm">Property Index</a> |
+   <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+   <a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>When a stylesheet is embedded in a document, its character set encoding is
+        the same as the document it resides in. If the style sheet is external to
+        the document, it is assumed to be encoded using Unicode unless otherwise
+        specified. This At-Rule syntax allows an author to specify the character
+        set encoding of the style sheet; it should only be used on external style sheets.
+        <br><br>
+
+        The @charset At-Rule is allowed to occur only once in an external style
+        sheet and it must be the very first statement in the style sheet. This
+        At-Rule supersedes any encoding declarations specified in the document
+        that reference the style sheet, but should be over-ridden in the event
+        that HTTP character set headers ('charset' component of the 'content-type'
+        syntax) have been specified.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+    <dd>Syntax1: @<b class="selector">charset</b> "[<span class="alert2">encoding</span>]";
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Examples</b></big>
+    <dd><div class="example">@<b class="selector">charset</b> "<span class="atrule">Shift-JIS</span>";</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>LINK: Browser Peculiarities: Multiple LINK element blocks</title>
+<style>
+.assert { color: green }
+</style>
+<link rel="stylesheet" href="../../../objects/css/mediaall.css">
+<link rel="stylesheet" href="../../../objects/css/mediascreen.css">
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE 3.0 only allowed for a single LINK or STYLE block. 
+Only the last one specified in the document is used. 
+IE 4.0 and above, Netscape and Opera merge/cascade multiple STYLE elements.</div>
+<br>
+
+<b>Simple DIV element with id="test1". First external CSS specifies "color: green" for this element.</b>
+<hr>
+filler text 
+<div id="test1">This is a div</div>
+filler text
+<hr>
+<br>
+
+<b>Simple DIV element with id="test2". Second external CSS specifies "color: green" for this element.</b>
+<hr>
+filler text 
+<div id="test2">This is a div</div>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

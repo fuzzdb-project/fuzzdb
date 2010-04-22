@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Classes: First, Left, Right - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td align=center><h1 class="pagetitle">Pseudo-classes:<br>first, left, right</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] [<b class="s">O??</b>]<br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Context: </b><br></th>
+    <td><a href="../atrules/page.htm">@Page</a> At-Rule (Page Box)</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>These Pseudo-classes only apply with the <a href="../atrules/page.htm">@Page</a>
+        rule used to define styles for Page Boxes. All printed pages will automatically
+        be classified as either a :left or :right Pseudo-class. The first printed page
+        of a document is addressable via the :first Pseudo-class.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: @<b class="selector">page</b> <span class="atrule">:left</span>
+        { <span class="property">margin:</span> 4cm }</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>:left/:right has higher precedence than no Pseudo-class at all.
+        @Page At-Rule style rules applied using :left or :right Pseudo-classes
+        should override similar @Page style rules that do not have these
+        Pseudo-classes applied.
+    <li>:first has higher precedence than :left or :right @Page At-Rule style
+        rules applied using the :first Pseudo-class should override similar
+        @Page style rules applied using :left or :right.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

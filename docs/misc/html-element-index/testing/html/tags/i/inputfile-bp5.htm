@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=File: Browser Peculiarities: Submitting data when DISABLED</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 5/6: Using the DISABLED attribute still sends the name/value 
+pair for the element to the form processing script. It should not do this.</div>
+<br>
+
+<b>Submitting plain Input Type=File field. Click submit to see results [both fields should successfully submit]:</b>
+<hr>
+filler text 
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+File: <input type="file" name="file1" value="filevalue1"><br>
+File: <input type="file" name="file2" value="filevalue2"><br>
+<input type="submit">
+</form>
+filler text
+<hr>
+<br>
+
+<b>Submitting form with first Input Type=Text field disabled. Click submit to see results 
+[form submission should be successful, but only the second text field should submit]:</b>
+<hr>
+filler text 
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+File: <input type="file" disabled name="file1" value="filevalue1"><br>
+File: <input type="file" name="file2" value="filevalue2"><br>
+<input type="submit">
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+   <title>Preview/Change Site Stylesheet</title>
+   <link rel="stylesheet" type="text/css" href="ss/2.css" id="thecss">
+
+<script type="text/javascript" src="scripts/csschange.js"></script>
+<script type="text/javascript">
+var styleSheets = new Array("None", "Black/Circusy", "Modern", "Newspaper", "Forest");
+
+function fetchSS()
+// This reads the current ss settings on document load
+{
+var currCssFile = document.getElementById("thecss").href;
+var startPoint  = currCssFile.lastIndexOf("/");
+currCssFile = currCssFile.substring(startPoint+1, startPoint+2);
+
+if (document.getElementById) // Only do if browser supports getElementById. Look for cookie
+   {
+    var ssNum; 
+    ssNum = getSS(); // read ss num
+    if (ssNum != 2)  // its not the default, so we should change it 
+       {
+        changeSS(ssNum); // set ss for the doc
+        updateDisplay(ssNum);
+       }
+    else
+       { document.selector.current.value = styleSheets[currCssFile]; }
+   }
+}
+
+function getSS()  
+// This reads the cookie settings. Returns the SS# and the pathname
+{
+var retVal = 2;              // default stylesheet
+var ssArray = new Array;
+var allCookies = document.cookie;
+
+if (allCookies != "")       // found a cookie
+   {
+    var beginPos = allCookies.indexOf("ss=");
+    if (beginPos != -1)
+       { retVal = allCookies.substring(beginPos+3, beginPos+4); }
+   }
+return retVal;
+}
+
+function setSS(num) 
+// This accepts a stylesheet number, changes the current SS and sets the SS cookie
+{
+var path = location.href.substring(0, location.href.indexOf("setcss.htm"));
+
+changeSS(num);
+document.cookie = "ss=foo; expires=Fri, 02-Jan-1970 00:00:00 GMT";
+var Exp = new Date();
+Exp.setFullYear(Exp.getFullYear() + 5);
+cookie = "ss=" + num + "; expires=" + Exp.toGMTString();
+document.cookie = cookie;
+}
+
+function changeSS(num)
+{ 
+theFile = "ss/" + num + ".css";
+document.getElementById("thecss").href = theFile; 
+}
+
+function updateDisplay(num)
+{
+var theForm = document.selector;
+theForm.current.value = styleSheets[num];
+theForm.cssname.selectedIndex = num;
+}
+
+function browserSniff()
+// Old function for the days when this feature was IE-only. Still useful for telling if IE can do this
+{
+var maker   = navigator.appVersion.indexOf("MSIE");
+var flag    = false;
+
+if (maker  != -1)
+   { var version = parseInt(navigator.appVersion.substring(maker+5,maker+6));
+     if (version >= 4) // correct browser. Look for cookie
+        { flag = true; }
+     else { flag = false; }
+   }
+else { flag = false; }
+
+return flag;
+}
+</script>
+</head>
+
+<body onload="fetchSS()">
+
+<h1 align="center"><span class="pagetitle">Preview/Change Site Stylesheet</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html/Css</span> by 
+<a href="misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=left>Index DOT Html: <font size=2>
+     <a href="html/index.html">Main Index</a> | <a href="html/tree/htmltree.htm">Element Tree</a> |
+     <a href="html/tagindex/a.htm">Element Index</a> | <a href="html/supportkey/a.htm">HTML Support
+     History</a></font><br>
+     Index DOT Css: <font size=2><a href="css/index.html">Main Index</a> |
+     <a href="css/propindex/font.htm">Property Index</a> |
+     <a href="css/supportkey/syntax.htm">CSS Support History</a> |
+     <a href="history/browsers.htm">Browser History</a></font></td>
+</tr>
+</table>
+</center>
+
+
+<form name="selector">
+<dl>
+<dt><big><b class="mainheading">Using An Alternate Stylesheet For The Site</b></big>
+<dt>For users of IE4+ and Netscape 6+ browsers (hopefully soon Opera as well), you 
+    can select one of several stylesheets to use for the entire site by choosing 
+    from the list below. You can preview the style sheet's effect beforehand by 
+    selecting the "Preview" button. The "Save Settings" button will finalize your 
+    style sheet settings for the site by saving the information in a browser cookie. 
+    Once you save your settings, the browser will then use the stylesheet elsewhere on the site.
+
+     <dd><table border=1 cellspacing="0" cellpadding="5">
+         <tr><th><b class="alert">Current Style Sheet Used:</b></th>
+             <th><b class="alert">Select a Style Sheet:</b></th>
+         </tr>
+         <tr><th valign=top><input type="text" name=current readonly><br></th>
+             <th valign=bottom><select name="cssname">
+             <option value="None">None
+             <option value="Black/Circusy">Black/Circusy
+             <option value="Modern">Modern
+             <option value="Newspaper">Newspaper
+             <option value="Forest">Forest
+             </select>&nbsp;<input type="button" name="preview" value="Preview"
+             onclick="if (browserSniff() || document.getElementById) {changeSS(document.selector.cssname.selectedIndex);
+             updateDisplay(document.selector.cssname.selectedIndex);}">&nbsp;<input
+             type="button" name="change" value="Save Settings"
+             onclick="if (browserSniff() || document.getElementById) {setSS(document.selector.cssname.selectedIndex);
+             updateDisplay(document.selector.cssname.selectedIndex);}"></th>
+</tr>
+</table>
+</dl>
+</form>
+
+<big><b class="mainheading">Sample CSS Styles:</b></big>
+<hr size=10><br>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td><h1 class="pagetitle">Sample Page Header</h1>
+    <b class="alert">Alert:</b> <span class="magicword">Special Value</span><br>
+    <b><a href="index.html">Support Key:</a></b> 
+    [<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#null">In-Page Link 1</a><br>
+         <a href="#null">In-Page Link 2</a><br>
+         <a href="#null">In-Page Link 3</a>
+     </td>
+     <td><a href="#null">In-Page Link 4</a><br>
+         <a href="#null">In-Page Link 5</a><br>
+         <a href="#null">In-Page Link 6</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by 
+<a href="misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+<a href="index.html">Main Index</a> |
+<a href="index.html">Element Tree</a> |
+<a href="index.html">Element Index</a> |
+<a href="index.html">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%" size=1>
+
+<br>
+<dl>
+<dt><big><b class="mainheading">Main Heading</b></big>
+    <dd>Regular text is here. This is <b class="alert">Alert content</b>
+       This is <b class="alert2">secondary Alert content</b>. For those who like
+       hyperlinks, this is what <a href="index.html">Hyperlink text</a> looks like.
+       If you need a very special message, it is marked up as a 
+       <b class="magicword">Magic Word</b>.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Main Heading Again</b></big>
+<dt><b class="subheading">Sub-heading</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>]
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<span class="ns">O</span>]
+    <dd><b class="l3heading">Level 3 Item heading:</b><br>
+        This is the description of the level 3 heading.
+</dl>
+
+<a name="null"></a>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">tagname</b>
+        <span class="tagattrib">ATTRIBUTE1</span>=Value1
+        <span class="tagattrib">ATTRIBUTE2</span>=&quot;Value2&quot;<br>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">css-property:</span>
+        property-value&quot;&gt;Element content is here.
+        &lt;/<b class="tagname">tagname</b>&gt;</div>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Support Key</b></big>
+<dd>
+<table cellpadding=4>
+<tr><td colspan=14><hr size=1></td></tr>
+<tr><td colspan=2></td><th colspan=4 class=field><u class=colheaders>HTML</u></th>
+    <td></td>
+    <th colspan=2 class=field><u class=colheaders>XHTML</u></th>
+    <td></td>
+    <th colspan=4 class=field><u class=colheaders>Browsers</u></th></tr>
+<tr>
+    <th valign="bottom"><span class="taghead">Tag</span></th>
+    <th valign="bottom"><span class="attribhead">Attribute</span></th>
+    <th valign="bottom"><span class="supporthead">2.0</span></th>
+    <th valign="bottom"><span class="supporthead">3.0</span></th>
+    <th valign="bottom"><span class="supporthead">3.2</span></th>
+    <th valign="bottom"><span class="supporthead">4.0</span></th>
+    <td>&#160;</td>
+    <th valign="bottom"><span class="supporthead">1.0</span></th>
+    <th valign="bottom"><span class="supporthead">1.1</span></th>
+    <td>&#160;</td>
+    <th valign="bottom"><span class="supporthead">IExplorer</span></th>
+    <th valign="bottom"><span class="supporthead">Mosaic</span></th>
+    <th valign="bottom"><span class="supporthead">Netscape</span></th>
+    <th valign="bottom"><span class="supporthead">Opera</span></th>
+</tr>
+<tr><td colspan=14><hr size=7></td></tr>
+<tr>
+    <td colspan=2 align=left><a href="index.html">Element</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="s">1.0</b></td><td class=gc2><i class="fs">1.0</i></td>
+    <td class=gc2><b class="s">1.0</b></td><td class=gc2><b class="s">2.1</b><br></td>
+</tr>
+<tr>
+    <td></td><td class=gc1>Attribute</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0B1</i></td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--<br></td>
+</tr>
+<tr><td colspan=14><hr size=1></td></tr>
+</table>
+</dl>
+
+</body>
+</html>

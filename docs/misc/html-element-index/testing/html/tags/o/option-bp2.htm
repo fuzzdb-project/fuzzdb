@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>OPTION: Browser Peculiarities: Applying CSS</title>
+<style>
+.assert { color: green }
+.test
+        { 
+         color: green; background-color: #9999ff; text-decoration: underline; text-transform: uppercase; 
+         font-size: 20px; cursor: ne-resize; border: medium solid orange; letter-spacing: 5px; font-style: italic;  
+         margin-top: 50px; padding-top: 50px; 
+        }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">In Internet Explorer 4.0/5.0, only the CSS 'color' and 'background-color' 
+properties apply to the OPTION element (and the 'background-color' component of the 
+'background' shorthand.) All other CSS properties for this element seem to be ignored.
+CSS properties set for individual OPTION elements override properties set for the SELECT element.
+<br><br>
+
+Where CSS is applied below, the following rule sets apply:<br>
+         color: green; background-color: #9999ff; text-decoration: underline; text-transform: uppercase; 
+         font-size: 20px; cursor: ne-resize; border: medium solid orange; letter-spacing: 5px; font-style: italic;  
+         margin-top: 50px; padding-top: 50px; 
+</div>
+<br><br>
+
+<form>
+<b>Plain SELECT list with OPTION elements. No CSS applied:</b>
+<hr>
+filler text<br>
+<select>
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected>optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Plain SELECT list with OPTION elements. CSS applied to second OPTION:</b>
+<hr>
+filler text<br>
+<select>
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected class="test">optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>SELECT MULTIPLE list (size=5) with OPTION elements. CSS applied to second OPTION:</b>
+<hr>
+filler text<br>
+<select multiple size="3">
+<option value="optionvalue1">optiontext1</option>
+<option value="optionvalue2" selected class="test">optiontext2</option>
+<option value="optionvalue3">optiontext3</option>
+</select>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

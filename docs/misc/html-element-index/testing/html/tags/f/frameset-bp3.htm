@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FRAMESET: Browser peculiarity - FRAMESPACING and NORESIZE in child frames</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Internet Explorer: If the FRAMESPACING attribute is given a 
+value of zero, it effectively sets the NORESIZE attribute of the sub-frames as well. 
+It almost seems as if IE frames need a positive FRAMESPACING value for the user 
+to "grab on to" or move.</div>
+<br>
+
+<hr>
+<a href="frametest14.htm">Frameset definition: 2 columns, frameset has no FRAMESPACING attribute</a>
+<hr>
+<br>
+
+<hr>
+<a href="frametest15.htm">Frameset definition: 2 columns, frameset has FRAMESPACING=0</a>
+<hr>
+<br>
+
+<hr>
+<a href="frametest16.htm">Frameset definition: 2 columns, frameset has FRAMESPACING=5</a>
+<hr>
+<br>
+
+</body>
+</html>

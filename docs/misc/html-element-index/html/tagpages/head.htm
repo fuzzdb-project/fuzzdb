@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>More about HEAD elements in HTML</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">About HEAD elements in HTML...</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#justify">Justification</a> |
+     <a href="#usage">HEAD Element Usage</a></td>
+</tr>
+<tr>
+     <td valign=top align=center><big><a href="#related">Related Sites</a></big></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+
+<a name="justify"></a>
+<dl>
+<dt><big><b class="mainheading">Justification for HEAD elements</b></big>
+    <dd>The Head section is really a catch-all area for information that is
+        <em>related</em> to the document but is not actually viewable content.
+        This section also contains information <em>ABOUT</em> the document which is used
+        to help display or process the document's contents. Historically, the head
+        element of a document was usually a small section. This has changed
+        considerably in the last couple of years as the level and capability of
+        HTML document interaction has greatly increased (with the advent of style
+        sheets, web scripting, and intelligent search engine cataloging.)
+</dl>
+<br>
+
+<a name="usage"></a>
+<dl>
+<dt><big><b class="mainheading">HEAD Element Usage</b></big>
+<dt><b class="subheading">Document Base</b>
+<dt>[&lt;<a href="b/base.htm">base</a>&gt;]
+    <dd>This establishes common defaults to be used when referencing relative file
+        path names out of context or for establishing a common destination for
+        framed document navigation scenarios. For frames, all TARGETs will default
+        to the frame name specified by the TARGET attribute unless overridden
+        locally. For file paths, the Base can be used as an absolute reference
+        that is used to resolve relative or fragmented path names (Absolute file 
+        paths do not use it.)
+
+<dt><b class="subheading">Searchable Index</b>
+<dt>[&lt;<a href="i/isindex.htm">isindex</a>&gt;]
+    <dd>This is a legacy feature from the period before HTML 2.0 and forms
+        capability. It allows a simple text string to be submitted to a processing
+        engine for evaluation. It has none of the variety and finesse that is
+        capable through current HTML forms.
+
+<dt><b class="subheading">Link Relationship</b>
+<dt>[&lt;<a href="l/link.htm">link</a>&gt;]
+    <dd>This element establishes relationships between the current document
+        and some other object. A document may have any number of LINK elements
+        which can indicate authorship, related indices and glossaries, older or
+        more recent versions, document hierarchy, associated resources such as
+        style sheets, etc.
+
+<dt><b class="subheading">Document Meta-information</b>
+<dt>[&lt;<a href="m/meta.htm">meta</a>&gt;]
+    <dd>These elements can contain a wide variety of information that may or may 
+        not be relevant to a browser. This element is an extensible mechanism to 
+        allow associated name/value pairs. This allows an author to include specialized 
+        information that does not fit in any other HEAD element situation.
+
+<dt><b class="subheading">NextID</b>
+<dt>[&lt;<a href="n/nextid.htm">nextid</a>&gt;]
+    <dd>Listed strictly for completeness with the HTML 2.0 specification,
+        this element has disappeared from later HTML specifications altogether and
+        is not used by browsers.
+
+<dt><b class="subheading">Web Page Scripting</b>
+<dt>[&lt;<a href="s/script.htm">script</a>&gt;]
+    <dd>This element allows a scripting language to interface with an HTML
+        document. It is generally safer to place a SCRIPT statement in the HEAD
+        area (although it is allowed both in the HEAD and BODY elements), because
+        script statements are evaluated when the document is loaded (remember that
+        the HEAD element comes before the BODY element.) See the
+        <a href="embed.htm#related">Related Links</a> section on Scripting for
+        other sites on this subject.
+
+<dt><b class="subheading">Style Sheets</b>
+<dt>[&lt;<a href="s/style.htm">style</a>&gt;]
+    <dd>This element allows style information to be listed as a block
+        (<a href="http://www.blooberry.com/indexdot/css/syntax/inclusion/embedded.htm">Embedded
+        Style Sheets</a>) <span class="external">[--&gt;Index DOT Css]</span> instead
+        of listing the information in an external document or on a element-by-element 
+        basis. Style information is embedded in an HTML comment within the STYLE 
+        element as a series of Selector/Style Declaration pairs. The browser uses 
+        these statements to help in rendering the document. See
+        <a href="http://www.blooberry.com/indexdot/css/" class="relevant">Index DOT
+        Css</a> for more information on Style Sheets.
+
+<dt><b class="subheading">Document Title</b>
+<dt>[&lt;<a href="t/title.htm">title</a>&gt;]
+    <dd>This contains the title of the document. It is the only HEAD element of a 
+        document that is <em>REQUIRED</em> under the specifications. This title 
+        serves to identify the document when it is accessed - whether it be by a 
+        human, a search engine or some other means. It is often displayed as the 
+        caption for a document's display window when viewing.
+</dl>
+<br>
+
+<a name="related"></a>
+<br>
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official References</b>
+<dt><a href="http://www.rfc-editor.org/rfc/rfc1866.txt" class="relevant">http://www.rfc-editor.org/rfc/rfc1866.txt</a>
+    <dd><span class="relevant">RFC 1866: The HTML 2.0 specification (plain text)</span>
+<dt><a href="http://www.w3.org/MarkUp/html-spec/" class="relevant">http://www.w3.org/MarkUp/html-spec</a>
+    <dd><span class="relevant">The web version of the HTML 2.0 (RFC 1866) specification</span>
+<dt><a href="http://www.w3.org/MarkUp/Wilbur/" class="relevant">http://www.w3.org/MarkUp/Wilbur/</a>
+    <dd><span class="relevant">The HTML 3.2 (Wilbur) recommendation<br>
+        [Includes all HTML 2 HEAD elements and place holders for STYLE and SCRIPT]</span>
+<dt><a href="http://www.w3.org/TR/REC-html40/" class="relevant">http://www.w3.org/TR/REC-html40/</a>
+    <dd><span class="relevant">The HTML 4.0 Recommendation<br>
+        [Includes all 2.0, and 3.2 elements plus many new features]</span>
+<dt><a href="http://www.w3.org/TR/REC-CSS1.html" class="relevant">http://www.w3.org/TR/REC-CSS1.html</a>
+    <dd><span class="relevant">Cascading Style Sheets, Level 1 specification recommendation<br>
+        [<b class="l3heading">STYLE:</b> Usage of the STYLE element]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/html_extensions.html" class="relevant">http://wp.netscape.com/assist/net_sites/html_extensions.html</a>
+    <dd><span class="relevant">Netscape Extensions to HTML 2.0<br>
+        [<b class="l3heading">ISINDEX:</b> Details additional attributes to the ISINDEX element]</span>
+<dt><a href="http://wp.netscape.com/assist/net_sites/pushpull.html" class="relevant">http://wp.netscape.com/assist/net_sites/pushpull.html</a>
+    <dd><span class="relevant">Netscape Dynamic Documents<br>
+        [<b class="l3heading">META:</b> Details the use of Client-Pull with the META element]</span>
+<dt><a href="http://msdn.microsoft.com/workshop/author/html/reference/elements.asp" class="relevant">http://msdn.microsoft.com/workshop/author/html/reference/elements.asp</a>
+    <dd><span class="relevant">Internet Explorer Tag reference<br>
+        [Details HTML 2.0, and 3.2 elements. Also describes SCRIPT and STYLE usage]</span>
+<br><br>
+
+<dt><b class="subheading">Tutorials</b>
+<dt><a href="http://www.wdvl.com/Authoring/HTML/Head/" class="relevant">http://www.wdvl.com/Authoring/HTML/Head/</a>
+    <dd><span class="relevant">WWWDVL section on head elements</span>
+<dt><a href="http://www.wdvl.com/Search/Meta/Tag.html" class="relevant">http://www.wdvl.com/Search/Meta/Tag.html</a>
+    <dd><span class="relevant"><b class="l3heading">Meta:</b> The Web Developer's Virtual Library- &quot;META Tagging for Search Engines&quot;</span>
+<dt><a href="http://wdvl.com/Authoring/HTML/Head/Meta/" class="relevant">http://wdvl.com/Authoring/HTML/Head/Meta/</a>
+    <dd><span class="relevant"><b class="l3heading">Meta:</b> The Web Developer's Virtual Library META element page</span>
+<dt><a href="http://vancouver-webpages.com/META/mk-metas.html" class="relevant">http://vancouver-webpages.com/META/mk-metas.html</a>
+    <dd><span class="relevant"><b class="l3heading">Meta:</b> Form-based creation of META tags for your pages</span>
+<dt><a href="http://www.blooberry.com/indexdot/css/index.html" class="relevant">http://www.blooberry.com/indexdot/css/index.html</a>
+    <dd><span class="relevant"><b class="l3heading">Style:</b> Index DOT Css - the other big part of this site</span>
+</dl>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

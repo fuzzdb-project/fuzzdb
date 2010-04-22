@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+     <title>How to change the Style Sheet files for the site</title>
+     <link rel="stylesheet" type="text/css" href="../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align=center><span class="pagetitle">Customize the Appearance of the Site</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html/Css</span> by 
+<a href="../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+     <tr>
+     <td align=left>Index DOT Html: <font size=2>
+     <a href="../html/index.html">Main Index</a> |
+     <a href="../html/tree/htmltree.htm">Element Tree</a> |
+     <a href="../html/tagindex/a.htm">Element Index</a> |
+     <a href="../html/supportkey/a.htm">HTML Support History</a></font><br>
+     Index DOT Css: <font size=2><a href="../css/index.html">Main Index</a> |
+     <a href="../css/propindex/font.htm">Property Index</a> |
+     <a href="../css/supportkey/syntax.htm">CSS Support History</a> |
+     <a href="../history/browsers.htm">Browser History</a></font></td>
+     </tr>
+</table>
+</center>
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">Why Did I Change To CSS?</b></big>
+     <dd>To be honest, it was partly an experiment, but there was a very good
+         secondary reason. This site began its life as a much smaller
+         resource in an intranet environment. At that time, I could guarantee
+         what browser the readers would have, so some of the design decisions
+         I made were limiting. I chose the color scheme that I did after some
+         playing around, never thinking it would be permanent. If I had it all
+         to do over again, I would have made the site much more adaptable. The
+         amount of work required to make it adaptable now is prohibitive due
+         to the size.
+         <br><br>
+         So, of course, I did it. =)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">What I Did And Why</b></big>
+  <dd>I have converted all files on the site to use Cascading Style Sheets. To
+      do this, I have created situation specific, CLASS-based markup on a
+      foundation of simple formatting. This should help ensure that the
+      site looks good on most any delivery platform. This extensive use
+      of the CLASS structure to classify information is not highly
+      recommended for use in HTML, but for complex informational webs
+      like this, it is <em>THE</em> best solution to conquering the
+      complexity beast in this language.
+      <br><br>
+         Using CSS allows several major capabilities that are unignorable:
+      <ul type=disc>
+      <li><b class="alert">I can change the appearance of the entire site very quickly by
+          changing only a few files.</b> I have wanted to change the scheme of the
+          site since I first created it, but the effort was too large to take on. I
+          don't have to worry about that any more.
+      <li><b class="alert">Anyone downloading the site can also change the site appearance
+          to whatever they wish.</b> No explanation of this benefit needed!
+      <li><b class="alert">Whole site becomes more accessible and adaptable.</b>
+          The simple formatting currently used should degrade well
+          on all browsers (testing that theory may take some time...) I have
+          included two CSS files that control the appearance for monitor based
+          viewing, but it should be fairly easy to add CSS pages/rules that would
+          accommodate ACSS (speech styling) or CSS printing properties for a
+          browser that supports them.
+         </ul>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">How To Change the CSS Files</b></big>
+     <dd>Currently, the CSS rules used will make the site appear as it
+         always has. There is only one CSS file (<b class="alert">general.css</b>)
+         that is used to control the appearance of all the files in the Index
+         DOT Css site. This file exists in the '<code class="alert">[SITEROOT]/ss/</code>'
+         directory. Changing the CSS properties and values in this short
+         document will affect the appearance of the entire site.
+     <dd><br>The CSS file itself used to be well documented, but I realized that this
+         needlessly increased the size of the download. So, I recently chopped
+         up the CSS file and moved the explanations <a href="cssexplain.htm">here</a>.
+         I would love to receive any <a href="../misc/email.htm">comments
+         or feedback</a> on this use of CSS.
+</dl>
+<br>
+
+
+<dl>
+<dt><big><b class="mainheading">Details: Bugs I Had To Work Around</b></big>
+<dt><b class="subheading">IE3 Bug</b>
+     <dd>CSS properties specified for the BODY element in an external
+         style sheet (via the LINK element) are NOT applied.<br>
+         Regardless.<br>
+         This is a BAD and far-reaching omission of behavior. It makes it
+         almost impossible to specify global properties for all pages using
+         just a few style sheets like I do here. I could not just let this
+         pass either, because background field color is intrinsically tied
+         to contrast comfort with colors chosen for foregrounds.
+<dt><b class="subheading">Solution</b>
+     <dd>My solution was to apply <em>IN EVERY SINGLE PAGE</em> a document
+         level style sheet specifying the document background color. Netscape
+         4 and Internet Explorer 4 do not have the aforementioned bug, but
+         if you are using IE3, this is a vital issue.
+         <br><br>
+         The tag sequence that is found in EVERY file is as follows:
+<pre class="alert2">
+   &lt;style type=&quot;text/css&quot;&gt;
+   &lt;!--
+   body          { background: #000000 } /* Workaround for _Stupid_ IE3 Bug! */
+   --&gt;
+   &lt;/style&gt;
+</pre>
+
+     <dd>If you wish to change the background color of the site, it would
+         <em>REALLY</em> help if you have a tool that allows global search
+         and replace capability. If you are using Netscape 4 or Internet
+         Explorer 4, you can just delete this section if you wish - This
+         property rule is also controlled in the external CSS files - where
+         they <em>OUGHT</em> to be controlled. If you are using IE3 or just
+         don't wish to delete this in all the pages, an automated tool that can
+         change the BODY element rule above to whatever you wish is vital...
+         <em>OR</em> you can change the several hundred files manually.
+         8-} Good luck.
+
+<dt><br><b class="subheading">Netscape Bug</b>
+     <dd>Netscape 4 has a minor bug which is still a nuisance to deal
+         with. After tables occur in a document, regular text that is
+         not given special CSS formatting will, um... disappear. (at least
+         on a black background because of browser font defaults.)
+<dt><b class="subheading">Solution</b>
+     <dd>I have not investigated this deeply, but I found a workaround.
+         I added a 'text' class name and it is used on all content after
+         tables that cause this bug. It seems to have done the trick.
+         You actually should never have to worry about this problem,
+         but someone may wonder why the 'text' class was necessary. =)
+
+         <br><br>
+         Update: Some people are still reporting this bug on some versions
+         on some platforms and I am at a loss as to why. It does not happen
+         on my system and if I can't reproduce it I can't try to solve
+         the problem.
+</dl>
+
+<br>
+<a href="../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+</body>
+</html>

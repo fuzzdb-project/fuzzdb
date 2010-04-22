@@ -1,0 +1,620 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+     <title>CSS specification/browser support page: General Syntax</title>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align=center><span class="pagetitle">CSS Support History</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=2 cellpadding=3 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+        <a href="../propindex/font.htm">Property Index</a> |
+        <a href="../../history/browsers.htm">Browser History</a> |
+        <a href="../../misc/how2readcss.htm">How to Read These Pages</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</center>
+
+
+<center>
+<table cellpadding=4>
+<tr>
+    <td valign=bottom align=center colspan=11><hr size=1>
+    <span class="unselected">Syntax</span> | <a href="units.htm">Units</a> |
+    <a href="font.htm">Fonts</a> | <a href="text.htm">Text</a> |
+    <a href="colorbg.htm">Colors/Backgrounds</a> | <a href="scrollbar.htm">Scrollbars</a> |
+    <a href="outline.htm">Outlines</a> | <a href="list.htm">Lists</a><br>
+
+    &#160;&#160;&#160;<a href="table.htm">Tables</a> | <a href="classify.htm">Classification</a> |
+    <a href="dimension.htm">Dimensions</a> | <a href="position.htm">Positioning</a> |
+    <a href="margin.htm">Margins</a> | <a href="padding.htm">Padding</a> |
+    <a href="border.htm">Borders</a>&#160;&#160;&#160;<br>
+
+    <a href="dynamic.htm">Dynamic Content</a> | <a href="generate.htm">Generated Content</a> |
+    <a href="international.htm">International</a> | <a href="print.htm">Printing</a> |
+    <a href="aural.htm">Aural</a> | <a href="extensions.htm">Extensions</a>
+    <hr size=1></td>
+</tr>
+<tr><td colspan=2></td>
+    <th colspan=4 class=field><u class=colheaders>CSS</u></th>
+    <td></td>
+    <th colspan=4 class=field><u class=colheaders>Browsers</u></th></tr>
+<tr>
+    <th valign="bottom"><span class="taghead">Syntax</span></th>
+    <th valign="bottom"><span class="attribhead">Specific&nbsp;Syntax</span></th>
+    <th valign="bottom"><span class="supporthead">1.0</span></th>
+    <th valign="bottom"><span class="supporthead">2.0</span></th>
+    <th valign="bottom"><span class="supporthead">2.1</span></th>
+    <th valign="bottom"><span class="supporthead">3.0</span></th>
+    <td>&#160;</td>
+    <th valign="bottom"><span class="supporthead">IE</span></th>
+    <th valign="bottom"><span class="supporthead">Netscape</span></th>
+    <th valign="bottom"><span class="supporthead">Opera</span></th>
+    <th valign="bottom"><span class="supporthead">Safari</span></th>
+</tr>
+<tr><td colspan=11><hr size=7></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Inclusion Methods</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0B2</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/inclusion/external.htm">External Style Sheets</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0B2</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/inclusion/embedded.htm">Embedded Style Sheets</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0B2</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/inclusion/inline.htm">Inline Style Sheets</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0B3</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>@Rules</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><i class="fs">4.0</i></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/charset.htm">@charset</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">5.5</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2>??</td><td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/import.htm">@import</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/media.htm">@media</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/namespace.htm">@namespace</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/page.htm">@page</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="s">5.5</b></td><td class=gc2>--</td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/fontdef.htm">@fontdef</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i><u class="sr">4.0-4.x</u></i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/atrules/fontface.htm">@font-face</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td class=gc2>--</td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Rule Set Syntax</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/selectors.htm#selectgroup">Selector Grouping</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/declaration.htm#decgroup">Declaration Grouping</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/declaration.htm#decshorthand">Declaration Shorthands</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Selectors</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#namespace">Element - Namespace</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#universal">Element - Universal</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">5.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">4.0</b></td><td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#simple">Element - Simple</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#descendent">Element - Descendent</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#child">Element - Child</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">3.5</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/element.htm#adjacent">Element - Adjacent</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2><b class="s">5.0</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#simple">Attribute - Simple</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#value">Attribute - Value</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#begin">Attribute - Begin Value</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#end">Attribute - End Value</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#substring">Attribute - Substring Value</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#many">Attribute - One-Of-Many</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#hyphen">Attribute - Hyphen</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/attribute.htm#namespace">Attribute - Namespace</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/spechtml.htm#class">HTML - Class</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/selectors/spechtml.htm#id">HTML - ID</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Pseudo-Classes</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasslink.htm">:link</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassvisited.htm">:visited</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassactive.htm">:active</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">5.0</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasshover.htm">:hover</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">4.0</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfocus.htm">:focus</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2><b class="s">7.0</b></td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassenabled.htm">:enabled</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassdisabled.htm">:disabled</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasschecked.htm">:checked</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassindeterminate.htm">:indeterminate</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassroot.htm">:root</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassempty.htm">:empty</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>??</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassnot.htm">:not(x)</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasscontains.htm">:contains("x")</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstchild.htm">:first-child</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2><b class="s">7.0</b></td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassnthchild.htm">:nth-child(n)</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassnthlastchild.htm">:nth-last-child(n)</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasslastchild.htm">:last-child</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassonlychild.htm">:only-child</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstnode.htm">:first-node</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasslastnode.htm">:last-node</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstoftype.htm">:first-of-type</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassnthoftype.htm">:nth-of-type(n)</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassnthlastoftype.htm">:nth-last-of-type(n)</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasslastoftype.htm">:last-of-type</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassonlyoftype.htm">:only-of-type</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasslang.htm">:lang(x)</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">7.1</i></td>
+    <td class=gc2><b class="s">7.5</b></td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasstarget.htm">:target</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassviewport.htm">:viewport</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassviewportscroll.htm">:viewport-scroll</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclasscanvas.htm">:canvas</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassscrolledcontent.htm">:scrolled-content</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2>--</td><td></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstlr.htm">:first</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstlr.htm">:left</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pclassfirstlr.htm">:right</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td><td class=gc2>--</td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Pseudo-Elements</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="fs">5.5B1</b></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">3.5</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pelembefore.htm">:before</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pelemafter.htm">:after</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2>--</td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pelemfirstletter.htm">:first-letter</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="fs">5.5B1</b></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">3.5</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pelemfirstline.htm">:first-line</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="fs">5.5B1</b></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><i class="fs">3.5</i></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/pseudo/pelemselection.htm">:selection</a></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td><td></td>
+    <td class=gc2>--</td><td class=gc2>--</td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">1.3</i></td>
+</tr>
+<tr><td colspan=11><hr width="75%" size=1></td></tr>
+<tr>
+    <td colspan=2 class=gc1>Miscellaneous Syntax</td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/misc.htm#character">Unicode Escapes</a></td>
+    <td class=gc2>--</td><td class=gc2><i class="fs">X</i></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><b class="s">6.0</b></td><td class=gc2><i class="fs">6.0</i></td>
+    <td class=gc2><b class="s">6.0</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/misc.htm#comment">Comments</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">3.0</i></td><td class=gc2><b class="s">4.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr>
+    <td></td><td class=gc1><a href="../syntax/misc.htm#important">!important</a></td>
+    <td class=gc2><i class="fs">X</i></td><td class=gc2><b class="s">X</b></td>
+    <td class=gc2><b class="s">X</b></td><td></td>
+    <td class=gc2><i class="fs">4.0</i></td><td class=gc2><b class="s">6.0</b></td>
+    <td class=gc2><b class="s">3.5</b></td><td class=gc2><b class="s">1.0</b></td>
+</tr>
+<tr><td colspan=11><hr size=1></td></tr>
+</table>
+</center>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</body>
+</html>

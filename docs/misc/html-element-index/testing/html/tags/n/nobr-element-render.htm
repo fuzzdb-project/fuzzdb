@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Nobr element rendering test</title>
+<!-- 
+    Element Definition:
+    Nobr: element indicates an inline container element that does not linebreak unless explicitly told to do so
+-->
+<style type="text/css">
+.text   { color: blue }
+</style>
+</head>
+
+<body>
+
+<b><u>Visual Pass Criteria (Expected Rendering):</u></b> <br>
+<b><i>If the test section (repeated "nobr") is inline, looks like the surrounding text, but forces the viewport
+to have a horizontal scrollbar, the test passes</i></b>.
+<br><br>
+
+<span class="text">Test is between the next two ruled lines</span>
+
+<hr>
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+
+<nobr>nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr 
+nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr 
+nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr 
+nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr nobr</nobr>
+
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text 
+filler text filler text filler text filler text filler text filler text</span>
+<hr>
+
+</body>
+</html>

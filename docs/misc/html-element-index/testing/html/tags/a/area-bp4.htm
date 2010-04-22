@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>AREA: Browser Peculiarities: Cut-out shapes</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Creating "cut-out" shapes: If you wish to create a geometric shape, 
+and then have a region inside defined within as NOHREF, the NOHREF region must occur 
+FIRST - If it is placed after, the NOHREF region will still be active. This appears 
+to hold true for the browsers that support CSIM. Internet Explorer 4.0, however, had 
+a bug - "cut-out" shapes did not work at all, whether the NOHREF occurred before OR 
+after the active region.</div>
+<br>
+
+<b>Image map (#imgmap1), with no cut-out shape defined:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemapring.gif" usemap="#imgmap1">
+filler text
+<hr>
+<br>
+
+<b>Image map (#imgmap2), with NOHREF cut-out shape (inner white circle) defined before the yellow circle shape:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemapring.gif" usemap="#imgmap2">
+filler text
+<hr>
+<br>
+
+<b>Image map (#imgmap3), with NOHREF cut-out shape (inner white circle) defined after the yellow circle shape:</b>
+<hr>
+filler text 
+<img src="../../../objects/imagemapring.gif" usemap="#imgmap3">
+filler text
+<hr>
+<br>
+
+<b>Shape destinations on image, no default destination:</b>
+<table cellpadding="3" cellspacing="0" border=2>
+<tr><th align="left"><big>Shape</big></th><th align="left"><big>URL</big></th></tr>
+<tr>
+    <td align="center"><img src="../../../objects/imagemap-yellowlink.gif" height="20" width="20"></td>
+    <td>http://www.blooberry.com/</td>
+</tr>
+</table>
+
+<map name="imgmap1">
+    <area shape="circle" coords="50,50,50" href="http://www.blooberry.com/">
+</map>
+
+<map name="imgmap2">
+    <area shape="circle" coords="50,50,22" nohref>
+    <area shape="circle" coords="50,50,50" href="http://www.blooberry.com/">
+</map>
+
+<map name="imgmap3">
+    <area shape="circle" coords="50,50,50" href="http://www.blooberry.com/">
+    <area shape="circle" coords="50,50,22" nohref>
+</map>
+
+</body>
+</html>

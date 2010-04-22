@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Clip - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">clip</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]<br></td>
+  <td colspan=2 align=center><b class="alert">Other Positioning Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="top.htm">top</a><br>
+    <a href="right.htm">right</a><br>
+    <a href="bottom.htm">bottom</a><br>
+    <a href="left.htm">left</a><br>
+    <a href="vertalign.htm">vertical-align</a><br></td>
+    <td valign=top><a href="overflow.htm">overflow</a><br>
+    <a href="overflowx.htm">overflow-x</a><br>
+    <a href="overflowy.htm">overflow-y</a><br>
+    <a href="textoverflow.htm">text-overflow</a><br>
+    <a href="zindex.htm">z-index</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block and Replaced elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">layer</b>
+        <span class="tagattrib">CLIP</span>=&quot;left,top,right,bottom&quot;&gt;<br> </td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/visufx.html#clipping">CSS2: Sect. 11.1.2</a>,
+        <a href="http://www.w3.org/TR/CSS21/visufx.html#clipping">CSS2.1: Sect 11.1.2</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>A clipping area describes the portions of an element's rendering
+        box that are visible (when an element's 'overflow' property is not
+        set to 'visible'.)
+        <br><br>
+
+        Parent element clipping regions also apply to calculating a current
+        element's clipping area; in cases where multiple clipping regions
+        apply to an element, only the intersection of the multiple regions
+        should be displayed. Be sure to take careful note of the syntax, source
+        origin and what the measurements mean, as they confused me for a long time!
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N7</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b class="s">N6</b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The clipping region is the same size as the element's rendering box.</dd>
+
+<dt><b class="subheading">[shape]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O7</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Only one [shape] syntax is currently understood:<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">rect([top], [right], [bottom], [left])</b><br>
+        
+        This syntax defines a rectangular area where [top] and [bottom] specify offsets 
+        from the rendering box's top border edge. [left] and [right] specify offsets
+        from the rendering box's left border edge (in RtL text, the [left] and [right] 
+        should be offsets from the box's <em>right</em> border edge).
+        <br><br>
+        
+        The [top], [right], [bottom], and [left] values can take a standard
+        [length] unit measurement or 'auto'. Use of the keyword 'auto' in this
+        case indicates that the clipping region for a specific edge will be the
+        same as the corresponding side of the element's normal rendering box.
+        <br><br>
+
+        Values may be space- or comma-separated, although comma-separation is the
+        preferred method. Currently, only a "rect" shape type is defined, but 
+        in the future other clipping shapes may be allowed.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p</b>
+        { <span class="property">overflow:</span> scroll;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">width:</span> 50px;
+        <span class="property">height:</span> 50px;
+        <span class="property">clip:</span> rect(5px, 40px, 40px, 5px) }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">p</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">overflow:</span> scroll;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">width:</span> 50px;
+        <span class="property">height:</span> 50px;
+        <span class="property">clip:</span> rect(5px, 40px, 40px, 5px)&quot;&gt;text<br>content 
+        that will be clipped in a prescribed manner&lt;/<b class="tagname">p</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Before its inclusion in CSS2, this property was first proposed in the W3C
+        Working Draft "Positioning HTML Elements with Cascading Style Sheets" (8/19/97,
+        <a href="http://www.w3.org/TR/WD-positioning">http://www.w3.org/TR/WD-positioning</a>)
+    <li>CSS2 states that the "rect()" syntax for the side-values "specify offsets
+        from the respective sides of the box." This wording is not entirely
+        clear, in that this could be interpreted as meaning measurements are
+        <em>inwards</em> from their respective sides. CSS2.1 clarifies the 
+        definition to the one stated above.
+    <li>CSS2.1 clarifies that commas are the preferred value separation method 
+        for left/right/top/bottom values.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer 4+</b> The 'position' property
+        must be set to "absolute" for this property to have any effect.
+    <li>I have yet to come up with a usable test case for "clip: inherit" to
+        test in NS6...
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

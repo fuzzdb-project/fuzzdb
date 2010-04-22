@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Element Selectors - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Element Selectors</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+    <dd>These Selectors specify a portion of the document tree based
+        upon its context with relation to other elements.
+</dl>
+
+<a name="namespace"></a>
+<dl>
+<dt><big><b class="mainheading">Namespace Selector</b></big>
+<dt>[<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>]
+    <dd><b class="alert">Description:</b>
+    <dd>This syntax allows distinct XML namespaces to be addressed in CSS
+        selectors. This capability will be important as the number of XML
+        dialects on the web increases in the future.
+    <dd><b class="alert">Syntaxes:</b><br>
+        <b>1: Referencing elements in a specific namespace</b><br>
+        &#160;&#160;&#160;&#160;[<span class="alert2">NAMESPACE PREFIX</span>]|[<span class="alert2">ELEMENT NAME</span>]
+        { [<span class="alert2">Declaration Block</span>] }<br>
+        <b>2. Referencing elements in any namespace:</b><br>
+        &#160;&#160;&#160;&#160;*|[<span class="alert2">ELEMENT NAME</span>]
+        { [<span class="alert2">Declaration Block</span>] }<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Or, if no default namespace
+        is declared, it can just be written as:<br>
+        &#160;&#160;&#160;&#160;[<span class="alert2">ELEMENT NAME</span>] { [<span class="alert2">Declaration Block</span>] }<br>
+        <b>3. Referencing elements without any declared namespace:</b><br>
+        &#160;&#160;&#160;&#160;|[<span class="alert2">ELEMENT NAME</span>]
+        { [<span class="alert2">Declaration Block</span>] }<br>
+
+    <dd><b class="alert">Examples:</b>
+    <dd><div class="example"><b>1:</b> <b class="selector">foo|book</b>
+        { <span class="property">color:</span> red }
+        [matches all occurrences of the 'book' element in the 'foo' namespace]<br>
+        <b>2:</b> <b class="selector">*|book</b>
+        { <span class="property">color:</span> red }
+        [matches all occurrences of the 'book' element in any namespace]<br>
+        <b>3:</b> <b class="selector">|book</b>
+        { <span class="property">color:</span> red }
+        [matches all occurrences of the 'book' element with no namespaces declared]</div>
+</dl>
+
+<a name="universal"></a>
+<dl>
+<dt><big><b class="mainheading">The Universal Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">IE5</i></b>|<b class="s">N6</b>|<b class="s">O4</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This is a special type of selector used to match any element.
+         The Universal Selector may be omitted from a Simple Selector
+         if it is not the only component (eg: '*:first-line' is the
+         same as ':first-line'.) This type of selector allows for
+         powerful generalized structure matching in general languages
+         like XML where element names are not necessarily known ahead of
+         time to the style sheet.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">*</span> { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">*[foo]</b>
+         { <span class="property">color:</span> red }
+         [matches all occurrences of the 'foo' attribute in the document]</div>
+</dl>
+
+
+<a name="simple"></a>
+<dl>
+<dt><big><b class="mainheading">Simple Element Selector</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This Selector explicitly specifies the name of an element in
+         the document tree. All occurrences of the element name in the
+         document are matched.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Element Name]</span> { <span class="alert2">[Declaration Block]</span> }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h2</b>
+         { <span class="property">font-size:</span> 2em } <br>
+         [Matches all occurrences of the element named 'h2'. This would also match
+         elements named 'H2" in HTML, but not in XML]</div>
+</dl>
+
+<a name="descendent"></a>
+<dl>
+<dt><big><b class="mainheading">Descendent Selector</b></big>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>Also known as a 'Contextual Selector' in CSS1. This selector allows
+         an element to be matched based upon its ancestry in the document tree.
+         The names of two elements are listed, separated by white-space. The
+         element on the left is the direct or indirect ancestor of the element
+         to the right, via an arbitrary nesting depth.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Element1] S+ [Element2]</span>
+         { <span class="alert2">[Declaration Block]</span> }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h3 em</b>
+         { <span class="property">font-weight:</span> bold }<br>
+         [would match <br>&lt;<b class="tagname">h3</b>&gt;hello &lt;<b
+         class="tagname">em</b>&gt;there&lt;/<b class="tagname">em</b>&gt;&lt;/<b
+         class="tagname">h3</b>&gt;<br>and <br>&lt;<b class="tagname">h3</b>&gt;hello
+         &lt;<b class="tagname">b</b>&gt;&lt;<b class="tagname">em</b>&gt;there&lt;/<b
+         class="tagname">em</b>&gt;&lt;/<b class="tagname">b</b>&gt;&lt;/<b
+         class="tagname">h3</b>&gt;]</div>
+</dl>
+
+<a name="child"></a>
+<dl>
+<dt><big><b class="mainheading">Child Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]
+<dt><b class="alert">Description:</b>
+     <dd>Unlike the generalized Descendent Selector, this Selector
+         only targets elements that have a direct Parent/Child relationship
+         in the document tree. The names of two elements are listed, separated
+         by a "&gt;" symbol (white-space on either side of the "&gt;" is
+         optional.) The element name on the left is the direct parent element
+         of the element to the right.
+<dt><b class="alert">Syntax:</b>
+    <dd><span class="alert2">[Element1] "&gt;" [Element2]</span>
+        { <span class="alert2">[Declaration Block]</span> }
+<dt><b class="alert">Example:</b>
+    <dd><div class="example"><b class="selector">h3 &gt; em</b>
+        { <span class="property">font-weight:</span> bold }<br>
+        [would match <br>&lt;<b class="tagname">h3</b>&gt;hello
+        &lt;<b class="tagname">em</b>&gt;there&lt;/<b class="tagname">em</b>&gt;&lt;/<b
+        class="tagname">h3</b>&gt; <br>but not <br>&lt;<b class="tagname">h3</b>&gt;hello
+        &lt;<b class="tagname">b</b>&gt;&lt;<b class="tagname">em</b>&gt;there&lt;/<b
+        class="tagname">em</b>&gt;&lt;/<b class="tagname">b</b>&gt;&lt;/<b
+        class="tagname">h3</b>&gt;]</div>
+</dl>
+
+<a name="adjacent"></a>
+<dl>
+<dt><big><b class="mainheading">Adjacent Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O5</b>|<b class="s">S1</b>]
+<dt><b class="alert">Description:</b>
+     <dd>This Selector matches two elements who share the same direct parent
+         element in the document tree, AND exist next to each other in the
+         document tree. The names of two elements are listed, separated
+         by a "+" symbol (white-space on either side of the "+" is optional.)
+         Both elements share a common parent, and the element name on the
+         left directly precedes the element to the right in the document tree.
+<dt><b class="alert">Syntax:</b>
+    <dd><span class="alert2">[Element1] "+" [Element2]</span>
+        { <span class="alert2">[Declaration Block]</span> }
+<dt><b class="alert">Example:</b>
+    <dd><div class="example"><b class="selector">b + i</b>
+        { <span class="property">font-weight:</span> bold } <br>
+        [would match <br>&lt;<b class="tagname">h3</b>&gt;&lt;<b class="tagname">b</b>&gt;hello&lt;/<b
+        class="tagname">b</b>&gt; there &lt;<b class="tagname">i</b>&gt;world&lt;/<b
+        class="tagname">i</b>&gt;&lt;/<b class="tagname">h3</b>&gt; <br>but not
+        <br>&lt;<b class="tagname">h3</b>&gt;&lt;<b class="tagname">b</b>&gt;hello&lt;/<b
+        class="tagname">b</b>&gt; &lt;<b class="tagname">tt</b>&gt;there&lt;/<b
+        class="tagname">tt</b>&gt; &lt;<b class="tagname">i</b>&gt;world&lt;/<b
+        class="tagname">i</b>&gt;&lt;/<b class="tagname">h3</b>&gt;]</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x+:</b>
+            <dd>- Applying style rules to explicit Descendent Selectors (CSS1:
+                contextual selectors) to elements with intrinsic sub-structure
+                (like lists and tables) fails (eg: 'UL LI UL' fails to apply
+                to the nested list, but 'ul ul' succeeds.)
+        </dl>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5+:</b>
+            <dd>- If the parent element in a Descendent Selector (CSS1:
+                contextual selector) does not exist, the style rule will still
+                be applied to the child element indicated.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

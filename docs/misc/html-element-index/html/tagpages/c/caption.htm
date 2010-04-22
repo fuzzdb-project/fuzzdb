@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Caption</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Table Caption</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>]
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>HTML: In all 4.x DTDs<br>XHTML: In all 1.0 and 1.1 DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Basic Tables</b>, <b class=alert>Tables</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">table-caption</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Content above or below a table</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_tablemodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The CAPTION element is an optional table component which displays a caption/title 
+        for the table directly above, below or to either side of the table. The CAPTION 
+        element is contained within the <a href="../t/table.htm">TABLE</a> element, but 
+        is used at the same level as the table row element <a href="../t/tr.htm">[TR]</a> is.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns"> 3.2 </span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B2</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE2</b>|<b><i class="fs">M2A8</i></b>|<b class="s">N1.1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0. Dropped in XHTML 1.1 in favor of CSS
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The Align attribute specifies the alignment of the caption relative to the table. 
+        IE also defines extra Align values for horizontal alignment within the Caption.
+    <dd><b class="l3heading">Values:</b><br>
+        <b class="alert">Top</b>, <b class="alert">Bottom</b> - regular attributes<br>
+        <b class="alert">Left</b>, <b class="alert">Center</b>
+        and <b class="alert">Right</b> (extra IE 2.0+ values for horizontal 
+        alignment of data within the table caption.)
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">VAlign</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an Internet Explorer attribute which takes the place of vertical
+        caption positioning relative to the table.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Top</b> | <b class="alert">Bottom</b>
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<dt><b class="alert">[Using the <a href="../tables.htm#simple">Simple Table Model</a>]</b>
+    <dd><div class="example">&lt;<b class="tagname">table</b> <span class="tagattrib">border</span>=&quot;2&quot;
+        <span class="tagattrib">align</span>=&quot;left&quot;
+        <span class="tagattrib">cellpadding</span>=&quot;5&quot;
+        <span class="tagattrib">bordercolor</span>=&quot;#ff0000&quot;
+        <span class="tagattrib">width</span>=&quot;75%&quot;&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">caption</b>
+        <span class="tagattrib">align</span>=&quot;top&quot;&gt;Juggling Capabilities of Waterfront
+        Performers&lt;/<b class="tagname">caption</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Juggler&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Pins&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Bowling Balls&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Flaming Baseballs&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Bob&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Larry&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;7!!!&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;NA&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Julie the Great&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;1&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;20&lt;<b class="tagname">br</b>&gt;(She IS
+        great!)&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b> <span class="tagattrib">colspan</span>=&quot;4&quot;&gt;NOTE:
+        This is only a small sample&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &lt;/<b class="tagname">table</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../t/table.htm">table</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+     <li>The Table model in HTML (even the Simple Table Model) is easily the most 
+         complex markup structure in HTML. If you have general questions about 
+         this structure see the <a href="../tables.htm">Table Overview</a>.
+     <li><b class="alert">Compatibility Tip:</b> To enable Table caption contents to 
+         display well on browsers that do not support tables, it can be helpful
+         to put either an extra space at the end of each table cell, or even better,
+         put a &lt;<b class="tagname">br</b>&gt; element at the end of the
+         table cell in each row or caption. This should cause no display problems for
+         browsers that support tables (as there is an implied line break anyway
+         at the end of every table cell) and should greatly improve readability
+         on older browsers. 
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer changed the intent of the ALIGN attribute in
+        their 2.0 release. They made the ALIGN attribute indicate
+        horizontal alignment of text within the caption (like the ALIGN
+        attribute in TH and TD) rather than the intended use in the
+        specifications to indicate alignment of CAPTION content position
+        relative to the table. The relative-to-table attribute assigned
+        to this duty was a new VALIGN attribute. The reference for the
+        3.0 version of Internet Explorer does not list the VALIGN attribute
+        anymore and it would appear that it only supports the W3C model, but
+        testing indicates that IE still supports the VALIGN attribute syntax as well.
+    <li>The W3C Table model lists two additional attributes to ALIGN:
+        <b class="alert">Right</b> and <b class="alert">Left</b> to allow
+        Captions to be placed to the right or left side of a table.
+        Popular browsers basically do not support this behavior. Interestingly,
+        Opera 4-6.x DID attempt to render these attributes on the right/left 
+        side of a table, but it did so very poorly - often rendering the caption 
+        outside the page window on the left side or over other content on the 
+        right. It retracted support for these values in Opera 7.x.
+    <li><a href="../../../testing/html/tags/c/caption-bp1.htm">[Test]</a>
+        The Tables specification says the CAPTION element should always
+        come at the beginning of a table structure (this is to ensure proper
+        rendering in progressive table display.) I have yet to see a
+        browser misbehave if the CAPTION is placed say, just before the end
+        of a table structure. It seems that as long as CAPTION is used at
+        the same level as a table row hierarchy element, things will
+        render fine.
+    <li>[Tests: <a href="../../../testing/html/tags/c/caption-bp2.htm">1</a>,
+        <a href="../../../testing/html/tags/c/caption-bp3.htm">2</a>]
+        Opera 3.5+: CSS does not directly apply or inherit to this element.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

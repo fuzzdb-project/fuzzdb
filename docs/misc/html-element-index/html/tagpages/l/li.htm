@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Li</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">List Item</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Optional</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>List</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">list-item</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><span class="property"><a href="../../../css/properties/classify/display.htm">display:</a> list-item</span>,
+        <span class="property"><a href="../../../css/properties/list/liststyle.htm">list-style</a></span>,
+        <span class="property"><a href="../../../css/properties/margin/marginleft.htm">margin-left</a></span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>A bullet-type marker for UL/DIR/MENU lists, and an iterative/ordered marker for OL lists.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/lists.html#h-10.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_listmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The List Item (LI) is only used as a sub-element of a list type.
+        DIR, MENU, OL, and UL all use it to mark a component of their structure.
+        The LI element is the only content of these list structures. The closing
+        &lt;/<b class="tagname">li</b>&gt; tag is optional in HTML (required in XHTML), 
+        as it is implied by the subsequent &lt;<b class="tagname">li</b>&gt;
+        or end list tags.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big><br>
+    <b class="magicword"><u>Note:</u></b> These attributes only apply when
+    UL and OL are the parent elements.
+
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE4</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O4</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the horizontal alignment of the content in this block
+        element relative to the browser window.
+    <dd><b class="l3heading">Values:</b>  <b class="alert">Left</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">Center</b>
+        | <b class="alert">Right</b>
+
+<dt><b class="subheading">Clear</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O2.1-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute helps an author in situations with floating objects (images,
+        tables, etc.) produced through the <b class="alert">Left</b> and
+        <b class="alert">Right</b> ALIGN attributes. It allows content to stop being
+        flowed around the floated element.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">None</b>
+        [<b class="magicword">DEFAULT</b> - No special line breaking
+        effects are applied relative to the floating element.]<br>
+        &#160;&#160;&#160;<b class="alert">Left</b> [breaks line after this element
+        and moves down vertically until the left margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">Right</b> [breaks line after this element
+        and moves down vertically until the right margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">All</b> [breaks line after this element
+        and moves down vertically until both margins are clear of floated objects.]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies the name of the element
+        to convert this element to in the SDA element group (in this case the
+        'LItem' element - "List Item NOTE, Note in Text".)
+    <dd><b class="l3heading">Value:</b> 
+        <b class="alert">LItem</b> (Denotes 'List Item NOTE, Note in Text' in SDA.)
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>] 
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Dropped in XHTML 1.1 in favor of CSS
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The Type attribute indicates different ordering label schemes to
+        be used instead of the default values for each element in a UL or OL.
+        The TYPE attribute to the LI element is only applicable to UL and OL and
+        accepts values appropriate for each list type. When used at the LI
+        level, all subsequent list labels will carry the new TYPE scheme
+        unless set again by a later LI TYPE attribute.
+    <dd><b class="l3heading">Values:</b><br>
+        Ordered Lists (OL) values:<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">A</b> [capital letters]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">a</b> [lower-case letters]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">I</b> [large roman numerals]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">i</b> [small roman numerals]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">1</b> [default numbering scheme.]<br>
+        Unordered Lists (UL) values:<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">disc</b> [default solid bullet]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">square</b> [solid square]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">circle</b> [hollow bullet]<br>
+        &#160;&#160;&#160;&#160;&#160;<b class="alert">round</b> [also a hollow bullet]
+
+<dt><b class="subheading">Value</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>]
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>] 
+    [<b class="s">IE1</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Dropped in XHTML 1.1 in favor of CSS
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute is used to indicate a number other than the
+        incremented value for the current List Item (LI) in an Ordered List
+        (OL.) It is thus possible to create a non-sequential list. Values are
+        automatically converted to the TYPE attribute, if present, of the
+        parent OL element or current LI element. 
+    <dd><b class="l3heading">Values:</b> Decimal integers; some browsers may 
+        even accept "0" or negative numbers as valid (see browser peculiarities.)
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">ol</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;List item
+        1&lt;/<b class="tagname">li</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>
+        <span class="tagattrib">value</span>=&quot;5&quot;
+        <span class="tagattrib">type</span>=&quot;A&quot;&gt;List item
+        E&lt;/<b class="tagname">li</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;List item
+        3&lt;/<b class="tagname">li</b>&gt;<br>
+        &lt;/<b class="tagname">ol</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../d/dir.htm">dir</a>&gt; |
+        &lt;<a href="../m/menu.htm">menu</a>&gt; |
+        &lt;<a href="../o/ol.htm">ol</a>&gt; |
+        &lt;<a href="../u/ul.htm">ul</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="subheading">Dir/Menu Context</b>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b>
+    <dd><b class="subheading">Ol/Ul Context</b>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Some people leverage on a behavioral defect in browsers whereby
+        embedding plain data in a list structure without LI elements will induce
+        indentation. This is illegal HTML and not recommended. Other legal
+        <a href="../../topics/indent.htm">methods</a> can be used to generally
+        guarantee indentation.
+    <li>Changing the font attributes (size, color, etc.) of the contents of a List 
+        Item usually does not affect the appearance of the listing items (bullets)
+    <li>Lists are nestable.
+    <li>Even though the TYPE attribute for UL (and LI within UL) is listed
+        in the HTML 3.2 recommendation, it is still not widely supported.
+    <li>The VALUE attribute will have no effect within an unordered list (UL) context.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/l/li-bp1.htm">[Test]</a>
+        Internet Explorer, Mosaic and Netscape all produce the above
+        described indenting behavior for the mentioned invalid HTML.
+    <li><a href="../../../testing/html/tags/l/li-bp2.htm">[Test]</a>
+        Netscape 4.0 and above support the use of ALL allowable TYPE values for
+        ALL list types (DIR, MENU, OL and UL.) Internet Explorer, Opera and
+        Netscape 3.0 and before only allow the UL Types for UL lists, and OL
+        Types for OL lists.
+    <li><a href="../../../testing/html/tags/o/ol-bp1.htm">[Test]</a>
+        All browsers have major problems with roman numeral counting and
+        marker rendering. See the <a href="../o/ol.htm#peculiar">Browser
+        Peculiarities section of the OL element</a> for more details on this.
+    <li><a href="../../../testing/html/tags/l/li-bp3.htm">[Test]</a>
+        VALUE attribute behavior for "0" and negative values:<br>
+        <b>IE: (all)</b> Value ignored<br>
+        <b>Netscape/Mozilla: (all)</b> Both value types treated as "1" (default)<br>
+        <b>Opera 2.1-6.x:</b> Value Ignored<br>
+        <b>Opera 7.x+:</b> "0" honored; negative values cause no marker to be rendered on 
+           that LI or any thereafter.<br>
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

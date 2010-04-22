@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">CSS Syntax</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Does a Style Sheet Do?</b></big>
+    <dd>A CSS parser is given a document tree along with a style sheet that has been
+        <a href="inclusion/inclusion.htm">specified using any of three methods</a>.
+        Given this information, the parser is then responsible for determining the
+        destination media for the rendering of the document tree, retrieving
+        all components of the style sheet associated with the target media,
+        and generating a formatting scheme using the explicit and implied
+        CSS properties for that document tree. The CSS specification does not
+        concern itself with the details of how it receives the original
+        document tree, or how the formatting scheme it establishes is mapped
+        to the destination media.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">What is a Style Sheet?</b></big>
+    <dd>A Cascading Style Sheet consists of one or more statements conforming
+        to CSS syntax. There are two kinds of statements: 'At-Rules' and
+        'Rule Sets'. Both of these statement types allow complex rendering
+        structures to be specified.
+        <ul type="disc">
+        <li><a href="atrules/atrules.htm"><em>At-Rules</em></a> are the catch-all
+            syntax extension mechanism in CSS. At-Rules start with an '@' character,
+            immediately followed by an At-keyword, followed by an identifier.
+            An At-Rule consists of everything up to and including the next
+            semicolon (";") or the next <em>Block</em> (content surrounded by
+            matching curly braces), whichever comes first. Blocks may be nested.
+        <li>A <em>Rule Set</em> consists of a Selector followed by a Declaration Block.
+            <ul type="disc">
+               <li>A <a href="selectors/selectors.htm"><em>Selector</em></a> specifies the
+                   portion(s) of a document tree that a Declaration Block will apply to.
+                   A Selector consists of everything before the first left curly brace
+                   ("{") of a Declaration Block. Selectors allow style sheets to refer to
+                   the following parts of a document tree:
+                   <ul type="disc">
+                      <li><a href="selectors/element.htm"><em>Elements</em></a> and 
+                          some relationships between them.
+                      <li>Element <a href="selectors/attribute.htm"><em>Attributes 
+                          and their values</em></a>.
+                      <li>Special <a href="selectors/spechtml.htm"><em>HTML Attributes</em></a>.
+                      <li><a href="pseudo/pseudoclass.htm"><em>Pseudo-Classes</em></a>: Portions
+                          of the document tree that are in a specific state.
+                      <li><a href="pseudo/pseudoelement.htm"><em>Pseudo-Elements</em></a>:
+                          Portions of content not directly defined in the document tree.
+                  </ul>
+               <li>A <a href="declaration.htm"><em>Declaration Block</em></a> contains a
+                   series of Declarations. It begins with a left curly brace ("{") and
+                   ends with the matching right curly brace ("}"). In between lie
+                   semicolon-separated (";") style Declarations.
+                   <ul type="disc">
+                      <li>A <em>Declaration</em> is the most basic of CSS syntaxes. It binds a
+                          value to a CSS property. A Declaration consists of a property name,
+                          followed by a colon (":"), followed by a property value.
+                          <ul type="disc">
+                             <li>A <a href="../propindex/font.htm"><em>Property</em></a> is an
+                                 identifier. Every property has its own syntax and constraints on the
+                                 values it accepts. Property values also often indicate
+                                 <a href="units/units.htm"><em>measurement units</em></a> to aid in
+                                 rendering to the specified media.
+                          </ul>
+                  </ul>
+            </ul>
+        </ul>
+</dl>
+
+<big><b class="mainheading">Miscellaneous Syntax Notes</b></big>
+<ul>
+    <li>Special Unicode character code points can be entered using an
+        <a href="misc.htm#character">escape mechanism</a> syntax in CSS2.
+    <li><a href="misc.htm#comment">Comments</a> are included in a style sheet
+        between '/*' and '*/' delimiters.
+    <li>Additional cascading weight can be given to a style assignment with the
+        <a href="misc.htm#important">!important</a> syntax.
+    <li>All CSS style sheets are case-insensitive, except parts not under
+        the control of CSS (such as font names, URLs, HTML/XHTML attributes,
+        and all element/attribute names in XML.)
+    <li>If an At-Rule, Property, or Property value contains invalid syntax, it
+        is ignored; if a Selector contains invalid syntax, it is ignored along
+        with its accompanying Declaration Block.
+    <li>Parentheses, square brackets, curly braces: These must occur in matching
+        pairs and can be nested.
+    <li>Single and double quotes: Must occur in matching pairs. Content inside
+        quotes is parsed as a string.
+    <li>Semi-colons not in strings must be <a href="misc.htm#character">escaped</a>.
+    <li>The first character of a selector identifier may only be alphabetic
+        [a-zA-Z], but other characters may also consist of digits (0-9),
+        dash "-" or Unicode code points above 160.
+</ul>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

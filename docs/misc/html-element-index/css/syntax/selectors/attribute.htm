@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Attribute Selectors - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Attribute Selectors</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">What Are They?</b></big>
+    <dd>These Selectors specify a portion of the document tree based
+        upon its context with relation to attribute values for elements.
+</dl>
+
+<a name="simple"></a>
+<dl>
+<dt><big><b class="mainheading">Simple Attribute Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This Selector matches all elements containing the specified attribute. The
+         value of the attribute is unimportant in this case.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attribute]</span>
+         { [<span class="alert2">Declaration Block</span>] } or<br>
+         <span class="alert2">Element[Attribute]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">blockquote[title]</b>
+         { <span class="property">color:</span> red }<br>
+         [matches all blockquote elements with a 'title' attribute. ]</div>
+</dl>
+
+
+<a name="value"></a>
+<dl>
+<dt><big><b class="mainheading">Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This Selector matches all elements containing the specified attribute which
+         use the specified attribute value.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attr="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] } or<br>
+         <span class="alert2">Elem[Attr="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h2[align="left"]</b>
+         { <span class="property">cursor:</span> hand } <br>
+         [Matches all occurrences of the element named 'h2' using an 'align'
+         attribute set to 'left'.]</div>
+</dl>
+
+<a name="begin"></a>
+<dl>
+<dt><big><b class="mainheading">"Begins-with" Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>Matches all elements with the specified attribute that <em><b>BEGIN</b></em>
+         with the specified value. This selector would match attribute values that
+         are equal to it as well as to longer values of which it is a substring.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attr^="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] } or<br>
+         <span class="alert2">Elem[Attr^="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h2[align^="left"]</b>
+         { <span class="property">cursor:</span> hand } <br>
+         [Matches all occurrences of the element named 'h2' using an 'align'
+         attribute where "left" is at the beginning of the value.]</div>
+</dl>
+
+<a name="end"></a>
+<dl>
+<dt><big><b class="mainheading">"Ends-with" Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>Matches all elements with the specified attribute that <em><b>END</b></em> with the
+         specified value. This selector would match attribute values that are equal to it as
+         well as to longer values of which it is a substring.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attr$="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] } or<br>
+         <span class="alert2">Elem[Attr$="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">a[href$=".html]</b>
+         { <span class="property">cursor:</span> url(weblink.cur) } <br>
+         [Matches all occurrences of A elements using an 'href'
+         attribute (hyperlinks) that end in ".html"]</div>
+</dl>
+
+<a name="substring"></a>
+<dl>
+<dt><big><b class="mainheading">Substring-match Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>Matches all element/attribute combinations that have at least one occurrence
+         of the indicated value as a substring.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attr*="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] } or<br>
+         <span class="alert2">Elem[Attr*="value"]</span>
+         { [<span class="alert2">Declaration Block</span>] }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h2[align*="left"]</b>
+         { <span class="property">cursor:</span> hand } <br>
+         [Matches all occurrences of the element named 'h2' using an 'align'
+         attribute where "left" is any part of the value.]</div>
+</dl>
+
+<a name="many"></a>
+<dl>
+<dt><big><b class="mainheading">One-Of-Many Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This is a special form of the Attribute Value Selector, allowing a
+         portion of an attribute value to be exactly matched where the portions
+         of the attribute value are separated by spaces. This is especially
+         useful in HTML with the common CLASS attribute where multiple classes
+         can be assigned to a single element.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attribute~="value"]</span>
+         { <span class="alert2">[Declaration Block]</span> } or<br>
+         <span class="alert2">Element[Attribute~="value"]</span>
+         { <span class="alert2">[Declaration Block]</span> }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">h3[class~="class2"]</b>
+         { <span class="property">font-weight:</span> bold }<br>
+         [would match &lt;<b class="tagname">h3</b>
+         <span class="tagattrib">CLASS</span>="class2"&gt; and &lt;<b class="tagname">h3</b>
+         <span class="tagattrib">CLASS</span>="class1 class2"&gt;]</div>
+</dl>
+
+<a name="hyphen"></a>
+<dl>
+<dt><big><b class="mainheading">Hyphen Attribute Value Selector</b></big>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>]
+    [<b class="s">N6</b>|<i class="fs">O4</i></b>|<b class="s">S1</b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This is another special form of the Attribute Value Selector, allowing a
+         portion of an attribute value to be exactly matched, where the portions of
+         the attribute value are separated by hyphens. The search for the attribute
+         value fragment always starts from the beginning of the value. This Selector
+         type is especially useful with RFC 1766 language values used in the HTML
+         common LANG attribute and the xml:lang attribute.
+     <dd><b class="alert">Syntax:</b>
+     <dd><span class="alert2">[Attribute|="value"]</span>
+         { <span class="alert2">[Declaration Block]</span> } or<br>
+         <span class="alert2">Element[Attribute|="value"]</span>
+         { <span class="alert2">[Declaration Block]</span> }
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">p[foo|="bar"]</b>
+         { <span class="property">background-color:</span> yellow }<br>
+         [would match &lt;<b class="tagname">p</b>
+         <span class="tagattrib">FOO</span>="bar-foo"&gt; but not
+         &lt;<b class="tagname">p</b>
+         <span class="tagattrib">FOO</span>="foo-bar"&gt;]</div>
+</dl>
+
+<a name="namespace"></a>
+<dl>
+<dt><big><b class="mainheading">Namespace Attribute Selector</b></big>
+<dt>[<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>]
+     <dd><b class="alert">Description:</b>
+     <dd>This syntax allows distinct XML namespaces to be addressed for attributes
+         and their values in selectors.
+     <dd><b class="alert">Syntax:</b><br>
+         <span class="alert2">[Namespaceprefix|Attribute="Value"]</span>|
+         { <span class="alert2">[Declaration Block]</span> }<br>
+     <dd><b class="alert">Example:</b>
+     <dd><div class="example"><b class="selector">[foo|desc="value"]</b>
+         { <span class="property">color:</span> red }<br>
+         [references all DESC attributes in the FOO namespace that have a value of "value"]</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Opera 4.0-5.x: the Hyphen Attribute Value selector seems to 
+        have a small bug - Specified match values do not have to be at the 
+        start of the value, eg: attr|="value" would match an attribute with 
+        attr="foo-value". Opera 6+ handles this the correct way and 
+        does not match this.</li>        
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

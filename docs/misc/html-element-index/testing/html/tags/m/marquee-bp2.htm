@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MARQUEE: Browser Peculiarities: Nested Marquee</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Nested MARQUEE elements do not behave well in Internet Explorer. 
+Don't try it.</div>
+<br>
+
+<b>Basic nested MARQUEE elements, no widths on each. Green background on outer, yellow on inner:</b>
+<hr>
+filler text 
+<marquee bgcolor="green">outerMarquee <marquee bgcolor="yellow">innerMarquee</marquee> outerMarquee</marquee> 
+filler text
+<hr>
+<br>
+
+<b>Basic nested MARQUEE elements, width=500 on each. Green background on outer, yellow on inner:</b>
+<hr>
+filler text 
+<marquee bgcolor="green" width="500">outerMarquee 
+<marquee bgcolor="yellow" width="500">innerMarquee</marquee> outerMarquee</marquee> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

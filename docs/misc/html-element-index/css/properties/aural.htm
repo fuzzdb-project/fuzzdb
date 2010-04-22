@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>About Aural Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">About Aural Properties</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">Aural Properties</b></big>
+    <dd><a href="aural/volume.htm">volume</a> |
+        <a href="aural/stress.htm">stress</a> |
+        <a href="aural/richness.htm">richness</a> |
+        <a href="aural/azimuth.htm">azimuth</a> |
+        <a href="aural/elevation.htm">elevation</a><br>
+        <a href="aural/voicefam.htm">voice-family</a> |
+        <a href="aural/speak.htm">speak</a> |
+        <a href="aural/speakpunc.htm">speak-punctuation</a> |
+        <a href="aural/speaknum.htm">speak-numeral</a><br>
+        <a href="aural/pitch.htm">pitch</a> |
+        <a href="aural/pitchrange.htm">pitch-range</a> |
+        <a href="aural/speakrate.htm">speech-rate</a> |
+        <a href="aural/playdur.htm">play-during</a><br>
+        <a href="aural/pause.htm">pause</a> |
+        <a href="aural/pausebef.htm">pause-before</a> |
+        <a href="aural/pauseaft.htm">pause-after</a><br>
+        <a href="aural/cue.htm">cue</a> |
+        <a href="aural/cuebef.htm">cue-before</a> |
+        <a href="aural/cueaft.htm">cue-after</a>
+</dl>
+
+<br>
+<dl>
+<dt><big><b class="mainheading">What Do They Do?</b></big>
+    <dd>The rendering of document content using speech synthesis and sound effects
+        is fundamentally different from content rendered for visual consumption.
+        There is no concept of font size, intrinsic visual size to an element
+        or even a visual canvas where elements may exist in relation to one another.
+        <br><br>
+
+        Crude aural rendering of document content is currently possible through
+        serialization of text content by screen readers. Stripping down content to
+        this level loses most of a document's structure, and ignores many document
+        components outright. The Aural CSS properties introduce the concept of an
+        aural canvas, where elements are rendered over time, with positioning properties
+        existing in a three-dimensional soundstage around the user, and white-space
+        interpreted as silence. Styling and emphasis are applied to an element through
+        the use of volume, pitch, vocal stress and "auditory icons", which cue the
+        listener to content that is intended to stand apart from other content.
+        <br><br>
+
+        While these properties <em>can</em> augment visual rendering, it is only the tip
+        of an iceberg - there will be cases where documents can <em>only</em> be rendered
+        aurally. In these cases, the power allowed by these properties becomes obvious.
+        These properties allow powerful interfaces to information for a wide range of
+        needs: easier accessibility for special visual needs and impairments, educational
+        teaching tools and reading aids, as well as 'hands-off' information access
+        (eg: retrieving directions while driving a car.) The market for this sort of
+        rendered content is expected to grow considerably in the future.
+        <br><br>
+
+        These properties were incorporated into CSS2, but were first detailed in the W3C
+        note "Aural presentation with CSS style sheets"
+        (<a href="http://www.w3.org/Style/CSS/Speech/NOTE-ACSS">http://www.w3.org/Style/CSS/Speech/NOTE-ACSS</a>,
+        January 7, 1997) edited by Chris Lilley. The properties and aural canvas of ACSS
+        detailed in this note were mainly adapted from proposals by T.V. Raman of Adobe.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">CSS 2.1 - a change of feature status</b></big>
+    <dd>A few major changes to aural CSS have occurred in CSS 2.1. All properties 
+        relating to aural CSS, along with specific units relating to ACSS have all 
+        been moved to a separate appendix (appendix A). Spec-wise, this means that 
+        ACSS is not "officially" part of the basic CSS 2.1 feature set - a browser 
+        that supports all features of CSS2.1 barring ACSS may still call itself 
+        fully CSS 2.1 conformant. The "aural" media type is also deprecated in 
+        favor of the "speech" media type.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official Reference: CSS Level 2, Section 19</b>
+    <dd>19.2: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#volume-props">volume</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">stress</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">richness</a>'<br>
+        19.7: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#spatial-props">azimuth</a>'<br>
+        19.7: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#spatial-props">elevation</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">voice-family</a>'<br>
+        19.3: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#speaking-props">speak</a>'<br>
+        19.9: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#speech-props">speak-punctuation</a>'<br>
+        19.9: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#speech-props">speak-numeral</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">pitch</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">pitch-range</a>'<br>
+        19.8: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">speech-rate</a>'<br>
+        19.6: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#mixing-props">play-during</a>'<br>
+        19.4: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#pause-props">pause</a>'<br>
+        19.4: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#pause-props">pause-before</a>'<br>
+        19.4: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#pause-props">pause-after</a>'<br>
+        19.5: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#cue-props">cue</a>'<br>
+        19.5: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#cue-props">cue-before</a>'<br>
+        19.5: '<a href="http://www.w3.org/TR/REC-CSS2/aural.html#cue-props">cue-after</a>'<br>
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

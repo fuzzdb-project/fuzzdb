@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>Creating New Windows in Javascript</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Creating New Windows in Javascript</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#faq">FAQ</a> |
+    <a href="#syntax">Syntax</a> | <a href="#wizard">Wizard</a> |
+    <a href="#whattodo">What To Do With It</a> | <a href="#nonstandard">Non-standard features</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td><hr size=1></td></tr>
+<tr><td align=left>
+<a name="faq"></a>
+<big><b class="mainheading">FAQ: How To Open a New Window in Javascript?</b></big>
+<hr width="30%" align=left size=1>
+One of the more common requests I see is how to open a new Javascript
+window with a certain feature/argument. The Window.open method has been
+available since Netscape 2.0 (Javascript 1.0), but additional window
+decoration features have been added to the syntax since then. The little
+code wizard below helps to create Javascript Window.open code for the
+features you specify. The features listed in the wizard have been valid
+since Javascript 1.0.
+<br><br>
+
+<a name="syntax"></a>
+<dl>
+<dt><big><b class="mainheading">Syntax</b></big>
+<dt>
+<dt><b class="alert">window.open</b>([<span class="alert2">URL</span>], [<span class="alert2">Window Name</span>],
+    [<span class="alert2">Feature List</span>], [<span class="alert2">Replace</span>]);<br>where:
+    <dd>[<b class="alert2">URL</b>] <b class="magicword">Optional.</b> Specifies the URL of the new window.
+        If no URL is given, the window opens with no page loaded.
+    <dd>[<b class="alert2">Window Name</b>] <b class="magicword">Optional.</b> Specifies a name for the
+        window. This name can be used to reference the window as a destination for a hyperlink
+        using the HTML TARGET attribute.
+    <dd>[<b class="alert2">Features</b>] <b class="magicword">Optional.</b> Comma separated strings
+        specifying the features added to the new window. Typical values are booleans (TRUE/FALSE.)
+        Syntax is of the form<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[<b class="alert">feature</b>] "=" [<b class="alert">value</b>] (","
+        [<b class="alert">feature</b>] "=" [<b class="alert">value</b>])*
+    <dd>[<b class="alert2">Replace</b>] <b class="magicword">Optional.</b> Boolean value specifying
+        whether the new window replaces the current window in the browser's history.
+</dl>
+
+<form>
+<a name="wizard"></a>
+<big><b class="mainheading">Javascript Window.open Method Creation Wizard</b></big><br>
+[<b class="alert">Note:</b> Your browser needs to support Javascript/have it
+turned on for this to work. Also, some of the window.open features have no
+effect in Opera.]
+<table border=2 cellspacing=0 cellpadding=0><tr><td>
+<table cellpadding=5 width="100%" border=0>
+
+<tr><td colspan=2 class="field"><b class="alert">Window Properties</b></td></tr>
+<tr><th align=left><b class="alert2">Window URL:</b><br>
+    <input type="text" name="URL" value="[URL Here]" size=35><br></th>
+ <th align=left><b class="alert2">Window Name:</b><br>
+    <input type="text" name="winname" value="[Window Name Here]" size=20></th></tr>
+
+<tr><td colspan=2 class="field"><b class="alert">Window Features</b></td></tr>
+<tr><td align=left colspan=2><table width="100%"><tr><td valign=top><input
+        type="checkbox" name="widthcheck" value="width"
+        onclick="snapboxes(this.checked)">&nbsp;&nbsp;Width:&nbsp;<input
+        type="text" name="width" value="640" size=4><br>
+        <input type="checkbox" name="heightcheck" value="height"
+        onclick="snapboxes(this.checked)">&nbsp;Height:&nbsp;<input type="text"
+        name="height" value="480" size=4></td>
+    <td align=left valign=top>
+        <input type="checkbox" name="urlbar" value="urlbar"> URL bar<br>
+        <input type="checkbox" name="tool" value="tool"> Browser Toolbar<br>
+        <input type="checkbox" name="menu" value="menu"> Menus<br>
+        <input type="checkbox" name="dir" value="dir"> Directory Buttons</td>
+    <td align=left valign=top>
+        <input type="checkbox" name="status" value="status"> Window Status Bar<br>
+        <input type="checkbox" name="resize" value="resize"> Window Resize-able<br>
+        <input type="checkbox" name="scroll" value="scroll"> Window Scroll-able</td></tr></table>
+  </td></tr>
+<tr><td colspan=2><hr size=1 width="90%"></td></tr>
+<tr><th colspan=2><input type="button" value="    View the Code    "
+        onClick="codeit();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+        type="button" value="    Open the Window    " onClick="openit();"></th></tr>
+</table>
+</td></tr>
+</table>
+
+<b class="alert2">Code Result:</b><br>
+<textarea rows=4 cols=75 name="tagresult" wrap="soft"></textarea>
+</form>
+
+<a name="whattodo"></a>
+<big><b class="mainheading">What to do with the code</b></big>
+<hr width="30%" align=left size=1>
+Ok, now you have some javascript - what now? There are many ways the opening of 
+a new window could be activated, and these are probably the most common:
+<ul>
+    <li><b class="alert">Triggered at page load time</b>
+        <div class="example">
+        &lt;<b class="tagname">body</b> 
+        <span class="tagattrib">onload</span>="[open new window code];"&gt;
+        &lt;/<b class="tagname">body</b>&gt; 
+        </div>
+    <li><b class="alert">Triggered by clicking on a hyperlink:</b>
+        <div class="example">
+        &lt;<b class="tagname">a</b> 
+        <span class="tagattrib">href</span>="javascript:[open new window code]; void 0;"&gt;click me to open a new 
+        window!&lt;/<b class="tagname">a</b>&gt;
+        </div>
+        (the "void 0;" is added to ensure that clicking on the link does not do anything other than opening the window.)
+    <li><b class="alert">Triggered by clicking on a button</b>
+        <div class="example">
+        &lt;<b class="tagname">input</b> 
+        <span class="tagattrib">type</span>="button"
+        <span class="tagattrib">value</span>="click me to open a new window"
+        <span class="tagattrib">onclick</span>="[open new window code];" /&gt;
+        </div>
+</ul>
+<br><br>
+
+
+<a name="nonstandard"></a>
+<big><b class="mainheading">Non-standard Window.open Features</b></big>
+<table>
+<tr><th colspan=3 align=left class="field"><b class="subheading">&nbsp;&nbsp;IE4+</b></th></tr>
+<tr><th align=left><b class="alert2">channelmode</b></th><td rowspan=4>&nbsp;</td>
+    <td>Controls display of the channel bar.</td></tr>
+<tr><th align=left><b class="alert2">left</b></th>
+    <td>The x-position of the left side of the new window, from the left edge
+     of the screen in pixels; used to position a new window.</td></tr>
+<tr><th align=left><b class="alert2">top</b></th>
+    <td>The y-position of the top side of the new window, from the top edge
+     of the screen in pixels; used to position a new window.</td></tr>
+<tr><th align=left><b class="alert2">fullscreen</b></th>
+    <td>Controls whether the new window is displayed as fullscreen or not.</td></tr>
+<tr><th colspan=3 align=left class="field"><b class="subheading">&nbsp;&nbsp;IE5+</b></th></tr>
+<tr><th align=left><b class="alert2">titlebar</b></th><td>&nbsp;</td>
+    <td>Controls display of the window title bar. Only trusted dialogs and HTA's
+     may use this.</td></tr>
+<tr><th colspan=3 align=left class="field"><b class="subheading">&nbsp;&nbsp;NN4+</b></th></tr>
+<tr><th align=left><b class="alert2">alwaysLowered</b></th><td rowspan=12>&nbsp;</td>
+    <td>New window floats below other windows, whether it is active or not. Only
+     allowed by secure scripts.</td></tr>
+<tr><th align=left><b class="alert2">alwaysRaised</b></th>
+    <td>New window floats on top of other windows, whether it is active or not.
+     Only allowed by secure scripts.</td></tr>
+<tr><th align=left><b class="alert2">dependent</b></th>
+    <td>The new window is a child of the current window. A dependent window closes when its
+        parent window closes.</td></tr>
+<tr><th align=left><b class="alert2">hotkeys</b></th>
+    <td>New window created with most hotkeys disabled. Security and quit hotkeys
+     remain enabled.</td></tr>
+<tr><th align=left><b class="alert2">innerHeight</b></th>
+    <td>The content area of the new window has the specified height. This is
+     different from the 'height' feature which is the total window height.</td></tr>
+<tr><th align=left><b class="alert2">innerWidth</b></th>
+    <td>The content area of the new window has the specified width. This is
+     different from the 'width' feature which is the total window width.</td></tr>
+<tr><th align=left><b class="alert2">outerHeight</b></th>
+    <td>The new window has a content and UI height with the specified height.
+     This is the same as the 'height' feature.</td></tr>
+<tr><th align=left><b class="alert2">outerWidth</b></th>
+    <td>The new window has a content and UI width with the specified width.
+     This is the same as the 'width' feature.</td></tr>
+<tr><th align=left><b class="alert2">screenX</b></th>
+    <td>The x-position of the left side of the new window, from the left edge
+     of the screen in pixels; used to position a new window.</td></tr>
+<tr><th align=left><b class="alert2">screenY</b></th>
+    <td>The y-position of the left side of the new window, from the top edge
+     of the screen in pixels; used to position a new window.</td></tr>
+<tr><th align=left><b class="alert2">titlebar</b></th>
+    <td>Controls display of the window title bar. Only allowed by secure scripts.</td></tr>
+<tr><th align=left><b class="alert2">z-lock</b></th>
+    <td>The new window does not open "above" other windows in the UI Z-order
+     when activated. Only allowed by secure scripts.</td></tr>
+</table>
+
+<tr><td><hr size=1></td></tr>
+</table>
+</center>
+
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+<script language="javascript" type="text/javascript">
+function snapboxes(currentvalue)
+{
+   if (currentvalue == true)
+      {
+       document.forms[0].heightcheck.checked = true;
+       document.forms[0].widthcheck.checked  = true;
+      }
+   else
+      {
+       document.forms[0].heightcheck.checked = false;
+       document.forms[0].widthcheck.checked  = false;
+      }
+}
+
+function codeit()
+{
+   var code = "";
+   code = buildCommand();
+   if (code != "false")
+      { document.forms[0].tagresult.value = code; }
+}
+
+function openit()
+{
+   var winopen = "";
+   winopen = buildCommand();
+   if (winopen != "false")
+      { eval(winopen); }
+}
+
+function buildCommand()
+{
+//Build URL
+   var url = document.forms[0].URL.value;
+   if (url == "[URL Here]")
+      { url = "dummydoc.htm"; }
+
+//Build window name
+   var stringcheck = "abcdefghijklmnopqrstuvwxyz0123456789_";
+   var windowname = document.forms[0].winname.value;
+   if (windowname == "[Window Name Here]")
+      { windowname = "dummyname"; }
+   for (i=0; i<windowname.length; i++)
+      {
+     if (stringcheck.indexOf(windowname.charAt(i).toLowerCase()) == -1)
+     {
+        alert ("Only the characters 'a-z', 'A-Z', '0-9' and '_' are allowed in window " +
+                     "names.\nPlease enter again.");
+        return "false";
+     }
+   }
+
+//Build height,width values
+   if (document.forms[0].heightcheck.checked == true)
+      {
+         var numcheck = "0123456789";
+         var height = document.forms[0].height.value;
+         var width  = document.forms[0].width.value;
+         for (i=0; i<height.length; i++)
+             {
+              if (numcheck.indexOf(height.charAt(i)) == -1)
+                 {
+                  alert ("Only positive integers are allowed for window dimensions.\nPlease enter again.");
+                  return "false";
+                 }
+             }
+         for (i=0; i<width.length; i++)
+             {
+                if (numcheck.indexOf(width.charAt(i)) == -1)
+                   {
+                      alert ("Only positive integers are allowed for window dimensions.\nPlease enter again.");
+                      return "false";
+                   }
+             }
+         if (parseInt(height) == 0 || parseInt(width) == 0 || height == "" || width == "")
+            {
+                alert ("Only positive integers are allowed for window dimensions.\nPlease enter again.");
+                return "false";
+            }
+      }
+
+//Build checkbox options
+   var options = "";
+   if (document.forms[0].urlbar.checked == true)
+      { options = options + ",location=yes"; }
+   if (document.forms[0].tool.checked == true)
+      { options = options + ",toolbar=yes"; }
+   if (document.forms[0].menu.checked == true)
+      { options = options + ",menubar=yes"; }
+   if (document.forms[0].dir.checked == true)
+      { options = options + ",directories=yes"; }
+   if (document.forms[0].status.checked == true)
+      { options = options + ",status=yes"; }
+   if (document.forms[0].resize.checked == true)
+      { options = options + ",resizable=yes"; }
+   if (document.forms[0].scroll.checked == true)
+      { options = options + ",scrollbars=yes"; }
+   options = options + ",height=" + height + ",width=" + width;
+
+   options = options.substring(1,options.length);    //trim leading comma put on by default
+
+//Build command
+   var command = "window.open('" + url + "', '" + windowname + "', '" + options + "', false)\;";
+   return command;
+}
+</script>
+
+</BODY>
+</HTML>

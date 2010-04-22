@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Font-Variant - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">font-variant</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1.2</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Font Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="fontsizeadjust.htm">font-size-adjust</a><br>
+    <a href="fontstretch.htm">font-stretch</a><br>
+    <a href="font.htm">font</a><br>
+    <a href="fontstyle.htm">font-style</a><br></td>
+    <td valign=top><a href="fontweight.htm">font-weight</a><br>
+    <a href="fontsize.htm">font-size</a><br>
+    <a href="fontfamily.htm">font-family</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">normal</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">font</b>
+        <span class="tagattrib">SIZE</span>=&quot;(+/-)N&quot;&gt;</td></tr>
+<tr><th align=left valign=top><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS1#font-variant">CSS1: Sect 5.2.4</a><br>
+        <a href="http://www.w3.org/TR/REC-CSS2/fonts.html#font-styling">CSS2: Sect 15.2.3</a>,
+        <a href="http://www.w3.org/TR/CSS21/fonts.html#small-caps">CSS2.1: Sect 15.5</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property is used to create text composed of capital letters (existing
+        capital letters will be larger than the surrounding small-capped content.)
+        This property will have no effect on language systems that do not use more
+        than one case.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O7</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">normal</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This value specifies a font that does not use a 'small-capping' effect;
+        all differences in case are displayed as-is using the specified font.</dd>
+
+<dt><b class="subheading">small-caps</b></dt>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4B1</i></b>|<b class="s">N6</b>|<b class="s">O3.5</b>|<b class="s">S1.2</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This value indicates a 'small-caps' font be used for the current content
+        (content is composed only of capital-case letters.) If such a font is not
+        natively available, the effect should be simulated by the browser using
+        different font sizes.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">span.sample</b>
+        { <span class="property">font-variant:</span> small-caps }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">span</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">font-variant:</span>
+        small-caps&quot;&gt;Small Capped Text&lt;/<b class="tagname">span</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li><b class="alert">CSS1 Conformance:</b> Content which does have
+        capital/lower-case letter distinctions may ignore this property
+        (treat it as though the value were set to "normal".)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">All</b>
+        <dl>
+            <dd>- The "inherit" value is listed in the standards for this property, although 
+                the property is itself inherited. This means it is impossible to check
+                to see if this value is actually supported in any browser. Mozilla began 
+                generally supporting "inherit" where appropriate in version 6.x, and 
+                Opera beginning mostly in 7.x. IE does not yet support "inherit" anywhere 
+                yet. So, for all inherited properties, support information for the 
+                "inherit" value will be listed as beginning in these respective versions.
+        </dl>
+
+     <li><b class="alert">Internet Explorer</b>
+         <dl>
+         <dd><b class="alert2">4.0-5.5:</b>
+         <dd>- This property applies the same uniform font to <em>both</em>
+             lower- and upper-case letters. (Fixed in v6.0)
+   </dl>
+     <li><b class="alert">Opera</b>
+         <dl>
+         <dd><b class="alert2">4.0x only:</b>
+         <dd>- Odd bug: if a space exists after a letter that is actually capitalized 
+             in the content run, the content after it disappears. This behavior hasn't 
+             been checked thoroughly, but it definitely happens. It does not occur 
+             in 3.5x or in later Opera versions.
+   </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Element: First-Line - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-element: first-line</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>|<b class="s">CSS3</b>] 
+    [<b class="s">IE5.5B1</b>|<b class="s">N6</b>|<b><i class="fs">O3.5</i></b>|<b class="s">S1</b>]<br></td>
+    <td align=center><b class="alert">Other CSS<br>Pseudo-Elements</b><br></td>
+</tr>
+<tr>
+    <td><a href="pelembefore.htm">before</a><br>
+    <a href="pelemafter.htm">after</a><br>
+    <a href="pelemfirstletter.htm">first-letter</a><br>
+    <a href="pelemselection.htm">selection</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Block-level elements</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This pseudo-element is used to apply properties to the first rendered line
+        of a block element structure on the output device (browser screen, printer,
+        etc.) This pseudo-element does not actually exist as part of the document
+        tree - it is a "fictional tag sequence" that is logically deduced from
+        many factors including font size, page and block width, as well as content
+        language, etc. It is similar in behavior to an in-line element, but
+        restrictions are placed on its behavior (see <b class="alert">Notes</b> below.)</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">p:first-line</b>
+        { <span class="property">margin-left:</span> 0.5in }</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>CSS2 places restrictions on what properties can be applied to 'first-line'
+        pseudo-elements: font properties, color and background properties, and
+        the 'word-spacing', 'letter-spacing', 'text-decoration', 'text-shadow',
+        'text-transform', 'line-height', 'clear' and 'vertical-align' properties.
+    <li>In the fictional tag sequences defined by the 'first-letter' and
+        'first-line' pseudo-elements, the 'first-letter' fictional sequence
+        is contained inside the 'first-line' fictional tag sequence; this
+        allows properties applied to 'first-line' to properly cascade and
+        apply to the 'first-letter' pseudo element unless overridden.
+    <li><b class="alert">CSS1 Conformance:</b> A browser may ignore the
+        ':first-line' Pseudo-element.
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Opera</b>
+        <dl>
+            <dd><b class="alert2">3.5+:</b>
+            <dd>- This Pseudo-element only applies to block elements, and
+                UL/OL/LI, DL/DT/DD, and TABLE/TD/TH.
+            <dd>- When applied to LI items it applies the CSS rule to the
+                entire UL/OL list, not just the LI.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

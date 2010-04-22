@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=File: Browser Peculiarities: Physical formatting elements affecting INPUT File contents</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4+ allows some Character-level formatting to be applied 
+to the contents of this form field. These physical formatting elements (along with 
+virtual formatting elements that are rendered identically, such as EM and I) apply 
+to this form field: I, U, TT, S, STRIKE, SUB, SUP, BIG, SMALL, FONT SIZE and FONT FACE.</div>
+<br>
+
+<form>
+<b>Input Type=File fields, with physical formatting elements enclosing them:</b>
+<hr>
+<table border=1 cellspacing=0 cellpadding=3>
+<tr><th>Behavior</th><th>Example</th></tr>
+<tr><td>Plain   </td><td>filler text <input type="file" name="file1" value="value1"> filler text</td></tr>
+<tr><td>B       </td><td><b>filler text <input type="file" name="file2" value="value2"> filler text</b></td></tr>
+<tr><td>I       </td><td><i>filler text <input type="file" name="file3" value="value3"> filler text</i></td></tr>
+<tr><td>U       </td><td><u>filler text <input type="file" name="file4" value="value4"> filler text</u></td></tr>
+<tr><td>TT      </td><td><tt>filler text <input type="file" name="file5" value="value5"> filler text</tt></td></tr>
+<tr><td>S       </td><td><s>filler text <input type="file" name="file6" value="value6"> filler text</s></td></tr>
+<tr><td>STRIKE  </td><td><strike>filler text <input type="file" name="file7" value="value7"> filler text</strike></td></tr>
+<tr><td>SUB     </td><td><sub>filler text <input type="file" name="file8" value="value8"> filler text</sub></td></tr>
+<tr><td>SUP     </td><td><sup>filler text <input type="file" name="file9" value="value9"> filler text</sup></td></tr>
+<tr><td>BIG     </td><td><big>filler text <input type="file" name="file10" value="value10"> filler text</big></td></tr>
+<tr><td>SMALL   </td><td><small>filler text <input type="file" name="file11" value="value11"> filler text</small></td></tr>
+<tr><td>EM      </td><td><em>filler text <input type="file" name="file12" value="value12"> filler text</em></td></tr>
+<tr><td>STRONG  </td><td><strong>filler text <input type="file" name="file13" value="value13"> filler text</strong></td></tr>
+<tr><td>FONT SIZE (6)         </td><td><font size="6">filler text <input type="file" name="file14" value="value14"> filler text</font></td></tr>
+<tr><td>FONT COLOR ("green")  </td><td><font color="green">filler text <input type="file" name="file15" value="value15"> filler text</font></td></tr>
+<tr><td>FONT FACE ("verdana, georgia")   </td><td><font face="verdana georgia">filler text <input type="file" name="file16" value="value16"> filler text</font></td></tr>
+</table>
+<hr>
+</form>
+
+</body>
+</html>

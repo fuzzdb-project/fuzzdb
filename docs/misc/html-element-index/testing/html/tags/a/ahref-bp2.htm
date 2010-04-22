@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>A HREF: Browser peculiarity - TITLE used as label for IE FAVORITES</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">IE4+ uses the TITLE attribute as the Favorites label for a URL 
+when placed via the right-mouseclick context menu.</div>
+<br>
+
+<b>Hyperlink to a document, no TITLE attribute. 
+Right click...Add to favorites to see the Name label used</b>
+<hr>
+filler text <a href="http://www.yahoo.com/">http://www.yahoo.com/</a> filler text
+<hr>
+<br>
+
+<b>Hyperlink to a document, TITLE="this is a title" present. 
+Right click...Add to favorites to see the Name label used</b>
+<hr>
+filler text <a href="http://www.yahoo.com/" title="this is a title">http://www.yahoo.com/</a> filler text
+<hr>
+<br>
+
+</body>
+</html>

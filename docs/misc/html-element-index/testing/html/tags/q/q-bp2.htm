@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Q: Browser peculiarity - rendering effects in IE</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">IE 4+ supports this element, but only via its recognition. 
+Common attributes will be applied to content, but nothing is done with the CITE 
+attribute by the browser unless scripting is used to take action on its value.</div>
+
+<hr>
+<b>Test 1:</b><br>
+filler text 
+<q>Plain Q element, no attributes</q> 
+filler text
+<br><br>
+
+<b>Test 2:</b><br>
+filler text 
+<q class="test" id="test1" style="word-spacing: 20px" title="this is a title">Q 
+element, with class="test" (Gray color), id="test1" (green background), 
+style ("word-spacing: 20px"), and title ("this is a title" on hover) attributes</q> 
+filler text
+<hr>
+
+</body>
+</html>

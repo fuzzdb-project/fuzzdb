@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>PRE: Browser Peculiarities: TAB handling</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">"The horizontal tab character (code position 9 in the HTML 
+document character set) must be interpreted as the smallest positive nonzero number 
+of spaces which will leave the number of characters so far on the line as a multiple of 8. 
+Documents should not contain tab characters as they are not supported consistently." 
+With this caveat, it is easy to see that the behavior of tabs may be VERY inconsistent 
+from browser to browser.</div>
+<br>
+
+<b>Simple PRE element, No TAB character used:</b>
+<hr>
+filler text 
+<pre>Preformatted     content
+12345678901234567890</pre>
+filler text
+<hr>
+<br>
+
+<b>Simple PRE element, TAB character (directly inserted in the text) located at 
+the beginning of the block. "&lt;" points to the tab space:</b>
+<hr>
+filler text 
+<pre>	&lt;Preformatted     content
+12345678901234567890</pre>
+filler text
+<hr>
+<br>
+
+<b>Simple PRE element, TAB character (inserted using a character entity - &amp;#09;) 
+located at the beginning of the block. "&lt;" points to the tab space:</b>
+<hr>
+filler text 
+<pre>&#09;&lt;Preformatted     content
+12345678901234567890</pre>
+filler text
+<hr>
+<br>
+
+<b>Simple PRE element, TAB character (directly inserted in the text) located after
+some leading text. "&gt;" and "&lt;" point to the tab space:</b>
+<hr>
+filler text 
+<pre>pre&gt;	&lt;Preformatted     content
+12345678901234567890</pre>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

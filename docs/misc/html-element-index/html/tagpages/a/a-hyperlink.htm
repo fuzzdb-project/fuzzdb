@@ -1,0 +1,612 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>A Href</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Hyperlink<br>[A Href]</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Hypertext</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><a href="../../../css/syntax/pseudo/pclasslink.htm">a:link</a>,
+        <a href="../../../css/syntax/pseudo/pclassvisited.htm">a:visited</a>,
+        <a href="../../../css/syntax/pseudo/pclassactive.htm">a:active</a></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Underlined content - usually blue for unvisited content, purple for visited.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#offdoc">Official Docs:</a></b></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/links.html#h-12.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_hypertextmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The A element is one of the key distinctive features of HTML. It
+        defines a link between resources that allows webs of information to be
+        created. The Hyperlink element indicates a portion of text and/or an
+        object that serves as a hot area for the user to activate to jump to another
+        location. The A element can serve as a destination of a URL, an invocation
+        of a URL, or both at the same time.
+        <br><br>
+
+        To invoke a Bookmark either in a current document or in a remote
+        document, the Bookmark NAME must be prefaced by a hash mark symbol
+        (&quot;&#35;&quot;) [See examples below.] If no Bookmark is specified in the
+        HREF statement, the browser will default to the top of the document.
+</dl>
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B3</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b class="s">IE3</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O3</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Accesskey</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B2</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a method of giving access/focus to an active HTML element using
+        a keyboard character. This is a common GUI paradigm also known
+        as a &quot;keyboard shortcut&quot; or &quot;keyboard accelerator&quot;
+        A single character is used as the value of this attribute. In addition,
+        a platform-dependent key is usually used in combination with the
+        ACCESSKEY character to access the functionality of the active field.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A single, case-insensitive character from a browser's character set.]
+
+<dt><b class="subheading">Charset</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O7</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the character encoding of the destination
+        resource of the hyperlink.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A recognized RFC 2045 language character set string. Default is ISO-8859-1.]
+
+<dt><b class="subheading">Coords</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6</i></b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This specifies the coordinate values in pixels appropriate to the
+        accompanying SHAPE attribute to define a region of an image for
+        hyperlinking. The coordinate system for Client Side Image Maps
+        originates at the top, left corner of the image and values grow
+        larger as you move down and to the right.
+        <br>
+        These are the corresponding SHAPE types and COORDS definition schemes:<br>
+        &#160;&#160;&#160;<b class="magicword">RECT, RECTANGLE:</b>
+        COORDS=&quot;<b class="alert">left,top,right,bottom</b>&quot;<br>
+        &#160;&#160;&#160;<b class="magicword">CIRC, CIRCLE:</b>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        COORDS=&quot;<b class="alert">center_x,center_y,radius</b>&quot;<br>
+        &#160;&#160;&#160;<b class="magicword">POLY, POLYGON:</b>
+        &#160;&#160;&#160;&#160;&#160;
+        COORDS=&quot;<b class="alert">x1,y1,x2,y2,...,xn,yn</b>&quot;<br>
+        [The Polygon values specify the successive coordinates of the polygon
+        and have no explicit limit on number of vertices, but HTML limits
+        attribute values to 1024 characters. If the first and last coordinates
+        of a Polygon reference are not the same, then a final segment is implied
+        to close it.]
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Positive integers given as a comma separated list of X-Y values.]
+
+<dt><b class="subheading">Disabled</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand-alone attribute which indicates the element is
+        initially non-functional. 
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">disabled</b> (XHTML)
+
+<dt><b class="subheading">Href</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute indicates the URL to be loaded when the hyperlinked
+        object is activated. Either this attribute or the NAME attribute
+        <em>MUST</em> be present in the A tag.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Either an absolute or relative URL. All URLs should be <a
+        href="../../topics/urlencoding.htm">URL encoded</a> where required.]
+
+<dt><b class="subheading">Hreflang</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6.1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the base language of the resource indicated
+        in the HREF attribute.
+    <dd><b class="l3heading">Values:</b> Any <a href="http://www.rfc-editor.org/rfc/rfc1766.txt">RFC 1766</a> value.
+        [Must begin with a letter ([A-Za-z]), followed by any number of characters in [A-Za-z0-9-_:.] 
+
+
+<dt><b class="subheading">Methods</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute should specify methods to be used in accessing the
+        destination, as a whitespace-separated list of names. For similar
+        reasons as for the TITLE attribute, it may be useful to include the
+        information in advance in the link. For example, the browser may
+        choose a different rendering display (possibly a special icon) for a
+        destination that is searchable. None of the popular browsers ever
+        implemented this attribute and it has since disappeared from the
+        HTML 3.2 recommendation.
+    <dd><b class="l3heading">Values:</b>
+        The set of applicable names is a function of the protocol scheme of
+        the URL in the HREF attribute.
+
+<dt><b class="subheading">Name</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML 1.0 DTDs. Dropped in XHTML 1.1 in favor of ID attribute.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute assigns a symbolic name to the enclosed object
+        (text, image, etc.) in order to use it as a destination in a hyperlink or
+        other URL call. Either this attribute or the HREF attribute
+        <em>MUST</em> be present in the A element. (Note: HTML 4 states that if 
+        ID and NAME are both used in a given A element, they should have the exact same
+        value since they share the same domain value space.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Rel</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b><i class="fs">N6.1</i></b>|<b class="s">O6</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The REL attribute is meant to give the relationship(s) described by the hyperlink.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A whitespace separated list of relationship names.]
+
+<dt><b class="subheading">Rev</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<b><i class="fs">M3</i></b>|<b><i class="fs">N6.1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The REV attribute is meant to be the same as the REL attribute, but the
+        semantics of the relationship are in the reverse direction. A link from
+        A to B with REL=&quot;X&quot; expresses the same relationship as a
+        link from B to A with REV=&quot;X&quot;. An anchor may have both REL
+        and REV attributes.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [A whitespace separated list of relationship names.]
+
+<dt><b class="subheading">SDAPref</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies content to be added
+        <em>BEFORE</em> the original element content (in this case the string
+        "&lt;Anchor: #AttList &gt;") when the SDA document is rendered (SDA also allows
+        attributes and values from the original element to be used in the new
+        SDA element where necessary.) #Attlist lists out all of the
+        attribute="value" pairs from the original code.
+    <dd><b class="l3heading">Value:</b> 
+        "<b class="alert">&lt;Anchor: <code class="alert2">#AttList</code> &gt;</b>"
+
+<dt><b class="subheading">Shape</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6</i></b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The SHAPE attribute defines the type of region to be defined for mapping
+        in the current AREA tag. The value specified here decides the number of
+        coordinates to list in the COORDS attribute. If the SHAPE attribute is
+        absent the shape is assumed to be of type <b class="alert">RECT</b>
+    <dd><b class="l3heading">Values:</b>  <b class="alert">RECT</b> 
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">RECTANGLE</b> |
+        <b class="alert">CIRC</b> | <b class="alert">CIRCLE</b> |
+        <b class="alert">POLY</b> | <b class="alert">POLYGON</b>
+
+<dt><b class="subheading">Suppress</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4-4.x</u></i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies that the dotted focus rectangle for this
+        element should be suppressed when the hyperlink has keyboard focus.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">FALSE</b> [<b class="magicword">DEFAULT</b>] |
+        <b class="alert">TRUE</b>
+
+<dt><b class="subheading">Tabindex</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O7</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        &quot;Tabbing&quot; is a method of giving access/focus to an active HTML
+        element using a standard keyboard sequence. All the active elements in a
+        document can be cycled through using this sequence (ex: Windows TAB key.)
+        The order of the active elements in this cycle is usually the order they
+        occur in the document, but the TABINDEX attribute allows a different order
+        to be established. The use of this attribute should create the following
+        tabbing order cycle if the browser supports the attribute:
+        <ol>
+        <li>Active elements using the TABINDEX attribute with positive integers are
+            navigated first. Low values are navigated first.
+        <li>Active elements not specifying any TABINDEX attribute
+        </ol>
+        Those elements carrying a DISABLED attribute or using negative TABINDEX
+        values do not participate in the tabbing cycle.
+    <dd><b class="l3heading">Values:</b> Positive or negative integers.
+
+<dt><b class="subheading">Target</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE3A1</b>|<span class="ns">M</span>|<b><i class="fs">N2</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        Transitional/Frameset HTML 4.x/XHTML 1.0 DTDs only. Dropped in XHTML 1.1.
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the named frame for the HREF hyperlink to
+        jump to when activated.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [The TARGET <a href="../target.htm">reserved names</a> apply.]
+
+<dt><b class="subheading">Title</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B2</b>|<b class="s">O3</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute suggests a title (advisory only) for the destination
+        resource. The TITLE attribute may be used for display prior to
+        accessing the destination resource (such as in a margin note or in a
+        pop-up box while the mouse is over the hyperlink), or for resources
+        that do not include titles (like graphics, plain text documents or
+        Gopher menus.)
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i class="fs">N6.1</i></b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the MIME type of the resource indicated
+        in the HREF attribute.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Alphanumeric MIME type]
+
+<dt><b class="subheading">URN</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute was originally meant to specify a more persistent
+        identifier for the NAME value of the hyperlink, but none of the popular
+        browsers ever implemented this attribute. It has since disappeared from
+        the HTML 3.2 recommendation.
+    <dd><b class="l3heading">Values:</b> NA
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+<dt><b class="subheading">Hyperlink to a document:</b>
+    <dd><div class="example">&lt;<b class="tagname">a</b>&#160;&#160;<span 
+        class="tagattrib">href</span>=&quot;http://www.foo.com/index.html&quot;
+        <span class="tagattrib">target</span>=&quot;frame1&quot;&gt;<br>
+        Link text that leads to index.html at www.foo.com<br>
+        &lt;/<b class="tagname">a</b>&gt;</div>
+<dt><b class="subheading">Hyperlink to a Bookmark in the current document:</b>
+    <dd><div class="example">&lt;<b class="tagname">a</b>&#160;&#160;<span 
+        class="tagattrib">href</span>=&quot;&#35;Bookmark1&quot;
+        <span class="tagattrib">target</span>=&quot;frame1&quot;&gt;<br>
+        Link text that leads to Bookmark1 in the current document<br>
+        &lt;/<b class="tagname">a</b>&gt;</div>
+<dt><b class="subheading">Hyperlink to a Bookmark in an external document:</b>
+    <dd><div class="example">&lt;<b class="tagname">a</b>&#160;&#160;<span 
+        class="tagattrib">href</span>=&quot;http://www.foo.com/index.html&#35;Bookmark1&quot;
+        <span class="tagattrib">target</span>=&quot;frame1&quot;&gt;<br>
+        Link text that leads to Bookmark1 in index.html at www.foo.com<br>
+        &lt;/<b class="tagname">a</b>&gt;</div>
+
+<dt><b class="subheading">Image map/Shaped hyperlink list in an OBJECT element:</b>
+    <dd><div class="example">&lt;<b class="tagname">object</b>&#160;&#160;<span 
+        class="tagattrib">type</span>=&quot;image/gif&quot; <span 
+        class="tagattrib">data</span>=&quot;http://www.foo.com/bigimage.gif&quot;
+        <span class="tagattrib">height</span>="50" <span class="tagattrib">width</span>="100"&gt;<br>
+        &lt;<b class="tagname">b</b>&gt;Menu:&lt;/<b class="tagname">b</b>&gt;&lt;<b class="tagname">br</b> /&gt;<br>
+        &lt;<b class="tagname">a</b>&#160;&#160;<span 
+        class="tagattrib">href</span>=&quot;http://www.foo.com/link1.html&quot;
+        <span class="tagattrib">shape</span>=&quot;RECT&quot;
+        <span class="tagattrib">coords</span>=&quot;0, 0, 50, 50&quot;&gt;Link 
+        text 1&lt;/<b class="tagname">a</b>&gt;&lt;<b class="tagname">br</b> /&gt;<br>
+
+        &lt;<b class="tagname">a</b>&#160;&#160;<span 
+        class="tagattrib">href</span>=&quot;http://www.foo.com/link2.html&quot;
+        <span class="tagattrib">shape</span>=&quot;RECT&quot;
+        <span class="tagattrib">coords</span>=&quot;50, 0, 100, 50&quot;&gt;Link 
+        text 2&lt;/<b class="tagname">a</b>&gt;&lt;<b class="tagname">br</b> /&gt;<br>
+        &lt;/<b class="tagname">object</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlineparent">In-line Parent</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b><br>
+        <b class="alert">Exceptions:</b> &lt;a&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b><br>
+        <b class="alert">Exceptions:</b> &lt;a&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Remember when creating an ISMap that the IMG element must have the ISMAP 
+        attribute and be inside a hyperlink to the external map file.
+    <li>Although these pages lists A HREF and A NAME separately in order to
+        emphasize the distinction in functionality between these two aspects of
+        the A element, the HREF and NAME attributes can co-exist in the same tag to
+        serve as both a jump point and a destination for a jump point.
+    <li>If you are using frames, be sure all hyperlinks in your sub-documents
+        have targets which indicate the desired destination frames.
+    <li>A commonly agreed-upon style issue is to make sure your hyperlink
+        text is descriptive. It is considered good practice to integrate
+        hyperlinks as seamlessly as possible into runs of text instead of
+        using something like the very obvious qualifier: &quot;Click Here&quot;
+    <li>The TITLE attribute is listed on this page both under the "Common
+        Attributes" and "Specific Attributes" categories - I generally consider
+        TITLE to be a "Common Attribute", but in the special case of the A
+        and LINK elements, this attribute was included in the HTML standards
+        at least as far back as HTML 2.0 - long before these attributes were
+        specified for any other element.
+    <li><b class="alert">DTD Note:</b> A reader pointed out to me that it is
+        also legal to use an A element without a NAME <em>or</em> HREF attribute (eg:
+        &lt;<b class="tagname">a</b> <span class="tagattrib">TITLE</span>="hello"&gt;content&lt;/<b
+        class="tagname">a</b>&gt;) but I don't have any idea why an author
+        might wish to do this.
+    <li><b class="alert">NOTE:</b> An additional method of invoking JavaScript
+        exists using the A HREF element combined with Script code in place of
+        the destination URL. The script code (either inline or externally
+        referenced) is executed when the user clicks on the hyperlink.
+        <dl>
+        <dt><b class="l3heading">Syntax:</b> [script-engine]:[script-code]
+            <dd>Where [script-engine] is the name of the scripting language used,
+                and [script-code] is either in-line script code or script code referenced
+                elsewhere in the document.
+        <dt><b class="l3heading">Example:</b> (displays an alert message box that
+            contains the text 'hi there')
+            <dd>&lt;<b class="tagname">a</b>
+                <span class="tagattrib">HREF</span>=&quot;JavaScript:alert('hi
+                there')&quot;&gt;Click me to see a message.&lt;/<b class="tagname">a</b>&gt;
+        </dl>
+    <li><em>"How do you override the underlining of hyperlinks?"</em> - Here is
+        a document that <a href="http://www.blooberry.com/indexdot/css/topics/stylefaq.htm#fifteen">addresses
+        this common question.</a>
+    <li><b class="alert">URL Encoding:</b><br>
+        URLs only allow a subset of allowable
+        <a href="../text.htm">ISO-8859-1 (ISO-Latin)</a>
+        characters to be used. Any other characters must be encoded using
+        a special escape syntax that uses combinations of the allowable
+        subset. A separate page in the Topics section covers
+        <a href="../../topics/urlencoding.htm">URL encoding</a> in much greater
+        detail, and even provides a little utility to automatically create
+        URL encodings of characters.
+    <li><b class="alert">Trivia?:</b> One reader asked me what other hyperlink
+        prefixes existed besides "mailto:" and "javascript:" - The following is not 
+        a definitive answer, but I did find one list of prefixes allowed in
+        Netscape 4.x/6.x by browsing the Mozilla source code: "about:",
+        "javascript:", "livescript:", "mailbox:", "mailto:", "mocha:", "news:",
+        "pop3:", "snews:", "telnet:", "view-source:" and "wysiwyg:". It looks like IE
+        supports "telnet:" and "view-source:" as well, but I don't know what ELSE it supports,
+        or whether this information is or even "should be" useful to anyone. 8-}
+    <li><b class="alert">Further on the previous point:</b> One reader sent in a 
+        <a href="http://www.w3.org/Addressing/schemes.html">W3.org link</a> on 
+        URI addressing schemes that attempts to be a definitive list (whether some of 
+        them work in any of the major browsers or not is left as an exercise for the 
+        reader to verify ;-})
+    <li><b class="alert">More about shaped hyperlinks:</b> If you're like me, shaped 
+        hyperlinks (those extra SHAPE and COORDS attributes) didn't make a lot of 
+        sense - the HTML spec doesn't go out of its way to explain why an author 
+        might choose to use these attributes.
+        <br><br>
+        At first blush, one might think that a shaped hyperlink could be used to 
+        define a single clickable sub-area within a hyperlinked object (such as an image;)
+        You could perhaps also use A elements inside a MAP element instead of using
+        AREA elements. A third scenario is using shaped hyperlinks within an 
+        OBJECT element to define a clickable map; it is this last which provides
+        the interesting use-case in supporting browsers. This case acts like a 
+        MAP/USEMAP scenario for an image, and the regular hyperlinks themselves 
+        are not displayed (because they are nested in the OBJECT element.) In 
+        this case though, the shape map is for an OBJECT region and it degrades 
+        better to non-supporting browsers better than USEMAP-imagemaps can. For 
+        browsers that can not support rendering the OBJECT as specified, you are 
+        left with a simple and very usable list of hyperlinks. See the example above.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/a/aname-bp1.htm">[Test]</a>
+        When jumping to a bookmark/fragment URL in the last viewable screen/page of
+        a page that is longer than one screen, Internet Explorer versions up to
+        and including 3.0 scroll such that the bookmark is at the top of the page,
+        leaving blank space at the end of the document. This displays the document
+        in a position that is not possible to achieve using scrollbar controls.
+        Internet Explorer 4.0 and all Netscape versions display the document as low
+        as it can normally be scrolled and no more.
+    <li><a href="../../../testing/html/tags/a/ahref-bp3.htm">[Test]</a>
+        Netscape 4.x has a bug: A location in a document can be defined using the
+        ID attribute as well as the A NAME element. In Netscape 4.x this can be
+        accessed using hyperlinks from external documents, but if the hyperlink
+        is within the same document, the link does nothing.
+    <li>Internet Explorer 4+ and Netscape 6+ implements TITLE as a hovering tooltip
+        while Opera 3.x+ implements it as both a tooltip and a caption in the browser
+        toolbar area.
+    <li><a href="../../../testing/html/tags/a/ahref-bp2.htm">[Test]</a>
+        IE4+ uses the TITLE attribute as the Favorites label for a URL when placed
+        via the right-mouseclick context menu.
+    <li><a href="../../../testing/html/tags/a/ahref-bp1.htm">[Test]</a>
+        A brief history of FONT COLOR and A HREF interaction behavior:
+        <dl>
+         <dt><b class="alert">Netscape 2,3:</b>
+             <dd>Coloring Hyperlinks only works if the FONT COLOR is applied INSIDE
+                 the hyperlink, and ONLY if both are INSIDE a table cell.
+        <dt><b class="alert">Internet Explorer 1, 2, 3, Netscape 4.0 Beta 1-3, Opera:</b>
+            <dd>Coloring hyperlinks does not work at all.
+        <dt><b class="alert">Internet Explorer 4.0, Netscape 4.0 Beta 4+:</b>
+            <dd>Coloring hyperlinks works anywhere (not just inside tables) if the
+                FONT COLOR is applied INSIDE the hyperlink.
+        </dl>
+    <li><a href="../../../testing/html/tags/l/layer-bp2.htm">[Test]</a>
+        Netscape 4.x can not correctly hyperlink to a bookmark (A NAME) that is
+        nested inside a LAYER element from another document. It succeeds in
+        jumping to the document, and it <em>does</em> attempt to jump within the
+        document, but I didn't see a particular pattern to where it was jumping
+        to...but it isn't the correct location. Hyperlinking to a bookmark
+        nested in a LAYER from within the same document appears to work correctly.
+    <li>I list the METHODS, REL, REV and URN attributes as being supported in IE
+        based only upon Microsoft's documentation. While this data might be
+        reachable via the DOM, these attributes certainly do not have any default
+        presentational results.
+    <li>The HREFLANG/REL/REV/TYPE attributes are exposed in Netscape 6.1+ by 
+        invoking a context menu on the hyperlink (PC: right clicking) and 
+        choosing "properties."
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

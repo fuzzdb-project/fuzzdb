@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>OPTGROUP: Browser Peculiarities: Requiring a closing tag</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE6: IE seems to need OPTION elements to be explicitly closed 
+for the OPTGROUP element to work correctly. In HTML though, end tags for OPTION 
+are, well..."optional", so this just seems to be a bug (Note: in XHTML the 
+closing tags are NOT optional.)</div>
+
+<br>
+<b>OPTGROUP element with closing tags for OPTION elements:</b>
+<hr>
+filler text 
+<select  name="Familytree">
+<option label="Bill" value="bill">Bill Smith </option>
+<option label="Mary" value="mary">Mary Smith </option>
+<optgroup label="Joe">
+    <option value="michael">Michael Smith </option>
+    <option value="susan">Susan Smith </option>
+    <option value="howard">Howard Smith </option>
+</optgroup>
+</select>
+filler text
+<hr>
+<br>
+
+<br>
+<b>OPTGROUP element without closing tags for OPTION elements:</b>
+<hr>
+filler text 
+<select  name="Familytree">
+<option label="Bill" value="bill">Bill Smith
+<option label="Mary" value="mary">Mary Smith
+<optgroup label="Joe">
+    <option value="michael">Michael Smith
+    <option value="susan">Susan Smith
+    <option value="howard">Howard Smith
+</optgroup>
+</select>
+filler text
+<hr>
+<br>
+
+
+</body>
+</html>

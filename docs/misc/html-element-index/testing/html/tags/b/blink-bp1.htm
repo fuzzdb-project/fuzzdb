@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BLINK: Browser peculiarity - rendering effects in IE and Opera</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<ol>
+<li class="assert">Internet Explorer 4.0 now recognizes  this element only so far 
+    as common attributes are concerned - BLINK does not actually produce a blinking 
+    content effect in IE, but style sheet attributes and event handlers can be successfully applied.</li>
+<li class="assert">Opera 7.0 recognized  this element in 7.0-7.11 only so far as 
+    common attributes are concerned - BLINK did not actually produce a blinking 
+    content effect, but ID, CLASS, STYLE and TITLE could be successfully applied. 
+    Beginning with 7.2, a blinking effect is produced.</li>
+</ol>
+
+<hr>
+<b>Test 1:</b><br>
+filler text 
+<blink>Plain BLINK element, no attributes</blink> 
+filler text
+<br><br>
+
+<b>Test 2:</b><br>
+filler text 
+<blink class="test" id="test1" style="word-spacing: 20px" title="this is a title">BLINK 
+element, with class="test" (Gray color), id="test1" (green background), 
+style ("word-spacing: 20px"), and title ("this is a title" on hover) attributes</blink> 
+filler text
+<hr>
+
+</body>
+</html>

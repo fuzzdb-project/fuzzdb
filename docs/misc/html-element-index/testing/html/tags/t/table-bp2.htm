@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>TABLE/TD/TH/ETC: Browser Peculiarities: Affects of FONT on nested tables</title>
+<style>
+.assert { color: green }
+.warn   { color: maroon }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">
+The effects of the FONT element are generally not inherited by content nested inside tables. If an author wishes to ensure that the effects of the FONT element are applied everywhere, the element must also be applied for every table cell in a table (in such a case CSS would be a simpler answer.) These are the FONT attributes which apply to content within tables:
+<dl>
+<dt>Internet Explorer
+    <dd>2.0: COLOR and FACE applied, SIZE ignored 
+    <dd>3.0+: FACE applied, COLOR and SIZE ignored 
+<dt>Netscape:
+    <dd>None of the FONT element attributes has any effect on content nested in tables. 
+<dt>Opera:
+    <dd>All FONT element attributes have an effect on content nested in tables.
+</div>
+<br>
+
+<b class="warn">NOTE: This test has a HTML 4.0 Strict doctype to trigger Standards mode</b><br><br>
+
+<b>Plain TABLE border=2, no FONT surrounding:</b>
+<hr>
+filler text
+<table border="2">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Plain TABLE border=2, no FONT SIZE=6 surrounding:</b>
+<hr>
+<font size="6">
+filler text
+<table border="2">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+</font>
+<hr>
+<br>
+
+<b>Plain TABLE border=2, no FONT color=green surrounding:</b>
+<hr>
+<font color="green">
+filler text
+<table border="2">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+</font>
+<hr>
+<br>
+
+<b>Plain TABLE border=2, no FONT face=courier surrounding:</b>
+<hr>
+<font face="courier">
+filler text
+<table border="2">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+</font>
+<hr>
+<br>
+
+</body>
+</html>

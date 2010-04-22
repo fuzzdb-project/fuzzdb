@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Stress - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">stress</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>]<br></td>
+    <td colspan=3 align=center><b class="alert">Other Aural Properties</b><br></td>
+</tr>
+<tr>
+    <td><a href="volume.htm">volume</a><br>
+    <a href="richness.htm">richness</a><br>
+    <a href="azimuth.htm">azimuth</a><br>
+    <a href="elevation.htm">elevation</a><br>
+    <a href="voicefam.htm">voice-family</a><br>
+    <a href="speak.htm">speak</a><br></td>
+    <td><a href="speakpunc.htm">speak-punctuation</a><br>
+    <a href="speaknum.htm">speak-numeral</a><br>
+    <a href="pitch.htm">pitch</a><br>
+    <a href="pitchrange.htm">pitch-range</a><br>
+    <a href="speakrate.htm">speech-rate</a><br>
+    <a href="playdur.htm">play-during</a><br></td>
+    <td><a href="pause.htm">pause</a><br>
+    <a href="pausebef.htm">pause-before</a><br>
+    <a href="pauseaft.htm">pause-after</a><br>
+    <a href="cue.htm">cue</a><br>
+    <a href="cuebef.htm">cue-before</a><br>
+    <a href="cueaft.htm">cue-after</a><br>  </td>
+</tr>
+<tr><td align=center colspan=4>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">50</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>All</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Aural</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/aural.html#voice-char-props">CSS2: Sect. 19.8</a>,
+        <a href="http://www.w3.org/TR/CSS21/aural.html#voice-char-props">CSS2.1: App A.9</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is similar to the 'pitch-range' property - it specifies the maximum 
+        output height of &quot;local peaks&quot; in the current voice's wave form.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">[number]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This is an integer value between 0 and 100. Values are based on
+        language settings (some languages tend to produce higher vocal
+        stresses than others.)</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">body</b> {
+        <span class="property">stress:</span> 75 }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">body</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">stress:</span>
+        75&quot;&gt;text&lt;/<b class="tagname">body</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Before its inclusion in CSS2, this property was first proposed in the W3C
+        Working Draft "Aural Cascading Style Sheets (ACSS)" (1/7/97,
+        <a href="http://www.w3.org/Style/CSS/Speech/NOTE-ACSS">http://www.w3.org/Style/CSS/Speech/NOTE-ACSS</a>)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to report.
+</ul>
+
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

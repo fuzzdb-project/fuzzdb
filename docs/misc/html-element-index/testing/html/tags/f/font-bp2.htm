@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>FONT: Browser peculiarity - SIZE value handling</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Decimal values for SIZE are usually rounded, and values that 
+are out of bounds should be set to the nearest equivalent value.</div>
+<br>
+
+<b>FONT SIZE = -50, followed by SIZE=1 reference</b>
+<hr>
+filler text <font size="-50">Font size = -50 test</font> filler text
+<font size="1">Font size = 1 test</font> filler text
+<hr>
+<br>
+
+<b>FONT SIZE=0, followed by SIZE=1 reference</b>
+<hr>
+filler text <font size="0">Font size = 0 test</font> filler text
+<font size="1">Font size = 1 test</font> filler text
+<hr>
+<br>
+
+<b>FONT SIZE=10, followed by SIZE=7 reference</b>
+<hr>
+filler text <font size="10">Font size = 10 test</font> filler text
+<font size="7">Font size = 7 test</font> filler text
+<hr>
+<br>
+
+<b>FONT SIZE=6.1, followed by SIZE=6 reference</b>
+<hr>
+filler text <font size="6.1">Font size = 6.1 test</font> filler text
+<font size="6">Font size = 6 test</font> filler text
+<font size="7">Font size = 7 test</font> filler text
+<hr>
+<br>
+
+<b>FONT SIZE=6.5, followed by SIZE=7 reference</b>
+<hr>
+filler text <font size="6.5">Font size = 6.5 test</font> filler text
+<font size="6">Font size = 6 test</font> filler text
+<font size="7">Font size = 7 test</font> filler text
+<hr>
+<br>
+
+<b>FONT SIZE=6.6, followed by SIZE=7 reference</b>
+<hr>
+filler text <font size="6.6">Font size = 6.6 test</font> filler text
+<font size="6">Font size = 6 test</font> filler text
+<font size="7">Font size = 7 test</font> filler text
+<hr>
+<br>
+
+</body>
+</html>

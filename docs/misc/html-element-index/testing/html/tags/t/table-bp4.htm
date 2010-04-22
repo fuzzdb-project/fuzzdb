@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TABLE: Browser Peculiarities: Netscape and invalid BACKGROUND reference</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4.x error condition bug: if a BGCOLOR and BACKGROUND 
+attribute have been specified for the table, and the URL to the image fails to load, 
+the bgcolor should be used instead. Netscape 4.x does that for a moment, but then 
+this changes to a block only the size of the broken image placeholder with the 
+specified BGCOLOR in the upper, left corner of each of the cells in the table.</div>
+<br>
+
+<b>Reference: Plain TABLE; background="wrench.gif", bgcolor="green":</b>
+<hr>
+filler text
+<table background="../../../objects/images/wrench.gif" bgcolor="green">
+<tr>
+    <td>TD Cell 1 TD Cell 1<br>TD Cell 1 TD Cell 1</td>
+    <th>TH Cell 2 TH Cell 2<br>TH Cell 2 TH Cell 2</th>
+</tr>
+<tr>
+    <th>TH Cell 3 TH Cell 3<br>TH Cell 3 TH Cell 3</th>
+    <td>TD Cell 4 TD Cell 4<br>TD Cell 4 TD Cell 4</td>
+</tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Reference: Plain TABLE; No background, bgcolor="green":</b>
+<hr>
+filler text
+<table bgcolor="green">
+<tr>
+    <td>TD Cell 1 TD Cell 1<br>TD Cell 1 TD Cell 1</td>
+    <th>TH Cell 2 TH Cell 2<br>TH Cell 2 TH Cell 2</th>
+</tr>
+<tr>
+    <th>TH Cell 3 TH Cell 3<br>TH Cell 3 TH Cell 3</th>
+    <td>TD Cell 4 TD Cell 4<br>TD Cell 4 TD Cell 4</td>
+</tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Reference: Plain TABLE; valid background="wrench.gif", no bgcolor:</b>
+<hr>
+filler text
+<table background="../../../objects/images/wrench.gif">
+<tr>
+    <td>TD Cell 1 TD Cell 1<br>TD Cell 1 TD Cell 1</td>
+    <th>TH Cell 2 TH Cell 2<br>TH Cell 2 TH Cell 2</th>
+</tr>
+<tr>
+    <th>TH Cell 3 TH Cell 3<br>TH Cell 3 TH Cell 3</th>
+    <td>TD Cell 4 TD Cell 4<br>TD Cell 4 TD Cell 4</td>
+</tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Test: Plain TABLE; Invalid background="noexist.gif", no bgcolor:</b>
+<hr>
+filler text
+<table background="noexist.gif">
+<tr>
+    <td>TD Cell 1 TD Cell 1<br>TD Cell 1 TD Cell 1</td>
+    <th>TH Cell 2 TH Cell 2<br>TH Cell 2 TH Cell 2</th>
+</tr>
+<tr>
+    <th>TH Cell 3 TH Cell 3<br>TH Cell 3 TH Cell 3</th>
+    <td>TD Cell 4 TD Cell 4<br>TD Cell 4 TD Cell 4</td>
+</tr>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Test: Plain TABLE; Invalid background="noexist.gif", bgcolor=green:</b>
+<hr>
+filler text
+<table background="noexist.gif" bgcolor="green">
+<tr>
+    <td>TD Cell 1 TD Cell 1<br>TD Cell 1 TD Cell 1</td>
+    <th>TH Cell 2 TH Cell 2<br>TH Cell 2 TH Cell 2</th>
+</tr>
+<tr>
+    <th>TH Cell 3 TH Cell 3<br>TH Cell 3 TH Cell 3</th>
+    <td>TD Cell 4 TD Cell 4<br>TD Cell 4 TD Cell 4</td>
+</tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

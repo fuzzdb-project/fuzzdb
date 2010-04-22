@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IFRAME: Browser Peculiarities: MARGINHEIGHT and MARGINWIDTH attributes</title>
+<style>
+.assert { color: green; }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">There appears to be different default interior padding values 
+controlled by the MARGINHEIGHT and MARGINWIDTH attributes. 
+In other words, if only one of these attributes is specified, the default for the 
+unspecified attribute will be different than the default for the attribute if BOTH 
+attributes are specified. [That looks confusing even to ME =)] It is possible 
+(though unverified) that in instances where only one value is present it is used 
+as the margin value for BOTH dimensions.</div>
+<br>
+
+<b>Simple IFRAME, no MARGINHEIGHT or MARGINWIDTH attributes applied:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" height="100" width="100"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, MARGINWIDTH=20; no MARGINHEIGHT specified:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" marginwidth="20" height="100" width="100"></iframe>
+filler text
+<hr>
+<br>
+
+<b>Simple IFRAME, MARGINWIDTH=20, MARGINHEIGHT=20:</b>
+<hr>
+filler text
+<iframe src="iframetest.htm" marginwidth="20" marginheight="20" height="100" width="100"></iframe>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

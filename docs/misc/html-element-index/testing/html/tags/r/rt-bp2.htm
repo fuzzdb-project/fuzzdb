@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>RT: Browser Peculiarities: Placement of RT within RUBY element</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE: If RT content exists before the RB element, the RT content 
+is rendered small, but inline before the RB content.</div>
+<br>
+
+<b>Plain RUBY element, default RT occurs after RB:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>HTML</rb>
+   <rt>HyperText Markup Language</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Plain RUBY element, default RT occurs before RB:</b>
+<hr>
+filler text 
+<ruby>
+   <rt>HyperText Markup Language</rt>
+   <rb>HTML</rb>
+</ruby>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

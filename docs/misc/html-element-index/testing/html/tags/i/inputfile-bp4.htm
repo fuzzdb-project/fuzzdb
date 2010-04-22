@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=File: Browser Peculiarities: Effects of the READONLY attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Using a READONLY attribute in IE4 and IE5 on this element still 
+allows a user to invoke the file...open dialog (from the "Browse..." button), although 
+the text field is not directly editable. In IE5.5 plus, both the text field AND the 
+file...open dialog are not usable.</div>
+<br>
+
+<b>Plain Input Type=File field, no READONLY attribute:</b>
+<hr>
+filler text 
+<form>
+<input type="file"><br>
+</form>
+filler text
+<hr>
+<br>
+
+<b>Input Type=File field, READONLY attribute present. </b>
+<hr>
+filler text 
+<form>
+<input type="file" readonly><br>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

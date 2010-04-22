@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>APPLET: Browser peculiarity - mouse events and select/highlighting an applet</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">A bad bug exists in the Netscape 6 betas where selecting text 
+that included an applet would crash the browser if a mouse event handler was 
+attached to the applet. This was fixed by 6.0 final.</div>
+<br>
+<br>
+
+<b>Test: Use the mouse to select the "filler text" on both sides of the applet</b>
+<hr>
+filler text 
+<applet code="../../../objects/urlbutton.class" width="200" height="100" 
+        onmouseover="alert("the mouse moved");">
+   <param name="url" value="Example Text 1" />
+</applet>
+filler text<br>
+<hr>
+<br>
+
+
+</body>
+</html>

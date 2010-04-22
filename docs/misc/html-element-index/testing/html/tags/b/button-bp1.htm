@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BUTTON: Browser peculiarity - DISABLED attribute and nested tables</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<div class="assert">Netscape 6: If the DISABLED attribute is used, it grays out the 
+content, but I noticed that it did not gray out content inside tables that are used 
+in the BUTTON.</div>
+<br>
+
+<form>
+<b>Button element with embedded table, no DISABLED attribute:</b>
+<hr>
+filler text 
+<button>This is a button 
+<table border="1"><tr><td>Cell 1</td><th>Cell 2</th></tr></table>
+This is a button</button> 
+filler text
+<hr>
+</form>
+<br>
+
+<form>
+<b>Button element with embedded table, DISABLED attribute present:</b>
+<hr>
+filler text 
+<button disabled>This is a button 
+<table border="1"><tr><td>Cell 1</td><th>Cell 2</th></tr></table>
+This is a button</button> 
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

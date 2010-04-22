@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Breaking out of frames</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Breaking Out Of Frames</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#problem">The Problem</a> | <a href="#solution">Some Solutions</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td><hr size=1></td></tr>
+<tr><td align=left>
+<dl>
+<dt><a name="problem"></a><big><b class="mainheading">The Problem</b></big>
+    <dd>Many people view the use of frames as an evil scourge on the face
+        of this planet. Any arguments to the contrary will have no effect
+        on the many readers ...and authors, who feel this way.
+        <br><br>
+
+        Which leads to the common scenario many people find themselves in:
+        finding yourself "trapped" in a frameset. How do you easily break
+        out of frames?
+</dl>
+
+<dl>
+<dt><a name="solution"></a><big><b class="mainheading">Some Solutions</b></big>
+<dt><b class="subheading">HTML Solution</b>
+    <dd><b class="l3heading">Description:</b><br>
+        Use "target=_top" in all hyperlinks or the &lt;<b class="tagname">base</b>
+        <span class="tagattrib">TARGET</span>="_top"&gt; in the HEAD element.
+        This doesn't solve the problem of the current page being trapped in a
+        frameset, but all subsequent pages opened will not be in a frameset.
+    <dd><b class="l3heading">Example:</b><br>
+        <div class="example">&lt;<b class="tagname">a</b>
+        <span class="tagattrib">href</span>="http://www.example.com/"
+        <span class="tagattrib">target</span>="_top"&gt;Link text&lt;/<b
+              class="tagname">a</b>&gt;</div>
+
+<dt><b class="subheading">Javascript Solution</b>
+    <dd><b class="l3heading">Description:</b><br>
+        Using an inline script with an event handler or invoking a function
+        in a SCRIPT block, the current document can be forced into the entire
+        main window if it is not currently in that state. Note that the
+        Javascript function example is more versatile in that it can be
+        contained in a reusable external script.
+    <dd><b class="l3heading">Example 1 (Inline script, BODY onLoad example):</b><br>
+        <div class="example">&lt;<b class="tagname">body</b>
+        <span class="tagattrib">onload</span>=&quot;if (window != window.top)
+        { top.location.href=location.href }&quot;&gt;</div>
+    <dd><b class="l3heading">Example 2 (External Javascript function, BODY onLoad example):</b><br>
+        <div class="example">&lt;<b class="tagname">head</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;<b class="tagname">script</b>
+        <span class="tagattrib">language</span>="JavaScript"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;!--<br>
+        &nbsp;&nbsp;&nbsp;function breakOut()
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ if (window != top)
+        top.location.href = location.href; }<br>&nbsp;&nbsp;&nbsp;--&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;/<b class="tagname">script</b>&gt;<br>
+        &lt;/<b class="tagname">head</b>&gt;<br>
+        &lt;<b class="tagname">body</b>
+        <span class="tagattrib">onload</span>=&quot;breakOut();&quot;&gt;</div>
+ </dl></td></tr>
+<tr><td><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

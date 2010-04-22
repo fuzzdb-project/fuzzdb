@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>RUBY: Browser Peculiarities: RT rendering in IE</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">IE: If RT content exists before the RUBY content, the RT content 
+is rendered small, but inline before the RUBY content.</div>
+<br>
+
+<b>Simple RUBY element, RB followed by RT element:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>RUBY</rb>
+   <rt>Really Ugly Brown Yarn</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Simple RUBY element, plain text (RB implied), followed by RT element:</b>
+<hr>
+filler text 
+<ruby>
+   RUBY
+   <rt>Really Ugly Brown Yarn</rt>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Simple RUBY element, RT followed by RB element:</b>
+<hr>
+filler text 
+<ruby>
+   <rt>Really Ugly Brown Yarn</rt>
+   <rb>RUBY</rb>
+</ruby>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

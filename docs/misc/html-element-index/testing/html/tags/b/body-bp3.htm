@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BODY: Browser peculiarity/tip - BODY attributes with invalid BACKGROUND and 
+    no BGCOLOR</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body background="../../../objects/images/tilepattern.gif" 
+text="#0000cc" link="yellow" vlink="#ff0000">
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">If the background image fails to download for any reason and 
+no BGColor is specified it is common practice for browsers not to apply the other 
+coloring attributes (this ensures readability with the default browser color schemes.)</div>
+<br>
+
+<b>This document contains a valid background URL reference, text=#0000cc (blue), 
+link=yellow, vlink=#ff0000. No BGColor is specified.</b>
+<hr>
+filler text
+<b><a href="http://www.yahoo.com/">Link text</a></b>
+<b><a href="http://www.yahoobadoogle.com/">VLink text</a></b>
+filler text
+<hr>
+
+</body>
+</html>

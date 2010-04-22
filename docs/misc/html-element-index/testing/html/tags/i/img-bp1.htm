@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IMG: Browser Peculiarities: Alternate form - IMAGE element</title>
+<style>
+.assert { color: green }
+.test   { height:50px; width:20px }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Thought you might like to know: All the browsers surveyed also 
+support another form of this element (which is not a part of ANY HTML standard.) 
+The string "IMAGE" can replace "IMG". Internet Explorer supports this since version 1.0, 
+Mosaic since at least 2.1, and Netscape since version 1.1. Internet Explorer did 
+not support this in v4.0 Beta 1 (presumably because the parser/rendering engine 
+for 4.0 was re-built from scratch), but the strange syntax is again recognized in 
+4.0 Beta 2.</div>
+<br>
+
+<b>Simple IMG reference (left.gif):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif"> 
+filler text
+<hr>
+<br>
+
+<b>Simple IMAGE reference (right.gif):</b>
+<hr>
+filler text 
+<image src="../../../objects/images/right.gif"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with a combination of standard attributes 
+(height=50, width=100, border=10, hspace=20):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" height="50" width="100" border="10" hspace="20"> 
+filler text
+<hr>
+<br>
+
+<b>IMAGE reference (right.gif) with a combination of standard attributes 
+(height=50, width=100, border=10, hspace=20):</b>
+<hr>
+filler text 
+<image src="../../../objects/images/right.gif" height="50" width="100" border="10" hspace="20"> 
+filler text
+<hr>
+<br>
+
+<b>IMG reference (left.gif) with several CORE attributes (class="test" 
+[where test is: "height:50px; width:20px"], style="border: thick dashed green",
+title="this is the title for the image"):</b>
+<hr>
+filler text 
+<img src="../../../objects/images/left.gif" class="test" style="border: thick dashed green" 
+title="this is the title for the image"> 
+filler text
+<hr>
+<br>
+
+<b>IMAGE reference (left.gif) with several CORE attributes (class="test" 
+[where test is: "height:50px; width:20px"], style="border: thick dashed green",
+title="this is the title for the image"):</b>
+<hr>
+filler text 
+<image src="../../../objects/images/right.gif" class="test" style="border: thick dashed green" 
+title="this is the title for the image"> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>

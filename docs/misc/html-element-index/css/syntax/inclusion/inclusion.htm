@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Cascading Style Sheets Syntax - Inclusion Methods</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">Inclusion Methods</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0><tr>
+<td><font size=2><a href="../../index.html">Main Index</a> |
+    <a href="../../propindex/font.htm">Property Index</a> |
+    <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../../history/browsers.htm">Browser History</a></font></td>
+</tr></table>
+</div>
+
+<dl>
+<dt><big><b class="mainheading">Attaching Style to Documents</b></big>
+    <dd>There are three ways to attach style information to documents in CSS, two
+        of which are only applicable to HTML documents. Each of the main methods
+        has its own place in the cascading hierarchy, such that style information
+        can be specified using any or all of these methods for the same document,
+        if the document language permits.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Attachment Methods</b></big>
+<dt><a href="external.htm">External Style Sheets</a>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Applicable To:</b> HTML and XML
+    <dd><b class="l3heading">Description:</b><br>
+        A URL reference to an entire style sheet. Multiple external style sheet
+        references may be included in a document. The
+        <a href="../atrules/import.htm">@import At-Rule</a> may also be used in
+        this syntax for including one or more style rule fragments from
+        disparate URL locations.
+
+<dt><a href="embedded.htm">Embedded Style Sheets</a>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B2</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Applicable To:</b> HTML specific syntax, using the
+        <a href="http://www.blooberry.com/indexdot/html/tagpages/s/style.htm">STYLE</a>
+        <span class="external">[--&gt;Index DOT Html]</span> element.
+    <dd><b class="l3heading">Description:</b><br>
+        An entire style sheet is included in the HEAD section of a document.
+        Multiple STYLE blocks may be present in a document. The
+        <a href="../atrules/import.htm">@import At-Rule</a> may also be used
+        in this syntax for including one or more style rule fragments from
+        disparate URL locations.
+
+<dt><a href="inline.htm">In-line Styles</a>
+<dt>[<b><i class="fs">CSS1</i></b>|<b class="s">CSS2</b>|<b class="s">CSS2.1</b>]
+    [<b><i class="fs">IE3</i></b>|<b class="s">N4B3</b>|<b class="s">O3.5</b>|<b class="s">S1</b>]
+    <dd><b class="l3heading">Applicable To:</b> HTML specific syntax, using the
+        common STYLE attribute for HTML elements.
+    <dd><b class="l3heading">Description:</b><br>
+        This method uses a limited form of CSS syntax, consisting solely of a
+        series of <a href="../declaration.htm">CSS style Declarations</a>.
+</dl>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

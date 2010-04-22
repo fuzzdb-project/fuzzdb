@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>RT: Browser Peculiarities: Position of RT using CSS</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">The Ruby Text can be positioned above or inline relative to 
+the main Ruby content with the 'ruby-position' CSS property.</div>
+<br>
+
+<b>Plain RUBY element, default RT position:</b>
+<hr>
+filler text 
+<ruby>
+   <rb>HTML</rb>
+   <rp>(</rp> <rt>HyperText Markup Language</rt> <rp>)</rp>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Plain RUBY element, RT position specified with CSS 'ruby-position: above' on RUBY element:</b>
+<hr>
+filler text 
+<ruby style="ruby-position: above">
+   <rb>HTML</rb>
+   <rp>(</rp> <rt>HyperText Markup Language</rt> <rp>)</rp>
+</ruby>
+filler text
+<hr>
+<br>
+
+<b>Plain RUBY element, RT position specified with CSS 'ruby-position: inline' on RUBY element:</b>
+<hr>
+filler text 
+<ruby style="ruby-position: inline">
+   <rb>HTML</rb>
+   <rp>(</rp> <rt>HyperText Markup Language</rt> <rp>)</rp>
+</ruby>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

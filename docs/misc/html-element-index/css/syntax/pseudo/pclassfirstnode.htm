@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: First-Node - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>first-node</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">N6</i></b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Document-Tree<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="pclassroot.htm">root</a><br>
+    <a href="pclassempty.htm">empty</a><br>
+    <a href="pclassnot.htm">not</a><br>
+    <a href="pclassfirstchild.htm">first-child</a><br></td>
+    <td valign=top><a href="pclasslastchild.htm">last-child</a><br>
+    <a href="pclasslastnode.htm">last-node</a><br>
+    <a href="pclasslang.htm">lang</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Any</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The First-node Pseudo-class selects the first occurence of an element
+        in the document tree. If you omit an element selector, it <em>SHOULD</em>
+        select <em>ALL</em> first-occurrences of each element in the document tree.
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">div:first-node</b>
+        { <span class="property">background-color:</span> yellow }<br>
+        (selects the first occurrence of a DIV element in the document and makes
+        its background yellow.)</div>
+    <dd><div class="example">In-Line:&#160; NA</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Netscape 6.x: I'm not exactly sure how it is determining "first occurrence"
+        in some situations...some situations which I consider to be NOT "first
+        occurrence" are being selected - I wonder what order the document tree
+        is being examined in.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

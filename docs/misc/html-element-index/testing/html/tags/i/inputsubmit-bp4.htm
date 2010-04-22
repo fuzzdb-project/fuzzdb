@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Submit: Browser Peculiarities: Space preservation</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer 4.0 honors all whitespace and carriage returns 
+in the value attribute for this element. The button will preserve and display them 'as-is'. 
+Other browsers and earlier versions of Internet Explorer do not do this.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Submit field, short value ("submit button"), no extra spaces:</b>
+<hr>
+filler text
+<input type="submit" value="submit button">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Submit field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;submit&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 normal spaces before, in between and after words:</b>
+<hr>
+filler text
+<input type="submit" value="    submit    button    ">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Submit field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;submit&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 non-breaking space character entities before, in between and after words:</b>
+<hr>
+filler text
+<input type="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;submit&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Submit field, short value with linefeed in between
+("submit \n button"):</b>
+<hr>
+filler text
+<input type="submit" value="submit
+button">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Textarea: Browser Peculiarities: Rows/Cols ignored if Width/Height used</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Opera 4: If you use the HEIGHT and WIDTH attributes, the ROWS 
+and COLS attributes are ignored.</div>
+<br>
+
+<form>
+<b>Textarea with no rows/cols and no height/width:</b>
+<hr>
+filler text
+<textarea name="ta1">value 1</textarea>
+filler text
+<hr>
+</form>
+
+<form>
+<b>Textarea with rows/cols set (rows=4 cols=60) and no height/width:</b>
+<hr>
+filler text
+<textarea name="ta2" rows="4" cols="60">value 2</textarea>
+filler text
+<hr>
+</form>
+
+<form>
+<b>Textarea with no rows/cols set and height/width set (height=30 width=200):</b>
+<hr>
+filler text
+<textarea name="ta3" height="30" width="200">value 3</textarea>
+filler text
+<hr>
+</form>
+
+<form>
+<b>Textarea with rows/cols set (rows=15 cols=10) and height/width set (height=50 width=300):</b>
+<hr>
+filler text
+<textarea name="ta4" rows="10" cols="5" height="50" width="300">value 4</textarea>
+filler text
+<hr>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Tfoot</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Table Footer</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b><i class="fs">IE3A1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Optional</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>In all HTML 4.x/XHTML DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>Tables</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">table-row</b>", "<b class="alert">table-row-group</b>", "<b class="alert">table-footer-group</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.3">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_tablemodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This element is part of the <a href="../tables.htm#complex">Complex Table
+        Model</a> which allows a finer level of control than the
+        <a href="../tables.htm#simple">Simple Table Model</a> while maintaining
+        backward compatibility with the simpler model. The TFOOT element is part of
+        a trio of table grouping elements that organize a series of Table Rows
+        <a href="tr.htm">[TR]</a> into Header <a href="thead.htm">[THEAD]</a>,
+        Body <a href="tbody.htm">[TBODY]</a> and Footer [TFOOT] sections.
+        <br><br>
+
+        The THEAD and TFOOT section markers are optional, but one or more TBODY
+        sections are always required. If present, each THEAD, TBODY and TFOOT
+        element must contain one or more TR tag grouping. To allow for backward
+        compatibility with the older Simple Table Model, if no TBODY structures
+        exist in a table, the entire set of row groupings [TR] are assumed to be
+        a single TBODY.
+        <br><br>
+
+        The TFOOT section is used to duplicate footer information when a table must
+        be broken across boundaries (such as printed pages, etc.) or for use as a
+        static footer when TBODY elements are rendered in a scrolling panel. The
+        TFOOT section (along with the THEAD section) is placed before any TBODY
+        sections in the HTML markup to allow browsers to render the header and
+        footer before receiving all of the Table Body [TBODY] data (in case a
+        table must be broken up.)<br>
+        <b>[<b class="alert">NOTE:</b> The suggestion about repeated table
+        headers/footers with printed material is a statement originally from
+        the HTML 4 spec - as of the time of writing, only Mozilla 1.0/Netscape 7.0
+        does this - maybe this feature will gain wider acceptance in the future.]</b>
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b>
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls the horizontal alignment of text within each of the
+        table cells in the specified grouping.
+    <dd><b class="l3heading">Values:</b> <b class="alert">Left</b> | <b class="alert">Center</b> |
+        <b class="alert">Right</b> | <b class="alert">Justify</b> | <b class="alert">Char</b>
+
+<dt><b class="subheading">BGColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>] 
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute sets the background color to be used for the
+        current table section (Tbody.)
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color
+        specification</a> methods.
+
+<dt><b class="subheading">Char</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies a character in the cell content to be used to align the
+        data in the current cell. The default value for this attribute is the decimal
+        point character for the current specified language. No handling instructions
+        are given for scenarios with multiple occurrences of the same alignment
+        character on a single line.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+
+<dt><b class="subheading">Charoff</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the spacing offset to the first occurrence of the alignment
+        character (specified by the CHAR attribute) on each line of the cells within the
+        current cell grouping. The direction of the offset is determined by the current
+        text direction (set with the DIR attribute or the BDO element.) In left-to-right
+        scenarios (default), offset is from the left margin. In right-to-left scenarios,
+        offset is from the right margin.
+    <dd><b class="l3heading">Values:</b> <a href="../../../misc/glossary.htm#cdata">CDATA</a>.
+        [Integers indicating pixel offset values.]
+
+<dt><b class="subheading">Valign</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+    [<b class="s">X1</b>|<b class="s">X1.1</b>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        In all HTML 4.x/XHTML DTDs
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This controls the vertical alignment of text within each of the
+  table cells in the specified grouping.
+    <dd><b class="l3heading">Values:</b> <b class="alert">Top</b> | <b class="alert">Middle</b> |
+     <b class="alert">Bottom</b> | <b class="alert">Baseline</b>
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">table</b> 
+        <span class="tagattrib">border</span>=&quot;2&quot;
+        <span class="tagattrib">align</span>=&quot;left&quot;
+        <span class="tagattrib">cellpadding</span>=&quot;5&quot;
+        <span class="tagattrib">bordercolor</span>=&quot;#ff0000&quot;<br>
+        <span class="tagattrib">cols</span>=&quot;4&quot;
+        <span class="tagattrib">frame</span>=&quot;vsides&quot;
+        <span class="tagattrib">rules</span>=&quot;rows&quot;
+        <span class="tagattrib">width</span>=&quot;75%&quot;&gt;<br>
+        &lt;<b class="tagname">caption</b>
+        <span class="tagattrib">align</span>=&quot;top&quot;&gt;Juggling Capabilities of Waterfront
+        Performers&lt;/<b class="tagname">caption</b>&gt;<br>
+        &lt;<b class="tagname">thead</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Juggler&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Pins&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Bowling Balls&lt;/<b class="tagname">th</b>&gt;
+        &lt;<b class="tagname">th</b>&gt;Flaming Baseballs&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &lt;/<b class="tagname">thead</b>&gt;<br>
+        &lt;<b class="tagname">tfoot</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">th</b> <span class="tagattrib">colspan</span>=&quot;4&quot;&gt;NOTE:
+        This is only a small sample&lt;/<b class="tagname">th</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &lt;/<b class="tagname">tfoot</b>&gt;<br>
+        &lt;<b class="tagname">tbody</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Bob&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;5&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Larry&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;7!!!&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;NA&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">tr</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;Julie the Great&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;1&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;2&lt;/<b class="tagname">td</b>&gt;
+        &lt;<b class="tagname">td</b>&gt;20&lt;<b class="tagname">br</b>&gt;(She IS
+        great!)&lt;/<b class="tagname">td</b>&gt;
+        &lt;/<b class="tagname">tr</b>&gt;<br>
+        &lt;/<b class="tagname">tbody</b>&gt;<br>
+        &lt;/<b class="tagname">table</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../t/table.htm">table</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd>&lt;<a href="../t/tr.htm">tr</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>The Table model (even the Simple Table Model) is easily the most
+        complex markup structure in HTML. If you have other general questions
+        about this structure see the <a href="../tables.htm">Table Overview</a>.
+    <li>Internet Explorer is the only major browser to support this element yet, but
+        this element has been integrated in to HTML 4.0 and increasing acceptance
+        in other browsers in the future is very likely.
+    <li>Because the Complex Table model is backward compatible with the
+        simple model, it is quite safe to use this. Be sure to preview the
+        result in a browser that only supports the simple model to make sure
+        it conveys information in the way you intend.
+    <li>The HTML specification says that end tags for THEAD, TBODY and
+        TFOOT elements are not necessary. You <em>SHOULD</em> always use them
+        anyway in order to give your markup better readability and to reduce
+        confusion in case you need to edit your HTML pages by hand.
+    <li>Make sure that your THEAD element grouping comes before the TBODY
+        in order for it to be downloaded before any of the table TBODY content.
+    <li>The specification also says that TFOOT should occur <em>before</em>
+        any TBODY groupings. The point has been raised that this organization
+        scheme is not very backward compatible. See more notes in the Browser
+        Peculiarity section below on this issue.
+    <li>Currently, when using only the simple table model the only way to
+        create complex borders for tables is to use nested tables.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/t/thead-bp1.htm">[Test]</a>
+        Internet Explorer requires the THEAD, TBODY and TFOOT sections to
+        exist in order to use the RULES and FRAME attributes of the TABLE element.
+        This is counter to the statement in the specifications for tables that
+        the omission of THEAD, TBODY and TFOOT elements <em>IMPLIES</em> that
+        the table content is all one TBODY section.
+    <li><a href="../../../testing/html/tags/t/tbody-bp1.htm">[Test]</a>
+        Internet Explorer 3.0 requires the TFOOT to follow <em>after</em> the
+        TBODY. Placing it before the TBODY like the specification says in IE 3.0
+        will not have the desired effect. In such cases the TFOOT will be rendered
+        before the TBODY. Internet Explorer 4.0 allows the TFOOT to exist either
+        before <em>OR</em> after TBODY sections.
+    <li><a href="../../../testing/html/tags/t/thead-bp2.htm">[Test]</a>
+        Opera 4.0 does not allow CSS to be specified for TFOOT elements. They
+        can be applied to TR and TD/TH elements though.
+    <li><a href="../../../testing/html/tags/t/thead-bp4.htm">[Test]</a>
+        Opera 4.0: The ALIGN attribute for this element only has an effect if
+        the cells are TD. ALIGN is not applied to TH cells in the TFOOT.
+    <li><a href="../../../testing/html/tags/t/thead-bp3.htm">[Test]</a>
+        Opera 6.0: Although support is marked for %Core% attributes (CSS), very
+        few of the CSS properties can be applied.
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

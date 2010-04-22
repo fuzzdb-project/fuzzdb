@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Caption-Side - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">caption-side</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]<br></td>
+    <td align=center><b class="alert">Other Table Properties</b><br></td>
+</tr>
+<tr>
+    <td align=center><a href="bcollapse.htm">border-collapse</a><br>
+    <a href="bspace.htm">border-spacing</a><br>
+    <a href="emptycell.htm">empty-cells</a><br>
+    <a href="speakhead.htm">speak-header</a><br>
+    <a href="tlayout.htm">table-layout</a><br></td>
+</tr>
+<tr><td align=center colspan=2>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">top</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>&lt;<b class="tagname">caption</b>&gt; elements and all elements with
+        an assigned '<span class="property">display</span>' value of "table-caption"</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>Yes</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">caption</b>
+        <span class="tagattrib">ALIGN</span>="top|bottom"&gt;</td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/tables.html#q6">CSS2: Sect. 17.4.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/tables.html#q6">CSS2.1: Sect 17.4.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This property specifies the position of elements with an intrinsic
+        (HTML CAPTION elements) or assigned 'display' property value of
+        "table-caption" in relation to the table rendering box they are
+        assigned to. Alignment within the table caption is accomplished
+        using the 'text-align' and 'vertical-align' properties.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+     Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">top</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The caption is positioned above the rendered table box.</dd>
+
+<dt><b class="subheading">bottom</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b class="s">N6</b>|<b><i class="fs">O4</i></b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The caption is positioned below the rendered table box.</dd>
+
+<dt><b class="subheading">left</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>] [<b><i><u class="sr">O4-O6.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The caption is positioned to the left of the rendered table box.</dd>
+
+<dt><b class="subheading">right</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>] [<b><i><u class="sr">O4-O6.x</u></i></b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The caption is positioned to the right of the rendered table box.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">caption</b> {
+        <span class="property">caption-side:</span> right }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">caption</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span class="property">caption-side:</span>
+        right&quot;&gt;Table caption&lt;/<b class="tagname">caption</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>The values "left" and "right" have been removed in CSS2.1.
+</ul>
+
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+        <dd><b class="alert2">4.0-6.x:</b>
+        <dd>- The right/left values were not supported well at all, but an attempt 
+            <em>was</em> made to render these as specified: the left-side caption for 
+            a non-nested table would appear off the screen to the left, and a right-side
+            caption was rendered over other following content on the right.
+        <dd><b class="alert2">4.0+:</b>
+        <dd>- A value of "inherit" seems to be a little buggy: The parent TABLE element 
+            must have the caption-side property applied for the "inherit" value to 
+            have any effect, but then it is only if caption-side is applied to 
+            that table's caption element. If the scenario is having a nested table, and the 
+            parent table is the only element that has caption-side specified, specifying 
+            "inherit" on the nested table or the nested table's caption element will 
+            have no effect. (Yes, that was confusing to <em>write</em> as well ;-})
+        <dd><b class="alert2">7.x:</b>
+        <dd>- Caption-side: bottom creates a large bottom padding between the table
+            and the caption. The size of the padding seems to be about the size of the 
+            table itself.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

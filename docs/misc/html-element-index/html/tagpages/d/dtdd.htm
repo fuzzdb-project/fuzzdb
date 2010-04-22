@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Dt/Dd</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Definition Term,<br>Definition Description</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b><br>
+         Dt: 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]<br>
+         Dd: 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Optional</span> (in HTML)<br>
+        <span class="magicword">Required</span> (in XHTML)</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>HTML: In all 4.x DTDs<br>XHTML: In all 1.0 and 1.1 DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>List</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td><span class="property"><a href="../../../css/properties/margin/marginleft.htm">margin-left</a></span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Left margin on DD, none on DT</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/lists.html#h-10.3">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_listmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The Definition List element represents a list of terms and corresponding 
+        definitions. Typical formatting of a definition list is flush left for the 
+        term (DT) with the definition (DD) indented on a separate line (block formatted.) 
+        An alternate method of display is to have the DD indented following the DT 
+        item on the same line to more strongly associate the term/definition relationship.
+        <br><br>
+
+        The contents of this list structure is a sequence of DT and DD terms (this
+        is the only list structure in which the DT and DD elements are allowed to appear,
+        and they are usually found in pairs.) Multiple DTs may be grouped with a
+        single DD, but a DT should not be grouped with multiple consecutive DD elements 
+        following. As with other list elements, the closing &lt;/<b class="tagname">dt</b>&gt; and
+        &lt;/<b class="tagname">dd</b>&gt; tags are optional in HTML, as they are 
+        implied by the subsequent list items or end &lt;/<b class="tagname">dl</b>&gt; tags.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O4</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the horizontal alignment of the content in this block
+        element relative to the browser window.
+    <dd><b class="l3heading">Values:</b>  <b class="alert">Left</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">Center</b>
+        | <b class="alert">Right</b>
+
+<dt><b class="subheading">Clear</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O3-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute helps an author in situations with floating objects (images,
+        tables, etc.) produced through the <b class="alert">Left</b> and
+        <b class="alert">Right</b> ALIGN attributes. It allows content to stop being
+        flowed around the floated element.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">None</b>
+        [<b class="magicword">DEFAULT</b> - No special line breaking
+        effects are applied relative to the floating element.]<br>
+        &#160;&#160;&#160;<b class="alert">Left</b> [breaks line after this element
+        and moves down vertically until the left margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">Right</b> [breaks line after this element
+        and moves down vertically until the right margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">All</b> [breaks line after this element
+        and moves down vertically until both margins are clear of floated objects.]
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">NoWrap</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies whether or not the content of the element will
+        use normal HTML linebreaking conventions. If False, normal linebreaking
+        behavior is used. If set to True, the element will not wrap to the
+        rendering viewport unless explicit linebreaking elements are added.
+    <dd><b class="l3heading">Values:</b> <b class="alert">False</b>
+        (<span class="magicword">DEFAULT</span>), <b class="alert">True</b><br>
+        May also be used as a standalone attribute, in which case the value is
+        treated as TRUE.
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech synthesis, 
+        etc.) The attribute value specifies the name of the element to convert this 
+        element to in the SDA element group (in this case the 'Term' element - 
+        "term or keyword" for DT, and 'LItem' - "list of items" for DD.)
+    <dd><b class="l3heading">Value:</b> <br>
+        <b class="alert">Term</b> for DT (Denotes 'term or keyword' in SDA.)<br>
+        <b class="alert">LItem</b> for DD (Denotes a 'list of items' in SDA.)<br>
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Markup example and Tests</b></big>
+    <dd><div class="example">&lt;<b class="tagname">dl</b>&gt;<br>
+        &lt;<b class="tagname">dt</b>&gt;Term 1&lt;/<b class="tagname">dt</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">dd</b>&gt;Term 1
+        definition&lt;/<b class="tagname">dd</b>&gt;<br>
+        &lt;<b class="tagname">dt</b>&gt;Term 2&lt;/<b class="tagname">dt</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">dd</b>&gt;Term 2
+        definition&lt;/<b class="tagname">dd</b>&gt;<br>
+        &lt;/<b class="tagname">dl</b>&gt;</div>
+    <dd>
+        <ul>
+            <li><a href="../../../testing/html/tags/d/dtdd-example.htm" class="testcase">Markup example</a>
+            <li>Basic element rendering tests: [<a href="../../../testing/html/tags/d/dt-element-render.htm" class="testcase">DT</a>,
+                <a href="../../../testing/html/tags/d/dd-element-render.htm" class="testcase">DD</a>]
+            <li>DOMHTML tests: [<a href="../../../testing/html/tags/d/dd-element-domhtml.htm" class="testcase">DT</a>,
+                <a href="../../../testing/html/tags/d/dd-element-domhtml.htm" class="testcase">DD</a>]
+            <li>DOMCSS tests: [<a href="../../../testing/html/tags/d/dt-element-domcss.htm" class="testcase">DT</a>,
+                <a href="../../../testing/html/tags/d/dd-element-domcss.htm" class="testcase">DD</a>]
+        </ul>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd>&lt;<a href="../d/dl.htm">dl</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="subheading">DT Content Model</b>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b>
+    <dd><b class="subheading">DD Content Model</b>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/d/dtdd-bp1.htm">[Test]</a>
+        Despite the above caveat to not have multiple consecutive DD elements,
+        most browsers have no problem with it.
+    <li>One of the most common usages for this list structure is solely to achieve
+        indentation capability with the DD element [this document is an example.]
+        If you specifically create indenting, CSS is the preferred method.
+    <li><b class="alert">Useless Trivia:</b> There appears to be some
+        confusion as to what DD stands for mnemonically, even in the official
+        W3C documentation I have read. I have heard all of these used: &quot;Definition
+        Definition&quot;, &quot;Definition Discussion&quot; and &quot;Definition
+        Description&quot;. It probably doesn't matter which term is used, as
+        long as both parties can agree to the subject being discussed.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Nothing to Report
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

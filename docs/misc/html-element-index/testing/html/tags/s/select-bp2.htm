@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>SELECT: Browser Peculiarities: Physical formatting elements affecting SELECT contents</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 4+ allows some Character-level formatting to be applied 
+to the contents of this form field. These physical formatting elements (along with 
+virtual formatting elements that are rendered identically, such as EM and I) apply 
+to this form field: I, U, TT, S, STRIKE, SUB, SUP, BIG, SMALL, FONT SIZE and FONT FACE.</div>
+<br>
+
+<form>
+<b>SELECT fields, with physical formatting elements enclosing them:</b>
+<hr>
+<table border=1 cellspacing=0 cellpadding=3>
+<tr><th>Behavior</th><th>Example</th></tr>
+<tr><td>Plain   </td><td>filler text <select><option>one<option>two<option>three</select> filler text</td></tr>
+<tr><td>B       </td><td><b>filler text <select><option>one<option>two<option>three</select> filler text</b></td></tr>
+<tr><td>I       </td><td><i>filler text <select><option>one<option>two<option>three</select> filler text</i></td></tr>
+<tr><td>U       </td><td><u>filler text <select><option>one<option>two<option>three</select> filler text</u></td></tr>
+<tr><td>TT      </td><td><tt>filler text <select><option>one<option>two<option>three</select> filler text</tt></td></tr>
+<tr><td>S       </td><td><s>filler text <select><option>one<option>two<option>three</select> filler text</s></td></tr>
+<tr><td>STRIKE  </td><td><strike>filler text <select><option>one<option>two<option>three</select> filler text</strike></td></tr>
+<tr><td>SUB     </td><td><sub>filler text <select><option>one<option>two<option>three</select> filler text</sub></td></tr>
+<tr><td>SUP     </td><td><sup>filler text <select><option>one<option>two<option>three</select> filler text</sup></td></tr>
+<tr><td>BIG     </td><td><big>filler text <select><option>one<option>two<option>three</select> filler text</big></td></tr>
+<tr><td>SMALL   </td><td><small>filler text <select><option>one<option>two<option>three</select> filler text</small></td></tr>
+<tr><td>EM      </td><td><em>filler text <select><option>one<option>two<option>three</select> filler text</em></td></tr>
+<tr><td>STRONG  </td><td><strong>filler text <select><option>one<option>two<option>three</select> filler text</strong></td></tr>
+<tr><td>FONT SIZE (6)         </td><td><font size="6">filler text <select><option>one<option>two<option>three</select> filler text</font></td></tr>
+<tr><td>FONT COLOR ("green")  </td><td><font color="green">filler text <select><option>one<option>two<option>three</select> filler text</font></td></tr>
+<tr><td>FONT FACE ("verdana, georgia")   </td><td><font face="verdana georgia">filler text <select><option>one<option>two<option>three</select> filler text</font></td></tr>
+</table>
+<hr>
+</form>
+
+</body>
+</html>

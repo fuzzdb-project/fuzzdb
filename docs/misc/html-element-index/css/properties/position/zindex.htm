@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Z-Index - Cascading Style Sheets Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">z-index</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Positioning Properties</b><br></td>
+</tr>
+<tr>
+    <td valign=top><a href="top.htm">top</a><br>
+    <a href="right.htm">right</a><br>
+    <a href="bottom.htm">bottom</a><br>
+    <a href="left.htm">left</a><br>
+    <a href="vertalign.htm">vertical-align</a><br></td>
+    <td valign=top><a href="overflow.htm">overflow</a><br>
+    <a href="overflowx.htm">overflow-x</a><br>
+    <a href="overflowy.htm">overflow-y</a><br>
+    <a href="textoverflow.htm">text-overflow</a><br>
+    <a href="clip.htm">clip</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<table cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../../index.html">Main Index</a> |
+        <a href="../../propindex/font.htm">Property Index</a> |
+        <a href="../../supportkey/syntax.htm">CSS Support History</a> |
+        <a href="../../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0 >
+<tr>
+    <th colspan=3 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Default Value: </b><br></th>
+    <td rowspan=6>&nbsp;&nbsp;</td>
+    <td><b class="alert">auto</b></td></tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Positioned Elements</td></tr>
+<tr><th align=left><b class="l3heading">Inherit From Parent: </b><br></th>
+    <td>No</td></tr>
+<tr><th align=left><b class="l3heading">Applicable Media: </b><br></th>
+    <td>Visual</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>&lt;<b class="tagname">ilayer</b>|<b class="tagname">layer</b>
+        <span class="tagattrib">z-index</span>=&quot;N&quot;&gt;<br> </td></tr>
+<tr><th align=left><b class="l3heading">Official Docs: </b><br></th>
+    <td><a href="http://www.w3.org/TR/REC-CSS2/visuren.html#z-index">CSS2: Sect. 9.9.1</a>,
+        <a href="http://www.w3.org/TR/CSS21/visuren.html#z-index">CSS2.1: Sect 9.9.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>Positioning of elements in CSS occurs in three dimensions, not
+        just two. The third dimension is perpendicular to the screen, giving
+        the screen a sense of depth. Elements can be overlapped, with "higher",
+        or "closer" elements obscuring elements that are "lower" or "farther
+        away" (element transparency becomes an important issue with this
+        capability.) The placement of elements along this third 'z-axis' is exactly
+        what this property controls.
+        <br><br>
+
+        Each element's rendering box is automatically assigned an integer z-index
+        stacking level based on its context in the document. Boxes with greater
+        z-axis numbers will appear in front of boxes with lower z-axis numbers ('0'
+        and negative numbers are allowed.)
+        <br><br>
+
+        Explicitly setting the 'z-index' property for an element box not only sets its
+        z-position relative to other element boxes in its current context, it also
+        initiates a <em>new</em> stacking context hierarchy, in which the current
+        element box and its child elements partake.
+        <br><br>
+
+        If two or more boxes have the same stacking level within the same context,
+        they are rendered back to front in the order of the document tree. If no
+        'z-index' property is set for an element box, it inherits the stacking level
+        of its parent element box.
+</dl>
+
+<dl>
+<dt><br><big><b class="mainheading">Allowed Values</b></big>
+<dt><b class="subheading">inherit</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">O5</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        Explicitly sets the value of this property to that of the parent.</dd>
+
+<dt><b class="subheading">auto</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        The stack level of the current element's box in the current context is
+        the same as that of its parent's. A new local stacking context is not
+        created.</dd>
+
+<dt><b class="subheading">[integer]</b></dt>
+<dt>[<b><i class="fs">CSS2</i></b>|<b class="s">CSS2.1</b>] 
+    [<b><i class="fs">IE4</i></b>|<b><i class="fs">N4</i></b>|<b class="s">O4</b>|<b class="s">S1</b>]</dt>
+    <dd><b class="l3heading">Type:</b> Explicit</dd>
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the stack level of the current element's box in the
+        current context. A new local stacking context is created by the current
+        element, with its stack level being 0. Positive and negative integers
+        are allowed.</dd>
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">Ext/Doc: <b class="selector">h2</b>
+        { <span class="property">display:</span> block;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">top:</span> 20px;
+        <span class="property">right:</span> 50px;
+        <span class="property">bottom:</span> 20px;
+        <span class="property">left:</span> 50px;
+        <span class="property">z-index:</span> 3 }</div>
+    <dd><div class="example">In-Line:&#160; &lt;<b class="tagname">h2</b>
+        <span class="tagattrib">STYLE</span>=&quot;<span
+        class="property">display:</span> block;
+        <span class="property">position:</span> absolute;<br>
+        <span class="property">top:</span> 20px;
+        <span class="property">right:</span> 50px;
+        <span class="property">bottom:</span> 20px;
+        <span class="property">left:</span> 50px;
+        <span class="property">z-index:</span>
+        3;&quot;&gt;text&lt;/<b class="tagname">h2</b>&gt;</div>
+</dl>
+
+<big><b class="mainheading">Notes</b></big>
+<ul>
+    <li>Before its inclusion in CSS2, this property was first proposed in the W3C
+        Working Draft "Positioning HTML Elements with Cascading Style Sheets" (8/19/97,
+        <a href="http://www.w3.org/TR/WD-positioning">http://www.w3.org/TR/WD-positioning</a>)
+</ul>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><b class="alert">Internet Explorer</b>
+        <dl>
+            <dd><b class="alert2">5.0+:</b>
+            <dd>- SELECT lists do not obey the normal z-index stacking order.
+                Nothing can be placed "on top of" a SELECT list unless it is
+                another SELECT list with a higher z-index. Other elements are
+                always rendered below SELECT lists, even if they are given a
+                higher z-index value than the SELECT. (IE4 has this behavior too,
+                but it can't even render other SELECT lists properly with
+                z-indexes assigned.)
+            <dd><b class="alert2">5.5:</b>
+            <dd>- Beginning in 5.5 Beta 1, frames and iframes can now participate
+                in z-index ordering. In previous versions, these elements were
+                always on top of all other content in the z-index world.
+        </dl>
+    <li><b class="alert">Netscape</b>
+        <dl>
+            <dd><b class="alert2">4.x:</b>
+            <dd>- Form elements are always rendered on top of absolutely or
+                relatively positioned elements, regardless of where they are
+                located in the document tree or any 'z-index' value specified.
+            <dd>- Negative values are not allowed for the 'z-index' property
+                in these versions - if any z-index values <em>ARE</em>
+                negative, they are placed on the TOP of the z-index stack,
+                in document order.
+        </dl>
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

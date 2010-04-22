@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>About Printing Properties</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<h1 align="center"><span class="pagetitle">About Printing Properties</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<div align="center">
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td>&#160;&#160;<font size=2><a href="../index.html">Main Index</a> |
+    <a href="../propindex/font.htm">Property Index</a> |
+    <a href="../supportkey/syntax.htm">CSS Support History</a> |
+    <a href="../../history/browsers.htm">Browser History</a></font>&#160;&#160;</td>
+</tr>
+</table>
+</div>
+<br><br>
+
+<dl>
+<dt><big><b class="mainheading">Printing Properties</b></big>
+    <dd><a href="print/pbbefore.htm">page-break-before</a> |
+        <a href="print/pbinside.htm">page-break-inside</a> |
+        <a href="print/pbafter.htm">page-break-after</a><br>
+        <a href="print/page.htm">page</a> |
+        <a href="print/size.htm">size</a> |
+        <a href="print/marks.htm">marks</a> |
+        <a href="print/widows.htm">widows</a> |
+        <a href="print/orphans.htm">orphans</a>
+</dl>
+
+<br>
+<dl>
+<dt><big><b class="mainheading">What Do They Do?</b></big>
+    <dd>Printing of HTML documents has been problematic in the past because of
+        the static, paged nature of the printed page disagrees fundamentally
+        with continuous paged media (eg: screen rendering.) Continuous media
+        allows for fixed widths and heights, but if content extends beyond these
+        values, the dimensions of the document can be infinite. Scrollbars or other
+        devices allow an application to provide a 'window' to the actual
+        content that can be dynamically changed through interaction with the user.
+        <br><br>
+
+        Contrast this with media using static dimensions, such as printing to
+        paper. In this environment there is some allowance for extending beyond
+        a fixed width/height, but basically the dimensions are fixed and unmovable.
+        Document content is divided into chunks for display in discrete pieces
+        on separate pages.
+        <br><br>
+
+        The paradigms for transferring content from continuous media to paged media
+        are already well established from the word processing field, and CSS2 borrows
+        heavily from these concepts to create new printing properties. These properties
+        allow the type and dimensions to be set (among other things) for a 'page box' -
+        a rectangular area in which document content is rendered on a static page.
+        <br><br>
+
+        These properties have been included in CSS2, but were first included in the W3C
+        Working Draft "CSS Printing Extensions"
+        (<a href="http://www.w3.org/TR/WD-print">http://www.w3.org/TR/WD-print</a>,
+        by Robert Stevahn, Stephen Waters, et al, June 26, 1997)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Related Sites</b></big>
+<dt><b class="subheading">Official Reference: CSS Level 2, Section 13.2, 13.3</b>
+    <dd>13.3.1: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#page-break-props">page-break-before</a>', <br>
+        13.3.1: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#page-break-props">page-break-inside</a>', <br>
+        13.3.1: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#page-break-props">page-break-after</a>', <br>
+        13.3.2: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#named-pages">page</a>', <br>
+        13.2.2: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#page-size-prop">size</a>', <br>
+        13.2.3: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#crop-mark-prop">marks</a>', <br>
+        13.3.3: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#break-inside">widows</a>', <br>
+        13.3.3: '<a href="http://www.w3.org/TR/REC-CSS2/page.html#break-inside">orphans</a>'
+<dt><b class="subheading">Browser Reference: Microsoft MSDN</b>
+    <dd>'<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/pageBreakBefore.asp#pageBreakBefore">page-break-before</a>'<br>
+        '<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/pageBreakAfter.asp#pageBreakAfter">page-break-after</a>'
+</dl>
+
+<br><br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>The NATURALSIZEFLAG attribute to the IMG tag</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">The NATURALSIZEFLAG Attribute</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#mystery">The Mysterious Attribute</a> |
+    <a href="#why">Why It Happens</a><br>
+    <a href="#values">Attribute Values</a> |
+    <a href="#implications">The Implications</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=2><hr size=1></td></tr>
+<tr><td align=left colspan=2>
+    <a name="mystery"></a>
+    <big><b class="mainheading">The Mysterious Attribute</b></big>
+    <hr width="30%" align=left size=1>
+    Adobe corporation used to have two HTML editing products called 'SiteMill' and 'PageMill'
+    used to create HTML pages. In the course of creating and saving a web page that
+    contains images (represented using the <a href="../tagpages/i/image.htm">IMG</a>
+    element in HTML), the editor would create an extra 'NATURALSIZEFLAG' attribute
+    in the IMG element. This attribute does not appear in any HTML standard, so it does
+    not validate as legal syntax (causing many authors to wonder what was wrong with
+    their documents.)
+    <br><br>
+
+    <a name="why"></a>
+    <big><b class="mainheading">Why It Happens</b></big>
+    <hr width="30%" align=left size=1>
+    When an image is inserted into a document using either of these editors,
+    a reference for the image is created that includes the name, dimensions,
+    and alignment of the image. This is then inserted in the document, along
+    with the NATURALSIZEFLAG attribute, which is assigned an integer value of
+    0-3, such as with this example:
+    <br><br>
+    <div class="example">
+    &#160;&#160;&#160;&#160;&lt;<b class="tagname">img</b>
+    <span class="tagattrib">src</span>=&quot;test.gif&quot;
+    <span class="tagattrib">width</span>=&quot;350&quot;
+    <span class="tagattrib">height</span>=&quot;100&quot;
+    <span class="tagattrib">align</span>=&quot;bottom&quot;
+    <span class="tagattrib">naturalsizeflag</span>=&quot;3&quot; /&gt;
+     </div><br>
+
+     PageMill and SiteMill use the NATURALSIZEFLAG attribute to specify an image's
+     actual or resized dimensions within the editor when updating or replacing the
+     image. These editors determine the display size of an updated image using
+     either the original image's actual dimensions, or by scaling the original
+     image's dimension based on the NATURALSIZEFLAG attribute's value.
+     <br><br>
+
+<a name="values"></a>
+     <big><b class="mainheading">Attribute Values - <br>What They Mean</b></big>
+     <hr width="30%" align=left size=1></td>
+</tr>
+<tr>
+  <td valign=top><b class="subheading"><span class="largetext">0</span></b></td>
+  <td align=left>Indicates a horizontally and vertically resized image.
+      When updating or replacing the referenced image, PageMill or SiteMill
+      scales the updated image to maintain the dimensions of the original image.</td>
+</tr>
+<tr>
+   <td valign=top><b class="subheading"><span class="largetext">1</span></b></td>
+   <td align=left>Indicates a vertically resized image. When updating or
+       replacing the referenced image, PageMill or SiteMill scales the updated
+       image to maintain the only the height dimension of the original image.</td>
+</tr>
+<tr>
+   <td valign=top><b class="subheading"><span class="largetext">2</span></b></td>
+   <td align=left>Indicates a horizontally resized image. When updating or
+       replacing the referenced image, PageMill or SiteMill scales the updated
+       image to maintain only the width dimension of the original image.</td>
+</tr>
+<tr>
+   <td valign=top><b class="subheading"><span class="largetext">3</span></b></td>
+   <td align=left>Indicates an actual size image. When updating or replacing
+       the referenced image, PageMill or SiteMill displays the updated image
+       using the image's PageMill dimensions, and not the original image
+       dimensions.</td>
+</tr>
+<tr><td colspan=2 align=left>
+<br><a name="implications"></a>
+<big><b class="mainheading">What Are the Implications?</b></big>
+<hr width="30%" align=left size=1>
+This 'editor extension' is not the only one that has ever been created -
+several other HTML editors have created some as well. This type of markup
+usually seems (hopefully) to be a sort of &quot;crutch&quot; used to deal
+with editor implementation issues which could not be easily solved when
+implementing seamless round-tripping of formatting between open and save.
+This type of markup may be left in documents 'as-is' with no ill-effects
+(if designed well), other than complaints from HTML validators (browsers
+will ignore such markup.)
+<br><br>
+Nothing should be harmed by removing the NATURALSIZEFLAG attribute or
+any other such editor-specific markup from a document. If it is deleted,
+opening and saving documents in such editors will most likely re-add the
+markup to the document. The response received about the NATURALSIZEFLAG
+attribute mentions that it could possibly be dropped from future versions
+of the editors (it will probably depend on how vital it is to the scheme
+these editors use to manipulate images.)</td>
+</tr>
+<tr><td colspan=2><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

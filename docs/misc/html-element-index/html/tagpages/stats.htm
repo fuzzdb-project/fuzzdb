@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Quick Statistic section explanation</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">More about the "Quick Statistics"</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td valign=top align=center>
+     <a href="#et">End Tags</a> |
+     <a href="#std">Standards Details</a> | <a href="#xhtm">XHTML Modules</a><br>
+     <a href="#disp">CSS 'Display' Type</a> | <a href="#css">CSS Mapping</a> |
+     <a href="#rnd">Default Rendering</a></td>
+</tr>
+</table>
+
+<font size=2><a href="../index.html">Main Index</a> |
+<a href="../tree/htmltree.htm">Element Tree</a> |
+<a href="../tagindex/a.htm">Element Index</a> |
+<a href="../supportkey/a.htm">HTML Support History</a></font>
+
+<hr align="center" width="20%">
+</center>
+
+
+<a name="et"></a>
+<dl>
+<dt><big><b class="mainheading">End Tags</b></big>
+    <dd>A document containing markup information actually describes a
+        hierarchical "tree" of information, with imaginary branch points
+        created by markup elements (also known as "tags".) Each continuous
+        run of text content between the HTML elements is a "leaf" of one of
+        these element branch points (meaning it has no children or branches
+        from itself.)
+        <br><br>
+
+        You should already know from past experience that some HTML elements
+        are not required to have an end tag - in other words, end tags are
+        required if an element will contain anything inside it (such as text
+        content or other elements.) If the element has nothing inside it, it 
+        does not need a closing tag.
+        <br><br>
+
+        The rules of HTML and XHTML allow elements to be defined as requiring
+        [listed as "Required" in this section] or not requiring end tags
+        [listed as "Optional."] In the case where an element will <em>never</em>
+        have content, an end tag may be prohibited in the markup language's
+        definition as well [listed as "Omitted" here.] Hopefully you aren't
+        TOO thoroughly confused now. ;-}
+</dl>
+
+<a name="std"></a>
+<dl>
+<dt><big><b class="mainheading">Standards Details</b></big>
+    <dd><b class="subheading">The HTML 4 DTDs</b>
+    <dd>The HTML 4.0 Recommendation is different than previous standards.
+        In older versions of HTML, the language was defined in a single
+        <a href="../../misc/glossary.htm#dtd">DTD</a>, with only a few
+        elements being deprecated. The deprecated elements could be "switched
+        off" if the DTD was invoked in a "Strict" mode.
+        <br><br>
+
+        HTML 4.x has taken a different direction. The W3C is making a strong
+        move to obsolete most of the presentational elements and attributes
+        that have proliferated from browser makers since the language began.
+        These constructs have been moved to
+        <a href="../../css/index.html">Cascading Style Sheets</a> (CSS) instead.
+
+<a name="types"></a>
+    <dd><br><b class="subheading">HTML 4.x DTD Types</b>
+    <dd>To move from current common authoring practice to a new, more restrictive
+        way of doing things would just be too drastic a move to succeed in
+        practice. So, the W3C has broken HTML into two distinct modes: "Strict",
+        and "Transitional" markup. Each of these modes is given its own
+        <a href="../../misc/glossary.htm#dtd">DTD</a>, where the Strict mode
+        confines authors to using the HTML elements that impose structure only
+        (the original intention of HTML) and rendering rules are specified using
+        CSS. The Transitional mode, on the other hand, allows authors to use
+        the markup they have been using all along together with the new
+        functionality of HTML 4, and still have it all be "legal HTML."
+    <dd><ul type=disc>
+        <li><b class="alert2">Strict:</b><br>
+            This DTD eliminates almost all of the presentational elements,
+            attributes and other markup from the Transitional DTD, as well as
+            elements that the W3C expects to phase out in future HTML
+            standards (actually, XHTML 1.1 actually does drop all of the extra 
+            pieces of the Transitional and Frameset DTDs for good.) The W3C 
+            recommends that the Strict DTD should be used whenever possible, and that 
+            presentational information should be attached with CSS.
+        <li><b class="alert2">"Transitional" or "Loose" DTD:</b><br>
+            This is the most "relaxed" of the DTDs - it includes all of the
+            elements listed in HTML 4.x with no exclusions. All of the legacy
+            presentational constructs that have been moved over to CSS are
+            present in this DTD. The W3C recognizes that it may not always be
+            possible to use the Strict DTD, so the Transitional DTD can fill
+            the need.<br>
+            <b class="alert">Warning:</b> The W3C <em>HAS</em> removed the legacy
+            presentation elements and attributes from XHTML as of XHTML 1.1.
+        <li><b class="alert2">Frameset DTD:</b><br>
+            This DTD is actually just a slight alteration of the Transitional
+            DTD. It includes all of the Transitional DTD and defines only a
+            slight modification, allowing the HTML element to legally contain
+            the FRAMESET element instead of the BODY element. Only documents
+            using the FRAMESET element should use this DTD.
+        </ul>
+</dl>
+
+
+<a name="xhtm"></a>
+<dl>
+<dt><big><b class="mainheading">XHTML Modules</b></big>
+    <dd>In April 2001, the "Modularization of XHTML" document became a W3C
+        recommendation. This was an important step in the further development
+        of XHTML as a living, breathing and adaptable standard; it breaks down
+        the pieces of XHTML 1.0 in to discrete areas of functionality. This
+        will allow XHTML to be more easily extended in the future. Perhaps
+        more importantly it will allow XHTML to be implemented in pieces on
+        specialized platforms that have not been able to fully implement all
+        of XHTML in the past because of various constraints and requirements
+        (consider the case of a browser on a cell phone.) The extensibility of
+        modularization can also be useful for future rendering needs that can
+        not yet be imagined.
+        <br><br>
+
+        <dl>
+        <dt><b class="subheading">Core XHTML Modules</b>
+        <dt>These modules are required to be present in any XHTML DTD variant.<br>
+            <dd><b class="alert2">Structure</b>, <b class="alert2">Text</b>,
+                <b class="alert2">Hypertext</b> and <b class="alert2">List</b> modules
+        </dl>
+<br>
+
+        <dl>
+        <dt><b class="subheading">Other XHTML Modules</b>
+            <dd><ul type="disc">
+                <li><b>Text Extension</b> (<b class="alert2">Presentation</b>,
+                <b class="alert2">Edit</b> and <b class="alert2">Bi-directional</b> modules)
+                <li><b>Forms</b> (<b class="alert2">Forms</b> and
+                <b class="alert2">Basic Forms</b> modules)
+                <li><b>Table</b> (<b class="alert2">Tables</b> and <b class="alert2">Basic
+                Tables</b> modules)
+                <li><b class="alert2">Image</b>
+                <li><b class="alert2">Client-side Image Map</b>
+                <li><b class="alert2">Server-side Image Map</b>
+                <li><b class="alert2">Object</b>
+                <li><b class="alert2">Frames</b>,
+                <li><b class="alert2">Target</b>
+                <li><b class="alert2">Iframe</b>,
+                <li><b class="alert2">Intrinsic Events</b>
+                <li><b class="alert2">Metainformation</b>
+                <li><b class="alert2">Scripting</b>
+                <li><b class="alert2">Style Sheet</b>
+                <li><b class="alert2">Style Attribute</b>
+                <li><b class="alert2">Link</b>
+                <li><b class="alert2">Base</b>
+                <li><b class="alert2">Name Identification</b>
+                <li><b class="alert2">Legacy</b>
+                </ul>
+        </dl>
+</dl>
+
+<a name="disp"></a>
+<dl>
+<dt><big><b class="mainheading">CSS 'display' Type</b></big>
+    <dd>In CSS, an HTML element is usually one of two basic 'display' property
+        value types - <b class="alert">"inline"</b> or <b class="alert">"block."</b>
+        There can, of course, be deviations from these values, but "inline" and
+        "block" rendering behaviors are the two major categories that are given
+        the greatest amount of documentation in the CSS standards. These two
+        display types are the critical components of the CSS box model and are
+        vital in determining a page's visual rendering.
+        <br><br>
+
+        The 'display' values for this field were taken primarily from <a
+        href="http://www.w3.org/TR/REC-CSS2/sample.html">CSS2 Appendix A: "A
+        sample style sheet for HTML 4.0"</a>, originally created by Todd
+        Fahrner. "Display" types for elements not present in that list were
+        extrapolated based on known behavior and comparisons to elements that
+        <em>ARE</em> in the list.
+</dl>
+
+<a name="css"></a>
+<dl>
+<dt><big><b class="mainheading">CSS Mapping</b></big>
+    <dd>One of the major goals of HTML 4 was to move away from having
+        presentation details in HTML itself. These rendering properties were
+        to be shifted to CSS. This field attempts to describe which CSS
+        properties and/or behaviors can be used to take the place of HTML-based
+        rendering details. Mappings listed here come from a number of sources,
+        including <a href="http://www.w3.org/TR/REC-CSS2/sample.html">CSS2
+        Appendix A: "A sample style sheet for HTML 4.0 "</a> originally created
+        originally by Todd Fahrner, as well as known default renderings in
+        the popular browsers.<br>
+        <b class="alert2">Caveat:</b> As mentioned in CSS2, Appendix A:
+        <blockquote class="quotation">"The full presentation of some HTML
+        elements cannot be expressed in CSS..."</blockquote>
+</dl>
+
+<a name="rnd"></a>
+<dl>
+<dt><big><b class="mainheading">Default Rendering</b></big>
+    <dd>This field attempts to describe the typical initial rendering (visual
+        or otherwise) of the element/attribute in the major browsers reviewed.
+        This does not take into account any user style sheets or other
+        modifications the user may have made to their settings. It also may
+        not completely describe the rendering behaviors of <em>ALL</em> the
+        reviewed browsers - it is just an attempt to characterize a so-called
+        "default effect" that most users will likely experience.
+</dl>
+
+<a name="w3docs"></a>
+<dl>
+<dt><big><b class="mainheading">Official Documentation</b></big>
+    <dd>This entire website attempts to make the standards for HTML more accessible,
+        but sometimes you just need to go to the source itself. These links are here 
+        to easily link you to the definitive statements on each of these elements if 
+        you desire more information.
+</dl>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

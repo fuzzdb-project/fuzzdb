@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Ol</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Ordered List</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+         [<b class="s">X1</b>|<b class="s">X1.1</b>]
+         [<b class="s">IE1</b>|<b><i class="fs">M1</i></b>|<b class="s">N1</b>|<b class="s">O2.1</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>HTML: In all 4.x DTDs<br>XHTML: In all 1.0 and 1.1 DTDs</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td><b class=alert>List</b></td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Block element with left margin. Each LI element has a number prefix before it.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://www.w3.org/TR/html401/struct/lists.html#h-10.2">HTML 4.x</a>, 
+        <a href="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_listmodule">XHTML 1.1</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>The Ordered List element represents a list of items sorted by sequence
+        or order of importance. Typical rendering is a numbered list of items. The
+        only content of this list structure is the &lt;<b class="tagname">li</b>&gt;
+        (list item) element. As with other list types, the closing
+        &lt;/<b class="tagname">li</b>&gt; tag is optional in HTML (Required in XHTML), 
+        as it is implied by the subsequent &lt;<b class="tagname">li</b>&gt; or end
+        &lt;/<b class="tagname">ol</b>&gt; tags.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE3</i></b>|<span class="ns">M</span>|<b class="s">N4B2</b>|<b class="s">O3.5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O5</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<b><i class="fs">4</i></b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<b class="s">O4</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<b class="s">4</b>] 
+        [<b class="s">X1</b>|<b class="s">X1.1</b>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<b class="s">N6B1</b>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Align</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i class="fs">O4</i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This indicates the horizontal alignment of the content in this block
+        element relative to the browser window.
+    <dd><b class="l3heading">Values:</b>  <b class="alert">Left</b>
+        [<b class="magicword">DEFAULT</b>] | <b class="alert">Center</b>
+        | <b class="alert">Right</b>
+
+<dt><b class="subheading">Clear</b>
+<dt>[<span class="ns">2</span>|<b><i class="fs">3</i></b>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<b><i><u class="sr">O2.1-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute helps an author in situations with floating objects (images,
+        tables, etc.) produced through the <b class="alert">Left</b> and
+        <b class="alert">Right</b> ALIGN attributes. It allows content to stop being
+        flowed around the floated element.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">None</b>
+        [<b class="magicword">DEFAULT</b> - No special line breaking
+        effects are applied relative to the floating element.]<br>
+        &#160;&#160;&#160;<b class="alert">Left</b> [breaks line after this element
+        and moves down vertically until the left margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">Right</b> [breaks line after this element
+        and moves down vertically until the right margin is clear of floated objects.]<br>
+        &#160;&#160;&#160;<b class="alert">All</b> [breaks line after this element
+        and moves down vertically until both margins are clear of floated objects.]
+
+<dt><b class="subheading">Compact</b>
+<dt>[<b><i class="fs">2</i></b>|<b class="s">3</b>|<b class="s">3.2</b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Not present in XHTML 1.1
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is a stand alone attribute flag that indicates a compact
+        rendering be used if possible, possibly because the list items
+        are small or the entire list is large.
+    <dd><b class="l3heading">Values:</b> NA (HTML); <b class="alert">compact</b> (XHTML)
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns"> N </span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the height of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+
+<dt><b class="subheading">SDAForm</b>
+<dt>[<b><i class="fs">2</i></b>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This is an <a href="../../../misc/glossary.htm#sda">SGML Document Access
+        (SDA)</a> attribute. SDA attributes are designed to transform HTML (and
+        other SGML-based documents) to the <a href="../../../misc/glossary.htm#icadd">ICADD</a>
+        DTD - which is used in creating accessible documents for users with
+        visual disabilities (rendering in Braille, large print, speech
+        synthesis, etc.) The attribute value specifies the name of the element
+        to convert this element to in the SDA element group (in this case the
+        'List' element - "list of items".)
+    <dd><b class="l3heading">Value:</b> 
+        <b class="alert">List</b> (Denotes a 'list of items' in SDA.)
+
+<dt><b class="subheading">Start</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Not present in XHTML 1.1
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the number to be used for the first item
+        in the list. Subsequent list items by default will count upwards 
+        from this initial value (default is "1".) The value is specified using
+        decimal notation. Negative numbers and zero are <em>permitted</em> by 
+        the HTML/XHTML specifications, but some browsers do not support them. 
+        The rendering of numbers for list markers is also usually affected by the TYPE 
+        attribute, if present. If ordered list TYPE values are specified 
+        ("a", "A", "i", "I", and "decimal") then the START attribute will be honored,
+        with the numbering mapped to the TYPE being used. If unordered list TYPE values
+        are specified ("disc", "square", "circle", "round"), then the START attribute 
+        will be ignored.
+    <dd><b class="l3heading">Values:</b> Specified as integers. Default value is "<b class="alert">1</b>"
+
+<dt><b class="subheading">Type</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<b><i class="fs">3.2</i></b>|<b class="s">4</b>] 
+    [<b class="s">X1</b>|<span class="ns">X1.1</span>]
+    [<b class="s">IE4</b>|<span class="ns">M</span>|<b><i class="fs">N1</i></b>|<b class="s">O2.1</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> 
+        Deprecated in HTML 4.x/XHTML 1.0; Not present in XHTML 1.1
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        The TYPE attribute indicates different ordering label schemes to be
+        used instead of the default 1, 2, 3, etc.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">none</b> [no marker is used]<br>
+        &#160;&#160;&#160;<b class="alert">A</b> [capital letters]<br>
+        &#160;&#160;&#160;<b class="alert">a</b> [lower-case letters]<br>
+        &#160;&#160;&#160;<b class="alert">I</b> [large roman numerals]<br>
+        &#160;&#160;&#160;<b class="alert">i</b> [small roman numerals]<br>
+        &#160;&#160;&#160;<b class="alert">upper-alpha</b> [capital letters]<br>
+        &#160;&#160;&#160;<b class="alert">lower-alpha</b> [lower-case letters]<br>
+        &#160;&#160;&#160;<b class="alert">upper-roman</b> [large roman numerals]<br>
+        &#160;&#160;&#160;<b class="alert">lower-roman</b> [small roman numerals]<br>
+        &#160;&#160;&#160;<b class="alert">decimal</b> [integer numbering -
+        <b class="magicword">DEFAULT</b>]<br>
+        &#160;&#160;&#160;<b class="alert">disc</b> [default solid bullet]<br>
+        &#160;&#160;&#160;<b class="alert">square</b> [solid square]<br>
+        &#160;&#160;&#160;<b class="alert">circle</b> [hollow bullet]<br>
+        &#160;&#160;&#160;<b class="alert">round</b> [hollow bullet]
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<span class="ns">IE</span>|<span class="ns">M</span>|<span class="ns"> N </span>|<b><i><u class="sr">O4-6.x</u></i></b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute explicitly specifies the width of this block element in pixels.
+    <dd><b class="l3heading">Values:</b> Positive integers.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">ol</b>
+        <span class="tagattrib">type</span>=&quot;A&quot;
+        <span class="tagattrib">start</span>=&quot;3&quot;&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;List item
+        1&lt;/<b class="tagname">li</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;List item
+        2&lt;/<b class="tagname">li</b>&gt;<br>
+        &#160;&#160;&#160;&lt;<b class="tagname">li</b>&gt;List item
+        3&lt;/<b class="tagname">li</b>&gt;<br>
+        &lt;/<b class="tagname">ol</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd>&lt;<a href="../l/li.htm">li</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>Some people leverage on a behavioral defect in browsers whereby
+        embedding data in a list structure without LI elements will induce
+        indentation. Strictly speaking, this HTML is not valid with respect to
+        the established standards. Even using an HTML 3.0 element like the "List
+        Header" (LH) at the beginning of a list structure would produce this
+        effect, but this syntax has never been a part of an accepted standard.
+        Such syntax is illegal in current HTML/XHTML standards and not recommended.
+        <a href="../../topics/indent.htm">Other methods</a> can be used to
+        enforce indentation that are much safer.
+    <li>Changing the font attributes (size, color, etc.) of the contents of a List 
+        Item will not affect the appearance of the listing mechanism (bullets.)
+    <li>Lists are nestable.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li><a href="../../../testing/html/tags/l/li-bp1.htm">[Test]</a>
+        Internet Explorer, Mosaic, Netscape and Opera all produce the above
+        described indenting behavior for the mentioned invalid HTML.
+    <li><a href="../../../testing/html/tags/o/ol-bp2.htm">[Test]</a>
+        Both Internet Explorer and Netscape alter the listing mechanism (the
+        bullets) if a font changing tag (e.g. FONT SIZE) spans a list structure
+        or if it is placed incorrectly before the first LI tag.
+    <li>Internet Explorer 4.0 does not know how to properly count roman
+        numerals - all versions of 900-999 (also 1900-1999, 2900-2999, etc.)
+        use "CW" where they should instead use "CM". Later Internet Explorer
+        versions are fine (thanks to Chris Findlay who alerted me to this
+        whole roman numeral pile of worms.)
+    <li><a href="../../../testing/html/tags/o/ol-bp1.htm">[Test]</a>
+        It seems that <em>ALL</em> browsers have problems with roman numeral
+        lists. The two big problems are list marker rendering and numbers
+        greater than 3999 (roman numeral counting changes at 4000 from the
+        normal pattern.)<br>
+        <b class="subheading">Roman Numeral List Rendering Problems:</b>
+        <table border=2 cellspacing=0 cellpadding=3>
+        <tr><th><b class="l3heading">Browser</b></th>
+            <th><b class="l3heading">Version</b></th>
+            <th align=left valign=top><b class="l3heading">What happens at 4000?</b></th>
+            <th align=left valign=top><b class="l3heading">List marker rendering</b></th></tr>
+        <tr><th>Internet<br>Explorer</th><th valign=top>3</th>
+            <td valign=top>Displays as integer numerals where:<br>
+                3999=correct roman, 4000="1", 4001="2", etc.</td>
+            <td valign=top>Ok</td></tr>
+        <tr><td>&nbsp;</td><th valign=top>4-5.5</th>
+             <td valign=top>Displays as integer numerals where:<br>
+                 3999=correct roman, 4000="1", 4001="2", etc.</td>
+             <td valign=top>Markers too large overlap onto content.</td></tr>
+        <tr><th valign=top>Netscape</th><th valign=top>1</th>
+            <td valign=top>Restarts at 4000 in roman numerals off by 2, where:
+                3999=correct roman, 4000="ii", 4001="iii"</td>
+            <td>Content masks the marker, but marker can reappear if content is
+                too short or marker is too long.</td></tr>
+        <tr><td>&nbsp;</td><th valign=top>1.2-4.x</th>
+            <td valign=top>Displays as integer numerals where:<br>
+                3999=correct roman, 4000="1", 4001="2", etc.</td>
+            <td valign=top>Markers too large overlap onto content.</td></tr>
+        <tr><td>&nbsp;</td><th valign=top>6.x</th>
+            <td>Restarts at 4000 in error mode, where:
+                3999=correct roman, 4000="m?", 4001="m?i"</td>
+            <td>Markers too large extend into left page margin</td></tr>
+        <tr><th>Opera</th><th valign=top>3.2</th>
+            <td valign=top>Displays correctly up to 3999, and "....."
+                for all markers &gt;=4000</td>
+            <td valign=top>Ok</td></tr>
+        <tr><th>&nbsp;</th><th valign=top>3.5-3.6x</th>
+            <td valign=top>Displays correctly up to 3999, and "....."
+                for all markers &gt;=4000</td>
+            <td valign=top>Markers too large overlap onto content.</td></tr>
+        <tr><th>&nbsp;</th><th valign=top>4.0</th>
+            <td valign=top>Displays correctly up to 3999, and "....."
+                for all markers &gt;=4000</td>
+            <td valign=top>Markers too large extend into left page margin</td></tr>
+        </table></li>
+     <li>One last thing about roman numeral counting: Opera display was often
+         problematic - often breaking the content or marker alignment, and
+         dropping counting a marker (one O3.2 case failed at 94 out of 1100, and
+         O3.5 messed up #3364 out of 4100 items.) This seems fairly trivial,
+         but it also messed up when the START attribute is set, which exposes
+         problems with higher numbers much sooner.
+     <li><a href="../../../testing/html/tags/o/ol-bp3.htm">[Test]</a>
+         START attribute behavior for "0" and negative values:<br>
+         <b>IE: (all)</b> Both value types honored<br>
+         <b>Netscape/Mozilla: (all)</b> Ignored<br>
+         <b>Opera 2.1-6.x:</b> Ignored<br>
+         <b>Opera 7.x+:</b> "0" honored, negative values causes all list markers 
+            for the list to go away.<br>
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

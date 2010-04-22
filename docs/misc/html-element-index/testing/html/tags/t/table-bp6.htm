@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TABLE: Browser Peculiarities: Floating tables and content selectability</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">I finally discovered the answer to a strange behavior that I 
+had seen for a long time in Netscape: occasionally, some text was unselectable.
+The answer: the content of tables in Netscape (text especially), is not selectable 
+by the reader if the table is floated (using the ALIGN="left" or ALIGN="right".) 
+This behavior has been the case ALL the way back to Netscape 2.0.</div>
+<br>
+
+<b>Plain table, no align attribute:</b>
+<hr>
+filler text
+<table border="2">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br clear="all"><br>
+
+<b>Plain table, align=left attribute:</b>
+<hr>
+filler text
+<table border="2" align="left">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br clear="all"><br>
+
+<b>Plain table, align=right attribute:</b>
+<hr>
+filler text
+<table border="2" align="right">
+<tr><td>TD Cell 1</td><th>TH Cell 2</th></tr>
+<tr><th>TH Cell 3</th><td>TD Cell 4</td></tr>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

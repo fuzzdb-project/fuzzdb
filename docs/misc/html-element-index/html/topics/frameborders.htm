@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Controlling Frame Borders in Internet Explorer and Netscape</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Controlling Frame Borders</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#problem">The Problem</a> | <a href="#syntax">The New Syntax</a><br>
+        <a href="#compatibility">Cross-Compatibility Tips</a> | <a href="#examples">Examples</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=2><hr size=1></td></tr>
+<tr><td align=left colspan=2>
+     <big><b class="mainheading"><a name="problem">The Problem</a></b></big>
+     <hr width="30%" align=left size=1>
+     The rendering of the original frame syntax introduced in Netscape 2.0 produces
+     a border between adjoining frames of static thickness and appearance. The 3.0
+     versions of both Internet Explorer and Netscape sought to extend the original
+     syntax to allow control over these frame border appearance properties. One
+     problem existed with this - the syntax each browser chose is slightly different
+     from the other. Despite this incompatibility, it is possible to control these
+     properties so that the desired result can be achieved in BOTH browsers.
+     <br><br>
+
+<big><b class="mainheading"><a name="syntax">The New Syntax</a></b></big>
+<hr width="30%" align=left size=1>
+<dl>
+<dt>The following attributes are used for the FRAMESET element to control the border
+    characteristics of all frames in the set. The FRAMEBORDER attribute is also
+    usable with the FRAME element as well, where it controls the border around each
+    particular frame.
+<dt><b class="subheading">FRAMEBORDER</b> - Common Attribute
+     <dd>This is a boolean (off/on) value controlling the display of the
+         border between frames. Netscape understands values of 'no'/'yes'
+         and '0'/'1'. Internet Explorer only understands '0'/'1'. Default value
+         in both browsers is to display a border ('yes' or '1'.)
+         <br>
+         <b class="alert2">NOTE:</b> If FRAMEBORDER is set to '0' in
+         Internet Explorer or Netscape and a positive FRAMESPACING or BORDER
+         is also set, a gap will be rendered in place of the typical
+         beveled-edge frame border.
+<dt><b class="subheading">BORDER</b> - Common Attribute
+     <dd>This specifies an integer pixel value representing the thickness of the
+         space between frames.<br>
+         <b class="alert2">NOTE:</b> If BORDER=0 is used in Netscape,
+         it implicitly sets (overrides) FRAMEBORDER to 'no'/'0'.
+<dt><b class="subheading">FRAMESPACING</b> - Internet Explorer Attribute
+     <dd>This also specifies an integer pixel value for the thickness of the
+         space between frames.
+</dl>
+
+<br>
+<big><b class="mainheading"><a name="compatibility">Cross-compatibility Tips</a></b></big>
+<hr width="30%" align=left size=1>
+<ul>
+     <li>Use '0' and '1' as the value for FRAMEBORDER (not 'no' and 'yes')
+     <li>Use <em>BOTH</em> the BORDER and FRAMESPACING attributes
+         (with the same value) to control the frame border thickness.
+     <li>Explicitly set the FRAMEBORDER attribute (as well as the BORDER and
+         FRAMESPACING attributes) to '0' if no border is desired.
+     <li><b class="alert">NOTE:</b> Several people have <b class="magicword">reported
+         problems trying to achieve seamless content between frames in
+         Netscape</b> using only the attributes and methods described above -
+         It looks like the best solution is to add the Netscape-only attributes
+         MARGINHEIGHT and MARGINWIDTH to the BODY elements of your FRAME
+         sub-pages. Adding these attributes and setting them to zero should bring
+         your cross-frame content together and prevent discontinuity.
+</ul>
+
+<big><b class="mainheading"><a name="examples">Examples</a></b></big>
+<hr width="30%" align=left size=1>
+<dl>
+<dt><b class="alert2">Example -</b> 5 pixel border between frames
+     <dd><div class="example">&lt;<b class="tagname">frameset</b> <span class="tagattrib">cols</span>=&quot;50%,50%&quot;
+         <span class="tagattrib">frameborder</span>=&quot;1&quot; <span class="tagattrib">border</span>=&quot;5&quot;
+         <span class="tagattrib">framespacing</span>=&quot;5&quot;&gt;<br>
+         &#160;&#160;&#160;&lt;<b class="tagname">frame</b> <span class="tagattrib">name</span>=&quot;frame1&quot;
+         <span class="tagattrib">src</span>=&quot;test.htm&quot; /&gt;<br>
+         &#160;&#160;&#160;&lt;<b class="tagname">frame</b> <span class="tagattrib">name</span>=&quot;frame2&quot;
+         <span class="tagattrib">src</span>=&quot;test.htm&quot; /&gt;<br>
+         &lt;/<b class="tagname">frameset</b>&gt;</div>
+</dl>
+
+<dl>
+<dt><b class="alert2">Example -</b> No borders between frames (borderless - 0 pixels)
+     <dd><div class="example">&lt;<b class="tagname">frameset</b> <span class="tagattrib">cols</span>=&quot;50%,50%&quot;
+         <span class="tagattrib">frameborder</span>=&quot;0&quot; <span class="tagattrib">border</span>=&quot;0&quot;
+         <span class="tagattrib">framespacing</span>=&quot;0&quot;&gt;<br>
+         &#160;&#160;&#160;&lt;<b class="tagname">frame</b> <span class="tagattrib">name</span>=&quot;frame1&quot;
+         <span class="tagattrib">src</span>=&quot;test.htm&quot; /&gt;<br>
+         &#160;&#160;&#160;&lt;<b class="tagname">frame</b> <span class="tagattrib">name</span>=&quot;frame2&quot;
+         <span class="tagattrib">src</span>=&quot;test.htm&quot; /&gt;<br>
+         &lt;/<b class="tagname">frameset</b>&gt;</div>
+</dl>
+</td>
+</tr>
+<tr><td colspan=2><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

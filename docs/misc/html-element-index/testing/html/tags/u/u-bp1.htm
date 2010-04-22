@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>U: Tips/Tricks: Underline element possible confusion with hyperlink appearance</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Use of the U element can possibly generate confusion with 
+     hyperlinks which generally carry a characteristic underlining effect.</div>
+
+<br>
+<b>Using U element alone:</b>
+<hr>
+<span>filler text <u>Link to Yahoo.com</u> filler text</span>
+<hr>
+<br>
+
+<b>Using U element with FONT COLOR element (with typical browser unvisited link color):</b>
+<hr>
+<span>filler text <u><font color="blue">Link to Yahoo.com</font></u> filler text</span>
+<hr>
+<br>
+
+<b>Using A HREF element linking to yahoo.com :</b>
+<hr>
+<span>filler text <a href="http://www.yahoo.com/">Link to Yahoo.com</a> filler text</span>
+<hr>
+
+
+</body>
+</html>

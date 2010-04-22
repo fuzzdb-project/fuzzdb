@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=File: Browser Peculiarities: Effects of the onChange attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape 2+ only supports the onChange event handler attribute 
+in cases where the user enters or modifies text via the text box; if the "Browse..." 
+button is the only thing used, the event is not fired. Internet Explorer 4.0+ fires the event in both cases.</div>
+<br>
+
+<b>Plain Input Type=File field, no ONCHANGE attribute:</b>
+<hr>
+filler text 
+<form>
+<input type="file"><br>
+</form>
+filler text
+<hr>
+<br>
+
+<b>Input Type=File field, ONCHANGE="alert('onchange fired!')". 
+<ol>
+<li>Modify text box contents manually and force a blur()
+<li>Invoke file selector dialog, choose a file, dismiss the dialog and force a blur() event
+<li>Do both and then force a blur() event:
+</ol></b>
+<hr>
+filler text 
+<form>
+<input type="file" onchange="alert('onchange fired!');"><br>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

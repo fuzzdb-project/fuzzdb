@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TBODY/TFOOT: Browser Peculiarities: Placement of TFOOT</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer 3.0 requires the TFOOT to follow after the TBODY. 
+Placing it before the TBODY like the specification says in IE 3.0 will not have 
+the desired effect. In such cases the TFOOT will be rendered before the TBODY. 
+Internet Explorer 4.0 allows the TFOOT to exist either before OR after TBODY sections.</div>
+<br>
+
+<b>Complex table, TABLE border=2, TFOOT placed before TBODY in markup:</b>
+<hr>
+filler text
+<table border="2">
+<thead>
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text </td></tr>
+</thead>
+<tfoot>
+<tr><td>Tfoot Tfoot</td><td>Tfoot Tfoot</td><td>Tfoot Tfoot</td></tr>
+</tfoot>
+<tbody>
+<tr><th>Tbody Tbody</th><td>Tbody Tbody</td><th>Tbody Tbody</th></tr>
+</tbody>
+</table>
+filler text
+<hr>
+<br>
+
+<b>Complex table, TABLE border=2, TBODY placed before TFOOT in markup:</b>
+<hr>
+filler text
+<table border="2">
+<thead>
+<tr><td>TD Cell 1</td><th>TH Cell 2</th><td>TD Cell 3 Filler text Filler text </td></tr>
+</thead>
+<tbody>
+<tr><th>Tbody Tbody</th><td>Tbody Tbody</td><th>Tbody Tbody</th></tr>
+</tbody>
+<tfoot>
+<tr><td>Tfoot Tfoot</td><td>Tfoot Tfoot</td><td>Tfoot Tfoot</td></tr>
+</tfoot>
+</table>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

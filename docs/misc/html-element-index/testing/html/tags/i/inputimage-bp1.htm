@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>INPUT type=image: Browser Peculiarities: BORDER attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<ol>
+<li class="assert">Netscape uses a non-zero value for the BORDER attribute by default. 
+    Setting the value to zero eliminates the border.</li>
+<li class="assert">Mosaic honors the BORDER attribute, but treats it as a binary setting - 
+    if present and set to a non-zero value, a thin, hyperlink color line is drawn around the image.</li>
+<li class="assert">Notes on the BORDER attribute in Netscape: This attribute has 
+    been supported since version 1.0, but some changes have happened. 
+    It looks like the attribute was NOT supported in version 2.0 at all, but support 
+    returned in 3.0. In version 6.0, the default border color for borders is black, 
+    not the document hyperlink color as is the case in other Netscape versions.</li>
+</ol>
+<br>
+
+
+<form>
+<b>Simple INPUT type=image element, no border attribute:</b>
+<hr>
+filler text 
+<input type="image" src="../../../objects/images/left.gif"> 
+filler text
+<hr>
+<br>
+
+<form>
+<b>Simple INPUT type=image element, border=0:</b>
+<hr>
+filler text 
+<input type="image" src="../../../objects/images/left.gif" border="0"> 
+filler text
+<hr>
+<br>
+
+<form>
+<b>Simple INPUT type=image element, border=1:</b>
+<hr>
+filler text 
+<input type="image" src="../../../objects/images/left.gif" border="1"> 
+filler text
+<hr>
+<br>
+
+<form>
+<b>Simple INPUT type=image element, border=5:</b>
+<hr>
+filler text 
+<input type="image" src="../../../objects/images/left.gif" border="5"> 
+filler text
+<hr>
+<br>
+
+<form>
+<b>Simple INPUT type=image element, border=10:</b>
+<hr>
+filler text 
+<input type="image" src="../../../objects/images/left.gif" border="10"> 
+filler text
+<hr>
+<br>
+</body>
+</html>

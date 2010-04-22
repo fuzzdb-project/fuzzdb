@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<html>
+<head>
+	<title>Input Type=Reset: Browser Peculiarities: Space preservation</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Internet Explorer 4.0 honors all whitespace and carriage returns 
+in the value attribute for this element. The button will preserve and display them 'as-is'. 
+Other browsers and earlier versions of Internet Explorer do not do this.</div>
+<br>
+
+<form>
+<b>Plain Input Type=Reset field, short value ("reset button"), no extra spaces:</b>
+<hr>
+filler text
+<input type="reset" value="reset button">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Reset field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;reset&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 normal spaces before, in between and after words:</b>
+<hr>
+filler text
+<input type="reset" value="    reset    button    ">
+filler text
+<hr>
+<br>
+
+<b>Input Type=Reset field, short value 
+("&nbsp;&nbsp;&nbsp;&nbsp;reset&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"), 
+4 non-breaking space character entities before, in between and after words:</b>
+<hr>
+filler text
+<input type="reset" value="&nbsp;&nbsp;&nbsp;&nbsp;reset&nbsp;&nbsp;&nbsp;&nbsp;button&nbsp;&nbsp;&nbsp;&nbsp;">
+filler text
+<hr>
+<br>
+
+<b>Input Type=reset field, short value with linefeed in between
+("reset \n button"):</b>
+<hr>
+filler text
+<input type="reset" value="reset
+button">
+filler text
+<hr>
+<br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Marquee</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Marquee</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>]
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>] 
+         [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">block</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>Block content cycling from the right side of the element to the left.</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/objects/marquee.asp">Microsoft MSDN reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+     <dd>A Marquee is a rectangular banner region of moving/scrolling content
+         allowing many different movement behaviors.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Common Attributes</b></big>
+<dt><b class="subheading">%<a href="../attributes/core.htm">Core</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE3B1</i></b>|<span class="ns">M</span>|<b class="s">N6.2</b>|<b class="s">O7.2</b>]
+
+<dt><b class="subheading">%<a href="../attributes/accessibility.htm">Accessibility</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O7.2</b>]
+
+<dt><b class="subheading">%<a href="../attributes/events.htm">Events</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<b class="s">N6</b>|<b class="s">O7.2</b>]
+
+<dt><b class="subheading">%<a href="../attributes/language.htm">Language</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/data.htm">Data</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE4</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><b class="subheading">%<a href="../attributes/editing.htm">Editing</a>%</b>
+    <dd>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+        [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+        [<b><i class="fs">IE5.5</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+
+<dt><br><big><b class="mainheading">Specific Attributes</b></big>
+<dt><b class="subheading">Behavior</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies how the Marquee text should move.
+    <dd><b class="l3heading">Values:</b><br>
+        &#160;&#160;&#160;<b class="alert">Scroll</b>
+        [<b class="magicword">DEFAULT</b> - Text enters on one
+        side of the screen and travels to the opposite side and
+        cycles repeatedly from where it started]<br>
+        &#160;&#160;&#160;<b class="alert">Slide</b>
+        [marquee enters from one side of the screen and comes to stop at
+        the opposite side]<br>
+        &#160;&#160;&#160;<b class="alert">Alternate</b>
+        [marquee bounces from one side of the screen to the other.]
+
+<dt><b class="subheading">BGColor</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Indicates a background color to be used for the Marquee text box.
+    <dd><b class="l3heading">Values:</b>
+        The standard <a href="../../../color/colors.htm">HTML color specification</a> methods apply.
+
+<dt><b class="subheading">Direction</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the direction the Marquee text should scroll.
+    <dd><b class="l3heading">Values:</b>
+        <b class="alert">Left</b> [<b class="magicword">DEFAULT</b>] |
+        <b class="alert">Right</b> | <b class="alert">Down</b> | <b class="alert">Up</b>
+
+<dt><b class="subheading">Height</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the height of the Marquee box. Default value is the height
+        of the contained text.
+    <dd><b class="l3heading">Values:</b>
+        Positive integer values representing the pixel height of the marquee
+        box or a percentage of the screen height.
+
+<dt><b class="subheading">HSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies values for the left and right spacing margins for the outside of the Marquee.
+    <dd><b class="l3heading">Values:</b>
+        Specified in positive integer pixel amounts. Default is 0.
+
+<dt><b class="subheading">Loop</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies how many times the Marquee display will cycle.
+    <dd><b class="l3heading">Values:</b>
+        A positive integer <b class="alert">N</b> times, or
+        <b class="alert">INFINITE (-1)</b> [<b class="magicword">DEFAULT</b>]
+
+<dt><b class="subheading">ScrollAmount</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This attribute specifies the amount of space that exists horizontally
+        between each successive draw of Marquee text.
+    <dd><b class="l3heading">Values:</b> Positive integer pixel amounts.
+
+<dt><b class="subheading">ScrollDelay</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the number of milliseconds between each successive draw of Marquee text.
+    <dd><b class="l3heading">Values:</b>
+        Values are specified in positive integer millisecond amounts.
+
+<dt><b class="subheading">Truespeed</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE4B1</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        This stand alone indicates that exact SCROLLDELAY values should be honored.
+        If this attribute is not present, all SCROLLDELAY values less than 59 are
+        rounded to 60 milliseconds.
+    <dd><b class="l3heading">Values:</b> NA
+
+<dt><b class="subheading">VSpace</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<span class="ns">N</span>|<span class="ns">O</span>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies values for the top and bottom spacing margins for the outside of the Marquee.
+    <dd><b class="l3heading">Values:</b>
+        Specified in positive integer pixel amounts. Default value is 0.
+
+<dt><b class="subheading">Width</b>
+<dt>[<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+    [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+    [<b><i class="fs">IE2</i></b>|<span class="ns">M</span>|<b class="s">N7</b>|<b class="s">O7.2</b>]
+    <dd><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b> NA
+    <dd><b class="l3heading">Required?</b> No
+    <dd><b class="l3heading">Description:</b><br>
+        Specifies the width of the Marquee box. Default value is the width of the screen.
+    <dd><b class="l3heading">Values:</b>
+        Positive integer values representing the pixel width of the marquee
+        box or a percentage of the parent element's width.
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">marquee</b>
+        <span class="tagattrib">loop</span>=&quot;infinite&quot;
+        <span class="tagattrib">behavior</span>=&quot;slide&quot;<br>
+        <span class="tagattrib">bgcolor</span>=&quot;#FF0000&quot;
+        <span class="tagattrib">direction</span>=&quot;left&quot;
+        <span class="tagattrib">height</span>=&quot;30&quot; 
+        <span class="tagattrib">width</span>=&quot;200&quot;&gt;<br>
+        Marquee Sliding Text Example<br>
+        &lt;/<b class="tagname">marquee</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b><br>
+        <b class="alert">Exceptions:</b> &lt;<a href="../m/marquee.htm">marquee</a>&gt;
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b><br>
+        <b class="alert">Exceptions:</b> &lt;<a href="../m/marquee.htm">marquee</a>&gt;
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li>For a long time, only Internet Explorer supported this element. Although 
+        Netscape/Mozilla now supports it, it is not and likely will never be in 
+        the standards, so its use is not recommended.
+    <li>Many of the effects of this element can be replicated with Java or
+        Javascript which already has wider support than Marquee. In situations
+        where Marquee support is guaranteed, it does represent a <em>MUCH</em> more
+        compact method of representation to produce moving text than Java
+        code would be.
+    <li>There is no direct way to control the speed at which a bit of
+        Marquee text travels. The SCROLLAMOUNT and SCROLLDELAY attributes must be
+        used in tandem to create this effect and their use is not intuitive.
+    <li><a href="../../../testing/html/tags/m/marquee-bp1.htm">[Test]</a>
+        If no WIDTH attribute is set for a MARQUEE element, it behaves like a
+        block-level element (linebreak before and after) and occupies 100% of the
+        containing element/window width. If a width is set, it behaves like an
+        in-line element.
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>Internet Explorer versions before 4.0 Beta 1 will not understand the
+        DIRECTION attribute values of <b class="alert">UP</b> and <b class="alert">DOWN</b>.
+    <li><a href="../../../testing/html/tags/m/marquee-bp2.htm">[Test]</a>
+        Nested MARQUEE elements do not behave well in Internet Explorer. Don't try it.
+    <li><a href="../../../testing/html/tags/m/marquee-bp3.htm">[Test]</a>
+        The use of block structures in MARQUEEs (such as BLOCKQUOTE) will be
+        ignored in IE versions 3.0x and below, while in IE 4.0 and above it makes
+        the marquee appear as a multi-line field.
+    <li>Internet Explorer versions 2.0 and 3.0 supported an ALIGN attribute. It
+        specified where the text around the marquee should align vertically
+        relative to the marquee and supported values of "Top", "Middle" and
+        "Bottom". Version 4.0 and later do not support this attribute.
+    <li><a href="../../../testing/html/tags/m/marquee-bp4.htm">[Test]</a>
+        <b class="alert">Scenario:</b> MARQUEE is the only content of a table
+        cell and WIDTH attribute is not set for <em>EITHER</em> the table cell
+        or MARQUEE element: Internet Explorer 4.0 and above - cell width
+        defaults to 1 pixel.<br>
+        Internet Explorer 2.0/3.0 - cell width defaults to the width of
+        the MARQUEE content.
+    <li>Netscape 7.0+: For the BEHAVIOR attribute, the SLIDE value is not supported
+    <li><a href="../../../testing/html/tags/m/marquee-bp5.htm">[Test]</a>
+        Netscape 7.0+: For the BEHAVIOR attribute, the ALTERNATE value is rendered differently
+        than IE - In IE, the marquee starts at one side of the marquee box, already onscreen.
+        It then proceeds to the opposite side of the marquee box, until its leading content edge 
+        reaches the marquee box edge, and then returns back the way it came. In Mozilla, the 
+        marquee content starts offscreen, comes onscreen at one side, travels to the opposite 
+        side, then <em>goes offscreen</em> before travelling back the way it came.
+</ul>
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

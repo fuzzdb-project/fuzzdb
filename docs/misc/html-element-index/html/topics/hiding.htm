@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Hiding your source code</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<h1 align="center"><span class="pagetitle">Hiding Your Source Code</span><br>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../misc/email.htm">Brian Wilson</a> =</font></h1>
+
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td align=center><font size=2>
+     <a href="../index.html">Main Index</a> | <a href="../tagindex/a.htm">Element
+     Index</a> | <a href="../tree/htmltree.htm">Element Tree</a> |
+     <a href="../supportkey/a.htm">HTML Support History</a></font></td>
+</tr>
+<tr><td align=center><a href="#problem">The Problem</a> |
+    <a href="#solution">Possible Solutions</a></td></tr>
+</table>
+</center>
+<br><br>
+
+<center>
+<table cellpadding=3 width="90%">
+<tr><td colspan=3><hr size=1></td></tr>
+<tr><td align=left colspan=3>
+<a name="problem"></a>
+<big><b class="mainheading">The Issue</b></big>
+<hr width="30%" align=left size=1>
+I always see requests by authors looking for a simple method to hide their
+source code from readers. Presumably the reason for this is to prevent authors
+from re-using wholesale pieces of other people's documents. This desire can
+be well-founded, but preventing people from using something you worked hard
+to create takes enough additional effort that it is probably not worth the effort.
+<br><br>
+
+<a name="solution"></a>
+<big><b class="mainheading">Possible Solutions</b></big>
+<hr width="30%" align=left size=1>
+It is not possible to hide document content or HTML encoding from a user in
+the basic case. If the data stream is downloadable by the browser to be
+rendered, then it is available to the user to see as well.
+<br><br>
+
+I had always thought this was the end of the story, but several people have
+e-mailed to me reporting of methods which can be used to accomplish this with
+varying degrees of success.
+<br><br>
+
+<b class="subheading">Methods suggested:</b><br>
+<ul>
+    <li>Use a Java applet to fetch the source code and feed the display to the
+        browser (this will prevent the browser from viewing the source.) Someone
+        showed me an example where this is done. This may be the safest bet,
+        but download time is greatly increased (the applet was <em>NOT</em> small by
+        any means.) Look around on Java code web sites for applets like this.
+    <li>Encode the data (either with simple encodings or more complex encryption)
+        and use Javascript to decode it on the fly. Place the javascript in an
+        external file and use the SRC attribute of the SCRIPT element to reference,
+        effectively isolating it from the view of the browser.
+        <br><br>
+        Someone suggested putting 'X' characters between all letters, reversing the
+        content or variations on this. Some simple javascripting could decode this
+        correctly but so can a human with a little work.
+    <li>Fool the reader into thinking the source code is not available. Pad it
+        with spaces and linefeeds so the source looks blank initially - believe
+        me! This may fool some (but not all) readers...
+</ul>
+<tr><td colspan=3><hr size=1></td></tr>
+</table>
+</center>
+
+<br>
+<a href="../../misc/copyright.htm">Boring Copyright Stuff...</a>
+<br>
+
+</BODY>
+</HTML>

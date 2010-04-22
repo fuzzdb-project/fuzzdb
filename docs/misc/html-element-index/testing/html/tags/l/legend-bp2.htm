@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>LEGEND: Browser Peculiarities: Focus issues with ACCESSKEY attribute</title>
+<style>
+.assert { color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Use of the ACCESSKEY attribute for this element in IE 4.0 puts 
+focus on the first form field within the parent FIELDSET.
+<br>
+<b>To activate ACCESSKEY:</b>
+<ul>
+    <li>IE/Moz: ALT + accesskey character
+    <li>Opera: SHIFT-ESC + accesskey character
+</ul>
+</div>
+
+
+<b>LEGEND element with accesskey="r". The third field has an accesskey "s" by comparison:</b>
+<hr>
+filler text 
+<form>
+<fieldset>
+<legend accesskey="r">This is a legend (r)</legend>
+<b>Field 1:</b> <input type="text" name="f1"><br>
+<b>Field 2:</b> <input type="text" name="f2"><br>
+<b>Field 3(s):</b> <input type="text" name="f3" accesskey="s">
+</fieldset>
+</form>
+filler text
+<hr>
+<br>
+
+</body>
+</html>

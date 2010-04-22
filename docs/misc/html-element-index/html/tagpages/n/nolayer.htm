@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Nolayer</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+     <td><h1 class="pagetitle">Nolayer</h1>
+         <b><a href="../../../misc/suppkey.htm">Support Key:</a></b> 
+         [<span class="ns">2</span>|<span class="ns">3</span>|<span class="ns">3.2</span>|<span class="ns">4</span>] 
+         [<span class="ns">X1</span>|<span class="ns">X1.1</span>]
+         [<span class="ns">IE</span>|<span class="ns">M</span>|<b><i><u class="sr">N4B3-4.x</u></i></b>|<span class="ns">O</span>]</td>
+     <td><a href="#what">What is it?</a><br>
+         <a href="#attrib">Attributes</a><br>
+         <a href="#example">Tag Example</a>
+     </td>
+     <td><a href="#model">Parent/Content Model</a><br>
+         <a href="#tips">Tips &amp; Tricks</a><br>
+         <a href="#peculiar">Browser Peculiarities</a></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Html</span> by <a href="../../../misc/email.htm">Brian Wilson</a> =</font>
+</td></tr>
+</table>
+
+<font size=2>
+     <a href="../../index.html">Main Index</a> |
+     <a href="../../tree/htmltree.htm">Element Tree</a> |
+     <a href="../../tagindex/a.htm">Element Index</a> |
+     <a href="../../supportkey/a.htm">HTML Support History</a></font>
+</center>
+<hr align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+   <th colspan=3 valign=bottom class="field"><big><u><b
+       class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#et">End Tag:</a></b><br></th>
+    <td rowspan=7>&nbsp;&nbsp;</td>
+    <td><span class="magicword">Required</span></td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#std">Standards Details:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#xhtm">XHTML Modules:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#disp">CSS 'display' Type:</a></b><br></th>
+    <td>"<b class="alert">inline</b>"</td></tr>
+<tr><th align=left valign=top><b class="l3heading"><a href="../stats.htm#css">CSS Mapping:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#rnd">Default Rendering:</a></b><br></th>
+    <td>NA</td></tr>
+<tr><th align=left><b class="l3heading"><a href="../stats.htm#w3docs">Official Docs:</a></b><br></th>
+    <td><a href="http://developer.netscape.com/docs/manuals/communicator/dynhtml/layers32.htm#1030768">Netscape's 
+        "DHTML In Communicator" reference</a></td></tr>
+</table>
+</td></tr>
+</table>
+
+<br>
+<a name="what"></a>
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This element is used in conjunction with the <a href="../l/layer.htm">LAYER</a>
+        and <a href="../i/ilayer.htm">ILAYER</a> elements to indicate content/HTML markup
+        that will only appear if the browser does not support the LAYER/ILAYER syntax. Browsers 
+        that DO support the layering syntax will ignore the contents of the NOLAYER element.
+</dl>
+
+
+<a name="attrib"></a>
+<dl>
+<dt><br><big><b class="mainheading">Attributes</b></big>
+    <dd><b class="alert">This element does not accept any attributes</b>
+</dl>
+
+
+<a name="example"></a>
+<dl>
+<dt><big><b class="mainheading">Example</b></big>
+    <dd><div class="example">&lt;<b class="tagname">layer</b> <span class="tagattrib">name</span>=&quot;two&quot;
+        <span class="tagattrib">left</span>=&quot;40&quot; <span class="tagattrib">top</span>=&quot;40&quot;
+        <span class="tagattrib">z-index</span>=&quot;2&quot;<br>
+        <span class="tagattrib">src</span>=&quot;http://www.example.com/document.html&quot;&gt;Positioned
+        content&lt;/<b class="tagname">layer</b>&gt;
+        <br>
+        &lt;<b class="tagname">nolayer</b>&gt;<br>
+        &#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">b</b>&gt;Please&gt;/<b class="tagname">b</b>&gt;
+        try this page for browsers that can not handle Netscape's LAYER syntax.<br>
+        &#160;&#160;&#160;&#160;&#160;&lt;<b class="tagname">a</b>
+        <span class="tagattrib">href</span>=&quot;http://www.example.com/alternate.html&quot;&gt;Simple
+        Text Page&lt;/<b class="tagname">a</b>&gt;<br>
+        &lt;/<b class="tagname">nolayer</b>&gt;</div>
+</dl>
+
+
+<a name="model"></a>
+<dl>
+<dt><big><b class="mainheading">Parent Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#blockparent">Block Parent</a>%</b>
+<dt><big><b class="mainheading">Content Model</b></big>
+    <dd><b class="alert">%<a href="../shorthands.htm#inlinecontent">In-line Content</a>%</b> |
+        <b class="alert">%<a href="../shorthands.htm#blockcontent">Block Content</a>%</b>
+</dl>
+
+
+<a name="tips"></a>
+<big><b class="mainheading">Tips &amp; Tricks</b></big>
+<ul>
+    <li><b class="alert">DTD Note:</b> The Parent/Content models used for this
+        are taken from the NOSCRIPT element. I have not experimented with this element
+        very much, and documentation for it is almost nonexistent, but the intended
+        usage behavior of NOLAYER seems to mirror NOSCRIPT in most respects.
+    <li>Use of this element seems only appropriate when the SRC attribute of the LAYER and
+        ILAYER elements are used. Otherwise, HTML content within a layer will properly degrade
+        and this element will not be necessary.
+    <li><b class="alert">DTD Note:</b> %Core% attributes were not included for this
+        element because for Netscape it would be unnecessary. Positioning support
+        (LAYER/ILAYER) occurred at the same time as style sheets (CLASS, ID, STYLE)
+        so older Netscape browsers would ignore both.
+    <li>Only Netscape supported this element in its 4.x versions. Netscape 6.x+ no 
+        longer supports this, so use of this element is discouraged. 
+</ul>
+
+<a name="peculiar"></a>
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+     <li>Nothing to Report
+</ul>
+
+
+<br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff...</a>
+
+</BODY>
+</HTML>

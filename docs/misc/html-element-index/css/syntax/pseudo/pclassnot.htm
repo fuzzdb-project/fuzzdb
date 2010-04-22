@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<HEAD>
+     <TITLE>Pseudo-Class: Not - Cascading Style Sheet Syntax</TITLE>
+     <link rel="stylesheet" type="text/css" href="../../../ss/2.css" id="thecss">
+     <script type="text/javascript" src="../../../scripts/csschange.js"></script>
+</HEAD>
+
+<BODY onload="readSS()">
+
+<br>
+<center>
+<table border=3 cellpadding=5 cellspacing=0>
+<tr>
+    <td rowspan=2><h1 class="pagetitle">Pseudo-class:<br>not</h1>
+    <b><a href="../../../misc/suppkey.htm">Support Key:</a></b>
+    [<b><i class="fs">CSS3</i></b>] 
+    [<b><i class="fs">N6</i></b>|<b class="s">S1</b>]<br></td>
+    <td colspan=2 align=center><b class="alert">Other Document-Tree<br>Pseudo-Classes</b><br></td>
+</tr>
+<tr>
+     <td valign=top><a href="pclassroot.htm">root</a><br>
+         <a href="pclassempty.htm">empty</a><br>
+         <a href="pclassfirstchild.htm">first-child</a><br></td>
+     <td valign=top><a href="pclassfirstnode.htm">first-node</a><br>
+         <a href="pclasslastchild.htm">last-child</a><br>
+         <a href="pclasslastnode.htm">last-node</a><br>
+         <a href="pclasslang.htm">lang</a><br></td>
+</tr>
+<tr><td align=center colspan=3>
+<font size=2>= <span class="sitetitle">Index DOT Css</span> by <a 
+href="../../../misc/email.htm">Brian Wilson</a> =</font><br>
+</td></tr>
+</table>
+</center>
+
+<div align="center">
+<font size=2><a href="../../index.html">Main Index</a> |
+<a href="../../propindex/font.htm">Property Index</a> |
+<a href="../../supportkey/syntax.htm">CSS Support History</a> |
+<a href="../../../history/browsers.htm">Browser History</a></font>
+</div>
+<hr size=1 align="center" width="25%">
+
+<br><br>
+<table border=1 cellspacing=0 cellpadding=5>
+<tr><td>
+<table border=0 cellspacing=0>
+<tr>
+    <th colspan=2 valign=bottom class="field"><big><u><b
+        class="colheaders">&#160;&#160;&#160;Quick Statistics&#160;&#160;&#160;</b></u></big><br></th>
+</tr>
+<tr><th align=left><b class="l3heading">Applicable Elements: </b><br></th>
+    <td>Any</td></tr>
+<tr><th align=left><b class="l3heading">HTML Equivalent: </b><br></th>
+    <td>NA</td></tr>
+</table>
+</td></tr>
+</table>
+
+<dl>
+<dt><big><b class="mainheading">What is it?</b></big>
+    <dd>This is actually a very powerful pseudo-class used to negate a normal
+        selector. CSS selectors are used to narrow down the set of elements
+        that a rule set will apply to. This Pseudo-class directs the CSS to
+        apply a rule set to everything that you did <em>NOT</em> select. Since
+        existing CSS selectors can not cover <em>ALL</em> situations, this
+        property can be useful.
+        <br><br>
+
+        <b class="alert">NOTE:</b><br>
+        It is very easy to make a ":not" selector
+        that does not do what you intend - be sure to test your rules thoroughly.
+        For instance, be careful when using :not generically - the BODY element
+        will also be matched unless you specifically tell it to be ignored.
+        (eg "<b class="selector">:not([href])</b>" will match all elements without
+        an HREF attribute, including the BODY element and its descendents, while
+        "<b class="selector">body :not([href])</b>" will only try to match all
+        elements without an HREF attribute <em>INSIDE</em> the BODY element.)
+</dl>
+
+<dl>
+<dt><big><b class="mainheading">Examples</b></big>
+    <dd><div class="example">
+        <ul>
+        <li><b class="selector">a:not([href])</b> { <span class="property">color:</span> green }<br>
+            Match all A elements that do not have an HREF attribute and turn
+            the text content green.
+        <li><b class="selector">body :not([href])</b><br>
+            Match <em>ALL</em> elements in the BODY that do not have an HREF
+            attribute (will not match any text nodes at the top level of the
+            BODY element either.)<br>
+        <li><b class="selector">body :not(div)</b><br>
+            Match all elements in the BODY that are not DIV elements (but
+            may be nested IN DIV elements.)
+        <li><b class="selector">a[href]:not([href="http://www.blooberry.com/"])</b><br>
+            Match only those HREF hyperlinks that don't link to "http://www.blooberry.com/"<br>
+            (if it just said <b class="selector">a:not([href="http://www.blooberry.com/"])</b>
+            it would match all A NAME elements as well.)
+        <li><b class="selector">body :not(.test)</b><br>
+            Match only those elements in the BODY that are not labeled as class "test."
+        <li><b class="selector">body :not(#test)</b><br>
+            Match only those elements in the BODY whose ID is not "test."
+        <li><b class="selector">body :not([class~="test"])</b><br>
+            Match only those elements in the BODY where "test" is not part of
+            the class names. Actually, this is the same as saying<br>
+            <b class="selector">body :not(.test)</b>
+        </ul>
+</div>
+</dl>
+
+<big><b class="mainheading">Browser Peculiarities</b></big>
+<ul>
+    <li>In theory, you should be able to combine this pseudo-class with others,
+        something like: "all B elements that are NOT 'first-child'ren of other
+        elements. Netscape doesn't seem to support this yet.
+</ul>
+
+<br><br>
+<a href="../../../misc/copyright.htm">Boring Copyright Stuff....</a>
+<br>
+
+</BODY>
+</HTML>

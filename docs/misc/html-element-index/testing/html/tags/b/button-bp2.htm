@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>BUTTON: Browser peculiarity - data submitted for BUTTON</title>
+<style>
+.assert { color: green }
+.test   { color: yellow }
+#test1  { background-color: green }
+</style>
+</head>
+
+<body>
+
+<big><b><u>Assertions:</u></b></big>
+<ol class="assert">
+<li>In Internet Explorer 4.0, submitting a form would only submit the 'innerText' 
+content of the BUTTON (the text content of the element.)</li>
+<li>In Internet Explorer 5.0, submitting a form submits the contents of the VALUE 
+attribute of the BUTTON if it is present. If it is not, the 'innerText' content 
+of the BUTTON is submitted instead.</li>
+</ol>
+<br>
+
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>Button element with no value attribute:</b>
+<hr>
+filler text 
+<button name="thebutton" type="submit">This is a button 
+<table border="1"><tr><td>Cell 1</td><th>Cell 2</th></tr></table>
+This <b>is a</b> button</button> 
+filler text
+<hr>
+</form>
+<br>
+
+<form method="post" action="http://www.blooberry.com/~bloo/cgi-bin/formecho.cgi">
+<b>Button element with a value attribute set ("thebuttonvalue"):</b>
+<hr>
+filler text 
+<button name="thebutton" type="submit" value="thebuttonvalue">This is a button 
+<table border="1"><tr><td>Cell 1</td><th>Cell 2</th></tr></table>
+This is a button</button> 
+filler text
+<hr>
+</form>
+<br>
+
+</body>
+</html>

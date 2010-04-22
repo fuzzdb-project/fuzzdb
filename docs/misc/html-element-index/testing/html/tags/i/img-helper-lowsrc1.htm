@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>IMG LOWSRC test case</title>
+</head>
+
+<body>
+
+<big><b><u>Assertion:</u></b></big>
+<div class="assert">Netscape does not seem to adjust the dimensions of an image 
+if a LOWSRC attribute is also supplied, ie: The dimensions of the LOWSRC image 
+are used to render the SRC image if no other HEIGHT and WIDTH properties have been set.</div>
+<br>
+
+<b>IMG reference, LOWSRC=right.gif; SRC=zenpattern.gif:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/zenpattern.gif" lowsrc="../../../objects/images/right.gif"> 
+filler text
+<hr>
+<br>
+
+
+<b>IMG reference, LOWSRC=right.gif; SRC=zenpattern.gif; width=200 height=200 set:</b>
+<hr>
+filler text 
+<img src="../../../objects/images/zenpattern.gif" lowsrc="../../../objects/images/right.gif" width="200" height="200"> 
+filler text
+<hr>
+<br>
+
+</body>
+</html>
