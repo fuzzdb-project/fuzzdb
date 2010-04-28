@@ -23,4 +23,7 @@
 = How-To's Relevant to fuzzdb =
 Web Shells In PHP, ASP, JSP, Perl, And !ColdFusion by Joseph Giron 2009  [http://www.wtfchan.org/~evil1/Web-Shells-rev2.pdf]
 
-= 
+= Other Stuff =
+I also maintain a collection of Firefox plugins useful to web app security testers, you can subscribe to the list using the Add-On Collector plugin to make setting up a new browser for testing easy - [https://addons.mozilla.org/en-US/firefox/collection/webappsec
+
+*Send me your patterns!*
