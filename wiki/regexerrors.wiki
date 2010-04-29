@@ -1,4 +1,3 @@
-#summary How To use regex/errors.txt
+#summary How To Use regex/errors.txt
 
 = Introduction =
-
