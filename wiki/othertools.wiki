@@ -1,0 +1,36 @@
+#summary Other tool I like
+
+*sqli*
+
+bsql-bf2 [http://code.google.com/p/bsqlbf-v2/]
+
+web raider [http://www.mavitunasecurity.com/blog/webraider/]
+
+sqlsus for mysql [http://sqlsus.sourceforge.net/index.html]
+
+sfx-sqli for ms-sql [http://www.kachakil.com/papers/SFX-SQLi-en.htm]
+
+sqlbrute - ms-sql and oracle - [http://www.justinclarke.com/archives/2006/03/sqlbrute.html]
+
+
+
+*proxy*
+
+burp suite [http://portswigger.net/]
+
+webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
+
+
+
+*fuzzer*
+
+burp intruder [http://portswigger.net/]
+
+jbrofuzz [http://sourceforge.net/projects/jbrofuzz/]
+
+webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
+
+
+
+
+
