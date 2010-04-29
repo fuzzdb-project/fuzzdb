@@ -1,3 +1,5 @@
 #summary How To Use regex/errors.txt
 
 = Introduction =
+
+<img sc=http://fuzzdb.googlecode.com/files/burp-intruder-regex-errors.jpg>
