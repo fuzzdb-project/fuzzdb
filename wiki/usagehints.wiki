@@ -1,5 +1,5 @@
+#summary Links to pages with tools and methodologies that work well with fuzzdb
 #labels Featured
-#Links to pages with tools and methodologies that work well with fuzzdb
 
 = Tools/Tool Docs =
 
