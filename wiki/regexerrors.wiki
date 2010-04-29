@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Open Burp, go to the Intruder tab, and the Options sub-tab
+Open Burp Suite [http://portswigger.net/suite/download.html], go to the Intruder tab, and the Options sub-tab
 
 Look for the section "grep"
 
