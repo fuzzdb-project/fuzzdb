@@ -1,4 +1,4 @@
-#summary Links to pages with tools and methodologies that work well with fuzzdb
+#summary Links to tools, docs pertaining to fuzzdb
 #labels Featured
 
 = How-to's and external docs =
