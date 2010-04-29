@@ -1,6 +1,6 @@
 #summary How To Use regex/errors.txt
 
-= Introduction =
+* in Burp Suite *
 
 Open Burp Suite, go to the Intruder tab, and the Options sub-tab
 
