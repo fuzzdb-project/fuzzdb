@@ -1,5 +1,4 @@
 #summary Other tools useful in conjunction with fuzzdb
-#labels Featured
 
 *sqli*
 
@@ -30,4 +29,3 @@ burp intruder [http://portswigger.net/]
 jbrofuzz [http://sourceforge.net/projects/jbrofuzz/]
 
 webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
-
