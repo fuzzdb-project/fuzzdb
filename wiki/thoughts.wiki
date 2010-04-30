@@ -1,3 +1,5 @@
+
+
 #summary Random thoughts about fuzzdb
 
 = Some thoughts behind fuzzdb =
@@ -9,3 +11,11 @@ Software standardization means that predictable resource locations are the norm.
 While there are mature fuzzing lists available for XSS and SQL Injection, other exploit categories lack such lists. By attempting to document all known permutations of characters that cause a specific exploit condition, fuzzdb creates a set of repeatable test cases for detecting vulnerabilities in new software. The payloads include platform-specific and generic test case patterns for detecting OS command execution, SQL Injection, XSS, CRLF header injection, filetype upload bypass, XML, LFI, RFI, traversals, file and directory contents exposure, and others.
 
 The population of common web application platform types is very small. The error messages that indicate something interesting (from the attacker's perspective) has happened are a known quantity. They have been turned into simple pattern match strings and catalogued in fuzzdb.
+
+= Use Case Examples = 
+
+Imagine using fuzzdb to find an OC command injection vulnerability. After detecting which data elements are vulnerable, other fuzz payload lists are utilized. The first tries to get a recognizable response to show that results are returned to the page, or identify that whether the command injection is blind. Other sets of payloads will contain things such as series of shell commands designed to test what kinds of egress filtering is in place, will identify writable directories by the web server, will try to establish connections to a system run by the tester running tcpdump. A set of rapid information gathering payloads will report information about the system, the network it's on, and neighboring hosts and networks.
+
+Here's a use case for fuzzing to exploit a blind os command exec bug:  you could use the patterns of command payloads that find writable dirs to find one, run some info gathering payloads and >> redir into a file in the writable dir, then copy the result file to a web accessible directory, or use another predictable resource list to fuzz the local file system to identify whether any of a number of program tools are installed that could facilitate moving files off the system if there is nothing web daemon writable other than for example, /tmp.
+
+Not all the pieces are there yet, but that's where it's headed
