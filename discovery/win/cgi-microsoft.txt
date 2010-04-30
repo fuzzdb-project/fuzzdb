@@ -1,4 +1,4 @@
-# on windows, cgi dir is usually /scripts /cgi /cgi-bin, but could be named anything.
+# on windows, cgi dir is usually /scripts /cgi /cgi-bin, but could be named anything or be the webroot.
 /cart32.exe
 /get32.exe
 /visadmin.exe
@@ -76,3 +76,4 @@
 /test-cgi.bat
 /test.bat?|dir%20..\\..\\..\\..\\..\\..\\..\\..\\..\\
 /tst.bat|dir%20..\\..\\..\\..\\..\\..\\..\\..\\,
+/_layouts/help.aspx?cid0=MS.WSS.manifest.xml%00%3Cscript%3Ealert%28%27XSS%27%29%3C/script%3E&tid=X
