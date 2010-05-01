@@ -5,6 +5,8 @@
 
 *Burp Intruder*
 
+  * Security Ninja tutorial for Burp Intruder - [http://www.securityninja.co.uk/burp-suite-tutorial-intruder-tool-version-2]
+
   * How to use fuzzdb's  regex/errors.txt in burpsuite intruder to find more bugs [http://code.google.com/p/fuzzdb/wiki/regexerrors]  
 
   * Burp Intruder docs [http://portswigger.net/intruder/help.html]
