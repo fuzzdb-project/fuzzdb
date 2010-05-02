@@ -31,4 +31,5 @@ jbrofuzz [http://sourceforge.net/projects/jbrofuzz/]
 webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
 
 *other brute force tools*
-CMS Explorer (thefile patterns are in fuzzdb, but cms-explorer does more than that) [http://code.google.com/p/cms-explorer/]
+
+CMS Explorer (the file patterns are in fuzzdb, but cms-explorer does more than that) [http://code.google.com/p/cms-explorer/]
