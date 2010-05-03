@@ -13,6 +13,8 @@
 
   * Burp Intruder docs [http://portswigger.net/intruder/help.html]
 
+  * Burp Suite with Google Android Emulator [http://cktricky.blogspot.com/2010/04/android-emulator-burpsuite.html]
+
 *Web Scarab*
 
   * Script that writes the page to the filesystem [http://pentesterconfessions.blogspot.com/2007/12/webscarab-scripting-and-fuzzing.html]
