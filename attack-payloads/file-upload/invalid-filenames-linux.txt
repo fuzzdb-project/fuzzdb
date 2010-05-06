@@ -1,0 +1,2 @@
+# Invalid filenames - these can be used to attempt to cause an error condition during file upload bypass attempts which might reveal an absolute path. Useful if you're not sure where your files are landing.
+
