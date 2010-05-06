@@ -1,3 +1,4 @@
+# this file contains a number of common predictable values. Add more if other file ttypes are allowed, or use the filetype-bf version of this fuzzfile
 {ASPSCRIPT}
 {ASPSCRIPT};
 {ASPSCRIPT};.jpg
@@ -12,3 +13,19 @@
 {ASPSCRIPT};.docx
 {ASPSCRIPT};.xls
 {ASPSCRIPT};.xlsx
+{ASPSCRIPT}%00.jpg
+{ASPSCRIPT}%00.pdf
+{ASPSCRIPT}%00.html
+{ASPSCRIPT}%00.txt
+{ASPSCRIPT}%00.xyz
+{ASPSCRIPT}%00.tgz
+{ASPSCRIPT}%00.zip
+{ASPSCRIPT}%00.doc
+{ASPSCRIPT}%00.docx
+{ASPSCRIPT}::data%00.jpg
+{ASPSCRIPT}::data%00.pdf
+{ASPSCRIPT}::data%00.html
+{ASPSCRIPT}::data%00.txt
+{ASPSCRIPT}::data%00.zip
+{ASPSCRIPT}::data%00.doc
+{ASPSCRIPT}::data%00.xls
