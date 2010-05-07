@@ -21,6 +21,10 @@
  
   * Webscarab Fuzzer docs [http://dawes.za.net/rogan/webscarab/docs/fuzzer.html]
 
+*File and Directory Discovery*
+
+  * Interesting new way to identify directories that exist [http://soroush.secproject.com/blog/2010/05/new-method-role-of-the-%E2%80%9C%E2%80%9D-character-in-mapping-the-website-directories/]
+
 
 = Other tools that are useful with fuzzdb = 
 
