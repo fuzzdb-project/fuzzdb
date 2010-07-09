@@ -1,4 +1,5 @@
 #summary How To Use regex/errors.txt
+#labels Featured
 
 * in Burp Suite *
 
