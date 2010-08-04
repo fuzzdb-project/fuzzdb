@@ -28,7 +28,9 @@ burp intruder [http://portswigger.net/]
 
 jbrofuzz [http://sourceforge.net/projects/jbrofuzz/]
 
-webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
+webscarab [http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
+
+pywebfuzz, a python implementation of fuzzdb, and much more [http://code.google.com/p/pywebfuzz/]
 
 *other brute force tools*
 
