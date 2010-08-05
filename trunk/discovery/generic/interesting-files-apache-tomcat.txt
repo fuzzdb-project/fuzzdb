@@ -18,6 +18,8 @@
 /examples/servlets/index.html
 /jsp-examples
 /manager
+/manager/deploy?path=foo
+/manager/html/
 /servlet/default/
 /servlet/org.apache.catalina.INVOKER.org.apache.catalina.servlets.DefaultServlet/tomcat.gif
 /servlet/org.apache.catalina.INVOKER.org.apache.catalina.servlets.SnoopAllServlet
@@ -35,3 +37,10 @@
 /webdav/index.html
 /webdav/servlet/org.apache.catalina.servlets.WebdavServlet/
 /webdav/servlet/webdav/
+/conf/
+/conf/server.xml/
+/WEB-INF/
+/WEB-INF/web.xml
+/WEB-INF/classes/
+/shared/
+/shared/lib/
