@@ -1,5 +1,3 @@
-a
-1
 1'1
 1 exec sp_ (or exec xp_)
 1 and 1=1
