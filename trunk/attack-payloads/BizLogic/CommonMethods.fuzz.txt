@@ -28,3 +28,13 @@ upload
 rename
 reset
 cancel
+admin
+demo
+verify
+vrfy
+on
+off
+0
+1
+enable
+disable
