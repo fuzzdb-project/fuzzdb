@@ -1,5 +1,9 @@
 #summary Other tools useful in conjunction with fuzzdb
 
+*encoding*
+
+napkin [http://www.0x90.org/releases/napkin/]
+
 *sqli*
 
 bsql-bf2 [http://code.google.com/p/bsqlbf-v2/]
@@ -17,6 +21,8 @@ sqlbrute - ms-sql and oracle - [http://www.justinclarke.com/archives/2006/03/sql
 *proxy*
 
 burp suite [http://portswigger.net/]
+
+cat [http://www.contextis.co.uk/resources/tools/cat/]
 
 webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Download]
 
