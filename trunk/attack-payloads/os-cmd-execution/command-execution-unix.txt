@@ -67,3 +67,4 @@ a|/usr/bin/id
 ; id
 %0a id %0a
 `id`
+$;/usr/bin/id
