@@ -1,0 +1,23 @@
+# nice ref: http://projects.webappsec.org/w/page/13246958/Script%20Mapping
+onAbort
+onBlur
+onChange
+onClick
+onDblClick
+onDragDrop
+onError
+onFocus
+onKeyDown
+onKeyPress
+onKeyUp
+onLoad
+onMouseDown
+onMouseMove
+onMouseOut
+onMouseOver
+onMouseUp
+onMove
+onReset
+onResize
+onSelect
+onSubmit

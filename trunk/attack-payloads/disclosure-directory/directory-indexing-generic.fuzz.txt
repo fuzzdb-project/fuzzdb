@@ -1,4 +1,3 @@
-# append after dir name - leave slashes to this file - don't prepend one in your fuzzer
 /%3f.jsp
 /?M=D
 /?S=D 
