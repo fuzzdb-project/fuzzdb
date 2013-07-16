@@ -30,6 +30,8 @@ webscarab http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Downlo
 
 *fuzzer*
 
+owasp Zap [https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project]
+
 burp intruder [http://portswigger.net/]
 
 jbrofuzz [http://sourceforge.net/projects/jbrofuzz/]
