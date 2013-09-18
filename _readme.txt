@@ -43,22 +43,19 @@ svn checkout http://fuzzdb.googlecode.com/svn/trunk/ fuzzdb-read-only
 
 Or, pick from a plethora of available svn clients: http://en.wikipedia.org/wiki/Comparison_of_Subversion_clients
 
-Tarballs are available for download, but may not be as fresh as what's in the svn repo.
+Tarballs are available for download, but may not be as fresh as whats in the svn repo.
 
 Browse the repo http://code.google.com/p/fuzzdb/source/browse/#svn/trunk
 
 
 ****Usage
 
-I primarily use fuzzdb in the Intruder module of Portswigger's excellent Burp Suite Pro (http://portswigger.net/suite/), however, it can be used in any fuzzer or for manual testing. Fuzzdb also makes an interesting source of test cases for fuzzing binary applications with. 
+I primarily use fuzzdb in the excellent OWASP ZAP (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) and in Burp Suite Pro (http://portswigger.net/suite/), however, it can be used in any web application/service fault injection tool, for manual testing as an interesting source of test cases for fuzzing binary applications, in IDS signatures, and more. 
 
 
 ****Who
 
-This SVN repository and the files were assembled by Adam Muntner, a researcher and consultant at Gotham Digital Science (GDS). 
+This SVN repository and the files were assembled by Adam Muntner who works as a Security Engineer at Mozilla Corp. 
 
-GDS is an international security services company with offices in New York City and London. GDS security specialists work with clients to assess risk and design, build, and maintain secure applications and networks.
+contact: unix23 (@) gmail.com
 
-http://www.gdssecurity.com
-
-amuntner (@) gdssecurity.com
