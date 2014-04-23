@@ -161,3 +161,11 @@
 /webapp/wm/bc4j.jsp
 /welcomeuser.jsp
 /wm
+/integration/services/TaskService/TaskServicePort
+/integration/services/TaskQueryService/TaskQueryService
+/integration/services/IdentityService/configuration
+/integration/services/IdentityService/identity
+/integration/services/TaskMetadataService/TaskMetadataServicePort
+/integration/services/UserMetadataService/UserMetadataService
+/integration/services/TaskReportService//integration/services/RuntimeConfigService/RuntimeConfigService
+/integration/services/EvidenceService/EvidenceService
