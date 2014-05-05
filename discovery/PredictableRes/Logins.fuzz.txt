@@ -12,7 +12,7 @@
 /admin.py
 /admin.rb
 /administrator
-/Admoinistrator
+/Administrator
 /administrator.asp
 /administrator.aspx
 /administrator.cfm
