@@ -82,6 +82,7 @@
 /fcgi-bin/echo.exe
 /fcgi-bin/echo2
 /fcgi-bin/echo2.exe
+/fedadmin
 /hellouser
 /hellouser.jsp
 /home
@@ -114,6 +115,7 @@
 /oc4j
 /oc4j-status
 /oc4jadmin
+/oca/admin
 /oiddas
 /oiddas/ui/oracle/ldap/das
 /ojspdemos
@@ -121,6 +123,7 @@
 /oracle
 /perl
 /petstore
+/pls/orasso
 /portlist
 /printenv
 /ruleauthor
