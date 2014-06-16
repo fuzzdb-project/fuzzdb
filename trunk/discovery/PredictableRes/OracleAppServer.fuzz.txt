@@ -157,6 +157,11 @@
 /testunit
 /transtrace
 /true
+/uddi
+/uddi/admin
+/uddi/demo
+/uddi/demo/inquiry
+/uddi/demo/publishing
 /uixi
 /usebean.jsp
 /utility
