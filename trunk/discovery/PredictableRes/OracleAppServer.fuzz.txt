@@ -162,6 +162,7 @@
 /uddi/demo
 /uddi/demo/inquiry
 /uddi/demo/publishing
+/uddi/demo/jsp/searchForm.jsp
 /uixi
 /usebean.jsp
 /utility
