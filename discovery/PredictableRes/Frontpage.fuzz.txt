@@ -33,3 +33,6 @@
 /_vti_log
 /_vti_pvt
 /_vti_txt
+/_vti_bin/_vti_aut/author.dll
+/_vti_bin/shtml.exe?_vti_rp
+
