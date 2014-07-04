@@ -173,6 +173,7 @@
 /_vti_script
 /_vti_txt
 /_WEB_INF/
+/Web.config
 /WEB-INF/web.xml
 /WebSer~1
 /x.cfm
