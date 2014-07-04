@@ -1,0 +1,21 @@
+# HTTP paramter polution and interpretation payloads by Jacco van Tuijl
+?id=id=1
+&id=1?id=2
+?id['&id=1']=2
+?id[1&id=2]=1
+?id=1&id=2
+&id=1&id=2
+?id=1%26id%3D2
+?id&id=1
+????id=1
+&&&&id=1
+?id=id['1']=2
+?id=1#id=2
+?id==1
+?id===1
+;id=1?id=2
+?id;id=1
+&id=1;id=2
+#id=1?id=2&id=3
+
+
