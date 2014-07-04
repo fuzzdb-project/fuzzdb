@@ -22,3 +22,4 @@
 /MySQLAdmin
 /login.php
 /logon.php
+/xmlrpc.php
