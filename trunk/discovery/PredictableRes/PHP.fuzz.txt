@@ -23,3 +23,8 @@
 /login.php
 /logon.php
 /xmlrpc.php
+/dbadmin
+/PMA
+/application/configs/application.ini
+/awstats
+/myadmin
