@@ -3,6 +3,7 @@
 \WINNT\win.ini
 \WINDOWS\Repair\SAM
 \WINDOWS\php.ini
+\WINDOWS\system32\drivers\etc\hosts
 \WINNT\php.ini
 \php\php.ini
 \php5\php.ini
@@ -23,3 +24,4 @@
 \Program Files (x86)\Apache Group\Apache2\conf\httpd.conf
 \Program Files (x86)\xampp\apache\conf\httpd.conf
 \Program Files (x86)\FileZilla Server\FileZilla Server.xml
+\AppServ\MySQL\data\mysql\user.MYD
