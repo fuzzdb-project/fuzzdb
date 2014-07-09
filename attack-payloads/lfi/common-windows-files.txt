@@ -1,0 +1,23 @@
+\boot.ini
+\WINDOWS\win.ini
+\WINNT\win.ini
+\WINDOWS\Repair\SAM
+\WINDOWS\php.ini
+\WINNT\php.ini
+\php\php.ini
+\php5\php.ini
+\php4\php.ini
+\apache\php\php.ini
+\xampp\apache\bin\php.ini
+\home2\bin\stable\apache\php.ini
+\home\bin\stable\apache\php.ini
+\Program Files\Apache Group\Apache\logs\access.log
+\Program Files\Apache Group\Apache\logs\error.log
+\Program Files\Apache Group\Apache\conf\httpd.conf
+\Program Files\Apache Group\Apache2\conf\httpd.conf
+\Program Files\xampp\apache\conf\httpd.conf
+\Program Files (x86)\Apache Group\Apache\logs\access.log
+\Program Files (x86)\Apache Group\Apache\logs\error.log
+\Program Files (x86)\Apache Group\Apache\conf\httpd.conf
+\Program Files (x86)\Apache Group\Apache2\conf\httpd.conf
+\Program Files (x86)\xampp\apache\conf\httpd.conf
