@@ -16,8 +16,10 @@
 \Program Files\Apache Group\Apache\conf\httpd.conf
 \Program Files\Apache Group\Apache2\conf\httpd.conf
 \Program Files\xampp\apache\conf\httpd.conf
+\Program Files\FileZilla Server\FileZilla Server.xml
 \Program Files (x86)\Apache Group\Apache\logs\access.log
 \Program Files (x86)\Apache Group\Apache\logs\error.log
 \Program Files (x86)\Apache Group\Apache\conf\httpd.conf
 \Program Files (x86)\Apache Group\Apache2\conf\httpd.conf
 \Program Files (x86)\xampp\apache\conf\httpd.conf
+\Program Files (x86)\FileZilla Server\FileZilla Server.xml
