@@ -31,7 +31,7 @@ Upgrade
 Via
 Warning
 X-Requested-With
-DNT[9]
+DNT
 X-Forwarded-For
 X-Forwarded-Host
 X-Forwarded-Proto
