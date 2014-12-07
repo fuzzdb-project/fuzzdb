@@ -37,7 +37,9 @@ WWW-Authenticate
 X-Frame-Options
 Public-Key-Pins
 X-XSS-Protection
-Content-Security-Policy, X-Content-Security-Policy, X-WebKit-CSP
+Content-Security-Policy
+X-Content-Security-Policy
+X-WebKit-CSP
 X-Content-Type-Options
 X-Powered-By
 X-UA-Compatible
