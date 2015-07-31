@@ -9,9 +9,9 @@ email@address-one.com
 email@address.name
 email@address.co.jp
 firstname-lastname@address.com
-much.“more\ unusual”@address.com
-very.unusual.“@”.unusual.com@address.com
-very.“(),:;<>[]”.VERY.“very@\\ "very”.unusual@strange.address.com
+much."more\ unusual"@address.com
+very.unusual."@".unusual.com@address.com
+very."(),:;<>[]".VERY."very@\\ "very".unusual@strange.address.com
 abcdefghijklmnopqrstuvwxyz!#$%&'*+-/=?^_`{|}~.0123456789@abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.com
 {jacco'vantuijl}@address.server
 "Jacco\@test"@address.com
