@@ -2,7 +2,7 @@ fuzzdb is the most comprehensive Open Source database of malicious inputs, predi
 
 # Download #
 
-**Preferred method is to check out sources via gt, since new payloads are added frequently**
+**Preferred method is to check out sources via git, since new payloads are added frequently**
 ```
 git clone git@github.com:fuzzdb-project/fuzzdb.git fuzzdb
 ```
@@ -23,7 +23,7 @@ FuzzDB contains a comprehensive database of these, sorted by platform type, lang
 
 **Attack Patterns -**
 Categorized by platform, language, and attack type, malicious and malformed inputs known to cause information leakage and exploitation have been collected into sets of test cases.
-FuzzDB contains comprehensive lists of [attack payloads](http://code.google.com/p/fuzzdb/source/browse/#svn/trunk/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
+FuzzDB contains comprehensive lists of [attack payloads](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
 
 **Response Analysis -**
 Since system responses also contain predictable strings, fuzzdb contains a [set of regex pattern dictionaries](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrorss) such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
