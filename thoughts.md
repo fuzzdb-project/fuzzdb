@@ -1,0 +1,13 @@
+# Some thoughts behind fuzzdb #
+
+fuzzdb exploits a commonality between many security flaws: predictability. It aims to maximize the population of vulnerabilities found via fuzz testing by aggregating the body of known web application attack strings into a collection of predictable resource names and known malformed data strings. Known server error messages have been aggregated to aid in analysis of test results.
+
+Software standardization means that predictable resource locations are the norm. Platforms like IIS, Cold Fusion, and Apache Tomcat store files that are known to leak information about system configuration in predictable places. Because of the popularity of a small number of package managers, log, configuration, and password files for popular software platforms are likely to be stored in a small number of places. Lists of platform-categorized web scripts that have been mentioned in a vulnerability database, lists of login page names from popular applications, all known compressed file type extensions, and countless other data elements on can be leveraged to turn "brute force" into a highly targeted discovery tool.
+
+While there are mature fuzzing lists available for XSS and SQL Injection, other exploit categories lack such lists. By attempting to document all known permutations of characters that cause a specific exploit condition, fuzzdb creates a set of repeatable test cases for detecting vulnerabilities in new software. The payloads include platform-specific and generic test case patterns for detecting OS command execution, SQL Injection, XSS, CRLF header injection, filetype upload bypass, XML, LFI, RFI, traversals, file and directory contents exposure, and others.
+
+The population of common web application platform types is very small. The error messages that indicate something interesting (from the attacker's perspective) has happened are a known quantity. They have been turned into simple pattern match strings and catalogued in fuzzdb.
+
+# Use Case Example #
+
+Imagine using fuzzdb to find an OS command injection vulnerability. After detecting which data elements are vulnerable, other fuzz payload lists are utilized: The first tries to get a recognizable response to show whether results are returned to the page, or identify that whether the command injection is blind. Another can identify writable directories by the web server, and another will contain things such as series of shell commands designed to test what kinds of egress filtering is in place, by trying to establish connections to a system owned by the tester which is running tcpdump.
