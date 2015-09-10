@@ -1,6 +1,3 @@
-NEWS: MOVING TO GITHUB, STAY TUNED FOR FURTHER ANNOUNCEMENTS.
-
-
 fuzzdb is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells.
 
 # Download #
@@ -76,6 +73,8 @@ FuzzDB is like an open source web application security scanner, without the scan
 
 # Latest news #
 
+* 9/10/2015 - Migrated to Github. No more version numbers! 
+*  Many thanks to Jacco van Tuijl for the recent cleanup/updates
 ```
 *Post-1.08, new in 1.09:*
   * Thanks to lawKnee, new features added to the cfm web shell, and a nifty sql web shell
@@ -98,7 +97,7 @@ FuzzDB is like an open source web application security scanner, without the scan
 
 # Who #
 
-This SVN repository and the files were assembled by Adam Muntner (unix23 @ gmail.com)
+FuzzDB was created by Adam Muntner (unix23 @ gmail.com)
 
 The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it.
 
