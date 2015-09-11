@@ -2,17 +2,17 @@ fuzzdb is the most comprehensive Open Source database of malicious inputs, predi
 
 # Download #
 
-**Preferred method is to check out sources via svn, since new payloads are added frequently**
+**Preferred method is to check out sources via git, since new payloads are added frequently**
 ```
-svn checkout http://fuzzdb.googlecode.com/svn/trunk/ fuzzdb-read-only
+git clone git@github.com:fuzzdb-project/fuzzdb.git fuzzdb
 ```
 
 While in the fuzzdb dir, you can update your local repo with the command
 ```
-svn update
+git pull
 ```
 
-You can also browse the [fuzzdb svn repo sources](http://code.google.com/p/fuzzdb/source/browse/#svn/trunk).
+You can also browse the [fuzzdb github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master).
 
 
 # What's in fuzzdb? #
@@ -23,10 +23,10 @@ FuzzDB contains a comprehensive database of these, sorted by platform type, lang
 
 **Attack Patterns -**
 Categorized by platform, language, and attack type, malicious and malformed inputs known to cause information leakage and exploitation have been collected into sets of test cases.
-FuzzDB contains comprehensive lists of [attack payloads](http://code.google.com/p/fuzzdb/source/browse/#svn/trunk/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
+FuzzDB contains comprehensive lists of [attack payloads](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
 
 **Response Analysis -**
-Since system responses also contain predictable strings, fuzzdb contains a [set of regex pattern dictionaries](http://code.google.com/p/fuzzdb/wiki/regexerrors) such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
+Since system responses also contain predictable strings, fuzzdb contains a [set of regex pattern dictionaries](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrorss) such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
 
 **Other useful stuff -**
 Webshells, common password and username lists, and some handy wordlists.
@@ -59,7 +59,7 @@ FuzzDB is like an open source web application security scanner, without the scan
 
 # How to Use fuzzdb #
 
-  * The most immediate, hands-on way is to use they payload files for web security testing with Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](http://code.google.com/p/fuzzdb/wiki/regexerrors).
+  * The most immediate, hands-on way is to use they payload files for web security testing with Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
 
   * Use the patterns to test web services.
 
