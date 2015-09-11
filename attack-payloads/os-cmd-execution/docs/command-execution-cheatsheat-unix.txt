@@ -26,7 +26,7 @@ Background:
    Getting Files / Data
 
 FTP: 
-Make a new text, and echo and then redirect to FTP
+Make a new text file, and echo and then redirect to FTP
 
 NC: 
 nc -e /bin/sh
