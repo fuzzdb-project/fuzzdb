@@ -1,0 +1,5 @@
+{PHPSCRIPT}
+{PHPSCRIPT}.phtml
+{PHPSCRIPT}.php.html
+{PHPSCRIPT}.php.php.rar 
+{PHPSCRIPT}.php.rar 
