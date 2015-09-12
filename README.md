@@ -73,6 +73,8 @@ FuzzDB is like an open source web application security scanner, without the scan
 
 # Latest news #
 
+* 9/11/2015
+The first major structural change to fuzzdb since it launched. Docs are all moved out of the fuzz files and into README.md documents. Document directores that were throughout the entire tree are now all relocated to /Docs. 
 * 9/10/2015 - Migrated to Github. No more version numbers! 
 *  Many thanks to Jacco van Tuijl for the recent cleanup/updates
 ```
