@@ -74,11 +74,11 @@ FuzzDB is like an open source web application security scanner, without the scan
 # Latest news #
 
 * 9/11/2015
-The first major structural change to fuzzdb since it launched. Docs are all moved out of the fuzz files and into README.md documents. Document directores that were throughout the entire tree are now all relocated to /Docs. 
+Structural changes and better file naming consistency. Docs are all moved out of the the initial line comments in fuzz files and into README.md documents. Document directores that were throughout the entire tree are now all relocated to /Docs. 
 * 9/10/2015 - Migrated to Github. No more version numbers! 
-*  Many thanks to Jacco van Tuijl for the recent cleanup/updates
+*  Many thanks to Jacco van Tuijl for doing much needed cleanup/updates
 ```
-*Post-1.08, new in 1.09:*
+Older
   * Thanks to lawKnee, new features added to the cfm web shell, and a nifty sql web shell
   * The data dir from the tool raft, containing paths extracted from the "disallow" fields from the robots.txt files of 1.7 million websites, presented at BlackHat 2011 (https://raft.googlecode.com/)
   * Added new attack payload file os-cmd-execution/OSCommandInject.Windows.fuzz.txt and a case to the unix version of the file that breaks out of regex with a $
@@ -87,8 +87,6 @@ The first major structural change to fuzzdb since it launched. Docs are all move
   * /generic/interesting-files-siteminder.txt - CA Siteminder discovery
   * /generic/proxy-conf.txt - Various popular locations for proxy.pac files
   * Updated sqli attacks using new filename convention to make it simpler to navigate fuzzdb and include it in other projects, other directories will follow. Thanks to Nathan Hamiel and Marcin Wielgoszewski for prompting me to create the new namespace format. Fixed a few misplaced SQLI test cases thanks to Michael Brooks careful eye.
-
-*Previous updates*
   * fuzzdb-1.08.tgz added: command exec cheatsheets for unix and windows, netcat cheatsheet, microsoft sharepoint test cases, file upload filter bypass test cases, invalid microsoft filenames, javascript events, html tags, null byte test cases, updated _readme.txt
   * fuzzdb-1.07.tgz Lots more sqli.Discovery patterns of common files containing passwds and common login filenames. (4/28/2010)
   * Added more sqli attack and enumeration patterns, reorganized sqli tree, in svn not in tarball yet (4/22/2010)
