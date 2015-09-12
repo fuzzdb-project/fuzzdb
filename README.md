@@ -1,4 +1,4 @@
-Fuzzdb is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
+FuzzDB is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
 # Download #
 
 **Preferred method is to check out sources via git, since new payloads are added frequently**
@@ -6,14 +6,14 @@ Fuzzdb is the most comprehensive Open Source database of malicious inputs, predi
 git clone git@github.com:fuzzdb-project/fuzzdb.git fuzzdb
 ```
 
-While in the fuzzdb dir, you can update your local repo with the command
+While in the FuzzDB dir, you can update your local repo with the command
 ```
 git pull
 ```
-You can also browse the [fuzzdb github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master).
+You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master).
 
 
-# What's in fuzzdb? #
+# What's in FuzzDB? #
 Some examples:
 
 **Predictable Resource Locations -**
@@ -27,7 +27,7 @@ FuzzDB contains comprehensive lists of [attack payloads](https://github.com/fuzz
 (https://github.com/fuzzdb-project/fuzzdb/tree/master/attack)
 
 **Response Analysis -**
-Since system responses also contain predictable strings, fuzzdb contains a set of regex pattern dictionaries such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
+Since system responses also contain predictable strings, FuzzDB contains a set of regex pattern dictionaries such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
 (https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors)
 
 **Other useful stuff -**
@@ -38,7 +38,7 @@ Webshells, common password and username lists, and some handy wordlists.
 Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.
 (https://github.com/fuzzdb-project/fuzzdb/tree/master/docs)
 
-# Why was fuzzdb created? #
+# Why was FuzzDB created? #
 
 The sets of payloads currently built in to open source fuzzing and scanning software are poorly representative of the total body of potential attack patterns. Commercial scanners are a bit better, but not much. However, commercial tools also have a downside, in that that they tend to lock these patterns away in obfuscated binaries.
 
@@ -63,16 +63,11 @@ FuzzDB is like an open source application security scanner, without the scanner.
 
 # How to Use fuzzdb #
 
-  * The most immediate, hands-on way is to use they payload files for web security testing with Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
-
+  * The easiest way is with OWASP Zap proxy, FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). You could also use they payload files for web security testing with Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
   * Use the patterns to test web services.
-
   * Use the patterns as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools.
-
   * Use the patterns as malicious input payloads for testing GUI or command line software with standard test automation tools.
-
   * Incorporate the patterns into Open Source software, or into your own commercial product.
-
   * Use the patterns in training materials and documentation.
 
 # Latest news #
@@ -103,6 +98,6 @@ FuzzDB was created by Adam Muntner (unix23 @ gmail.com)
 
 The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it.
 
-fuzzdb (c) Copyright Adam Muntner, 2010-2015
+FuzzDB (c) Copyright Adam Muntner, 2010-2015
 
 Portions copyrighted by others, see the package  and svn checkin comments for details.
