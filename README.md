@@ -1,5 +1,4 @@
-fuzzdb is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells.
-
+Fuzzdb is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
 # Download #
 
 **Preferred method is to check out sources via git, since new payloads are added frequently**
@@ -11,28 +10,33 @@ While in the fuzzdb dir, you can update your local repo with the command
 ```
 git pull
 ```
-
 You can also browse the [fuzzdb github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master).
 
 
 # What's in fuzzdb? #
+Some examples:
 
 **Predictable Resource Locations -**
 Because of the popularity of a small number of server types, platforms, and package formats, resources such as [logfiles and administrative directories](http://www.owasp.org/index.php/Forced_browsing) are typically located in a small number of [predictable locations](http://projects.webappsec.org/Predictable-Resource-Location).
 FuzzDB contains a comprehensive database of these, sorted by platform type, language, and application, making brute force testing less brutish.
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery/predictable-filepaths)
 
 **Attack Patterns -**
 Categorized by platform, language, and attack type, malicious and malformed inputs known to cause information leakage and exploitation have been collected into sets of test cases.
 FuzzDB contains comprehensive lists of [attack payloads](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/attack)
 
 **Response Analysis -**
-Since system responses also contain predictable strings, fuzzdb contains a [set of regex pattern dictionaries](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrorss) such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
+Since system responses also contain predictable strings, fuzzdb contains a set of regex pattern dictionaries such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
+(https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors)
 
 **Other useful stuff -**
 Webshells, common password and username lists, and some handy wordlists.
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors)
 
 **Documentation -**
-Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided.
+Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/docs)
 
 # Why was fuzzdb created? #
 
@@ -55,7 +59,7 @@ Lots of hours of research while performing penetration tests:
   * various books, articles, blog posts, mailing list threads
   * patterns gleaned from other open source fuzzers and pentest tools
 
-FuzzDB is like an open source web application security scanner, without the scanner.
+FuzzDB is like an open source application security scanner, without the scanner.
 
 # How to Use fuzzdb #
 
@@ -77,7 +81,6 @@ FuzzDB is like an open source web application security scanner, without the scan
 Structural changes and better file naming consistency. Docs are all moved out of the the initial line comments in fuzz files and into README.md documents. Document directores that were throughout the entire tree are now all relocated to /Docs. 
 * 9/10/2015 - Migrated to Github. No more version numbers! 
 *  Many thanks to Jacco van Tuijl for doing much needed cleanup/updates
-```
 Older
   * Thanks to lawKnee, new features added to the cfm web shell, and a nifty sql web shell
   * The data dir from the tool raft, containing paths extracted from the "disallow" fields from the robots.txt files of 1.7 million websites, presented at BlackHat 2011 (https://raft.googlecode.com/)
@@ -93,7 +96,6 @@ Older
   * Added more web shells (4/20/2010)
   * FreeBSD !FreshPorts now carries fuzzdb [http://www.mail-archive.com/cvs-all@freebsd.org/msg166332.html] (4/19/2010)
   * Latest version: scrubbed spaces from file and path names for better shell navigation, rearranged files using a functional approach, added the /regex dir containing things you might want to look for on returned pages. Initial checkin contains a large set of error messages and list of common session ID cooke names.(4/17/2010)
-```
 
 # Who #
 
