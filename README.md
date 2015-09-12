@@ -32,7 +32,7 @@ Since system responses also contain predictable strings, FuzzDB contains a set o
 
 **Other useful stuff -**
 Webshells, common password and username lists, and some handy wordlists.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors)
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors) etc etc etc
 
 **Documentation -**
 Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.
