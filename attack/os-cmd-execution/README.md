@@ -10,7 +10,7 @@ usage
 **Executing Commands**
 
 Seperating Commands 
-```blah;blah2```
+``` blah;blah2 ```
 
 PIPES
 ``` blah ^ blah 2```
