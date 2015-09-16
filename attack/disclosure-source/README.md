@@ -3,6 +3,7 @@ Notes:
 **source-disc-cmd-exec-traversal.txt**
 
  single directory traversals that have caused showcode or command exec issues in the past
+ 
  ``` GET /path/*payload*relative/path/to/target/file/ ```
 
 **source-disclosure-generic.txt**
