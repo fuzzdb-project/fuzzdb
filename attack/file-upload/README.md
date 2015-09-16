@@ -22,17 +22,21 @@ File notes:
 
 Alternative ways of expressing file extensions that will be interpreted correctly by the target filesystem/app and can be used to bypass blacklist filters
 
+
 **file-ul-filter-bypass-commonly-writable-directories.fuzz.txt**
 
 File directory names that experience has shown are often writable
+
 
 **file-ul-filter-bypass-microsoft-asp-filetype-bf.fuzz.txt**
 
 ``` {ASPSCRIPT} ``` gets regex replaced with the shell or other file you are trying to upload, {EXT} should be brute-forced with payloads from discovery/filename-bruteforce/file-extensions/, since some file upload types may be allowed that are not listed.
 
+
 **file-ul-filter-bypass-microsoft-asp.fuzz.txt**
 
 this file contains a number of common predictable values. Add more if other file types are allowed, or use the filetype-bf version of this fuzzfile - ``` {ASPSCRIPT} ``` gets regex replaced. 
+
 
 **file-ul-filter-bypass-ms-php.fuzz.txt**
 
@@ -46,11 +50,13 @@ Use exiftool http://www.sno.phy.queensu.ca/~phil/exiftool/  to create a .jpg ima
 
 then regex replace ``` {PHPSCRIPT} ``` in the fuzzfile payload with the name of your .jpg file in the target directory
 
+
 **invalid-filenames-microsoft.fuzz.txt**
 
 Useful for causing error messages that contain an absolute drivepath, such as if you don't know where the file uploader puts files
 
 regex replace ``` {EXT} ``` with allowed extension type 
+
 
 **file-ul-filter-bypass-x-platform-generic.fuzz.txt**
 
@@ -62,9 +68,11 @@ regex replace ``` {PHPSCRIPT} ``` with your script name
 
 invalid filenames under linux, and since there aren't too many of those (there's one), other filepaths that may cause problems.  these can be used to attempt to cause an error condition during file upload bypass attempts which might reveal an absolute path. Useful if you're not sure where your files are landing.
 
+
 **invalid-filesystem-chars-microsoft.fuzz.txt**
 
 list of invalid characters for windows filesystem - these can be used to attempt to cause an error condition during file upload bypass attempts which might reveal an absolute path. Useful if you're not sure where your files are landing. fuzz these into a filename during upload attempts
+
 
 **Addtl Tips:**
 
