@@ -211,6 +211,7 @@
 .phpmailer.php
 .bin
 .htaccess
+.htaccess-obak
 .info
 .java
 .jsf
@@ -500,7 +501,7 @@
 .cer
 .common.php
 .de.html
-.html‎
+.htmlâ€Ž
 .jbf
 .lbi
 .lib.php
@@ -559,7 +560,7 @@
 .out
 .pgt
 .php,
-.php‎
+.phpâ€Ž
 .po
 .prt
 .query
@@ -1225,7 +1226,7 @@
 .properties
 .propfinder
 .pvx
-.p​hp
+.pâ€‹hp
 .recherche
 .redirect
 .req
@@ -1801,11 +1802,11 @@
 .aspxx
 .aspy
 .asxp
-.as​p
+.asâ€‹p
 .at.html
 .avatar.php
 .awstats
-.a​sp
+.aâ€‹sp
 .babymhiasexy.com
 .backup.php
 .bak.php
@@ -1984,7 +1985,7 @@
 .gb
 .get
 .get-meta-tags
-.gif         
+.gif Â Â Â Â Â Â Â Â 
 .gif.count
 .girlvandiesuburbs.co.za
 .gitihost.com
@@ -2047,7 +2048,7 @@
 .htmlu
 .htn
 .htpasswd
-.h​tml
+.hâ€‹tml
 .iac.
 .ibuysss.info
 .iconv
@@ -2224,7 +2225,7 @@
 .phphp
 .phppar
 .phpvreor.php
-.php��
+.php£¿
 .pht
 .pl.html
 .planetcom.ca
@@ -2447,4 +2448,4 @@
 .zhtml
 .zip.php
 .{3,2048}
-.​htm​l
+.â€‹htmâ€‹l
