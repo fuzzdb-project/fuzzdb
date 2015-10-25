@@ -55,20 +55,27 @@ Lots of hours of research while performing penetration tests:
   * analysis of system and application documentation
   * analysis of error messages
   * researching old web exploits for repeatable attack strings
-  * scraping scanner patterns from  http logs
+  * scraping scanner payloads from  http logs
   * various books, articles, blog posts, mailing list threads
-  * patterns gleaned from other open source fuzzers and pentest tools
+  * other open source fuzzers and pentest tools
 
-FuzzDB is like an open source application security scanner, without the scanner.
+and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/contributors
 
 # How to Use fuzzdb #
 
-  * The easiest way is with OWASP Zap proxy, FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). You could also use they payload files for web security testing with Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
-  * Use the patterns to test web services.
-  * Use the patterns as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools.
-  * Use the patterns as malicious input payloads for testing GUI or command line software with standard test automation tools.
-  * Incorporate the patterns into Open Source software, or into your own commercial product.
-  * Use the patterns in training materials and documentation.
+FuzzDB is like an open source application security scanner, without the scanner.
+
+The most common use case is with HTTP proxy and fuzzing tools such as 
+  * OWASP Zap proxy, for which FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
+  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
+
+Other ways fuzzdb is often used:
+  * to test web services
+  * as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools
+  * as malicious input payloads for testing GUI or command line software with standard test automation tools
+  * incorporating the patterns into Open Source software, or into your own commercial product
+  * in training materials and documentation
+  * to learn about software exploitation techniques
 
 # Latest news #
 
