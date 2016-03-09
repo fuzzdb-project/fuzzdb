@@ -87,6 +87,6 @@ FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
 
 The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it.
 
-FuzzDB (c) Copyright Adam Muntner, 2010-2015
+FuzzDB (c) Copyright Adam Muntner, 2010-2016
 
 Portions copyrighted by others, as noted in commit comments and README.md files. 
