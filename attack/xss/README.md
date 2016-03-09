@@ -11,7 +11,7 @@ HTML5 Cheatsheet
 
 <br>
 
-WASC Script Mappint Project
+WASC Script Mapping Project
 * http://projects.webappsec.org/w/page/13246958/Script%20Mapping
 
 
