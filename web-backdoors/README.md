@@ -11,3 +11,6 @@ Laudanum-1.0 files credits:
 Additional Coding
 - Robin Wood
 - Jason Gillam (Wordpress Plugin)
+Project Website: http://laudanum.secureideas.net
+Sourceforge Site: http://sourceforge.net/projects/laudanum
+
