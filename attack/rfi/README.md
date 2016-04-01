@@ -1,4 +1,4 @@
-rfi.fuzz.txt
+rfi-direcory-paths.txt
 
 Remote File Include scanning
 
