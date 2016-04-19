@@ -1,9 +1,8 @@
 Web backdoors from the wild, collected during incident response, submitted, and acquired otherwise.
 
 Antivirus/antimalware bypass:
-Most antivirus/antimalware/waf/ids/etc will flag on these immediately, deleting a payload that otherwise could have been successfully uploaded.
+Most antivirus/antimalware/waf/ids/etc will flag on these immediately, deleting a payload that otherwise could have been successfully uploaded. Basic evasion techniques are likely to work. Try modifying the code so that it's different enough to not trigger pattern-based signatures. Examples - delete comments, replace function names, replace variable names. 
 
-Basic evasion techniques are likely to work. Try modifying the code so that it's different enough to not trigger pattern-based signatures: delete comments, replace function names, replace variable names. 
 ----------------------------------------
 
 Laudanum-1.0 files credits:
