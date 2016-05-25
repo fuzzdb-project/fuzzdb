@@ -1,5 +1,0 @@
-/jmx-console
-/web-console
-/web-console/Invoker
-/invoker/JMXInvokerServlet
-/WEB-INF/jboss-web.xml
