@@ -72,7 +72,7 @@ Other ways fuzzdb is often used:
 
 FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
 
-The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it.
+The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. Also, I'd enjoy hearing about how you're using it. 
 
 FuzzDB (c) Copyright Adam Muntner, 2010-2016
 
