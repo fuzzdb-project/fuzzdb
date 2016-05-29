@@ -1,17 +1,4 @@
 FuzzDB is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
-# Download #
-
-**Preferred method is to check out sources via git, new payloads are added frequently**
-```
-git clone git@github.com:fuzzdb-project/fuzzdb.git fuzzdb
-```
-
-While in the FuzzDB dir, you can update your local repo with the command
-```
-git pull
-```
-You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
-
 
 # What's in FuzzDB? #
 Some examples:
@@ -90,3 +77,17 @@ The FuzzDB license is New BSD and Creative Commons by Attribution. I want this p
 FuzzDB (c) Copyright Adam Muntner, 2010-2016
 
 Portions copyrighted by others, as noted in commit comments and README.md files. 
+
+
+# Download #
+
+**Preferred method is to check out sources via git, new payloads are added frequently**
+```
+https://github.com/fuzzdb-project/fuzzdb.git
+```
+
+While in the FuzzDB dir, you can update your local repo with the command
+```
+git pull
+```
+You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
