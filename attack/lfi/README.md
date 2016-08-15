@@ -13,5 +13,6 @@ For more details:
 
 other tools:
 * fimap https://tha-imax.de/git/root/fimap
+  * how-to http://kaoticcreations.blogspot.com/2011/08/automated-lfirfi-scanning-exploiting.html
 
 
