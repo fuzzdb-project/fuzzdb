@@ -12,6 +12,6 @@ For more details:
 * http://www.wtfchan.org/~evil1/Web-Shells-rev2.pdf
 
 other tools:
-* fimap http://code.google.com/p/fimap/
+* fimap https://tha-imax.de/git/root/fimap
 
 
