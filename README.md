@@ -1,4 +1,4 @@
-FuzzDB is the most comprehensive Open Source database of malicious inputs, predictable resource names, greppable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
+FuzzDB is the most comprehensive Open Source database of malicious inputs, predictable resource names, grepable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
 
 # What's in FuzzDB? #
 Some examples:
