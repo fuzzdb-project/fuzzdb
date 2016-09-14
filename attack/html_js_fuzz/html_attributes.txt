@@ -24,7 +24,7 @@ contextmenu
 controls
 coords
 data
-data-*
+data-userdefined-attribute
 datetime
 default
 defer
