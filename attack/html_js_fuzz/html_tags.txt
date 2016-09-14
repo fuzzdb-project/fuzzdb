@@ -35,7 +35,6 @@ dir
 div
 dl
 !DOCTYPE
-!DOCTYPE 
 dt
 em
 embed
