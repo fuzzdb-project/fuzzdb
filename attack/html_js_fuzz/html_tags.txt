@@ -1,4 +1,5 @@
 !-- --
+!DOCTYPE
 a
 abbr
 acronym
@@ -34,7 +35,6 @@ dialog
 dir
 div
 dl
-!DOCTYPE
 dt
 em
 embed
