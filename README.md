@@ -1,20 +1,22 @@
-FuzzDB is the most comprehensive Open Source database of malicious inputs, predictable resource names, grepable strings for server response messages, and other resources like web shells. It's like an application security scanner, without the scanner. 
+FuzzDB is the most comprehensive dictionary of fault injection and discovery patterns and payload primitives for application security testing and research. 
+
+Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https://github.com/fuzzdb-project/fuzzdb/)
+
 
 # What's in FuzzDB? #
-Some examples:
 
-**Predictable Resource Locations -**
+**Attack Patterns -**
+Malicious and malformed strings known to cause information leakage and exploitation, categorized by attack type.
+FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) primitives and variants known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 variants of byte patterns that can be interpreted as a null byte under different conditions.
+(https://github.com/fuzzdb-project/fuzzdb/tree/master/attack)
+
+**Discovery -**
 Because of the popularity of a small number of server types, platforms, and package formats, resources such as [logfiles and administrative directories](http://www.owasp.org/index.php/Forced_browsing) are typically located in a small number of [predictable locations](http://projects.webappsec.org/Predictable-Resource-Location).
 FuzzDB contains a comprehensive database of these, sorted by platform type, language, and application, making brute force testing less brutish.
 (https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery/predictable-filepaths)
 
-**Attack Patterns -**
-Categorized by platform, language, and attack type, malicious and malformed inputs known to cause information leakage and exploitation have been collected into sets of test cases.
-FuzzDB contains comprehensive lists of [attack payloads](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, http header crlf injections, and more.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/attack)
-
 **Response Analysis -**
-Since system responses also contain predictable strings, FuzzDB contains a set of regex pattern dictionaries such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, and more.
+Since system responses also contain predictable strings, FuzzDB contains a set of regex pattern dictionaries to match against server responses such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, regular expressions for credit cards, social security numbers, and more.
 (https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors)
 
 **Other useful stuff -**
@@ -25,16 +27,18 @@ Webshells, common password and username lists, and some handy wordlists.
 Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.
 (https://github.com/fuzzdb-project/fuzzdb/tree/master/docs)
 
+It's like an open source application security scanner, without the scanner.
 
-# Why was FuzzDB created? #
 
-The sets of payloads currently built in to open source fuzzing and scanning software are poorly representative of the total body of potential attack patterns. Commercial scanners are a bit better, but not much. However, commercial tools also have a downside, in that that they tend to lock these patterns away in obfuscated binaries.
+# Why FuzzDB exists #
 
-Furthermore, it's impossible for a human pentester to encounter and memorize all permutations of the meta characters and hex encoding likely to cause error conditions to arise.
+FuzzDB was created because it's impossible for a human to recall all strings and variants for constructing attacks that are likely to cause software to operate in a manner other than intended by its designers. FuzzDB's attack and discovery pattern dictionary allows security testers and researchers to repeatably exercise applications and uncover more vulnerabilities.
 
-FuzzDB was created to aggregate all known attack payloads and common predictable resource names into usable fuzzer payload lists, categorized by function and platform, and make them freely available under an Open Source license. It is immediately usable by web application penetration testers and security researchers.
+The inherent nature of client/server protocols, commonly used software stacks, and the limited number of standard application features involving security decisions that are likely to be abused such as authentication, authorization, file upload, etc. result in a frequency distribution of the presentation of software application vulnerability categories that looks gaussian, as demonstrated by taxonomies such as the OWASP Top 10.
 
-Released under the dual New BSD and Creative Commons by Attribution licenses, FuzzDB can be leveraged to improve the test cases built into open source and commercial testing software.
+To inform future testing, FuzzDB collects attack and discovery patterns that have caused software to malfunction in the past. While a small number of patterns could find many bugs, a more comprehensive set of variants allows for discovery of edge cases that bypass protection mechanisms, that result from interoperability issues, or are only discovered through knowlege of predictable resource names.  
+
+Released under the dual New BSD and Creative Commons by Attribution licenses, FuzzDB can be used for any purpose by penetration testers and security researchers and leveraged to improve the test cases built into open source and commercial security testing software.
 
 
 # How was the data collected? #
@@ -53,8 +57,6 @@ and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/c
 
 # How to Use fuzzdb #
 
-FuzzDB is like an open source application security scanner, without the scanner.
-
 The most common use case is with HTTP proxy and fuzzing tools such as 
   * OWASP Zap proxy, for which FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
   * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
@@ -72,7 +74,9 @@ Other ways fuzzdb is often used:
 
 FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
 
-The FuzzDB license is New BSD and Creative Commons by Attribution. I want this project to be freely available in order to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. Also, I'd enjoy hearing about how you're using it. 
+The FuzzDB license is New BSD and Creative Commons by Attribution. The ultimate goal of this project is to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. I always enjoy hearing about how people are using it to find an interesting bug or in a tool, send me an email and let me know. 
+
+Submissions are always welcome!
 
 FuzzDB (c) Copyright Adam Muntner, 2010-2016
 
