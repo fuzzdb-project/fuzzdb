@@ -1,4 +1,4 @@
-FuzzDB is the most comprehensive dictionary of fault injection and discovery patterns and payload primitives for application security testing and research. 
+FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, and more for application security testing and research. 
 
 Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https://github.com/fuzzdb-project/fuzzdb/)
 
