@@ -59,7 +59,7 @@ To inform future testing, FuzzDB collects attack and discovery patterns that hav
 
 Released under the dual New BSD and Creative Commons by Attribution licenses, FuzzDB can be used for any purpose by penetration testers and security researchers and leveraged to improve the test cases built into open source and commercial security testing software.
 
-# How was the data collected? #
+# How were the attack patterns collected? #
 Lots of hours of research while performing penetration tests and research:
   * analysis of default app installs
   * analysis of system and application documentation
