@@ -1,12 +1,30 @@
 FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, and more for application security testing and research. 
 
-Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer, as-is.  
+Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however it's not recommended to store these files on a server or other important system due to the risk of local file include attacks.  
 
-Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https://github.com/fuzzdb-project/fuzzdb/)
+# How to Use FuzzDB #
+The most common use case is with HTTP proxy and fuzzing tools such as 
+  * OWASP Zap proxy: FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
+  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module: The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
 
+Other ways fuzzdb is often used:
+  * to test web services
+  * as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools
+  * as malicious input payloads for testing GUI or command line software with standard test automation tools
+  * incorporating the patterns into Open Source software, or into your own commercial product
+  * in training materials and documentation
+  * to learn about software exploitation techniques
 
+ FuzzDB's patterns are included in many security tools and projects such as:
+  * OWASP Zap Proxy fuzzdb plugin https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+  * TrustedSec Pentesters Framework https://github.com/trustedsec/ptf
+  * Metasploit https://github.com/rapid7/metasploit-framework
+  * Portswigger Burp Suite http://portswigger.net
+  * SecLists https://github.com/danielmiessler/SecLists
+  * BlackArch Linux https://www.blackarch.org/
+  * ArchStrike Linux https://archstrike.org/
+ 
 # What's in FuzzDB? #
-
 **Attack Patterns -**
 Malicious and malformed strings known to cause information leakage and exploitation, categorized by attack type.
 FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives and variants known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 variants of byte patterns that can be interpreted as a null byte under different conditions.<br>
@@ -32,7 +50,6 @@ It's like an open source application security scanner, without the scanner.
 
 
 # Why FuzzDB exists #
-
 FuzzDB was created because it's impossible for a human to recall all strings and variants for constructing attacks that are likely to cause software to operate in a manner other than intended by its designers. FuzzDB's attack and discovery pattern dictionary allows security testers and researchers to repeatably exercise applications and uncover more vulnerabilities.
 
 The inherent nature of client/server protocols, commonly used software stacks, and the limited number of standard application features involving security decisions that are likely to be abused such as authentication, authorization, file upload, etc. result in a frequency distribution of the presentation of software application vulnerability categories that looks gaussian, as demonstrated by taxonomies such as the OWASP Top 10.
@@ -43,7 +60,6 @@ Released under the dual New BSD and Creative Commons by Attribution licenses, Fu
 
 
 # How was the data collected? #
-
 Lots of hours of research while performing penetration tests and research:
   * analysis of default app installs
   * analysis of system and application documentation
@@ -55,37 +71,7 @@ Lots of hours of research while performing penetration tests and research:
 
 and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/contributors
 
-
-# How to Use FuzzDB #
-
-The most common use case is with HTTP proxy and fuzzing tools such as 
-  * OWASP Zap proxy: FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
-  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module: The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
-
-Other ways fuzzdb is often used:
-  * to test web services
-  * as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools
-  * as malicious input payloads for testing GUI or command line software with standard test automation tools
-  * incorporating the patterns into Open Source software, or into your own commercial product
-  * in training materials and documentation
-  * to learn about software exploitation techniques
-
-
-# Who #
-
-FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
-
-The FuzzDB license is New BSD and Creative Commons by Attribution. The ultimate goal of this project is to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. I always enjoy hearing about how people are using it to find an interesting bug or in a tool, send me an email and let me know. 
-
-Submissions are always welcome!
-
-FuzzDB (c) Copyright Adam Muntner, 2010-2016
-
-Portions copyrighted by others, as noted in commit comments and README.md files. 
-
-
 # Download #
-
 **Preferred method is to check out sources via git, new payloads are added frequently**
 ```
 https://github.com/fuzzdb-project/fuzzdb.git
@@ -96,3 +82,14 @@ While in the FuzzDB dir, you can update your local repo with the command
 git pull
 ```
 You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
+
+# Who #
+FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
+FuzzDB (c) Copyright Adam Muntner, 2010-2016
+Portions copyrighted by others, as noted in commit comments and README.md files. 
+
+The FuzzDB license is New BSD and Creative Commons by Attribution. The ultimate goal of this project is to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. I always enjoy hearing about how people are using it to find an interesting bug or in a tool, send me an email and let me know. 
+
+Submissions are always welcome!
+
+Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https://github.com/fuzzdb-project/fuzzdb/)
