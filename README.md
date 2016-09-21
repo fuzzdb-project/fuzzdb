@@ -1,5 +1,7 @@
 FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, and more for application security testing and research. 
 
+Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer, as-is.  
+
 Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https://github.com/fuzzdb-project/fuzzdb/)
 
 
@@ -7,25 +9,24 @@ Official FuzzDB project page: [https://github.com/fuzzdb-project/fuzzdb/](https:
 
 **Attack Patterns -**
 Malicious and malformed strings known to cause information leakage and exploitation, categorized by attack type.
-FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack-payloads) primitives and variants known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 variants of byte patterns that can be interpreted as a null byte under different conditions.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/attack)
+FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives and variants known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 variants of byte patterns that can be interpreted as a null byte under different conditions.<br>
+https://github.com/fuzzdb-project/fuzzdb/tree/master/attack
 
 **Discovery -**
-Because of the popularity of a small number of server types, platforms, and package formats, resources such as [logfiles and administrative directories](http://www.owasp.org/index.php/Forced_browsing) are typically located in a small number of [predictable locations](http://projects.webappsec.org/Predictable-Resource-Location).
-FuzzDB contains a comprehensive database of these, sorted by platform type, language, and application, making brute force testing less brutish.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery/predictable-filepaths)
+Because of the popularity of a small number of server types, platforms, and package formats, resources such as [logfiles and administrative directories](http://www.owasp.org/index.php/Forced_browsing) are typically located in a small number of [predictable locations](https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery/predictable-filepaths).
+FuzzDB contains a comprehensive database of these, sorted by platform type, language, and application, making brute force testing less brutish.<br>
+https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery
 
 **Response Analysis -**
-Since system responses also contain predictable strings, FuzzDB contains a set of regex pattern dictionaries to match against server responses such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, regular expressions for credit cards, social security numbers, and more.
-(https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors)
+Since system responses also contain predictable strings, FuzzDB contains a set of regex pattern dictionaries to match against server responses such as interesting error messages to aid detection software security defects, lists of common Session ID cookie names, regular expressions for credit cards, social security numbers, and more.<br>
+https://github.com/fuzzdb-project/fuzzdb/tree/master/regex
 
 **Other useful stuff -**
 Webshells, common password and username lists, and some handy wordlists.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/web-backdoors) etc etc etc
 
 **Documentation -**
-Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.
-(https://github.com/fuzzdb-project/fuzzdb/tree/master/docs)
+Helpful documentation and cheatsheets sourced from around the web that are relevant to the payload categories are also provided. Many directories contain a README.md file with usage notes.<br>
+https://github.com/fuzzdb-project/fuzzdb/tree/master/docs
 
 It's like an open source application security scanner, without the scanner.
 
@@ -43,7 +44,7 @@ Released under the dual New BSD and Creative Commons by Attribution licenses, Fu
 
 # How was the data collected? #
 
-Lots of hours of research while performing penetration tests:
+Lots of hours of research while performing penetration tests and research:
   * analysis of default app installs
   * analysis of system and application documentation
   * analysis of error messages
@@ -55,11 +56,11 @@ Lots of hours of research while performing penetration tests:
 and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/contributors
 
 
-# How to Use fuzzdb #
+# How to Use FuzzDB #
 
 The most common use case is with HTTP proxy and fuzzing tools such as 
-  * OWASP Zap proxy, for which FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
-  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module. The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
+  * OWASP Zap proxy: FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
+  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module: The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
 
 Other ways fuzzdb is often used:
   * to test web services
@@ -94,4 +95,4 @@ While in the FuzzDB dir, you can update your local repo with the command
 ```
 git pull
 ```
-You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/tree/master) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
+You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
