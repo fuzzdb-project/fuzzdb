@@ -2,7 +2,7 @@ FuzzDB is the most comprehensive dictionary of attack patterns and payload primi
 
 Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however it's not recommended to store these files on a server or other important system due to the risk of local file include attacks.  
 
-# FuzzDB Uses #
+# Using FuzzDB #
   * Web and service security testing with 
    * [OWASP Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) proxy's FuzzDB Zap Extension 
    * Burp Proxy's [intruder](http://portswigger.net/intruder/) tool
