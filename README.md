@@ -1,25 +1,23 @@
-FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, and more for application security testing and research. 
+FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, regex, and documentation for application security testing and research. 
 
 Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however it's not recommended to store these files on a server or other important system due to the risk of local file include attacks.  
 
-# How to Use FuzzDB #
-The most common use case is with HTTP proxy and fuzzing tools such as 
-  * OWASP Zap proxy: FuzzDB is available as a plugin. (https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project). 
-  * With Burp Proxy's [intruder](http://portswigger.net/intruder/) module: The regex/errors.txt file can be loaded to [pattern match the server responses](https://github.com/fuzzdb-project/fuzzdb/wiki/regexerrors).
+# FuzzDB Uses #
+  * [OWASP Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) proxy's FuzzDB Zap Extension. 
+  * Burp Proxy's [intruder](http://portswigger.net/intruder/) tool
+  * Identify interesting service responses using grep patterns for PII, credit card numbers, error messages, and more
+  * Inside custom tools for testing software and application protocols
+  * Crafting security test cases for GUI or command line software with standard test automation tools
+  * Incorporating into other Open Source software or commercial products
+  * In training materials and documentation
+  * To learn about software exploitation techniques
 
-Other ways fuzzdb is often used:
-  * to test web services
-  * as malicious input payloads for testing non-HTTP network aware application with custom fuzzing tools
-  * as malicious input payloads for testing GUI or command line software with standard test automation tools
-  * incorporating the patterns into Open Source software, or into your own commercial product
-  * in training materials and documentation
-  * to learn about software exploitation techniques
-
- FuzzDB's patterns are included in many security tools and projects such as:
+FuzzDB's patterns are used by many security tools and projects such as:
   * OWASP Zap Proxy fuzzdb plugin https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
   * TrustedSec Pentesters Framework https://github.com/trustedsec/ptf
-  * Metasploit https://github.com/rapid7/metasploit-framework
+  * Rapid7 Metasploit https://github.com/rapid7/metasploit-framework
   * Portswigger Burp Suite http://portswigger.net
+  * Protofuzz https://github.com/trailofbits/protofuzz
   * SecLists https://github.com/danielmiessler/SecLists
   * BlackArch Linux https://www.blackarch.org/
   * ArchStrike Linux https://archstrike.org/
@@ -48,6 +46,8 @@ https://github.com/fuzzdb-project/fuzzdb/tree/master/docs
 
 It's like an open source application security scanner, without the scanner.
 
+# How-To #
+https://github.com/fuzzdb-project/fuzzdb/wiki/usagehints
 
 # Why FuzzDB exists #
 FuzzDB was created because it's impossible for a human to recall all strings and variants for constructing attacks that are likely to cause software to operate in a manner other than intended by its designers. FuzzDB's attack and discovery pattern dictionary allows security testers and researchers to repeatably exercise applications and uncover more vulnerabilities.
@@ -58,7 +58,6 @@ To inform future testing, FuzzDB collects attack and discovery patterns that hav
 
 Released under the dual New BSD and Creative Commons by Attribution licenses, FuzzDB can be used for any purpose by penetration testers and security researchers and leveraged to improve the test cases built into open source and commercial security testing software.
 
-
 # How was the data collected? #
 Lots of hours of research while performing penetration tests and research:
   * analysis of default app installs
@@ -68,7 +67,6 @@ Lots of hours of research while performing penetration tests and research:
   * scraping scanner payloads from  http logs
   * various books, articles, blog posts, mailing list threads
   * other open source fuzzers and pentest tools
-
 and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/contributors
 
 # Download #
@@ -76,7 +74,6 @@ and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/c
 ```
 https://github.com/fuzzdb-project/fuzzdb.git
 ```
-
 While in the FuzzDB dir, you can update your local repo with the command
 ```
 git pull
