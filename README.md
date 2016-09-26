@@ -1,8 +1,9 @@
-FuzzDB is the most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, regex, and documentation for application security testing and research. 
+FuzzDB is the original and most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, regex patterns for server responses and PII, backdoors, and related documentation. 
 
-Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however it's not recommended to store these files on a server or other important system due to the risk of local file include attacks.  
+Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
 
 # Using FuzzDB #
+FuzzDB is like an application security scanner, without the scanner.
   * Web and service security testing with 
    * [OWASP Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) proxy's FuzzDB Zap Extension 
    * Burp Proxy's [intruder](http://portswigger.net/intruder/) tool
