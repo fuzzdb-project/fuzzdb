@@ -6,7 +6,8 @@ Downloading this repository is likely to cause a false-positive alarm by your an
 FuzzDB is like an application security scanner, without the scanner.
   * Web and service security testing with 
    * [OWASP Zap](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) proxy's FuzzDB Zap Extension 
-   * Burp Proxy's [intruder](http://portswigger.net/intruder/) tool
+   * Burp Proxy's [intruder](http://portswigger.net/intruder/) tool and scanner
+   * [PappyProxy](http://www.pappyproxy.com/), a console-based intercepting proxy
   * To identify interesting service responses using grep patterns for PII, credit card numbers, error messages, and more
   * Inside custom tools for testing software and application protocols
   * Crafting security test cases for GUI or command line software with standard test automation tools
