@@ -1,6 +1,6 @@
-FuzzDB is the original and most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns, variants, regex patterns for server responses and PII, backdoors, and related documentation. 
+FuzzDB is the original and most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns,  web backdoors, regex patterns for server responses and PII, and documentation. 
 
-Downloading this repository is likely to cause a false-positive alarm by your antivirus or antimalware software. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
+Some antivirus/antimalware software alerts on FuzzDB. To resolve, the filepath or affected files should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
 
 # Using FuzzDB #
 FuzzDB is like an application security scanner, without the scanner.
@@ -28,7 +28,7 @@ FuzzDB's patterns are used by many security tools and projects such as:
 # What's in FuzzDB? #
 **Attack Patterns -**
 Malicious and malformed strings known to cause information leakage and exploitation, categorized by attack type.
-FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives and variants known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 variants of byte patterns that can be interpreted as a null byte under different conditions.<br>
+FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives known to cause issues like OS command injection, directory listings, directory traversals, source exposure, file upload bypass, authentication bypass, XSS, http header crlf injections, SQL injection, NoSQL injection, and more. For example, FuzzDB catalogs 56 patterns that can potentially be interpreted as a null byte.<br>
 https://github.com/fuzzdb-project/fuzzdb/tree/master/attack
 
 **Discovery -**
