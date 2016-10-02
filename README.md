@@ -1,5 +1,7 @@
 FuzzDB is the original and most comprehensive dictionary of attack patterns and payload primitives, predictable resource patterns,  web backdoors, regex patterns for server responses and PII, and documentation. 
 
+Project home: https://github.com/fuzzdb-project/fuzzdb
+
 Some antivirus/antimalware software alerts on FuzzDB. To resolve, the filepath or affected files should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
 
 # Using FuzzDB #
