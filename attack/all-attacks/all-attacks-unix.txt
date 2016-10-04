@@ -1,4 +1,4 @@
-# a wide sample of malicious input for unix-like targets
+
 !
 !'
 !@#$%%^#$%#$@#$%$$@#$%^^**(()
