@@ -2,6 +2,7 @@
 /{target}
 //{target}
 ///{target}
+////{target}
 /\{target}
 %2f{target}
 %2f$2f{target}
