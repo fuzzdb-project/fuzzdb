@@ -1,1 +1,1 @@
-</h1>FuzzDB Attack Patterns</h1>
+<h1>FuzzDB Attack Patterns</h1>
