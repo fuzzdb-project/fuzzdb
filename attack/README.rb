@@ -1,1 +1,0 @@
-**FuzzDB Attack Patterns**
