@@ -20,10 +20,10 @@ Webshells in different languages, common password and username lists, and some h
 Many directories contain a README.md file with usage notes.
 A collection of [documentation](https://github.com/fuzzdb-project/fuzzdb/tree/master/docs) from around the web that is helpful for using FuzzDB to construct test cases is also included. <br>
 
-# Usage tips for pentesting with FuzzDB #
+### Usage tips for pentesting with FuzzDB ###
 https://github.com/fuzzdb-project/fuzzdb/wiki/usagehints
 
-# How different people use FuzzDB #
+### How people use FuzzDB ###
 FuzzDB is like an application security scanner, without the scanner. 
 Some ways to use FuzzDB:
   * Website and application service black-box penetration testing with 
@@ -37,19 +37,9 @@ Some ways to use FuzzDB:
   * In training materials and documentation
   * To learn about software exploitation techniques
   * To improve your security testing product or service
-
-# Security tools containing FuzzDB in whole or part #
-  * OWASP Zap Proxy fuzzdb plugin https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
-  * SecLists https://github.com/danielmiessler/SecLists
-  * TrustedSec Pentesters Framework https://github.com/trustedsec/ptf
-  * Rapid7 Metasploit https://github.com/rapid7/metasploit-framework
-  * Portswigger Burp Suite http://portswigger.net
-  * Protofuzz https://github.com/trailofbits/protofuzz
-  * BlackArch Linux https://www.blackarch.org/
-  * ArchStrike Linux https://archstrike.org/
  
-# How were the patterns collected? #
-Many, many hours of research and pentesting. Also:
+### How were the patterns collected? ###
+Many, many hours of research and pentesting. And
   * analysis of default app installs
   * analysis of system and application documentation
   * analysis of error messages
@@ -59,7 +49,18 @@ Many, many hours of research and pentesting. Also:
   * other open source fuzzers and pentest tools
 and the input of contributors: https://github.com/fuzzdb-project/fuzzdb/graphs/contributors
 
-# Download #
+### Places you can find FuzzDB ###
+Other security tools and projects that incorporate FuzzzDB in whole or part
+  * OWASP Zap Proxy fuzzdb plugin https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+  * SecLists https://github.com/danielmiessler/SecLists
+  * TrustedSec Pentesters Framework https://github.com/trustedsec/ptf
+  * Rapid7 Metasploit https://github.com/rapid7/metasploit-framework
+  * Portswigger Burp Suite http://portswigger.net
+  * Protofuzz https://github.com/trailofbits/protofuzz
+  * BlackArch Linux https://www.blackarch.org/
+  * ArchStrike Linux https://archstrike.org/
+
+### Download ###
 **Preferred method is to check out sources via git, new payloads are added frequently**
 
 ```
@@ -74,7 +75,7 @@ You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-projec
 
 Note: Some antivirus/antimalware software will alert on FuzzDB. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
 
-# Who #
+### Who ###
 FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
 FuzzDB (c) Copyright Adam Muntner, 2010-2017
 Portions copyrighted by others, as noted in commit comments and README.md files. 
