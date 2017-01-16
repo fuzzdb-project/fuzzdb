@@ -10,15 +10,17 @@ FuzzDB contains a comprehensive dictionary, sorted by platform type, language, a
 https://github.com/fuzzdb-project/fuzzdb/tree/master/discovery
 
 **Response Analysis -**
-Since interesting system responses often consist of [predictable strings](https://github.com/fuzzdb-project/fuzzdb/tree/master/regex), FuzzDB contains a set of regex pattern dictionaries that can be matched against server responses to help find software security defects and monitor server responses for regular expressions for regular expressions including credit cards, social security numbers, and more.<br>
+Many interesting server responses are [predictable strings](https://github.com/fuzzdb-project/fuzzdb/tree/master/regex). 
+FuzzDB contains a set of regex pattern dictionaries to match against server responses. In addition to common server error messages, FuzzDB contains regex for credit cards, social security numbers, and more.<br>
 
 **Other useful stuff -**
-Webshells, common password and username lists, and some handy wordlists.
+Webshells in different languages, common password and username lists, and some handy wordlists.
 
 **Documentation -**
-A collection of original [documentation and cheatsheets](https://github.com/fuzzdb-project/fuzzdb/tree/master/docs) and documentation collected from different sources. Additionally, many directories contain a README.md file with usage notes.<br>
+Many directories contain a README.md file with usage notes.
+A collection of [documentation](https://github.com/fuzzdb-project/fuzzdb/tree/master/docs) from around the web that is helpful for using FuzzDB to construct test cases is also included. <br>
 
-# Usage Hints #
+# Usage tips for pentesting with FuzzDB #
 https://github.com/fuzzdb-project/fuzzdb/wiki/usagehints
 
 # How different people use FuzzDB #
