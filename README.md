@@ -1,4 +1,4 @@
-FuzzDB helps dynamic application security testing uncover more issues. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for analyzing server responses.  
+FuzzDB was created to increase the likelihood of causing and idantifying conditions of security interest through dynamic application security testing. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for matching server responses.  
 
 **Attack Patterns -**
 FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives for fault injection testing. 
