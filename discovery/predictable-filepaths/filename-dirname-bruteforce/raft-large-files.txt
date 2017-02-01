@@ -1,3 +1,6 @@
+QtFaststart.php
+index-modified.php
+-index.php
 index.php
 search.php
 cron.php
@@ -22302,7 +22305,7 @@ adlink.html
 adlink.php
 admasmailing.php
 admconf.php
-admin-ajax.phpâ€Ž
+admin-ajax.phpÃ¢Â€ÂŽ
 admin-logout.php
 admin-odkazy.php
 admin-post.php
@@ -25437,7 +25440,7 @@ discuss.cgi
 discuss.htm
 discussion.php
 diseno-web.html
-diseñoweb.swf
+diseÃ±oweb.swf
 disk.php
 disk_add.asp
 diskuse.php
@@ -27261,11 +27264,11 @@ goto_top.php
 gotoad.html
 gotoforum.php
 gotoframe.php
-gotoitem.php£¿
+gotoitem.phpÂ£Â¿
 gotojob.html
 gotolink.asp
 gotoprofile.htm
-gotoshop.php£¿
+gotoshop.phpÂ£Â¿
 gotostore.php
 gotourl.aspx
 gottingen.html
