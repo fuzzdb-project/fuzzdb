@@ -28,3 +28,5 @@
 /var/log/apache2/error.log 
 /var/log/error_log 
 /var/log/error.log 
+/var/log/httpd-access.log
+/var/log/httpd-error.log
