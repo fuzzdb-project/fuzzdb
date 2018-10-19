@@ -16,6 +16,7 @@
 /var/log/apache2/access_log 
 /var/log/apache/access.log 
 /var/log/apache2/access.log 
+/var/log/apache2/other_vhosts_access.log
 /var/log/access_log 
 /var/log/access.log 
 /var/www/logs/error_log 
@@ -28,3 +29,5 @@
 /var/log/apache2/error.log 
 /var/log/error_log 
 /var/log/error.log 
+/var/log/nginx/error.log
+/var/log/nginx/access.log
