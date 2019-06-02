@@ -6,7 +6,6 @@ bak
 sav
 ~
 copy
-old
 orig
 tmp
 txt
