@@ -11,3 +11,4 @@ orig
 tmp
 txt
 back
+swp
