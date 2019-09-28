@@ -1,4 +1,4 @@
-FuzzDB was created to increase the likelihood of causing and identifying conditions of security interest through dynamic application security testing. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for matching server responses.  
+FuzzDB was created to increase the likelihood of finding application security vulnerabilities through dynamic application security testing. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for matching server responses.  
 
 **Attack Patterns -**
 FuzzDB contains comprehensive lists of [attack payload](https://github.com/fuzzdb-project/fuzzdb/tree/master/attack) primitives for fault injection testing. 
@@ -64,20 +64,22 @@ Other security tools and projects that incorporate FuzzzDB in whole or part
 **Preferred method is to check out sources via git, new payloads are added frequently**
 
 ```
-git clone https://github.com/fuzzdb-project/fuzzdb.git
+git clone https://github.com/fuzzdb-project/fuzzdb.git --depth 1
 
 ```
 While in the FuzzDB dir, you can update your local repo with the command
 ```
 git pull
 ```
-You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/) and there is always a [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
+This Stackoverflow gives ideas on how to keep your local repository tidy: https://stackoverflow.com/questions/38171899/how-to-reduce-the-depth-of-an-existing-git-clone/46004595#46004595
+
+You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/) and there is always a fresh [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
 
 Note: Some antivirus/antimalware software will alert on FuzzDB. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
 
 ### Who ###
 FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
-FuzzDB (c) Copyright Adam Muntner, 2010-2017
+FuzzDB (c) Copyright Adam Muntner, 2010-2019
 Portions copyrighted by others, as noted in commit comments and README.md files. 
 
 The FuzzDB license is New BSD and Creative Commons by Attribution. The ultimate goal of this project is to make the patterns contained within obsolete. If you use this project in your work, research, or commercial product, you are required to cite it. That's it. I always enjoy hearing about how people are using it to find an interesting bug or in a tool, send me an email and let me know. 
