@@ -1,3 +1,7 @@
+_____________________________________
+FYI: The /web-backdoors folder may trigger anti-virus scanners.
+_____________________________________
+
 FuzzDB was created to increase the likelihood of finding application security vulnerabilities through dynamic application security testing. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for matching server responses.  
 
 **Attack Patterns -**
