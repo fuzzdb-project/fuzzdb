@@ -11,3 +11,4 @@ tmp
 txt
 back
 swp
+rej
