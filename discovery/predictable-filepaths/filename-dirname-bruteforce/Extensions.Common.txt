@@ -161,7 +161,9 @@ dm2
 dmo
 dmsk
 dnc
+doc
 dockzip
+docx
 dp1
 dpn
 dpx

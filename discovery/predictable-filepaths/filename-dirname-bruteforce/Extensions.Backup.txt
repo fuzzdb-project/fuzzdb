@@ -6,8 +6,9 @@ bak
 sav
 ~
 copy
-old
 orig
 tmp
 txt
 back
+swp
+rej

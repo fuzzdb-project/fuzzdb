@@ -16,6 +16,7 @@ admin/adminLogin.html
 admin/adminLogin.htm
 admin/admin_login.html
 admin/controlpanel.html
+admin/index.html
 admin/admin-login.html
 admin-login.html
 admin/account.html
