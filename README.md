@@ -1,3 +1,4 @@
+![fuzzdb logo](https://github.com/fuzzdb-project/fuzzdb/blob/master/fuzzdb-icon.png)
 _____________________________________
 FYI: The /web-backdoors folder may trigger anti-virus scanners.
 _____________________________________
