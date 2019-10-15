@@ -34,3 +34,5 @@ http://www.lcpsoft.com/english/download.htm
 1.4 billion password wordlist (4gb+, too big to include in FuzzDB)
 https://gist.github.com/scottlinux/9a3b11257ac575e4f71de811322ce6b3
 
+Defaults for a number of appservers
+https://github.com/pwnwiki/webappdefaultsdb
