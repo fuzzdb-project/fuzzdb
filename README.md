@@ -1,8 +1,3 @@
-![fuzzdb logo](https://github.com/fuzzdb-project/fuzzdb/blob/master/fuzzdb-icon.png)
-_____________________________________
-FYI: The /web-backdoors folder may trigger anti-virus scanners.
-_____________________________________
-
 FuzzDB was created to increase the likelihood of finding application security vulnerabilities through dynamic application security testing. It's the first and most comprehensive open dictionary of fault injection patterns, predictable resource locations, and regex for matching server responses.  
 
 **Attack Patterns -**
@@ -76,11 +71,11 @@ While in the FuzzDB dir, you can update your local repo with the command
 ```
 git pull
 ```
-This Stackoverflow gives ideas on how to keep your local repository tidy: https://stackoverflow.com/questions/38171899/how-to-reduce-the-depth-of-an-existing-git-clone/46004595#46004595
+This Stackoverflow gives ideas on how to keep a local repository tidy: https://stackoverflow.com/questions/38171899/how-to-reduce-the-depth-of-an-existing-git-clone/46004595#46004595
 
 You can also browse the [FuzzDB github sources](https://github.com/fuzzdb-project/fuzzdb/) and there is always a fresh [zip file](https://github.com/fuzzdb-project/fuzzdb/archive/master.zip)
 
-Note: Some antivirus/antimalware software will alert on FuzzDB. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system.  
+Note: Some antivirus/antimalware software will alert on FuzzDB. To resolve, the filepath should be whitelisted. There is nothing in FuzzDB that can harm your computer as-is, however due to the risk of local file include attacks it's not recommended to store this repository on a server or other important system. Use at your own risk. 
 
 ### Who ###
 FuzzDB was created by Adam Muntner (amuntner @ gmail.com)
