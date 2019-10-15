@@ -47,5 +47,6 @@
 /.htpasswd
 /.nsconfig
 /.passwd
+/.viminfo
 /.www_acl
 /.wwwacl

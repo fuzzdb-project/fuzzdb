@@ -1,0 +1,48 @@
+# this list can be used to enumerate supported Web Socket sub protocols of a web socket server
+# It conyains the official IANA registerd Web Socket sub protocols
+# Source: https://www.iana.org/assignments/websocket/websocket.xml
+# Example subprotocol request header:
+# Sec-WebSocket-Protocol: mqtt, wamp
+# The Web Socket client can include a list of the protocols when making the initial HTTP request. 
+# The server is then required to either select one of those protocols and include it in a response header.
+# If none of the sub protocols send by the client are supported by the server, 
+# the server shoud fail the handshake and terminate the connection.
+MBWS.huawei.com
+MBLWS.huawei.com
+soap
+wamp
+v10.stomp
+v11.stomp
+v12.stomp
+ocpp1.2
+ocpp1.5
+ocpp1.6
+ocpp2.0
+rfb
+sip
+notificationchannel-netapi-rest.openmobilealliance.org
+wpcp
+amqp
+mqtt
+jsflow
+rwpcp
+xmpp
+ship
+mielecloudconnect
+v10.pcp.sap.com
+msrp
+v1.saltyrtc.org
+TLCP-2.0.0.lightstreamer.com
+bfcp
+sldp.softvelum.com
+opcua+uacp
+opcua+uajson
+v1.swindon-lattice+json
+v1.usp
+mles-websocket
+coap
+TLCP-2.1.0.lightstreamer.com
+sqlnet.oracle.com
+oneM2M.R2.0.json
+oneM2M.R2.0.xml
+oneM2M.R2.0.cbor
