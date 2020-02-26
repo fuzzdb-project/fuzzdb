@@ -196,6 +196,7 @@ openpgp4fpr://
 pack://
 palm://
 paparazzi://
+php://
 pkcs11://
 platform://
 pop://
