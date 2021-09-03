@@ -231,7 +231,7 @@ if ($_SESSION['authenticated']) {
 
             // We canot use putenv() in safe mode.
             if (!ini_get('safe_mode')) {
-                // Advice programs (ls for example) of the terminal size.
+                // Advise programs (ls for example) of the terminal size.
                 putenv('ROWS=' . $rows);
                 putenv('COLUMNS=' . $columns);
             }
