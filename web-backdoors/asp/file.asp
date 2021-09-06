@@ -116,7 +116,7 @@ end if
 
 <%
 ' get the path to work with, if it isn't set or valid then start with the web root
-' goofy if statement is used since vbscript doesn't use short-curcuit logic
+' goofy if statement is used since vbscript doesn't use short-circuit logic
 path = trim(Request.QueryString("path"))
 if len(path) = 0 then
 	path = fso.GetFolder(Server.MapPath("\"))
