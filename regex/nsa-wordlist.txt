@@ -212,7 +212,7 @@ MI6
 Kh-11
 Shayet-13
 SADMS
-Spetznaz
+Spetsnaz
 Recce
 707
 CIO
