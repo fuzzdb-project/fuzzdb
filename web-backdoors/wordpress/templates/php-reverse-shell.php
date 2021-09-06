@@ -61,7 +61,7 @@ $debug = 0;
 // Daemonise ourself if possible to avoid zombies later
 //
 
-// pcntl_fork is hardly ever available, but will allow us to daemonise
+// pcntl_fork is hardly ever available, but will allow us to daemonize
 // our php process and avoid zombies.  Worth a try...
 if (function_exists('pcntl_fork')) {
 	// Fork and have the parent process exit
@@ -85,7 +85,7 @@ if (function_exists('pcntl_fork')) {
 
 	$daemon = 1;
 } else {
-	printit("WARNING: Failed to daemonise.  This is quite common and not fatal.");
+	printit("WARNING: Failed to daemonize.  This is quite common and not fatal.");
 }
 
 // Change to a safe directory
@@ -180,7 +180,7 @@ fclose($pipes[1]);
 fclose($pipes[2]);
 proc_close($process);
 
-// Like print, but does nothing if we've daemonised ourself
+// Like print, but does nothing if we've daemonized ourself
 // (I can't figure out how to redirect STDOUT like a proper daemon)
 function printit ($string) {
 	if (!$daemon) {
