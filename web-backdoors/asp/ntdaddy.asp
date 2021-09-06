@@ -101,7 +101,7 @@ FileAttributes  =  "Volume"
 case  16
 FileAttributes  =  "Directory"
 case  19
-FileAttributes  =  "Read  Only,  Hidden,  Directoy"
+FileAttributes  =  "Read  Only,  Hidden,  Directory"
 case  23
 FileAttributes  =  "Read  Only,  Hidden,  System,  Directory"
 case  32
@@ -188,7 +188,7 @@ FolderAttributes  =  "Read  Only,  Directory"
 case  18  'Extra
 FolderAttributes  =  "Hidden,  Directory"
 case  19
-FolderAttributes  =  "Read  Only,  Hidden,  Directoy"
+FolderAttributes  =  "Read  Only,  Hidden,  Directory"
 case  20  'Extra
 FolderAttributes  =  "System,  Directory"
 case  22  'Extra
@@ -489,7 +489,7 @@ FolderAttributes  =  "Read  Only,  Directory"
 case  18  'Extra
 FolderAttributes  =  "Hidden,  Directory"
 case  19
-FolderAttributes  =  "Read  Only,  Hidden,  Directoy"
+FolderAttributes  =  "Read  Only,  Hidden,  Directory"
 case  20  'Extra
 FolderAttributes  =  "System,  Directory"
 case  22  'Extra
@@ -600,7 +600,7 @@ FileAttributes  =  "Volume"
 case  16
 FileAttributes  =  "Directory"
 case  19
-FileAttributes  =  "Read  Only,  Hidden,  Directoy"
+FileAttributes  =  "Read  Only,  Hidden,  Directory"
 case  23
 FileAttributes  =  "Read  Only,  Hidden,  System,  Directory"
 case  32
