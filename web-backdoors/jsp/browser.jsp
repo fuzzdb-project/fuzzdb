@@ -34,7 +34,7 @@
     //If true, the user is allowed to browse only in RESTRICT_PATH,
     //if false, the user is allowed to browse all directories besides RESTRICT_PATH
     private static final boolean RESTRICT_WHITELIST = false;
-    //Paths, sperated by semicolon
+    //Paths, separated by semicolon
     //private static final String RESTRICT_PATH = "C:\\CODE;E:\\"; //Win32: Case important!!
 	private static final String RESTRICT_PATH = "/etc;/var";
 
