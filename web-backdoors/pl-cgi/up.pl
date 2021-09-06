@@ -36,7 +36,7 @@ my $version="V1.4";
 #my $g_upload_db="upload.db";
 
 # overwrite the existing file or not. Default is to overwrite
-# chanage the value to 0 if you do not want to overwrite an existing file.
+# change the value to 0 if you do not want to overwrite an existing file.
 my $g_overwrite=1;
 
 # if you want to restrict upload to files with certain extentions, change
