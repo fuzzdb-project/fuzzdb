@@ -39,7 +39,7 @@ my $version="V1.4";
 # change the value to 0 if you do not want to overwrite an existing file.
 my $g_overwrite=1;
 
-# if you want to restrict upload to files with certain extentions, change
+# if you want to restrict upload to files with certain extensions, change
 # the value of $g_restrict_by_ext=1 and ALSO modify the @g_allowed_ext if you
 # want to add other allowable extensions.
 my $g_restrict_by_ext=0;
@@ -281,7 +281,7 @@ sub doWork
     #    return;
     #}
 
-    # if you want to restrict upload to files with certain extention
+    # if you want to restrict upload to files with certain extension
     if ($g_restrict_by_ext == 1)
     {
         my $file=$q::upload_file;
