@@ -18,7 +18,7 @@
 ***
 ********************************************************************************
 ***
-*** This file provides access to shell acces on the system.
+*** This file provides access to shell access on the system.
 *** Modified by Tim Medin
 *** Modified by Matt Presson <@matt_presson>
 ***     - Added some basic authentication via HTTP header
