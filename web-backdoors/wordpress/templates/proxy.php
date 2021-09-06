@@ -89,7 +89,7 @@ function geturlarray($u) {
 function buildurl ($u) {
   // build the url from the url array
   // this is used because the built in function isn't 
-  // avilable in all installs of php
+  // available in all installs of php
   if (!isset($u["host"])) { return null; }
 
   $s  = isset($u["scheme"])   ? $u["scheme"]         : "http";
