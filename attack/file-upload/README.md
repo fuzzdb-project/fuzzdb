@@ -4,7 +4,7 @@ see:  http://cwe.mitre.org/data/definitions/434.html
 
 * kinds of file upload verifications:
  * content-type
- * filename extension verificationi (whitelist, blacklist)
+ * filename extension verification (whitelist, blacklist)
  * file content checking
  * client side, ha ha ha
 
