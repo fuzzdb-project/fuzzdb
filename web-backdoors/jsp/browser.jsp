@@ -40,7 +40,7 @@
 
     //The refresh time in seconds of the upload monitor window
 	private static final int UPLOAD_MONITOR_REFRESH = 2;
-	//The number of colums for the edit field
+	//The number of columns for the edit field
 	private static final int EDITFIELD_COLS = 85;
 	//The number of rows for the edit field
 	private static final int EDITFIELD_ROWS = 30;
