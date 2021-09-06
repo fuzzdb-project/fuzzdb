@@ -876,8 +876,8 @@ Exploit Description: This vector was once used on a major site to evade a stripp
 Exploit Tags: general, injection, gecko, style injection, XBL
 Author Name: PHPIDS Group
 
-Multiline selfcontained XSS
-Exploit Name: Multiline selfcontained XSS
+Multiline self-contained XSS
+Exploit Name: Multiline self-contained XSS
 Exploit String: _
 =
 eval
