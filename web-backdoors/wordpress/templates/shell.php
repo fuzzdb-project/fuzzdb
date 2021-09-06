@@ -161,7 +161,7 @@ if(true) {
         
         array_unshift($_SESSION['history'], $command);
   
-        /* Now append the commmand to the output. */
+        /* Now append the command to the output. */
         $_SESSION['output'] .= '$ ' . $command . "\n";
 
         /* Initialize the current working directory. */
