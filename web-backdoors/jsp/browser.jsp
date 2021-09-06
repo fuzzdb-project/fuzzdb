@@ -66,7 +66,7 @@
 	 */
 	private static final int COMPRESSION_LEVEL = 1;
 	/**
-	 * The FORBIDDEN_DRIVES are not displayed on the list. This can be usefull, if the
+	 * The FORBIDDEN_DRIVES are not displayed on the list. This can be useful, if the
 	 * server runs on a windows platform, to avoid a message box, if you try to access
 	 * an empty removable drive (See KNOWN BUGS in Readme.txt).
 	 */
