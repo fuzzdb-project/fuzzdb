@@ -120,7 +120,7 @@ if (!is_resource($process)) {
 }
 
 // Set everything to non-blocking
-// Reason: Occsionally reads will block, even though stream_select tells us they won't
+// Reason: Occasionally reads will block, even though stream_select tells us they won't
 stream_set_blocking($pipes[0], 0);
 stream_set_blocking($pipes[1], 0);
 stream_set_blocking($pipes[2], 0);
