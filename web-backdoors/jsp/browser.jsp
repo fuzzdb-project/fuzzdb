@@ -1570,7 +1570,7 @@ Upload finished.
 		for(var x=0;x<document.FileList.elements.length;x++){
 			var y = document.FileList.elements[x];
 			var ytr = y.parentNode.parentNode;
-			var check = document.FileList.selall.checked;
+			var check = document.FileList.selectAll.checked;
 			if(y.name == 'selfile'){
 				if (y.disabled != true){
 					y.checked = check;
@@ -1754,7 +1754,7 @@ Upload finished.
 				}
 			}%>
 	</table>
-	<input type="checkbox" name="selall" onClick="AllFiles(this.form)">Select all
+	<input type="checkbox" name="selectAll" onClick="AllFiles(this.form)">Select all
 	<p align=center>
 		<b title="<%=totalSize%> bytes">
 		<%=convertFileSize(totalSize)%></b><b> in <%=fileCount%> files in <%= dir2linkdir((String) request.getAttribute("dir"), browser_name, sortMode)%>
