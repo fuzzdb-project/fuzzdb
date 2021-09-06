@@ -73,7 +73,7 @@
 	private static final String[] FORBIDDEN_DRIVES = {"a:\\"};
 
 	/**
-	 * Command of the shell interpreter and the parameter to run a programm
+	 * Command of the shell interpreter and the parameter to run a program
 	 */
 	private static final String[] COMMAND_INTERPRETER = {"cmd", "/C"}; // Dos,Windows
 	//private static final String[] COMMAND_INTERPRETER = {"/bin/sh","-c"}; 	// Unix
