@@ -581,7 +581,7 @@ Exploit String: a=<a>
 </b>
 </a>
 document.write(unescape(a..b))
-Exploit Description: This vector writes an erroneous image tag with onerror hanlder inside an E4X construct into the document context.
+Exploit Description: This vector writes an erroneous image tag with onerror handler inside an E4X construct into the document context.
 Exploit Tags: general, obfuscated, gecko, XML predicates, evil tags
 Author Name: .mario
 
