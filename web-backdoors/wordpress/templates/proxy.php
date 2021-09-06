@@ -79,7 +79,7 @@ function error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
 set_error_handler('error_handler');
 
 function geturlarray($u) {
-  // creates the url array, addes a scheme if it is missing and retries parsing
+  // creates the url array, adds a scheme if it is missing and retries parsing
   $o = parse_url($u);
   if (!isset($o["scheme"])) { $o = parse_url("http://" . $u); }
   if (!isset($o["path"])) { $o["path"] = "/"; }
