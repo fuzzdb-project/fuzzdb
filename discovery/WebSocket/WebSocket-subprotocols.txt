@@ -1,5 +1,5 @@
 # this list can be used to enumerate supported Web Socket sub protocols of a web socket server
-# It conyains the official IANA registerd Web Socket sub protocols
+# It contains the official IANA registerd Web Socket sub protocols
 # Source: https://www.iana.org/assignments/websocket/websocket.xml
 # Example subprotocol request header:
 # Sec-WebSocket-Protocol: mqtt, wamp
