@@ -261,7 +261,7 @@ sub doWork
     ##################
 
 
-    # import the paramets into a series of variables in 'q' namespace
+    # import the parameters into a series of variables in 'q' namespace
     $query->import_names('q');
     #  check if the necessary fields are empty or not
     #$em .= "<br>You must specify your Userid!<br>" if !$q::userid;
