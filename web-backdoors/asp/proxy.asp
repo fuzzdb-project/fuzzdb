@@ -130,7 +130,7 @@ Dim r
 	r.IgnoreCase = true
 	r.Global = true
 
-	' remove the laudurl paramater 
+	' remove the laudurl parameter 
 	r.Pattern = "laudurl=[^&]+($|&)"
 	CleanFormValues = r.Replace(request.form, "") 
 	Set r = nothing

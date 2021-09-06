@@ -34,13 +34,13 @@
     //If true, the user is allowed to browse only in RESTRICT_PATH,
     //if false, the user is allowed to browse all directories besides RESTRICT_PATH
     private static final boolean RESTRICT_WHITELIST = false;
-    //Paths, sperated by semicolon
+    //Paths, separated by semicolon
     //private static final String RESTRICT_PATH = "C:\\CODE;E:\\"; //Win32: Case important!!
 	private static final String RESTRICT_PATH = "/etc;/var";
 
     //The refresh time in seconds of the upload monitor window
 	private static final int UPLOAD_MONITOR_REFRESH = 2;
-	//The number of colums for the edit field
+	//The number of columns for the edit field
 	private static final int EDITFIELD_COLS = 85;
 	//The number of rows for the edit field
 	private static final int EDITFIELD_ROWS = 30;
@@ -66,14 +66,14 @@
 	 */
 	private static final int COMPRESSION_LEVEL = 1;
 	/**
-	 * The FORBIDDEN_DRIVES are not displayed on the list. This can be usefull, if the
+	 * The FORBIDDEN_DRIVES are not displayed on the list. This can be useful, if the
 	 * server runs on a windows platform, to avoid a message box, if you try to access
 	 * an empty removable drive (See KNOWN BUGS in Readme.txt).
 	 */
 	private static final String[] FORBIDDEN_DRIVES = {"a:\\"};
 
 	/**
-	 * Command of the shell interpreter and the parameter to run a programm
+	 * Command of the shell interpreter and the parameter to run a program
 	 */
 	private static final String[] COMMAND_INTERPRETER = {"cmd", "/C"}; // Dos,Windows
 	//private static final String[] COMMAND_INTERPRETER = {"/bin/sh","-c"}; 	// Unix
@@ -1570,7 +1570,7 @@ Upload finished.
 		for(var x=0;x<document.FileList.elements.length;x++){
 			var y = document.FileList.elements[x];
 			var ytr = y.parentNode.parentNode;
-			var check = document.FileList.selall.checked;
+			var check = document.FileList.selectAll.checked;
 			if(y.name == 'selfile'){
 				if (y.disabled != true){
 					y.checked = check;
@@ -1754,7 +1754,7 @@ Upload finished.
 				}
 			}%>
 	</table>
-	<input type="checkbox" name="selall" onClick="AllFiles(this.form)">Select all
+	<input type="checkbox" name="selectAll" onClick="AllFiles(this.form)">Select all
 	<p align=center>
 		<b title="<%=totalSize%> bytes">
 		<%=convertFileSize(totalSize)%></b><b> in <%=fileCount%> files in <%= dir2linkdir((String) request.getAttribute("dir"), browser_name, sortMode)%>

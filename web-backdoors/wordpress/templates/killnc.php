@@ -46,7 +46,7 @@ include 'ipcheck.php';
 /* This error handler will turn all notices, warnings, and errors into fatal
  * errors, unless they have been suppressed with the @-operator. */
 function error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
-    /* The @-opertor (used with chdir() below) temporarely makes
+    /* The @-operator (used with chdir() below) temporarily makes
      * error_reporting() return zero, and we don't want to die in that case.
      * We do note the error in the output, though. */
     if (error_reporting() == 0) {

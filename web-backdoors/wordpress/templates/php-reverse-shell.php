@@ -38,7 +38,7 @@
 // -----------
 // proc_open and stream_set_blocking require PHP version 4.3+, or 5+
 // Use of stream_select() on file descriptors returned by proc_open() will fail and return FALSE under Windows.
-// Some compile-time options are needed for daemonisation (like pcntl, posix).  These are rarely available.
+// Some compile-time options are needed for daemonization (like pcntl, posix).  These are rarely available.
 //
 // Usage
 // -----
@@ -61,7 +61,7 @@ $debug = 0;
 // Daemonise ourself if possible to avoid zombies later
 //
 
-// pcntl_fork is hardly ever available, but will allow us to daemonise
+// pcntl_fork is hardly ever available, but will allow us to daemonize
 // our php process and avoid zombies.  Worth a try...
 if (function_exists('pcntl_fork')) {
 	// Fork and have the parent process exit
@@ -85,7 +85,7 @@ if (function_exists('pcntl_fork')) {
 
 	$daemon = 1;
 } else {
-	printit("WARNING: Failed to daemonise.  This is quite common and not fatal.");
+	printit("WARNING: Failed to daemonize.  This is quite common and not fatal.");
 }
 
 // Change to a safe directory
@@ -120,7 +120,7 @@ if (!is_resource($process)) {
 }
 
 // Set everything to non-blocking
-// Reason: Occsionally reads will block, even though stream_select tells us they won't
+// Reason: Occasionally reads will block, even though stream_select tells us they won't
 stream_set_blocking($pipes[0], 0);
 stream_set_blocking($pipes[1], 0);
 stream_set_blocking($pipes[2], 0);
@@ -180,7 +180,7 @@ fclose($pipes[1]);
 fclose($pipes[2]);
 proc_close($process);
 
-// Like print, but does nothing if we've daemonised ourself
+// Like print, but does nothing if we've daemonized ourself
 // (I can't figure out how to redirect STDOUT like a proper daemon)
 function printit ($string) {
 	if (!$daemon) {

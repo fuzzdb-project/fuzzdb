@@ -5,7 +5,7 @@ Information Security
 Information Warfare
 IW
 IS
-Priavacy Information 
+Privacy Information 
 Terrorism
 Defensive
 Information Defense
@@ -36,7 +36,7 @@ CIA
 S/Key
 SSL
 FBI
-Secert Service
+Secret Service
 USSS
 Defcon
 Military
@@ -212,7 +212,7 @@ MI6
 Kh-11
 Shayet-13
 SADMS
-Spetznaz
+Spetsnaz
 Recce
 707
 CIO
@@ -663,7 +663,7 @@ COS
 E.T.
 credit card fraud
 b9
-assasinate
+assassinate
 virus
 anarchy
 rogue
@@ -1008,6 +1008,6 @@ China
 Conficker
 Worm
 Scammers
-Suspecious
+Suspicious
 Social media
 

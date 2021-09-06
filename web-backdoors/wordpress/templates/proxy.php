@@ -47,7 +47,7 @@ include 'ipcheck.php';
 /* This error handler will turn all notices, warnings, and errors into fatal
  * errors, unless they have been suppressed with the @-operator. */
 function error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
-    /* The @-opertor (used with chdir() below) temporarely makes
+    /* The @-operator (used with chdir() below) temporarily makes
      * error_reporting() return zero, and we don't want to die in that case.
      * We do note the error in the output, though. */
     if (error_reporting() == 0) {
@@ -79,7 +79,7 @@ function error_handler($errno, $errstr, $errfile, $errline, $errcontext) {
 set_error_handler('error_handler');
 
 function geturlarray($u) {
-  // creates the url array, addes a scheme if it is missing and retries parsing
+  // creates the url array, adds a scheme if it is missing and retries parsing
   $o = parse_url($u);
   if (!isset($o["scheme"])) { $o = parse_url("http://" . $u); }
   if (!isset($o["path"])) { $o["path"] = "/"; }
@@ -89,7 +89,7 @@ function geturlarray($u) {
 function buildurl ($u) {
   // build the url from the url array
   // this is used because the built in function isn't 
-  // avilable in all installs of php
+  // available in all installs of php
   if (!isset($u["host"])) { return null; }
 
   $s  = isset($u["scheme"])   ? $u["scheme"]         : "http";
