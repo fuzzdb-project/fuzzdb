@@ -16,7 +16,7 @@
 ***
 ********************************************************************************
 ***
-*** This file provides a rudamentary IP filter to help prevent usage of Laudanum tools
+*** This file provides a rudimentary IP filter to help prevent usage of Laudanum tools
 *** by someone other than the person who uploaded Laudanum.  This file should be included
 *** in other Laudanum tools and not called directly. 
 *** Written by Jason Gillam <jgillam@secureideas.com>
