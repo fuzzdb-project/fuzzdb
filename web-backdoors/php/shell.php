@@ -330,7 +330,7 @@ if ($_SESSION['authenticated']) {
 
 <?php
 if (!$_SESSION['authenticated']) {
-    /* Generate a new nounce every time we preent the login page.  This binds
+    /* Generate a new nounce every time we present the login page.  This binds
      * each login to a unique hit on the server and prevents the simple replay
      * attack where one uses the back button in the browser to replay the POST
      * data from a login. */
