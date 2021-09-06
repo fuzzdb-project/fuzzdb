@@ -36,7 +36,7 @@ CIA
 S/Key
 SSL
 FBI
-Secert Service
+Secret Service
 USSS
 Defcon
 Military
