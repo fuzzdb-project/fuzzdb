@@ -38,7 +38,7 @@
 // -----------
 // proc_open and stream_set_blocking require PHP version 4.3+, or 5+
 // Use of stream_select() on file descriptors returned by proc_open() will fail and return FALSE under Windows.
-// Some compile-time options are needed for daemonisation (like pcntl, posix).  These are rarely available.
+// Some compile-time options are needed for daemonization (like pcntl, posix).  These are rarely available.
 //
 // Usage
 // -----
