@@ -126,7 +126,7 @@ if (isset($_POST['logout']))
 //if (isset($_SESSION['nounce']) && $nounce == $_SESSION['nounce'] && 
 //    isset($ini['users'][$username])) {
 //    if (strchr($ini['users'][$username], ':') === false) {
-//        // No seperator found, assume this is a password in clear text.
+//        // No separator found, assume this is a password in clear text.
 //        $_SESSION['authenticated'] = ($ini['users'][$username] == $password);
 //    } else {
 //        list($fkt, $salt, $hash) = explode(':', $ini['users'][$username]);
