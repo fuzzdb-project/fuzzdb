@@ -4,3 +4,5 @@ C:/boot.ini
 C:\boot.ini
 D:\inetpub\wwwroot\global.asa
 D:/inetpub/wwwroot/global.asa
+C:/Windows/System32/drivers/etc/Hosts
+C:\Windows\System32\drivers\etc\Hosts
