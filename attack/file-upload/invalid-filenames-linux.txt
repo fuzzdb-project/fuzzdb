@@ -1,7 +1,0 @@
-/
-
-\0
-/dev/null
-/dev/null/foo
-.
-..
